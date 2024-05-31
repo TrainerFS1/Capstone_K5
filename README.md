@@ -1,53 +1,15 @@
-# Laravel 10 + AdminLTE 3
+# Pencatatan Keuangan App
 
-AdminLTE 3 for Laravel 10.
+Selamat datang di repositori Pencatatan Keuangan App!
 
-| Laravel Version | Branch |
-|:---------------:|:------:|
-| 10              | main   |
-| 9               | 9.x    |
-| 8               | 8.x    |
+Proyek ini bertujuan untuk membantu Anda dalam mencatat keuangan Anda dengan mudah dan efisien.
 
-## Requirements
+**Clone Repository**
 
-- PHP >= 8.1.0
-- BCMath PHP Extension
-- Ctype PHP Extension
-- JSON PHP Extension
-- Mbstring PHP Extension
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
+1. Jalankan git clone https://github.com/TrainerFS1/Pencatatan-Keuangan-App.git
 
-## Installation
+**Jika ingin melakukan perubahan**
 
-- Clone the repo and `cd` into it
-- Run `composer install`
-- Rename or copy `.env.example` file to `.env`
-- Run `php artisan key:generate`
-- Set your database credentials in your `.env` file
-- Run migration `php artisan migrate`
-- Make something awesome!
-
-## Todo Lists
-- LaravelEasyNav implementation
-- Preview screenshots
-- More pages...
-
-## Note
-
-Recommend to install this preset on a project that you are starting from scratch, otherwise your project's design might break.
-
-## Credits
-
-Laravel AdminLTE 3 uses some open-source third-party libraries/packages, many thanks to the web community.
-
-- Laravel - Open source framework.
-- AdminLTE 3 - Thanks to ColorlibHQ
-
-## Preview
-
-## License
-
-Licensed under the MIT license.
+1. Buka repository di lokal menggunakan git bash
+2. git remote add origin https://github.com/TrainerFS1/Pencatatan-Keuangan-App.git
+3. git push origin master
