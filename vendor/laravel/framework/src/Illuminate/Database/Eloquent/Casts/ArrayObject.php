@@ -1,0 +1,49 @@
+<?php
+
+namespace Illuminate\Database\Eloquent\Casts;
+
+use ArrayObject as BaseArrayObject;
+use Illuminate\Contracts\Support\Arrayable;
+use JsonSerializable;
+
+/**
+ * @template TKey of array-key
+ * @template TItem
+<<<<<<< HEAD
+ *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+ * @extends  \ArrayObject<TKey, TItem>
+ */
+class ArrayObject extends BaseArrayObject implements Arrayable, JsonSerializable
+{
+    /**
+     * Get a collection containing the underlying array.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function collect()
+    {
+        return collect($this->getArrayCopy());
+    }
+
+    /**
+     * Get the instance as an array.
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        return $this->getArrayCopy();
+    }
+
+    /**
+     * Get the array that should be JSON serialized.
+     *
+     * @return array
+     */
+    public function jsonSerialize(): array
+    {
+        return $this->getArrayCopy();
+    }
+}
