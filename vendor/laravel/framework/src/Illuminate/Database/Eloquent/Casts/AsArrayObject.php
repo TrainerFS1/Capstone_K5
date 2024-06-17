@@ -24,9 +24,15 @@ class AsArrayObject implements Castable
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data = Json::decode($attributes[$key]);
 
                 return is_array($data) ? new ArrayObject($data, ArrayObject::ARRAY_AS_PROPS) : null;
+=======
+                $data = json_decode($attributes[$key], true);
+
+                return is_array($data) ? new ArrayObject($data) : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data = json_decode($attributes[$key], true);
 
@@ -37,7 +43,11 @@ class AsArrayObject implements Castable
             public function set($model, $key, $value, $attributes)
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return [$key => Json::encode($value)];
+=======
+                return [$key => json_encode($value)];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return [$key => json_encode($value)];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

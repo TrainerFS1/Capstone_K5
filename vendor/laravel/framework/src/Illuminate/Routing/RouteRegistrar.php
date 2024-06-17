@@ -21,7 +21,10 @@ use InvalidArgumentException;
  * @method \Illuminate\Routing\RouteRegistrar domain(string $value)
  * @method \Illuminate\Routing\RouteRegistrar middleware(array|string|null $middleware)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method \Illuminate\Routing\RouteRegistrar missing(\Closure $missing)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method \Illuminate\Routing\RouteRegistrar name(string $value)
@@ -70,7 +73,10 @@ class RouteRegistrar
         'domain',
         'middleware',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'missing',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'name',

@@ -18,7 +18,10 @@ use Carbon\Exceptions\UnitException;
 use Closure;
 use DateInterval;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use DateMalformedStringException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReturnTypeWillChange;
@@ -202,7 +205,11 @@ trait Units
     {
         if (\is_string($unit) && \func_num_args() === 1) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $unit = CarbonInterval::make($unit, [], true);
+=======
+            $unit = CarbonInterval::make($unit);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $unit = CarbonInterval::make($unit);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -313,6 +320,7 @@ trait Units
             $value = $second;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         try {
             $date = $date->modify("$value $unit");
@@ -325,12 +333,17 @@ trait Units
         } catch (DateMalformedStringException $ignoredException) { // @codeCoverageIgnore
             $date = null; // @codeCoverageIgnore
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $date = $date->modify("$value $unit");
 
         if (isset($timeString)) {
             $date = $date->setTimeFromTimeString($timeString);
         } elseif (isset($canOverflow, $day) && $canOverflow && $day !== $date->day) {
             $date = $date->modify('last day of previous month');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -385,7 +398,11 @@ trait Units
     {
         if (\is_string($unit) && \func_num_args() === 1) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $unit = CarbonInterval::make($unit, [], true);
+=======
+            $unit = CarbonInterval::make($unit);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $unit = CarbonInterval::make($unit);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -425,7 +442,11 @@ trait Units
     {
         if (\is_string($unit) && \func_num_args() === 1) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $unit = CarbonInterval::make($unit, [], true);
+=======
+            $unit = CarbonInterval::make($unit);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $unit = CarbonInterval::make($unit);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

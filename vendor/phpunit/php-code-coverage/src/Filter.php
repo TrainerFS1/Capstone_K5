@@ -29,9 +29,12 @@ final class Filter
     private array $isFileCache = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function includeDirectory(string $directory, string $suffix = '.php', string $prefix = ''): void
@@ -63,9 +66,12 @@ final class Filter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function excludeDirectory(string $directory, string $suffix = '.php', string $prefix = ''): void
@@ -76,9 +82,12 @@ final class Filter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function excludeFile(string $filename): void

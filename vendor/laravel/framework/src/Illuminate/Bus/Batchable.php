@@ -20,7 +20,11 @@ trait Batchable
      * The fake batch, if applicable.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var \Illuminate\Support\Testing\Fakes\BatchFake
+=======
+     * @var \Illuminate\Support\Testing\BatchFake
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var \Illuminate\Support\Testing\BatchFake
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -40,7 +44,11 @@ trait Batchable
 
         if ($this->batchId) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return Container::getInstance()->make(BatchRepository::class)?->find($this->batchId);
+=======
+            return Container::getInstance()->make(BatchRepository::class)->find($this->batchId);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return Container::getInstance()->make(BatchRepository::class)->find($this->batchId);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -83,15 +91,21 @@ trait Batchable
      * @param  array  $failedJobIds
      * @param  array  $options
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Carbon\CarbonImmutable|null  $createdAt
      * @param  \Carbon\CarbonImmutable|null  $cancelledAt
      * @param  \Carbon\CarbonImmutable|null  $finishedAt
      * @return array{0: $this, 1: \Illuminate\Support\Testing\Fakes\BatchFake}
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  \Carbon\CarbonImmutable  $createdAt
      * @param  \Carbon\CarbonImmutable|null  $cancelledAt
      * @param  \Carbon\CarbonImmutable|null  $finishedAt
      * @return array{0: $this, 1: \Illuminate\Support\Testing\BatchFake}
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function withFakeBatch(string $id = '',
@@ -102,7 +116,11 @@ trait Batchable
                                   array $failedJobIds = [],
                                   array $options = [],
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   ?CarbonImmutable $createdAt = null,
+=======
+                                  CarbonImmutable $createdAt = null,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                   CarbonImmutable $createdAt = null,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

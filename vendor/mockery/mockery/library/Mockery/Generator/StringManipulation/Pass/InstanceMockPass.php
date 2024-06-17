@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,12 +28,16 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use function strrpos;
 use function substr;
@@ -39,10 +46,15 @@ class InstanceMockPass implements Pass
 {
     public const INSTANCE_MOCK_CODE = <<<MOCK
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class InstanceMockPass
 {
     const INSTANCE_MOCK_CODE = <<<MOCK
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     protected \$_mockery_ignoreVerification = true;
@@ -80,7 +92,11 @@ class InstanceMockPass
         }
         \Mockery::getContainer()->rememberMock(\$this);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -88,6 +104,7 @@ class InstanceMockPass
     }
 MOCK;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @param  string $code
@@ -98,10 +115,15 @@ MOCK;
         if ($config->isInstanceMock()) {
             return $this->appendToClass($code, static::INSTANCE_MOCK_CODE);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function apply($code, MockConfiguration $config)
     {
         if ($config->isInstanceMock()) {
             $code = $this->appendToClass($code, static::INSTANCE_MOCK_CODE);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -111,8 +133,14 @@ MOCK;
     protected function appendToClass($class, $code)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $lastBrace = strrpos($class, '}');
         return substr($class, 0, $lastBrace) . $code . "\n    }\n";
+=======
+        $lastBrace = strrpos($class, "}");
+        $class = substr($class, 0, $lastBrace) . $code . "\n    }\n";
+        return $class;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $lastBrace = strrpos($class, "}");
         $class = substr($class, 0, $lastBrace) . $code . "\n    }\n";

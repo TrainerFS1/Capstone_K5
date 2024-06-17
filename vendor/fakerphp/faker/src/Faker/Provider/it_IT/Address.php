@@ -13,6 +13,7 @@ class Address extends \Faker\Provider\Address
     protected static $postcode = ['#####'];
     protected static $state = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Agrigento', 'Alessandria', 'Ancona', 'Aosta', 'Arezzo', 'Ascoli Piceno', 'Asti', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Belluno', 'Benevento', 'Bergamo', 'Biella', 'Bologna', 'Bolzano', 'Brescia', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Campobasso', 'Caserta', 'Catania', 'Catanzaro', 'Chieti', 'Como', 'Cosenza', 'Cremona', 'Crotone', 'Cuneo', 'Enna', 'Fermo', 'Ferrara', 'Firenze', 'Foggia', 'Forlì-Cesena', 'Frosinone', 'Genova', 'Gorizia', 'Grosseto', 'Imperia', 'Isernia', 'La Spezia', 'L\'Aquila', 'Latina', 'Lecce', 'Lecco', 'Livorno', 'Lodi', 'Lucca', 'Macerata', 'Mantova', 'Massa-Carrara', 'Matera', 'Messina', 'Milano', 'Modena', 'Monza e della Brianza', 'Napoli', 'Novara', 'Nuoro', 'Oristano', 'Padova', 'Palermo', 'Parma', 'Pavia', 'Perugia', 'Pesaro e Urbino', 'Pescara', 'Piacenza', 'Pisa', 'Pistoia', 'Pordenone', 'Potenza', 'Prato', 'Ragusa', 'Ravenna', 'Reggio Calabria', 'Reggio Emilia', 'Rieti', 'Rimini', 'Roma', 'Rovigo', 'Salerno', 'Sassari', 'Savona', 'Siena', 'Siracusa', 'Sondrio', 'Sud Sardegna', 'Taranto', 'Teramo', 'Terni', 'Torino', 'Trapani', 'Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona', 'Vibo Valentia', 'Vicenza', 'Viterbo',
     ];
     protected static $stateAbbr = [
@@ -43,6 +44,8 @@ class Address extends \Faker\Provider\Address
         'Vanuatu', 'Vaticano', 'Venezuela', 'Isole Vergini Statunitensi', 'Vietnam',
         'Wallis e Futuna',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Agrigento', 'Alessandria', 'Ancona', 'Aosta', 'Arezzo', 'Ascoli Piceno', 'Asti', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Belluno', 'Benevento', 'Bergamo', 'Biella', 'Bologna', 'Bolzano', 'Brescia', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Campobasso', 'Carbonia-Iglesias', 'Caserta', 'Catania', 'Catanzaro', 'Chieti', 'Como', 'Cosenza', 'Cremona', 'Crotone', 'Cuneo', 'Enna', 'Fermo', 'Ferrara', 'Firenze', 'Foggia', 'Forlì-Cesena', 'Frosinone', 'Genova', 'Gorizia', 'Grosseto', 'Imperia', 'Isernia', 'La Spezia', 'L\'Aquila', 'Latina', 'Lecce', 'Lecco', 'Livorno', 'Lodi', 'Lucca', 'Macerata', 'Mantova', 'Massa-Carrara', 'Matera', 'Messina', 'Milano', 'Modena', 'Monza e della Brianza', 'Napoli', 'Novara', 'Nuoro', 'Olbia-Tempio', 'Oristano', 'Padova', 'Palermo', 'Parma', 'Pavia', 'Perugia', 'Pesaro e Urbino', 'Pescara', 'Piacenza', 'Pisa', 'Pistoia', 'Pordenone', 'Potenza', 'Prato', 'Ragusa', 'Ravenna', 'Reggio Calabria', 'Reggio Emilia', 'Rieti', 'Rimini', 'Roma', 'Rovigo', 'Salerno', 'Medio Campidano', 'Sassari', 'Savona', 'Siena', 'Siracusa', 'Sondrio', 'Taranto', 'Teramo', 'Terni', 'Torino', 'Ogliastra', 'Trapani', 'Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona', 'Vibo Valentia', 'Vicenza', 'Viterbo',
     ];
     protected static $stateAbbr = [
@@ -72,6 +75,9 @@ class Address extends \Faker\Provider\Address
         'Uganda', 'Ucraina', 'Emirati Arabi Uniti', 'Regno Unito', 'Stati Uniti d\'America', 'United States Minor Outlying Islands', 'Isole Vergini Statunitensi', 'Uruguay', 'Uzbekistan',
         'Vanuatu', 'Venezuela', 'Vietnam',
         'Wallis and Futuna', 'Western Sahara',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Yemen',
         'Zambia', 'Zimbabwe',
@@ -97,7 +103,11 @@ class Address extends \Faker\Provider\Address
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @example 'Borgo'
+=======
+     * @example 'East'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @example 'East'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,7 +119,11 @@ class Address extends \Faker\Provider\Address
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @example 'Appartamento 350'
+=======
+     * @example 'Appt. 350'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @example 'Appt. 350'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -121,7 +135,11 @@ class Address extends \Faker\Provider\Address
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @example 'Cagliari'
+=======
+     * @example 'California'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @example 'California'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

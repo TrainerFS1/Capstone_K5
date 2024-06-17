@@ -1,7 +1,11 @@
 BSD 3-Clause License
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Copyright (c) 2014-2024, Sebastian Bergmann
+=======
+Copyright (c) 2014-2023, Sebastian Bergmann
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 Copyright (c) 2014-2023, Sebastian Bergmann
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

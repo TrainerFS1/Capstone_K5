@@ -32,8 +32,11 @@ interface MetadataAwareInterface
     /**
      * Adds metadata to a message domain.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -45,8 +48,11 @@ interface MetadataAwareInterface
      * Passing an empty domain will delete all metadata. Passing an empty key will
      * delete all metadata for the given domain.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

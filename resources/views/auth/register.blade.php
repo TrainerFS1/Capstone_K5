@@ -3,6 +3,7 @@
 @section('content')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <body class="hold-transition register-page" style="background-color: #eb47ebcc;">
     <div class="login-container" style="display: flex; height: 100vh;">
         <div class="login-image" style="flex: 1; background-color: #eb47ebcc; display: flex; align-items: center; justify-content: center;">
@@ -113,6 +114,8 @@
 </body>
 @endsection
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <body class="hold-transition register-page">
         <div class="register-box">
             <div class="register-logo">
@@ -219,4 +222,7 @@
         </div>
         <!-- /.register-box -->
     @endsection
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

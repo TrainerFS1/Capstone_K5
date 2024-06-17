@@ -441,7 +441,11 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      * @param  string  $script
      * @param  int  $numberOfKeys
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  mixed  ...$arguments
+=======
+     * @param  dynamic  ...$arguments
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  dynamic  ...$arguments
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -535,7 +539,11 @@ class PhpRedisConnection extends Connection implements ConnectionContract
             return parent::command($method, $parameters);
         } catch (RedisException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             foreach (['went away', 'socket', 'read error on connection', 'Connection lost'] as $errorMessage) {
+=======
+            foreach (['went away', 'socket', 'read error on connection'] as $errorMessage) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             foreach (['went away', 'socket', 'read error on connection'] as $errorMessage) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -15,7 +15,10 @@ use Symfony\Component\Console\Descriptor\DescriptorInterface;
 use Symfony\Component\Console\Descriptor\JsonDescriptor;
 use Symfony\Component\Console\Descriptor\MarkdownDescriptor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Console\Descriptor\ReStructuredTextDescriptor;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Descriptor\TextDescriptor;
@@ -43,7 +46,10 @@ class DescriptorHelper extends Helper
             ->register('json', new JsonDescriptor())
             ->register('md', new MarkdownDescriptor())
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->register('rst', new ReStructuredTextDescriptor())
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ;
@@ -57,8 +63,11 @@ class DescriptorHelper extends Helper
      * * raw_text: boolean, sets output type as raw
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException when the given format is not supported

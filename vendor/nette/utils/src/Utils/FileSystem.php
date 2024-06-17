@@ -18,6 +18,11 @@ use Nette;
 final class FileSystem
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	use Nette\StaticClass;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	use Nette\StaticClass;
 
@@ -29,7 +34,11 @@ final class FileSystem
 	public static function createDir(string $dir, int $mode = 0777): void
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (!is_dir($dir) && !@mkdir($dir, $mode, recursive: true) && !is_dir($dir)) { // @ - dir may already exist
+=======
+		if (!is_dir($dir) && !@mkdir($dir, $mode, true) && !is_dir($dir)) { // @ - dir may already exist
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		if (!is_dir($dir) && !@mkdir($dir, $mode, true) && !is_dir($dir)) { // @ - dir may already exist
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -3,6 +3,7 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\Expr\Array_;
 use PhpParser\Node\Expr\Include_;
 use PhpParser\Node\Expr\List_;
@@ -31,6 +32,8 @@ class NodeDumper {
         'endTokenPos' => true,
     ];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Expr\Include_;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\GroupUse;
@@ -42,6 +45,9 @@ class NodeDumper
     private $dumpComments;
     private $dumpPositions;
     private $code;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -52,7 +58,10 @@ class NodeDumper
      *  * bool dumpPositions: Whether line/offset information should be dumped. To dump offset
      *                        information, the code needs to be passed to dump().
 <<<<<<< HEAD
+<<<<<<< HEAD
      *  * bool dumpOtherAttributes: Whether non-comment, non-position attributes should be dumped.
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -62,7 +71,10 @@ class NodeDumper
         $this->dumpComments = !empty($options['dumpComments']);
         $this->dumpPositions = !empty($options['dumpPositions']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->dumpOtherAttributes = !empty($options['dumpOtherAttributes']);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -71,7 +83,11 @@ class NodeDumper
      * Dumps a node or array.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array|Node $node Node or array to dump
+=======
+     * @param array|Node  $node Node or array to dump
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array|Node  $node Node or array to dump
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,6 +97,7 @@ class NodeDumper
      *
      * @return string Dumped value
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function dump($node, ?string $code = null): string {
         $this->code = $code;
@@ -210,6 +227,8 @@ class NodeDumper
         if ($flags & Modifiers::READONLY) {
             $strs[] = 'READONLY';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function dump($node, string $code = null) : string {
         $this->code = $code;
         return $this->dumpRecursive($node);
@@ -301,12 +320,16 @@ class NodeDumper
         }
         if ($flags & Class_::MODIFIER_READONLY) {
             $strs[] = 'MODIFIER_READONLY';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if ($strs) {
             return implode(' | ', $strs) . ' (' . $flags . ')';
         } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
             return (string) $flags;
         }
@@ -323,17 +346,23 @@ class NodeDumper
     private function dumpIncludeType(int $type): string {
         return $this->dumpEnum($type, [
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $flags;
         }
     }
 
     protected function dumpIncludeType($type) {
         $map = [
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Include_::TYPE_INCLUDE      => 'TYPE_INCLUDE',
             Include_::TYPE_INCLUDE_ONCE => 'TYPE_INCLUDE_ONCE',
             Include_::TYPE_REQUIRE      => 'TYPE_REQUIRE',
             Include_::TYPE_REQUIRE_ONCE => 'TYPE_REQUIRE_ONCE',
+<<<<<<< HEAD
 <<<<<<< HEAD
         ]);
     }
@@ -341,6 +370,8 @@ class NodeDumper
     private function dumpUseType(int $type): string {
         return $this->dumpEnum($type, [
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
 
         if (!isset($map[$type])) {
@@ -351,11 +382,15 @@ class NodeDumper
 
     protected function dumpUseType($type) {
         $map = [
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Use_::TYPE_UNKNOWN  => 'TYPE_UNKNOWN',
             Use_::TYPE_NORMAL   => 'TYPE_NORMAL',
             Use_::TYPE_FUNCTION => 'TYPE_FUNCTION',
             Use_::TYPE_CONSTANT => 'TYPE_CONSTANT',
+<<<<<<< HEAD
 <<<<<<< HEAD
         ]);
     }
@@ -391,12 +426,17 @@ class NodeDumper
             List_::KIND_ARRAY => 'KIND_ARRAY',
         ]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
 
         if (!isset($map[$type])) {
             return $type;
         }
         return $map[$type] . ' (' . $type . ')';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -408,7 +448,11 @@ class NodeDumper
      * @return string|null Dump of position, or null if position information not available
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function dumpPosition(Node $node): ?string {
+=======
+    protected function dumpPosition(Node $node) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function dumpPosition(Node $node) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -429,7 +473,11 @@ class NodeDumper
 
     // Copied from Error class
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function toColumn(string $code, int $pos): int {
+=======
+    private function toColumn($code, $pos) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function toColumn($code, $pos) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

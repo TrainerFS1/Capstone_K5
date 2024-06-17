@@ -55,6 +55,11 @@ class Company extends \Faker\Provider\Company
      * @see   http://egov.kz/wps/portal/Content?contentPath=%2Fegovcontent%2Fbus_business%2Ffor_businessmen%2Farticle%2Fbusiness_identification_number&lang=en
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param \DateTime $registrationDate
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param \DateTime $registrationDate
      *

@@ -24,6 +24,7 @@ class Person extends \Faker\Provider\Person
 
     protected static $firstNameMale = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Aaron', 'Abramo', 'Adriano', 'Agostino', 'Akira', 'Alan', 'Alberto', 'Albino', 'Aldo', 'Alessandro', 'Alessio',
         'Alfonso', 'Alfredo', 'Alighieri', 'Alighiero', 'Amedeo', 'Amerigo', 'Amos', 'Anastasio', 'Andrea', 'Angelo',
         'Anselmo', 'Antimo', 'Antonino', 'Antonio', 'Arcibaldo', 'Arduino', 'Ariel', 'Armando', 'Aroldo', 'Artes', 'Arturo',
@@ -73,6 +74,8 @@ class Person extends \Faker\Provider\Person
         'Silvia', 'Simona', 'Sonia', 'Soriana', 'Stefania', 'Stella', 'Sue ellen', 'Teresa', 'Thea', 'Tiziana', 'Tosca',
         'Ursula', 'Valentina', 'Vania', 'Vera', 'Veronica', 'Vienna', 'Vincenza', 'Violante', 'Vitalba', 'Vittoria', 'Zelida',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Aaron', 'Abramo', 'Adriano', 'Akira', 'Alan', 'Alberto', 'Albino', 'Alessandro', 'Alessio', 'Amedeo', 'Amos', 'Anastasio', 'Anselmo',
         'Antimo', 'Antonino', 'Antonio', 'Ariel', 'Armando', 'Aroldo', 'Arturo', 'Augusto', 'Battista', 'Bernardo', 'Boris', 'Caio',
         'Carlo', 'Carmelo', 'Ciro', 'Damiano', 'Danny', 'Dante', 'Davide', 'Davis', 'Demis', 'Dimitri', 'Domingo', 'Dylan',
@@ -108,6 +111,9 @@ class Person extends \Faker\Provider\Person
         'Clodovea', 'Cosetta', 'Damiana', 'Danuta', 'Diamante', 'Eufemia', 'Flaviana', 'Gelsomina', 'Genziana', 'Giacinta', 'Guendalina',
         'Jole', 'Mariagiulia', 'Marieva', 'Mietta', 'Nayade', 'Piccarda', 'Selvaggia', 'Sibilla', 'Soriana', 'Sue ellen', 'Tosca', 'Violante',
         'Vitalba', 'Zelida',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
@@ -121,7 +127,11 @@ class Person extends \Faker\Provider\Person
         'Giuliani', 'Benedetti', 'Barone', 'Rossetti', 'Caputo', 'Montanari', 'Guerra', 'Palmieri', 'Bernardi', 'Martino', 'Fiore',
         'De rosa', 'Ferretti', 'Bellini', 'Basile', 'Riva', 'Donati', 'Piras', 'Vitali', 'Battaglia', 'Sartori', 'Neri', 'Costantini',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Milani', 'Pagano', 'Ruggiero', 'Sorrentino', 'D\'amico', 'Orlando', 'Damico', 'Negri', 'Verdi',
+=======
+        'Milani', 'Pagano', 'Ruggiero', 'Sorrentino', 'D\'amico', 'Orlando', 'Damico', 'Negri',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'Milani', 'Pagano', 'Ruggiero', 'Sorrentino', 'D\'amico', 'Orlando', 'Damico', 'Negri',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

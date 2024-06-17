@@ -34,7 +34,11 @@ final class SummaryPrinter
             $this->printWithColor(
                 'fg-black, bg-yellow',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'No tests executed!',
+=======
+                'No tests executed!'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'No tests executed!'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -54,6 +58,7 @@ final class SummaryPrinter
                     $result->numberOfTestsRun() === 1 ? '' : 's',
                     $result->numberOfAssertions(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $result->numberOfAssertions() === 1 ? '' : 's',
                 ),
             );
@@ -61,10 +66,15 @@ final class SummaryPrinter
             $this->printNumberOfIssuesIgnoredByBaseline($result);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $result->numberOfAssertions() === 1 ? '' : 's'
                 )
             );
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
@@ -76,7 +86,11 @@ final class SummaryPrinter
                 $this->printWithColor(
                     $color,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'OK, but some tests were skipped!',
+=======
+                    'OK, but some tests were skipped!'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'OK, but some tests were skipped!'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -85,24 +99,34 @@ final class SummaryPrinter
                 $this->printWithColor(
                     $color,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'OK, but there were issues!',
                 );
             }
         } else {
             if ($result->hasTestErroredEvents() || $result->hasTestTriggeredPhpunitErrorEvents()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     'OK, but some tests have issues!'
                 );
             }
         } else {
             if ($result->hasTestErroredEvents()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $color = 'fg-white, bg-red';
 
                 $this->printWithColor(
                     $color,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'ERRORS!',
+=======
+                    'ERRORS!'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'ERRORS!'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,6 +136,7 @@ final class SummaryPrinter
 
                 $this->printWithColor(
                     $color,
+<<<<<<< HEAD
 <<<<<<< HEAD
                     'FAILURES!',
                 );
@@ -130,6 +155,8 @@ final class SummaryPrinter
                     $color,
                     'NOTICES!',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     'FAILURES!'
                 );
             } elseif ($result->hasWarningEvents()) {
@@ -146,6 +173,9 @@ final class SummaryPrinter
                 $this->printWithColor(
                     $color,
                     'NOTICES!'
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
@@ -154,25 +184,34 @@ final class SummaryPrinter
         $this->printCountString($result->numberOfTestsRun(), 'Tests', $color, true);
         $this->printCountString($result->numberOfAssertions(), 'Assertions', $color, true);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->printCountString($result->numberOfErrors(), 'Errors', $color);
         $this->printCountString($result->numberOfTestFailedEvents(), 'Failures', $color);
         $this->printCountString($result->numberOfWarnings(), 'Warnings', $color);
         $this->printCountString($result->numberOfDeprecations(), 'Deprecations', $color);
         $this->printCountString($result->numberOfNotices(), 'Notices', $color);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printCountString($result->numberOfTestErroredEvents() + $result->numberOfTestsWithTestTriggeredErrorEvents(), 'Errors', $color);
         $this->printCountString($result->numberOfTestFailedEvents(), 'Failures', $color);
         $this->printCountString($result->numberOfWarningEvents(), 'Warnings', $color);
         $this->printCountString($result->numberOfDeprecationEvents(), 'Deprecations', $color);
         $this->printCountString($result->numberOfNoticeEvents(), 'Notices', $color);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printCountString($result->numberOfTestSuiteSkippedEvents() + $result->numberOfTestSkippedEvents(), 'Skipped', $color);
         $this->printCountString($result->numberOfTestMarkedIncompleteEvents(), 'Incomplete', $color);
         $this->printCountString($result->numberOfTestsWithTestConsideredRiskyEvents(), 'Risky', $color);
         $this->printWithColor($color, '.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $this->printNumberOfIssuesIgnoredByBaseline($result);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -187,9 +226,15 @@ final class SummaryPrinter
                     $this->countPrinted ? ', ' : '',
                     $name,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $count,
                 ),
                 false,
+=======
+                    $count
+                ),
+                false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $count
                 ),
@@ -214,6 +259,7 @@ final class SummaryPrinter
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private function printNumberOfIssuesIgnoredByBaseline(TestResult $result): void
     {
@@ -230,6 +276,8 @@ final class SummaryPrinter
             );
         }
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

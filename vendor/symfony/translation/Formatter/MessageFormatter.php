@@ -29,7 +29,11 @@ class MessageFormatter implements MessageFormatterInterface, IntlFormatterInterf
      * @param TranslatorInterface|null $translator An identity translator to use as selector for pluralization
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?TranslatorInterface $translator = null, ?IntlFormatterInterface $intlFormatter = null)
+=======
+    public function __construct(TranslatorInterface $translator = null, IntlFormatterInterface $intlFormatter = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(TranslatorInterface $translator = null, IntlFormatterInterface $intlFormatter = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,13 +45,19 @@ class MessageFormatter implements MessageFormatterInterface, IntlFormatterInterf
     public function format(string $message, string $locale, array $parameters = []): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->translator->trans($message, $parameters, null, $locale);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->translator instanceof TranslatorInterface) {
             return $this->translator->trans($message, $parameters, null, $locale);
         }
 
         return strtr($message, $parameters);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

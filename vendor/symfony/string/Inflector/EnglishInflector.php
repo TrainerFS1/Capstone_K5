@@ -22,7 +22,11 @@ final class EnglishInflector implements InflectorInterface
         // First entry: plural suffix, reversed
         // Second entry: length of plural suffix
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Third entry: Whether the suffix may succeed a vowel
+=======
+        // Third entry: Whether the suffix may succeed a vocal
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         // Third entry: Whether the suffix may succeed a vocal
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,9 +64,12 @@ final class EnglishInflector implements InflectorInterface
         ['seci', 4, false, true, ['ex', 'ix', 'ice']],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // codes (code)
         ['sedoc', 5, false, true, 'code'],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // selfies (selfie)
@@ -75,9 +82,12 @@ final class EnglishInflector implements InflectorInterface
         ['seivom', 6, true, true, 'movie'],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // names (name)
         ['seman', 5, true, false, 'name'],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // conspectuses (conspectus), prospectuses (prospectus)
@@ -105,9 +115,12 @@ final class EnglishInflector implements InflectorInterface
         ['sess', 4, true, false, 'ss'],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // statuses (status)
         ['sesutats', 8, true, true, 'status'],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // analyses (analysis), ellipses (ellipsis), fungi (fungus),
@@ -155,9 +168,12 @@ final class EnglishInflector implements InflectorInterface
         ['se', 2, true, true, ['', 'e']],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
          // status (status)
         ['sutats', 6, true, true, 'status'],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // tags (tag)
@@ -179,6 +195,7 @@ final class EnglishInflector implements InflectorInterface
         // First entry: singular suffix, reversed
         // Second entry: length of singular suffix
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Third entry: Whether the suffix may succeed a vowel
         // Fourth entry: Whether the suffix may succeed a consonant
         // Fifth entry: plural suffix, normal
@@ -187,10 +204,15 @@ final class EnglishInflector implements InflectorInterface
         ['sixa', 4, false, false, 'axes'],
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Third entry: Whether the suffix may succeed a vocal
         // Fourth entry: Whether the suffix may succeed a consonant
         // Fifth entry: plural suffix, normal
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // criterion (criteria)
         ['airetirc', 8, false, false, 'criterion'],
@@ -262,9 +284,12 @@ final class EnglishInflector implements InflectorInterface
         ['htoot', 5, true, true, 'teeth'],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // albums (album)
         ['mubla', 5, true, true, 'albums'],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // bacteria (bacterium), criteria (criterion), phenomena (phenomenon)
@@ -286,9 +311,12 @@ final class EnglishInflector implements InflectorInterface
         ['nos', 3, true, true, 'sons'],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // icons (icon)
         ['noc', 3, true, true, 'cons'],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // bacteria (bacterium), criteria (criterion), phenomena (phenomenon)
@@ -324,6 +352,7 @@ final class EnglishInflector implements InflectorInterface
         ['suc', 3, true, true, 'cuses'],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // hippocampi (hippocampus)
         ['supmacoppih', 11, false, false, 'hippocampi'],
 
@@ -333,6 +362,8 @@ final class EnglishInflector implements InflectorInterface
         // status (status)
         ['sutats', 6, true, true, ['status', 'statuses']],
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // conspectuses (conspectus), prospectuses (prospectus)
@@ -391,9 +422,12 @@ final class EnglishInflector implements InflectorInterface
         'reed',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // equipment
         'tnempiuqe',
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // feedback
@@ -402,6 +436,7 @@ final class EnglishInflector implements InflectorInterface
         // fish
         'hsif',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         // health
         'htlaeh',
@@ -423,6 +458,11 @@ final class EnglishInflector implements InflectorInterface
         'ofni',
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        // info
+        'ofni',
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // moose
         'esoom',
 
@@ -435,6 +475,7 @@ final class EnglishInflector implements InflectorInterface
         // species
         'seiceps',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // traffic
         'ciffart',
@@ -444,6 +485,8 @@ final class EnglishInflector implements InflectorInterface
 
         // hardware
         'erawdrah',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
@@ -480,6 +523,7 @@ final class EnglishInflector implements InflectorInterface
                     // Is there any character preceding the suffix in the plural string?
                     if ($j < $pluralLength) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $nextIsVowel = str_contains('aeiou', $lowerPluralRev[$j]);
 
                         if (!$map[2] && $nextIsVowel) {
@@ -489,6 +533,8 @@ final class EnglishInflector implements InflectorInterface
 
                         if (!$map[3] && !$nextIsVowel) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $nextIsVocal = str_contains('aeiou', $lowerPluralRev[$j]);
 
                         if (!$map[2] && $nextIsVocal) {
@@ -497,6 +543,9 @@ final class EnglishInflector implements InflectorInterface
                         }
 
                         if (!$map[3] && !$nextIsVocal) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             // suffix may not succeed a consonant but next char is one
                             break;
@@ -568,6 +617,7 @@ final class EnglishInflector implements InflectorInterface
                     // Is there any character preceding the suffix in the plural string?
                     if ($j < $singularLength) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $nextIsVowel = str_contains('aeiou', $lowerSingularRev[$j]);
 
                         if (!$map[2] && $nextIsVowel) {
@@ -577,6 +627,8 @@ final class EnglishInflector implements InflectorInterface
 
                         if (!$map[3] && !$nextIsVowel) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $nextIsVocal = str_contains('aeiou', $lowerSingularRev[$j]);
 
                         if (!$map[2] && $nextIsVocal) {
@@ -585,6 +637,9 @@ final class EnglishInflector implements InflectorInterface
                         }
 
                         if (!$map[3] && !$nextIsVocal) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             // suffix may not succeed a consonant but next char is one
                             break;

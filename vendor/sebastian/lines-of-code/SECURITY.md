@@ -1,6 +1,7 @@
 # Security Policy
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 If you believe you have found a security vulnerability in the library that is developed in this repository, please report it to us through coordinated disclosure.
 
 **Please do not report security vulnerabilities through public GitHub issues, discussions, or pull requests.**
@@ -30,6 +31,8 @@ If the library is used in a web application, the application developer is respon
 Vulnerabilities specific to the use outside a development context will be fixed as applicable, provided that the fix does not have an averse effect on the primary use case for development purposes.
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 This library is intended to be used in development environments only. For instance, it is used by the testing framework PHPUnit. There is no reason why this library should be installed on a webserver.
 
 **If you upload this library to a webserver then your deployment process is broken. On a more general note, if your `vendor` directory is publicly accessible on your webserver then your deployment process is also broken.**
@@ -37,4 +40,7 @@ This library is intended to be used in development environments only. For instan
 ## Security Contact Information
 
 After the above, if you still would like to report a security vulnerability, please email `sebastian@phpunit.de`.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

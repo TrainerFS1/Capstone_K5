@@ -3,7 +3,12 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface NodeTraverserInterface {
+=======
+interface NodeTraverserInterface
+{
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 interface NodeTraverserInterface
 {
@@ -14,6 +19,7 @@ interface NodeTraverserInterface
      * @param NodeVisitor $visitor Visitor to add
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addVisitor(NodeVisitor $visitor): void;
 
     /**
@@ -21,6 +27,8 @@ interface NodeTraverserInterface
      */
     public function removeVisitor(NodeVisitor $visitor): void;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addVisitor(NodeVisitor $visitor);
 
     /**
@@ -29,6 +37,9 @@ interface NodeTraverserInterface
      * @param NodeVisitor $visitor
      */
     public function removeVisitor(NodeVisitor $visitor);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -39,7 +50,11 @@ interface NodeTraverserInterface
      * @return Node[] Traversed array of nodes
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function traverse(array $nodes): array;
+=======
+    public function traverse(array $nodes) : array;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function traverse(array $nodes) : array;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

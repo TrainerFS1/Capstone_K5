@@ -16,6 +16,7 @@ use Symfony\Contracts\Service\Attribute\Required;
 use Symfony\Contracts\Service\Attribute\SubscribedService;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 trigger_deprecation('symfony/contracts', 'v3.5', '"%s" is deprecated, use "ServiceMethodsSubscriberTrait" instead.', ServiceSubscriberTrait::class);
 
 /**
@@ -34,6 +35,8 @@ trigger_deprecation('symfony/contracts', 'v3.5', '"%s" is deprecated, use "Servi
 trait ServiceSubscriberTrait
 {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Implementation of ServiceSubscriberInterface that determines subscribed services from
  * method return types. Service ids are available as "ClassName::methodName".
@@ -45,6 +48,9 @@ trait ServiceSubscriberTrait
     /** @var ContainerInterface */
     protected $container;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function getSubscribedServices(): array
     {
@@ -87,6 +93,7 @@ trait ServiceSubscriberTrait
     public function setContainer(ContainerInterface $container): ?ContainerInterface
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $ret = null;
         if (method_exists(get_parent_class(self::class) ?: '', __FUNCTION__)) {
             $ret = parent::setContainer($container);
@@ -96,6 +103,8 @@ trait ServiceSubscriberTrait
 
         return $ret;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->container = $container;
 
         if (method_exists(get_parent_class(self::class) ?: '', __FUNCTION__)) {
@@ -103,6 +112,9 @@ trait ServiceSubscriberTrait
         }
 
         return null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

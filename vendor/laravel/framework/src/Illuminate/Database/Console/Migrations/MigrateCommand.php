@@ -13,8 +13,11 @@ use PDOException;
 use Throwable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\confirm;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class MigrateCommand extends BaseCommand implements Isolatable
@@ -90,17 +93,23 @@ class MigrateCommand extends BaseCommand implements Isolatable
             // we will use the path relative to the root of this installation folder
             // so that migrations may be run for any path within the applications.
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->migrator->setOutput($this->output)
                 ->run($this->getMigrationPaths(), [
                     'pretend' => $this->option('pretend'),
                     'step' => $this->option('step'),
                 ]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $migrations = $this->migrator->setOutput($this->output)
                     ->run($this->getMigrationPaths(), [
                         'pretend' => $this->option('pretend'),
                         'step' => $this->option('step'),
                     ]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             // Finally, if the "seed" option has been given, we will re-run the database
@@ -152,7 +161,11 @@ class MigrateCommand extends BaseCommand implements Isolatable
             try {
                 if ($e->getPrevious() instanceof SQLiteDatabaseDoesNotExistException) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     return $this->createMissingSqliteDatabase($e->getPrevious()->path);
+=======
+                    return $this->createMissingSqliteDatbase($e->getPrevious()->path);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     return $this->createMissingSqliteDatbase($e->getPrevious()->path);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -181,7 +194,11 @@ class MigrateCommand extends BaseCommand implements Isolatable
      * @return bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function createMissingSqliteDatabase($path)
+=======
+    protected function createMissingSqliteDatbase($path)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function createMissingSqliteDatbase($path)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -197,7 +214,11 @@ class MigrateCommand extends BaseCommand implements Isolatable
         $this->components->warn('The SQLite database does not exist: '.$path);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! confirm('Would you like to create it?', default: false)) {
+=======
+        if (! $this->components->confirm('Would you like to create it?')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (! $this->components->confirm('Would you like to create it?')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -226,7 +247,11 @@ class MigrateCommand extends BaseCommand implements Isolatable
             $this->components->warn("The database '{$connection->getDatabaseName()}' does not exist on the '{$connection->getName()}' connection.");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (! confirm('Would you like to create it?', default: false)) {
+=======
+            if (! $this->components->confirm('Would you like to create it?')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (! $this->components->confirm('Would you like to create it?')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

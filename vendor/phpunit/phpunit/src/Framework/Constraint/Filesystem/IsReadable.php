@@ -45,7 +45,11 @@ final class IsReadable extends Constraint
         return sprintf(
             '"%s" is readable',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $other,
+=======
+            $other
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $other
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

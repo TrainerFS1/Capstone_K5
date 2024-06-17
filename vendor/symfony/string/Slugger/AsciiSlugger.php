@@ -12,7 +12,11 @@
 namespace Symfony\Component\String\Slugger;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Emoji\EmojiTransliterator;
+=======
+use Symfony\Component\Intl\Transliterator\EmojiTransliterator;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\Intl\Transliterator\EmojiTransliterator;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,6 +64,10 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private ?string $defaultLocale;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private ?string $defaultLocale;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -76,6 +84,7 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     private array $transliterators = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private ?string $defaultLocale = null,
         array|\Closure|null $symbolsMap = null,
@@ -85,6 +94,8 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
 
     public function setLocale(string $locale): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(string $defaultLocale = null, array|\Closure $symbolsMap = null)
     {
         $this->defaultLocale = $defaultLocale;
@@ -92,6 +103,9 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     }
 
     public function setLocale(string $locale)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->defaultLocale = $locale;
@@ -111,7 +125,11 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     {
         if (false !== $emoji && !class_exists(EmojiTransliterator::class)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/emoji" package is not installed. Try running "composer require symfony/emoji".', __METHOD__));
+=======
+            throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/intl" package is not installed. Try running "composer require symfony/intl".', __METHOD__));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/intl" package is not installed. Try running "composer require symfony/intl".', __METHOD__));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -124,7 +142,11 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function slug(string $string, string $separator = '-', ?string $locale = null): AbstractUnicodeString
+=======
+    public function slug(string $string, string $separator = '-', string $locale = null): AbstractUnicodeString
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function slug(string $string, string $separator = '-', string $locale = null): AbstractUnicodeString
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -148,7 +170,13 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
             // as the closure can just provide substitutions for all locales of interest.
             $symbolsMap = $this->symbolsMap;
 <<<<<<< HEAD
+<<<<<<< HEAD
             array_unshift($transliterator, static fn ($s) => $symbolsMap($s, $locale));
+=======
+            array_unshift($transliterator, static function ($s) use ($symbolsMap, $locale) {
+                return $symbolsMap($s, $locale);
+            });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             array_unshift($transliterator, static function ($s) use ($symbolsMap, $locale) {
                 return $symbolsMap($s, $locale);

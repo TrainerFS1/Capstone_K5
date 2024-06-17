@@ -23,10 +23,13 @@ use Spatie\LaravelIgnition\Solutions\SolutionProviders\UndefinedViewVariableSolu
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\UnknownValidationSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\ViewNotFoundSolutionProvider;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\OpenAiSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\SailNetworkSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\UnknownMariadbCollationSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\UnknownMysql8CollationSolutionProvider;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -42,7 +45,11 @@ return [
     | Supported: "phpstorm", "vscode", "vscode-insiders", "textmate", "emacs",
     |            "sublime", "atom", "nova", "macvim", "idea", "netbeans",
 <<<<<<< HEAD
+<<<<<<< HEAD
     |            "xdebug", "phpstorm-remote"
+=======
+    |            "xdebug"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     |            "xdebug"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -99,8 +106,14 @@ return [
     |--------------------------------------------------------------------------
     |
 <<<<<<< HEAD
+<<<<<<< HEAD
     | List of solution providers that should be loaded. You may specify additional 
     | providers as fully qualified class names. 
+=======
+    | You may specify a list of solution providers (as fully qualified class
+    | names) that shouldn't be loaded. Ignition will ignore these classes
+    | and possible solutions provided by them will never be displayed.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     | You may specify a list of solution providers (as fully qualified class
     | names) that shouldn't be loaded. Ignition will ignore these classes
@@ -132,10 +145,13 @@ return [
         UndefinedViewVariableSolutionProvider::class,
         GenericLaravelExceptionSolutionProvider::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
         OpenAiSolutionProvider::class,
         SailNetworkSolutionProvider::class,
         UnknownMysql8CollationSolutionProvider::class,
         UnknownMariadbCollationSolutionProvider::class,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ],
@@ -253,6 +269,7 @@ return [
         JobRecorder::class,
         LogRecorder::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
         QueryRecorder::class,
     ],
 
@@ -299,6 +316,10 @@ return [
         \Spatie\Backtrace\Arguments\Reducers\StringableArgumentReducer::class,
     ],
 
+=======
+        QueryRecorder::class
+    ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         QueryRecorder::class
     ]

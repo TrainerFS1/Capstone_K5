@@ -4,6 +4,7 @@ namespace Illuminate\Console;
 
 use Carbon\CarbonInterval;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Cache\DynamoDbStore;
 use Illuminate\Contracts\Cache\Factory as Cache;
 use Illuminate\Contracts\Cache\LockProvider;
@@ -14,10 +15,15 @@ class CacheCommandMutex implements CommandMutex
     use InteractsWithTime;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Cache\Factory as Cache;
 
 class CacheCommandMutex implements CommandMutex
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The cache factory implementation.
@@ -52,6 +58,7 @@ class CacheCommandMutex implements CommandMutex
     public function create($command)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $store = $this->cache->store($this->store);
 
         $expiresAt = method_exists($command, 'isolationLockExpiresAt')
@@ -67,6 +74,8 @@ class CacheCommandMutex implements CommandMutex
 
         return $store->add($this->commandMutexName($command), true, $expiresAt);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->cache->store($this->store)->add(
             $this->commandMutexName($command),
             true,
@@ -74,6 +83,9 @@ class CacheCommandMutex implements CommandMutex
                     ? $command->isolationLockExpiresAt()
                     : CarbonInterval::hour(),
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -85,6 +97,7 @@ class CacheCommandMutex implements CommandMutex
      */
     public function exists($command)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $store = $this->cache->store($this->store);
 
@@ -104,6 +117,11 @@ class CacheCommandMutex implements CommandMutex
             $this->commandMutexName($command)
         );
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        return $this->cache->store($this->store)->has(
+            $this->commandMutexName($command)
+        );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -114,6 +132,7 @@ class CacheCommandMutex implements CommandMutex
      */
     public function forget($command)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $store = $this->cache->store($this->store);
 
@@ -128,12 +147,17 @@ class CacheCommandMutex implements CommandMutex
      * Get the isolatable command mutex name.
      *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->cache->store($this->store)->forget(
             $this->commandMutexName($command)
         );
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  \Illuminate\Console\Command  $command
      * @return string
@@ -141,11 +165,15 @@ class CacheCommandMutex implements CommandMutex
     protected function commandMutexName($command)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseName = 'framework'.DIRECTORY_SEPARATOR.'command-'.$command->getName();
 
         return method_exists($command, 'isolatableId')
             ? $baseName.'-'.$command->isolatableId()
             : $baseName;
+=======
+        return 'framework'.DIRECTORY_SEPARATOR.'command-'.$command->getName();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return 'framework'.DIRECTORY_SEPARATOR.'command-'.$command->getName();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -164,6 +192,7 @@ class CacheCommandMutex implements CommandMutex
         return $this;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Determine if the given store should use locks for command mutexes.
@@ -175,6 +204,8 @@ class CacheCommandMutex implements CommandMutex
     {
         return $store instanceof LockProvider && ! $store instanceof DynamoDbStore;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

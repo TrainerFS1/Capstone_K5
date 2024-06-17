@@ -3,6 +3,10 @@
 namespace Faker\Provider\lv_LV;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Faker\Calculator\Luhn;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Faker\Calculator\Luhn;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -139,6 +143,11 @@ class Person extends \Faker\Provider\Person
      * @see https://en.wikipedia.org/wiki/National_identification_number#Latvia
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param \DateTime $birthdate
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param \DateTime $birthdate
      *
@@ -151,6 +160,7 @@ class Person extends \Faker\Provider\Person
             $birthdate = DateTime::dateTimeThisCentury();
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $year = $birthdate->format('Y');
 
@@ -180,12 +190,17 @@ class Person extends \Faker\Provider\Person
 
         return $datePart . '-' . $century . $serialNumber . $checksumDigit;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $datePart = $birthdate->format('dmy');
         $randomDigits = (string) static::numerify('####');
 
         $checksum = Luhn::computeCheckDigit($datePart . $randomDigits);
 
         return $datePart . '-' . $randomDigits . $checksum;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

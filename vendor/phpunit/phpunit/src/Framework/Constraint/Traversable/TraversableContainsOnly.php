@@ -10,7 +10,10 @@
 namespace PHPUnit\Framework\Constraint;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Framework\Exception;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\ExpectationFailedException;
@@ -25,7 +28,11 @@ final class TraversableContainsOnly extends Constraint
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws Exception
+=======
+     * @throws \PHPUnit\Framework\Exception
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \PHPUnit\Framework\Exception
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -54,7 +61,11 @@ final class TraversableContainsOnly extends Constraint
      * @throws ExpectationFailedException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function evaluate(mixed $other, string $description = '', bool $returnResult = false): bool
+=======
+    public function evaluate(mixed $other, string $description = '', bool $returnResult = false): ?bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function evaluate(mixed $other, string $description = '', bool $returnResult = false): ?bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,12 +81,15 @@ final class TraversableContainsOnly extends Constraint
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$success && !$returnResult) {
             $this->fail($other, $description);
         }
 
         return $success;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($returnResult) {
             return $success;
         }
@@ -85,6 +99,9 @@ final class TraversableContainsOnly extends Constraint
         }
 
         return null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

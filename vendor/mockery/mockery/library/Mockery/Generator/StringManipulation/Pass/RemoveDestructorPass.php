@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -26,6 +29,9 @@
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
  * @author     Boris Avdeev <elephant@lislon.ru>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -33,13 +39,17 @@ namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function preg_replace;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * Remove mock's empty destructor if we tend to use original class destructor
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 class RemoveDestructorPass implements Pass
 {
@@ -51,10 +61,15 @@ class RemoveDestructorPass implements Pass
 class RemoveDestructorPass
 {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+class RemoveDestructorPass
+{
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function apply($code, MockConfiguration $config)
     {
         $target = $config->getTargetClass();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (! $target) {
             return $code;
@@ -63,12 +78,17 @@ class RemoveDestructorPass
         if (! $config->isMockOriginalDestructor()) {
             return preg_replace('/public function __destruct\(\)\s+\{.*?\}/sm', '', $code);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$target) {
             return $code;
         }
 
         if (!$config->isMockOriginalDestructor()) {
             $code = preg_replace('/public function __destruct\(\)\s+\{.*?\}/sm', '', $code);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

@@ -34,7 +34,10 @@ class Profile
     private ?int $statusCode = null;
     private ?self $parent = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?string $virtualType = null;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -49,9 +52,12 @@ class Profile
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setToken(string $token)
@@ -70,8 +76,11 @@ class Profile
     /**
      * Sets the parent token.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -105,9 +114,12 @@ class Profile
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setIp(?string $ip)
@@ -124,9 +136,12 @@ class Profile
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMethod(string $method)
@@ -143,9 +158,12 @@ class Profile
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setUrl(?string $url)
@@ -159,9 +177,12 @@ class Profile
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setTime(int $time)
@@ -170,9 +191,12 @@ class Profile
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setStatusCode(int $statusCode)
@@ -186,6 +210,7 @@ class Profile
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @internal
      */
@@ -205,6 +230,8 @@ class Profile
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Finds children profilers.
      *
      * @return self[]
@@ -219,8 +246,11 @@ class Profile
      *
      * @param Profile[] $children
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -235,8 +265,11 @@ class Profile
     /**
      * Adds the child token.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -286,8 +319,11 @@ class Profile
      *
      * @param DataCollectorInterface[] $collectors
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -302,8 +338,11 @@ class Profile
     /**
      * Adds a Collector.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -320,7 +359,11 @@ class Profile
     public function __sleep(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return ['token', 'parent', 'children', 'collectors', 'ip', 'method', 'url', 'time', 'statusCode', 'virtualType'];
+=======
+        return ['token', 'parent', 'children', 'collectors', 'ip', 'method', 'url', 'time', 'statusCode'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return ['token', 'parent', 'children', 'collectors', 'ip', 'method', 'url', 'time', 'statusCode'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

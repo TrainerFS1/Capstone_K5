@@ -13,7 +13,11 @@ if [ -z "$self" ]; then
 fi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 dir=$(cd "${self%[/\\]*}" > /dev/null; cd '../laravel/sail/bin' && pwd)
+=======
+dir=$(cd "${self%[/\\]*}" > /dev/null; cd ../laravel/sail/bin && pwd)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 dir=$(cd "${self%[/\\]*}" > /dev/null; cd ../laravel/sail/bin && pwd)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

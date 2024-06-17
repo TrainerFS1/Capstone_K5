@@ -30,7 +30,11 @@ class ServerBag extends ParameterBag
             if (str_starts_with($key, 'HTTP_')) {
                 $headers[substr($key, 5)] = $value;
 <<<<<<< HEAD
+<<<<<<< HEAD
             } elseif (\in_array($key, ['CONTENT_TYPE', 'CONTENT_LENGTH', 'CONTENT_MD5'], true) && '' !== $value) {
+=======
+            } elseif (\in_array($key, ['CONTENT_TYPE', 'CONTENT_LENGTH', 'CONTENT_MD5'], true)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } elseif (\in_array($key, ['CONTENT_TYPE', 'CONTENT_LENGTH', 'CONTENT_MD5'], true)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -54,7 +58,11 @@ class ServerBag extends ParameterBag
              * RewriteRule ^ - [E=HTTP_AUTHORIZATION:%0]
              * RewriteCond %{REQUEST_FILENAME} !-f
 <<<<<<< HEAD
+<<<<<<< HEAD
              * RewriteRule ^(.*)$ index.php [QSA,L]
+=======
+             * RewriteRule ^(.*)$ app.php [QSA,L]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
              * RewriteRule ^(.*)$ app.php [QSA,L]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

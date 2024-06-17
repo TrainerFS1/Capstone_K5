@@ -7,7 +7,10 @@ use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Crypt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use InvalidArgumentException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -21,6 +24,7 @@ class AsEncryptedCollection implements Castable
      */
     public static function castUsing(array $arguments)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return new class($arguments) implements CastsAttributes
         {
@@ -39,12 +43,17 @@ class AsEncryptedCollection implements Castable
                 if (isset($attributes[$key])) {
                     return new $collectionClass(Json::decode(Crypt::decryptString($attributes[$key])));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new class implements CastsAttributes
         {
             public function get($model, $key, $value, $attributes)
             {
                 if (isset($attributes[$key])) {
                     return new Collection(json_decode(Crypt::decryptString($attributes[$key]), true));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
 
@@ -55,7 +64,11 @@ class AsEncryptedCollection implements Castable
             {
                 if (! is_null($value)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     return [$key => Crypt::encryptString(Json::encode($value))];
+=======
+                    return [$key => Crypt::encryptString(json_encode($value))];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     return [$key => Crypt::encryptString(json_encode($value))];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

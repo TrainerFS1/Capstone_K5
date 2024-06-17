@@ -19,7 +19,11 @@ Given-When-Then style within our tests. With mocks, we have to follow a less
 familiar style, something along the lines of Arrange-Expect-Act-Assert, where
 we have to tell our mocks what to expect before we act on the SUT, then assert
 <<<<<<< HEAD
+<<<<<<< HEAD
 that those expectations were met:
+=======
+that those expectations where met:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 that those expectations where met:
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

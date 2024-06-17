@@ -4,9 +4,14 @@ namespace Illuminate\Console\View\Components;
 
 use Symfony\Component\Console\Output\OutputInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Throwable;
 
 use function Termwind\terminal;
+=======
+use function Termwind\terminal;
+use Throwable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function Termwind\terminal;
 use Throwable;

@@ -58,7 +58,11 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
      * @param string|resource|null $output
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $minLevel = null, $output = null, ?callable $formatter = null, private readonly ?RequestStack $requestStack = null, bool $debug = false)
+=======
+    public function __construct(string $minLevel = null, $output = null, callable $formatter = null, private readonly ?RequestStack $requestStack = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $minLevel = null, $output = null, callable $formatter = null, private readonly ?RequestStack $requestStack = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -87,7 +91,10 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
             throw new InvalidArgumentException(sprintf('Unable to open "%s".', $output));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->debug = $debug;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -120,7 +127,11 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getLogs(?Request $request = null): array
+=======
+    public function getLogs(Request $request = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getLogs(Request $request = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -133,7 +144,11 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function countErrors(?Request $request = null): int
+=======
+    public function countErrors(Request $request = null): int
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function countErrors(Request $request = null): int
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # CHANGELOG
 
 ## v2.15.4
@@ -42,6 +43,8 @@
 
 ## v2.14.1
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 # 2.14.5
 
 * Allow ArrayAccess on super globals
@@ -56,11 +59,15 @@
 * Support PHP 8.1
 
 # 2.14.1
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 * Fix syntax highlighting scrolling too far.
 * Improve the way we detect xdebug linkformat.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## v2.14.0
 
@@ -160,6 +167,8 @@ Avoids licensing issues with prettify, and uses a maintained, modern project.
 
 ## v2.1.0
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 # 2.14.0
 
 * Switched syntax highlighting to Prism.js
@@ -256,6 +265,9 @@ Avoids licensing issues with prettify, and uses a maintained, modern project.
 * Support PHP 7.2
 
 # 2.1.0
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 * Add a `SystemFacade` to allow clients to override Whoops behavior.
@@ -264,7 +276,11 @@ Avoids licensing issues with prettify, and uses a maintained, modern project.
 * Add icons to search on Google and Stack Overflow.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## v2.0.0
+=======
+# 2.0.0
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 # 2.0.0
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

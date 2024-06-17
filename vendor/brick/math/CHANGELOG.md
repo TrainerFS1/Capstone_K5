@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## [0.12.1](https://github.com/brick/math/releases/tag/0.12.1) - 2023-11-29
 
 ⚡️ **Performance improvements**
@@ -33,6 +34,8 @@ All notable changes to this project will be documented in this file.
 internally calling `of()`, with `strict_types` enabled. You can fix this by casting `Stringable` objects to `string`
 first.</sup>
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## [0.10.2](https://github.com/brick/math/releases/tag/0.10.2) - 2022-08-11
@@ -377,8 +380,13 @@ This release also comes with many performance improvements.
   - `divideAndRemainder()` is renamed to `quotientAndRemainder()`
   - `dividedBy()` now takes a **mandatory** `$scale` parameter **before** the rounding mode
 <<<<<<< HEAD
+<<<<<<< HEAD
   - `toBigInteger()` does not accept a `$roundingMode` parameter anymore
   - `toBigRational()` does not simplify the fraction anymore; explicitly add `->simplified()` to get the previous behaviour
+=======
+  - `toBigInteger()` does not accept a `$roundingMode` parameter any more
+  - `toBigRational()` does not simplify the fraction any more; explicitly add `->simplified()` to get the previous behaviour
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
   - `toBigInteger()` does not accept a `$roundingMode` parameter any more
   - `toBigRational()` does not simplify the fraction any more; explicitly add `->simplified()` to get the previous behaviour
@@ -457,7 +465,11 @@ Added `BigDecimal::divideAndRemainder()`
 ## [0.2.0](https://github.com/brick/math/releases/tag/0.2.0) - 2015-05-22
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - `min()` and `max()` do not accept an `array` anymore, but a variable number of parameters
+=======
+- `min()` and `max()` do not accept an `array` any more, but a variable number of parameters
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 - `min()` and `max()` do not accept an `array` any more, but a variable number of parameters
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

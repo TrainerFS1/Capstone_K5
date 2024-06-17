@@ -5,7 +5,10 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Http\Controllers\BillController;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -29,7 +32,11 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         //
+=======
+        // $schedule->command('inspire')->hourly();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         // $schedule->command('inspire')->hourly();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,7 +50,11 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->load(__DIR__ . '/Commands');
+=======
+        $this->load(__DIR__.'/Commands');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->load(__DIR__.'/Commands');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

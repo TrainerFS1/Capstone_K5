@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,6 +28,9 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -32,10 +38,13 @@ namespace Mockery\Adapter\Phpunit;
 
 use Mockery;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Framework\Attributes\After;
 use PHPUnit\Framework\Attributes\Before;
 
 use function method_exists;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -49,6 +58,7 @@ trait MockeryPHPUnitIntegration
 
     protected $mockeryOpen;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected function addMockeryExpectationsToAssertionCount()
     {
@@ -76,6 +86,8 @@ trait MockeryPHPUnitIntegration
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Performs assertions shared by all tests of a test case. This method is
      * called before execution of a test ends and before the tearDown method.
@@ -90,11 +102,14 @@ trait MockeryPHPUnitIntegration
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @after
      */
     #[After]
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function addMockeryExpectationsToAssertionCount()
     {
         $this->addToAssertionCount(Mockery::getContainer()->mockery_getExpectationCount());
@@ -130,6 +145,9 @@ trait MockeryPHPUnitIntegration
     /**
      * @after
      */
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function purgeMockeryContainer()
     {
@@ -138,6 +156,7 @@ trait MockeryPHPUnitIntegration
             Mockery::close();
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -148,6 +167,8 @@ trait MockeryPHPUnitIntegration
     {
         $this->mockeryOpen = true;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

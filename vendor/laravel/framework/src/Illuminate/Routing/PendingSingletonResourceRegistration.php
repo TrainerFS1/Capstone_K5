@@ -65,7 +65,11 @@ class PendingSingletonResourceRegistration
      * Set the methods the controller should apply to.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string|mixed  $methods
+=======
+     * @param  array|string|dynamic  $methods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array|string|dynamic  $methods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,7 +86,11 @@ class PendingSingletonResourceRegistration
      * Set the methods the controller should exclude.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string|mixed  $methods
+=======
+     * @param  array|string|dynamic  $methods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array|string|dynamic  $methods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -99,18 +107,24 @@ class PendingSingletonResourceRegistration
      * Indicate that the resource should have creation and storage routes.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
      */
     public function creatable()
     {
         $this->options['creatable'] = true;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  bool  $creatable
      * @return $this
      */
     public function creatable($creatable = true)
     {
         $this->options['creatable'] = $creatable;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
@@ -120,18 +134,24 @@ class PendingSingletonResourceRegistration
      * Indicate that the resource should have a deletion route.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
      */
     public function destroyable()
     {
         $this->options['destroyable'] = true;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  bool  $destroyable
      * @return $this
      */
     public function destroyable($destroyable = true)
     {
         $this->options['destroyable'] = $destroyable;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;

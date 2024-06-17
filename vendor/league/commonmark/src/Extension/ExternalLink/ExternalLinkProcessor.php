@@ -91,11 +91,14 @@ final class ExternalLinkProcessor
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // No rel attributes? Mark the attribute as 'false' so LinkRenderer doesn't add defaults
         if (! $link->data->has('attributes/rel')) {
             $link->data->set('attributes/rel', false);
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -104,7 +107,11 @@ final class ExternalLinkProcessor
      * @internal This method is only public so we can easily test it. DO NOT USE THIS OUTSIDE OF THIS EXTENSION!
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param non-empty-string|list<non-empty-string> $compareTo
+=======
+     * @param mixed $compareTo
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param mixed $compareTo
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

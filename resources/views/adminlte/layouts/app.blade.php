@@ -14,7 +14,10 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -34,6 +37,7 @@
         }
 
         .main-sidebar {
+<<<<<<< HEAD
 <<<<<<< HEAD
             background-color: #EB47EBCC !important;
         }
@@ -91,6 +95,9 @@
 =======
             background-color: #2F7BAC !important;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            background-color: #2F7BAC !important;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     </style>
 </head>
@@ -103,16 +110,22 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ '/' }}" class="nav-link">Home</a>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ route('home') }}" class="nav-link">Home</a>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
@@ -128,6 +141,7 @@
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="far fa-bell"></i>
@@ -142,6 +156,8 @@
                             <a href="#">View all notifications</a>
                         </div>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 <!-- Navbar Search -->
                 <li class="nav-item">
                     <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -162,6 +178,9 @@
                                 </div>
                             </div>
                         </form>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     </div>
                 </li>
@@ -175,8 +194,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}"
                             class="img-circle elevation-2" alt="User Image" style="width: 30px; height: 30px;">
+=======
+                        <img src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" class="img-circle elevation-2" alt="User Image" style="width: 30px; height: 30px;">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" class="img-circle elevation-2" alt="User Image" style="width: 30px; height: 30px;">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -189,7 +212,11 @@
                         <div class="dropdown-divider"></div>
                         <a href="{{ route('logout') }}" class="dropdown-item"
 <<<<<<< HEAD
+<<<<<<< HEAD
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+=======
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -278,6 +305,11 @@
 
         <!-- REQUIRED SCRIPTS -->
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <!-- jQuery -->
+        <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         <!-- jQuery -->
         <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -286,6 +318,7 @@
         <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <!-- AdminLTE App -->
         <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {{-- Notifikasi Tagihan --}}
         <script>
@@ -362,6 +395,8 @@
                 loadNotifications();
             });
         </script>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         <!-- Sweet Alert -->

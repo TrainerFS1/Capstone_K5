@@ -42,7 +42,11 @@ final class ParameterizedHeader extends UnstructuredHeader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setParameter(string $parameter, ?string $value): void
+=======
+    public function setParameter(string $parameter, ?string $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setParameter(string $parameter, ?string $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -59,7 +63,11 @@ final class ParameterizedHeader extends UnstructuredHeader
      * @param string[] $parameters
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setParameters(array $parameters): void
+=======
+    public function setParameters(array $parameters)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setParameters(array $parameters)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,7 +102,11 @@ final class ParameterizedHeader extends UnstructuredHeader
      * reasons to prevent potential breakage of attributes.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function toTokens(?string $string = null): array
+=======
+    protected function toTokens(string $string = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function toTokens(string $string = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -16,14 +16,20 @@ use Psr\Http\Message\RequestInterface;
  * **curl** key of the provided request options.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @final
  */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @property resource|\CurlMultiHandle $_mh Internal use only. Lazy loaded multi-handle.
  *
  * @final
  */
 #[\AllowDynamicProperties]
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class CurlMultiHandler
 {
@@ -62,9 +68,12 @@ class CurlMultiHandler
     private $options = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var resource|\CurlMultiHandle */
     private $_mh;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -91,10 +100,13 @@ class CurlMultiHandler
 
         $this->options = $options['options'] ?? [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // unsetting the property forces the first access to go through
         // __get().
         unset($this->_mh);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -183,8 +195,12 @@ class CurlMultiHandler
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         while (\curl_multi_exec($this->_mh, $this->active) === \CURLM_CALL_MULTI_PERFORM) {
         }
+=======
+        while (\curl_multi_exec($this->_mh, $this->active) === \CURLM_CALL_MULTI_PERFORM);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         while (\curl_multi_exec($this->_mh, $this->active) === \CURLM_CALL_MULTI_PERFORM);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

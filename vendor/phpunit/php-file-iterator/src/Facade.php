@@ -21,6 +21,7 @@ final class Facade
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param list<non-empty-string>|non-empty-string $paths
      * @psalm-param list<non-empty-string>|string $suffixes
      * @psalm-param list<non-empty-string>|string $prefixes
@@ -32,6 +33,8 @@ final class Facade
     {
         $iterator = (new Factory)->getFileIterator($paths, $suffixes, $prefixes, $exclude);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-param list<string>|string $suffixes
      * @psalm-param list<string>|string $prefixes
      * @psalm-param list<string> $exclude
@@ -41,6 +44,9 @@ final class Facade
     public function getFilesAsArray(string $path, array|string $suffixes = '', array|string $prefixes = '', array $exclude = []): array
     {
         $iterator = (new Factory)->getFileIterator($path, $suffixes, $prefixes, $exclude);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $files = [];

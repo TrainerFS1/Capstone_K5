@@ -22,7 +22,11 @@ class RetryCommand extends Command
                             {id?* : The ID of the failed job or "all" to retry all jobs}
                             {--queue= : Retry all of the failed jobs for the specified queue}
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {--range=* : Range of job IDs (numeric) to be retried (e.g. 1-5)}';
+=======
+                            {--range=* : Range of job IDs (numeric) to be retried}';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             {--range=* : Range of job IDs (numeric) to be retried}';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -75,11 +79,15 @@ class RetryCommand extends Command
 
         if (count($ids) === 1 && $ids[0] === 'all') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $failer = $this->laravel['queue.failer'];
 
             return method_exists($failer, 'ids')
                 ? $failer->ids()
                 : Arr::pluck($failer->all(), 'id');
+=======
+            return Arr::pluck($this->laravel['queue.failer']->all(), 'id');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return Arr::pluck($this->laravel['queue.failer']->all(), 'id');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -105,6 +113,7 @@ class RetryCommand extends Command
     protected function getJobIdsByQueue($queue)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $failer = $this->laravel['queue.failer'];
 
         $ids = method_exists($failer, 'ids')
@@ -114,10 +123,15 @@ class RetryCommand extends Command
                 ->pluck('id')
                 ->toArray();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $ids = collect($this->laravel['queue.failer']->all())
                         ->where('queue', $queue)
                         ->pluck('id')
                         ->toArray();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (count($ids) === 0) {

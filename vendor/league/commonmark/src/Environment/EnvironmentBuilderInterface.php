@@ -15,7 +15,10 @@ namespace League\CommonMark\Environment;
 
 use League\CommonMark\Delimiter\Processor\DelimiterProcessorInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\AlreadyInitializedException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Extension\ExtensionInterface;
@@ -33,8 +36,11 @@ interface EnvironmentBuilderInterface extends ConfigurationProviderInterface
     /**
      * Registers the given extension with the Environment
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws AlreadyInitializedException if the Environment has already been initialized
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -48,8 +54,11 @@ interface EnvironmentBuilderInterface extends ConfigurationProviderInterface
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws AlreadyInitializedException if the Environment has already been initialized
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -63,8 +72,11 @@ interface EnvironmentBuilderInterface extends ConfigurationProviderInterface
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws AlreadyInitializedException if the Environment has already been initialized
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -75,8 +87,11 @@ interface EnvironmentBuilderInterface extends ConfigurationProviderInterface
      *
      * @param DelimiterProcessorInterface $processor Delimiter processors instance
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws AlreadyInitializedException if the Environment has already been initialized
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -93,8 +108,11 @@ interface EnvironmentBuilderInterface extends ConfigurationProviderInterface
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws AlreadyInitializedException if the Environment has already been initialized
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -109,8 +127,11 @@ interface EnvironmentBuilderInterface extends ConfigurationProviderInterface
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws AlreadyInitializedException if the Environment has already been initialized
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

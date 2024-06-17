@@ -164,7 +164,10 @@ class Dispatcher implements QueueingDispatcher
     {
         $jobs = Collection::wrap($jobs);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $jobs = ChainedBatch::prepareNestedBatches($jobs);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -268,7 +271,11 @@ class Dispatcher implements QueueingDispatcher
     {
         $this->container->terminating(function () use ($command, $handler) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->dispatchSync($command, $handler);
+=======
+            $this->dispatchNow($command, $handler);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->dispatchNow($command, $handler);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -42,7 +42,11 @@ use function unserialize;
 use function var_export;
 use PHPUnit\Event\Code\Phpt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Code\ThrowableBuilder;
+=======
+use PHPUnit\Event\Code\Throwable as EventThrowable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\Code\Throwable as EventThrowable;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -62,7 +66,10 @@ use PHPUnit\Util\PHP\AbstractPhpProcess;
 use SebastianBergmann\CodeCoverage\Data\RawCodeCoverageData;
 use SebastianBergmann\CodeCoverage\InvalidArgumentException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\ReflectionException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\CodeCoverage\StaticAnalysisCacheNotConfiguredException;
@@ -79,9 +86,12 @@ use Throwable;
 final class PhptTestCase implements Reorderable, SelfDescribing, Test
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-var non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $filename;
@@ -92,11 +102,17 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
      * Constructs a test case with the given filename.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $filename
      *
      * @throws Exception
      */
     public function __construct(string $filename, ?AbstractPhpProcess $phpUtil = null)
+=======
+     * @throws Exception
+     */
+    public function __construct(string $filename, AbstractPhpProcess $phpUtil = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws Exception
      */
@@ -124,6 +140,10 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
      *
      * @throws \PHPUnit\Framework\Exception
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws \SebastianBergmann\CodeCoverage\ReflectionException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \SebastianBergmann\CodeCoverage\ReflectionException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -132,7 +152,10 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
      * @throws InvalidArgumentException
      * @throws NoPreviousThrowableException
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws ReflectionException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws StaticAnalysisCacheNotConfiguredException
@@ -147,7 +170,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
 
         $emitter->testPreparationStarted(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->valueObjectForEvents(),
+=======
+            $this->valueObjectForEvents()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->valueObjectForEvents()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,7 +185,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         } catch (Exception $e) {
             $emitter->testPrepared($this->valueObjectForEvents());
 <<<<<<< HEAD
+<<<<<<< HEAD
             $emitter->testErrored($this->valueObjectForEvents(), ThrowableBuilder::from($e));
+=======
+            $emitter->testErrored($this->valueObjectForEvents(), EventThrowable::from($e));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $emitter->testErrored($this->valueObjectForEvents(), EventThrowable::from($e));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -185,11 +216,17 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         $this->phpUtil->setUseStderrRedirection(true);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (ConfigurationRegistry::get()->enforceTimeLimit()) {
             $this->phpUtil->setTimeout(ConfigurationRegistry::get()->timeoutForLargeTests());
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->shouldTestBeSkipped($sections, $settings)) {
             return;
@@ -218,7 +255,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 $code,
                 CodeCoverage::instance()->codeCoverage()->collectsBranchAndPathCoverage(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $codeCoverageCacheDirectory,
+=======
+                $codeCoverageCacheDirectory
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $codeCoverageCacheDirectory
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -229,9 +270,13 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         $this->output = $jobResult['stdout'] ?? '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (CodeCoverage::instance()->isActive()) {
             $coverage = $this->cleanupForCoverage();
 
+=======
+        if (CodeCoverage::instance()->isActive() && ($coverage = $this->cleanupForCoverage())) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (CodeCoverage::instance()->isActive() && ($coverage = $this->cleanupForCoverage())) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -243,6 +288,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 true,
                 TestStatus::unknown(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                [],
+                []
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 [],
                 []
@@ -272,20 +322,27 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                     $e->getMessage(),
                     0,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     (string) $trace[0]['file'],
                     (int) $trace[0]['line'],
                     $trace,
                     $comparisonFailure ? $diff : '',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $trace[0]['file'],
                     $trace[0]['line'],
                     $trace,
                     $comparisonFailure ? $diff : ''
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
 
             if ($failure instanceof IncompleteTestError) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $emitter->testMarkedAsIncomplete($this->valueObjectForEvents(), ThrowableBuilder::from($failure));
             } else {
@@ -294,12 +351,17 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         } catch (Throwable $t) {
             $emitter->testErrored($this->valueObjectForEvents(), ThrowableBuilder::from($t));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $emitter->testMarkedAsIncomplete($this->valueObjectForEvents(), EventThrowable::from($failure));
             } else {
                 $emitter->testFailed($this->valueObjectForEvents(), EventThrowable::from($failure), null);
             }
         } catch (Throwable $t) {
             $emitter->testErrored($this->valueObjectForEvents(), EventThrowable::from($t));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -415,7 +477,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
             $e = explode('=', trim($e), 2);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($e[0] !== '' && isset($e[1])) {
+=======
+            if (!empty($e[0]) && isset($e[1])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (!empty($e[0]) && isset($e[1])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -473,7 +539,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
             EventFacade::emitter()->testSkipped(
                 $this->valueObjectForEvents(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
+=======
+                $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -586,7 +656,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                     throw new PhptExternalFileCannotBeLoadedException(
                         $section,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $testDirectory . $externalFilename,
+=======
+                        $testDirectory . $externalFilename
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $testDirectory . $externalFilename
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -648,7 +722,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 "'" . $this->filename . "'",
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             $code,
+=======
+            $code
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $code
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -675,7 +753,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
 
         $template = new Template(
 <<<<<<< HEAD
+<<<<<<< HEAD
             __DIR__ . '/../Util/PHP/Template/PhptTestCase.tpl',
+=======
+            __DIR__ . '/../Util/PHP/Template/PhptTestCase.tpl'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             __DIR__ . '/../Util/PHP/Template/PhptTestCase.tpl'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -715,7 +797,11 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 'driverMethod'               => $pathCoverage ? 'forLineAndPathCoverage' : 'forLineCoverage',
                 'codeCoverageCacheDirectory' => $codeCoverageCacheDirectory,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -732,6 +818,7 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         $files    = $this->getCoverageFiles();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $buffer = false;
 
         if (is_file($files['coverage'])) {
@@ -744,6 +831,8 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
             if ($coverage === false) {
                 $coverage = RawCodeCoverageData::fromXdebugWithoutPathCoverage([]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (is_file($files['coverage'])) {
             $buffer = @file_get_contents($files['coverage']);
 
@@ -753,6 +842,9 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                 if ($coverage === false) {
                     $coverage = RawCodeCoverageData::fromXdebugWithoutPathCoverage([]);
                 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }

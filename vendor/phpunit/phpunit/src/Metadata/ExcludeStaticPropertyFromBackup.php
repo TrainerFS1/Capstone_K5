@@ -11,9 +11,15 @@ namespace PHPUnit\Metadata;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @psalm-immutable
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+=======
+ * @internal This class is not covered by the backward compatibility promise for PHPUnit
+ *
+ * @psalm-immutable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  *
@@ -27,6 +33,7 @@ final class ExcludeStaticPropertyFromBackup extends Metadata
      */
     private readonly string $className;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
@@ -38,10 +45,15 @@ final class ExcludeStaticPropertyFromBackup extends Metadata
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $propertyName
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $propertyName;
 
     /**
      * @psalm-param class-string $className
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function __construct(int $level, string $className, string $propertyName)
@@ -53,9 +65,12 @@ final class ExcludeStaticPropertyFromBackup extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-assert-if-true ExcludeStaticPropertyFromBackup $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isExcludeStaticPropertyFromBackup(): bool
@@ -72,9 +87,12 @@ final class ExcludeStaticPropertyFromBackup extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function propertyName(): string

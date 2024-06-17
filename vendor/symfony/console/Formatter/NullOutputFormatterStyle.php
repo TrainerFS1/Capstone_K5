@@ -22,7 +22,11 @@ final class NullOutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setBackground(?string $color = null): void
+=======
+    public function setBackground(string $color = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setBackground(string $color = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -34,7 +38,11 @@ final class NullOutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setForeground(?string $color = null): void
+=======
+    public function setForeground(string $color = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setForeground(string $color = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -16,8 +16,11 @@ use PHPUnit\Event\Telemetry;
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @deprecated
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -25,7 +28,10 @@ final class AssertionSucceeded implements Event
 {
     private readonly Telemetry\Info $telemetryInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly string $value;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $constraint;
@@ -36,7 +42,10 @@ final class AssertionSucceeded implements Event
     {
         $this->telemetryInfo = $telemetryInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->value         = $value;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->constraint    = $constraint;
@@ -50,16 +59,22 @@ final class AssertionSucceeded implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function value(): string
     {
         return $this->value;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5183
      */
     public function value(): string
     {
         return '';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -81,7 +96,11 @@ final class AssertionSucceeded implements Event
             $message = sprintf(
                 ', Message: %s',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->message,
+=======
+                $this->message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -90,10 +109,16 @@ final class AssertionSucceeded implements Event
 
         return sprintf(
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Assertion Succeeded (Constraint: %s, Value: %s%s)',
             $this->constraint,
             $this->value,
             $message,
+=======
+            'Assertion Succeeded (Constraint: %s%s)',
+            $this->constraint,
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'Assertion Succeeded (Constraint: %s%s)',
             $this->constraint,

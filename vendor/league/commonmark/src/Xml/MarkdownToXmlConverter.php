@@ -16,7 +16,10 @@ namespace League\CommonMark\Xml;
 use League\CommonMark\ConverterInterface;
 use League\CommonMark\Environment\EnvironmentInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\CommonMarkException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Output\RenderedContentInterface;
@@ -42,7 +45,11 @@ final class MarkdownToXmlConverter implements ConverterInterface
      * Converts Markdown to XML
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CommonMarkException
+=======
+     * @throws \RuntimeException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \RuntimeException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -58,7 +65,11 @@ final class MarkdownToXmlConverter implements ConverterInterface
      * @see MarkdownToXmlConverter::convert()
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CommonMarkException
+=======
+     * @throws \RuntimeException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \RuntimeException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

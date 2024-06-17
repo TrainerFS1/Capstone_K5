@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require __DIR__ . '/Int_.php';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace PhpParser\Node\Scalar;
 
 use PhpParser\Error;
@@ -81,4 +84,7 @@ class LNumber extends Scalar
         return 'Scalar_LNumber';
     }
 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

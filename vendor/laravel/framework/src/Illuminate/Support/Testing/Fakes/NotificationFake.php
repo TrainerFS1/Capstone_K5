@@ -7,7 +7,10 @@ use Exception;
 use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
 use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Queue\ShouldQueue;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Translation\HasLocalePreference;
@@ -19,7 +22,11 @@ use Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NotificationFake implements Fake, NotificationDispatcher, NotificationFactory
+=======
+class NotificationFake implements NotificationDispatcher, NotificationFactory
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class NotificationFake implements NotificationDispatcher, NotificationFactory
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -42,6 +49,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Indicates if notifications should be serialized and restored when pushed to the queue.
      *
      * @var bool
@@ -49,6 +57,8 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
     protected $serializeAndRestore = false;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert if a notification was sent on-demand based on a truth-test callback.
@@ -325,6 +335,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
                     fn ($channel) => $notification->shouldSend($notifiable, $channel) !== false
                 );
 <<<<<<< HEAD
+<<<<<<< HEAD
             }
 
             if (empty($notifiableChannels)) {
@@ -336,6 +347,8 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
                     ? $this->serializeAndRestoreNotification($notification)
                     : $notification,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 if (empty($notifiableChannels)) {
                     continue;
@@ -344,6 +357,9 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
             $this->notifications[get_class($notifiable)][$notifiable->getKey()][get_class($notification)][] = [
                 'notification' => $notification,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'channels' => $notifiableChannels,
                 'notifiable' => $notifiable,
@@ -382,6 +398,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Specify if notification should be serialized and restored when being "pushed" to the queue.
      *
      * @param  bool  $serializeAndRestore
@@ -406,6 +423,8 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the notifications that have been sent.

@@ -242,6 +242,7 @@ class Batch implements Arrayable, JsonSerializable
         $counts = $this->decrementPendingJobs($jobId);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->hasProgressCallbacks()) {
             $batch = $this->fresh();
 
@@ -250,6 +251,8 @@ class Batch implements Arrayable, JsonSerializable
             });
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($counts->pendingJobs === 0) {
@@ -296,6 +299,7 @@ class Batch implements Arrayable, JsonSerializable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if the batch has "progress" callbacks.
      *
      * @return bool
@@ -306,6 +310,8 @@ class Batch implements Arrayable, JsonSerializable
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the batch has "success" callbacks.
@@ -353,6 +359,7 @@ class Batch implements Arrayable, JsonSerializable
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->hasProgressCallbacks() && $this->allowsFailures()) {
             $batch = $this->fresh();
 
@@ -361,6 +368,8 @@ class Batch implements Arrayable, JsonSerializable
             });
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($counts->failedJobs === 1 && $this->hasCatchCallbacks()) {

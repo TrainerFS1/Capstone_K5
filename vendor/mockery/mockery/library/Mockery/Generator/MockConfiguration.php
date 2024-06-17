@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Mockery\Exception;
 use Serializable;
@@ -57,6 +64,8 @@ use function trait_exists;
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * This class describes the configuration of mocks and hides away some of the
  * reflection implementation
@@ -64,6 +73,7 @@ use function trait_exists;
 class MockConfiguration
 {
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Instance cache of all methods
      *
@@ -136,6 +146,8 @@ class MockConfiguration
      *
      * @var object|null
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * A class that we'd like to mock
      */
     protected $targetClass;
@@ -157,11 +169,15 @@ class MockConfiguration
 
     /**
      * An object we'd like our mock to proxy to
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected $targetObject;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @var array<string>
      */
@@ -201,6 +217,8 @@ class MockConfiguration
         $mockOriginalDestructor = false,
         array $constantsMap = []
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The class name we'd like to use for a generated mock
      */
     protected $name;
@@ -250,6 +268,9 @@ class MockConfiguration
         array $parameterOverrides = array(),
         $mockOriginalDestructor = false,
         array $constantsMap = array()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         $this->addTargets($targets);
@@ -263,6 +284,7 @@ class MockConfiguration
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Generate a suitable name based on the config
      *
@@ -312,6 +334,8 @@ class MockConfiguration
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Attempt to create a hash of the configuration, in order to allow caching
      *
      * @TODO workout if this will work
@@ -320,6 +344,7 @@ class MockConfiguration
      */
     public function getHash()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $vars = [
             'targetClassName' => $this->targetClassName,
@@ -333,6 +358,8 @@ class MockConfiguration
             'mockOriginalDestructor' => $this->mockOriginalDestructor,
         ];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $vars = array(
             'targetClassName'        => $this->targetClassName,
             'targetInterfaceNames'   => $this->targetInterfaceNames,
@@ -344,6 +371,9 @@ class MockConfiguration
             'parameterOverrides'     => $this->parameterOverrides,
             'mockOriginalDestructor' => $this->mockOriginalDestructor
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return md5(serialize($vars));
@@ -351,10 +381,16 @@ class MockConfiguration
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Gets a list of methods from the classes, interfaces and objects and filters them appropriately.
      * Lot's of filtering going on, perhaps we could have filter classes to iterate through
      *
      * @return list<Method>
+=======
+     * Gets a list of methods from the classes, interfaces and objects and
+     * filters them appropriately. Lot's of filtering going on, perhaps we could
+     * have filter classes to iterate through
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Gets a list of methods from the classes, interfaces and objects and
      * filters them appropriately. Lot's of filtering going on, perhaps we could
@@ -375,6 +411,7 @@ class MockConfiguration
          * Whitelist trumps everything else
          */
 <<<<<<< HEAD
+<<<<<<< HEAD
         $whiteListedMethods = $this->getWhiteListedMethods();
         if ($whiteListedMethods !== []) {
             $whitelist = array_map('strtolower', $whiteListedMethods);
@@ -387,6 +424,8 @@ class MockConfiguration
                 return in_array(strtolower($method->getName()), $whitelist, true);
             });
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (count($this->getWhiteListedMethods())) {
             $whitelist = array_map('strtolower', $this->getWhiteListedMethods());
             $methods = array_filter($methods, function ($method) use ($whitelist) {
@@ -394,12 +433,16 @@ class MockConfiguration
             });
 
             return $methods;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         /**
          * Remove blacklisted methods
          */
+<<<<<<< HEAD
 <<<<<<< HEAD
         $blackListedMethods = $this->getBlackListedMethods();
         if ($blackListedMethods !== []) {
@@ -408,10 +451,15 @@ class MockConfiguration
             $methods = array_filter($methods, static function ($method) use ($blacklist) {
                 return ! in_array(strtolower($method->getName()), $blacklist, true);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (count($this->getBlackListedMethods())) {
             $blacklist = array_map('strtolower', $this->getBlackListedMethods());
             $methods = array_filter($methods, function ($method) use ($blacklist) {
                 return !in_array(strtolower($method->getName()), $blacklist);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             });
         }
@@ -423,6 +471,7 @@ class MockConfiguration
          * implementation
          */
 <<<<<<< HEAD
+<<<<<<< HEAD
         $targetClass = $this->getTargetClass();
 
         if (
@@ -433,11 +482,16 @@ class MockConfiguration
             $methods = array_filter($methods, static function ($method) {
                 return $method->getName() !== 'unserialize';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->getTargetClass()
             && $this->getTargetClass()->implementsInterface("Serializable")
             && $this->getTargetClass()->hasInternalAncestor()) {
             $methods = array_filter($methods, function ($method) {
                 return $method->getName() !== "unserialize";
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             });
         }
@@ -446,6 +500,7 @@ class MockConfiguration
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return string|null
      */
@@ -655,6 +710,8 @@ class MockConfiguration
     {
         $targets = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * We declare the __call method to handle undefined stuff, if the class
      * we're mocking has also defined it, we need to comply with their interface
      */
@@ -689,6 +746,9 @@ class MockConfiguration
     public function rename($className)
     {
         $targets = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($this->targetClassName) {
@@ -719,6 +779,7 @@ class MockConfiguration
         );
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * We declare the __callStatic method to handle undefined stuff, if the class
@@ -766,11 +827,14 @@ class MockConfiguration
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function addTarget($target)
     {
         if (is_object($target)) {
             $this->setTargetObject($target);
             $this->setTargetClassName(get_class($target));
+<<<<<<< HEAD
 <<<<<<< HEAD
             return;
         }
@@ -778,18 +842,27 @@ class MockConfiguration
         if ($target[0] !== '\\') {
             $target = '\\' . $target;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this;
         }
 
         if ($target[0] !== "\\") {
             $target = "\\" . $target;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (class_exists($target)) {
             $this->setTargetClassName($target);
 <<<<<<< HEAD
+<<<<<<< HEAD
             return;
+=======
+            return $this;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $this;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -798,7 +871,11 @@ class MockConfiguration
         if (interface_exists($target)) {
             $this->addTargetInterfaceName($target);
 <<<<<<< HEAD
+<<<<<<< HEAD
             return;
+=======
+            return $this;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $this;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -807,7 +884,11 @@ class MockConfiguration
         if (trait_exists($target)) {
             $this->addTargetTraitName($target);
 <<<<<<< HEAD
+<<<<<<< HEAD
             return;
+=======
+            return $this;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $this;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -822,7 +903,11 @@ class MockConfiguration
         if ($this->getTargetClassName()) {
             $this->addTargetInterfaceName($target);
 <<<<<<< HEAD
+<<<<<<< HEAD
             return;
+=======
+            return $this;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $this;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -831,6 +916,7 @@ class MockConfiguration
         $this->setTargetClassName($target);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * If we attempt to implement Traversable,
@@ -849,6 +935,8 @@ class MockConfiguration
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function addTargets($interfaces)
     {
         foreach ($interfaces as $interface) {
@@ -856,6 +944,7 @@ class MockConfiguration
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @param class-string $targetTraitName
@@ -869,6 +958,8 @@ class MockConfiguration
      * @return list<Method>
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getTargetClassName()
     {
         return $this->targetClassName;
@@ -1058,6 +1149,9 @@ class MockConfiguration
         $this->targetClassName = $targetClassName;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function getAllMethods()
     {
@@ -1072,7 +1166,11 @@ class MockConfiguration
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $methods = [];
+=======
+        $methods = array();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $methods = array();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1089,9 +1187,15 @@ class MockConfiguration
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $names = [];
         $methods = array_filter($methods, static function ($method) use (&$names) {
             if (in_array($method->getName(), $names, true)) {
+=======
+        $names = array();
+        $methods = array_filter($methods, function ($method) use (&$names) {
+            if (in_array($method->getName(), $names)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $names = array();
         $methods = array_filter($methods, function ($method) use (&$names) {
@@ -1109,6 +1213,7 @@ class MockConfiguration
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param class-string $targetClassName
      */
     protected function setTargetClassName($targetClassName)
@@ -1120,6 +1225,8 @@ class MockConfiguration
      * @param object $object
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * If we attempt to implement Traversable, we must ensure we are also
      * implementing either Iterator or IteratorAggregate, and that whichever one
      * it is comes before Traversable in the list of implements.
@@ -1134,17 +1241,26 @@ class MockConfiguration
         $this->targetTraitNames[] = $targetTraitName;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function setTargetObject($object)
     {
         $this->targetObject = $object;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function getConstantsMap()
     {
         return $this->constantsMap;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

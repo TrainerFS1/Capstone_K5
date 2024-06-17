@@ -6,6 +6,10 @@ use Illuminate\Container\Container;
 use Illuminate\Foundation\Routing\PrecognitionCallableDispatcher;
 use Illuminate\Foundation\Routing\PrecognitionControllerDispatcher;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Illuminate\Http\Response;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Http\Response;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -74,7 +78,11 @@ class HandlePrecognitiveRequests
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Http\Response  $response
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Http\Response
+=======
+     * @return \Illuminate\Http\Response $response
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \Illuminate\Http\Response $response
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

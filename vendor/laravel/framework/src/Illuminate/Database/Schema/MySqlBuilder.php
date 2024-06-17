@@ -32,6 +32,7 @@ class MySqlBuilder extends Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the tables for the database.
      *
      * @return array
@@ -90,6 +91,8 @@ class MySqlBuilder extends Builder
     /**
      * Get the columns for a given table.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the given table exists.
      *
      * @param  string  $table
@@ -106,13 +109,20 @@ class MySqlBuilder extends Builder
 
     /**
      * Get the column listing for a given table.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $table
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getColumns($table)
+=======
+    public function getColumnListing($table)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getColumnListing($table)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -120,6 +130,7 @@ class MySqlBuilder extends Builder
         $table = $this->connection->getTablePrefix().$table;
 
         $results = $this->connection->selectFromWriteConnection(
+<<<<<<< HEAD
 <<<<<<< HEAD
             $this->grammar->compileColumns($this->connection->getDatabaseName(), $table)
         );
@@ -160,10 +171,15 @@ class MySqlBuilder extends Builder
             )
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->grammar->compileColumnListing(), [$this->connection->getDatabaseName(), $table]
         );
 
         return $this->connection->getPostProcessor()->processColumnListing($results);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -175,8 +191,11 @@ class MySqlBuilder extends Builder
     public function dropAllTables()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $tables = array_column($this->getTables(), 'name');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $tables = [];
 
         foreach ($this->getAllTables() as $row) {
@@ -184,6 +203,9 @@ class MySqlBuilder extends Builder
 
             $tables[] = reset($row);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (empty($tables)) {
@@ -207,8 +229,11 @@ class MySqlBuilder extends Builder
     public function dropAllViews()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $views = array_column($this->getViews(), 'name');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $views = [];
 
         foreach ($this->getAllViews() as $row) {
@@ -216,6 +241,9 @@ class MySqlBuilder extends Builder
 
             $views[] = reset($row);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (empty($views)) {
@@ -227,7 +255,10 @@ class MySqlBuilder extends Builder
         );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Get all of the table names for the database.
@@ -252,5 +283,8 @@ class MySqlBuilder extends Builder
             $this->grammar->compileGetAllViews()
         );
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

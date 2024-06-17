@@ -23,10 +23,13 @@ final class TestSuiteForTestMethodWithDataProvider extends TestSuite
      */
     private readonly string $className;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $methodName;
@@ -35,9 +38,13 @@ final class TestSuiteForTestMethodWithDataProvider extends TestSuite
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $name
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
+=======
+     * @psalm-param class-string $name
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param class-string $name
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -61,9 +68,12 @@ final class TestSuiteForTestMethodWithDataProvider extends TestSuite
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function methodName(): string

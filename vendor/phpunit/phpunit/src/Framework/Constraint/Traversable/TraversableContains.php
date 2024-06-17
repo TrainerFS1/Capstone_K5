@@ -12,7 +12,10 @@ namespace PHPUnit\Framework\Constraint;
 use function is_array;
 use function sprintf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -32,9 +35,15 @@ abstract class TraversableContains extends Constraint
      * Returns a string representation of the constraint.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toString(bool $exportObjects = false): string
     {
         return 'contains ' . Exporter::export($this->value, $exportObjects);
+=======
+    public function toString(): string
+    {
+        return 'contains ' . $this->exporter()->export($this->value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toString(): string
     {
@@ -54,7 +63,11 @@ abstract class TraversableContains extends Constraint
             '%s %s',
             is_array($other) ? 'an array' : 'a traversable',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->toString(true),
+=======
+            $this->toString()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->toString()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

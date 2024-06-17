@@ -14,6 +14,10 @@ use function sprintf;
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Event\TestData\MoreThanOneDataSetFromDataProviderException;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -44,8 +48,11 @@ use SebastianBergmann\Timer\Timer;
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @codeCoverageIgnore
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -59,11 +66,14 @@ final class CodeCoverage
     private ?Timer $timer                                               = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-var array<string,list<int>>
      */
     private array $linesToBeIgnored = [];
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function instance(): self
@@ -76,17 +86,23 @@ final class CodeCoverage
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function init(Configuration $configuration, CodeCoverageFilterRegistry $codeCoverageFilterRegistry, bool $extensionRequiresCodeCoverageCollection): void
     {
         $codeCoverageFilterRegistry->init($configuration);
 
         if (!$configuration->hasCoverageReport() && !$extensionRequiresCodeCoverageCollection) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function init(Configuration $configuration, CodeCoverageFilterRegistry $codeCoverageFilterRegistry): void
     {
         $codeCoverageFilterRegistry->init($configuration);
 
         if (!$configuration->hasCoverageReport()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
@@ -129,17 +145,23 @@ final class CodeCoverage
             if (!$codeCoverageFilterRegistry->configured()) {
                 EventFacade::emitter()->testRunnerTriggeredWarning(
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'No filter is configured, code coverage will not be processed',
                 );
             } else {
                 EventFacade::emitter()->testRunnerTriggeredWarning(
                     'Incorrect filter configuration, code coverage will not be processed',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     'No filter is configured, code coverage will not be processed'
                 );
             } else {
                 EventFacade::emitter()->testRunnerTriggeredWarning(
                     'Incorrect filter configuration, code coverage will not be processed'
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
@@ -169,6 +191,10 @@ final class CodeCoverage
     /**
      * @throws MoreThanOneDataSetFromDataProviderException
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,7 +220,11 @@ final class CodeCoverage
         $this->codeCoverage->start(
             $test->valueObjectForEvents()->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $size,
+=======
+            $size
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $size
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,7 +251,11 @@ final class CodeCoverage
 
         /* @noinspection UnusedFunctionResultInspection */
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->codeCoverage->stop($append, $status, $linesToBeCovered, $linesToBeUsed, $this->linesToBeIgnored);
+=======
+        $this->codeCoverage->stop($append, $status, $linesToBeCovered, $linesToBeUsed);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->codeCoverage->stop($append, $status, $linesToBeCovered, $linesToBeUsed);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -244,6 +278,7 @@ final class CodeCoverage
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($configuration->hasCoveragePhp()) {
             $this->codeCoverageGenerationStart($printer, 'PHP');
 
@@ -259,6 +294,8 @@ final class CodeCoverage
             }
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($configuration->hasCoverageClover()) {
@@ -320,7 +357,11 @@ final class CodeCoverage
                     sprintf(
                         ' and <a href="https://phpunit.de/">PHPUnit %s</a>',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         Version::id(),
+=======
+                        Version::id()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         Version::id()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -335,9 +376,15 @@ final class CodeCoverage
                     Thresholds::from(
                         $configuration->coverageHtmlLowUpperBound(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $configuration->coverageHtmlHighLowerBound(),
                     ),
                     $customCssFile,
+=======
+                        $configuration->coverageHtmlHighLowerBound()
+                    ),
+                    $customCssFile
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $configuration->coverageHtmlHighLowerBound()
                     ),
@@ -356,7 +403,10 @@ final class CodeCoverage
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($configuration->hasCoveragePhp()) {
             $this->codeCoverageGenerationStart($printer, 'PHP');
 
@@ -372,13 +422,20 @@ final class CodeCoverage
             }
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($configuration->hasCoverageText()) {
             $processor = new TextReport(
                 Thresholds::default(),
                 $configuration->coverageTextShowUncoveredFiles(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $configuration->coverageTextShowOnlySummary(),
+=======
+                $configuration->coverageTextShowOnlySummary()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $configuration->coverageTextShowOnlySummary()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -410,6 +467,7 @@ final class CodeCoverage
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-param array<string,list<int>> $linesToBeIgnored
      */
@@ -428,6 +486,8 @@ final class CodeCoverage
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function activate(Filter $filter, bool $pathCoverage): void
     {
         try {
@@ -440,17 +500,23 @@ final class CodeCoverage
             $this->codeCoverage = new \SebastianBergmann\CodeCoverage\CodeCoverage(
                 $this->driver,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $filter,
             );
         } catch (CodeCoverageException $e) {
             EventFacade::emitter()->testRunnerTriggeredWarning(
                 $e->getMessage(),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $filter
             );
         } catch (CodeCoverageException $e) {
             EventFacade::emitter()->testRunnerTriggeredWarning(
                 $e->getMessage()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -462,8 +528,13 @@ final class CodeCoverage
             sprintf(
                 "\nGenerating code coverage report in %s format ... ",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $format,
             ),
+=======
+                $format
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $format
             )
@@ -482,8 +553,13 @@ final class CodeCoverage
             sprintf(
                 "done [%s]\n",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->timer()->stop()->asString(),
             ),
+=======
+                $this->timer()->stop()->asString()
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->timer()->stop()->asString()
             )
@@ -501,8 +577,13 @@ final class CodeCoverage
                 "failed [%s]\n%s\n",
                 $this->timer()->stop()->asString(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $e->getMessage(),
             ),
+=======
+                $e->getMessage()
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $e->getMessage()
             )

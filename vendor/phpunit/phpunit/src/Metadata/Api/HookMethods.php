@@ -16,6 +16,10 @@ use PHPUnit\Metadata\Parser\Registry;
 use PHPUnit\Util\Reflection;
 use ReflectionClass;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use ReflectionException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use ReflectionException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -38,7 +42,11 @@ final class HookMethods
     public function hookMethods(string $className): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!class_exists($className)) {
+=======
+        if (!class_exists($className, false)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!class_exists($className, false)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,6 +59,7 @@ final class HookMethods
 
         self::$hookMethods[$className] = self::emptyHookMethodsArray();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         foreach (Reflection::methodsInTestClass(new ReflectionClass($className)) as $method) {
             $methodName = $method->getName();
@@ -94,6 +103,8 @@ final class HookMethods
                 self::$hookMethods[$className]['after'][] = $methodName;
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
             foreach ((new Reflection)->methodsInTestClass(new ReflectionClass($className)) as $method) {
                 $methodName = $method->getName();
@@ -138,6 +149,9 @@ final class HookMethods
                 }
             }
         } catch (ReflectionException) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -148,7 +162,11 @@ final class HookMethods
      * @psalm-return array{beforeClass: list<non-empty-string>, before: list<non-empty-string>, preCondition: list<non-empty-string>, postCondition: list<non-empty-string>, after: list<non-empty-string>, afterClass: list<non-empty-string>}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function emptyHookMethodsArray(): array
+=======
+    private static function emptyHookMethodsArray(): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function emptyHookMethodsArray(): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

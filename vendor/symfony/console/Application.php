@@ -80,7 +80,10 @@ class Application implements ResetInterface
     private ?CommandLoaderInterface $commandLoader = null;
     private bool $catchExceptions = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool $catchErrors = false;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private bool $autoExit = true;
@@ -92,7 +95,11 @@ class Application implements ResetInterface
     private bool $singleCommand = false;
     private bool $initialized = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?SignalRegistry $signalRegistry = null;
+=======
+    private SignalRegistry $signalRegistry;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private SignalRegistry $signalRegistry;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -114,7 +121,11 @@ class Application implements ResetInterface
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setDispatcher(EventDispatcherInterface $dispatcher): void
+=======
+    public function setDispatcher(EventDispatcherInterface $dispatcher)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setDispatcher(EventDispatcherInterface $dispatcher)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -123,9 +134,12 @@ class Application implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setCommandLoader(CommandLoaderInterface $commandLoader)
@@ -137,7 +151,11 @@ class Application implements ResetInterface
     {
         if (!$this->signalRegistry) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new RuntimeException('Signals are not supported. Make sure that the "pcntl" extension is installed and that "pcntl_*" functions are not disabled by your php.ini\'s "disable_functions" directive.');
+=======
+            throw new RuntimeException('Signals are not supported. Make sure that the `pcntl` extension is installed and that "pcntl_*" functions are not disabled by your php.ini\'s "disable_functions" directive.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new RuntimeException('Signals are not supported. Make sure that the `pcntl` extension is installed and that "pcntl_*" functions are not disabled by your php.ini\'s "disable_functions" directive.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -147,9 +165,12 @@ class Application implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setSignalsToDispatchEvent(int ...$signalsToDispatchEvent)
@@ -165,7 +186,11 @@ class Application implements ResetInterface
      * @throws \Exception When running fails. Bypass this when {@link setCatchExceptions()}.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function run(?InputInterface $input = null, ?OutputInterface $output = null): int
+=======
+    public function run(InputInterface $input = null, OutputInterface $output = null): int
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function run(InputInterface $input = null, OutputInterface $output = null): int
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -199,11 +224,16 @@ class Application implements ResetInterface
         try {
             $exitCode = $this->doRun($input, $output);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (\Throwable $e) {
             if ($e instanceof \Exception && !$this->catchExceptions) {
                 throw $e;
             }
             if (!$e instanceof \Exception && !$this->catchErrors) {
+=======
+        } catch (\Exception $e) {
+            if (!$this->catchExceptions) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } catch (\Exception $e) {
             if (!$this->catchExceptions) {
@@ -358,9 +388,12 @@ class Application implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset()
@@ -368,9 +401,12 @@ class Application implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setHelperSet(HelperSet $helperSet)
@@ -387,9 +423,12 @@ class Application implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setDefinition(InputDefinition $definition)
@@ -463,8 +502,11 @@ class Application implements ResetInterface
     /**
      * Sets whether to catch exceptions or not during commands execution.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -475,6 +517,7 @@ class Application implements ResetInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Sets whether to catch errors or not during commands execution.
      */
     public function setCatchErrors(bool $catchErrors = true): void
@@ -483,6 +526,8 @@ class Application implements ResetInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets whether to automatically exit after a command execution or not.
@@ -495,8 +540,11 @@ class Application implements ResetInterface
     /**
      * Sets whether to automatically exit after a command execution or not.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -516,9 +564,13 @@ class Application implements ResetInterface
     /**
      * Sets the application name.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
+=======
+     **/
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      **/
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -538,8 +590,11 @@ class Application implements ResetInterface
     /**
      * Sets the application version.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -581,8 +636,11 @@ class Application implements ResetInterface
      *
      * @param Command[] $commands An array of commands
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -783,7 +841,13 @@ class Application implements ResetInterface
             if ($alternatives = $this->findAlternatives($name, $allCommands)) {
                 // remove hidden commands
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $alternatives = array_filter($alternatives, fn ($name) => !$this->get($name)->isHidden());
+=======
+                $alternatives = array_filter($alternatives, function ($name) {
+                    return !$this->get($name)->isHidden();
+                });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $alternatives = array_filter($alternatives, function ($name) {
                     return !$this->get($name)->isHidden();
@@ -860,7 +924,11 @@ class Application implements ResetInterface
      * @return Command[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function all(?string $namespace = null)
+=======
+    public function all(string $namespace = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function all(string $namespace = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -944,7 +1012,13 @@ class Application implements ResetInterface
 
             if (str_contains($message, "@anonymous\0")) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message = preg_replace_callback('/[a-zA-Z_\x7f-\xff][\\\\a-zA-Z0-9_\x7f-\xff]*+@anonymous\x00.*?\.php(?:0x?|:[0-9]++\$)[0-9a-fA-F]++/', fn ($m) => class_exists($m[0], false) ? (get_parent_class($m[0]) ?: key(class_implements($m[0])) ?: 'class').'@anonymous' : $m[0], $message);
+=======
+                $message = preg_replace_callback('/[a-zA-Z_\x7f-\xff][\\\\a-zA-Z0-9_\x7f-\xff]*+@anonymous\x00.*?\.php(?:0x?|:[0-9]++\$)[0-9a-fA-F]++/', function ($m) {
+                    return class_exists($m[0], false) ? (get_parent_class($m[0]) ?: key(class_implements($m[0])) ?: 'class').'@anonymous' : $m[0];
+                }, $message);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message = preg_replace_callback('/[a-zA-Z_\x7f-\xff][\\\\a-zA-Z0-9_\x7f-\xff]*+@anonymous\x00.*?\.php(?:0x?|:[0-9]++\$)[0-9a-fA-F]++/', function ($m) {
                     return class_exists($m[0], false) ? (get_parent_class($m[0]) ?: key(class_implements($m[0])) ?: 'class').'@anonymous' : $m[0];
@@ -1011,8 +1085,11 @@ class Application implements ResetInterface
     /**
      * Configures the input and output instances based on the user arguments and options.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1090,6 +1167,7 @@ class Application implements ResetInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $commandSignals = $command instanceof SignalableCommandInterface ? $command->getSubscribedSignals() : [];
         if ($commandSignals || $this->dispatcher && $this->signalsToDispatchEvent) {
             if (!$this->signalRegistry) {
@@ -1150,6 +1228,8 @@ class Application implements ResetInterface
                     }
                 });
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->signalsToDispatchEvent) {
             $commandSignals = $command instanceof SignalableCommandInterface ? $command->getSubscribedSignals() : [];
 
@@ -1188,6 +1268,9 @@ class Application implements ResetInterface
 
             foreach ($commandSignals as $signal) {
                 $this->signalRegistry->register($signal, [$command, 'handleSignal']);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
@@ -1296,7 +1379,11 @@ class Application implements ResetInterface
      * This method is not part of public API and should not be used directly.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function extractNamespace(string $name, ?int $limit = null): string
+=======
+    public function extractNamespace(string $name, int $limit = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function extractNamespace(string $name, int $limit = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1349,7 +1436,11 @@ class Application implements ResetInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $alternatives = array_filter($alternatives, fn ($lev) => $lev < 2 * $threshold);
+=======
+        $alternatives = array_filter($alternatives, function ($lev) use ($threshold) { return $lev < 2 * $threshold; });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $alternatives = array_filter($alternatives, function ($lev) use ($threshold) { return $lev < 2 * $threshold; });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1444,7 +1535,11 @@ class Application implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function init(): void
+=======
+    private function init()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function init()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

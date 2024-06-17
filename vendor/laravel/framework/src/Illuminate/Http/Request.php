@@ -12,7 +12,11 @@ use Illuminate\Support\Traits\Macroable;
 use RuntimeException;
 use Symfony\Component\HttpFoundation\Exception\SessionNotFoundException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\InputBag;
+=======
+use Symfony\Component\HttpFoundation\ParameterBag;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpFoundation\ParameterBag;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -36,7 +40,11 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * The decoded JSON content for the request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var \Symfony\Component\HttpFoundation\InputBag|null
+=======
+     * @var \Symfony\Component\HttpFoundation\ParameterBag|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var \Symfony\Component\HttpFoundation\ParameterBag|null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -306,8 +314,12 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     {
         return strcasecmp($this->server->get('HTTP_X_MOZ') ?? '', 'prefetch') === 0 ||
 <<<<<<< HEAD
+<<<<<<< HEAD
                strcasecmp($this->headers->get('Purpose') ?? '', 'prefetch') === 0 ||
                strcasecmp($this->headers->get('Sec-Purpose') ?? '', 'prefetch') === 0;
+=======
+               strcasecmp($this->headers->get('Purpose') ?? '', 'prefetch') === 0;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                strcasecmp($this->headers->get('Purpose') ?? '', 'prefetch') === 0;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -412,7 +424,11 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * @param  string|null  $key
      * @param  mixed  $default
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Symfony\Component\HttpFoundation\InputBag|mixed
+=======
+     * @return \Symfony\Component\HttpFoundation\ParameterBag|mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \Symfony\Component\HttpFoundation\ParameterBag|mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -421,7 +437,11 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     {
         if (! isset($this->json)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->json = new InputBag((array) json_decode($this->getContent(), true));
+=======
+            $this->json = new ParameterBag((array) json_decode($this->getContent(), true));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->json = new ParameterBag((array) json_decode($this->getContent(), true));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -438,7 +458,11 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * Get the input source for the request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Symfony\Component\HttpFoundation\InputBag
+=======
+     * @return \Symfony\Component\HttpFoundation\ParameterBag
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \Symfony\Component\HttpFoundation\ParameterBag
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -503,9 +527,15 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     public static function createFromBase(SymfonyRequest $request)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $newRequest = new static(
             $request->query->all(), $request->request->all(), $request->attributes->all(),
             $request->cookies->all(), (new static)->filterFiles($request->files->all()) ?? [], $request->server->all()
+=======
+        $newRequest = (new static)->duplicate(
+            $request->query->all(), $request->request->all(), $request->attributes->all(),
+            $request->cookies->all(), $request->files->all(), $request->server->all()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $newRequest = (new static)->duplicate(
             $request->query->all(), $request->request->all(), $request->attributes->all(),
@@ -678,7 +708,11 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * Set the JSON payload for the request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Symfony\Component\HttpFoundation\InputBag  $json
+=======
+     * @param  \Symfony\Component\HttpFoundation\ParameterBag  $json
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Symfony\Component\HttpFoundation\ParameterBag  $json
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

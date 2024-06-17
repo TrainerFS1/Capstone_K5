@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "279b3c4fe44357abd924fdcc0cfa5664",
     "packages": [
         {
@@ -24,6 +25,8 @@
             "require": {
                 "php": "^7.2 || ^8.0"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "content-hash": "f2ac4614ce4f7273fd54a64b65fd047a",
     "packages": [
         {
@@ -42,6 +45,9 @@
             },
             "require": {
                 "php": "^7.2"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             },
             "type": "library",
@@ -73,11 +79,15 @@
             ],
             "description": "Library for handling version information and constraints",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
             "time": "2022-02-21T01:04:05+00:00"
+=======
+            "time": "2020-05-09T21:27:55+00:00"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "time": "2020-05-09T21:27:55+00:00"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,6 +101,7 @@
     "prefer-lowest": false,
     "platform": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "php": "^7.2 || ^8.0",
         "ext-dom": "*",
         "ext-phar": "*",
@@ -100,11 +111,16 @@
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "php": "^7.2",
         "ext-dom": "*",
         "ext-phar": "*",
         "ext-xmlwriter": "*"
     },
     "platform-dev": []
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

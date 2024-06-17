@@ -3,12 +3,15 @@
 namespace Illuminate\Queue\Console;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Console\MigrationGeneratorCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'queue:batches-table')]
 class BatchesTableCommand extends MigrationGeneratorCommand
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
@@ -16,6 +19,9 @@ use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'queue:batches-table')]
 class BatchesTableCommand extends Command
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
@@ -33,6 +39,7 @@ class BatchesTableCommand extends Command
     protected $description = 'Create a migration for the batches database table';
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Get the migration table name.
      *
@@ -52,6 +59,8 @@ class BatchesTableCommand extends Command
     {
         return __DIR__.'/stubs/batches.stub';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The filesystem instance.
      *
      * @var \Illuminate\Filesystem\Filesystem
@@ -123,6 +132,9 @@ class BatchesTableCommand extends Command
         );
 
         $this->files->put($path, $stub);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

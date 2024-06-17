@@ -30,9 +30,12 @@ class SplCaster
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castArrayObject(\ArrayObject $c, array $a, Stub $stub, bool $isNested)
@@ -41,9 +44,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castArrayIterator(\ArrayIterator $c, array $a, Stub $stub, bool $isNested)
@@ -52,9 +58,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castHeap(\Iterator $c, array $a, Stub $stub, bool $isNested)
@@ -67,9 +76,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castDoublyLinkedList(\SplDoublyLinkedList $c, array $a, Stub $stub, bool $isNested)
@@ -88,9 +100,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castFileInfo(\SplFileInfo $c, array $a, Stub $stub, bool $isNested)
@@ -170,9 +185,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castFileObject(\SplFileObject $c, array $a, Stub $stub, bool $isNested)
@@ -213,9 +231,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castObjectStorage(\SplObjectStorage $c, array $a, Stub $stub, bool $isNested)
@@ -227,15 +248,21 @@ class SplCaster
         $clone = clone $c;
         foreach ($clone as $obj) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $storage[] = new EnumStub([
                 'object' => $obj,
                 'info' => $clone->getInfo(),
              ]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $storage[] = [
                 'object' => $obj,
                 'info' => $clone->getInfo(),
              ];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -247,9 +274,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castOuterIterator(\OuterIterator $c, array $a, Stub $stub, bool $isNested)
@@ -260,9 +290,12 @@ class SplCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castWeakReference(\WeakReference $c, array $a, Stub $stub, bool $isNested)
@@ -272,6 +305,7 @@ class SplCaster
         return $a;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return array
@@ -296,6 +330,8 @@ class SplCaster
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static function castSplArray(\ArrayObject|\ArrayIterator $c, array $a, Stub $stub, bool $isNested): array
     {
         $prefix = Caster::PREFIX_VIRTUAL;
@@ -307,11 +343,15 @@ class SplCaster
             $c->setFlags($flags);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         unset($a["\0ArrayObject\0storage"], $a["\0ArrayIterator\0storage"]);
 
         $a += [
             $prefix.'storage' => $c->getArrayCopy(),
+=======
+        $a += [
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $a += [
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

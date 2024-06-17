@@ -3,8 +3,11 @@
 namespace Illuminate\Notifications\Channels;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Config\Repository as ConfigRepository;
 use Illuminate\Container\Container;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Mail\Factory as MailFactory;
@@ -52,7 +55,11 @@ class MailChannel
      * @param  mixed  $notifiable
      * @param  \Illuminate\Notifications\Notification  $notification
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Mail\SentMessage|null
+=======
+     * @return void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -71,7 +78,11 @@ class MailChannel
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->mailer->mailer($message->mailer ?? null)->send(
+=======
+        $this->mailer->mailer($message->mailer ?? null)->send(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->mailer->mailer($message->mailer ?? null)->send(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,10 +120,13 @@ class MailChannel
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return [
             'html' => $this->buildMarkdownHtml($message),
             'text' => $this->buildMarkdownText($message),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (property_exists($message, 'theme') && ! is_null($message->theme)) {
             $this->markdown->theme($message->theme);
         }
@@ -120,11 +134,15 @@ class MailChannel
         return [
             'html' => $this->markdown->render($message->markdown, $message->data()),
             'text' => $this->markdown->renderText($message->markdown, $message->data()),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Build the HTML view for a Markdown message.
      *
@@ -167,6 +185,8 @@ class MailChannel
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get additional meta-data to pass along with the view data.

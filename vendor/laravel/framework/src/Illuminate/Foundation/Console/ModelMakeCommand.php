@@ -11,8 +11,11 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\multiselect;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'make:model')]
@@ -114,6 +117,10 @@ class ModelMakeCommand extends GeneratorCommand
             'name' => "create_{$table}_table",
             '--create' => $table,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            '--fullpath' => true,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             '--fullpath' => true,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -151,8 +158,11 @@ class ModelMakeCommand extends GeneratorCommand
             '--api' => $this->option('api'),
             '--requests' => $this->option('requests') || $this->option('all'),
 <<<<<<< HEAD
+<<<<<<< HEAD
             '--test' => $this->option('test'),
             '--pest' => $this->option('pest'),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]));
@@ -252,6 +262,7 @@ class ModelMakeCommand extends GeneratorCommand
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         collect(multiselect('Would you like any of the following?', [
             'seed' => 'Database Seeder',
             'factory' => 'Factory',
@@ -261,6 +272,8 @@ class ModelMakeCommand extends GeneratorCommand
             'resource' => 'Resource Controller',
         ]))->each(fn ($option) => $input->setOption($option, true));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         collect($this->components->choice('Would you like any of the following?', [
             'none',
             'all',
@@ -278,6 +291,9 @@ class ModelMakeCommand extends GeneratorCommand
             default => $option,
         })
         ->each(fn ($option) => $input->setOption($option, true));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

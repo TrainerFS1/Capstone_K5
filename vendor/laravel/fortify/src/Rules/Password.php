@@ -6,9 +6,12 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Str;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * @deprecated Use \Illuminate\Validation\Rules\Password instead.
  */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Password implements Rule
@@ -88,8 +91,13 @@ class Password implements Rule
         switch (true) {
             case $this->requireUppercase
 <<<<<<< HEAD
+<<<<<<< HEAD
             && ! $this->requireNumeric
             && ! $this->requireSpecialCharacter:
+=======
+                && ! $this->requireNumeric
+                && ! $this->requireSpecialCharacter:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && ! $this->requireNumeric
                 && ! $this->requireSpecialCharacter:
@@ -100,8 +108,13 @@ class Password implements Rule
 
             case $this->requireNumeric
 <<<<<<< HEAD
+<<<<<<< HEAD
             && ! $this->requireUppercase
             && ! $this->requireSpecialCharacter:
+=======
+                && ! $this->requireUppercase
+                && ! $this->requireSpecialCharacter:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && ! $this->requireUppercase
                 && ! $this->requireSpecialCharacter:
@@ -112,8 +125,13 @@ class Password implements Rule
 
             case $this->requireSpecialCharacter
 <<<<<<< HEAD
+<<<<<<< HEAD
             && ! $this->requireUppercase
             && ! $this->requireNumeric:
+=======
+                && ! $this->requireUppercase
+                && ! $this->requireNumeric:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && ! $this->requireUppercase
                 && ! $this->requireNumeric:
@@ -124,8 +142,13 @@ class Password implements Rule
 
             case $this->requireUppercase
 <<<<<<< HEAD
+<<<<<<< HEAD
             && $this->requireNumeric
             && ! $this->requireSpecialCharacter:
+=======
+                && $this->requireNumeric
+                && ! $this->requireSpecialCharacter:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && $this->requireNumeric
                 && ! $this->requireSpecialCharacter:
@@ -136,8 +159,13 @@ class Password implements Rule
 
             case $this->requireUppercase
 <<<<<<< HEAD
+<<<<<<< HEAD
             && $this->requireSpecialCharacter
             && ! $this->requireNumeric:
+=======
+                && $this->requireSpecialCharacter
+                && ! $this->requireNumeric:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && $this->requireSpecialCharacter
                 && ! $this->requireNumeric:
@@ -148,8 +176,13 @@ class Password implements Rule
 
             case $this->requireUppercase
 <<<<<<< HEAD
+<<<<<<< HEAD
             && $this->requireNumeric
             && $this->requireSpecialCharacter:
+=======
+                && $this->requireNumeric
+                && $this->requireSpecialCharacter:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && $this->requireNumeric
                 && $this->requireSpecialCharacter:
@@ -160,8 +193,13 @@ class Password implements Rule
 
             case $this->requireNumeric
 <<<<<<< HEAD
+<<<<<<< HEAD
             && $this->requireSpecialCharacter
             && ! $this->requireUppercase:
+=======
+                && $this->requireSpecialCharacter
+                && ! $this->requireUppercase:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 && $this->requireSpecialCharacter
                 && ! $this->requireUppercase:

@@ -19,6 +19,10 @@ use function min;
 use function str_ends_with;
 use function stream_get_contents;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function strlen;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function strlen;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -71,7 +75,11 @@ final class UnifiedDiffOutputBuilder extends AbstractChunkOutputBuilder
         $last = substr($diff, -1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return '' !== $diff && "\n" !== $last && "\r" !== $last
+=======
+        return 0 !== strlen($diff) && "\n" !== $last && "\r" !== $last
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return 0 !== strlen($diff) && "\n" !== $last && "\r" !== $last
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -159,17 +167,23 @@ final class UnifiedDiffOutputBuilder extends AbstractChunkOutputBuilder
                         $toStart - $contextStartOffset,
                         $toRange - $cutOff + $contextStartOffset + $this->contextLines,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $output,
                     );
 
                     $fromStart += $fromRange;
                     $toStart   += $toRange;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $output
                     );
 
                     $fromStart += $fromRange;
                     $toStart += $toRange;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     $hunkCapture = false;
@@ -215,7 +229,11 @@ final class UnifiedDiffOutputBuilder extends AbstractChunkOutputBuilder
 
         $fromRange -= $sameCount;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $toRange   -= $sameCount;
+=======
+        $toRange -= $sameCount;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $toRange -= $sameCount;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -229,7 +247,11 @@ final class UnifiedDiffOutputBuilder extends AbstractChunkOutputBuilder
             $toStart - $contextStartOffset,
             $toRange + $contextStartOffset + $contextEndOffset,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $output,
+=======
+            $output
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $output
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

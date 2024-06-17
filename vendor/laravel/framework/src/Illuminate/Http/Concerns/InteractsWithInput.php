@@ -403,6 +403,10 @@ trait InteractsWithInput
     {
         if ($this->isNotFilled($key) ||
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            ! function_exists('enum_exists') ||
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ! function_exists('enum_exists') ||
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

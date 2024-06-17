@@ -12,7 +12,10 @@ namespace PHPUnit\TextUI;
 use const PHP_EOL;
 use function count;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function defined;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function explode;
@@ -31,8 +34,11 @@ use SebastianBergmann\Environment\Console;
 final class Help
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private const LEFT_MARGIN              = '  ';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private const LEFT_MARGIN = '  ';
 
     private const HELP_TEXT = [
@@ -163,6 +169,9 @@ final class Help
         ],
 
     ];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $lengthOfLongestOptionName = 0;
     private readonly int $columnsAvailableForDescription;
@@ -181,15 +190,21 @@ final class Help
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->elements() as $options) {
             foreach ($options as $option) {
                 if (isset($option['arg'])) {
                     $this->lengthOfLongestOptionName = max($this->lengthOfLongestOptionName, strlen($option['arg']));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach (self::HELP_TEXT as $options) {
             foreach ($options as $option) {
                 if (isset($option['arg'])) {
                     $this->lengthOfLongestOptionName = max($this->lengthOfLongestOptionName, isset($option['arg']) ? strlen($option['arg']) : 0);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
@@ -212,7 +227,11 @@ final class Help
         $buffer = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->elements() as $section => $options) {
+=======
+        foreach (self::HELP_TEXT as $section => $options) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         foreach (self::HELP_TEXT as $section => $options) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -249,7 +268,11 @@ final class Help
         $buffer = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->elements() as $section => $options) {
+=======
+        foreach (self::HELP_TEXT as $section => $options) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         foreach (self::HELP_TEXT as $section => $options) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -274,7 +297,11 @@ final class Help
                         '/(<[^>]+>)/',
                         static fn ($matches) => Color::colorize('fg-cyan', $matches[0]),
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $arg,
+=======
+                        $arg
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $arg
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -295,6 +322,7 @@ final class Help
 
         return $buffer;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -450,6 +478,8 @@ final class Help
 
         return $elements;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

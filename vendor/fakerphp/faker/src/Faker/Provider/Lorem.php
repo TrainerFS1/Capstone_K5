@@ -185,6 +185,7 @@ class Lorem extends Base
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $type = 'paragraph';
 
         if ($maxNbChars < 100) {
@@ -194,6 +195,9 @@ class Lorem extends Base
         if ($maxNbChars < 25) {
             $type = 'word';
         }
+=======
+        $type = ($maxNbChars < 25) ? 'word' : (($maxNbChars < 100) ? 'sentence' : 'paragraph');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $type = ($maxNbChars < 25) ? 'word' : (($maxNbChars < 100) ? 'sentence' : 'paragraph');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -68,10 +68,16 @@ class LoopContextPass extends CodeCleanerPass
                 if ($this->loopDepth === 0) {
                     $msg = \sprintf("'%s' not in the 'loop' or 'switch' context", $operator);
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getStartLine());
                 }
 
                 // @todo Rename to Int_ and Float_ once we drop support for PHP-Parser 4.x
+=======
+                    throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
+                }
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
                 }
@@ -82,7 +88,11 @@ class LoopContextPass extends CodeCleanerPass
                     if ($node->num instanceof DNumber || $num < 1) {
                         $msg = \sprintf("'%s' operator accepts only positive numbers", $operator);
 <<<<<<< HEAD
+<<<<<<< HEAD
                         throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getStartLine());
+=======
+                        throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,17 +101,23 @@ class LoopContextPass extends CodeCleanerPass
                     if ($num > $this->loopDepth) {
                         $msg = \sprintf("Cannot '%s' %d levels", $operator, $num);
 <<<<<<< HEAD
+<<<<<<< HEAD
                         throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getStartLine());
                     }
                 } elseif ($node->num) {
                     $msg = \sprintf("'%s' operator with non-constant operand is no longer supported", $operator);
                     throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getStartLine());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
                     }
                 } elseif ($node->num) {
                     $msg = \sprintf("'%s' operator with non-constant operand is no longer supported", $operator);
                     throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
                 break;

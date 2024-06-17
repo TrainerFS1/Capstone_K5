@@ -32,6 +32,7 @@ class ForeignIdColumnDefinition extends ColumnDefinition
      *
      * @param  string|null  $table
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|null  $column
      * @param  string|null  $indexName
      * @return \Illuminate\Database\Schema\ForeignKeyDefinition
@@ -40,12 +41,17 @@ class ForeignIdColumnDefinition extends ColumnDefinition
     {
         return $this->references($column, $indexName)->on($table ?? Str::of($this->name)->beforeLast('_'.$column)->plural());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string  $column
      * @return \Illuminate\Database\Schema\ForeignKeyDefinition
      */
     public function constrained($table = null, $column = 'id')
     {
         return $this->references($column)->on($table ?? Str::of($this->name)->beforeLast('_'.$column)->plural());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -54,6 +60,7 @@ class ForeignIdColumnDefinition extends ColumnDefinition
      *
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $indexName
      * @return \Illuminate\Database\Schema\ForeignKeyDefinition
      */
@@ -61,11 +68,16 @@ class ForeignIdColumnDefinition extends ColumnDefinition
     {
         return $this->blueprint->foreign($this->name, $indexName)->references($column);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Illuminate\Database\Schema\ForeignKeyDefinition
      */
     public function references($column)
     {
         return $this->blueprint->foreign($this->name)->references($column);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

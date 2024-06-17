@@ -60,7 +60,11 @@ class Person extends \Faker\Provider\Person
      */
     protected static $firstNameMale = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Abraham', 'Adam', 'Adrian', 'Agaton', 'Agne', 'Albert', 'Albin', 'Aldor', 'Alex', 'Alexander', 'Alexis', 'Alexius', 'Alf', 'Alfons', 'Alfred', 'Algot', 'Allan', 'Alrik', 'Alvar', 'Alve', 'Amandus', 'Anders', 'André', 'Andreas', 'Anselm', 'Anshelm', 'Antero', 'Anton', 'Antonius', 'Arne', 'Arnold', 'Aron', 'Arthur', 'Artur', 'Arvid', 'Assar', 'Astor', 'August', 'Augustin', 'Axel',
+=======
+        'Abraham', 'Adam', 'Adolf', 'Adrian', 'Agaton', 'Agne', 'Albert', 'Albin', 'Aldor', 'Alex', 'Alexander', 'Alexis', 'Alexius', 'Alf', 'Alfons', 'Alfred', 'Algot', 'Allan', 'Alrik', 'Alvar', 'Alve', 'Amandus', 'Anders', 'André', 'Andreas', 'Anselm', 'Anshelm', 'Antero', 'Anton', 'Antonius', 'Arne', 'Arnold', 'Aron', 'Arthur', 'Artur', 'Arvid', 'Assar', 'Astor', 'August', 'Augustin', 'Axel',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'Abraham', 'Adam', 'Adolf', 'Adrian', 'Agaton', 'Agne', 'Albert', 'Albin', 'Aldor', 'Alex', 'Alexander', 'Alexis', 'Alexius', 'Alf', 'Alfons', 'Alfred', 'Algot', 'Allan', 'Alrik', 'Alvar', 'Alve', 'Amandus', 'Anders', 'André', 'Andreas', 'Anselm', 'Anshelm', 'Antero', 'Anton', 'Antonius', 'Arne', 'Arnold', 'Aron', 'Arthur', 'Artur', 'Arvid', 'Assar', 'Astor', 'August', 'Augustin', 'Axel',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -126,7 +130,12 @@ class Person extends \Faker\Provider\Person
      * @see http://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $gender Person::GENDER_MALE || Person::GENDER_FEMALE
+=======
+     * @param \DateTime $birthdate
+     * @param string    $gender    Person::GENDER_MALE || Person::GENDER_FEMALE
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param \DateTime $birthdate
      * @param string    $gender    Person::GENDER_MALE || Person::GENDER_FEMALE

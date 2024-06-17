@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
@@ -81,6 +87,7 @@ $backtrace = Spatie\Backtrace\Backtrace::create()->withArguments();
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #### Reducing arguments
 
 For viewing purposes, arguments can be reduced to a string:
@@ -122,6 +129,8 @@ $backtrace = Spatie\Backtrace\Backtrace::create()->withArguments()->reduceArgume
 
 Which will first execute the new reducer and then the default ones.
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ### Setting the application path

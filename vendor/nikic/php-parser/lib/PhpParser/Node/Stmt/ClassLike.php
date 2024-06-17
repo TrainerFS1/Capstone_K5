@@ -4,6 +4,7 @@ namespace PhpParser\Node\Stmt;
 
 use PhpParser\Node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\PropertyItem;
 
 abstract class ClassLike extends Node\Stmt {
@@ -17,6 +18,8 @@ abstract class ClassLike extends Node\Stmt {
     /** @var Node\Name|null Namespaced name (if using NameResolver) */
     public ?Node\Name $namespacedName;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 abstract class ClassLike extends Node\Stmt
 {
@@ -29,13 +32,20 @@ abstract class ClassLike extends Node\Stmt
 
     /** @var Node\Name|null Namespaced name (if using NameResolver) */
     public $namespacedName;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @return TraitUse[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTraitUses(): array {
+=======
+    public function getTraitUses() : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getTraitUses() : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -52,7 +62,11 @@ abstract class ClassLike extends Node\Stmt
      * @return ClassConst[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getConstants(): array {
+=======
+    public function getConstants() : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getConstants() : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +83,11 @@ abstract class ClassLike extends Node\Stmt
      * @return Property[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getProperties(): array {
+=======
+    public function getProperties() : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getProperties() : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -90,17 +108,23 @@ abstract class ClassLike extends Node\Stmt
      * @return Property|null Property node or null if the property does not exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getProperty(string $name): ?Property {
         foreach ($this->stmts as $stmt) {
             if ($stmt instanceof Property) {
                 foreach ($stmt->props as $prop) {
                     if ($prop instanceof PropertyItem && $name === $prop->name->toString()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getProperty(string $name) {
         foreach ($this->stmts as $stmt) {
             if ($stmt instanceof Property) {
                 foreach ($stmt->props as $prop) {
                     if ($prop instanceof PropertyProperty && $name === $prop->name->toString()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return $stmt;
                     }
@@ -116,7 +140,11 @@ abstract class ClassLike extends Node\Stmt
      * @return ClassMethod[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getMethods(): array {
+=======
+    public function getMethods() : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getMethods() : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,7 +165,11 @@ abstract class ClassLike extends Node\Stmt
      * @return ClassMethod|null Method node or null if the method does not exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getMethod(string $name): ?ClassMethod {
+=======
+    public function getMethod(string $name) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getMethod(string $name) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

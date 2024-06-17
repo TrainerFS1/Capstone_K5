@@ -19,7 +19,10 @@ use PHPUnit\TextUI\Configuration\GroupCollection;
 use PHPUnit\TextUI\Configuration\IniSettingCollection;
 use PHPUnit\TextUI\Configuration\Php;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\TextUI\Configuration\Source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\Configuration\TestSuiteCollection;
@@ -38,6 +41,7 @@ final class DefaultConfiguration extends Configuration
     {
         return new self(
             ExtensionBootstrapCollection::fromArray([]),
+<<<<<<< HEAD
 <<<<<<< HEAD
             new Source(
                 null,
@@ -59,6 +63,8 @@ final class DefaultConfiguration extends Configuration
             ),
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             new CodeCoverage(
                 null,
                 CodeCoverageFilterDirectoryCollection::fromArray([]),
@@ -76,17 +82,23 @@ final class DefaultConfiguration extends Configuration
                 null,
                 null,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 null,
             ),
             new Groups(
                 GroupCollection::fromArray([]),
                 GroupCollection::fromArray([]),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 null
             ),
             new Groups(
                 GroupCollection::fromArray([]),
                 GroupCollection::fromArray([])
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ),
             new Logging(
@@ -94,7 +106,11 @@ final class DefaultConfiguration extends Configuration
                 null,
                 null,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 null,
+=======
+                null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,7 +127,11 @@ final class DefaultConfiguration extends Configuration
                 VariableCollection::fromArray([]),
                 VariableCollection::fromArray([]),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 VariableCollection::fromArray([]),
+=======
+                VariableCollection::fromArray([])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 VariableCollection::fromArray([])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -146,10 +166,13 @@ final class DefaultConfiguration extends Configuration
                 false,
                 false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 false,
                 false,
                 false,
                 false,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 null,
@@ -170,11 +193,17 @@ final class DefaultConfiguration extends Configuration
                 false,
                 false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 false,
                 false,
                 100,
             ),
             TestSuiteCollection::fromArray([]),
+=======
+                false
+            ),
+            TestSuiteCollection::fromArray([])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 false
             ),

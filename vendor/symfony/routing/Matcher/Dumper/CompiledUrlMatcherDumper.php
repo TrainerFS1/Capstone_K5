@@ -51,9 +51,12 @@ EOF;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addExpressionLanguageProvider(ExpressionFunctionProviderInterface $provider)
@@ -143,7 +146,11 @@ EOF;
             $code .= sprintf("    %s => [\n", self::export($path));
             foreach ($routes as $route) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $code .= vsprintf("        [%s, %s, %s, %s, %s, %s, %s],\n", array_map([__CLASS__, 'export'], $route));
+=======
+                $code .= sprintf("        [%s, %s, %s, %s, %s, %s, %s],\n", ...array_map([__CLASS__, 'export'], $route));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $code .= sprintf("        [%s, %s, %s, %s, %s, %s, %s],\n", ...array_map([__CLASS__, 'export'], $route));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -159,7 +166,11 @@ EOF;
             $code .= sprintf("    %s => [\n", self::export($path));
             foreach ($routes as $route) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $code .= vsprintf("        [%s, %s, %s, %s, %s, %s, %s],\n", array_map([__CLASS__, 'export'], $route));
+=======
+                $code .= sprintf("        [%s, %s, %s, %s, %s, %s, %s],\n", ...array_map([__CLASS__, 'export'], $route));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $code .= sprintf("        [%s, %s, %s, %s, %s, %s, %s],\n", ...array_map([__CLASS__, 'export'], $route));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -361,7 +372,11 @@ EOF;
 
             // if the regex is too large, throw a signaling exception to recompute with smaller chunk size
 <<<<<<< HEAD
+<<<<<<< HEAD
             set_error_handler(fn ($type, $message) => throw str_contains($message, $this->signalingException->getMessage()) ? $this->signalingException : new \ErrorException($message));
+=======
+            set_error_handler(function ($type, $message) { throw str_contains($message, $this->signalingException->getMessage()) ? $this->signalingException : new \ErrorException($message); });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             set_error_handler(function ($type, $message) { throw str_contains($message, $this->signalingException->getMessage()) ? $this->signalingException : new \ErrorException($message); });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -463,7 +478,11 @@ EOF;
         if (!isset($this->expressionLanguage)) {
             if (!class_exists(ExpressionLanguage::class)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed. Try running "composer require symfony/expression-language".');
+=======
+                throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

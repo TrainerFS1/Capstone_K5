@@ -29,7 +29,11 @@ class Request implements RequestInterface
      * @param string                               $method  HTTP method
      * @param string|UriInterface                  $uri     URI
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param (string|string[])[]                  $headers Request headers
+=======
+     * @param array<string, string|string[]>       $headers Request headers
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array<string, string|string[]>       $headers Request headers
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -74,7 +78,11 @@ class Request implements RequestInterface
         }
         if ($this->uri->getQuery() != '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $target .= '?'.$this->uri->getQuery();
+=======
+            $target .= '?' . $this->uri->getQuery();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $target .= '?' . $this->uri->getQuery();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,7 +102,10 @@ class Request implements RequestInterface
         $new = clone $this;
         $new->requestTarget = $requestTarget;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $new;
@@ -111,7 +122,10 @@ class Request implements RequestInterface
         $new = clone $this;
         $new->method = strtoupper($method);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $new;
@@ -148,7 +162,11 @@ class Request implements RequestInterface
 
         if (($port = $this->uri->getPort()) !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $host .= ':'.$port;
+=======
+            $host .= ':' . $port;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $host .= ':' . $port;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -162,7 +180,11 @@ class Request implements RequestInterface
         }
         // Ensure Host is the first header.
 <<<<<<< HEAD
+<<<<<<< HEAD
         // See: https://datatracker.ietf.org/doc/html/rfc7230#section-5.4
+=======
+        // See: http://tools.ietf.org/html/rfc7230#section-5.4
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         // See: http://tools.ietf.org/html/rfc7230#section-5.4
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

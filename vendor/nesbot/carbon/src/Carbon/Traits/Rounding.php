@@ -58,6 +58,10 @@ trait Rounding
         ]);
         $factor = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $initialMonth = $this->month;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $initialMonth = $this->month;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,7 +138,11 @@ trait Rounding
 
         /** @var CarbonInterface $result */
 <<<<<<< HEAD
+<<<<<<< HEAD
         $result = $this;
+=======
+        $result = $this->$normalizedUnit($normalizedValue);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $result = $this->$normalizedUnit($normalizedValue);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -144,12 +152,18 @@ trait Rounding
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $result->$normalizedUnit($normalizedValue);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $normalizedUnit === 'month' && $precision <= 1 && abs($result->month - $initialMonth) === 2
             // Re-run the change in case an overflow occurred
             ? $result->$normalizedUnit($normalizedValue)
             : $result;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

@@ -12,6 +12,7 @@
 namespace Symfony\Component\Routing\Loader;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 trigger_deprecation('symfony/routing', '6.4', 'The "%s" class is deprecated, use "%s" instead.', AnnotationFileLoader::class, AttributeFileLoader::class);
 
 class_exists(AttributeFileLoader::class);
@@ -23,6 +24,8 @@ if (false) {
     class AnnotationFileLoader extends AttributeFileLoader
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Config\FileLocatorInterface;
 use Symfony\Component\Config\Loader\FileLoader;
 use Symfony\Component\Config\Resource\FileResource;
@@ -144,6 +147,9 @@ class AnnotationFileLoader extends FileLoader
         }
 
         return false;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

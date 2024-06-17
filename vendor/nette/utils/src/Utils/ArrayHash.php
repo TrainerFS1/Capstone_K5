@@ -16,8 +16,11 @@ use Nette;
  * Provides objects to work as array.
  * @template T
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @implements \IteratorAggregate<array-key, T>
  * @implements \ArrayAccess<array-key, T>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -33,7 +36,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 		foreach ($array as $key => $value) {
 			$obj->$key = $recursive && is_array($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				? static::from($value)
+=======
+				? static::from($value, true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 				? static::from($value, true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,7 +54,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Returns an iterator over all items.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @return \Iterator<array-key, T>
+=======
+	 * @return \Iterator<int|string, T>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @return \Iterator<int|string, T>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -72,7 +83,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Replaces or appends a item.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @param  array-key  $key
+=======
+	 * @param  string|int  $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @param  string|int  $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,7 +97,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	{
 		if (!is_scalar($key)) { // prevents null
 <<<<<<< HEAD
+<<<<<<< HEAD
 			throw new Nette\InvalidArgumentException(sprintf('Key must be either a string or an integer, %s given.', get_debug_type($key)));
+=======
+			throw new Nette\InvalidArgumentException(sprintf('Key must be either a string or an integer, %s given.', gettype($key)));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 			throw new Nette\InvalidArgumentException(sprintf('Key must be either a string or an integer, %s given.', gettype($key)));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -95,7 +114,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Returns a item.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @param  array-key  $key
+=======
+	 * @param  string|int  $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @param  string|int  $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,7 +134,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Determines whether a item exists.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @param  array-key  $key
+=======
+	 * @param  string|int  $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @param  string|int  $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -125,7 +152,11 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Removes the element from this list.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @param  array-key  $key
+=======
+	 * @param  string|int  $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @param  string|int  $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

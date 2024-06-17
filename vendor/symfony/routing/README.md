@@ -42,6 +42,7 @@ $url = $generator->generate('blog_show', [
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Sponsor
 -------
 
@@ -55,6 +56,8 @@ Help Symfony by [sponsoring][3] its development!
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 Resources
 ---------
 
@@ -64,9 +67,12 @@ Resources
    [send Pull Requests](https://github.com/symfony/symfony/pulls)
    in the [main Symfony repository](https://github.com/symfony/symfony)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 [1]: https://symfony.com/backers
 [2]: https://redirection.io
 [3]: https://symfony.com/sponsor
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

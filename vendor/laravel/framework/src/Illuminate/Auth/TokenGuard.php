@@ -93,7 +93,11 @@ class TokenGuard implements Guard
      * Get the token for the current request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return string|null
+=======
+     * @return string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,12 +28,16 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use function str_replace;
 
@@ -40,6 +47,11 @@ class CallTypeHintPass implements Pass
      * @param  string $code
      * @return string
      */
+=======
+
+class CallTypeHintPass implements Pass
+{
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 class CallTypeHintPass implements Pass
@@ -57,7 +69,11 @@ class CallTypeHintPass implements Pass
 
         if ($config->requiresCallStaticTypeHintRemoval()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return str_replace(
+=======
+            $code = str_replace(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $code = str_replace(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

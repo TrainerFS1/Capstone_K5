@@ -14,7 +14,11 @@ namespace Symfony\Component\Translation\Exception;
 class IncompleteDsnException extends InvalidArgumentException
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $message, ?string $dsn = null, ?\Throwable $previous = null)
+=======
+    public function __construct(string $message, string $dsn = null, \Throwable $previous = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $message, string $dsn = null, \Throwable $previous = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

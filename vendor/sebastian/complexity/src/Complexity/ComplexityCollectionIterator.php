@@ -17,7 +17,11 @@ final class ComplexityCollectionIterator implements Iterator
      * @psalm-var list<Complexity>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly array $items;
+=======
+    private array $items;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private array $items;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

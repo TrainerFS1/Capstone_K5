@@ -30,7 +30,11 @@ final class Mailer implements MailerInterface
     private ?EventDispatcherInterface $dispatcher;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(TransportInterface $transport, ?MessageBusInterface $bus = null, ?EventDispatcherInterface $dispatcher = null)
+=======
+    public function __construct(TransportInterface $transport, MessageBusInterface $bus = null, EventDispatcherInterface $dispatcher = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(TransportInterface $transport, MessageBusInterface $bus = null, EventDispatcherInterface $dispatcher = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,7 +45,11 @@ final class Mailer implements MailerInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function send(RawMessage $message, ?Envelope $envelope = null): void
+=======
+    public function send(RawMessage $message, Envelope $envelope = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function send(RawMessage $message, Envelope $envelope = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,10 +73,13 @@ final class Mailer implements MailerInterface
             $this->dispatcher->dispatch($event);
             $stamps = $event->getStamps();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             if ($event->isRejected()) {
                 return;
             }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -77,7 +88,11 @@ final class Mailer implements MailerInterface
             $this->bus->dispatch(new SendEmailMessage($message, $envelope), $stamps);
         } catch (HandlerFailedException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             foreach ($e->getWrappedExceptions() as $nested) {
+=======
+            foreach ($e->getNestedExceptions() as $nested) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             foreach ($e->getNestedExceptions() as $nested) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -11,9 +11,13 @@ namespace PHPUnit\TestRunner\TestResult;
 
 use PHPUnit\Event\EventFacadeIsSealedException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Event\UnknownSubscriberTypeException;
 use PHPUnit\TextUI\Configuration\Registry as ConfigurationRegistry;
+=======
+use PHPUnit\Event\UnknownSubscriberTypeException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\UnknownSubscriberTypeException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,6 +51,7 @@ final class Facade
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static function shouldStop(): bool
     {
@@ -87,6 +92,8 @@ final class Facade
 
         return false;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function hasTestErroredEvents(): bool
     {
         return self::collector()->hasTestErroredEvents();
@@ -135,6 +142,9 @@ final class Facade
     public static function hasTestMarkedIncompleteEvents(): bool
     {
         return self::collector()->hasTestMarkedIncompleteEvents();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -146,12 +156,16 @@ final class Facade
     {
         if (self::$collector === null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $configuration = ConfigurationRegistry::get();
 
             self::$collector = new Collector(
                 EventFacade::instance(),
                 $configuration->source(),
             );
+=======
+            self::$collector = new Collector;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             self::$collector = new Collector;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -100,7 +100,11 @@ class Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function doParse(string $value, int $flags): mixed
+=======
+    private function doParse(string $value, int $flags)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function doParse(string $value, int $flags)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -187,8 +191,14 @@ class Parser
                         )
                     ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $block = $values['value'];
                         if ($this->isNextLineIndented() || isset($matches['value']) && '>-' === $matches['value']) {
+=======
+                        // this is a compact notation element, add to next block and parse
+                        $block = $values['value'];
+                        if ($this->isNextLineIndented()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         // this is a compact notation element, add to next block and parse
                         $block = $values['value'];
@@ -208,10 +218,13 @@ class Parser
                 }
             } elseif (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 self::preg_match('#^(?P<key>(?:![^\s]++\s++)?(?:'.Inline::REGEX_QUOTED_STRING.'|[^ \'"\[\{!].*?)) *\:(( |\t)++(?P<value>.+))?$#u', rtrim($this->currentLine), $values)
                 && (!str_contains($values['key'], ' #') || \in_array($values['key'][0], ['"', "'"]))
             ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // @todo in 7.0 remove legacy "(?:!?!php/const:)?"
                 self::preg_match('#^(?P<key>(?:![^\s]++\s++)?(?:'.Inline::REGEX_QUOTED_STRING.'|(?:!?!php/const:)?[^ \'"\[\{!].*?)) *\:(( |\t)++(?P<value>.+))?$#u', rtrim($this->currentLine), $values)
                 && (!str_contains($values['key'], ' #') || \in_array($values['key'][0], ['"', "'"]))
@@ -220,6 +233,9 @@ class Parser
                     trigger_deprecation('symfony/yaml', '6.2', 'YAML syntax for key "%s" is deprecated and replaced by "!php/const %s".', $values['key'], substr($values['key'], 11));
                 }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($context && 'sequence' == $context) {
                     throw new ParseException('You cannot define a mapping item when in a sequence.', $this->currentLineNb + 1, $this->currentLine, $this->filename);
@@ -429,7 +445,11 @@ class Parser
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (isset($this->currentLine[1]) && '?' === $this->currentLine[0] && ' ' === $this->currentLine[1]) {
+=======
+                if ($deprecatedUsage = (isset($this->currentLine[1]) && '?' === $this->currentLine[0] && ' ' === $this->currentLine[1])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 if ($deprecatedUsage = (isset($this->currentLine[1]) && '?' === $this->currentLine[0] && ' ' === $this->currentLine[1])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -463,7 +483,11 @@ class Parser
                         }
                         // If the indentation is not consistent at offset 0, it is to be considered as a ParseError
 <<<<<<< HEAD
+<<<<<<< HEAD
                         if (0 === $this->offset && isset($line[0]) && ' ' === $line[0]) {
+=======
+                        if (0 === $this->offset && !$deprecatedUsage && isset($line[0]) && ' ' === $line[0]) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         if (0 === $this->offset && !$deprecatedUsage && isset($line[0]) && ' ' === $line[0]) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -524,15 +548,21 @@ class Parser
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $data ?: null;
     }
 
     private function parseBlock(int $offset, string $yaml, int $flags): mixed
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return empty($data) ? null : $data;
     }
 
     private function parseBlock(int $offset, string $yaml, int $flags)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $skippedLineNumbers = $this->skippedLineNumbers;
@@ -593,7 +623,11 @@ class Parser
      * @throws ParseException When indentation problem are detected
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getNextEmbedBlock(?int $indentation = null, bool $inSequence = false): string
+=======
+    private function getNextEmbedBlock(int $indentation = null, bool $inSequence = false): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getNextEmbedBlock(int $indentation = null, bool $inSequence = false): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -674,7 +708,11 @@ class Parser
 
             if ($this->isCurrentLineBlank()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data[] = substr($this->currentLine, $newIndent ?? 0);
+=======
+                $data[] = substr($this->currentLine, $newIndent);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data[] = substr($this->currentLine, $newIndent);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -683,7 +721,11 @@ class Parser
 
             if ($indent >= $newIndent) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data[] = substr($this->currentLine, $newIndent ?? 0);
+=======
+                $data[] = substr($this->currentLine, $newIndent);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data[] = substr($this->currentLine, $newIndent);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -887,8 +929,13 @@ class Parser
             while (
                 $notEOF && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $isCurrentLineBlank
                     || self::preg_match($pattern, $this->currentLine, $matches)
+=======
+                    $isCurrentLineBlank ||
+                    self::preg_match($pattern, $this->currentLine, $matches)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $isCurrentLineBlank ||
                     self::preg_match($pattern, $this->currentLine, $matches)
@@ -980,10 +1027,13 @@ class Parser
 
         if ($EOF) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             for ($i = 0; $i < $movements; ++$i) {
                 $this->moveToPreviousLine();
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return false;
@@ -1095,7 +1145,11 @@ class Parser
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function preg_match(string $pattern, string $subject, ?array &$matches = null, int $flags = 0, int $offset = 0): int
+=======
+    public static function preg_match(string $pattern, string $subject, array &$matches = null, int $flags = 0, int $offset = 0): int
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function preg_match(string $pattern, string $subject, array &$matches = null, int $flags = 0, int $offset = 0): int
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

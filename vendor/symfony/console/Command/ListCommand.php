@@ -26,9 +26,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 class ListCommand extends Command
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function configure()
@@ -37,10 +40,13 @@ class ListCommand extends Command
             ->setName('list')
             ->setDefinition([
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new InputArgument('namespace', InputArgument::OPTIONAL, 'The namespace name', null, fn () => array_keys((new ApplicationDescription($this->getApplication()))->getNamespaces())),
                 new InputOption('raw', null, InputOption::VALUE_NONE, 'To output raw command list'),
                 new InputOption('format', null, InputOption::VALUE_REQUIRED, 'The output format (txt, xml, json, or md)', 'txt', fn () => (new DescriptorHelper())->getFormats()),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 new InputArgument('namespace', InputArgument::OPTIONAL, 'The namespace name', null, function () {
                     return array_keys((new ApplicationDescription($this->getApplication()))->getNamespaces());
                 }),
@@ -48,6 +54,9 @@ class ListCommand extends Command
                 new InputOption('format', null, InputOption::VALUE_REQUIRED, 'The output format (txt, xml, json, or md)', 'txt', function () {
                     return (new DescriptorHelper())->getFormats();
                 }),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 new InputOption('short', null, InputOption::VALUE_NONE, 'To skip describing commands\' arguments'),
             ])

@@ -38,7 +38,11 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function trans(?string $id, array $parameters = [], ?string $domain = null, ?string $locale = null): string
+=======
+    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -50,9 +54,12 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setLocale(string $locale)
@@ -72,7 +79,11 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCatalogue(?string $locale = null): MessageCatalogueInterface
+=======
+    public function getCatalogue(string $locale = null): MessageCatalogueInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getCatalogue(string $locale = null): MessageCatalogueInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -99,7 +110,11 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return mixed
+=======
+     * Passes through all unknown calls onto the translator object.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Passes through all unknown calls onto the translator object.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -113,7 +128,11 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
      * Logs for missing translations.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function log(string $id, ?string $domain, ?string $locale): void
+=======
+    private function log(string $id, ?string $domain, ?string $locale)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function log(string $id, ?string $domain, ?string $locale)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -3,7 +3,10 @@
 namespace Illuminate\Database;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\PDO\MySqlDriver;
@@ -18,6 +21,7 @@ use PDO;
 class MySqlConnection extends Connection
 {
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Escape a binary value for safe SQL embedding.
      *
@@ -45,6 +49,8 @@ class MySqlConnection extends Connection
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the connected database is a MariaDB database.
      *
      * @return bool
@@ -62,9 +68,13 @@ class MySqlConnection extends Connection
     protected function getDefaultQueryGrammar()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ($grammar = new QueryGrammar)->setConnection($this);
 
         return $this->withTablePrefix($grammar);
+=======
+        return $this->withTablePrefix(new QueryGrammar);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->withTablePrefix(new QueryGrammar);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -92,9 +102,13 @@ class MySqlConnection extends Connection
     protected function getDefaultSchemaGrammar()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ($grammar = new SchemaGrammar)->setConnection($this);
 
         return $this->withTablePrefix($grammar);
+=======
+        return $this->withTablePrefix(new SchemaGrammar);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->withTablePrefix(new SchemaGrammar);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

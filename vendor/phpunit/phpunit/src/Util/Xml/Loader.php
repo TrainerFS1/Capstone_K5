@@ -28,7 +28,11 @@ final class Loader
      * @throws XmlException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function loadFile(string $filename): DOMDocument
+=======
+    public function loadFile(string $filename, bool $isHtml = false, bool $xinclude = false, bool $strict = false): DOMDocument
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function loadFile(string $filename, bool $isHtml = false, bool $xinclude = false, bool $strict = false): DOMDocument
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -42,6 +46,7 @@ final class Loader
             throw new XmlException(
                 sprintf(
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'Could not read XML from file "%s"',
                     $filename,
                 ),
@@ -50,6 +55,8 @@ final class Loader
 
         return $this->load($contents, $filename);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     'Could not read "%s".',
                     $filename
                 )
@@ -57,12 +64,16 @@ final class Loader
         }
 
         return $this->load($contents, $isHtml, $filename, $xinclude, $strict);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * @throws XmlException
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function load(string $actual, ?string $filename = null): DOMDocument
     {
@@ -78,6 +89,8 @@ final class Loader
                 ),
             );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function load(string $actual, bool $isHtml = false, string $filename = '', bool $xinclude = false, bool $strict = false): DOMDocument
     {
         if ($actual === '') {
@@ -88,6 +101,9 @@ final class Loader
         if ($xinclude) {
             $cwd = getcwd();
             @chdir(dirname($filename));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -98,6 +114,7 @@ final class Loader
         $message   = '';
         $reporting = error_reporting(0);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Required for XInclude
         if ($filename !== null) {
@@ -114,6 +131,8 @@ final class Loader
 
         if ($filename !== null) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($filename !== '') {
             // Required for XInclude
             $document->documentURI = $filename;
@@ -126,6 +145,9 @@ final class Loader
         }
 
         if (!$isHtml && $xinclude) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $document->xinclude();
         }
@@ -142,6 +164,7 @@ final class Loader
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($loaded === false || $message !== '') {
             if ($filename !== null) {
                 throw new XmlException(
@@ -151,6 +174,8 @@ final class Loader
                         $message !== '' ? ":\n" . $message : '',
                     ),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($loaded === false || ($strict && $message !== '')) {
             if ($filename !== '') {
                 throw new XmlException(
@@ -159,6 +184,9 @@ final class Loader
                         $filename,
                         $message !== '' ? "\n" . $message : ''
                     )
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }

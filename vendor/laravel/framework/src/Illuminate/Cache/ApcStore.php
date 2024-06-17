@@ -42,13 +42,19 @@ class ApcStore extends TaggableStore
     public function get($key)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->apc->get($this->prefix.$key);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $value = $this->apc->get($this->prefix.$key);
 
         if ($value !== false) {
             return $value;
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

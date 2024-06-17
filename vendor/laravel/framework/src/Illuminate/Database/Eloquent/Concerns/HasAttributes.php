@@ -18,10 +18,14 @@ use Illuminate\Database\Eloquent\Casts\AsCollection;
 use Illuminate\Database\Eloquent\Casts\AsEncryptedArrayObject;
 use Illuminate\Database\Eloquent\Casts\AsEncryptedCollection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Casts\AsEnumArrayObject;
 use Illuminate\Database\Eloquent\Casts\AsEnumCollection;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Casts\Json;
+=======
+use Illuminate\Database\Eloquent\Casts\Attribute;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Database\Eloquent\Casts\Attribute;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -37,7 +41,10 @@ use Illuminate\Support\Exceptions\MathException;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Hash;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
@@ -47,7 +54,10 @@ use ReflectionClass;
 use ReflectionMethod;
 use ReflectionNamedType;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use RuntimeException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -117,7 +127,10 @@ trait HasAttributes
         'encrypted:object',
         'float',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'hashed',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'immutable_date',
@@ -818,6 +831,7 @@ trait HasAttributes
     protected function getClassCastableAttributeValue($key, $value)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $caster = $this->resolveCasterClass($key);
 
         $objectCachingDisabled = $caster->withoutObjectCaching ?? false;
@@ -826,20 +840,29 @@ trait HasAttributes
             return $this->classCastCache[$key];
         } else {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($this->classCastCache[$key])) {
             return $this->classCastCache[$key];
         } else {
             $caster = $this->resolveCasterClass($key);
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $value = $caster instanceof CastsInboundAttributes
                 ? $value
                 : $caster->get($this, $key, $value, $this->attributes);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($caster instanceof CastsInboundAttributes ||
                 ! is_object($value) ||
                 $objectCachingDisabled) {
+=======
+            if ($caster instanceof CastsInboundAttributes || ! is_object($value)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($caster instanceof CastsInboundAttributes || ! is_object($value)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -895,8 +918,11 @@ trait HasAttributes
         } elseif ($this->isDecimalCast($castType)) {
             $convertedCastType = 'decimal';
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif (class_exists($castType)) {
             $convertedCastType = $castType;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
@@ -1023,10 +1049,13 @@ trait HasAttributes
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_null($value) && $this->hasCast($key, 'hashed')) {
             $value = $this->castAttributeAsHashedString($key, $value);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->attributes[$key] = $value;
@@ -1171,9 +1200,13 @@ trait HasAttributes
         );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($caster instanceof CastsInboundAttributes ||
             ! is_object($value) ||
             ($caster->withoutObjectCaching ?? false)) {
+=======
+        if ($caster instanceof CastsInboundAttributes || ! is_object($value)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($caster instanceof CastsInboundAttributes || ! is_object($value)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1295,7 +1328,11 @@ trait HasAttributes
     protected function asJson($value)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Json::encode($value);
+=======
+        return json_encode($value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return json_encode($value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1311,7 +1348,11 @@ trait HasAttributes
     public function fromJson($value, $asObject = false)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Json::decode($value ?? '', ! $asObject);
+=======
+        return json_decode($value ?? '', ! $asObject);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return json_decode($value ?? '', ! $asObject);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1353,6 +1394,7 @@ trait HasAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Cast the given attribute to a hashed string.
      *
      * @param  string  $key
@@ -1377,6 +1419,8 @@ trait HasAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Decode the given float.
@@ -1681,7 +1725,13 @@ trait HasAttributes
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return enum_exists($castType);
+=======
+        if (function_exists('enum_exists') && enum_exists($castType)) {
+            return true;
+        }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (function_exists('enum_exists') && enum_exists($castType)) {
             return true;
@@ -2092,6 +2142,7 @@ trait HasAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the attributes that have been changed since the last sync for an update operation.
      *
      * @return array
@@ -2102,6 +2153,8 @@ trait HasAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the attributes that were changed when the model was last saved.
@@ -2148,11 +2201,17 @@ trait HasAttributes
             return $this->castAttribute($key, $attribute) ===
                 $this->castAttribute($key, $original);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($this->isClassCastable($key) && Str::startsWith($this->getCasts()[$key], [AsArrayObject::class, AsCollection::class])) {
             return $this->fromJson($attribute) === $this->fromJson($original);
         } elseif ($this->isClassCastable($key) && Str::startsWith($this->getCasts()[$key], [AsEnumArrayObject::class, AsEnumCollection::class])) {
             return $this->fromJson($attribute) === $this->fromJson($original);
         } elseif ($this->isClassCastable($key) && $original !== null && Str::startsWith($this->getCasts()[$key], [AsEncryptedArrayObject::class, AsEncryptedCollection::class])) {
+=======
+        } elseif ($this->isClassCastable($key) && in_array($this->getCasts()[$key], [AsArrayObject::class, AsCollection::class])) {
+            return $this->fromJson($attribute) === $this->fromJson($original);
+        } elseif ($this->isClassCastable($key) && $original !== null && in_array($this->getCasts()[$key], [AsEncryptedArrayObject::class, AsEncryptedCollection::class])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif ($this->isClassCastable($key) && in_array($this->getCasts()[$key], [AsArrayObject::class, AsCollection::class])) {
             return $this->fromJson($attribute) === $this->fromJson($original);
@@ -2188,6 +2247,7 @@ trait HasAttributes
         // given with the key in the pair. Dayle made this comment line up.
         if ($this->hasCast($key)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (static::preventsAccessingMissingAttributes() &&
                 ! array_key_exists($key, $this->attributes) &&
                 ($this->isEnumCastable($key) ||
@@ -2195,6 +2255,8 @@ trait HasAttributes
                 $this->throwMissingAttributeExceptionIfApplicable($key);
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->castAttribute($key, $value);
@@ -2220,9 +2282,15 @@ trait HasAttributes
     public function append($attributes)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->appends = array_values(array_unique(
             array_merge($this->appends, is_string($attributes) ? func_get_args() : $attributes)
         ));
+=======
+        $this->appends = array_unique(
+            array_merge($this->appends, is_string($attributes) ? func_get_args() : $attributes)
+        );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->appends = array_unique(
             array_merge($this->appends, is_string($attributes) ? func_get_args() : $attributes)
@@ -2334,6 +2402,11 @@ trait HasAttributes
             if ($returnType instanceof ReflectionNamedType &&
                 $returnType->getName() === Attribute::class) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                $method->setAccessible(true);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $method->setAccessible(true);
 

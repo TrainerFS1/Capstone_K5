@@ -33,7 +33,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function lateCollect(): void
+=======
+    public function lateCollect()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function lateCollect()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,7 +51,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
+=======
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function collect(Request $request, Response $response, \Throwable $exception = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,7 +65,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reset(): void
+=======
+    public function reset()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function reset()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -86,7 +98,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getLocale(): ?string
+=======
+    public function getLocale()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getLocale()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +114,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getFallbackLocales(): Data|array
+=======
+    public function getFallbackLocales()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getFallbackLocales()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,7 +132,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function sanitizeCollectedMessages(array $messages): array
+=======
+    private function sanitizeCollectedMessages(array $messages)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function sanitizeCollectedMessages(array $messages)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -141,7 +165,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function computeCount(array $messages): array
+=======
+    private function computeCount(array $messages)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function computeCount(array $messages)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -160,7 +188,11 @@ class TranslationDataCollector extends DataCollector implements LateDataCollecto
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function sanitizeString(string $string, int $length = 80): string
+=======
+    private function sanitizeString(string $string, int $length = 80)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function sanitizeString(string $string, int $length = 80)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

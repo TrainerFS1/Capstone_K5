@@ -5,6 +5,7 @@ namespace PhpParser\Node\Stmt;
 use PhpParser\Node;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Enum_ extends ClassLike {
     /** @var null|Node\Identifier Scalar Type */
     public ?Node $scalarType;
@@ -25,6 +26,8 @@ class Enum_ extends ClassLike {
      *             'attrGroups'  => array() : PHP attribute groups
      * @param array<string, mixed> $attributes Additional attributes
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Enum_ extends ClassLike
 {
     /** @var null|Node\Identifier Scalar Type */
@@ -40,6 +43,9 @@ class Enum_ extends ClassLike
      *                                                'stmts'       => array() : Statements
      *                                                'attrGroups'  => array() : PHP attribute groups
      * @param array                       $attributes Additional attributes
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct($name, array $subNodes = [], array $attributes = []) {
@@ -53,17 +59,23 @@ class Enum_ extends ClassLike
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['attrGroups', 'name', 'scalarType', 'implements', 'stmts'];
     }
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getSubNodeNames() : array {
         return ['attrGroups', 'name', 'scalarType', 'implements', 'stmts'];
     }
 
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Stmt_Enum';
     }

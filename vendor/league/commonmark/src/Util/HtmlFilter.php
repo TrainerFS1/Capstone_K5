@@ -14,8 +14,11 @@ declare(strict_types=1);
 namespace League\CommonMark\Util;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\InvalidArgumentException;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
@@ -39,7 +42,11 @@ final class HtmlFilter
      * @return string Filtered HTML
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws InvalidArgumentException when an invalid $filter is given
+=======
+     * @throws \InvalidArgumentException when an invalid $filter is given
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \InvalidArgumentException when an invalid $filter is given
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,7 +64,11 @@ final class HtmlFilter
                 return $html;
             default:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new InvalidArgumentException(\sprintf('Invalid filter provided: "%s"', $filter));
+=======
+                throw new \InvalidArgumentException(\sprintf('Invalid filter provided: "%s"', $filter));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new \InvalidArgumentException(\sprintf('Invalid filter provided: "%s"', $filter));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

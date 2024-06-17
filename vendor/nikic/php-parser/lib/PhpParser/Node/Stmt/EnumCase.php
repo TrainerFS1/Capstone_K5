@@ -6,6 +6,7 @@ use PhpParser\Node;
 use PhpParser\Node\AttributeGroup;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class EnumCase extends Node\Stmt {
     /** @var Node\Identifier Enum case name */
     public Node\Identifier $name;
@@ -22,6 +23,8 @@ class EnumCase extends Node\Stmt {
      */
     public function __construct($name, ?Node\Expr $expr = null, array $attrGroups = [], array $attributes = []) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class EnumCase extends Node\Stmt
 {
     /** @var Node\Identifier Enum case name */
@@ -38,6 +41,9 @@ class EnumCase extends Node\Stmt
      * @param array                     $attributes Additional attributes
      */
     public function __construct($name, Node\Expr $expr = null, array $attrGroups = [], array $attributes = []) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         parent::__construct($attributes);
         $this->name = \is_string($name) ? new Node\Identifier($name) : $name;
@@ -46,17 +52,23 @@ class EnumCase extends Node\Stmt
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['attrGroups', 'name', 'expr'];
     }
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getSubNodeNames() : array {
         return ['attrGroups', 'name', 'expr'];
     }
 
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Stmt_EnumCase';
     }

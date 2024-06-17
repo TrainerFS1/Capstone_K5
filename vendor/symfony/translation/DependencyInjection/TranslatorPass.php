@@ -19,9 +19,12 @@ use Symfony\Component\DependencyInjection\Reference;
 class TranslatorPass implements CompilerPassInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function process(ContainerBuilder $container)
@@ -60,6 +63,7 @@ class TranslatorPass implements CompilerPassInterface
             $constraintClassNames = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             foreach ($container->getDefinitions() as $definition) {
                 if (!$definition->hasTag('validator.constraint_validator')) {
                     continue;
@@ -67,10 +71,15 @@ class TranslatorPass implements CompilerPassInterface
                 // Resolve constraint validator FQCN even if defined as %foo.validator.class% parameter
                 $className = $container->getParameterBag()->resolveValue($definition->getClass());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($container->findTaggedServiceIds('validator.constraint_validator', true) as $id => $attributes) {
                 $serviceDefinition = $container->getDefinition($id);
                 // Resolve constraint validator FQCN even if defined as %foo.validator.class% parameter
                 $className = $container->getParameterBag()->resolveValue($serviceDefinition->getClass());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // Extraction of the constraint class name from the Constraint Validator FQCN
                 $constraintClassNames[] = str_replace('Validator', '', substr(strrchr($className, '\\'), 1));

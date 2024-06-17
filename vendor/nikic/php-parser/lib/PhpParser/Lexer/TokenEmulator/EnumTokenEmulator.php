@@ -3,6 +3,7 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\PhpVersion;
 
 final class EnumTokenEmulator extends KeywordEmulator {
@@ -26,6 +27,8 @@ final class EnumTokenEmulator extends KeywordEmulator {
     }
 }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Lexer\Emulative;
 
 final class EnumTokenEmulator extends KeywordEmulator
@@ -52,5 +55,9 @@ final class EnumTokenEmulator extends KeywordEmulator
             && $tokens[$pos + 1][0] === \T_WHITESPACE
             && $tokens[$pos + 2][0] === \T_STRING;
     }
+<<<<<<< HEAD
+}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 }
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

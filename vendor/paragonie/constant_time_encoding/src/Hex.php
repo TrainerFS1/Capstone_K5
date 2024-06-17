@@ -43,10 +43,15 @@ abstract class Hex implements EncoderInterface
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function encode(
         #[\SensitiveParameter]
         string $binString
     ): string {
+=======
+    public static function encode(string $binString): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function encode(string $binString): string
     {
@@ -77,10 +82,15 @@ abstract class Hex implements EncoderInterface
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function encodeUpper(
         #[\SensitiveParameter]
         string $binString
     ): string {
+=======
+    public static function encodeUpper(string $binString): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function encodeUpper(string $binString): string
     {
@@ -114,7 +124,10 @@ abstract class Hex implements EncoderInterface
      */
     public static function decode(
 <<<<<<< HEAD
+<<<<<<< HEAD
         #[\SensitiveParameter]
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         string $encodedString,

@@ -30,8 +30,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Illuminate\Filesystem\join_paths;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Application extends Container implements ApplicationContract, CachesConfiguration, CachesRoutes, HttpKernelInterface
@@ -44,7 +47,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
      * @var string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     const VERSION = '10.48.12';
+=======
+    const VERSION = '10.1.3';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     const VERSION = '10.1.3';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -238,15 +245,21 @@ class Application extends Container implements ApplicationContract, CachesConfig
         $this->singleton(Mix::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->singleton(PackageManifest::class, fn () => new PackageManifest(
             new Filesystem, $this->basePath(), $this->getCachedPackagesPath()
         ));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->singleton(PackageManifest::class, function () {
             return new PackageManifest(
                 new Filesystem, $this->basePath(), $this->getCachedPackagesPath()
             );
         });
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -547,6 +560,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
     public function storagePath($path = '')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($_ENV['LARAVEL_STORAGE_PATH'])) {
             return $this->joinPaths($this->storagePath ?: $_ENV['LARAVEL_STORAGE_PATH'], $path);
         }
@@ -555,6 +569,8 @@ class Application extends Container implements ApplicationContract, CachesConfig
             return $this->joinPaths($this->storagePath ?: $_SERVER['LARAVEL_STORAGE_PATH'], $path);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->joinPaths($this->storagePath ?: $this->basePath('storage'), $path);
@@ -611,7 +627,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
     public function joinPaths($basePath, $path = '')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return join_paths($basePath, $path);
+=======
+        return $basePath.($path != '' ? DIRECTORY_SEPARATOR.ltrim($path, DIRECTORY_SEPARATOR) : '');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $basePath.($path != '' ? DIRECTORY_SEPARATOR.ltrim($path, DIRECTORY_SEPARATOR) : '');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -739,6 +759,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if the application is running any of the given console commands.
      *
      * @param  string|array  ...$commands
@@ -757,6 +778,8 @@ class Application extends Container implements ApplicationContract, CachesConfig
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the application is running unit tests.
@@ -1272,7 +1295,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
     {
         if ($code == 404) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new NotFoundHttpException($message, null, 0, $headers);
+=======
+            throw new NotFoundHttpException($message);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new NotFoundHttpException($message);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

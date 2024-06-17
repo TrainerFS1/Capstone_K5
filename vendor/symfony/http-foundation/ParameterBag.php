@@ -13,7 +13,10 @@ namespace Symfony\Component\HttpFoundation;
 
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Exception\UnexpectedValueException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -42,7 +45,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
      * @param string|null $key The name of the parameter to return or null to get them all
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function all(?string $key = null): array
+=======
+    public function all(string $key = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function all(string $key = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,8 +76,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Replaces the current parameters by a new set.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -82,8 +92,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Adds parameters.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -98,9 +111,12 @@ class ParameterBag implements \IteratorAggregate, \Countable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $key, mixed $value)
@@ -119,8 +135,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Removes a parameter.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -135,7 +154,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     public function getAlpha(string $key, string $default = ''): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return preg_replace('/[^[:alpha:]]/', '', $this->getString($key, $default));
+=======
+        return preg_replace('/[^[:alpha:]]/', '', $this->get($key, $default));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return preg_replace('/[^[:alpha:]]/', '', $this->get($key, $default));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -147,7 +170,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     public function getAlnum(string $key, string $default = ''): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return preg_replace('/[^[:alnum:]]/', '', $this->getString($key, $default));
+=======
+        return preg_replace('/[^[:alnum:]]/', '', $this->get($key, $default));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return preg_replace('/[^[:alnum:]]/', '', $this->get($key, $default));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,6 +185,7 @@ class ParameterBag implements \IteratorAggregate, \Countable
      */
     public function getDigits(string $key, string $default = ''): string
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return preg_replace('/[^[:digit:]]/', '', $this->getString($key, $default));
     }
@@ -177,6 +205,10 @@ class ParameterBag implements \IteratorAggregate, \Countable
         // we need to remove - and + because they're allowed in the filter
         return str_replace(['-', '+'], '', $this->filter($key, $default, \FILTER_SANITIZE_NUMBER_INT));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        // we need to remove - and + because they're allowed in the filter
+        return str_replace(['-', '+'], '', $this->filter($key, $default, \FILTER_SANITIZE_NUMBER_INT));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -185,8 +217,12 @@ class ParameterBag implements \IteratorAggregate, \Countable
     public function getInt(string $key, int $default = 0): int
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         // In 7.0 remove the fallback to 0, in case of failure an exception will be thrown
         return $this->filter($key, $default, \FILTER_VALIDATE_INT, ['flags' => \FILTER_REQUIRE_SCALAR]) ?: 0;
+=======
+        return (int) $this->get($key, $default);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return (int) $this->get($key, $default);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -197,6 +233,7 @@ class ParameterBag implements \IteratorAggregate, \Countable
      */
     public function getBoolean(string $key, bool $default = false): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return $this->filter($key, $default, \FILTER_VALIDATE_BOOL, ['flags' => \FILTER_REQUIRE_SCALAR]);
     }
@@ -227,14 +264,21 @@ class ParameterBag implements \IteratorAggregate, \Countable
 =======
         return $this->filter($key, $default, \FILTER_VALIDATE_BOOL);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        return $this->filter($key, $default, \FILTER_VALIDATE_BOOL);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Filter key.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int                                     $filter  FILTER_* constant
      * @param int|array{flags?: int, options?: array} $options Flags from FILTER_* constants
+=======
+     * @param int $filter FILTER_* constant
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param int $filter FILTER_* constant
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -256,16 +300,20 @@ class ParameterBag implements \IteratorAggregate, \Countable
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (\is_object($value) && !$value instanceof \Stringable) {
             throw new UnexpectedValueException(sprintf('Parameter value "%s" cannot be filtered.', $key));
         }
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ((\FILTER_CALLBACK & $filter) && !(($options['options'] ?? null) instanceof \Closure)) {
             throw new \InvalidArgumentException(sprintf('A Closure must be passed to "%s()" when FILTER_CALLBACK is used, "%s" given.', __METHOD__, get_debug_type($options['options'] ?? null)));
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $options['flags'] ??= 0;
         $nullOnFailure = $options['flags'] & \FILTER_NULL_ON_FAILURE;
@@ -284,6 +332,9 @@ class ParameterBag implements \IteratorAggregate, \Countable
         trigger_deprecation('symfony/http-foundation', '6.3', 'Ignoring invalid values when using "%s::%s(\'%s\')" is deprecated and will throw an "%s" in 7.0; '.$hint.' flag "FILTER_NULL_ON_FAILURE" to keep ignoring them.', $this::class, $method, $key, UnexpectedValueException::class);
 
         return false;
+=======
+        return filter_var($value, $filter, $options);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return filter_var($value, $filter, $options);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

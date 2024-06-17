@@ -61,7 +61,11 @@ final class LogicalXor extends BinaryOperator
             $constraints,
             static fn (bool $matches, Constraint $constraint): bool => $matches xor $constraint->evaluate($other, '', true),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $initial->evaluate($other, '', true),
+=======
+            $initial->evaluate($other, '', true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $initial->evaluate($other, '', true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

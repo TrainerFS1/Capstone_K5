@@ -49,7 +49,11 @@ class ProcOutputPager extends StreamOutput implements OutputPager
      * @throws \RuntimeException When unable to write output (should never happen)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function doWrite($message, $newline): void
+=======
+    public function doWrite($message, $newline)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function doWrite($message, $newline)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

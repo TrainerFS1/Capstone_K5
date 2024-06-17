@@ -20,7 +20,10 @@ use Symfony\Component\Finder\SplFileInfo;
  *
  * @extends \FilterIterator<string, SplFileInfo>
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @implements \RecursiveIterator<string, SplFileInfo>
@@ -30,6 +33,7 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
     /** @var \Iterator<string, SplFileInfo> */
     private \Iterator $iterator;
     private bool $isRecursive;
+<<<<<<< HEAD
 <<<<<<< HEAD
     /** @var array<string, true> */
     private array $excludedDirs = [];
@@ -41,12 +45,17 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
      * @param \Iterator<string, SplFileInfo>          $iterator    The Iterator to filter
      * @param list<string|callable(SplFileInfo):bool> $directories An array of directories to exclude
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private array $excludedDirs = [];
     private ?string $excludedPattern = null;
 
     /**
      * @param \Iterator<string, SplFileInfo> $iterator    The Iterator to filter
      * @param string[]                       $directories An array of directories to exclude
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(\Iterator $iterator, array $directories)
@@ -55,6 +64,7 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
         $this->isRecursive = $iterator instanceof \RecursiveIterator;
         $patterns = [];
         foreach ($directories as $directory) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (!\is_string($directory)) {
                 if (!\is_callable($directory)) {
@@ -66,6 +76,8 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
                 continue;
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $directory = rtrim($directory, '/');
@@ -99,6 +111,7 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->pruneFilters && $this->hasChildren()) {
             foreach ($this->pruneFilters as $pruneFilter) {
                 if (!$pruneFilter($this->current())) {
@@ -107,6 +120,8 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
             }
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return true;

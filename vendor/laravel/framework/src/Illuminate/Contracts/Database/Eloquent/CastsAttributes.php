@@ -17,7 +17,11 @@ interface CastsAttributes
      * @param  string  $key
      * @param  mixed  $value
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $attributes
+=======
+     * @param  array  $attributes
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array  $attributes
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -32,7 +36,11 @@ interface CastsAttributes
      * @param  string  $key
      * @param  TSet|null  $value
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $attributes
+=======
+     * @param  array  $attributes
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array  $attributes
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

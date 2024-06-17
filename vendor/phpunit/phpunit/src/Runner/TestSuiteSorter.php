@@ -157,7 +157,11 @@ final class TestSuiteSorter
         } elseif ($order === self::ORDER_RANDOMIZED) {
             $suite->setTests($this->randomize($suite->tests()));
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($order === self::ORDER_DURATION) {
+=======
+        } elseif ($order === self::ORDER_DURATION && $this->cache !== null) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif ($order === self::ORDER_DURATION && $this->cache !== null) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -167,7 +171,11 @@ final class TestSuiteSorter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($orderDefects === self::ORDER_DEFECTS_FIRST) {
+=======
+        if ($orderDefects === self::ORDER_DEFECTS_FIRST && $this->cache !== null) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($orderDefects === self::ORDER_DEFECTS_FIRST && $this->cache !== null) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -216,7 +224,11 @@ final class TestSuiteSorter
         usort(
             $tests,
 <<<<<<< HEAD
+<<<<<<< HEAD
             fn ($left, $right) => $this->cmpDefectPriorityAndTime($left, $right),
+=======
+            fn ($left, $right) => $this->cmpDefectPriorityAndTime($left, $right)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             fn ($left, $right) => $this->cmpDefectPriorityAndTime($left, $right)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -230,7 +242,11 @@ final class TestSuiteSorter
         usort(
             $tests,
 <<<<<<< HEAD
+<<<<<<< HEAD
             fn ($left, $right) => $this->cmpDuration($left, $right),
+=======
+            fn ($left, $right) => $this->cmpDuration($left, $right)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             fn ($left, $right) => $this->cmpDuration($left, $right)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -244,7 +260,11 @@ final class TestSuiteSorter
         usort(
             $tests,
 <<<<<<< HEAD
+<<<<<<< HEAD
             fn ($left, $right) => $this->cmpSize($left, $right),
+=======
+            fn ($left, $right) => $this->cmpSize($left, $right)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             fn ($left, $right) => $this->cmpSize($left, $right)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

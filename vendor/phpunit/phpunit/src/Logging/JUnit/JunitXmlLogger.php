@@ -12,6 +12,10 @@ namespace PHPUnit\Logging\JUnit;
 use function assert;
 use function basename;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function class_exists;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function class_exists;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -24,6 +28,10 @@ use DOMElement;
 use PHPUnit\Event\Code\Test;
 use PHPUnit\Event\Code\TestMethod;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Event\Code\Throwable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\Code\Throwable;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -32,7 +40,10 @@ use PHPUnit\Event\Facade;
 use PHPUnit\Event\InvalidArgumentException;
 use PHPUnit\Event\Telemetry\HRTime;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Telemetry\Info;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Test\Errored;
@@ -40,9 +51,15 @@ use PHPUnit\Event\Test\Failed;
 use PHPUnit\Event\Test\Finished;
 use PHPUnit\Event\Test\MarkedIncomplete;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Test\PreparationStarted;
 use PHPUnit\Event\Test\Prepared;
 use PHPUnit\Event\Test\Skipped;
+=======
+use PHPUnit\Event\Test\Prepared;
+use PHPUnit\Event\Test\Skipped;
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\Test\Prepared;
 use PHPUnit\Event\Test\Skipped;
@@ -53,6 +70,11 @@ use PHPUnit\Event\UnknownSubscriberTypeException;
 use PHPUnit\TextUI\Output\Printer;
 use PHPUnit\Util\Xml;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use ReflectionClass;
+use ReflectionException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use ReflectionClass;
 use ReflectionException;
@@ -105,8 +127,11 @@ final class JunitXmlLogger
     private ?DOMElement $currentTestCase = null;
     private ?HRTime $time                = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool $prepared               = false;
     private bool $preparationFailed      = false;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -115,17 +140,23 @@ final class JunitXmlLogger
      * @throws UnknownSubscriberTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Printer $printer, Facade $facade)
     {
         $this->printer = $printer;
 
         $this->registerSubscribers($facade);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(Printer $printer)
     {
         $this->printer = $printer;
 
         $this->registerSubscribers();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->createDocument();
     }
@@ -143,9 +174,12 @@ final class JunitXmlLogger
         $testSuite->setAttribute('name', $event->testSuite()->name());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($event->testSuite()->isForTestClass()) {
             $testSuite->setAttribute('file', $event->testSuite()->file());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (class_exists($event->testSuite()->name(), false)) {
             try {
                 $class = new ReflectionClass($event->testSuite()->name());
@@ -153,6 +187,9 @@ final class JunitXmlLogger
                 $testSuite->setAttribute('file', $class->getFileName());
             } catch (ReflectionException) {
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -177,7 +214,11 @@ final class JunitXmlLogger
         $this->testSuites[$this->testSuiteLevel]->setAttribute(
             'tests',
 <<<<<<< HEAD
+<<<<<<< HEAD
             (string) $this->testSuiteTests[$this->testSuiteLevel],
+=======
+            (string) $this->testSuiteTests[$this->testSuiteLevel]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             (string) $this->testSuiteTests[$this->testSuiteLevel]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -186,7 +227,11 @@ final class JunitXmlLogger
         $this->testSuites[$this->testSuiteLevel]->setAttribute(
             'assertions',
 <<<<<<< HEAD
+<<<<<<< HEAD
             (string) $this->testSuiteAssertions[$this->testSuiteLevel],
+=======
+            (string) $this->testSuiteAssertions[$this->testSuiteLevel]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             (string) $this->testSuiteAssertions[$this->testSuiteLevel]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -195,7 +240,11 @@ final class JunitXmlLogger
         $this->testSuites[$this->testSuiteLevel]->setAttribute(
             'errors',
 <<<<<<< HEAD
+<<<<<<< HEAD
             (string) $this->testSuiteErrors[$this->testSuiteLevel],
+=======
+            (string) $this->testSuiteErrors[$this->testSuiteLevel]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             (string) $this->testSuiteErrors[$this->testSuiteLevel]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -204,7 +253,11 @@ final class JunitXmlLogger
         $this->testSuites[$this->testSuiteLevel]->setAttribute(
             'failures',
 <<<<<<< HEAD
+<<<<<<< HEAD
             (string) $this->testSuiteFailures[$this->testSuiteLevel],
+=======
+            (string) $this->testSuiteFailures[$this->testSuiteLevel]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             (string) $this->testSuiteFailures[$this->testSuiteLevel]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -213,7 +266,11 @@ final class JunitXmlLogger
         $this->testSuites[$this->testSuiteLevel]->setAttribute(
             'skipped',
 <<<<<<< HEAD
+<<<<<<< HEAD
             (string) $this->testSuiteSkipped[$this->testSuiteLevel],
+=======
+            (string) $this->testSuiteSkipped[$this->testSuiteLevel]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             (string) $this->testSuiteSkipped[$this->testSuiteLevel]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,6 +278,7 @@ final class JunitXmlLogger
 
         $this->testSuites[$this->testSuiteLevel]->setAttribute(
             'time',
+<<<<<<< HEAD
 <<<<<<< HEAD
             sprintf('%F', $this->testSuiteTimes[$this->testSuiteLevel]),
         );
@@ -233,6 +291,8 @@ final class JunitXmlLogger
             $this->testSuiteSkipped[$this->testSuiteLevel - 1]    += $this->testSuiteSkipped[$this->testSuiteLevel];
             $this->testSuiteTimes[$this->testSuiteLevel - 1]      += $this->testSuiteTimes[$this->testSuiteLevel];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             sprintf('%F', $this->testSuiteTimes[$this->testSuiteLevel])
         );
 
@@ -243,6 +303,9 @@ final class JunitXmlLogger
             $this->testSuiteFailures[$this->testSuiteLevel - 1] += $this->testSuiteFailures[$this->testSuiteLevel];
             $this->testSuiteSkipped[$this->testSuiteLevel - 1] += $this->testSuiteSkipped[$this->testSuiteLevel];
             $this->testSuiteTimes[$this->testSuiteLevel - 1] += $this->testSuiteTimes[$this->testSuiteLevel];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -252,8 +315,14 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function testPreparationStarted(PreparationStarted $event): void
+=======
+     * @throws NoDataSetFromDataProviderException
+     */
+    public function testPrepared(Prepared $event): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
      */
@@ -266,6 +335,7 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function testPreparationFailed(): void
     {
@@ -291,6 +361,8 @@ final class JunitXmlLogger
 
         $this->handleFinish($event->telemetryInfo(), $event->numberOfAssertionsPerformed());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testFinished(Finished $event): void
     {
         assert($this->currentTestCase !== null);
@@ -319,12 +391,19 @@ final class JunitXmlLogger
 
         $this->currentTestCase = null;
         $this->time            = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -337,6 +416,10 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -349,16 +432,22 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function testErrored(Errored $event): void
     {
         $this->handleFault($event, 'error');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws NoDataSetFromDataProviderException
      */
     public function testErrored(Errored $event): void
     {
         $this->handleFault($event->test(), $event->throwable(), 'error');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->testSuiteErrors[$this->testSuiteLevel]++;
@@ -367,22 +456,29 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function testFailed(Failed $event): void
     {
         $this->handleFault($event, 'failure');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws NoDataSetFromDataProviderException
      */
     public function testFailed(Failed $event): void
     {
         $this->handleFault($event->test(), $event->throwable(), 'failure');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->testSuiteFailures[$this->testSuiteLevel]++;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @throws InvalidArgumentException
      */
@@ -429,6 +525,8 @@ final class JunitXmlLogger
             new TestPreparationStartedSubscriber($this),
             new TestPreparationFailedSubscriber($this),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
@@ -437,6 +535,9 @@ final class JunitXmlLogger
         Facade::registerSubscribers(
             new TestSuiteStartedSubscriber($this),
             new TestSuiteFinishedSubscriber($this),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             new TestPreparedSubscriber($this),
             new TestFinishedSubscriber($this),
@@ -460,6 +561,7 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     private function handleFault(Errored|Failed $event, string $type): void
     {
@@ -476,6 +578,8 @@ final class JunitXmlLogger
             $throwable->description() . PHP_EOL .
             $throwable->stackTrace(),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws NoDataSetFromDataProviderException
      */
     private function handleFault(Test $test, Throwable $throwable, string $type): void
@@ -487,13 +591,20 @@ final class JunitXmlLogger
         $buffer .= trim(
             $throwable->description() . PHP_EOL .
             $throwable->stackTrace()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $fault = $this->document->createElement(
             $type,
 <<<<<<< HEAD
+<<<<<<< HEAD
             Xml::prepareString($buffer),
+=======
+            Xml::prepareString($buffer)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             Xml::prepareString($buffer)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -503,10 +614,13 @@ final class JunitXmlLogger
 
         $this->currentTestCase->appendChild($fault);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (!$this->prepared) {
             $this->handleFinish($event->telemetryInfo(), 0);
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -514,16 +628,22 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     private function handleIncompleteOrSkipped(MarkedIncomplete|Skipped $event): void
     {
         if (!$this->prepared) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws NoDataSetFromDataProviderException
      */
     private function handleIncompleteOrSkipped(MarkedIncomplete|Skipped $event): void
     {
         if ($this->currentTestCase === null) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->createTestCase($event);
         }
@@ -536,10 +656,13 @@ final class JunitXmlLogger
 
         $this->testSuiteSkipped[$this->testSuiteLevel]++;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (!$this->prepared) {
             $this->handleFinish($event->telemetryInfo(), 0);
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -547,6 +670,10 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -570,6 +697,10 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -593,7 +724,11 @@ final class JunitXmlLogger
                 '%s with data set #%d',
                 $test->methodName(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $dataSetName,
+=======
+                $dataSetName
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $dataSetName
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -604,7 +739,11 @@ final class JunitXmlLogger
             '%s with data set "%s"',
             $test->methodName(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $dataSetName,
+=======
+            $dataSetName
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $dataSetName
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -614,10 +753,16 @@ final class JunitXmlLogger
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-assert !null $this->currentTestCase
      */
     private function createTestCase(Errored|Failed|MarkedIncomplete|PreparationStarted|Prepared|Skipped $event): void
+=======
+     * @throws NoDataSetFromDataProviderException
+     */
+    private function createTestCase(Prepared|MarkedIncomplete|Skipped $event): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
      */

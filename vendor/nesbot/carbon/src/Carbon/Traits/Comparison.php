@@ -995,10 +995,13 @@ trait Comparison
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (preg_match('/^(?:Jan|January|Feb|February|Mar|March|Apr|April|May|Jun|June|Jul|July|Aug|August|Sep|September|Oct|October|Nov|November|Dec|December)$/i', $tester)) {
             return $this->isSameMonth(static::parse($tester), false);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (preg_match('/^\d{3,}-\d{1,2}$/', $tester)) {

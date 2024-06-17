@@ -7,8 +7,11 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\select;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'schedule:test')]
@@ -66,7 +69,11 @@ class ScheduleTestCommand extends Command
             $index = key($matches);
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $index = $this->getSelectedCommandByIndex($commandNames);
+=======
+            $index = array_search($this->components->choice('Which command would you like to run?', $commandNames), $commandNames);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $index = array_search($this->components->choice('Which command would you like to run?', $commandNames), $commandNames);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -95,6 +102,7 @@ class ScheduleTestCommand extends Command
         $this->newLine();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Get the selected command name by index.
@@ -122,6 +130,8 @@ class ScheduleTestCommand extends Command
             );
         }
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

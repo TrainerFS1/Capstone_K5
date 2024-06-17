@@ -23,9 +23,12 @@ trait TranslatorTrait
     private ?string $locale = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setLocale(string $locale)
@@ -39,7 +42,11 @@ trait TranslatorTrait
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function trans(?string $id, array $parameters = [], ?string $domain = null, ?string $locale = null): string
+=======
+    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

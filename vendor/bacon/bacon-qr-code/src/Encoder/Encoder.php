@@ -21,10 +21,14 @@ final class Encoder
      * Default byte encoding.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const DEFAULT_BYTE_MODE_ENCODING = 'ISO-8859-1';
 
     /** @deprecated use DEFAULT_BYTE_MODE_ENCODING */
     public const DEFAULT_BYTE_MODE_ECODING = self::DEFAULT_BYTE_MODE_ENCODING;
+=======
+    public const DEFAULT_BYTE_MODE_ECODING = 'ISO-8859-1';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public const DEFAULT_BYTE_MODE_ECODING = 'ISO-8859-1';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,7 +51,11 @@ final class Encoder
      * @var array<string,ReedSolomonCodec>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static array $codecs = [];
+=======
+    private static $codecs = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static $codecs = [];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -59,10 +67,15 @@ final class Encoder
         string $content,
         ErrorCorrectionLevel $ecLevel,
 <<<<<<< HEAD
+<<<<<<< HEAD
         string $encoding = self::DEFAULT_BYTE_MODE_ENCODING,
         ?Version $forcedVersion = null,
         // Barcode scanner might not be able to read the encoded message of the QR code with the prefix ECI of UTF-8
         bool $prefixEci = true
+=======
+        string $encoding = self::DEFAULT_BYTE_MODE_ECODING,
+        ?Version $forcedVersion = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $encoding = self::DEFAULT_BYTE_MODE_ECODING,
         ?Version $forcedVersion = null
@@ -79,7 +92,11 @@ final class Encoder
 
         // Append ECI segment if applicable
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($prefixEci && Mode::BYTE() === $mode && self::DEFAULT_BYTE_MODE_ENCODING !== $encoding) {
+=======
+        if (Mode::BYTE() === $mode && self::DEFAULT_BYTE_MODE_ECODING !== $encoding) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (Mode::BYTE() === $mode && self::DEFAULT_BYTE_MODE_ECODING !== $encoding) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -178,7 +195,11 @@ final class Encoder
      * Chooses the best mode for a given content.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function chooseMode(string $content, ?string $encoding = null) : Mode
+=======
+    private static function chooseMode(string $content, string $encoding = null) : Mode
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function chooseMode(string $content, string $encoding = null) : Mode
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -244,7 +265,11 @@ final class Encoder
 
         for ($i = 0; $i < $length; $i += 2) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $byte = ord($bytes[$i]) & 0xff;
+=======
+            $byte = $bytes[$i] & 0xff;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $byte = $bytes[$i] & 0xff;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -660,6 +685,7 @@ final class Encoder
     private static function appendKanjiBytes(string $content, BitArray $bits) : void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $bytes = @iconv('utf-8', 'SHIFT-JIS', $content);
 
         if (false === $bytes) {
@@ -670,11 +696,15 @@ final class Encoder
 =======
         if (strlen($content) % 2 > 0) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        if (strlen($content) % 2 > 0) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // We just do a simple length check here. The for loop will check
             // individual characters.
             throw new WriterException('Content does not seem to be encoded in SHIFT-JIS');
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $length = strlen($bytes);
 
@@ -682,11 +712,16 @@ final class Encoder
             $byte1 = ord($bytes[$i]) & 0xff;
             $byte2 = ord($bytes[$i + 1]) & 0xff;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $length = strlen($content);
 
         for ($i = 0; $i < $length; $i += 2) {
             $byte1 = ord($content[$i]) & 0xff;
             $byte2 = ord($content[$i + 1]) & 0xff;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $code = ($byte1 << 8) | $byte2;
 

@@ -16,6 +16,10 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Helper\Table;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Symfony\Component\Console\Helper\TableHelper;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\Console\Helper\TableHelper;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -35,7 +39,11 @@ abstract class Command extends BaseCommand
      * @api
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setApplication(?Application $application = null): void
+=======
+    public function setApplication(Application $application = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setApplication(Application $application = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -45,7 +53,11 @@ abstract class Command extends BaseCommand
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         parent::setApplication($application);
+=======
+        return parent::setApplication($application);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return parent::setApplication($application);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -243,11 +255,14 @@ abstract class Command extends BaseCommand
      * Get a Table instance.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return Table
      */
     protected function getTable(OutputInterface $output)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Falls back to legacy TableHelper.
      *
      * @return Table|TableHelper
@@ -258,6 +273,9 @@ abstract class Command extends BaseCommand
             return $this->getTableHelper();
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $style = new TableStyle();
 
@@ -279,7 +297,10 @@ abstract class Command extends BaseCommand
             ->setStyle($style);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Legacy fallback for getTable.
@@ -294,5 +315,8 @@ abstract class Command extends BaseCommand
             ->setHorizontalBorderChar('')
             ->setCrossingChar('');
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

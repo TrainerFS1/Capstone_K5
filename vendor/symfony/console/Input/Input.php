@@ -29,7 +29,10 @@ abstract class Input implements InputInterface, StreamableInputInterface
 {
     protected $definition;
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var resource */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $stream;
@@ -38,7 +41,11 @@ abstract class Input implements InputInterface, StreamableInputInterface
     protected $interactive = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?InputDefinition $definition = null)
+=======
+    public function __construct(InputDefinition $definition = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(InputDefinition $definition = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -52,9 +59,12 @@ abstract class Input implements InputInterface, StreamableInputInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function bind(InputDefinition $definition)
@@ -69,6 +79,7 @@ abstract class Input implements InputInterface, StreamableInputInterface
     /**
      * Processes command line arguments.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
@@ -82,13 +93,24 @@ abstract class Input implements InputInterface, StreamableInputInterface
     abstract protected function parse();
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     */
+    abstract protected function parse();
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function validate()
     {
         $definition = $this->definition;
         $givenArguments = $this->arguments;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $missingArguments = array_filter(array_keys($definition->getArguments()), fn ($argument) => !\array_key_exists($argument, $givenArguments) && $definition->getArgument($argument)->isRequired());
+=======
+        $missingArguments = array_filter(array_keys($definition->getArguments()), function ($argument) use ($definition, $givenArguments) {
+            return !\array_key_exists($argument, $givenArguments) && $definition->getArgument($argument)->isRequired();
+        });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $missingArguments = array_filter(array_keys($definition->getArguments()), function ($argument) use ($definition, $givenArguments) {
             return !\array_key_exists($argument, $givenArguments) && $definition->getArgument($argument)->isRequired();
@@ -106,9 +128,12 @@ abstract class Input implements InputInterface, StreamableInputInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setInteractive(bool $interactive)
@@ -131,9 +156,12 @@ abstract class Input implements InputInterface, StreamableInputInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setArgument(string $name, mixed $value)
@@ -173,9 +201,12 @@ abstract class Input implements InputInterface, StreamableInputInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setOption(string $name, mixed $value)
@@ -205,11 +236,14 @@ abstract class Input implements InputInterface, StreamableInputInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param resource $stream
      *
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setStream($stream)
@@ -218,9 +252,12 @@ abstract class Input implements InputInterface, StreamableInputInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return resource
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getStream()

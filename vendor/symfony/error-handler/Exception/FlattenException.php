@@ -15,10 +15,13 @@ use Symfony\Component\HttpFoundation\Exception\RequestExceptionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\VarDumper\Caster\Caster;
 use Symfony\Component\VarDumper\Cloner\Data;
 use Symfony\Component\VarDumper\Cloner\Stub;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -44,9 +47,14 @@ class FlattenException
     private int $line;
     private ?string $asString = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Data $dataRepresentation;
 
     public static function create(\Exception $exception, ?int $statusCode = null, array $headers = []): static
+=======
+
+    public static function create(\Exception $exception, int $statusCode = null, array $headers = []): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
     public static function create(\Exception $exception, int $statusCode = null, array $headers = []): static
@@ -56,7 +64,11 @@ class FlattenException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function createFromThrowable(\Throwable $exception, ?int $statusCode = null, array $headers = []): static
+=======
+    public static function createFromThrowable(\Throwable $exception, int $statusCode = null, array $headers = []): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function createFromThrowable(\Throwable $exception, int $statusCode = null, array $headers = []): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,6 +110,7 @@ class FlattenException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function createWithDataRepresentation(\Throwable $throwable, ?int $statusCode = null, array $headers = [], ?VarCloner $cloner = null): static
     {
         $e = static::createFromThrowable($throwable, $statusCode, $headers);
@@ -127,6 +140,8 @@ class FlattenException
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function toArray(): array
     {
         $exceptions = [];
@@ -136,7 +151,10 @@ class FlattenException
                 'class' => $exception->getClass(),
                 'trace' => $exception->getTrace(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'data' => $exception->getDataRepresentation(),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ];
@@ -247,7 +265,13 @@ class FlattenException
     {
         if (str_contains($message, "@anonymous\0")) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message = preg_replace_callback('/[a-zA-Z_\x7f-\xff][\\\\a-zA-Z0-9_\x7f-\xff]*+@anonymous\x00.*?\.php(?:0x?|:[0-9]++\$)[0-9a-fA-F]++/', fn ($m) => class_exists($m[0], false) ? (get_parent_class($m[0]) ?: key(class_implements($m[0])) ?: 'class').'@anonymous' : $m[0], $message);
+=======
+            $message = preg_replace_callback('/[a-zA-Z_\x7f-\xff][\\\\a-zA-Z0-9_\x7f-\xff]*+@anonymous\x00.*?\.php(?:0x?|:[0-9]++\$)[0-9a-fA-F]++/', function ($m) {
+                return class_exists($m[0], false) ? (get_parent_class($m[0]) ?: key(class_implements($m[0])) ?: 'class').'@anonymous' : $m[0];
+            }, $message);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message = preg_replace_callback('/[a-zA-Z_\x7f-\xff][\\\\a-zA-Z0-9_\x7f-\xff]*+@anonymous\x00.*?\.php(?:0x?|:[0-9]++\$)[0-9a-fA-F]++/', function ($m) {
                 return class_exists($m[0], false) ? (get_parent_class($m[0]) ?: key(class_implements($m[0])) ?: 'class').'@anonymous' : $m[0];
@@ -363,6 +387,7 @@ class FlattenException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getDataRepresentation(): ?Data
     {
         return $this->dataRepresentation ?? null;
@@ -378,6 +403,8 @@ class FlattenException
         return $this;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function flattenArgs(array $args, int $level = 0, int &$count = 0): array

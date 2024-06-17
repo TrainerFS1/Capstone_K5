@@ -7,7 +7,10 @@ use Illuminate\Console\QuestionHelper;
 use ReflectionClass;
 use Symfony\Component\Console\Helper\SymfonyQuestionHelper;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function Termwind\render;
@@ -112,6 +115,11 @@ abstract class Component
             ->getProperty('questionHelper');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $property->setAccessible(true);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $property->setAccessible(true);
 

@@ -20,8 +20,13 @@ final class RequiredOptionArgumentMissingException extends RuntimeException impl
             sprintf(
                 'Required argument for option "%s" is missing',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $option,
             ),
+=======
+                $option
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $option
             )

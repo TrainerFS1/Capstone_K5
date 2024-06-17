@@ -16,9 +16,14 @@ use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Log\DebugLoggerConfigurator;
 use Symfony\Component\VarDumper\Cloner\Data;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
+=======
+use Symfony\Component\HttpKernel\Debug\FileLinkFormatter;
+use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpKernel\Debug\FileLinkFormatter;
 use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
@@ -42,7 +47,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     private bool|\Closure $debug;
     private string $charset;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private FileLinkFormatter $fileLinkFormat;
+=======
+    private string|array|FileLinkFormatter|false $fileLinkFormat;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private string|array|FileLinkFormatter|false $fileLinkFormat;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,12 +66,15 @@ class HtmlErrorRenderer implements ErrorRendererInterface
      * @param string|callable $outputBuffer The output buffer as a string or a callable that should return it
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(bool|callable $debug = false, ?string $charset = null, string|FileLinkFormatter|null $fileLinkFormat = null, ?string $projectDir = null, string|callable $outputBuffer = '', ?LoggerInterface $logger = null)
     {
         $this->debug = \is_bool($debug) ? $debug : $debug(...);
         $this->charset = $charset ?: (\ini_get('default_charset') ?: 'UTF-8');
         $this->fileLinkFormat = $fileLinkFormat instanceof FileLinkFormatter ? $fileLinkFormat : new FileLinkFormatter($fileLinkFormat);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(bool|callable $debug = false, string $charset = null, string|FileLinkFormatter $fileLinkFormat = null, string $projectDir = null, string|callable $outputBuffer = '', LoggerInterface $logger = null)
     {
         $this->debug = \is_bool($debug) ? $debug : $debug(...);
@@ -71,6 +83,9 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         $this->fileLinkFormat = \is_string($fileLinkFormat)
             ? (ErrorRendererInterface::IDE_LINK_FORMATS[$fileLinkFormat] ?? $fileLinkFormat ?: false)
             : ($fileLinkFormat ?: \ini_get('xdebug.file_link_format') ?: get_cfg_var('xdebug.file_link_format') ?: false);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->projectDir = $projectDir;
         $this->outputBuffer = \is_string($outputBuffer) ? $outputBuffer : $outputBuffer(...);
@@ -86,7 +101,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $exception = FlattenException::createWithDataRepresentation($exception, null, $headers);
+=======
+        $exception = FlattenException::createFromThrowable($exception, null, $headers);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $exception = FlattenException::createFromThrowable($exception, null, $headers);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -165,7 +184,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             'statusText' => $statusText,
             'statusCode' => $statusCode,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'logger' => null !== $this->logger && class_exists(DebugLoggerConfigurator::class) ? DebugLoggerConfigurator::getDebugLogger($this->logger) : null,
+=======
+            'logger' => $this->logger instanceof DebugLoggerInterface ? $this->logger : null,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'logger' => $this->logger instanceof DebugLoggerInterface ? $this->logger : null,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -173,6 +196,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         ]);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     private function dumpValue(Data $value): string
     {
@@ -182,6 +206,8 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         return $dumper->dump($value, true);
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function formatArgs(array $args): string
@@ -199,8 +225,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             } elseif ('resource' === $item[0]) {
                 $formattedValue = '<em>resource</em>';
 <<<<<<< HEAD
+<<<<<<< HEAD
             } elseif (preg_match('/[^\x07-\x0D\x1B\x20-\xFF]/', $item[1])) {
                 $formattedValue = '<em>binary string</em>';
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } else {
@@ -214,7 +243,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function formatArgsAsText(array $args): string
+=======
+    private function formatArgsAsText(array $args)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function formatArgsAsText(array $args)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -247,7 +280,10 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function getFileLink(string $file, int $line): string|false
     {
         if ($fmt = $this->fileLinkFormat) {
@@ -257,6 +293,9 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         return false;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Formats a file path.
@@ -266,7 +305,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
      * @param string $text Use this text for the link rather than the file path
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function formatFile(string $file, int $line, ?string $text = null): string
+=======
+    private function formatFile(string $file, int $line, string $text = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function formatFile(string $file, int $line, string $text = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -286,15 +329,21 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $link = $this->fileLinkFormat->format($file, $line);
 
         return sprintf('<a href="%s" title="Click to open this file" class="file_link">%s</a>', $this->escape($link), $text);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (false !== $link = $this->getFileLink($file, $line)) {
             return sprintf('<a href="%s" title="Click to open this file" class="file_link">%s</a>', $this->escape($link), $text);
         }
 
         return $text;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -312,6 +361,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             // see https://bugs.php.net/25725
             $code = @highlight_file($file, true);
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (\PHP_VERSION_ID >= 80300) {
                 // remove main pre/code tags
                 $code = preg_replace('#^<pre.*?>\s*<code.*?>(.*)</code>\s*</pre>#s', '\\1', $code);
@@ -328,6 +378,8 @@ class HtmlErrorRenderer implements ErrorRendererInterface
                 $content = explode('<br />', $code);
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // remove main code/span tags
             $code = preg_replace('#^<code.*?>\s*<span.*?>(.*)</span>\s*</code>#s', '\\1', $code);
             // split multiline spans
@@ -335,6 +387,9 @@ class HtmlErrorRenderer implements ErrorRendererInterface
                 return "<span $m[1]>".str_replace('<br />', "</span><br /><span $m[1]>", $m[2]).'</span>';
             }, $code);
             $content = explode('<br />', $code);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $lines = [];
@@ -353,7 +408,11 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function fixCodeMarkup(string $line): string
+=======
+    private function fixCodeMarkup(string $line)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function fixCodeMarkup(string $line)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -376,6 +435,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function formatFileFromText(string $text): string
     {
         return preg_replace_callback('/in ("|&quot;)?(.+?)\1(?: +(?:on|at))? +line (\d+)/s', fn ($match) => 'in '.$this->formatFile($match[2], $match[3]), $text) ?? $text;
@@ -383,6 +443,8 @@ class HtmlErrorRenderer implements ErrorRendererInterface
 
     private function formatLogMessage(string $message, array $context): string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function formatFileFromText(string $text)
     {
         return preg_replace_callback('/in ("|&quot;)?(.+?)\1(?: +(?:on|at))? +line (\d+)/s', function ($match) {
@@ -391,6 +453,9 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     }
 
     private function formatLogMessage(string $message, array $context)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($context && str_contains($message, '{')) {

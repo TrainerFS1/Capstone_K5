@@ -11,12 +11,15 @@
                         <h1 class="m-0">Daftar Pengeluaran</h1>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ '/' }}">Home</a></li>
                             <li class="breadcrumb-item active">Pengeluaran</li>
                         </ol>
                     </div>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 </div>
@@ -40,8 +43,12 @@
                                             <th>No</th>
                                             <th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 <a
                                                     href="{{ request()->fullUrlWithQuery(['field' => 'date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+=======
+                                                <a href="{{ request()->fullUrlWithQuery(['field' => 'date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                                 <a href="{{ request()->fullUrlWithQuery(['field' => 'date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,8 +67,12 @@
                                             <th>Kategori</th>
                                             <th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 <a
                                                     href="{{ request()->fullUrlWithQuery(['field' => 'amount', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+=======
+                                                <a href="{{ request()->fullUrlWithQuery(['field' => 'amount', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                                 <a href="{{ request()->fullUrlWithQuery(['field' => 'amount', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -85,8 +96,12 @@
                                         @foreach ($expenses as $expense)
                                             <tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 <td>{{ $loop->iteration + ($expenses->currentPage() - 1) * $expenses->perPage() }}
                                                 </td>
+=======
+                                                <td>{{ $loop->iteration + ($expenses->currentPage() - 1) * $expenses->perPage() }}</td>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                                 <td>{{ $loop->iteration + ($expenses->currentPage() - 1) * $expenses->perPage() }}</td>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -96,6 +111,7 @@
                                                 <td>{{ $expense->description }}</td>
                                                 <td>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                     <a href="{{ route('edit.expense', $expense->id) }}"
                                                         class="btn btn-warning btn-sm">Edit</a>
                                                     <button type="button" class="btn btn-danger btn-sm"
@@ -103,6 +119,11 @@
                                                     <form id="delete-form-{{ $expense->id }}"
                                                         action="{{ route('delete.expense', $expense->id) }}" method="POST"
                                                         style="display: none;">
+=======
+                                                    <a href="{{ route('edit.expense', $expense->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                                    <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ $expense->id }})">Delete</button>
+                                                    <form id="delete-form-{{ $expense->id }}" action="{{ route('delete.expense', $expense->id) }}" method="POST" style="display: none;">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                                     <a href="{{ route('edit.expense', $expense->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                                     <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ $expense->id }})">Delete</button>

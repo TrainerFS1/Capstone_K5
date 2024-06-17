@@ -21,7 +21,11 @@ use Symfony\Component\Process\Process;
 final class ProcessSignaledException extends RuntimeException
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Process $process;
+=======
+    private $process;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $process;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

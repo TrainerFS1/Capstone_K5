@@ -16,9 +16,12 @@ use League\Flysystem\Visibility;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\search;
 use function Laravel\Prompts\select;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'vendor:publish')]
@@ -119,6 +122,7 @@ class VendorPublishCommand extends Command
     protected function promptForProviderOrTag()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $choices = $this->publishableChoices();
 
         $choice = windows_os()
@@ -137,10 +141,15 @@ class VendorPublishCommand extends Command
                 scroll: 15,
             );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $choice = $this->components->choice(
             "Which provider or tag's files would you like to publish?",
             $choices = $this->publishableChoices()
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($choice == $choices[0] || is_null($choice)) {
@@ -159,7 +168,11 @@ class VendorPublishCommand extends Command
     {
         return array_merge(
 <<<<<<< HEAD
+<<<<<<< HEAD
             ['All providers and tags'],
+=======
+            ['<comment>Publish files from all providers and tags listed below</comment>'],
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ['<comment>Publish files from all providers and tags listed below</comment>'],
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,6 +207,11 @@ class VendorPublishCommand extends Command
     protected function publishTag($tag)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $published = false;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $published = false;
 

@@ -31,7 +31,10 @@ class PseudoClassExtension extends AbstractExtension
         return [
             'root' => $this->translateRoot(...),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'scope' => $this->translateScopePseudo(...),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'first-child' => $this->translateFirstChild(...),
@@ -50,11 +53,14 @@ class PseudoClassExtension extends AbstractExtension
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function translateScopePseudo(XPathExpr $xpath): XPathExpr
     {
         return $xpath->addCondition('1');
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function translateFirstChild(XPathExpr $xpath): XPathExpr

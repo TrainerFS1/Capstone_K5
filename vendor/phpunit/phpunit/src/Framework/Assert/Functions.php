@@ -112,7 +112,11 @@ if (!function_exists('PHPUnit\Framework\assertIsList')) {
      * @see Assert::assertIsList
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     function assertIsList(mixed $array, string $message = ''): void
+=======
+    function assertIsList(array $array, string $message = ''): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     function assertIsList(array $array, string $message = ''): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1131,6 +1135,7 @@ if (!function_exists('PHPUnit\Framework\assertNan')) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (!function_exists('PHPUnit\Framework\assertObjectHasProperty')) {
     /**
      * Asserts that an object has a specified property.
@@ -1163,6 +1168,8 @@ if (!function_exists('PHPUnit\Framework\assertObjectNotHasProperty')) {
     }
 }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!function_exists('PHPUnit\Framework\assertSame')) {
@@ -1214,7 +1221,10 @@ if (!function_exists('PHPUnit\Framework\assertInstanceOf')) {
      * @throws Exception
      * @throws ExpectationFailedException
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws UnknownClassOrInterfaceException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -1814,6 +1824,7 @@ if (!function_exists('PHPUnit\Framework\assertStringEqualsStringIgnoringLineEndi
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (!function_exists('PHPUnit\Framework\assertFileMatchesFormat')) {
     /**
      * Asserts that a string matches a given format string.
@@ -1848,6 +1859,8 @@ if (!function_exists('PHPUnit\Framework\assertFileMatchesFormatFile')) {
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!function_exists('PHPUnit\Framework\assertStringMatchesFormat')) {
     /**
      * Asserts that a string matches a given format string.
@@ -1871,8 +1884,11 @@ if (!function_exists('PHPUnit\Framework\assertStringNotMatchesFormat')) {
      * @throws ExpectationFailedException
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5472
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -1908,8 +1924,11 @@ if (!function_exists('PHPUnit\Framework\assertStringNotMatchesFormatFile')) {
      * @throws ExpectationFailedException
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5472
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -2184,7 +2203,11 @@ if (!function_exists('PHPUnit\Framework\assertJson')) {
      * @see Assert::assertJson
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     function assertJson(string $actual, string $message = ''): void
+=======
+    function assertJson(string $actualJson, string $message = ''): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     function assertJson(string $actualJson, string $message = ''): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2291,6 +2314,12 @@ if (!function_exists('PHPUnit\Framework\assertJsonFileNotEqualsJsonFile')) {
 
 if (!function_exists('PHPUnit\Framework\logicalAnd')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws Exception
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws Exception
@@ -2338,7 +2367,10 @@ if (!function_exists('PHPUnit\Framework\isTrue')) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!function_exists('PHPUnit\Framework\callback')) {
     function callback(callable $callback): Callback
     {
@@ -2346,6 +2378,9 @@ if (!function_exists('PHPUnit\Framework\callback')) {
     }
 }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!function_exists('PHPUnit\Framework\isFalse')) {
     function isFalse(): IsFalse
@@ -2405,6 +2440,12 @@ if (!function_exists('PHPUnit\Framework\containsIdentical')) {
 
 if (!function_exists('PHPUnit\Framework\containsOnly')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws Exception
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws Exception
@@ -2418,6 +2459,12 @@ if (!function_exists('PHPUnit\Framework\containsOnly')) {
 
 if (!function_exists('PHPUnit\Framework\containsOnlyInstancesOf')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws Exception
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws Exception
@@ -2536,6 +2583,12 @@ if (!function_exists('PHPUnit\Framework\isInstanceOf')) {
 
 if (!function_exists('PHPUnit\Framework\isType')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws Exception
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws Exception
@@ -2577,6 +2630,12 @@ if (!function_exists('PHPUnit\Framework\matches')) {
 
 if (!function_exists('PHPUnit\Framework\stringStartsWith')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws InvalidArgumentException
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws InvalidArgumentException
@@ -2590,6 +2649,12 @@ if (!function_exists('PHPUnit\Framework\stringStartsWith')) {
 
 if (!function_exists('PHPUnit\Framework\stringContains')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws InvalidArgumentException
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws InvalidArgumentException
@@ -2603,6 +2668,12 @@ if (!function_exists('PHPUnit\Framework\stringContains')) {
 
 if (!function_exists('PHPUnit\Framework\stringEndsWith')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws InvalidArgumentException
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws InvalidArgumentException
@@ -2636,6 +2707,7 @@ if (!function_exists('PHPUnit\Framework\objectEquals')) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (!function_exists('PHPUnit\Framework\callback')) {
     /**
      * @psalm-template CallbackInput of mixed
@@ -2650,6 +2722,8 @@ if (!function_exists('PHPUnit\Framework\callback')) {
     }
 }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!function_exists('PHPUnit\Framework\any')) {
@@ -2682,7 +2756,11 @@ if (!function_exists('PHPUnit\Framework\atLeast')) {
     {
         return new InvokedAtLeastCountMatcher(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $requiredInvocations,
+=======
+            $requiredInvocations
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $requiredInvocations
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

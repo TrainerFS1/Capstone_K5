@@ -18,10 +18,15 @@ use Illuminate\Process\Factory;
  * @method static \Illuminate\Process\PendingProcess options(array $options)
  * @method static \Illuminate\Contracts\Process\ProcessResult run(array|string|null $command = null, callable|null $output = null)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Process\InvokedProcess start(array|string|null $command = null, callable|null $output = null)
  * @method static \Illuminate\Process\PendingProcess withFakeHandlers(array $fakeHandlers)
  * @method static \Illuminate\Process\PendingProcess|mixed when(\Closure|mixed|null $value = null, callable|null $callback = null, callable|null $default = null)
  * @method static \Illuminate\Process\PendingProcess|mixed unless(\Closure|mixed|null $value = null, callable|null $callback = null, callable|null $default = null)
+=======
+ * @method static \Illuminate\Process\InvokedProcess start(array|string|null $command = null, callable $output = null)
+ * @method static \Illuminate\Process\PendingProcess withFakeHandlers(array $fakeHandlers)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static \Illuminate\Process\InvokedProcess start(array|string|null $command = null, callable $output = null)
  * @method static \Illuminate\Process\PendingProcess withFakeHandlers(array $fakeHandlers)
@@ -41,7 +46,10 @@ use Illuminate\Process\Factory;
  * @method static \Illuminate\Process\Factory assertNothingRan()
  * @method static \Illuminate\Process\Pool pool(callable $callback)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Contracts\Process\ProcessResult pipe(callable|array $callback, callable|null $output = null)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Process\ProcessPoolResults concurrently(callable $callback, callable|null $output = null)

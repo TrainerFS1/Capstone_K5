@@ -32,6 +32,7 @@ use SebastianBergmann\CodeCoverage\Filter;
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @see https://xdebug.org/docs/code_coverage#xdebug_get_code_coverage
  *
@@ -62,6 +63,8 @@ use SebastianBergmann\CodeCoverage\Filter;
  * @psalm-type XdebugCodeCoverageWithPathCoverageType = array<string, XdebugPathAndBranchesCoverageType>
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class XdebugDriver extends Driver
 {
@@ -79,7 +82,11 @@ final class XdebugDriver extends Driver
                 XDEBUG_FILTER_CODE_COVERAGE,
                 XDEBUG_PATH_INCLUDE,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $filter->files(),
+=======
+                $filter->files()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $filter->files()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -120,11 +127,17 @@ final class XdebugDriver extends Driver
 
         if ($this->collectsBranchAndPathCoverage()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             /* @var XdebugCodeCoverageWithPathCoverageType $data */
             return RawCodeCoverageData::fromXdebugWithPathCoverage($data);
         }
 
         /* @var XdebugCodeCoverageWithoutPathCoverageType $data */
+=======
+            return RawCodeCoverageData::fromXdebugWithPathCoverage($data);
+        }
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return RawCodeCoverageData::fromXdebugWithPathCoverage($data);
         }

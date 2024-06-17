@@ -213,11 +213,14 @@ class Response
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Tracks headers already sent in informational responses.
      */
     private array $sentHeaders;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $status The HTTP status code (200 "OK" by default)
@@ -290,7 +293,11 @@ class Response
             if (!$headers->has('Content-Type')) {
                 $headers->set('Content-Type', 'text/html; charset='.$charset);
 <<<<<<< HEAD
+<<<<<<< HEAD
             } elseif (0 === stripos($headers->get('Content-Type') ?? '', 'text/') && false === stripos($headers->get('Content-Type') ?? '', 'charset')) {
+=======
+            } elseif (0 === stripos($headers->get('Content-Type'), 'text/') && false === stripos($headers->get('Content-Type'), 'charset')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } elseif (0 === stripos($headers->get('Content-Type'), 'text/') && false === stripos($headers->get('Content-Type'), 'charset')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -339,11 +346,17 @@ class Response
      * Sends HTTP headers.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param positive-int|null $statusCode The status code to use, override the statusCode property if set and not null
      *
      * @return $this
      */
     public function sendHeaders(/* int $statusCode = null */): static
+=======
+     * @return $this
+     */
+    public function sendHeaders(): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return $this
      */
@@ -355,6 +368,7 @@ class Response
             return $this;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $statusCode = \func_num_args() > 0 ? func_get_arg(0) : null;
         $informationalResponse = $statusCode >= 100 && $statusCode < 200;
@@ -392,12 +406,17 @@ class Response
                 $this->sentHeaders[$name] = $values;
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // headers
         foreach ($this->headers->allPreserveCaseWithoutCookies() as $name => $values) {
             $replace = 0 === strcasecmp($name, 'Content-Type');
             foreach ($values as $value) {
                 header($name.': '.$value, $replace, $this->statusCode);
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -406,6 +425,7 @@ class Response
             header('Set-Cookie: '.$cookie, false, $this->statusCode);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($informationalResponse) {
             headers_send($statusCode);
@@ -417,6 +437,10 @@ class Response
 
         // status
         header(sprintf('HTTP/%s %s %s', $this->version, $statusCode, $this->statusText), true, $statusCode);
+=======
+        // status
+        header(sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText), true, $this->statusCode);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         // status
         header(sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText), true, $this->statusCode);
@@ -441,6 +465,7 @@ class Response
      * Sends HTTP headers and content.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param bool $flush Whether output buffers should be flushed
      *
      * @return $this
@@ -451,10 +476,16 @@ class Response
      */
     public function send(): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * @return $this
+     */
+    public function send(): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->sendHeaders();
         $this->sendContent();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $flush = 1 <= \func_num_args() ? func_get_arg(0) : true;
         if (!$flush) {
@@ -463,12 +494,18 @@ class Response
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (\function_exists('fastcgi_finish_request')) {
             fastcgi_finish_request();
         } elseif (\function_exists('litespeed_finish_request')) {
             litespeed_finish_request();
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif (!\in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {
+=======
+        } elseif (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -536,7 +573,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setStatusCode(int $code, ?string $text = null): static
+=======
+    public function setStatusCode(int $code, string $text = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setStatusCode(int $code, string $text = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -553,13 +594,19 @@ class Response
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (false === $text) {
             $this->statusText = '';
 
             return $this;
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->statusText = $text;
 
@@ -740,7 +787,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getDate(): ?\DateTimeImmutable
+=======
+    public function getDate(): ?\DateTimeInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getDate(): ?\DateTimeInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -758,12 +809,18 @@ class Response
     public function setDate(\DateTimeInterface $date): static
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $date = \DateTimeImmutable::createFromInterface($date);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($date instanceof \DateTime) {
             $date = \DateTimeImmutable::createFromMutable($date);
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $date = $date->setTimezone(new \DateTimeZone('UTC'));
         $this->headers->set('Date', $date->format('D, d M Y H:i:s').' GMT');
@@ -806,7 +863,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getExpires(): ?\DateTimeImmutable
+=======
+    public function getExpires(): ?\DateTimeInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getExpires(): ?\DateTimeInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -816,7 +877,11 @@ class Response
         } catch (\RuntimeException) {
             // according to RFC 2616 invalid date formats (e.g. "0" and "-1") must be treated as in the past
 <<<<<<< HEAD
+<<<<<<< HEAD
             return \DateTimeImmutable::createFromFormat('U', time() - 172800);
+=======
+            return \DateTime::createFromFormat('U', time() - 172800);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return \DateTime::createFromFormat('U', time() - 172800);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -833,7 +898,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setExpires(?\DateTimeInterface $date = null): static
+=======
+    public function setExpires(\DateTimeInterface $date = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setExpires(\DateTimeInterface $date = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -848,12 +917,18 @@ class Response
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $date = \DateTimeImmutable::createFromInterface($date);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($date instanceof \DateTime) {
             $date = \DateTimeImmutable::createFromMutable($date);
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $date = $date->setTimezone(new \DateTimeZone('UTC'));
         $this->headers->set('Expires', $date->format('D, d M Y H:i:s').' GMT');
@@ -881,10 +956,15 @@ class Response
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null !== $expires = $this->getExpires()) {
             $maxAge = (int) $expires->format('U') - (int) $this->getDate()->format('U');
 
             return max($maxAge, 0);
+=======
+        if (null !== $this->getExpires()) {
+            return (int) $this->getExpires()->format('U') - (int) $this->getDate()->format('U');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (null !== $this->getExpires()) {
             return (int) $this->getExpires()->format('U') - (int) $this->getDate()->format('U');
@@ -965,7 +1045,11 @@ class Response
      * It returns null when no freshness information is present in the response.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * When the response's TTL is 0, the response may not be served from cache without first
+=======
+     * When the responses TTL is <= 0, the response may not be served from cache without first
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * When the responses TTL is <= 0, the response may not be served from cache without first
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -978,7 +1062,11 @@ class Response
         $maxAge = $this->getMaxAge();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return null !== $maxAge ? max($maxAge - $this->getAge(), 0) : null;
+=======
+        return null !== $maxAge ? $maxAge - $this->getAge() : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return null !== $maxAge ? $maxAge - $this->getAge() : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1024,7 +1112,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getLastModified(): ?\DateTimeImmutable
+=======
+    public function getLastModified(): ?\DateTimeInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getLastModified(): ?\DateTimeInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1042,7 +1134,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setLastModified(?\DateTimeInterface $date = null): static
+=======
+    public function setLastModified(\DateTimeInterface $date = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setLastModified(\DateTimeInterface $date = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1057,12 +1153,18 @@ class Response
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $date = \DateTimeImmutable::createFromInterface($date);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($date instanceof \DateTime) {
             $date = \DateTimeImmutable::createFromMutable($date);
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $date = $date->setTimezone(new \DateTimeZone('UTC'));
         $this->headers->set('Last-Modified', $date->format('D, d M Y H:i:s').' GMT');
@@ -1091,7 +1193,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setEtag(?string $etag = null, bool $weak = false): static
+=======
+    public function setEtag(string $etag = null, bool $weak = false): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setEtag(string $etag = null, bool $weak = false): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1398,7 +1504,11 @@ class Response
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isRedirect(?string $location = null): bool
+=======
+    public function isRedirect(string $location = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isRedirect(string $location = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

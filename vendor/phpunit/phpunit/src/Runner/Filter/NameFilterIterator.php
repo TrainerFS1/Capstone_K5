@@ -33,9 +33,12 @@ final class NameFilterIterator extends RecursiveFilterIterator
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param RecursiveIterator<int, Test> $iterator
      * @psalm-param non-empty-string $filter
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws Exception
@@ -87,7 +90,11 @@ final class NameFilterIterator extends RecursiveFilterIterator
                     $filter = sprintf(
                         '%s.*with data set #(\d+)$',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $matches[1],
+=======
+                        $matches[1]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $matches[1]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -100,7 +107,11 @@ final class NameFilterIterator extends RecursiveFilterIterator
                         '%s.*with data set #%s$',
                         $matches[1],
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $matches[2],
+=======
+                        $matches[2]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $matches[2]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -114,7 +125,11 @@ final class NameFilterIterator extends RecursiveFilterIterator
                     '%s.*with data set "%s"$',
                     $matches[1],
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $matches[2],
+=======
+                    $matches[2]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $matches[2]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,8 +144,13 @@ final class NameFilterIterator extends RecursiveFilterIterator
                     '/',
                     '\\/',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $filter,
                 ),
+=======
+                    $filter
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $filter
                 )

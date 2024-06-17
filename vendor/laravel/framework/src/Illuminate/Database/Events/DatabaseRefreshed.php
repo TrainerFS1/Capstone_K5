@@ -7,6 +7,7 @@ use Illuminate\Contracts\Database\Events\MigrationEvent as MigrationEventContrac
 class DatabaseRefreshed implements MigrationEventContract
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Create a new event instance.
      *
@@ -20,6 +21,9 @@ class DatabaseRefreshed implements MigrationEventContract
     ) {
         //
     }
+=======
+    //
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     //
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

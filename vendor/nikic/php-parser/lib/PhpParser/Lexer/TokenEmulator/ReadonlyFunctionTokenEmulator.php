@@ -3,7 +3,11 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\PhpVersion;
+=======
+use PhpParser\Lexer\Emulative;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PhpParser\Lexer\Emulative;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -25,8 +29,13 @@ class ReadonlyFunctionTokenEmulator extends KeywordEmulator {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getPhpVersion(): PhpVersion {
         return PhpVersion::fromComponents(8, 2);
+=======
+    public function getPhpVersion(): string {
+        return Emulative::PHP_8_2;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getPhpVersion(): string {
         return Emulative::PHP_8_2;

@@ -78,10 +78,13 @@ class RedisStore extends TaggableStore implements LockProvider
     public function many(array $keys)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (count($keys) === 0) {
             return [];
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $results = [];
@@ -122,6 +125,7 @@ class RedisStore extends TaggableStore implements LockProvider
     public function putMany(array $values, $seconds)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $serializedValues = [];
 
         foreach ($values as $key => $value) {
@@ -130,15 +134,22 @@ class RedisStore extends TaggableStore implements LockProvider
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->connection()->multi();
 
         $manyResult = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($serializedValues as $key => $value) {
             $result = (bool) $this->connection()->setex(
                 $key, (int) max(1, $seconds), $value
             );
+=======
+        foreach ($values as $key => $value) {
+            $result = $this->put($key, $value, $seconds);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         foreach ($values as $key => $value) {
             $result = $this->put($key, $value, $seconds);
@@ -265,7 +276,11 @@ class RedisStore extends TaggableStore implements LockProvider
      * Remove all expired tag set entries.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
+=======
+     * @return bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -333,7 +348,11 @@ class RedisStore extends TaggableStore implements LockProvider
                 }
             } while (((string) $cursor) !== $defaultCursorValue);
 <<<<<<< HEAD
+<<<<<<< HEAD
         })->map(fn (string $tagKey) => Str::match('/^'.preg_quote($prefix, '/').'tag:(.*):entries$/', $tagKey));
+=======
+        })->map(fn (string $tagKey) => Str::match('/^'.preg_quote($prefix).'tag:(.*):entries$/', $tagKey));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         })->map(fn (string $tagKey) => Str::match('/^'.preg_quote($prefix).'tag:(.*):entries$/', $tagKey));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

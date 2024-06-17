@@ -20,7 +20,11 @@ final class TestTriggeredPhpDeprecationSubscriber extends Subscriber implements 
     public function notify(PhpDeprecationTriggered $event): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->printer()->testTriggeredPhpDeprecation($event);
+=======
+        $this->printer()->testTriggeredDeprecation();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->printer()->testTriggeredDeprecation();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

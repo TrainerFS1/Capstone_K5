@@ -5,6 +5,7 @@ namespace Illuminate\Validation;
 use Illuminate\Contracts\Validation\Rule as RuleContract;
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Translation\CreatesPotentiallyTranslatedStrings;
 
 class ClosureValidationRule implements RuleContract, ValidatorAwareRule
@@ -12,10 +13,15 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
     use CreatesPotentiallyTranslatedStrings;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Translation\PotentiallyTranslatedString;
 
 class ClosureValidationRule implements RuleContract, ValidatorAwareRule
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The callback that validates the attribute.
@@ -72,7 +78,11 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
 
             return $this->pendingPotentiallyTranslatedString($attribute, $message);
 <<<<<<< HEAD
+<<<<<<< HEAD
         }, $this->validator);
+=======
+        });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +113,10 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
         return $this;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Create a pending potentially translated string.
@@ -152,5 +165,8 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
             }
         };
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

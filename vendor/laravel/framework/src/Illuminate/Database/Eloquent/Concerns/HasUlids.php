@@ -9,6 +9,7 @@ trait HasUlids
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Initialize the trait.
      *
      * @return void
@@ -27,6 +28,8 @@ trait HasUlids
     {
         return [$this->getKeyName()];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Boot the trait.
      *
      * @return void
@@ -40,6 +43,9 @@ trait HasUlids
                 }
             }
         });
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -78,7 +84,10 @@ trait HasUlids
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the columns that should receive a unique identifier.
      *
      * @return array
@@ -89,6 +98,9 @@ trait HasUlids
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the auto-incrementing key type.
      *

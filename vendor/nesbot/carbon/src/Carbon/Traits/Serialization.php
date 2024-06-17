@@ -147,7 +147,11 @@ trait Serialization
     {
         // @codeCoverageIgnoreStart
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($this->timezone_type, $this->timezone, $this->date)) {
+=======
+        if (isset($this->timezone_type)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (isset($this->timezone_type)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

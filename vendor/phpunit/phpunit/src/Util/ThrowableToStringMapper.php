@@ -14,7 +14,10 @@ use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\PhptAssertionFailedError;
 use PHPUnit\Framework\SelfDescribing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Runner\ErrorException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
@@ -27,10 +30,13 @@ final class ThrowableToStringMapper
     public static function map(Throwable $t): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($t instanceof ErrorException) {
             return $t->getMessage();
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($t instanceof SelfDescribing) {

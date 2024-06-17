@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use function array_pop;
 use function explode;
@@ -47,16 +54,22 @@ class UndefinedTargetClass implements TargetClassInterface
      * @param class-string $name
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class UndefinedTargetClass implements TargetClassInterface
 {
     private $name;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct($name)
     {
         $this->name = $name;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return class-string
@@ -72,11 +85,14 @@ class UndefinedTargetClass implements TargetClassInterface
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function factory($name)
     {
         return new self($name);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return list<class-string>
@@ -107,11 +123,14 @@ class UndefinedTargetClass implements TargetClassInterface
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getName()
     {
         return $this->name;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return string
@@ -162,15 +181,20 @@ class UndefinedTargetClass implements TargetClassInterface
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isAbstract()
     {
         return false;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return bool
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isFinal()
@@ -178,7 +202,10 @@ class UndefinedTargetClass implements TargetClassInterface
         return false;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function getMethods()
     {
@@ -222,5 +249,8 @@ class UndefinedTargetClass implements TargetClassInterface
     {
         return $this->name;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

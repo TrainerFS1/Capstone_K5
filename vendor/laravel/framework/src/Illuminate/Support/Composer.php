@@ -3,10 +3,14 @@
 namespace Illuminate\Support;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Closure;
 use Illuminate\Filesystem\Filesystem;
 use RuntimeException;
 use Symfony\Component\Console\Output\OutputInterface;
+=======
+use Illuminate\Filesystem\Filesystem;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Filesystem\Filesystem;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,6 +47,7 @@ class Composer
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Determine if the given Composer package is installed.
      *
@@ -153,6 +158,8 @@ class Composer
 
         $command = array_merge($this->findComposer($composerBinary), ['dump-autoload'], $extra);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Regenerate the Composer autoloader files.
      *
      * @param  string|array  $extra
@@ -163,6 +170,9 @@ class Composer
         $extra = $extra ? (array) $extra : [];
 
         $command = array_merge($this->findComposer(), ['dump-autoload'], $extra);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this->getProcess($command)->run();
@@ -171,6 +181,7 @@ class Composer
     /**
      * Regenerate the optimized Composer autoloader files.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param  string|null  $composerBinary
      * @return int
@@ -192,6 +203,8 @@ class Composer
             return [$this->phpBinary(), $composerBinary];
         } elseif ($this->files->exists($this->workingPath.'/composer.phar')) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return int
      */
     public function dumpOptimized()
@@ -207,6 +220,9 @@ class Composer
     public function findComposer()
     {
         if ($this->files->exists($this->workingPath.'/composer.phar')) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return [$this->phpBinary(), 'composer.phar'];
         }
@@ -215,6 +231,7 @@ class Composer
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Get the path to the "composer.json" file.
      *
@@ -236,6 +253,8 @@ class Composer
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the PHP binary.
      *
      * @return string
@@ -250,6 +269,7 @@ class Composer
      *
      * @param  array  $command
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array  $env
      * @return \Symfony\Component\Process\Process
      */
@@ -257,11 +277,16 @@ class Composer
     {
         return (new Process($command, $this->workingPath, $env))->setTimeout(null);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Symfony\Component\Process\Process
      */
     protected function getProcess(array $command)
     {
         return (new Process($command, $this->workingPath))->setTimeout(null);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

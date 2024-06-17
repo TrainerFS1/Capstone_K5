@@ -3,7 +3,11 @@
     <xs:annotation>
         <xs:documentation source="https://phpunit.de/documentation.html">
 <<<<<<< HEAD
+<<<<<<< HEAD
             This Schema file defines the rules by which the XML configuration file of PHPUnit 10.5 may be structured.
+=======
+            This Schema file defines the rules by which the XML configuration file of PHPUnit 10.0 may be structured.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             This Schema file defines the rules by which the XML configuration file of PHPUnit 10.0 may be structured.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -16,22 +20,29 @@
         </xs:annotation>
     </xs:element>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <xs:complexType name="sourceType">
         <xs:all>
             <xs:element name="include" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:group ref="sourcePathGroup"/>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <xs:complexType name="coverageType">
         <xs:all>
             <xs:element name="include" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:group ref="pathGroup"/>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 </xs:complexType>
             </xs:element>
             <xs:element name="exclude" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <xs:group ref="sourcePathGroup"/>
                 </xs:complexType>
@@ -72,6 +83,11 @@
                 </xs:complexType>
             </xs:element>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                    <xs:group ref="pathGroup"/>
+                </xs:complexType>
+            </xs:element>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             <xs:element name="report" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:group ref="coverageReportGroup"/>
@@ -106,7 +122,11 @@
     <xs:complexType name="extensionsType">
         <xs:sequence>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <xs:element name="bootstrap" type="bootstrapType" minOccurs="0" maxOccurs="unbounded"/>
+=======
+            <xs:element name="bootstrap" type="bootstrapType" maxOccurs="unbounded"/>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             <xs:element name="bootstrap" type="bootstrapType" maxOccurs="unbounded"/>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -135,7 +155,10 @@
         </xs:union>
     </xs:simpleType>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <xs:group name="pathGroup">
         <xs:sequence>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -153,6 +176,9 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <xs:simpleType name="executionOrderType">
         <xs:restriction base="xs:string">
@@ -177,7 +203,10 @@
         </xs:restriction>
     </xs:simpleType>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <xs:complexType name="fileFilterType">
         <xs:simpleContent>
             <xs:extension base="xs:anyURI">
@@ -189,6 +218,9 @@
         <xs:attribute name="phpVersion" type="xs:string" default="5.3.0"/>
         <xs:attribute name="phpVersionOperator" type="xs:string" default="&gt;="/>
     </xs:attributeGroup>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <xs:complexType name="phpType">
         <xs:sequence>
@@ -230,6 +262,7 @@
         <xs:attribute name="colors" type="xs:boolean" default="false"/>
         <xs:attribute name="columns" type="columnsType" default="80"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <xs:attribute name="controlGarbageCollector" type="xs:boolean" default="false"/>
         <xs:attribute name="numberOfTestsBeforeGarbageCollection" type="xs:integer" default="100"/>
         <xs:attribute name="requireCoverageMetadata" type="xs:boolean" default="false"/>
@@ -251,6 +284,8 @@
         <xs:attribute name="stopOnSkipped" type="xs:boolean" default="false"/>
         <xs:attribute name="stopOnWarning" type="xs:boolean" default="false"/>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         <xs:attribute name="requireCoverageMetadata" type="xs:boolean" default="false"/>
         <xs:attribute name="processIsolation" type="xs:boolean" default="false"/>
         <xs:attribute name="stopOnDefect" type="xs:boolean" default="false"/>
@@ -265,6 +300,9 @@
         <xs:attribute name="failOnRisky" type="xs:boolean" default="false"/>
         <xs:attribute name="failOnSkipped" type="xs:boolean" default="false"/>
         <xs:attribute name="failOnWarning" type="xs:boolean" default="false"/>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         <xs:attribute name="beStrictAboutChangesToGlobalState" type="xs:boolean" default="false"/>
         <xs:attribute name="beStrictAboutOutputDuringTests" type="xs:boolean" default="false"/>
@@ -296,7 +334,10 @@
             <xs:element ref="testSuiteFacet" minOccurs="0"/>
             <xs:element name="groups" type="groupsType" minOccurs="0"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <xs:element name="source" type="sourceType" minOccurs="0"/>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             <xs:element name="coverage" type="coverageType" minOccurs="0"/>
@@ -317,7 +358,11 @@
         <xs:sequence>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <xs:group ref="testSuitePathGroup"/>
+=======
+                <xs:group ref="pathGroup"/>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 <xs:group ref="pathGroup"/>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -326,6 +371,7 @@
         </xs:sequence>
         <xs:attribute name="name" type="xs:string" use="required"/>
     </xs:complexType>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <xs:group name="testSuitePathGroup">
         <xs:sequence>
@@ -355,6 +401,8 @@
         <xs:attribute name="phpVersion" type="xs:string" default="5.3.0"/>
         <xs:attribute name="phpVersionOperator" type="xs:string" default="&gt;="/>
     </xs:attributeGroup>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <xs:group name="coverageReportGroup">

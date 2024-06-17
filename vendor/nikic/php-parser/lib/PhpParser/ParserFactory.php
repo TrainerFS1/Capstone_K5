@@ -3,6 +3,7 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Parser\Php7;
 use PhpParser\Parser\Php8;
 
@@ -40,6 +41,8 @@ class ParserFactory {
     public function createForHostVersion(): Parser {
         return $this->createForVersion(PhpVersion::getHostVersion());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class ParserFactory
 {
     const PREFER_PHP7 = 1;
@@ -78,6 +81,9 @@ class ParserFactory
                     'Kind must be one of ::PREFER_PHP7, ::PREFER_PHP5, ::ONLY_PHP7 or ::ONLY_PHP5'
                 );
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

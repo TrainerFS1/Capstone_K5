@@ -4,7 +4,10 @@ namespace Illuminate\Redis\Limiters;
 
 use Illuminate\Contracts\Redis\LimiterTimeoutException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Sleep;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
@@ -80,7 +83,11 @@ class ConcurrencyLimiter
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             Sleep::usleep($sleep * 1000);
+=======
+            usleep($sleep * 1000);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             usleep($sleep * 1000);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

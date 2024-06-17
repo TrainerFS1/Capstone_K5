@@ -14,9 +14,15 @@ namespace Symfony\Component\HttpKernel\Fragment;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\UriSigner;
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
 use Symfony\Component\HttpKernel\HttpCache\SurrogateInterface;
+=======
+use Symfony\Component\HttpKernel\Controller\ControllerReference;
+use Symfony\Component\HttpKernel\HttpCache\SurrogateInterface;
+use Symfony\Component\HttpKernel\UriSigner;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
 use Symfony\Component\HttpKernel\HttpCache\SurrogateInterface;
@@ -41,7 +47,11 @@ abstract class AbstractSurrogateFragmentRenderer extends RoutableFragmentRendere
      * @param FragmentRendererInterface $inlineStrategy The inline strategy to use when the surrogate is not supported
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?SurrogateInterface $surrogate, FragmentRendererInterface $inlineStrategy, ?UriSigner $signer = null)
+=======
+    public function __construct(SurrogateInterface $surrogate = null, FragmentRendererInterface $inlineStrategy, UriSigner $signer = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(SurrogateInterface $surrogate = null, FragmentRendererInterface $inlineStrategy, UriSigner $signer = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,8 +80,11 @@ abstract class AbstractSurrogateFragmentRenderer extends RoutableFragmentRendere
     {
         if (!$this->surrogate || !$this->surrogate->hasSurrogateCapability($request)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $request->attributes->set('_check_controller_is_allowed', -1); // @deprecated, switch to true in Symfony 7
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($uri instanceof ControllerReference && $this->containsNonScalars($uri->attributes)) {

@@ -52,7 +52,10 @@ abstract class AbstractHandler extends Handler implements ResettableInterface
      *
      * @param Level|LogLevel::* $level Level or level name
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -79,7 +82,10 @@ abstract class AbstractHandler extends Handler implements ResettableInterface
      * @param bool $bubble true means that this handler allows bubbling.
      *                     false means that bubbling is not permitted.
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

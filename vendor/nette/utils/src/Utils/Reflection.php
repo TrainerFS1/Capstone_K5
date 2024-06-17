@@ -189,7 +189,11 @@ final class Reflection
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/** @return array<string, class-string> of [alias => class] */
+=======
+	/** @return array of [alias => class] */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	/** @return array of [alias => class] */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -226,8 +230,12 @@ final class Reflection
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$namespace = $class = null;
 		$classLevel = $level = 0;
+=======
+		$namespace = $class = $classLevel = $level = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		$namespace = $class = $classLevel = $level = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -300,7 +308,11 @@ final class Reflection
 				case ord('}'):
 					if ($level === $classLevel) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 						$class = $classLevel = 0;
+=======
+						$class = $classLevel = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 						$class = $classLevel = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

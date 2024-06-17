@@ -60,7 +60,11 @@ class ServerRequest extends Request implements ServerRequestInterface
      * @param string                               $method       HTTP method
      * @param string|UriInterface                  $uri          URI
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param (string|string[])[]                  $headers      Request headers
+=======
+     * @param array<string, string|string[]>       $headers      Request headers
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array<string, string|string[]>       $headers      Request headers
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -149,15 +153,21 @@ class ServerRequest extends Request implements ServerRequestInterface
             $spec = [
                 'tmp_name' => $files['tmp_name'][$key],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'size' => $files['size'][$key] ?? null,
                 'error' => $files['error'][$key] ?? null,
                 'name' => $files['name'][$key] ?? null,
                 'type' => $files['type'][$key] ?? null,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'size'     => $files['size'][$key],
                 'error'    => $files['error'][$key],
                 'name'     => $files['name'][$key],
                 'type'     => $files['type'][$key],
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ];
             $normalizedFiles[$key] = self::createUploadedFileFromSpec($spec);
@@ -194,7 +204,11 @@ class ServerRequest extends Request implements ServerRequestInterface
     private static function extractHostAndPortFromAuthority(string $authority): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $uri = 'http://'.$authority;
+=======
+        $uri = 'http://' . $authority;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $uri = 'http://' . $authority;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -302,6 +316,11 @@ class ServerRequest extends Request implements ServerRequestInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * {@inheritdoc}
      *
@@ -328,6 +347,11 @@ class ServerRequest extends Request implements ServerRequestInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * {@inheritdoc}
      *

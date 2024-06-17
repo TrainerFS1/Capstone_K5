@@ -23,8 +23,13 @@ final class TestDirectoryNotFoundException extends RuntimeException implements E
             sprintf(
                 'Test directory "%s" not found',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $path,
             ),
+=======
+                $path
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $path
             )

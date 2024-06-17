@@ -30,9 +30,12 @@ class ExpressionRequestMatcher extends RequestMatcher
     private Expression|string $expression;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setExpression(ExpressionLanguage $language, Expression|string $expression)
@@ -45,7 +48,11 @@ class ExpressionRequestMatcher extends RequestMatcher
     {
         if (!isset($this->language)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new \LogicException('Unable to match the request as the expression language is not available. Try running "composer require symfony/expression-language".');
+=======
+            throw new \LogicException('Unable to match the request as the expression language is not available.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new \LogicException('Unable to match the request as the expression language is not available.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

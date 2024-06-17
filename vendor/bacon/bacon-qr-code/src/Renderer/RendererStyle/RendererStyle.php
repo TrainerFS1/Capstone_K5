@@ -11,6 +11,7 @@ use BaconQrCode\Renderer\Module\SquareModule;
 final class RendererStyle
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ModuleInterface $module;
 
     private EyeInterface|null $eye;
@@ -21,6 +22,8 @@ final class RendererStyle
         private int $size,
         private int $margin = 4,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var int
      */
@@ -49,12 +52,20 @@ final class RendererStyle
     public function __construct(
         int $size,
         int $margin = 4,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ?ModuleInterface $module = null,
         ?EyeInterface $eye = null,
         ?Fill $fill = null
     ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $this->margin = $margin;
+        $this->size = $size;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->margin = $margin;
         $this->size = $size;

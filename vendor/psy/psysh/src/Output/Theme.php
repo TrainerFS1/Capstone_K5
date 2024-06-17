@@ -58,6 +58,7 @@ class Theme
 
         // Types
 <<<<<<< HEAD
+<<<<<<< HEAD
         'number'       => ['magenta'],
         'integer'      => ['magenta'],
         'float'        => ['yellow'],
@@ -69,6 +70,8 @@ class Theme
         'object'       => ['blue'],
         'resource'     => ['yellow'],
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'number'   => ['magenta'],
         'integer'  => ['magenta'],
         'float'    => ['yellow'],
@@ -78,6 +81,9 @@ class Theme
         'comment'  => ['blue'],
         'object'   => ['blue'],
         'resource' => ['yellow'],
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         // Code-specific formatting
@@ -85,7 +91,11 @@ class Theme
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const ERROR_STYLES = ['info', 'warning', 'error', 'whisper', 'class'];
+=======
+    const ERROR_STYLES = ['info', 'warning', 'error', 'whisper'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     const ERROR_STYLES = ['info', 'warning', 'error', 'whisper'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -113,7 +123,11 @@ class Theme
                     break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 case 'compact':
+=======
+                    case 'compact':
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     case 'compact':
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -161,11 +175,17 @@ class Theme
                     $this->setGrayFallback($value);
                     break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 case 'compact':
                     $this->setCompact($value);
                     break;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }

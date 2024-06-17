@@ -49,9 +49,15 @@ class ConsoleSectionOutput extends StreamOutput
     {
         // when changing max height, clear output of current section and redraw again with the new height
 <<<<<<< HEAD
+<<<<<<< HEAD
         $previousMaxHeight = $this->maxHeight;
         $this->maxHeight = $maxHeight;
         $existingContent = $this->popStreamContentUntilCurrentSection($previousMaxHeight ? min($previousMaxHeight, $this->lines) : $this->lines);
+=======
+        $existingContent = $this->popStreamContentUntilCurrentSection($this->maxHeight ? min($this->maxHeight, $this->lines) : $this->lines);
+
+        $this->maxHeight = $maxHeight;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $existingContent = $this->popStreamContentUntilCurrentSection($this->maxHeight ? min($this->maxHeight, $this->lines) : $this->lines);
 
@@ -67,10 +73,15 @@ class ConsoleSectionOutput extends StreamOutput
      *
      * @param int $lines Number of lines to clear. If null, then the entire output of this section is cleared
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
     public function clear(?int $lines = null)
+=======
+     */
+    public function clear(int $lines = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      */
     public function clear(int $lines = null)
@@ -95,8 +106,11 @@ class ConsoleSectionOutput extends StreamOutput
     /**
      * Overwrites the previous output with a new message.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -168,6 +182,7 @@ class ConsoleSectionOutput extends StreamOutput
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
@@ -188,6 +203,10 @@ class ConsoleSectionOutput extends StreamOutput
             $newline = true;
         }
 
+=======
+    protected function doWrite(string $message, bool $newline)
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function doWrite(string $message, bool $newline)
     {
@@ -238,7 +257,11 @@ class ConsoleSectionOutput extends StreamOutput
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $numberOfLinesToClear += $section->maxHeight ? min($section->lines, $section->maxHeight) : $section->lines;
+=======
+            $numberOfLinesToClear += $section->lines;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $numberOfLinesToClear += $section->lines;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

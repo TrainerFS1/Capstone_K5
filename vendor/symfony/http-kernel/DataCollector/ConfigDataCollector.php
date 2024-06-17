@@ -17,7 +17,10 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\VarDumper\Caster\ClassStub;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\VarDumper\Cloner\Data;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -34,7 +37,11 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
      * Sets the Kernel associated with this Request.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setKernel(?KernelInterface $kernel = null): void
+=======
+    public function setKernel(KernelInterface $kernel = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setKernel(KernelInterface $kernel = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,7 +54,11 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
+=======
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function collect(Request $request, Response $response, \Throwable $exception = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -89,14 +100,20 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function lateCollect(): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset()
     {
         $this->data = [];
     }
 
     public function lateCollect()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->data = $this->cloneVar($this->data);
@@ -241,7 +258,11 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getBundles(): array|Data
+=======
+    public function getBundles()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getBundles()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -4,10 +4,13 @@ namespace Spatie\Backtrace;
 
 use Closure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Laravel\SerializableClosure\Support\ClosureStream;
 use Spatie\Backtrace\Arguments\ArgumentReducers;
 use Spatie\Backtrace\Arguments\ReduceArgumentsAction;
 use Spatie\Backtrace\Arguments\Reducers\ArgumentReducer;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
@@ -19,12 +22,15 @@ class Backtrace
 
     /** @var bool */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $reduceArguments = false;
 
     /** @var array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null */
     protected $argumentReducers = null;
 
     /** @var bool */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $withObject = false;
@@ -62,6 +68,7 @@ class Backtrace
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withArguments(
         bool $withArguments = true
     ): self {
@@ -80,6 +87,11 @@ class Backtrace
     ): self {
         $this->reduceArguments = true;
         $this->argumentReducers = $argumentReducers;
+=======
+    public function withArguments(): self
+    {
+        $this->withArguments = true;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withArguments(): self
     {
@@ -178,6 +190,7 @@ class Backtrace
         $currentFile = $this->throwable ? $this->throwable->getFile() : '';
         $currentLine = $this->throwable ? $this->throwable->getLine() : 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $arguments = $this->withArguments ? [] : null;
 
         $frames = [];
@@ -221,6 +234,8 @@ class Backtrace
             }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $frames = [];
 
@@ -234,6 +249,9 @@ class Backtrace
                 $this->isApplicationFrame($currentFile)
             );
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $currentFile = $rawFrame['file'] ?? 'unknown';
             $currentLine = $rawFrame['line'] ?? 0;
@@ -265,7 +283,11 @@ class Backtrace
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (strpos($relativeFile, DIRECTORY_SEPARATOR.'vendor') === 0) {
+=======
+        if (strpos($relativeFile, DIRECTORY_SEPARATOR . 'vendor') === 0) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (strpos($relativeFile, DIRECTORY_SEPARATOR . 'vendor') === 0) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -303,6 +325,7 @@ class Backtrace
         return $frames;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     protected function resolveArgumentReducers(): ArgumentReducers
     {
@@ -316,6 +339,8 @@ class Backtrace
 
         return ArgumentReducers::create($this->argumentReducers);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

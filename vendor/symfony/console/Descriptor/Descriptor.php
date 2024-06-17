@@ -27,16 +27,22 @@ use Symfony\Component\Console\Output\OutputInterface;
 abstract class Descriptor implements DescriptorInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected OutputInterface $output;
 
     public function describe(OutputInterface $output, object $object, array $options = []): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var OutputInterface
      */
     protected $output;
 
     public function describe(OutputInterface $output, object $object, array $options = [])
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->output = $output;
@@ -52,12 +58,18 @@ abstract class Descriptor implements DescriptorInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function write(string $content, bool $decorated = false): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Writes content to output.
      */
     protected function write(string $content, bool $decorated = false)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->output->write($content, false, $decorated ? OutputInterface::OUTPUT_NORMAL : OutputInterface::OUTPUT_RAW);
@@ -67,7 +79,11 @@ abstract class Descriptor implements DescriptorInterface
      * Describes an InputArgument instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function describeInputArgument(InputArgument $argument, array $options = []): void;
+=======
+    abstract protected function describeInputArgument(InputArgument $argument, array $options = []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function describeInputArgument(InputArgument $argument, array $options = []);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -76,7 +92,11 @@ abstract class Descriptor implements DescriptorInterface
      * Describes an InputOption instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function describeInputOption(InputOption $option, array $options = []): void;
+=======
+    abstract protected function describeInputOption(InputOption $option, array $options = []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function describeInputOption(InputOption $option, array $options = []);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -85,7 +105,11 @@ abstract class Descriptor implements DescriptorInterface
      * Describes an InputDefinition instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function describeInputDefinition(InputDefinition $definition, array $options = []): void;
+=======
+    abstract protected function describeInputDefinition(InputDefinition $definition, array $options = []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function describeInputDefinition(InputDefinition $definition, array $options = []);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,7 +118,11 @@ abstract class Descriptor implements DescriptorInterface
      * Describes a Command instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function describeCommand(Command $command, array $options = []): void;
+=======
+    abstract protected function describeCommand(Command $command, array $options = []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function describeCommand(Command $command, array $options = []);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +131,11 @@ abstract class Descriptor implements DescriptorInterface
      * Describes an Application instance.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function describeApplication(Application $application, array $options = []): void;
+=======
+    abstract protected function describeApplication(Application $application, array $options = []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function describeApplication(Application $application, array $options = []);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

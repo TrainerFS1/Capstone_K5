@@ -7,7 +7,10 @@ namespace PhpParser\Builder;
 use PhpParser;
 use PhpParser\BuilderHelpers;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
@@ -15,6 +18,7 @@ use PhpParser\Node\Const_;
 use PhpParser\Node\Identifier;
 use PhpParser\Node\Stmt;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ClassConst implements PhpParser\Builder {
     protected int $flags = 0;
@@ -28,6 +32,8 @@ class ClassConst implements PhpParser\Builder {
     /** @var Identifier|Node\Name|Node\ComplexType|null */
     protected ?Node $type = null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class ClassConst implements PhpParser\Builder
 {
     protected $flags = 0;
@@ -36,13 +42,20 @@ class ClassConst implements PhpParser\Builder
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Creates a class constant builder
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|Identifier $name Name
+=======
+     * @param string|Identifier                          $name  Name
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string|Identifier                          $name  Name
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +69,11 @@ class ClassConst implements PhpParser\Builder
      * Add another constant to const group
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|Identifier $name Name
+=======
+     * @param string|Identifier                          $name  Name
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string|Identifier                          $name  Name
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -77,7 +94,11 @@ class ClassConst implements PhpParser\Builder
      */
     public function makePublic() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PUBLIC);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PUBLIC);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PUBLIC);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -92,7 +113,11 @@ class ClassConst implements PhpParser\Builder
      */
     public function makeProtected() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PROTECTED);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PROTECTED);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PROTECTED);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -107,7 +132,11 @@ class ClassConst implements PhpParser\Builder
      */
     public function makePrivate() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PRIVATE);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PRIVATE);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PRIVATE);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -122,7 +151,11 @@ class ClassConst implements PhpParser\Builder
      */
     public function makeFinal() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::FINAL);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -160,6 +193,7 @@ class ClassConst implements PhpParser\Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Sets the constant type.
      *
      * @param string|Node\Name|Identifier|Node\ComplexType $type
@@ -175,6 +209,8 @@ class ClassConst implements PhpParser\Builder
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Returns the built class node.
      *
      * @return Stmt\ClassConst The built constant node
@@ -185,8 +221,12 @@ class ClassConst implements PhpParser\Builder
             $this->flags,
             $this->attributes,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->attributeGroups,
             $this->type
+=======
+            $this->attributeGroups
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->attributeGroups
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

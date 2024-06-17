@@ -16,7 +16,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\StreamedResponse;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
@@ -61,7 +64,11 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
     private bool $handleAllThrowables;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, ?RequestStack $requestStack = null, ?ArgumentResolverInterface $argumentResolver = null, bool $handleAllThrowables = false)
+=======
+    public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, RequestStack $requestStack = null, ArgumentResolverInterface $argumentResolver = null, bool $handleAllThrowables = false)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, RequestStack $requestStack = null, ArgumentResolverInterface $argumentResolver = null, bool $handleAllThrowables = false)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -79,9 +86,14 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
 
         $this->requestStack->push($request);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $response = null;
         try {
             return $response = $this->handleRaw($request, $type);
+=======
+        try {
+            return $this->handleRaw($request, $type);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         try {
             return $this->handleRaw($request, $type);
@@ -100,6 +112,7 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
                 throw $e;
             }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             return $response = $this->handleThrowable($e, $request, $type);
         } finally {
@@ -124,12 +137,17 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
      * @return void
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->handleThrowable($e, $request, $type);
         } finally {
             $this->requestStack->pop();
         }
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function terminate(Request $request, Response $response)
     {
@@ -140,7 +158,11 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function terminateWithException(\Throwable $exception, ?Request $request = null): void
+=======
+    public function terminateWithException(\Throwable $exception, Request $request = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function terminateWithException(\Throwable $exception, Request $request = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -251,7 +273,11 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
      * weird results.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function finishRequest(Request $request, int $type): void
+=======
+    private function finishRequest(Request $request, int $type)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function finishRequest(Request $request, int $type)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

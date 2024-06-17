@@ -20,6 +20,12 @@
         "psr/event-dispatcher": "^1"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "suggest": {
+        "symfony/event-dispatcher-implementation": ""
+    },
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     "suggest": {
         "symfony/event-dispatcher-implementation": ""
@@ -32,7 +38,11 @@
     "extra": {
         "branch-alias": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "dev-main": "3.5-dev"
+=======
+            "dev-main": "3.3-dev"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "dev-main": "3.3-dev"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

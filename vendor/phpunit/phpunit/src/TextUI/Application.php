@@ -18,9 +18,13 @@ use function sprintf;
 use function trim;
 use function unlink;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\EventFacadeIsSealedException;
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Event\UnknownSubscriberTypeException;
+=======
+use PHPUnit\Event\Facade as EventFacade;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\Facade as EventFacade;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -31,6 +35,7 @@ use PHPUnit\Logging\TeamCity\TeamCityLogger;
 use PHPUnit\Logging\TestDox\HtmlRenderer as TestDoxHtmlRenderer;
 use PHPUnit\Logging\TestDox\PlainTextRenderer as TestDoxTextRenderer;
 use PHPUnit\Logging\TestDox\TestResultCollector as TestDoxResultCollector;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use PHPUnit\Metadata\Api\CodeCoverage as CodeCoverageMetadataApi;
 use PHPUnit\Runner\Baseline\CannotLoadBaselineException;
@@ -45,10 +50,15 @@ use PHPUnit\Runner\Extension\Facade as ExtensionFacade;
 use PHPUnit\Runner\Extension\PharLoader;
 use PHPUnit\Runner\GarbageCollection\GarbageCollectionHandler;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Runner\CodeCoverage;
 use PHPUnit\Runner\Extension\ExtensionBootstrapper;
 use PHPUnit\Runner\Extension\Facade as ExtensionFacade;
 use PHPUnit\Runner\Extension\PharLoader;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Runner\ResultCache\DefaultResultCache;
 use PHPUnit\Runner\ResultCache\NullResultCache;
@@ -107,7 +117,11 @@ final class Application
             $configuration = Registry::init(
                 $cliConfiguration,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $xmlConfiguration,
+=======
+                $xmlConfiguration
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $xmlConfiguration
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -127,6 +141,7 @@ final class Application
             $this->executeHelpCommandWhenThereIsNothingElseToDo($configuration, $testSuite);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $pharExtensions                          = null;
             $extensionRequiresCodeCoverageCollection = false;
             $extensionReplacesOutput                 = false;
@@ -136,10 +151,14 @@ final class Application
 =======
             $pharExtensions = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            $pharExtensions = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (!$configuration->noExtensions()) {
                 if ($configuration->hasPharExtensionDirectory()) {
                     $pharExtensions = (new PharLoader)->loadPharExtensionsInDirectory(
+<<<<<<< HEAD
 <<<<<<< HEAD
                         $configuration->pharExtensionDirectory(),
                     );
@@ -192,6 +211,8 @@ final class Application
                 );
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $configuration->pharExtensionDirectory()
                     );
                 }
@@ -208,6 +229,9 @@ final class Application
             $this->writeRandomSeedInformation($printer, $configuration);
 
             $printer->print(PHP_EOL);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $this->registerLogfileWriters($configuration);
@@ -218,6 +242,7 @@ final class Application
 
             $resultCache = $this->initializeTestResultCache($configuration);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             if ($configuration->controlGarbageCollector()) {
                 new GarbageCollectionHandler(
@@ -232,6 +257,9 @@ final class Application
 =======
             EventFacade::seal();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            EventFacade::seal();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $timer = new Timer;
             $timer->start();
@@ -242,7 +270,11 @@ final class Application
                 $configuration,
                 $resultCache,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $testSuite,
+=======
+                $testSuite
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $testSuite
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -258,6 +290,7 @@ final class Application
 
             if ($testDoxResult !== null &&
                 $configuration->hasLogfileTestdoxHtml()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 try {
                     OutputFacade::printerFor($configuration->logfileTestdoxHtml())->print(
@@ -277,10 +310,16 @@ final class Application
                     (new TestDoxHtmlRenderer)->render($testDoxResult)
                 );
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                OutputFacade::printerFor($configuration->logfileTestdoxHtml())->print(
+                    (new TestDoxHtmlRenderer)->render($testDoxResult)
+                );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             if ($testDoxResult !== null &&
                 $configuration->hasLogfileTestdoxText()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 try {
                     OutputFacade::printerFor($configuration->logfileTestdoxText())->print(
@@ -300,10 +339,16 @@ final class Application
                     (new TestDoxTextRenderer)->render($testDoxResult)
                 );
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                OutputFacade::printerFor($configuration->logfileTestdoxText())->print(
+                    (new TestDoxTextRenderer)->render($testDoxResult)
+                );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             $result = TestResultFacade::result();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (!$extensionReplacesResultOutput && !$configuration->debug()) {
                 OutputFacade::printResult($result, $testDoxResult, $duration);
@@ -335,6 +380,8 @@ final class Application
                 $configuration->failOnWarning(),
                 $result,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             OutputFacade::printResult($result, $testDoxResult, $duration);
             CodeCoverage::instance()->generateReports($printer, $configuration);
 
@@ -345,6 +392,9 @@ final class Application
                 $configuration->failOnIncomplete(),
                 $configuration->failOnSkipped(),
                 $result
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
@@ -352,12 +402,15 @@ final class Application
 
             return $shellExitCode;
 <<<<<<< HEAD
+<<<<<<< HEAD
             // @codeCoverageIgnoreStart
         } catch (Throwable $t) {
             $this->exitWithCrashMessage($t);
         }
         // @codeCoverageIgnoreEnd
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (Throwable $t) {
             $this->exitWithCrashMessage($t);
         }
@@ -395,6 +448,9 @@ final class Application
         print Version::getVersionString() . PHP_EOL . PHP_EOL . $message . PHP_EOL;
 
         exit(Result::EXCEPTION);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -416,8 +472,13 @@ final class Application
                 sprintf(
                     'Cannot open bootstrap script "%s"',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $filename,
                 ),
+=======
+                    $filename
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $filename
                 )
@@ -428,6 +489,7 @@ final class Application
         try {
             include_once $filename;
         } catch (Throwable $t) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             $message = sprintf(
                 'Error in bootstrap script: %s:%s%s%s%s',
@@ -448,16 +510,27 @@ final class Application
                 sprintf(
                     'Error in bootstrap script: %s:%s%s%s%s',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            $this->exitWithErrorMessage(
+                sprintf(
+                    'Error in bootstrap script: %s:%s%s%s%s',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $t::class,
                     PHP_EOL,
                     $t->getMessage(),
                     PHP_EOL,
+<<<<<<< HEAD
 <<<<<<< HEAD
                     $t->getTraceAsString(),
                 );
             }
 
             $this->exitWithErrorMessage($message);
+=======
+                    $t->getTraceAsString()
+                )
+            );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $t->getTraceAsString()
                 )
@@ -480,9 +553,15 @@ final class Application
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function loadXmlConfiguration(false|string $configurationFile): XmlConfiguration
     {
         if ($configurationFile === false) {
+=======
+    private function loadXmlConfiguration(string|false $configurationFile): XmlConfiguration
+    {
+        if (!$configurationFile) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function loadXmlConfiguration(string|false $configurationFile): XmlConfiguration
     {
@@ -507,6 +586,7 @@ final class Application
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @psalm-return array{requiresCodeCoverageCollection: bool, replacesOutput: bool, replacesProgressOutput: bool, replacesResultOutput: bool, requiresExportOfObjects: bool}
@@ -538,6 +618,8 @@ final class Application
 
     private function executeCommandsThatOnlyRequireCliConfiguration(CliConfiguration $cliConfiguration, false|string $configurationFile): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function bootstrapExtensions(Configuration $configuration): void
     {
         $extensionBootstrapper = new ExtensionBootstrapper(
@@ -563,6 +645,9 @@ final class Application
     }
 
     private function executeCommandsThatOnlyRequireCliConfiguration(CliConfiguration $cliConfiguration, string|false $configurationFile): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($cliConfiguration->generateConfiguration()) {
@@ -571,7 +656,11 @@ final class Application
 
         if ($cliConfiguration->migrateConfiguration()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($configurationFile === false) {
+=======
+            if (!$configurationFile) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (!$configurationFile) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -613,8 +702,13 @@ final class Application
                 new ListTestsAsXmlCommand(
                     $cliConfiguration->listTestsXml(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $testSuite,
                 ),
+=======
+                    $testSuite
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $testSuite
                 )
@@ -637,7 +731,11 @@ final class Application
     private function executeHelpCommandWhenThereIsNothingElseToDo(Configuration $configuration, TestSuite $testSuite): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($testSuite->isEmpty() && !$configuration->hasCliArguments() && $configuration->testSuite()->isEmpty()) {
+=======
+        if ($testSuite->isEmpty() && !$configuration->hasCliArgument() && $configuration->testSuite()->isEmpty()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($testSuite->isEmpty() && !$configuration->hasCliArgument() && $configuration->testSuite()->isEmpty()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -662,7 +760,11 @@ final class Application
                 $printer,
                 'Configuration',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $configuration->configurationFile(),
+=======
+                $configuration->configurationFile()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $configuration->configurationFile()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -672,7 +774,11 @@ final class Application
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param ?list<string> $pharExtensions
+=======
+     * @psalm-param ?array{loadedExtensions: list<string>, notLoadedExtensions: list<string>} $pharExtensions
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param ?array{loadedExtensions: list<string>, notLoadedExtensions: list<string>} $pharExtensions
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -684,12 +790,15 @@ final class Application
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($pharExtensions as $extension) {
             $this->writeMessage(
                 $printer,
                 'Extension',
                 $extension,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($pharExtensions['loadedExtensions'] as $extension) {
             $this->writeMessage(
                 $printer,
@@ -703,6 +812,9 @@ final class Application
                 $printer,
                 'Extension',
                 $extension
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -715,8 +827,13 @@ final class Application
                 "%-15s%s\n",
                 $type . ':',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
             ),
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
             )
@@ -731,7 +848,11 @@ final class Application
                 $printer,
                 'Random Seed',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 (string) $configuration->randomOrderSeed(),
+=======
+                (string) $configuration->randomOrderSeed()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 (string) $configuration->randomOrderSeed()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -740,10 +861,13 @@ final class Application
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function registerLogfileWriters(Configuration $configuration): void
@@ -754,17 +878,23 @@ final class Application
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             EventFacade::instance()->registerTracer(
                 new EventLogger(
                     $configuration->logEventsText(),
                     false,
                 ),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             EventFacade::registerTracer(
                 new EventLogger(
                     $configuration->logEventsText(),
                     false
                 )
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -774,6 +904,7 @@ final class Application
                 unlink($configuration->logEventsVerboseText());
             }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             EventFacade::instance()->registerTracer(
                 new EventLogger(
@@ -827,6 +958,8 @@ final class Application
      * @throws UnknownSubscriberTypeException
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             EventFacade::registerTracer(
                 new EventLogger(
                     $configuration->logEventsVerboseText(),
@@ -850,6 +983,9 @@ final class Application
         }
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function testDoxResultCollector(Configuration $configuration): ?TestDoxResultCollector
     {
@@ -857,7 +993,11 @@ final class Application
             $configuration->hasLogfileTestdoxText() ||
             $configuration->outputIsTestDox()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return new TestDoxResultCollector(EventFacade::instance());
+=======
+            return new TestDoxResultCollector;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return new TestDoxResultCollector;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -867,10 +1007,13 @@ final class Application
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function initializeTestResultCache(Configuration $configuration): ResultCache
@@ -879,7 +1022,11 @@ final class Application
             $cache = new DefaultResultCache($configuration->testResultCacheFile());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             new ResultCacheHandler($cache, EventFacade::instance());
+=======
+            new ResultCacheHandler($cache);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new ResultCacheHandler($cache);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -889,6 +1036,7 @@ final class Application
 
         return new NullResultCache;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -974,6 +1122,8 @@ final class Application
 
         exit(Result::EXCEPTION);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

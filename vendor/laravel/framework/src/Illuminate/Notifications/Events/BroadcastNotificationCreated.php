@@ -121,6 +121,7 @@ class BroadcastNotificationCreated implements ShouldBroadcast
                     : get_class($this->notification);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Get the event name of the notification being broadcast.
@@ -133,6 +134,8 @@ class BroadcastNotificationCreated implements ShouldBroadcast
                 ? $this->notification->broadcastAs()
                 : __CLASS__;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

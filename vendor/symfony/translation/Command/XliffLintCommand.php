@@ -42,7 +42,11 @@ class XliffLintCommand extends Command
     private bool $requireStrictFileNames;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $name = null, ?callable $directoryIteratorProvider = null, ?callable $isReadableProvider = null, bool $requireStrictFileNames = true)
+=======
+    public function __construct(string $name = null, callable $directoryIteratorProvider = null, callable $isReadableProvider = null, bool $requireStrictFileNames = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name = null, callable $directoryIteratorProvider = null, callable $isReadableProvider = null, bool $requireStrictFileNames = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -55,9 +59,12 @@ class XliffLintCommand extends Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function configure()
@@ -65,7 +72,11 @@ class XliffLintCommand extends Command
         $this
             ->addArgument('filename', InputArgument::IS_ARRAY, 'A file, a directory or "-" for reading from STDIN')
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->addOption('format', null, InputOption::VALUE_REQUIRED, sprintf('The output format ("%s")', implode('", "', $this->getAvailableFormatOptions())))
+=======
+            ->addOption('format', null, InputOption::VALUE_REQUIRED, 'The output format')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ->addOption('format', null, InputOption::VALUE_REQUIRED, 'The output format')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -121,7 +132,11 @@ EOF
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function validate(string $content, ?string $file = null): array
+=======
+    private function validate(string $content, string $file = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function validate(string $content, string $file = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -170,7 +185,11 @@ EOF
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function display(SymfonyStyle $io, array $files): int
+=======
+    private function display(SymfonyStyle $io, array $files)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function display(SymfonyStyle $io, array $files)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -180,17 +199,23 @@ EOF
             'json' => $this->displayJson($io, $files),
             'github' => $this->displayTxt($io, $files, true),
 <<<<<<< HEAD
+<<<<<<< HEAD
             default => throw new InvalidArgumentException(sprintf('Supported formats are "%s".', implode('", "', $this->getAvailableFormatOptions()))),
         };
     }
 
     private function displayTxt(SymfonyStyle $io, array $filesInfo, bool $errorAsGithubAnnotations = false): int
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             default => throw new InvalidArgumentException(sprintf('The format "%s" is not supported.', $this->format)),
         };
     }
 
     private function displayTxt(SymfonyStyle $io, array $filesInfo, bool $errorAsGithubAnnotations = false)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $countFiles = \count($filesInfo);
@@ -224,7 +249,11 @@ EOF
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function displayJson(SymfonyStyle $io, array $filesInfo): int
+=======
+    private function displayJson(SymfonyStyle $io, array $filesInfo)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function displayJson(SymfonyStyle $io, array $filesInfo)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -244,10 +273,14 @@ EOF
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return iterable<\SplFileInfo>
      */
     private function getFiles(string $fileOrDirectory): iterable
+=======
+    private function getFiles(string $fileOrDirectory)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getFiles(string $fileOrDirectory)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -268,6 +301,7 @@ EOF
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return iterable<\SplFileInfo>
      */
@@ -278,6 +312,8 @@ EOF
             \RecursiveIteratorIterator::LEAVES_ONLY
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function getDirectoryIterator(string $directory)
     {
         $default = function ($directory) {
@@ -286,6 +322,9 @@ EOF
                 \RecursiveIteratorIterator::LEAVES_ONLY
             );
         };
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (null !== $this->directoryIteratorProvider) {
@@ -296,15 +335,21 @@ EOF
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function isReadable(string $fileOrDirectory): bool
     {
         $default = fn ($fileOrDirectory) => is_readable($fileOrDirectory);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function isReadable(string $fileOrDirectory)
     {
         $default = function ($fileOrDirectory) {
             return is_readable($fileOrDirectory);
         };
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (null !== $this->isReadableProvider) {
@@ -329,6 +374,7 @@ EOF
     {
         if ($input->mustSuggestOptionValuesFor('format')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $suggestions->suggestValues($this->getAvailableFormatOptions());
         }
     }
@@ -337,6 +383,11 @@ EOF
     {
         return ['txt', 'json', 'github'];
     }
+=======
+            $suggestions->suggestValues(['txt', 'json', 'github']);
+        }
+    }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $suggestions->suggestValues(['txt', 'json', 'github']);
         }

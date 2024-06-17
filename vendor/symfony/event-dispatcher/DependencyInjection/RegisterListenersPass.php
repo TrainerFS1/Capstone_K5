@@ -49,7 +49,11 @@ class RegisterListenersPass implements CompilerPassInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function process(ContainerBuilder $container): void
+=======
+    public function process(ContainerBuilder $container)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function process(ContainerBuilder $container)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -88,6 +92,7 @@ class RegisterListenersPass implements CompilerPassInterface
                         '/(?<=\b|_)[a-z]/i',
                         '/[^a-z0-9]/i',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ], fn ($matches) => strtoupper($matches[0]), $event['event']);
                     $event['method'] = preg_replace('/[^a-z0-9]/i', '', $event['method']);
 
@@ -97,10 +102,15 @@ class RegisterListenersPass implements CompilerPassInterface
                         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ], function ($matches) { return strtoupper($matches[0]); }, $event['event']);
                     $event['method'] = preg_replace('/[^a-z0-9]/i', '', $event['method']);
 
                     if (null !== ($class = $container->getDefinition($id)->getClass()) && ($r = $container->getReflectionClass($class, false)) && !$r->hasMethod($event['method']) && $r->hasMethod('__invoke')) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $event['method'] = '__invoke';
                     }
@@ -109,7 +119,11 @@ class RegisterListenersPass implements CompilerPassInterface
                 $dispatcherDefinition = $globalDispatcherDefinition;
                 if (isset($event['dispatcher'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $dispatcherDefinition = $container->findDefinition($event['dispatcher']);
+=======
+                    $dispatcherDefinition = $container->getDefinition($event['dispatcher']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $dispatcherDefinition = $container->getDefinition($event['dispatcher']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,7 +166,11 @@ class RegisterListenersPass implements CompilerPassInterface
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $dispatcherDefinitions[$attributes['dispatcher']] = $container->findDefinition($attributes['dispatcher']);
+=======
+                $dispatcherDefinitions[$attributes['dispatcher']] = $container->getDefinition($attributes['dispatcher']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $dispatcherDefinitions[$attributes['dispatcher']] = $container->getDefinition($attributes['dispatcher']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -215,7 +233,11 @@ class ExtractingEventDispatcher extends EventDispatcher implements EventSubscrib
     public static string $subscriber;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addListener(string $eventName, callable|array $listener, int $priority = 0): void
+=======
+    public function addListener(string $eventName, callable|array $listener, int $priority = 0)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addListener(string $eventName, callable|array $listener, int $priority = 0)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

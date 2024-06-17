@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @if (config('sweetalert.alwaysLoadJS') === true || Session::has('alert.config') || Session::has('alert.delete'))
+=======
+@if (Session::has('alert.config') || Session::has('alert.delete'))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 @if (Session::has('alert.config') || Session::has('alert.delete'))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -11,6 +15,7 @@
         <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-{{ config('sweetalert.theme') }}" rel="stylesheet">
     @endif
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     @if (config('sweetalert.neverLoadJS') === false)
         <script src="{{ $cdn ?? asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
@@ -25,6 +30,8 @@
 
                 if (confirmDeleteElement) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     @if (config('sweetalert.alwaysLoadJS') === false && config('sweetalert.neverLoadJS') === false)
         <script src="{{ $cdn ?? asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
     @endif
@@ -32,11 +39,15 @@
         @if (Session::has('alert.delete'))
             document.addEventListener('click', function(event) {
                 if (event.target.matches('[data-confirm-delete]')) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     event.preventDefault();
                     Swal.fire({!! Session::pull('alert.delete') !!}).then(function(result) {
                         if (result.isConfirmed) {
                             var form = document.createElement('form');
+<<<<<<< HEAD
 <<<<<<< HEAD
                             form.action = confirmDeleteElement.href;
                             form.method = 'POST';
@@ -45,12 +56,17 @@
                             @method('DELETE')
                         `;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             form.action = event.target.href;
                             form.method = 'POST';
                             form.innerHTML = `
                     @csrf
                     @method('DELETE')
                 `;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             document.body.appendChild(form);
                             form.submit();
@@ -59,6 +75,7 @@
                 }
             });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             @if (Session::has('alert.config'))
                 Swal.fire({!! Session::pull('alert.config') !!});
@@ -66,11 +83,16 @@
         </script>
     @endif
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         @endif
 
         @if (Session::has('alert.config'))
             Swal.fire({!! Session::pull('alert.config') !!});
         @endif
     </script>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 @endif

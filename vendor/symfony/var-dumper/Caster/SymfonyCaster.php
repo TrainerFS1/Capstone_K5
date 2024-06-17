@@ -32,9 +32,12 @@ class SymfonyCaster
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castRequest(Request $request, array $a, Stub $stub, bool $isNested)
@@ -53,9 +56,12 @@ class SymfonyCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castHttpClient($client, array $a, Stub $stub, bool $isNested)
@@ -69,9 +75,12 @@ class SymfonyCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castHttpClientResponse($response, array $a, Stub $stub, bool $isNested)
@@ -87,9 +96,12 @@ class SymfonyCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castLazyObjectState($state, array $a, Stub $stub, bool $isNested)
@@ -101,9 +113,13 @@ class SymfonyCaster
         $stub->cut += \count($a) - 1;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $instance = $a['realInstance'] ?? null;
 
         $a = ['status' => new ConstStub(match ($a['status']) {
+=======
+        return ['status' => new ConstStub(match ($a['status']) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return ['status' => new ConstStub(match ($a['status']) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,6 +128,7 @@ class SymfonyCaster
             LazyObjectState::STATUS_UNINITIALIZED_FULL => 'UNINITIALIZED_FULL',
             LazyObjectState::STATUS_UNINITIALIZED_PARTIAL => 'UNINITIALIZED_PARTIAL',
         }, $a['status'])];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if ($instance) {
@@ -125,6 +142,10 @@ class SymfonyCaster
     /**
      * @return array
      */
+=======
+    }
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     }
 
@@ -143,9 +164,12 @@ class SymfonyCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castUlid(Ulid $ulid, array $a, Stub $stub, bool $isNested)

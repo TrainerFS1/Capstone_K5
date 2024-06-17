@@ -34,6 +34,7 @@ class Benchmark
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Measure a callable once and return the duration and result.
      *
      * @template TReturn of mixed
@@ -53,6 +54,8 @@ class Benchmark
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Measure a callable or array of callables over the given number of iterations, then dump and die.

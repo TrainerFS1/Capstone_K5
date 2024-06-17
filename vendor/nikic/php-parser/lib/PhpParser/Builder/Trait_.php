@@ -8,6 +8,7 @@ use PhpParser\Node;
 use PhpParser\Node\Stmt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Trait_ extends Declaration {
     protected string $name;
     /** @var list<Stmt\TraitUse> */
@@ -21,6 +22,8 @@ class Trait_ extends Declaration {
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Trait_ extends Declaration
 {
     protected $name;
@@ -30,6 +33,9 @@ class Trait_ extends Declaration
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -58,8 +64,11 @@ class Trait_ extends Declaration
         } elseif ($stmt instanceof Stmt\TraitUse) {
             $this->uses[] = $stmt;
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($stmt instanceof Stmt\ClassConst) {
             $this->constants[] = $stmt;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
@@ -88,15 +97,21 @@ class Trait_ extends Declaration
      * @return Stmt\Trait_ The built interface node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): PhpParser\Node {
         return new Stmt\Trait_(
             $this->name, [
                 'stmts' => array_merge($this->uses, $this->constants, $this->properties, $this->methods),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getNode() : PhpParser\Node {
         return new Stmt\Trait_(
             $this->name, [
                 'stmts' => array_merge($this->uses, $this->properties, $this->methods),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'attrGroups' => $this->attributeGroups,
             ], $this->attributes

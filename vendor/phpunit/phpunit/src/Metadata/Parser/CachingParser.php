@@ -43,7 +43,10 @@ final class CachingParser implements Parser
     /**
      * @psalm-param class-string $className
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -63,7 +66,10 @@ final class CachingParser implements Parser
     /**
      * @psalm-param class-string $className
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -77,7 +83,11 @@ final class CachingParser implements Parser
 
         $this->classAndMethodCache[$key] = $this->forClass($className)->mergeWith(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->forMethod($className, $methodName),
+=======
+            $this->forMethod($className, $methodName)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->forMethod($className, $methodName)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

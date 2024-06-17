@@ -12,6 +12,7 @@ namespace SebastianBergmann\CodeCoverage\StaticAnalysis;
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @psalm-import-type CodeUnitFunctionType from \SebastianBergmann\CodeCoverage\StaticAnalysis\CodeUnitFindingVisitor
  * @psalm-import-type CodeUnitMethodType from \SebastianBergmann\CodeCoverage\StaticAnalysis\CodeUnitFindingVisitor
@@ -58,6 +59,8 @@ interface FileAnalyser
      * @psalm-return LinesType
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 interface FileAnalyser
 {
@@ -74,6 +77,9 @@ interface FileAnalyser
 
     public function executableLinesIn(string $filename): array;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function ignoredLinesFor(string $filename): array;
 }

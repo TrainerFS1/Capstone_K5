@@ -38,6 +38,7 @@ BaconQrCode comes with multiple back ends for rendering images. Currently includ
 - `SvgImageBackEnd`: renders SVG files using XMLWriter
 - `EpsImageBackEnd`: renders EPS files
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ### GDLib Renderer
 GD library has so many limitations, that GD support is not added as backend, but as separated renderer.
@@ -56,5 +57,7 @@ $renderer = new GDLibRenderer(400);
 $writer = new Writer($renderer);
 $writer->writeFile('Hello World!', 'qrcode.png');
 ```
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

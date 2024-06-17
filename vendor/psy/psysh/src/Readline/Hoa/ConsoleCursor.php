@@ -155,7 +155,11 @@ class ConsoleCursor
      * If null, use the current coordinate.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function moveTo(?int $x = null, ?int $y = null)
+=======
+    public static function moveTo(int $x = null, int $y = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function moveTo(int $x = null, int $y = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

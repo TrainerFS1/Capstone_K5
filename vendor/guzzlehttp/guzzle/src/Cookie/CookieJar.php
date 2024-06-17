@@ -51,15 +51,21 @@ class CookieJar implements CookieJarInterface
         foreach ($cookies as $name => $value) {
             $cookieJar->setCookie(new SetCookie([
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Domain' => $domain,
                 'Name' => $name,
                 'Value' => $value,
                 'Discard' => true,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'Domain'  => $domain,
                 'Name'    => $name,
                 'Value'   => $value,
                 'Discard' => true
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ]));
         }
@@ -104,6 +110,12 @@ class CookieJar implements CookieJarInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @inheritDoc
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @inheritDoc
@@ -117,12 +129,15 @@ class CookieJar implements CookieJarInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function clear(string $domain = null, string $path = null, string $name = null): void
     {
         if (!$domain) {
             $this->cookies = [];
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @inheritDoc
      */
@@ -130,6 +145,9 @@ class CookieJar implements CookieJarInterface
     {
         if (!$domain) {
             $this->cookies = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         } elseif (!$path) {
@@ -144,8 +162,13 @@ class CookieJar implements CookieJarInterface
                 $this->cookies,
                 static function (SetCookie $cookie) use ($path, $domain): bool {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     return !($cookie->matchesPath($path)
                         && $cookie->matchesDomain($domain));
+=======
+                    return !($cookie->matchesPath($path) &&
+                        $cookie->matchesDomain($domain));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     return !($cookie->matchesPath($path) &&
                         $cookie->matchesDomain($domain));
@@ -157,9 +180,15 @@ class CookieJar implements CookieJarInterface
                 $this->cookies,
                 static function (SetCookie $cookie) use ($path, $domain, $name) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     return !($cookie->getName() == $name
                         && $cookie->matchesPath($path)
                         && $cookie->matchesDomain($domain));
+=======
+                    return !($cookie->getName() == $name &&
+                        $cookie->matchesPath($path) &&
+                        $cookie->matchesDomain($domain));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     return !($cookie->getName() == $name &&
                         $cookie->matchesPath($path) &&
@@ -171,6 +200,12 @@ class CookieJar implements CookieJarInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @inheritDoc
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @inheritDoc
@@ -187,6 +222,12 @@ class CookieJar implements CookieJarInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @inheritDoc
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @inheritDoc
@@ -206,10 +247,16 @@ class CookieJar implements CookieJarInterface
         if ($result !== true) {
             if ($this->strictMode) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new \RuntimeException('Invalid cookie: '.$result);
             }
             $this->removeCookieIfEmpty($cookie);
 
+=======
+                throw new \RuntimeException('Invalid cookie: ' . $result);
+            }
+            $this->removeCookieIfEmpty($cookie);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new \RuntimeException('Invalid cookie: ' . $result);
             }
@@ -223,9 +270,15 @@ class CookieJar implements CookieJarInterface
             // Two cookies are identical, when their path, and domain are
             // identical.
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($c->getPath() != $cookie->getPath()
                 || $c->getDomain() != $cookie->getDomain()
                 || $c->getName() != $cookie->getName()
+=======
+            if ($c->getPath() != $cookie->getPath() ||
+                $c->getDomain() != $cookie->getDomain() ||
+                $c->getName() != $cookie->getName()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($c->getPath() != $cookie->getPath() ||
                 $c->getDomain() != $cookie->getDomain() ||
@@ -302,7 +355,11 @@ class CookieJar implements CookieJarInterface
      * Computes cookie path following RFC 6265 section 5.1.4
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc6265#section-5.1.4
+=======
+     * @link https://tools.ietf.org/html/rfc6265#section-5.1.4
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc6265#section-5.1.4
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -337,6 +394,7 @@ class CookieJar implements CookieJarInterface
 
         foreach ($this->cookies as $cookie) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($cookie->matchesPath($path)
                 && $cookie->matchesDomain($host)
                 && !$cookie->isExpired()
@@ -345,6 +403,8 @@ class CookieJar implements CookieJarInterface
                 $values[] = $cookie->getName().'='
                     .$cookie->getValue();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($cookie->matchesPath($path) &&
                 $cookie->matchesDomain($host) &&
                 !$cookie->isExpired() &&
@@ -352,6 +412,9 @@ class CookieJar implements CookieJarInterface
             ) {
                 $values[] = $cookie->getName() . '='
                     . $cookie->getValue();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }

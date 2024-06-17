@@ -34,6 +34,7 @@ final class Mode extends AbstractEnum
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int[] $characterCountBitsForVersions
      */
     protected function __construct(
@@ -41,6 +42,8 @@ final class Mode extends AbstractEnum
         private readonly int   $bits
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var int[]
      */
     private $characterCountBitsForVersions;
@@ -57,6 +60,9 @@ final class Mode extends AbstractEnum
     {
         $this->characterCountBitsForVersions = $characterCountBitsForVersions;
         $this->bits = $bits;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

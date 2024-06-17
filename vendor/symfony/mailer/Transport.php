@@ -15,6 +15,7 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Mailer\Bridge\Amazon\Transport\SesTransportFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Mailer\Bridge\Brevo\Transport\BrevoTransportFactory;
 use Symfony\Component\Mailer\Bridge\Google\Transport\GmailTransportFactory;
 use Symfony\Component\Mailer\Bridge\Infobip\Transport\InfobipTransportFactory;
@@ -27,6 +28,8 @@ use Symfony\Component\Mailer\Bridge\OhMySmtp\Transport\OhMySmtpTransportFactory;
 use Symfony\Component\Mailer\Bridge\Postmark\Transport\PostmarkTransportFactory;
 use Symfony\Component\Mailer\Bridge\Scaleway\Transport\ScalewayTransportFactory;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\Bridge\Google\Transport\GmailTransportFactory;
 use Symfony\Component\Mailer\Bridge\Infobip\Transport\InfobipTransportFactory;
 use Symfony\Component\Mailer\Bridge\Mailchimp\Transport\MandrillTransportFactory;
@@ -34,6 +37,9 @@ use Symfony\Component\Mailer\Bridge\Mailgun\Transport\MailgunTransportFactory;
 use Symfony\Component\Mailer\Bridge\Mailjet\Transport\MailjetTransportFactory;
 use Symfony\Component\Mailer\Bridge\OhMySmtp\Transport\OhMySmtpTransportFactory;
 use Symfony\Component\Mailer\Bridge\Postmark\Transport\PostmarkTransportFactory;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\Bridge\Sendgrid\Transport\SendgridTransportFactory;
 use Symfony\Component\Mailer\Bridge\Sendinblue\Transport\SendinblueTransportFactory;
@@ -59,6 +65,7 @@ final class Transport
 {
     private const FACTORY_CLASSES = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         BrevoTransportFactory::class,
         GmailTransportFactory::class,
         InfobipTransportFactory::class,
@@ -71,6 +78,8 @@ final class Transport
         PostmarkTransportFactory::class,
         ScalewayTransportFactory::class,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         GmailTransportFactory::class,
         InfobipTransportFactory::class,
         MailgunTransportFactory::class,
@@ -78,6 +87,9 @@ final class Transport
         MandrillTransportFactory::class,
         OhMySmtpTransportFactory::class,
         PostmarkTransportFactory::class,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         SendgridTransportFactory::class,
         SendinblueTransportFactory::class,
@@ -87,7 +99,11 @@ final class Transport
     private iterable $factories;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function fromDsn(#[\SensitiveParameter] string $dsn, ?EventDispatcherInterface $dispatcher = null, ?HttpClientInterface $client = null, ?LoggerInterface $logger = null): TransportInterface
+=======
+    public static function fromDsn(string $dsn, EventDispatcherInterface $dispatcher = null, HttpClientInterface $client = null, LoggerInterface $logger = null): TransportInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function fromDsn(string $dsn, EventDispatcherInterface $dispatcher = null, HttpClientInterface $client = null, LoggerInterface $logger = null): TransportInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +114,11 @@ final class Transport
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function fromDsns(#[\SensitiveParameter] array $dsns, ?EventDispatcherInterface $dispatcher = null, ?HttpClientInterface $client = null, ?LoggerInterface $logger = null): TransportInterface
+=======
+    public static function fromDsns(array $dsns, EventDispatcherInterface $dispatcher = null, HttpClientInterface $client = null, LoggerInterface $logger = null): TransportInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function fromDsns(array $dsns, EventDispatcherInterface $dispatcher = null, HttpClientInterface $client = null, LoggerInterface $logger = null): TransportInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -117,7 +137,11 @@ final class Transport
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function fromStrings(#[\SensitiveParameter] array $dsns): Transports
+=======
+    public function fromStrings(array $dsns): Transports
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function fromStrings(array $dsns): Transports
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,17 +155,23 @@ final class Transport
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function fromString(#[\SensitiveParameter] string $dsn): TransportInterface
     {
         [$transport, $offset] = $this->parseDsn($dsn);
         if ($offset !== \strlen($dsn)) {
             throw new InvalidArgumentException('The mailer DSN has some garbage at the end.');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function fromString(string $dsn): TransportInterface
     {
         [$transport, $offset] = $this->parseDsn($dsn);
         if ($offset !== \strlen($dsn)) {
             throw new InvalidArgumentException(sprintf('The DSN has some garbage at the end: "%s".', substr($dsn, $offset)));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -149,7 +179,11 @@ final class Transport
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseDsn(#[\SensitiveParameter] string $dsn, int $offset = 0): array
+=======
+    private function parseDsn(string $dsn, int $offset = 0): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseDsn(string $dsn, int $offset = 0): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -214,7 +248,11 @@ final class Transport
      * @return \Traversable<int, TransportFactoryInterface>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getDefaultFactories(?EventDispatcherInterface $dispatcher = null, ?HttpClientInterface $client = null, ?LoggerInterface $logger = null): \Traversable
+=======
+    public static function getDefaultFactories(EventDispatcherInterface $dispatcher = null, HttpClientInterface $client = null, LoggerInterface $logger = null): \Traversable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function getDefaultFactories(EventDispatcherInterface $dispatcher = null, HttpClientInterface $client = null, LoggerInterface $logger = null): \Traversable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

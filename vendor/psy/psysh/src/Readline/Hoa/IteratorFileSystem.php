@@ -54,7 +54,11 @@ class IteratorFileSystem extends \FilesystemIterator
      * We add the $splFileInfoClass parameter.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $path, ?int $flags = null, ?string $splFileInfoClass = null)
+=======
+    public function __construct(string $path, int $flags = null, string $splFileInfoClass = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $path, int $flags = null, string $splFileInfoClass = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

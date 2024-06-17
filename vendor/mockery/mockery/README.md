@@ -3,9 +3,12 @@ Mockery
 
 [![Build Status](https://github.com/mockery/mockery/actions/workflows/tests.yml/badge.svg)](https://github.com/mockery/mockery/actions)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Supported PHP Version](https://badgen.net/packagist/php/mockery/mockery?color=8892bf)](https://www.php.net/supported-versions)
 [![Code Coverage](https://codecov.io/gh/mockery/mockery/branch/1.6.x/graph/badge.svg?token=oxHwVM56bT)](https://codecov.io/gh/mockery/mockery)
 [![Type Coverage](https://shepherd.dev/github/mockery/mockery/coverage.svg)](https://shepherd.dev/github/mockery/mockery)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 [![Latest Stable Version](https://poser.pugx.org/mockery/mockery/v/stable.svg)](https://packagist.org/packages/mockery/mockery)
@@ -174,7 +177,11 @@ If you have used Mockery before, you might see something new in the example
 above &mdash; we created a method expectation using `expects`, instead of the "old"
 `shouldReceive` syntax. This is a new feature of Mockery v1, but same as with
 <<<<<<< HEAD
+<<<<<<< HEAD
 `allows` in the previous section, it can be written in the "old" style.
+=======
+`accepts` in the previous section, it can be written in the "old" style.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 `accepts` in the previous section, it can be written in the "old" style.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -32,15 +32,21 @@ class NodeExtension extends AbstractExtension
     public const ATTRIBUTE_VALUE_IN_LOWER_CASE = 4;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private int $flags = 0,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $flags;
 
     public function __construct(int $flags = 0)
     {
         $this->flags = $flags;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -72,8 +78,11 @@ class NodeExtension extends AbstractExtension
             'CombinedSelector' => $this->translateCombinedSelector(...),
             'Negation' => $this->translateNegation(...),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Matching' => $this->translateMatching(...),
             'SpecificityAdjustment' => $this->translateSpecificityAdjustment(...),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'Function' => $this->translateFunction(...),
@@ -109,6 +118,7 @@ class NodeExtension extends AbstractExtension
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function translateMatching(Node\MatchingNode $node, Translator $translator): XPathExpr
     {
         $xpath = $translator->nodeToXPath($node->selector);
@@ -139,6 +149,8 @@ class NodeExtension extends AbstractExtension
         return $xpath;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function translateFunction(Node\FunctionNode $node, Translator $translator): XPathExpr

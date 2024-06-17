@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 1.0.3
 
 Add `source` link in composer.json. No code changes.
@@ -11,6 +12,8 @@ Add `source` link in composer.json. No code changes.
 
 Allow PSR-7 (psr/http-message) 2.0. No code changes.
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 1.0.1

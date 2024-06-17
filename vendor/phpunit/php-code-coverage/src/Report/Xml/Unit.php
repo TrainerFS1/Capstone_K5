@@ -42,7 +42,11 @@ final class Unit
         $node = $this->contextNode->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'namespace',
+=======
+            'namespace'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'namespace'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -53,8 +57,13 @@ final class Unit
                 $this->contextNode->ownerDocument->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'namespace',
                 ),
+=======
+                    'namespace'
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'namespace'
                 )
@@ -71,8 +80,13 @@ final class Unit
             $this->contextNode->ownerDocument->createElementNS(
                 'https://schema.phpunit.de/coverage/1.0',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'method',
             ),
+=======
+                'method'
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'method'
             )

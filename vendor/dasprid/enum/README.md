@@ -1,7 +1,11 @@
 # PHP 7.1 enums
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Build Status](https://github.com/DASPRiD/Enum/actions/workflows/tests.yml/badge.svg)](https://github.com/DASPRiD/Enum/actions?query=workflow%3Atests)
+=======
+[![Build Status](https://travis-ci.org/DASPRiD/Enum.svg?branch=master)](https://travis-ci.org/DASPRiD/Enum)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [![Build Status](https://travis-ci.org/DASPRiD/Enum.svg?branch=master)](https://travis-ci.org/DASPRiD/Enum)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -46,7 +50,11 @@ final class WeekDay extends AbstractEnum
     protected const SUNDAY = null;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
+=======
+``` 
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 ``` 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,24 +73,34 @@ function tellItLikeItIs(WeekDay $weekDay)
             echo 'Mondays are bad.';
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         case WeekDay::FRIDAY():
             echo 'Fridays are better.';
             break;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             
         case WeekDay::FRIDAY():
             echo 'Fridays are better.';
             break;
             
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         case WeekDay::SATURDAY():
         case WeekDay::SUNDAY():
             echo 'Weekends are best.';
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -128,7 +146,11 @@ final class Planet extends AbstractEnum
     protected const URANUS = [8.686e+25, 2.5559e7];
     protected const NEPTUNE = [1.024e+26, 2.4746e7];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -139,7 +161,11 @@ final class Planet extends AbstractEnum
      */
     private const G = 6.67300E-11;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -153,17 +179,23 @@ final class Planet extends AbstractEnum
     /**
      * Radius in meters.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @var float
      */
     private $radius;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *    
      * @var float
      */    
     private $radius;
     
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function __construct(float $mass, float $radius)
     {
@@ -171,7 +203,11 @@ final class Planet extends AbstractEnum
         $this->radius = $radius;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -180,6 +216,7 @@ final class Planet extends AbstractEnum
         return $this->mass;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function radius() : float
     {
@@ -187,19 +224,28 @@ final class Planet extends AbstractEnum
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     
     public function radius() : float
     {
         return $this->radius; 
     }
     
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function surfaceGravity() : float
     {
         return self::G * $this->mass / ($this->radius * $this->radius);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

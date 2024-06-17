@@ -99,7 +99,11 @@ class Arrays
 	public static function getKeyOffset(array $array, string|int $key): ?int
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return Helpers::falseToNull(array_search(self::toKey($key), array_keys($array), strict: true));
+=======
+		return Helpers::falseToNull(array_search(self::toKey($key), array_keys($array), true));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		return Helpers::falseToNull(array_search(self::toKey($key), array_keys($array), true));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -126,8 +130,12 @@ class Arrays
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * Returns the first item (matching the specified predicate if given). If there is no such item, it returns result of invoking $else or null.
 	 * The $predicate has the signature `function (mixed $value, int|string $key, array $array): bool`.
+=======
+	 * Returns the first item from the array or null if array is empty.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * Returns the first item from the array or null if array is empty.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -135,6 +143,7 @@ class Arrays
 	 * @param  array<T>  $array
 	 * @return ?T
 	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public static function first(array $array, ?callable $predicate = null, ?callable $else = null): mixed
 	{
@@ -147,13 +156,22 @@ class Arrays
 	{
 		return count($array) ? reset($array) : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+	public static function first(array $array): mixed
+	{
+		return count($array) ? reset($array) : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * Returns the last item (matching the specified predicate if given). If there is no such item, it returns result of invoking $else or null.
 	 * The $predicate has the signature `function (mixed $value, int|string $key, array $array): bool`.
+=======
+	 * Returns the last item from the array or null if array is empty.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * Returns the last item from the array or null if array is empty.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -161,6 +179,7 @@ class Arrays
 	 * @param  array<T>  $array
 	 * @return ?T
 	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public static function last(array $array, ?callable $predicate = null, ?callable $else = null): mixed
 	{
@@ -203,6 +222,11 @@ class Arrays
 	{
 		return count($array) ? end($array) : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+	public static function last(array $array): mixed
+	{
+		return count($array) ? end($array) : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
@@ -214,9 +238,15 @@ class Arrays
 	{
 		$offset = $key === null ? 0 : (int) self::getKeyOffset($array, $key);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$array = array_slice($array, 0, $offset, preserve_keys: true)
 			+ $inserted
 			+ array_slice($array, $offset, count($array), preserve_keys: true);
+=======
+		$array = array_slice($array, 0, $offset, true)
+			+ $inserted
+			+ array_slice($array, $offset, count($array), true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		$array = array_slice($array, 0, $offset, true)
 			+ $inserted
@@ -236,9 +266,15 @@ class Arrays
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$array = array_slice($array, 0, $offset + 1, preserve_keys: true)
 			+ $inserted
 			+ array_slice($array, $offset + 1, count($array), preserve_keys: true);
+=======
+		$array = array_slice($array, 0, $offset + 1, true)
+			+ $inserted
+			+ array_slice($array, $offset + 1, count($array), true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		$array = array_slice($array, 0, $offset + 1, true)
 			+ $inserted
@@ -292,7 +328,11 @@ class Arrays
 		$cb = $preserveKeys
 			? function ($v, $k) use (&$res): void { $res[$k] = $v; }
 <<<<<<< HEAD
+<<<<<<< HEAD
 			: function ($v) use (&$res): void { $res[] = $v; };
+=======
+		: function ($v) use (&$res): void { $res[] = $v; };
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		: function ($v) use (&$res): void { $res[] = $v; };
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -304,7 +344,10 @@ class Arrays
 	/**
 	 * Checks if the array is indexed in ascending order of numeric keys from zero, a.k.a list.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @return ($value is list ? true : false)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
@@ -412,6 +455,7 @@ class Arrays
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * Tests whether at least one element in the array passes the test implemented by the provided function,
 	 * which has the signature `function ($value, $key, array $array): bool`.
 	 * @template K
@@ -424,6 +468,8 @@ class Arrays
 		foreach ($array as $k => $v) {
 			if ($predicate($v, $k, $array)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * Tests whether at least one element in the array passes the test implemented by the
 	 * provided callback with signature `function ($value, $key, array $array): bool`.
 	 */
@@ -431,6 +477,9 @@ class Arrays
 	{
 		foreach ($array as $k => $v) {
 			if ($callback($v, $k, $array)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				return true;
 			}
@@ -444,6 +493,7 @@ class Arrays
 	 * Tests whether all elements in the array pass the test implemented by the provided function,
 	 * which has the signature `function ($value, $key, array $array): bool`.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @template K
 	 * @template V
 	 * @param  iterable<K, V> $array
@@ -454,11 +504,16 @@ class Arrays
 		foreach ($array as $k => $v) {
 			if (!$predicate($v, $k, $array)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function every(iterable $array, callable $callback): bool
 	{
 		foreach ($array as $k => $v) {
 			if (!$callback($v, $k, $array)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				return false;
 			}
@@ -469,6 +524,7 @@ class Arrays
 
 
 	/**
+<<<<<<< HEAD
 <<<<<<< HEAD
 	 * Returns a new array containing all key-value pairs matching the given $predicate.
 	 * The callback has the signature `function (mixed $value, int|string $key, array $array): bool`.
@@ -506,6 +562,8 @@ class Arrays
 		foreach ($array as $k => $v) {
 			$res[$k] = $transformer($v, $k, $array);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * Calls $callback on all elements in the array and returns the array of return values.
 	 * The callback has the signature `function ($value, $key, array $array): bool`.
 	 */
@@ -514,6 +572,9 @@ class Arrays
 		$res = [];
 		foreach ($array as $k => $v) {
 			$res[$k] = $callback($v, $k, $array);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 

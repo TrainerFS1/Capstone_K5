@@ -33,6 +33,7 @@ use SebastianBergmann\Complexity\CyclomaticComplexityCalculatingVisitor;
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @psalm-type CodeUnitFunctionType = array{
  *     name: string,
@@ -69,12 +70,18 @@ use SebastianBergmann\Complexity\CyclomaticComplexityCalculatingVisitor;
  * }
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-var array<string, CodeUnitClassType>
+=======
+     * @psalm-var array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-var array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -83,7 +90,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-var array<string, CodeUnitTraitType>
+=======
+     * @psalm-var array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-var array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -92,7 +103,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-var array<string, CodeUnitFunctionType>
+=======
+     * @psalm-var array<string,array{name: string, namespacedName: string, namespace: string, signature: string, startLine: int, endLine: int, ccn: int}>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-var array<string,array{name: string, namespacedName: string, namespace: string, signature: string, startLine: int, endLine: int, ccn: int}>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,7 +149,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return array<string, CodeUnitClassType>
+=======
+     * @psalm-return array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-return array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -146,7 +165,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return array<string, CodeUnitTraitType>
+=======
+     * @psalm-return array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-return array<string,array{name: string, namespacedName: string, namespace: string, startLine: int, endLine: int, methods: array<string,array{methodName: string, signature: string, visibility: string, startLine: int, endLine: int, ccn: int}>}>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,7 +181,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return array<string, CodeUnitFunctionType>
+=======
+     * @psalm-return array<string,array{name: string, namespacedName: string, namespace: string, signature: string, startLine: int, endLine: int, ccn: int}>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-return array<string,array{name: string, namespacedName: string, namespace: string, signature: string, startLine: int, endLine: int, ccn: int}>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,7 +248,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function type(ComplexType|Identifier|Name $type): string
+=======
+    private function type(Identifier|Name|ComplexType $type): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function type(Identifier|Name|ComplexType $type): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -231,12 +262,17 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($type instanceof UnionType) {
             return $this->unionTypeAsString($type);
         }
 
         if ($type instanceof IntersectionType) {
             return $this->intersectionTypeAsString($type);
+=======
+        if ($type instanceof UnionType || $type instanceof IntersectionType) {
+            return $this->unionOrIntersectionAsString($type);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($type instanceof UnionType || $type instanceof IntersectionType) {
             return $this->unionOrIntersectionAsString($type);
@@ -358,6 +394,7 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function unionTypeAsString(UnionType $node): string
     {
         $types = [];
@@ -394,6 +431,8 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
 
         return $node->toString();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @psalm-param UnionType|IntersectionType $type
      */
@@ -418,6 +457,9 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
         }
 
         return implode($separator, $types);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php declare(strict_types=1);
 
 namespace PhpParser;
@@ -9,6 +10,8 @@ use PhpParser\Node\Scalar;
 use function array_merge;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 <?php
 
 namespace PhpParser;
@@ -17,6 +20,9 @@ use function array_merge;
 use PhpParser\Node\Expr;
 use PhpParser\Node\Scalar;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Evaluates constant expressions.
@@ -38,8 +44,13 @@ use PhpParser\Node\Scalar;
  * affected by the LC_NUMERIC locale.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ConstExprEvaluator {
     /** @var callable|null */
+=======
+class ConstExprEvaluator
+{
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class ConstExprEvaluator
 {
@@ -55,8 +66,13 @@ class ConstExprEvaluator
      * @param callable|null $fallbackEvaluator To call if subexpression cannot be evaluated
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?callable $fallbackEvaluator = null) {
         $this->fallbackEvaluator = $fallbackEvaluator ?? function (Expr $expr) {
+=======
+    public function __construct(callable $fallbackEvaluator = null) {
+        $this->fallbackEvaluator = $fallbackEvaluator ?? function(Expr $expr) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(callable $fallbackEvaluator = null) {
         $this->fallbackEvaluator = $fallbackEvaluator ?? function(Expr $expr) {
@@ -86,7 +102,11 @@ class ConstExprEvaluator
      */
     public function evaluateSilently(Expr $expr) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         set_error_handler(function ($num, $str, $file, $line) {
+=======
+        set_error_handler(function($num, $str, $file, $line) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         set_error_handler(function($num, $str, $file, $line) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -128,10 +148,16 @@ class ConstExprEvaluator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return mixed */
     private function evaluate(Expr $expr) {
         if ($expr instanceof Scalar\Int_
             || $expr instanceof Scalar\Float_
+=======
+    private function evaluate(Expr $expr) {
+        if ($expr instanceof Scalar\LNumber
+            || $expr instanceof Scalar\DNumber
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function evaluate(Expr $expr) {
         if ($expr instanceof Scalar\LNumber
@@ -180,7 +206,11 @@ class ConstExprEvaluator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function evaluateArray(Expr\Array_ $expr): array {
+=======
+    private function evaluateArray(Expr\Array_ $expr) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function evaluateArray(Expr\Array_ $expr) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -198,7 +228,10 @@ class ConstExprEvaluator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return mixed */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function evaluateTernary(Expr\Ternary $expr) {
@@ -212,7 +245,10 @@ class ConstExprEvaluator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return mixed */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function evaluateBinaryOp(Expr\BinaryOp $expr) {
@@ -262,7 +298,10 @@ class ConstExprEvaluator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return mixed */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function evaluateConstFetch(Expr\ConstFetch $expr) {

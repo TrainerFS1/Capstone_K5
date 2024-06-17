@@ -36,7 +36,11 @@ final class Type
 			: $reflection->getType();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return $type ? self::fromReflectionType($type, $reflection, asObject: true) : null;
+=======
+		return $type ? self::fromReflectionType($type, $reflection, true) : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		return $type ? self::fromReflectionType($type, $reflection, true) : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -54,7 +58,11 @@ final class Type
 		} elseif ($type instanceof \ReflectionUnionType || $type instanceof \ReflectionIntersectionType) {
 			return new self(
 <<<<<<< HEAD
+<<<<<<< HEAD
 				array_map(fn($t) => self::fromReflectionType($t, $of, asObject: false), $type->getTypes()),
+=======
+				array_map(fn($t) => self::fromReflectionType($t, $of, false), $type->getTypes()),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 				array_map(fn($t) => self::fromReflectionType($t, $of, false), $type->getTypes()),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -104,10 +112,15 @@ final class Type
 		if ($of instanceof \ReflectionFunction) {
 			return $type;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		} elseif ($lower === 'self') {
 			return $of->getDeclaringClass()->name;
 		} elseif ($lower === 'static') {
 			return ($of instanceof ReflectionMethod ? $of->getOriginalClass() : $of->getDeclaringClass())->name;
+=======
+		} elseif ($lower === 'self' || $lower === 'static') {
+			return $of->getDeclaringClass()->name;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		} elseif ($lower === 'self' || $lower === 'static') {
 			return $of->getDeclaringClass()->name;
@@ -123,7 +136,11 @@ final class Type
 	private function __construct(array $types, string $kind = '|')
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$o = array_search('null', $types, strict: true);
+=======
+		$o = array_search('null', $types, true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		$o = array_search('null', $types, true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -278,7 +295,11 @@ final class Type
 				fn($subtype) => Validators::isBuiltinType($type)
 					? strcasecmp($type, $subtype) === 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 					: is_a($subtype, $type, allow_string: true)
+=======
+					: is_a($subtype, $type, true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 					: is_a($subtype, $type, true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

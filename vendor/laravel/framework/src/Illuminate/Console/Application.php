@@ -5,6 +5,11 @@ namespace Illuminate\Console;
 use Closure;
 use Illuminate\Console\Events\ArtisanStarting;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Illuminate\Console\Events\CommandFinished;
+use Illuminate\Console\Events\CommandStarting;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Console\Events\CommandFinished;
 use Illuminate\Console\Events\CommandStarting;
@@ -17,12 +22,15 @@ use Symfony\Component\Console\Application as SymfonyApplication;
 use Symfony\Component\Console\Command\Command as SymfonyCommand;
 use Symfony\Component\Console\Exception\CommandNotFoundException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputDefinition;
@@ -31,6 +39,9 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Output\OutputInterface;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Process\PhpExecutableFinder;
 
@@ -95,7 +106,10 @@ class Application extends SymfonyApplication implements ApplicationContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * {@inheritdoc}
      *
      * @return int
@@ -122,6 +136,9 @@ class Application extends SymfonyApplication implements ApplicationContract
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine the proper PHP executable.
      *
@@ -283,9 +300,13 @@ class Application extends SymfonyApplication implements ApplicationContract
     {
         if (is_subclass_of($command, SymfonyCommand::class) && ($commandName = $command::getDefaultName())) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             foreach (explode('|', $commandName) as $name) {
                 $this->commandMap[$name] = $command;
             }
+=======
+            $this->commandMap[$commandName] = $command;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->commandMap[$commandName] = $command;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

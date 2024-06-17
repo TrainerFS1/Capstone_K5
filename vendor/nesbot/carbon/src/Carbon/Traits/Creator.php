@@ -20,8 +20,11 @@ use Carbon\Exceptions\OutOfRangeException;
 use Carbon\Translator;
 use Closure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use DateMalformedStringException;
 use DateTimeImmutable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use DateTimeInterface;
@@ -118,7 +121,11 @@ trait Creator
 
             if ($safeTz) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return ($date instanceof DateTimeImmutable ? $date : clone $date)->setTimezone($safeTz);
+=======
+                return $date->setTimezone($safeTz);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return $date->setTimezone($safeTz);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,6 +201,7 @@ trait Creator
             return new static($time, $tz);
         } catch (Exception $exception) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // @codeCoverageIgnoreStart
             try {
                 $date = @static::now($tz)->change($time);
@@ -201,6 +209,9 @@ trait Creator
                 $date = null;
             }
             // @codeCoverageIgnoreEnd
+=======
+            $date = @static::now($tz)->change($time);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $date = @static::now($tz)->change($time);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -654,10 +665,13 @@ trait Creator
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($tz === false) {
             $tz = null;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // First attempt to create an instance, so that error messages are based on the unmodified format.
@@ -678,6 +692,7 @@ trait Creator
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $mock = $mock->copy();
 
             // Prepend mock datetime only if the format does not contain non escaped unix epoch reset flag.
@@ -687,12 +702,17 @@ trait Creator
                 }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // Set microseconds to zero to match behavior of DateTime::createFromFormat()
             // See https://bugs.php.net/bug.php?id=74332
             $mock = $mock->copy()->microsecond(0);
 
             // Prepend mock datetime only if the format does not contain non escaped unix epoch reset flag.
             if (!preg_match("/{$nonEscaped}[!|]/", $format)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $format = static::MOCK_DATETIME_FORMAT.' '.$format;
                 $time = ($mock instanceof self ? $mock->rawFormat(static::MOCK_DATETIME_FORMAT) : $mock->format(static::MOCK_DATETIME_FORMAT)).' '.$time;

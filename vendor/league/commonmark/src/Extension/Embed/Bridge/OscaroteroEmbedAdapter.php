@@ -15,7 +15,10 @@ namespace League\CommonMark\Extension\Embed\Bridge;
 
 use Embed\Embed as EmbedLib;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\MissingDependencyException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Extension\Embed\Embed;
@@ -30,7 +33,11 @@ final class OscaroteroEmbedAdapter implements EmbedAdapterInterface
         if ($embed === null) {
             if (! \class_exists(EmbedLib::class)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new MissingDependencyException('The embed/embed package is not installed. Please install it with Composer to use this adapter.');
+=======
+                throw new \RuntimeException('The embed/embed package is not installed. Please install it with Composer to use this adapter.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new \RuntimeException('The embed/embed package is not installed. Please install it with Composer to use this adapter.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -200,7 +200,11 @@ final class Utils
             $data = preg_replace_callback(
                 '/[\x80-\xFF]+/',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 function (array $m): string {
+=======
+                function ($m) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 function ($m) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

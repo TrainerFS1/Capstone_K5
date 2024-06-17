@@ -51,7 +51,11 @@ class ProgressIndicator
      * @param array|null $indicatorValues         Animated indicator characters
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(OutputInterface $output, ?string $format = null, int $indicatorChangeInterval = 100, ?array $indicatorValues = null)
+=======
+    public function __construct(OutputInterface $output, string $format = null, int $indicatorChangeInterval = 100, array $indicatorValues = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(OutputInterface $output, string $format = null, int $indicatorChangeInterval = 100, array $indicatorValues = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -75,8 +79,11 @@ class ProgressIndicator
     /**
      * Sets the current indicator message.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -90,8 +97,11 @@ class ProgressIndicator
     /**
      * Starts the indicator output.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -113,8 +123,11 @@ class ProgressIndicator
     /**
      * Advances the indicator.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -144,7 +157,11 @@ class ProgressIndicator
      * Finish the indicator with message.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
+=======
+     * @param $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -174,8 +191,11 @@ class ProgressIndicator
      *
      * This method also allow you to override an existing placeholder.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -197,7 +217,11 @@ class ProgressIndicator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function display(): void
+=======
+    private function display()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function display()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -230,7 +254,11 @@ class ProgressIndicator
      * Overwrites a previous message to the output.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function overwrite(string $message): void
+=======
+    private function overwrite(string $message)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function overwrite(string $message)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -255,11 +283,14 @@ class ProgressIndicator
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'indicator' => fn (self $indicator) => $indicator->indicatorValues[$indicator->indicatorCurrent % \count($indicator->indicatorValues)],
             'message' => fn (self $indicator) => $indicator->message,
             'elapsed' => fn (self $indicator) => Helper::formatTime(time() - $indicator->startTime, 2),
             'memory' => fn () => Helper::formatMemory(memory_get_usage(true)),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'indicator' => function (self $indicator) {
                 return $indicator->indicatorValues[$indicator->indicatorCurrent % \count($indicator->indicatorValues)];
             },
@@ -272,6 +303,9 @@ class ProgressIndicator
             'memory' => function () {
                 return Helper::formatMemory(memory_get_usage(true));
             },
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }

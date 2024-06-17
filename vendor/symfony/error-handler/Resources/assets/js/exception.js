@@ -2,6 +2,7 @@
    If you make any change in this file, verify the same change is needed in the other file. */
 /*<![CDATA[*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 (function() {
     "use strict";
 
@@ -303,6 +304,8 @@
     })();
 })();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (typeof Sfjs === 'undefined') {
     Sfjs = (function() {
         "use strict";
@@ -596,5 +599,8 @@ if (typeof Sfjs === 'undefined') {
         Sfjs.createFilters();
     });
 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /*]]>*/

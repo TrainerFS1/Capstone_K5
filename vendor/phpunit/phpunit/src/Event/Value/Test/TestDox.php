@@ -10,11 +10,17 @@
 namespace PHPUnit\Event\Code;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\TestData\MoreThanOneDataSetFromDataProviderException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Logging\TestDox\NamePrettifier;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * @psalm-immutable
@@ -28,8 +34,11 @@ final class TestDox
     private readonly string $prettifiedAndColorizedMethodName;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $prettifiedClassName, string $prettifiedMethodName, string $prettifiedAndColorizedMethodName)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @throws MoreThanOneDataSetFromDataProviderException
      */
@@ -60,6 +69,9 @@ final class TestDox
     }
 
     private function __construct(string $prettifiedClassName, string $prettifiedMethodName, string $prettifiedAndColorizedMethodName)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->prettifiedClassName              = $prettifiedClassName;

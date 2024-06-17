@@ -9,6 +9,7 @@ trait HasUuids
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Initialize the trait.
      *
      * @return void
@@ -27,6 +28,8 @@ trait HasUuids
     {
         return [$this->getKeyName()];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Generate a primary UUID for the model.
      *
      * @return void
@@ -40,6 +43,9 @@ trait HasUuids
                 }
             }
         });
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -55,7 +61,10 @@ trait HasUuids
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the columns that should receive a unique identifier.
      *
      * @return array
@@ -66,6 +75,9 @@ trait HasUuids
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Retrieve the model for a bound value.
      *

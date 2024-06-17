@@ -37,7 +37,11 @@ class ArrayConverter
 
         foreach ($messages as $id => $value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $referenceToElement = &self::getElementByPath($tree, self::getKeyParts($id));
+=======
+            $referenceToElement = &self::getElementByPath($tree, explode('.', $id));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $referenceToElement = &self::getElementByPath($tree, explode('.', $id));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,7 +55,11 @@ class ArrayConverter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function &getElementByPath(array &$tree, array $parts): mixed
+=======
+    private static function &getElementByPath(array &$tree, array $parts)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function &getElementByPath(array &$tree, array $parts)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -72,7 +80,10 @@ class ArrayConverter
                 break;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $parentOfElem = &$elem;
@@ -95,7 +106,11 @@ class ArrayConverter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function cancelExpand(array &$tree, string $prefix, array $node): void
+=======
+    private static function cancelExpand(array &$tree, string $prefix, array $node)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function cancelExpand(array &$tree, string $prefix, array $node)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -110,6 +125,7 @@ class ArrayConverter
             }
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -155,6 +171,8 @@ class ArrayConverter
 
         return $result;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

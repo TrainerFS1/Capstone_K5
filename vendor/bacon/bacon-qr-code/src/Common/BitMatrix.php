@@ -18,6 +18,7 @@ class BitMatrix
     /**
      * Width of the bit matrix.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     private int $width;
 
@@ -31,6 +32,8 @@ class BitMatrix
      */
     private int $rowSize;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @var int
      */
@@ -49,6 +52,9 @@ class BitMatrix
      * @var int
      */
     private $rowSize;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -57,7 +63,11 @@ class BitMatrix
      * @var SplFixedArray<int>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SplFixedArray $bits;
+=======
+    private $bits;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $bits;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +76,11 @@ class BitMatrix
      * @throws InvalidArgumentException if a dimension is smaller than zero
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(int $width, ?int $height = null)
+=======
+    public function __construct(int $width, int $height = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(int $width, int $height = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -162,7 +176,11 @@ class BitMatrix
      * A fast method to retrieve one row of data from the matrix as a BitArray.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getRow(int $y, ?BitArray $row = null) : BitArray
+=======
+    public function getRow(int $y, BitArray $row = null) : BitArray
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getRow(int $y, BitArray $row = null) : BitArray
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

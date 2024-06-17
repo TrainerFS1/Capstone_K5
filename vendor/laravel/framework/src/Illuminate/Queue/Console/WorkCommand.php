@@ -3,7 +3,10 @@
 namespace Illuminate\Queue\Console;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Carbon\CarbonInterval;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\Command;
@@ -19,7 +22,10 @@ use Illuminate\Support\Carbon;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Terminal;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function Termwind\terminal;
@@ -224,7 +230,11 @@ class WorkCommand extends Command
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $runTime = $this->formatRunTime($this->latestStartedAt);
+=======
+        $runTime = number_format((microtime(true) - $this->latestStartedAt) * 1000, 2).'ms';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $runTime = number_format((microtime(true) - $this->latestStartedAt) * 1000, 2).'ms';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -262,6 +272,7 @@ class WorkCommand extends Command
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Given a start time, format the total run time for human readability.
      *
      * @param  float  $startTime
@@ -277,6 +288,8 @@ class WorkCommand extends Command
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Store a failed job event.

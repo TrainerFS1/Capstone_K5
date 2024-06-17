@@ -16,7 +16,10 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Traits\Conditionable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Traits\Macroable;
@@ -30,7 +33,10 @@ use PHPUnit\Framework\ExpectationFailedException;
 use ReflectionProperty;
 use Symfony\Component\HttpFoundation\Cookie;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\StreamedJsonResponse;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -41,7 +47,11 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 class TestResponse implements ArrayAccess
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     use Concerns\AssertsStatusCodes, Conditionable, Tappable, Macroable {
+=======
+    use Concerns\AssertsStatusCodes, Tappable, Macroable {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     use Concerns\AssertsStatusCodes, Tappable, Macroable {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,6 +119,7 @@ class TestResponse implements ArrayAccess
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Assert that the Precognition request was successful.
      *
      * @return $this
@@ -132,6 +143,8 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert that the response is a server error.
@@ -159,7 +172,11 @@ class TestResponse implements ArrayAccess
         $message = $this->statusMessageWithDetails($status, $actual = $this->getStatusCode());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         PHPUnit::assertSame($status, $actual, $message);
+=======
+        PHPUnit::assertSame($actual, $status, $message);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         PHPUnit::assertSame($actual, $status, $message);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -236,13 +253,19 @@ class TestResponse implements ArrayAccess
         );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->assertLocation($uri);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $request = Request::create($this->headers->get('Location'));
 
         PHPUnit::assertEquals(
             app('url')->to($uri), $request->fullUrl()
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
@@ -336,7 +359,11 @@ class TestResponse implements ArrayAccess
     {
         PHPUnit::assertEquals(
 <<<<<<< HEAD
+<<<<<<< HEAD
             app('url')->to($uri), app('url')->to($this->headers->get('Location', ''))
+=======
+            app('url')->to($uri), app('url')->to($this->headers->get('Location'))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             app('url')->to($uri), app('url')->to($this->headers->get('Location'))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -354,7 +381,11 @@ class TestResponse implements ArrayAccess
     public function assertDownload($filename = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $contentDisposition = explode(';', $this->headers->get('content-disposition', ''));
+=======
+        $contentDisposition = explode(';', $this->headers->get('content-disposition'));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $contentDisposition = explode(';', $this->headers->get('content-disposition'));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -533,8 +564,12 @@ class TestResponse implements ArrayAccess
                     $cookie->isHttpOnly(),
                     $cookie->isRaw(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $cookie->getSameSite(),
                     $cookie->isPartitioned()
+=======
+                    $cookie->getSameSite()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $cookie->getSameSite()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -571,6 +606,7 @@ class TestResponse implements ArrayAccess
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Assert that the given array matches the streamed JSON response content.
      *
      * @param  array  $value
@@ -582,6 +618,8 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert that the given string or array of strings are contained within the response.
@@ -741,6 +779,7 @@ class TestResponse implements ArrayAccess
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Assert that the given path in the response contains all of the expected values without looking at the order.
      *
      * @param  string  $path
@@ -755,6 +794,8 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert that the response has the exact given JSON.
@@ -985,7 +1026,11 @@ class TestResponse implements ArrayAccess
      * Assert that the given key is a JSON array.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|null  $key
+=======
+     * @param $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1010,7 +1055,11 @@ class TestResponse implements ArrayAccess
      * Assert that the given key is a JSON object.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|null  $key
+=======
+     * @param $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1269,6 +1318,7 @@ class TestResponse implements ArrayAccess
         foreach (Arr::wrap($errors) as $key => $value) {
             PHPUnit::assertArrayHasKey(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $resolvedKey = (is_int($key)) ? $value : $key,
                 $sessionErrors,
                 "Failed to find a validation error in session for key: '{$resolvedKey}'".PHP_EOL.PHP_EOL.$errorMessage
@@ -1292,6 +1342,8 @@ class TestResponse implements ArrayAccess
                         );
                     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 (is_int($key)) ? $value : $key,
                 $sessionErrors,
                 "Failed to find a validation error in session for key: '{$value}'".PHP_EOL.PHP_EOL.$errorMessage
@@ -1312,6 +1364,9 @@ class TestResponse implements ArrayAccess
                     PHPUnit::fail(
                         "Failed to find a validation error for key and message: '$key' => '$value'".PHP_EOL.PHP_EOL.$errorMessage
                     );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
@@ -1651,8 +1706,12 @@ class TestResponse implements ArrayAccess
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $this->baseResponse instanceof StreamedResponse
             && ! $this->baseResponse instanceof StreamedJsonResponse) {
+=======
+        if (! $this->baseResponse instanceof StreamedResponse) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (! $this->baseResponse instanceof StreamedResponse) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1730,7 +1789,11 @@ class TestResponse implements ArrayAccess
     protected function appendExceptionToException($exceptionToAppend, $exception)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $exceptionMessage = is_string($exceptionToAppend) ? $exceptionToAppend : $exceptionToAppend->getMessage();
+=======
+        $exceptionMessage = $exceptionToAppend->getMessage();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $exceptionMessage = $exceptionToAppend->getMessage();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1762,7 +1825,11 @@ class TestResponse implements ArrayAccess
     {
         $errors = $json
 <<<<<<< HEAD
+<<<<<<< HEAD
             ? json_encode($errors, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
+=======
+            ? json_encode($errors, JSON_PRETTY_PRINT)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ? json_encode($errors, JSON_PRETTY_PRINT)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1794,6 +1861,11 @@ class TestResponse implements ArrayAccess
         $property = new ReflectionProperty($exception, 'message');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $property->setAccessible(true);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $property->setAccessible(true);
 

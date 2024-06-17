@@ -3,6 +3,7 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\PhpVersion;
 use PhpParser\Token;
 
@@ -24,6 +25,8 @@ final class AttributeEmulator extends TokenEmulator {
                 array_splice($tokens, $i, 2, [
                     new Token(\T_ATTRIBUTE, '#[', $token->line, $token->pos),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Lexer\Emulative;
 
 final class AttributeEmulator extends TokenEmulator
@@ -47,12 +50,21 @@ final class AttributeEmulator extends TokenEmulator
             if ($tokens[$i] === '#' && isset($tokens[$i + 1]) && $tokens[$i + 1] === '[') {
                 array_splice($tokens, $i, 2, [
                     [\T_ATTRIBUTE, '#[', $line]
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ]);
                 $c--;
                 continue;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            if (\is_array($tokens[$i])) {
+                $line += substr_count($tokens[$i][1], "\n");
+            }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (\is_array($tokens[$i])) {
                 $line += substr_count($tokens[$i][1], "\n");
@@ -64,7 +76,12 @@ final class AttributeEmulator extends TokenEmulator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reverseEmulate(string $code, array $tokens): array {
+=======
+    public function reverseEmulate(string $code, array $tokens): array
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function reverseEmulate(string $code, array $tokens): array
     {

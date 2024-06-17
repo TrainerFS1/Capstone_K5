@@ -8,7 +8,11 @@ use Illuminate\Routing\Contracts\ControllerDispatcher as ControllerDispatcherCon
 class ControllerDispatcher implements ControllerDispatcherContract
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     use FiltersControllerMiddleware, ResolvesRouteDependencies;
+=======
+    use RouteDependencyResolverTrait;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     use RouteDependencyResolverTrait;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -83,7 +87,10 @@ class ControllerDispatcher implements ControllerDispatcherContract
         })->pluck('middleware')->all();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Determine if the given options exclude a particular method.
@@ -97,5 +104,8 @@ class ControllerDispatcher implements ControllerDispatcherContract
         return (isset($options['only']) && ! in_array($method, (array) $options['only'])) ||
             (! empty($options['except']) && in_array($method, (array) $options['except']));
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

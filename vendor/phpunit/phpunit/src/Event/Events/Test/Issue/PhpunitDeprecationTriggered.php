@@ -25,6 +25,7 @@ final class PhpunitDeprecationTriggered implements Event
     private readonly Telemetry\Info $telemetryInfo;
     private readonly Test $test;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
@@ -34,6 +35,10 @@ final class PhpunitDeprecationTriggered implements Event
     /**
      * @psalm-param non-empty-string $message
      */
+=======
+    private readonly string $message;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private readonly string $message;
 
@@ -56,9 +61,12 @@ final class PhpunitDeprecationTriggered implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function message(): string
@@ -78,7 +86,11 @@ final class PhpunitDeprecationTriggered implements Event
             'Test Triggered PHPUnit Deprecation (%s)%s',
             $this->test->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

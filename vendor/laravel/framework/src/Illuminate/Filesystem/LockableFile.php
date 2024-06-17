@@ -3,6 +3,10 @@
 namespace Illuminate\Filesystem;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Exception;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Exception;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -71,13 +75,19 @@ class LockableFile
     protected function createResource($path, $mode)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->handle = fopen($path, $mode);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->handle = @fopen($path, $mode);
 
         if (! $this->handle) {
             throw new Exception('Unable to create lockable file: '.$path.'. Please ensure you have permission to create files in this location.');
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

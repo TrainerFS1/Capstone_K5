@@ -58,7 +58,11 @@ class FileLinkRead extends FileLink implements StreamIn
         string $streamName,
         string $mode = parent::MODE_READ,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?string $context = null,
+=======
+        string $context = null,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $context = null,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,7 +85,11 @@ class FileLinkRead extends FileLink implements StreamIn
      * @throws \Hoa\File\Exception
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function &_open(string $streamName, ?StreamContext $context = null)
+=======
+    protected function &_open(string $streamName, StreamContext $context = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function &_open(string $streamName, StreamContext $context = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -199,7 +207,11 @@ class FileLinkRead extends FileLink implements StreamIn
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function readArray(?string $format = null)
+=======
+    public function readArray(string $format = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function readArray(string $format = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

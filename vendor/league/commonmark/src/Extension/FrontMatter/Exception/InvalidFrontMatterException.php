@@ -14,9 +14,13 @@ declare(strict_types=1);
 namespace League\CommonMark\Extension\FrontMatter\Exception;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\CommonMarkException;
 
 class InvalidFrontMatterException extends \RuntimeException implements CommonMarkException
+=======
+class InvalidFrontMatterException extends \RuntimeException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class InvalidFrontMatterException extends \RuntimeException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

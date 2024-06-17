@@ -73,7 +73,11 @@ final class HtmlRenderer implements DocumentRendererInterface, ChildNodeRenderer
      * @return \Stringable|string
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws NoMatchingRendererException
+=======
+     * @throws \RuntimeException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \RuntimeException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -90,7 +94,11 @@ final class HtmlRenderer implements DocumentRendererInterface, ChildNodeRenderer
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         throw new NoMatchingRendererException('Unable to find corresponding renderer for node type ' . \get_class($node));
+=======
+        throw new \RuntimeException('Unable to find corresponding renderer for node type ' . \get_class($node));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         throw new \RuntimeException('Unable to find corresponding renderer for node type ' . \get_class($node));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

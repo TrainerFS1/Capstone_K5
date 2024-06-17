@@ -53,8 +53,13 @@ final class DirectDispatcher implements SubscribableDispatcher
                 sprintf(
                     'Subscriber "%s" does not implement any known interface - did you forget to register it?',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $subscriber::class,
                 ),
+=======
+                    $subscriber::class
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $subscriber::class
                 )
@@ -73,7 +78,10 @@ final class DirectDispatcher implements SubscribableDispatcher
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws Throwable
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws UnknownEventTypeException
@@ -87,8 +95,13 @@ final class DirectDispatcher implements SubscribableDispatcher
                 sprintf(
                     'Unknown event type "%s"',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $eventClassName,
                 ),
+=======
+                    $eventClassName
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $eventClassName
                 )
@@ -100,11 +113,17 @@ final class DirectDispatcher implements SubscribableDispatcher
             try {
                 $tracer->trace($event);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // @codeCoverageIgnoreStart
             } catch (Throwable $t) {
                 $this->handleThrowable($t);
             }
             // @codeCoverageIgnoreEnd
+=======
+            } catch (Throwable $t) {
+                $this->ignoreThrowablesFromThirdPartySubscribers($t);
+            }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } catch (Throwable $t) {
                 $this->ignoreThrowablesFromThirdPartySubscribers($t);
@@ -121,7 +140,11 @@ final class DirectDispatcher implements SubscribableDispatcher
                 $subscriber->notify($event);
             } catch (Throwable $t) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->handleThrowable($t);
+=======
+                $this->ignoreThrowablesFromThirdPartySubscribers($t);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->ignoreThrowablesFromThirdPartySubscribers($t);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -132,6 +155,7 @@ final class DirectDispatcher implements SubscribableDispatcher
     /**
      * @throws Throwable
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function handleThrowable(Throwable $t): void
     {
@@ -157,11 +181,16 @@ final class DirectDispatcher implements SubscribableDispatcher
     {
         return !str_starts_with($t->getFile(), dirname(__DIR__, 2));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function ignoreThrowablesFromThirdPartySubscribers(Throwable $t): void
     {
         if (str_starts_with($t->getFile(), dirname(__DIR__, 2))) {
             throw $t;
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

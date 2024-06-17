@@ -24,7 +24,10 @@ use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Console\Output\ConsoleSectionOutput;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Output\OutputInterface;
@@ -64,10 +67,15 @@ class SymfonyStyle extends OutputStyle
     /**
      * Formats a message as a block of text.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
     public function block(string|array $messages, ?string $type = null, ?string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = true)
+=======
+     */
+    public function block(string|array $messages, string $type = null, string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      */
     public function block(string|array $messages, string $type = null, string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = true)
@@ -81,9 +89,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function title(string $message)
@@ -97,9 +108,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function section(string $message)
@@ -113,6 +127,7 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
@@ -121,12 +136,17 @@ class SymfonyStyle extends OutputStyle
         $this->autoPrependText();
         $elements = array_map(fn ($element) => sprintf(' * %s', $element), $elements);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function listing(array $elements)
     {
         $this->autoPrependText();
         $elements = array_map(function ($element) {
             return sprintf(' * %s', $element);
         }, $elements);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->writeln($elements);
@@ -134,9 +154,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function text(string|array $message)
@@ -152,8 +175,11 @@ class SymfonyStyle extends OutputStyle
     /**
      * Formats a command comment.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -163,9 +189,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function success(string|array $message)
@@ -174,9 +203,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function error(string|array $message)
@@ -185,9 +217,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function warning(string|array $message)
@@ -196,9 +231,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function note(string|array $message)
@@ -209,8 +247,11 @@ class SymfonyStyle extends OutputStyle
     /**
      * Formats an info message.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -220,9 +261,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function caution(string|array $message)
@@ -231,9 +275,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function table(array $headers, array $rows)
@@ -250,8 +297,11 @@ class SymfonyStyle extends OutputStyle
     /**
      * Formats a horizontal table.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -275,8 +325,11 @@ class SymfonyStyle extends OutputStyle
      * * ['key' => 'value']
      * * new TableSeparator()
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -306,7 +359,11 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function ask(string $question, ?string $default = null, ?callable $validator = null): mixed
+=======
+    public function ask(string $question, string $default = null, callable $validator = null): mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function ask(string $question, string $default = null, callable $validator = null): mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -318,7 +375,11 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function askHidden(string $question, ?callable $validator = null): mixed
+=======
+    public function askHidden(string $question, callable $validator = null): mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function askHidden(string $question, callable $validator = null): mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -350,9 +411,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function progressStart(int $max = 0)
@@ -362,9 +426,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function progressAdvance(int $step = 1)
@@ -373,9 +440,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function progressFinish()
@@ -401,6 +471,7 @@ class SymfonyStyle extends OutputStyle
     /**
      * @see ProgressBar::iterate()
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @template TKey
      * @template TValue
@@ -411,6 +482,10 @@ class SymfonyStyle extends OutputStyle
      * @return iterable<TKey, TValue>
      */
     public function progressIterate(iterable $iterable, ?int $max = null): iterable
+=======
+     */
+    public function progressIterate(iterable $iterable, int $max = null): iterable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      */
     public function progressIterate(iterable $iterable, int $max = null): iterable
@@ -433,11 +508,14 @@ class SymfonyStyle extends OutputStyle
 
         if ($this->input->isInteractive()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($this->output instanceof ConsoleSectionOutput) {
                 // add the new line of the `return` to submit the input to ConsoleSectionOutput, because ConsoleSectionOutput is holding all it's lines.
                 // this is relevant when a `ConsoleSectionOutput::clear` is called.
                 $this->output->addNewLineOfInputSubmit();
             }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->newLine();
@@ -448,9 +526,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function writeln(string|iterable $messages, int $type = self::OUTPUT_NORMAL)
@@ -466,9 +547,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function write(string|iterable $messages, bool $newline = false, int $type = self::OUTPUT_NORMAL)
@@ -484,9 +568,12 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function newLine(int $count = 1)
@@ -536,7 +623,11 @@ class SymfonyStyle extends OutputStyle
         $fetched = $this->bufferedOutput->fetch();
         // Prepend new line if last char isn't EOL:
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($fetched && !str_ends_with($fetched, "\n")) {
+=======
+        if (!str_ends_with($fetched, "\n")) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!str_ends_with($fetched, "\n")) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -551,7 +642,11 @@ class SymfonyStyle extends OutputStyle
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function createBlock(iterable $messages, ?string $type = null, ?string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = false): array
+=======
+    private function createBlock(iterable $messages, string $type = null, string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = false): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function createBlock(iterable $messages, string $type = null, string $style = null, string $prefix = ' ', bool $padding = false, bool $escape = false): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

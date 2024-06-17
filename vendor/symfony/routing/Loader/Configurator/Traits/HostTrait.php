@@ -19,7 +19,11 @@ use Symfony\Component\Routing\RouteCollection;
 trait HostTrait
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     final protected function addHost(RouteCollection $routes, string|array $hosts): void
+=======
+    final protected function addHost(RouteCollection $routes, string|array $hosts)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final protected function addHost(RouteCollection $routes, string|array $hosts)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

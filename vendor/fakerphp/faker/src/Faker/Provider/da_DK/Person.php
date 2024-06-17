@@ -37,7 +37,11 @@ class Person extends \Faker\Provider\Person
      */
     protected static $firstNameMale = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Aage', 'Adam', 'Ahmad', 'Ahmed', 'Aksel', 'Albert', 'Alex', 'Alexander', 'Alf', 'Alfred', 'Ali', 'Allan',
+=======
+        'Aage', 'Adam', 'Adolf', 'Ahmad', 'Ahmed', 'Aksel', 'Albert', 'Alex', 'Alexander', 'Alf', 'Alfred', 'Ali', 'Allan',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'Aage', 'Adam', 'Adolf', 'Ahmad', 'Ahmed', 'Aksel', 'Albert', 'Alex', 'Alexander', 'Alf', 'Alfred', 'Ali', 'Allan',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

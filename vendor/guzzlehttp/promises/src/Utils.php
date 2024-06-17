@@ -1,8 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace GuzzleHttp\Promise;
@@ -23,15 +26,21 @@ final class Utils
      * </code>
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param TaskQueueInterface|null $assign Optionally specify a new queue instance.
      */
     public static function queue(TaskQueueInterface $assign = null): TaskQueueInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param TaskQueueInterface $assign Optionally specify a new queue instance.
      *
      * @return TaskQueueInterface
      */
     public static function queue(TaskQueueInterface $assign = null)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         static $queue;
@@ -51,6 +60,7 @@ final class Utils
      *
      * @param callable $task Task function to run.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function task(callable $task): PromiseInterface
     {
@@ -58,6 +68,8 @@ final class Utils
         $promise = new Promise([$queue, 'run']);
         $queue->add(function () use ($task, $promise): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
@@ -66,6 +78,9 @@ final class Utils
         $queue = self::queue();
         $promise = new Promise([$queue, 'run']);
         $queue->add(function () use ($task, $promise) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             try {
                 if (Is::pending($promise)) {
@@ -74,6 +89,11 @@ final class Utils
             } catch (\Throwable $e) {
                 $promise->reject($e);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            } catch (\Exception $e) {
+                $promise->reject($e);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } catch (\Exception $e) {
                 $promise->reject($e);
@@ -96,20 +116,30 @@ final class Utils
      *
      * @param PromiseInterface $promise Promise or value.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function inspect(PromiseInterface $promise): array
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array
      */
     public static function inspect(PromiseInterface $promise)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         try {
             return [
                 'state' => PromiseInterface::FULFILLED,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'value' => $promise->wait(),
+=======
+                'value' => $promise->wait()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'value' => $promise->wait()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -119,6 +149,11 @@ final class Utils
         } catch (\Throwable $e) {
             return ['state' => PromiseInterface::REJECTED, 'reason' => $e];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        } catch (\Exception $e) {
+            return ['state' => PromiseInterface::REJECTED, 'reason' => $e];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } catch (\Exception $e) {
             return ['state' => PromiseInterface::REJECTED, 'reason' => $e];
@@ -136,6 +171,7 @@ final class Utils
      *
      * @param PromiseInterface[] $promises Traversable of promises to wait upon.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function inspectAll($promises): array
     {
@@ -143,6 +179,8 @@ final class Utils
         foreach ($promises as $key => $promise) {
             $results[$key] = self::inspect($promise);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array
      */
@@ -151,6 +189,9 @@ final class Utils
         $results = [];
         foreach ($promises as $key => $promise) {
             $results[$key] = inspect($promise);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -167,16 +208,22 @@ final class Utils
      * @param iterable<PromiseInterface> $promises Iterable of PromiseInterface objects to wait on.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws \Throwable on error
      */
     public static function unwrap($promises): array
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array
      *
      * @throws \Exception on error
      * @throws \Throwable on error in PHP >=7
      */
     public static function unwrap($promises)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $results = [];
@@ -198,35 +245,50 @@ final class Utils
      * @param mixed $promises  Promises or values.
      * @param bool  $recursive If true, resolves new promises that might have been added to the stack during its own resolution.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function all($promises, bool $recursive = false): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
     public static function all($promises, $recursive = false)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $results = [];
         $promise = Each::of(
             $promises,
 <<<<<<< HEAD
+<<<<<<< HEAD
             function ($value, $idx) use (&$results): void {
                 $results[$idx] = $value;
             },
             function ($reason, $idx, Promise $aggregate): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             function ($value, $idx) use (&$results) {
                 $results[$idx] = $value;
             },
             function ($reason, $idx, Promise $aggregate) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $aggregate->reject($reason);
             }
         )->then(function () use (&$results) {
             ksort($results);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $results;
@@ -240,7 +302,10 @@ final class Utils
                     }
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $results;
@@ -264,13 +329,19 @@ final class Utils
      * @param int   $count    Total number of promises.
      * @param mixed $promises Promises or values.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function some(int $count, $promises): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
     public static function some($count, $promises)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $results = [];
@@ -279,7 +350,11 @@ final class Utils
         return Each::of(
             $promises,
 <<<<<<< HEAD
+<<<<<<< HEAD
             function ($value, $idx, PromiseInterface $p) use (&$results, $count): void {
+=======
+            function ($value, $idx, PromiseInterface $p) use (&$results, $count) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             function ($value, $idx, PromiseInterface $p) use (&$results, $count) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -292,7 +367,11 @@ final class Utils
                 }
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             function ($reason) use (&$rejections): void {
+=======
+            function ($reason) use (&$rejections) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             function ($reason) use (&$rejections) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -308,7 +387,10 @@ final class Utils
                 }
                 ksort($results);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return array_values($results);
@@ -322,13 +404,19 @@ final class Utils
      *
      * @param mixed $promises Promises or values.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function any($promises): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
     public static function any($promises)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return self::some(1, $promises)->then(function ($values) {
@@ -346,13 +434,19 @@ final class Utils
      *
      * @param mixed $promises Promises or values.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function settle($promises): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
     public static function settle($promises)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $results = [];
@@ -360,22 +454,31 @@ final class Utils
         return Each::of(
             $promises,
 <<<<<<< HEAD
+<<<<<<< HEAD
             function ($value, $idx) use (&$results): void {
                 $results[$idx] = ['state' => PromiseInterface::FULFILLED, 'value' => $value];
             },
             function ($reason, $idx) use (&$results): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             function ($value, $idx) use (&$results) {
                 $results[$idx] = ['state' => PromiseInterface::FULFILLED, 'value' => $value];
             },
             function ($reason, $idx) use (&$results) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $results[$idx] = ['state' => PromiseInterface::REJECTED, 'reason' => $reason];
             }
         )->then(function () use (&$results) {
             ksort($results);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $results;

@@ -112,7 +112,11 @@ class Command
      * @throws LogicException When the command name is empty
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $name = null)
+=======
+    public function __construct(string $name = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -146,8 +150,11 @@ class Command
      *
      * This is mainly useful for the help command.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -157,10 +164,14 @@ class Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function setApplication(?Application $application = null)
+=======
+    public function setApplication(Application $application = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setApplication(Application $application = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -179,9 +190,12 @@ class Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setHelperSet(HelperSet $helperSet)
@@ -221,8 +235,11 @@ class Command
     /**
      * Configures the current command.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -256,8 +273,11 @@ class Command
      * This means that this is the only place where the command can
      * interactively ask for values of missing required arguments.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -275,8 +295,11 @@ class Command
      * @see InputInterface::bind()
      * @see InputInterface::validate()
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -416,7 +439,11 @@ class Command
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function mergeApplicationDefinition(bool $mergeArgs = true): void
+=======
+    public function mergeApplicationDefinition(bool $mergeArgs = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function mergeApplicationDefinition(bool $mergeArgs = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -488,7 +515,11 @@ class Command
      * @throws InvalidArgumentException When argument mode is not valid
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addArgument(string $name, ?int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
+=======
+    public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -516,7 +547,11 @@ class Command
      * @throws InvalidArgumentException If option mode is invalid or incompatible
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addOption(string $name, string|array|null $shortcut = null, ?int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
+=======
+    public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -752,7 +787,11 @@ class Command
      * @throws InvalidArgumentException When the name is invalid
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function validateName(string $name): void
+=======
+    private function validateName(string $name)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function validateName(string $name)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

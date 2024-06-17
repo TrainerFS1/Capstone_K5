@@ -7,7 +7,10 @@ use Illuminate\Support\Env;
 use Illuminate\Support\HigherOrderTapProxy;
 use Illuminate\Support\Optional;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Sleep;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
@@ -95,7 +98,11 @@ if (! function_exists('class_uses_recursive')) {
         $results = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach (array_reverse(class_parents($class) ?: []) + [$class => $class] as $class) {
+=======
+        foreach (array_reverse(class_parents($class)) + [$class => $class] as $class) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         foreach (array_reverse(class_parents($class)) + [$class => $class] as $class) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,7 +136,11 @@ if (! function_exists('e')) {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return htmlspecialchars($value ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8', $doubleEncode);
+=======
+        return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8', $doubleEncode);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8', $doubleEncode);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -266,7 +277,11 @@ if (! function_exists('retry')) {
 
             if ($sleepMilliseconds) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Sleep::usleep(value($sleepMilliseconds, $attempts, $e) * 1000);
+=======
+                usleep(value($sleepMilliseconds, $attempts, $e) * 1000);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 usleep(value($sleepMilliseconds, $attempts, $e) * 1000);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -330,6 +345,7 @@ if (! function_exists('throw_if')) {
      * Throw the given exception if the given condition is true.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TException of \Throwable
      *
      * @param  mixed  $condition
@@ -339,12 +355,17 @@ if (! function_exists('throw_if')) {
      *
      * @throws TException
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  mixed  $condition
      * @param  \Throwable|string  $exception
      * @param  mixed  ...$parameters
      * @return mixed
      *
      * @throws \Throwable
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     function throw_if($condition, $exception = 'RuntimeException', ...$parameters)
@@ -366,6 +387,7 @@ if (! function_exists('throw_unless')) {
      * Throw the given exception unless the given condition is true.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TException of \Throwable
      *
      * @param  mixed  $condition
@@ -375,12 +397,17 @@ if (! function_exists('throw_unless')) {
      *
      * @throws TException
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  mixed  $condition
      * @param  \Throwable|string  $exception
      * @param  mixed  ...$parameters
      * @return mixed
      *
      * @throws \Throwable
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     function throw_unless($condition, $exception = 'RuntimeException', ...$parameters)
@@ -396,7 +423,11 @@ if (! function_exists('trait_uses_recursive')) {
      * Returns all traits used by a trait and its traits.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  object|string  $trait
+=======
+     * @param  string  $trait
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $trait
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

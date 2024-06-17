@@ -13,7 +13,10 @@ namespace Symfony\Component\HttpKernel\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\DependencyInjection\Attribute\AutowireCallable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\DependencyInjection\Attribute\Target;
@@ -38,9 +41,12 @@ use Symfony\Component\VarExporter\ProxyHelper;
 class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function process(ContainerBuilder $container)
@@ -52,7 +58,10 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
         $parameterBag = $container->getParameterBag();
         $controllers = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         $controllerClasses = [];
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -69,7 +78,10 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
             $def = $container->getDefinition($id);
             $def->setPublic(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $def->setLazy(false);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $class = $def->getClass();
@@ -89,8 +101,11 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $controllerClasses[] = $class;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // get regular public methods
@@ -148,8 +163,11 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
                     $invalidBehavior = ContainerInterface::IGNORE_ON_INVALID_REFERENCE;
                     $autowireAttributes = $autowire ? $emptyAutowireAttributes : [];
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $parsedName = $p->name;
                     $k = null;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -163,11 +181,15 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
                             $invalidBehavior = ContainerInterface::NULL_ON_INVALID_REFERENCE;
                         }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     } elseif (isset($bindings[$bindingName = $type.' $'.$name = Target::parseName($p, $k, $parsedName)])
                         || isset($bindings[$bindingName = $type.' $'.$parsedName])
                         || isset($bindings[$bindingName = '$'.$name])
                         || isset($bindings[$bindingName = $type])
                     ) {
+=======
+                    } elseif (isset($bindings[$bindingName = $type.' $'.$name = Target::parseName($p)]) || isset($bindings[$bindingName = '$'.$name]) || isset($bindings[$bindingName = $type])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     } elseif (isset($bindings[$bindingName = $type.' $'.$name = Target::parseName($p)]) || isset($bindings[$bindingName = '$'.$name]) || isset($bindings[$bindingName = $type])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -180,7 +202,11 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
 
                         continue;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     } elseif (!$autowire || (!($autowireAttributes ??= $p->getAttributes(Autowire::class, \ReflectionAttribute::IS_INSTANCEOF)) && (!$type || '\\' !== $target[0]))) {
+=======
+                    } elseif (!$autowire || (!($autowireAttributes ??= $p->getAttributes(Autowire::class)) && (!$type || '\\' !== $target[0]))) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     } elseif (!$autowire || (!($autowireAttributes ??= $p->getAttributes(Autowire::class)) && (!$type || '\\' !== $target[0]))) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -198,12 +224,16 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
 
                     if ($autowireAttributes) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $attribute = $autowireAttributes[0]->newInstance();
                         $value = $parameterBag->resolveValue($attribute->value);
 
                         if ($attribute instanceof AutowireCallable) {
                             $value = $attribute->buildDefinition($value, $type, $p);
                         }
+=======
+                        $value = $autowireAttributes[0]->newInstance()->value;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $value = $autowireAttributes[0]->newInstance()->value;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -262,11 +292,14 @@ class RegisterControllerArgumentLocatorsPass implements CompilerPassInterface
 
         $container->setAlias('argument_resolver.controller_locator', (string) $controllerLocatorRef);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if ($container->hasDefinition('controller_resolver')) {
             $container->getDefinition('controller_resolver')
                 ->addMethodCall('allowControllers', [array_unique($controllerClasses)]);
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }

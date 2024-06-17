@@ -94,7 +94,11 @@ final class Query
                 $v = is_bool($v) ? (int) $v : $v;
                 if ($v !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $qs .= '='.$encoder((string) $v);
+=======
+                    $qs .= '=' . $encoder((string) $v);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $qs .= '=' . $encoder((string) $v);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -106,7 +110,11 @@ final class Query
                     $vv = is_bool($vv) ? (int) $vv : $vv;
                     if ($vv !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $qs .= '='.$encoder((string) $vv);
+=======
+                        $qs .= '=' . $encoder((string) $vv);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $qs .= '=' . $encoder((string) $vv);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

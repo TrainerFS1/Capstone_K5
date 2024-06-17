@@ -28,6 +28,7 @@ class Authorize
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Specify the ability and models for the middleware.
      *
      * @param  string  $ability
@@ -40,6 +41,8 @@ class Authorize
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an incoming request.
@@ -90,15 +93,21 @@ class Authorize
         if ($this->isClassName($model)) {
             return trim($model);
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
         return $request->route($model, null) ??
             ((preg_match("/^['\"](.*)['\"]$/", trim($model), $matches)) ? $matches[1] : null);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $request->route($model, null) ??
                 ((preg_match("/^['\"](.*)['\"]$/", trim($model), $matches)) ? $matches[1] : null);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

@@ -4,11 +4,17 @@ namespace Illuminate\Database\Eloquent\Concerns;
 
 use Illuminate\Contracts\Events\Dispatcher;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Events\NullDispatcher;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use ReflectionClass;
+=======
+use Illuminate\Events\NullDispatcher;
+use Illuminate\Support\Arr;
+use InvalidArgumentException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Events\NullDispatcher;
 use Illuminate\Support\Arr;
@@ -37,6 +43,7 @@ trait HasEvents
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Boot the has event trait for a model.
      *
      * @return void
@@ -62,6 +69,8 @@ trait HasEvents
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Register observers with the model.

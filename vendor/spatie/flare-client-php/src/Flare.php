@@ -3,6 +3,10 @@
 namespace Spatie\FlareClient;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Closure;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Closure;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -12,8 +16,11 @@ use Exception;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Pipeline\Pipeline;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\Backtrace\Arguments\ArgumentReducers;
 use Spatie\Backtrace\Arguments\Reducers\ArgumentReducer;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\FlareClient\Concerns\HasContext;
@@ -29,7 +36,10 @@ use Spatie\FlareClient\Glows\Glow;
 use Spatie\FlareClient\Glows\GlowRecorder;
 use Spatie\FlareClient\Http\Client;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\FlareClient\Support\PhpStackFrameArgumentsFixer;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
@@ -52,7 +62,11 @@ class Flare
     protected ContextProviderDetector $contextDetector;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected mixed $previousExceptionHandler = null;
+=======
+    protected ?Closure $previousExceptionHandler = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected ?Closure $previousExceptionHandler = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -78,11 +92,14 @@ class Flare
     protected ?Container $container = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null */
     protected null|array|ArgumentReducers $argumentReducers = null;
 
     protected bool $withStackFrameArguments = true;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function make(
@@ -156,6 +173,7 @@ class Flare
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null $argumentReducers */
     public function argumentReducers(null|array|ArgumentReducers $argumentReducers): self
     {
@@ -179,6 +197,8 @@ class Flare
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function version(): ?string
     {
         if (! $this->determineVersionCallable) {
@@ -197,7 +217,11 @@ class Flare
         Client $client,
         ContextProviderDetector $contextDetector = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
         array $middleware = [],
+=======
+        array $middleware = []
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         array $middleware = []
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -243,6 +267,10 @@ class Flare
     public function registerExceptionHandler(): self
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        /** @phpstan-ignore-next-line */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         /** @phpstan-ignore-next-line */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -252,11 +280,17 @@ class Flare
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function registerErrorHandler(?int $errorLevels = null): self
     {
         $this->previousErrorHandler = $errorLevels
             ? set_error_handler([$this, 'handleError'], $errorLevels)
             : set_error_handler([$this, 'handleError']);
+=======
+    public function registerErrorHandler(): self
+    {
+        $this->previousErrorHandler = set_error_handler([$this, 'handleError']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function registerErrorHandler(): self
     {
@@ -276,7 +310,11 @@ class Flare
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware>|callable $middleware
+=======
+     * @param FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware> $middleware
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware> $middleware
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -324,7 +362,11 @@ class Flare
         $this->report($throwable);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->previousExceptionHandler && is_callable($this->previousExceptionHandler)) {
+=======
+        if ($this->previousExceptionHandler) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->previousExceptionHandler) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -345,8 +387,13 @@ class Flare
             return call_user_func(
                 $this->previousErrorHandler,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $code,
                 $message,
+=======
+                $message,
+                $code,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message,
                 $code,
@@ -365,7 +412,11 @@ class Flare
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function report(Throwable $throwable, callable $callback = null, Report $report = null, ?bool $handled = null): ?Report
+=======
+    public function report(Throwable $throwable, callable $callback = null, Report $report = null): ?Report
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function report(Throwable $throwable, callable $callback = null, Report $report = null): ?Report
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -377,10 +428,13 @@ class Flare
         $report ??= $this->createReport($throwable);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($handled) {
             $report->handled();
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! is_null($callback)) {
@@ -394,6 +448,7 @@ class Flare
         return $report;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function reportHandled(Throwable $throwable): ?Report
     {
@@ -413,6 +468,8 @@ class Flare
         if ($this->filterExceptionsCallable && $throwable instanceof Exception) {
             return (bool) (call_user_func($this->filterExceptionsCallable, $throwable));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function shouldSendReport(Throwable $throwable): bool
     {
         if (isset($this->reportErrorLevels) && $throwable instanceof Error) {
@@ -425,6 +482,9 @@ class Flare
 
         if ($this->filterExceptionsCallable && $throwable instanceof Exception) {
             return (bool)(call_user_func($this->filterExceptionsCallable, $throwable));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -505,9 +565,13 @@ class Flare
             $this->contextDetector->detectCurrentContext(),
             $this->applicationPath,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->version(),
             $this->argumentReducers,
             $this->withStackFrameArguments
+=======
+            $this->version()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->version()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -523,9 +587,13 @@ class Flare
             $logLevel,
             $this->contextDetector->detectCurrentContext(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->applicationPath,
             $this->argumentReducers,
             $this->withStackFrameArguments
+=======
+            $this->applicationPath
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->applicationPath
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -544,7 +612,10 @@ class Flare
         }, $this->middleware);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $report = (new Pipeline())

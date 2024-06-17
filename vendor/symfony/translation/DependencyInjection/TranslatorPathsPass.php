@@ -17,7 +17,10 @@ use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ServiceLocator;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -27,8 +30,11 @@ use Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResol
 class TranslatorPathsPass extends AbstractRecursivePass
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected bool $skipScalars = true;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $level = 0;
@@ -49,9 +55,12 @@ class TranslatorPathsPass extends AbstractRecursivePass
     private array $controllers = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function process(ContainerBuilder $container)
@@ -136,6 +145,7 @@ class TranslatorPathsPass extends AbstractRecursivePass
     private function findControllerArguments(ContainerBuilder $container): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$container->has('argument_resolver.service')) {
             return [];
         }
@@ -152,6 +162,8 @@ class TranslatorPathsPass extends AbstractRecursivePass
 
         return $argument->getArgument(0);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($container->hasDefinition('argument_resolver.service')) {
             $argument = $container->getDefinition('argument_resolver.service')->getArgument(0);
             if ($argument instanceof Reference) {
@@ -175,6 +187,9 @@ class TranslatorPathsPass extends AbstractRecursivePass
         }
 
         return [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

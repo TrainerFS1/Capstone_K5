@@ -11,10 +11,13 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\confirm;
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\suggest;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'make:controller')]
@@ -147,7 +150,11 @@ class ControllerMakeCommand extends GeneratorCommand
 
         if (! class_exists($parentModelClass) &&
 <<<<<<< HEAD
+<<<<<<< HEAD
             confirm("A {$parentModelClass} model does not exist. Do you want to generate it?", default: true)) {
+=======
+            $this->components->confirm("A {$parentModelClass} model does not exist. Do you want to generate it?", true)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->components->confirm("A {$parentModelClass} model does not exist. Do you want to generate it?", true)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -178,7 +185,11 @@ class ControllerMakeCommand extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! class_exists($modelClass) && confirm("A {$modelClass} model does not exist. Do you want to generate it?", default: true)) {
+=======
+        if (! class_exists($modelClass) && $this->components->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (! class_exists($modelClass) && $this->components->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -318,6 +329,7 @@ class ControllerMakeCommand extends GeneratorCommand
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $type = select('Which type of controller would you like?', [
             'empty' => 'Empty',
             'resource' => 'Resource',
@@ -326,6 +338,8 @@ class ControllerMakeCommand extends GeneratorCommand
             'invokable' => 'Invokable',
         ]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $type = $this->components->choice('Which type of controller would you like', [
             'empty',
             'api',
@@ -333,6 +347,9 @@ class ControllerMakeCommand extends GeneratorCommand
             'resource',
             'singleton',
         ], default: 0);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($type !== 'empty') {
@@ -341,6 +358,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
         if (in_array($type, ['api', 'resource', 'singleton'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $model = suggest(
                 "What model should this $type controller be for? (Optional)",
                 $this->possibleModels()
@@ -348,6 +366,8 @@ class ControllerMakeCommand extends GeneratorCommand
 
             if ($model) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $model = $this->components->askWithCompletion(
                 "What model should this $type controller be for?",
                 $this->possibleModels(),
@@ -355,6 +375,9 @@ class ControllerMakeCommand extends GeneratorCommand
             );
 
             if ($model && $model !== 'none') {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $input->setOption('model', $model);
             }

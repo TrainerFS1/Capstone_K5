@@ -8,7 +8,10 @@ use Doctrine\DBAL\Schema\Index;
 use Doctrine\DBAL\Types\DecimalType;
 use Illuminate\Contracts\Container\BindingResolutionException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -111,14 +114,20 @@ class ShowModelCommand extends DatabaseInspectionCommand
     protected function getPolicy($model)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $policy = Gate::getPolicyFor($model::class);
 
         return $policy ? $policy::class : null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return collect(Gate::policies())
             ->filter(fn ($policy, $modelClass) => $modelClass === get_class($model))
             ->values()
             ->first();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -170,7 +179,11 @@ class ShowModelCommand extends DatabaseInspectionCommand
                 fn (ReflectionMethod $method) => $method->isStatic()
                     || $method->isAbstract()
 <<<<<<< HEAD
+<<<<<<< HEAD
                     || $method->getDeclaringClass()->getName() === Model::class
+=======
+                    || $method->getDeclaringClass()->getName() !== get_class($model)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     || $method->getDeclaringClass()->getName() !== get_class($model)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -214,7 +227,11 @@ class ShowModelCommand extends DatabaseInspectionCommand
                 fn (ReflectionMethod $method) => $method->isStatic()
                     || $method->isAbstract()
 <<<<<<< HEAD
+<<<<<<< HEAD
                     || $method->getDeclaringClass()->getName() === Model::class
+=======
+                    || $method->getDeclaringClass()->getName() !== get_class($model)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     || $method->getDeclaringClass()->getName() !== get_class($model)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

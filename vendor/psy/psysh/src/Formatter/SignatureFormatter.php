@@ -12,7 +12,12 @@
 namespace Psy\Formatter;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Psy\Reflection\ReflectionConstant;
+=======
+use Psy\Reflection\ReflectionClassConstant;
+use Psy\Reflection\ReflectionConstant_;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Psy\Reflection\ReflectionClassConstant;
 use Psy\Reflection\ReflectionConstant_;
@@ -43,16 +48,22 @@ class SignatureFormatter implements ReflectorFormatter
                 return self::formatFunction($reflector);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             case $reflector instanceof \ReflectionClass:
                 // this case also covers \ReflectionObject
                 return self::formatClass($reflector);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // this case also covers \ReflectionObject:
             case $reflector instanceof \ReflectionClass:
                 return self::formatClass($reflector);
 
             case $reflector instanceof ReflectionClassConstant:
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             case $reflector instanceof \ReflectionClassConstant:
                 return self::formatClassConstant($reflector);
@@ -64,7 +75,11 @@ class SignatureFormatter implements ReflectorFormatter
                 return self::formatProperty($reflector);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             case $reflector instanceof ReflectionConstant:
+=======
+            case $reflector instanceof ReflectionConstant_:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             case $reflector instanceof ReflectionConstant_:
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -79,7 +94,11 @@ class SignatureFormatter implements ReflectorFormatter
      * Print the signature name.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param \ReflectionClass|\ReflectionClassConstant|\ReflectionFunctionAbstract $reflector
+=======
+     * @param \ReflectionClass|ReflectionClassConstant|\ReflectionClassConstant|\ReflectionFunctionAbstract $reflector
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param \ReflectionClass|ReflectionClassConstant|\ReflectionClassConstant|\ReflectionFunctionAbstract $reflector
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -150,7 +169,11 @@ class SignatureFormatter implements ReflectorFormatter
      * Format a constant signature.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param \ReflectionClassConstant $reflector
+=======
+     * @param ReflectionClassConstant|\ReflectionClassConstant $reflector
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param ReflectionClassConstant|\ReflectionClassConstant $reflector
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -175,17 +198,23 @@ class SignatureFormatter implements ReflectorFormatter
      * Format a constant signature.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param ReflectionConstant $reflector
      *
      * @return string Formatted signature
      */
     private static function formatConstant(ReflectionConstant $reflector): string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param ReflectionConstant_ $reflector
      *
      * @return string Formatted signature
      */
     private static function formatConstant(ReflectionConstant_ $reflector): string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $value = $reflector->getValue();
@@ -266,7 +295,11 @@ class SignatureFormatter implements ReflectorFormatter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return \sprintf(': %s', self::formatReflectionType($reflector->getReturnType(), true));
+=======
+        return \sprintf(': %s', self::formatReflectionType($reflector->getReturnType()));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return \sprintf(': %s', self::formatReflectionType($reflector->getReturnType()));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -303,9 +336,13 @@ class SignatureFormatter implements ReflectorFormatter
             try {
                 if (\method_exists($param, 'getType')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     // Only include the inquisitive nullable type iff param default value is not null.
                     $defaultIsNull = $param->isOptional() && $param->isDefaultValueAvailable() && $param->getDefaultValue() === null;
                     $hint = self::formatReflectionType($param->getType(), !$defaultIsNull);
+=======
+                    $hint = self::formatReflectionType($param->getType());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $hint = self::formatReflectionType($param->getType());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -365,7 +402,11 @@ class SignatureFormatter implements ReflectorFormatter
      * @param \ReflectionType $type
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function formatReflectionType(?\ReflectionType $type, bool $indicateNullable): string
+=======
+    private static function formatReflectionType(\ReflectionType $type = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function formatReflectionType(\ReflectionType $type = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -374,6 +415,7 @@ class SignatureFormatter implements ReflectorFormatter
             return '';
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($type instanceof \ReflectionUnionType) {
             $delimeter = '|';
@@ -401,6 +443,8 @@ class SignatureFormatter implements ReflectorFormatter
 
         return \sprintf('<%s>%s%s</%s>', $typeStyle, $nullable, OutputFormatter::escape($type->getName()), $typeStyle);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $types = $type instanceof \ReflectionUnionType ? $type->getTypes() : [$type];
         $formattedTypes = [];
 
@@ -415,6 +459,9 @@ class SignatureFormatter implements ReflectorFormatter
         }
 
         return \implode('|', $formattedTypes);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -134,6 +134,7 @@ trait ReplacesAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Replace all place-holders for the extensions rule.
      *
      * @param  string  $message
@@ -148,6 +149,8 @@ trait ReplacesAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Replace all place-holders for the min rule.
@@ -235,10 +238,14 @@ trait ReplacesAttributes
     protected function replaceMissingUnless($message, $attribute, $rule, $parameters)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return str_replace([':other', ':value'], [
             $this->getDisplayableAttribute($parameters[0]),
             $this->getDisplayableValue($parameters[0], $parameters[1]),
         ], $message);
+=======
+        return $this->replaceMissingIf($message, $attribute, $rule, $parameters);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->replaceMissingIf($message, $attribute, $rule, $parameters);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -380,6 +387,7 @@ trait ReplacesAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Replace all place-holders for the present_if rule.
      *
      * @param  string  $message
@@ -442,6 +450,8 @@ trait ReplacesAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Replace all place-holders for the required_with rule.

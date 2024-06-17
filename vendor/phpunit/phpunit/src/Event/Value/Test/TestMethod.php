@@ -12,10 +12,13 @@ namespace PHPUnit\Event\Code;
 use function assert;
 use function is_int;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function sprintf;
 use PHPUnit\Event\TestData\TestDataCollection;
 use PHPUnit\Metadata\MetadataCollection;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function is_numeric;
 use function sprintf;
 use PHPUnit\Event\TestData\DataFromDataProvider;
@@ -27,6 +30,9 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Metadata\MetadataCollection;
 use PHPUnit\Util\Reflection;
 use SebastianBergmann\Exporter\Exporter;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
@@ -46,10 +52,13 @@ final class TestMethod extends Test
      */
     private readonly string $methodName;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly int $line;
@@ -59,11 +68,14 @@ final class TestMethod extends Test
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
      * @psalm-param non-empty-string $file
      * @psalm-param non-negative-int $line
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws MoreThanOneDataSetFromDataProviderException
      */
     public static function fromTestCase(TestCase $testCase): self
@@ -88,6 +100,9 @@ final class TestMethod extends Test
     /**
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(string $className, string $methodName, string $file, int $line, TestDox $testDox, MetadataCollection $metadata, TestDataCollection $testData)
@@ -119,9 +134,12 @@ final class TestMethod extends Test
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function line(): int
@@ -154,7 +172,11 @@ final class TestMethod extends Test
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return non-empty-string
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -172,7 +194,11 @@ final class TestMethod extends Test
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return non-empty-string
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -184,7 +210,11 @@ final class TestMethod extends Test
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return non-empty-string
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -201,7 +231,11 @@ final class TestMethod extends Test
             $dataSetName = sprintf(
                 ' with data set #%d',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $dataSetName,
+=======
+                $dataSetName
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $dataSetName
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -210,7 +244,11 @@ final class TestMethod extends Test
             $dataSetName = sprintf(
                 ' with data set "%s"',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $dataSetName,
+=======
+                $dataSetName
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $dataSetName
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -220,7 +258,10 @@ final class TestMethod extends Test
         return $this->methodName . $dataSetName;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @throws MoreThanOneDataSetFromDataProviderException
@@ -250,5 +291,8 @@ final class TestMethod extends Test
 
         return TestDataCollection::fromArray($testData);
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

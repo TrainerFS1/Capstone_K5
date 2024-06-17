@@ -3,6 +3,7 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NodeTraverser implements NodeTraverserInterface {
     /**
      * @deprecated Use NodeVisitor::DONT_TRAVERSE_CHILDREN instead.
@@ -38,6 +39,8 @@ class NodeTraverser implements NodeTraverserInterface {
     public function __construct(NodeVisitor ...$visitors) {
         $this->visitors = $visitors;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class NodeTraverser implements NodeTraverserInterface
 {
     /**
@@ -83,6 +86,9 @@ class NodeTraverser implements NodeTraverserInterface
 
     public function __construct() {
         // for BC
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -92,7 +98,11 @@ class NodeTraverser implements NodeTraverserInterface
      * @param NodeVisitor $visitor Visitor to add
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addVisitor(NodeVisitor $visitor): void {
+=======
+    public function addVisitor(NodeVisitor $visitor) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addVisitor(NodeVisitor $visitor) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -102,12 +112,15 @@ class NodeTraverser implements NodeTraverserInterface
     /**
      * Removes an added visitor.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function removeVisitor(NodeVisitor $visitor): void {
         $index = array_search($visitor, $this->visitors);
         if ($index !== false) {
             array_splice($this->visitors, $index, 1, []);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param NodeVisitor $visitor
      */
@@ -117,6 +130,9 @@ class NodeTraverser implements NodeTraverserInterface
                 unset($this->visitors[$index]);
                 break;
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
@@ -129,7 +145,11 @@ class NodeTraverser implements NodeTraverserInterface
      * @return Node[] Traversed array of nodes
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function traverse(array $nodes): array {
+=======
+    public function traverse(array $nodes) : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function traverse(array $nodes) : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -144,8 +164,12 @@ class NodeTraverser implements NodeTraverserInterface
         $nodes = $this->traverseArray($nodes);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         for ($i = \count($this->visitors) - 1; $i >= 0; --$i) {
             $visitor = $this->visitors[$i];
+=======
+        foreach ($this->visitors as $visitor) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         foreach ($this->visitors as $visitor) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -162,6 +186,7 @@ class NodeTraverser implements NodeTraverserInterface
      *
      * @param Node $node Node to traverse.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     protected function traverseNode(Node $node): void {
         foreach ($node->getSubNodeNames() as $name) {
@@ -170,6 +195,8 @@ class NodeTraverser implements NodeTraverserInterface
             if (\is_array($subNode)) {
                 $node->$name = $this->traverseArray($subNode);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return Node Result of traversal (may be original node or new one)
      */
@@ -179,6 +206,9 @@ class NodeTraverser implements NodeTraverserInterface
 
             if (\is_array($subNode)) {
                 $subNode = $this->traverseArray($subNode);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($this->stopTraversal) {
                     break;
@@ -186,7 +216,11 @@ class NodeTraverser implements NodeTraverserInterface
             } elseif ($subNode instanceof Node) {
                 $traverseChildren = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $visitorIndex = -1;
+=======
+                $breakVisitorIndex = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $breakVisitorIndex = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -196,6 +230,7 @@ class NodeTraverser implements NodeTraverserInterface
                     if (null !== $return) {
                         if ($return instanceof Node) {
                             $this->ensureReplacementReasonable($subNode, $return);
+<<<<<<< HEAD
 <<<<<<< HEAD
                             $subNode = $node->$name = $return;
                         } elseif (NodeVisitor::DONT_TRAVERSE_CHILDREN === $return) {
@@ -210,6 +245,8 @@ class NodeTraverser implements NodeTraverserInterface
                             $node->$name = null;
                             continue 2;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $subNode = $return;
                         } elseif (self::DONT_TRAVERSE_CHILDREN === $return) {
                             $traverseChildren = false;
@@ -220,6 +257,9 @@ class NodeTraverser implements NodeTraverserInterface
                         } elseif (self::STOP_TRAVERSAL === $return) {
                             $this->stopTraversal = true;
                             break 2;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         } else {
                             throw new \LogicException(
@@ -231,7 +271,11 @@ class NodeTraverser implements NodeTraverserInterface
 
                 if ($traverseChildren) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->traverseNode($subNode);
+=======
+                    $subNode = $this->traverseNode($subNode);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $subNode = $this->traverseNode($subNode);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -241,8 +285,12 @@ class NodeTraverser implements NodeTraverserInterface
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 for (; $visitorIndex >= 0; --$visitorIndex) {
                     $visitor = $this->visitors[$visitorIndex];
+=======
+                foreach ($this->visitors as $visitorIndex => $visitor) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 foreach ($this->visitors as $visitorIndex => $visitor) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -252,6 +300,7 @@ class NodeTraverser implements NodeTraverserInterface
                         if ($return instanceof Node) {
                             $this->ensureReplacementReasonable($subNode, $return);
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $subNode = $node->$name = $return;
                         } elseif (NodeVisitor::STOP_TRAVERSAL === $return) {
                             $this->stopTraversal = true;
@@ -260,10 +309,15 @@ class NodeTraverser implements NodeTraverserInterface
                             $node->$name = null;
                             break;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $subNode = $return;
                         } elseif (self::STOP_TRAVERSAL === $return) {
                             $this->stopTraversal = true;
                             break 2;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         } elseif (\is_array($return)) {
                             throw new \LogicException(
@@ -277,10 +331,13 @@ class NodeTraverser implements NodeTraverserInterface
                         }
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 }
             }
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     if ($breakVisitorIndex === $visitorIndex) {
                         break;
@@ -290,6 +347,9 @@ class NodeTraverser implements NodeTraverserInterface
         }
 
         return $node;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -301,6 +361,7 @@ class NodeTraverser implements NodeTraverserInterface
      * @return array Result of traversal (may be original array or changed one)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function traverseArray(array $nodes): array {
         $doNodes = [];
 
@@ -309,6 +370,8 @@ class NodeTraverser implements NodeTraverserInterface
                 $traverseChildren = true;
                 $visitorIndex = -1;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function traverseArray(array $nodes) : array {
         $doNodes = [];
 
@@ -316,6 +379,9 @@ class NodeTraverser implements NodeTraverserInterface
             if ($node instanceof Node) {
                 $traverseChildren = true;
                 $breakVisitorIndex = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 foreach ($this->visitors as $visitorIndex => $visitor) {
@@ -323,6 +389,7 @@ class NodeTraverser implements NodeTraverserInterface
                     if (null !== $return) {
                         if ($return instanceof Node) {
                             $this->ensureReplacementReasonable($node, $return);
+<<<<<<< HEAD
 <<<<<<< HEAD
                             $nodes[$i] = $node = $return;
                         } elseif (\is_array($return)) {
@@ -343,6 +410,8 @@ class NodeTraverser implements NodeTraverserInterface
                             throw new \LogicException(
                                 'REPLACE_WITH_NULL can not be used if the parent structure is an array');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $node = $return;
                         } elseif (self::DONT_TRAVERSE_CHILDREN === $return) {
                             $traverseChildren = false;
@@ -353,6 +422,9 @@ class NodeTraverser implements NodeTraverserInterface
                         } elseif (self::STOP_TRAVERSAL === $return) {
                             $this->stopTraversal = true;
                             break 2;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         } else {
                             throw new \LogicException(
@@ -364,7 +436,11 @@ class NodeTraverser implements NodeTraverserInterface
 
                 if ($traverseChildren) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->traverseNode($node);
+=======
+                    $node = $this->traverseNode($node);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $node = $this->traverseNode($node);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -374,8 +450,12 @@ class NodeTraverser implements NodeTraverserInterface
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 for (; $visitorIndex >= 0; --$visitorIndex) {
                     $visitor = $this->visitors[$visitorIndex];
+=======
+                foreach ($this->visitors as $visitorIndex => $visitor) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 foreach ($this->visitors as $visitorIndex => $visitor) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -384,6 +464,7 @@ class NodeTraverser implements NodeTraverserInterface
                     if (null !== $return) {
                         if ($return instanceof Node) {
                             $this->ensureReplacementReasonable($node, $return);
+<<<<<<< HEAD
 <<<<<<< HEAD
                             $nodes[$i] = $node = $return;
                         } elseif (\is_array($return)) {
@@ -399,6 +480,8 @@ class NodeTraverser implements NodeTraverserInterface
                             throw new \LogicException(
                                 'REPLACE_WITH_NULL can not be used if the parent structure is an array');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $node = $return;
                         } elseif (\is_array($return)) {
                             $doNodes[] = [$i, $return];
@@ -414,6 +497,9 @@ class NodeTraverser implements NodeTraverserInterface
                                 'bool(false) return from leaveNode() no longer supported. ' .
                                 'Return NodeTraverser::REMOVE_NODE instead'
                             );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         } else {
                             throw new \LogicException(
@@ -422,11 +508,17 @@ class NodeTraverser implements NodeTraverserInterface
                         }
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     if ($breakVisitorIndex === $visitorIndex) {
                         break;
                     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             } elseif (\is_array($node)) {
@@ -444,7 +536,11 @@ class NodeTraverser implements NodeTraverserInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function ensureReplacementReasonable(Node $old, Node $new): void {
+=======
+    private function ensureReplacementReasonable($old, $new) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function ensureReplacementReasonable($old, $new) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

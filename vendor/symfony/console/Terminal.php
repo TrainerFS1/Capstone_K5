@@ -124,6 +124,7 @@ class Terminal
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // skip check if shell_exec function is disabled
         if (!\function_exists('shell_exec')) {
             return false;
@@ -138,6 +139,8 @@ class Terminal
             $ansicon = getenv('ANSICON');
             if (false !== $ansicon && preg_match('/^(\d+)x(\d+)(?: \((\d+)x(\d+)\))?$/', trim($ansicon), $matches)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // skip check if exec function is disabled
         if (!\function_exists('exec')) {
             return false;
@@ -152,6 +155,9 @@ class Terminal
     {
         if ('\\' === \DIRECTORY_SEPARATOR) {
             if (preg_match('/^(\d+)x(\d+)(?: \((\d+)x(\d+)\))?$/', trim(getenv('ANSICON')), $matches)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // extract [w, H] from "wxh (WxH)"
                 // or [w, h] from "wxh"
@@ -183,7 +189,11 @@ class Terminal
      * Initializes dimensions using the output of an stty columns line.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function initDimensionsUsingStty(): void
+=======
+    private static function initDimensionsUsingStty()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function initDimensionsUsingStty()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -237,8 +247,11 @@ class Terminal
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $cp = \function_exists('sapi_windows_cp_set') ? sapi_windows_cp_get() : 0;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $process = proc_open($command, $descriptorspec, $pipes, null, null, ['suppress_errors' => true]);
@@ -252,10 +265,13 @@ class Terminal
         proc_close($process);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($cp) {
             sapi_windows_cp_set($cp);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $info;

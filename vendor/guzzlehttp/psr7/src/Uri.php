@@ -26,7 +26,11 @@ class Uri implements UriInterface, \JsonSerializable
 
     private const DEFAULT_PORTS = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'http' => 80,
+=======
+        'http'  => 80,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'http'  => 80,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -46,7 +50,11 @@ class Uri implements UriInterface, \JsonSerializable
      * Unreserved characters for use in a regex.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-2.3
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-2.3
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-2.3
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,7 +65,11 @@ class Uri implements UriInterface, \JsonSerializable
      * Sub-delims for use in a regex.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-2.2
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-2.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-2.2
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -100,7 +112,10 @@ class Uri implements UriInterface, \JsonSerializable
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -138,7 +153,11 @@ class Uri implements UriInterface, \JsonSerializable
         );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $result = parse_url($prefix.$encodedUrl);
+=======
+        $result = parse_url($prefix . $encodedUrl);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $result = parse_url($prefix . $encodedUrl);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -182,7 +201,11 @@ class Uri implements UriInterface, \JsonSerializable
      * that format).
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-5.3
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-5.3
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-5.3
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,6 +217,7 @@ class Uri implements UriInterface, \JsonSerializable
         // weak type checks to also accept null until we can add scalar type hints
         if ($scheme != '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $uri .= $scheme.':';
         }
 
@@ -204,6 +228,8 @@ class Uri implements UriInterface, \JsonSerializable
         if ($authority != '' && $path != '' && $path[0] != '/') {
             $path = '/'.$path;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $uri .= $scheme . ':';
         }
 
@@ -213,6 +239,9 @@ class Uri implements UriInterface, \JsonSerializable
 
         if ($authority != '' && $path != '' && $path[0] != '/') {
             $path = '/' . $path;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -220,17 +249,23 @@ class Uri implements UriInterface, \JsonSerializable
 
         if ($query != '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $uri .= '?'.$query;
         }
 
         if ($fragment != '') {
             $uri .= '#'.$fragment;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $uri .= '?' . $query;
         }
 
         if ($fragment != '') {
             $uri .= '#' . $fragment;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -263,7 +298,11 @@ class Uri implements UriInterface, \JsonSerializable
      * @see Uri::isAbsolutePathReference
      * @see Uri::isRelativePathReference
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-4
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-4
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-4
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -279,7 +318,11 @@ class Uri implements UriInterface, \JsonSerializable
      * A relative reference that begins with two slash characters is termed an network-path reference.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-4.2
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-4.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-4.2
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -295,7 +338,11 @@ class Uri implements UriInterface, \JsonSerializable
      * A relative reference that begins with a single slash character is termed an absolute-path reference.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-4.2
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-4.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-4.2
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -314,7 +361,11 @@ class Uri implements UriInterface, \JsonSerializable
      * A relative reference that does not begin with a slash character is termed a relative-path reference.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-4.2
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-4.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-4.2
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -337,7 +388,11 @@ class Uri implements UriInterface, \JsonSerializable
      * @param UriInterface|null $base An optional base URI to compare against
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-4.4
+=======
+     * @link https://tools.ietf.org/html/rfc3986#section-4.4
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://tools.ietf.org/html/rfc3986#section-4.4
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -400,8 +455,13 @@ class Uri implements UriInterface, \JsonSerializable
      * It has the same behavior as withQueryValue() but for an associative array of key => value.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param UriInterface    $uri           URI to use as a base.
      * @param (string|null)[] $keyValueArray Associative array of key and values
+=======
+     * @param UriInterface               $uri           URI to use as a base.
+     * @param array<string, string|null> $keyValueArray Associative array of key and values
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param UriInterface               $uri           URI to use as a base.
      * @param array<string, string|null> $keyValueArray Associative array of key and values
@@ -422,7 +482,11 @@ class Uri implements UriInterface, \JsonSerializable
      * Creates a URI from a hash of `parse_url` components.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://www.php.net/manual/en/function.parse-url.php
+=======
+     * @link http://php.net/manual/en/function.parse-url.php
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link http://php.net/manual/en/function.parse-url.php
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -448,17 +512,23 @@ class Uri implements UriInterface, \JsonSerializable
         $authority = $this->host;
         if ($this->userInfo !== '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $authority = $this->userInfo.'@'.$authority;
         }
 
         if ($this->port !== null) {
             $authority .= ':'.$this->port;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $authority = $this->userInfo . '@' . $authority;
         }
 
         if ($this->port !== null) {
             $authority .= ':' . $this->port;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -517,7 +587,11 @@ class Uri implements UriInterface, \JsonSerializable
         $info = $this->filterUserInfoComponent($user);
         if ($password !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $info .= ':'.$this->filterUserInfoComponent($password);
+=======
+            $info .= ':' . $this->filterUserInfoComponent($password);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $info .= ':' . $this->filterUserInfoComponent($password);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -649,7 +723,11 @@ class Uri implements UriInterface, \JsonSerializable
             : '';
         if (isset($parts['pass'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->userInfo .= ':'.$this->filterUserInfoComponent($parts['pass']);
+=======
+            $this->userInfo .= ':' . $this->filterUserInfoComponent($parts['pass']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->userInfo .= ':' . $this->filterUserInfoComponent($parts['pass']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -685,7 +763,11 @@ class Uri implements UriInterface, \JsonSerializable
 
         return preg_replace_callback(
 <<<<<<< HEAD
+<<<<<<< HEAD
             '/(?:[^%'.self::CHAR_UNRESERVED.self::CHAR_SUB_DELIMS.']+|%(?![A-Fa-f0-9]{2}))/',
+=======
+            '/(?:[^%' . self::CHAR_UNRESERVED . self::CHAR_SUB_DELIMS . ']+|%(?![A-Fa-f0-9]{2}))/',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             '/(?:[^%' . self::CHAR_UNRESERVED . self::CHAR_SUB_DELIMS . ']+|%(?![A-Fa-f0-9]{2}))/',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -721,7 +803,11 @@ class Uri implements UriInterface, \JsonSerializable
 
         $port = (int) $port;
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (0 > $port || 0xFFFF < $port) {
+=======
+        if (0 > $port || 0xffff < $port) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (0 > $port || 0xffff < $port) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -735,7 +821,11 @@ class Uri implements UriInterface, \JsonSerializable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param (string|int)[] $keys
+=======
+     * @param string[] $keys
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string[] $keys
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -751,9 +841,13 @@ class Uri implements UriInterface, \JsonSerializable
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $decodedKeys = array_map(function ($k): string {
             return rawurldecode((string) $k);
         }, $keys);
+=======
+        $decodedKeys = array_map('rawurldecode', $keys);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $decodedKeys = array_map('rawurldecode', $keys);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -772,7 +866,11 @@ class Uri implements UriInterface, \JsonSerializable
 
         if ($value !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $queryString .= '='.strtr($value, self::QUERY_SEPARATORS_REPLACEMENT);
+=======
+            $queryString .= '=' . strtr($value, self::QUERY_SEPARATORS_REPLACEMENT);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $queryString .= '=' . strtr($value, self::QUERY_SEPARATORS_REPLACEMENT);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -803,7 +901,11 @@ class Uri implements UriInterface, \JsonSerializable
 
         return preg_replace_callback(
 <<<<<<< HEAD
+<<<<<<< HEAD
             '/(?:[^'.self::CHAR_UNRESERVED.self::CHAR_SUB_DELIMS.'%:@\/]++|%(?![A-Fa-f0-9]{2}))/',
+=======
+            '/(?:[^' . self::CHAR_UNRESERVED . self::CHAR_SUB_DELIMS . '%:@\/]++|%(?![A-Fa-f0-9]{2}))/',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             '/(?:[^' . self::CHAR_UNRESERVED . self::CHAR_SUB_DELIMS . '%:@\/]++|%(?![A-Fa-f0-9]{2}))/',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -827,7 +929,11 @@ class Uri implements UriInterface, \JsonSerializable
 
         return preg_replace_callback(
 <<<<<<< HEAD
+<<<<<<< HEAD
             '/(?:[^'.self::CHAR_UNRESERVED.self::CHAR_SUB_DELIMS.'%:@\/\?]++|%(?![A-Fa-f0-9]{2}))/',
+=======
+            '/(?:[^' . self::CHAR_UNRESERVED . self::CHAR_SUB_DELIMS . '%:@\/\?]++|%(?![A-Fa-f0-9]{2}))/',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             '/(?:[^' . self::CHAR_UNRESERVED . self::CHAR_SUB_DELIMS . '%:@\/\?]++|%(?![A-Fa-f0-9]{2}))/',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

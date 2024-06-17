@@ -10,6 +10,10 @@
 namespace PHPUnit\TestRunner\TestResult;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -22,6 +26,12 @@ use PHPUnit\Event\TestSuite\FinishedSubscriber;
 final class TestSuiteFinishedSubscriber extends Subscriber implements FinishedSubscriber
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws NoDataSetFromDataProviderException
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws NoDataSetFromDataProviderException

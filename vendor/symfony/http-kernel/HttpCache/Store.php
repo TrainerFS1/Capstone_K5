@@ -56,8 +56,11 @@ class Store implements StoreInterface
     /**
      * Cleanups storage.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -199,7 +202,11 @@ class Store implements StoreInterface
                 throw new \RuntimeException('X-Body-File and X-Content-Digest do not match.');
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Everything seems ok, omit writing content to disk
+=======
+            // Everything seems ok, omit writing content to disk
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             // Everything seems ok, omit writing content to disk
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -257,8 +264,11 @@ class Store implements StoreInterface
      * Invalidates all cache entries that match the request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \RuntimeException
@@ -428,9 +438,12 @@ class Store implements StoreInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getPath(string $key)
@@ -488,6 +501,7 @@ class Store implements StoreInterface
      * Restores a Response from the HTTP headers and body.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function restoreResponse(array $headers, ?string $path = null): ?Response
     {
         $status = $headers['X-Status'][0];
@@ -509,6 +523,8 @@ class Store implements StoreInterface
 
         return new Response($content, $status, $headers);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function restoreResponse(array $headers, string $path = null): Response
     {
         $status = $headers['X-Status'][0];
@@ -519,6 +535,9 @@ class Store implements StoreInterface
         }
 
         return new Response($path, $status, $headers);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

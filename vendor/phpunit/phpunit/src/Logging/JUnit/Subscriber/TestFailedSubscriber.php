@@ -13,6 +13,10 @@ use PHPUnit\Event\InvalidArgumentException;
 use PHPUnit\Event\Test\Failed;
 use PHPUnit\Event\Test\FailedSubscriber;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -25,6 +29,10 @@ final class TestFailedSubscriber extends Subscriber implements FailedSubscriber
     /**
      * @throws InvalidArgumentException
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws NoDataSetFromDataProviderException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws NoDataSetFromDataProviderException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

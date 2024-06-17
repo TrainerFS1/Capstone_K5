@@ -100,6 +100,7 @@ class Address extends \Faker\Provider\Address
      */
     protected static $street = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         '1 Maja', '3 Maja', '11 Listopada', 'Agrestowa', 'Akacjowa', 'Andersa', 'Armii Krajowej',
         'Asnyka', 'Astrów', 'Azaliowa', 'Baczyńskiego', 'Bałtycka', 'Barlickiego', 'Batalionów Chłopskich',
         'Batorego', 'Bema', 'Beskidzka', 'Białostocka', 'Bielska', 'Bieszczadzka', 'Błękitna',
@@ -192,6 +193,8 @@ class Address extends \Faker\Provider\Address
         'Żeglarska', 'Żelazna', 'Żeromskiego', 'Żniwna', 'Żołnierska', 'Żółkiewskiego',
         'Żurawia', 'Żwirki i Wigury', 'Żwirowa', 'Żytnia',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         '1 Maja', '3 Maja', '11 Listopada', 'Agrestowa', 'Akacjowa', 'Andersa Władysława', 'Armii Krajowej',
         'Asnyka Adama', 'Astrów', 'Azaliowa', 'Baczyńskiego Krzysztofa Kamila', 'Bałtycka',
         'Barlickiego Norberta', 'Batalionów Chłopskich', 'Batorego Stefana', 'Bema Józefa',
@@ -287,6 +290,9 @@ class Address extends \Faker\Provider\Address
         'Żeglarska', 'Żelazna', 'Żeromskiego Stefana', 'Żniwna', 'Żołnierska', 'Żółkiewskiego Stanisława',
         'Żurawia', 'Żwirki Franciszka i Wigury Stanisława', 'Żwirki i Wigury', 'Żwirowa',
         'Żytnia',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 

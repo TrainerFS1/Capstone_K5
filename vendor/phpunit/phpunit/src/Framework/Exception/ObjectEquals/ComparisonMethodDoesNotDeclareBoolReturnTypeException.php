@@ -10,6 +10,10 @@
 namespace PHPUnit\Framework;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use const PHP_EOL;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use const PHP_EOL;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -27,11 +31,14 @@ final class ComparisonMethodDoesNotDeclareBoolReturnTypeException extends Except
                 'Comparison method %s::%s() does not declare bool return type.',
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $methodName,
             ),
         );
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $methodName
             )
         );
@@ -41,5 +48,8 @@ final class ComparisonMethodDoesNotDeclareBoolReturnTypeException extends Except
     {
         return $this->getMessage() . PHP_EOL;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

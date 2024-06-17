@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,6 +28,9 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -34,7 +40,10 @@ class MultiArgumentClosure extends MatcherAbstract implements ArgumentListMatche
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Check if the actual value matches the expected.
      * Actual passed by reference to preserve reference trail (where applicable)
      * back to the original method parameter.
@@ -49,6 +58,9 @@ class MultiArgumentClosure extends MatcherAbstract implements ArgumentListMatche
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return a string representation of this Matcher
      *
@@ -58,6 +70,7 @@ class MultiArgumentClosure extends MatcherAbstract implements ArgumentListMatche
     {
         return '<MultiArgumentClosure===true>';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -75,6 +88,8 @@ class MultiArgumentClosure extends MatcherAbstract implements ArgumentListMatche
     {
         return ($this->_expected)(...$actual) === true;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

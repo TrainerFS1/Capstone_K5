@@ -15,9 +15,13 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- Theme style -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+=======
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -30,8 +34,12 @@
 <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script> -->
 <script src="{{ asset('js/app.js') }}"></script>
+=======
+<script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

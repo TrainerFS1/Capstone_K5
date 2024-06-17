@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface MockInterface extends LegacyMockInterface
 {
@@ -38,6 +45,8 @@ interface MockInterface extends LegacyMockInterface
      *
      * @return Expectation|ExpectationInterface|HigherOrderMessage|self
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\LegacyMockInterface;
 
 interface MockInterface extends LegacyMockInterface
@@ -45,15 +54,23 @@ interface MockInterface extends LegacyMockInterface
     /**
      * @param mixed $something  String method name or map of method => return
      * @return self|\Mockery\ExpectationInterface|\Mockery\Expectation|\Mockery\HigherOrderMessage
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function allows($something = []);
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param mixed $something String method name (optional)
      *
      * @return Expectation|ExpectationInterface|ExpectsHigherOrderMessage
+=======
+     * @param mixed $something  String method name (optional)
+     * @return \Mockery\ExpectationInterface|\Mockery\Expectation|\Mockery\ExpectsHigherOrderMessage
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param mixed $something  String method name (optional)
      * @return \Mockery\ExpectationInterface|\Mockery\Expectation|\Mockery\ExpectsHigherOrderMessage

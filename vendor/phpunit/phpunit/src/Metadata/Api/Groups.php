@@ -11,7 +11,10 @@ namespace PHPUnit\Metadata\Api;
 
 use function array_flip;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_key_exists;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function array_unique;
@@ -35,6 +38,7 @@ final class Groups
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array<string, array<int, string>>
      */
     private static array $groupCache = [];
@@ -54,12 +58,17 @@ final class Groups
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-param class-string $className
      *
      * @psalm-return list<string>
      */
     public function groups(string $className, string $methodName, bool $includeVirtual = true): array
     {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $groups = [];
 
@@ -75,7 +84,11 @@ final class Groups
 
         if (!$includeVirtual) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return self::$groupCache[$key] = array_unique($groups);
+=======
+            return array_unique($groups);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return array_unique($groups);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -86,7 +99,11 @@ final class Groups
                 assert($metadata instanceof CoversClass || $metadata instanceof CoversFunction);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $groups[] = '__phpunit_covers_' . $this->canonicalizeName($metadata->asStringForCodeUnitMapper());
+=======
+                $groups[] = '__phpunit_covers_' . self::canonicalizeName($metadata->asStringForCodeUnitMapper());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $groups[] = '__phpunit_covers_' . self::canonicalizeName($metadata->asStringForCodeUnitMapper());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +115,11 @@ final class Groups
                 assert($metadata instanceof Covers);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $groups[] = '__phpunit_covers_' . $this->canonicalizeName($metadata->target());
+=======
+                $groups[] = '__phpunit_covers_' . self::canonicalizeName($metadata->target());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $groups[] = '__phpunit_covers_' . self::canonicalizeName($metadata->target());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -110,7 +131,11 @@ final class Groups
                 assert($metadata instanceof UsesClass || $metadata instanceof UsesFunction);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $groups[] = '__phpunit_uses_' . $this->canonicalizeName($metadata->asStringForCodeUnitMapper());
+=======
+                $groups[] = '__phpunit_uses_' . self::canonicalizeName($metadata->asStringForCodeUnitMapper());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $groups[] = '__phpunit_uses_' . self::canonicalizeName($metadata->asStringForCodeUnitMapper());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -122,24 +147,33 @@ final class Groups
                 assert($metadata instanceof Uses);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $groups[] = '__phpunit_uses_' . $this->canonicalizeName($metadata->target());
             }
         }
 
         return self::$groupCache[$key] = array_unique($groups);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $groups[] = '__phpunit_uses_' . self::canonicalizeName($metadata->target());
             }
         }
 
         return array_unique($groups);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * @psalm-param class-string $className
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -163,7 +197,11 @@ final class Groups
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function canonicalizeName(string $name): string
+=======
+    private static function canonicalizeName(string $name): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function canonicalizeName(string $name): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

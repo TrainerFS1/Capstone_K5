@@ -21,7 +21,11 @@ namespace Symfony\Component\HttpFoundation\Exception;
 class SessionNotFoundException extends \LogicException implements RequestExceptionInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $message = 'There is currently no session available.', int $code = 0, ?\Throwable $previous = null)
+=======
+    public function __construct(string $message = 'There is currently no session available.', int $code = 0, \Throwable $previous = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $message = 'There is currently no session available.', int $code = 0, \Throwable $previous = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

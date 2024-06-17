@@ -25,7 +25,11 @@ class Message extends RawMessage
     private ?AbstractPart $body;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?Headers $headers = null, ?AbstractPart $body = null)
+=======
+    public function __construct(Headers $headers = null, AbstractPart $body = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Headers $headers = null, AbstractPart $body = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,7 +51,11 @@ class Message extends RawMessage
      * @return $this
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setBody(?AbstractPart $body = null): static
+=======
+    public function setBody(AbstractPart $body = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setBody(AbstractPart $body = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,6 +142,7 @@ class Message extends RawMessage
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
@@ -145,6 +154,8 @@ class Message extends RawMessage
 
         if (!$this->headers->get('From')?->getBody() && !$this->headers->get('Sender')?->getBody()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function ensureValidity()
     {
         if (!$this->headers->has('To') && !$this->headers->has('Cc') && !$this->headers->has('Bcc')) {
@@ -152,6 +163,9 @@ class Message extends RawMessage
         }
 
         if (!$this->headers->has('From') && !$this->headers->has('Sender')) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new LogicException('An email must have a "From" or a "Sender" header.');
         }
@@ -165,10 +179,14 @@ class Message extends RawMessage
             $sender = $this->headers->get('Sender')->getAddress();
         } elseif ($this->headers->has('From')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$froms = $this->headers->get('From')->getAddresses()) {
                 throw new LogicException('A "From" header must have at least one email address.');
             }
             $sender = $froms[0];
+=======
+            $sender = $this->headers->get('From')->getAddresses()[0];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $sender = $this->headers->get('From')->getAddresses()[0];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

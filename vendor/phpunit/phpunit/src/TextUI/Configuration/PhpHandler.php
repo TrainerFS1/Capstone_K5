@@ -53,7 +53,11 @@ final class PhpHandler
                 implode(PATH_SEPARATOR, $includePathsAsStrings) .
                 PATH_SEPARATOR .
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ini_get('include_path'),
+=======
+                ini_get('include_path')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ini_get('include_path')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

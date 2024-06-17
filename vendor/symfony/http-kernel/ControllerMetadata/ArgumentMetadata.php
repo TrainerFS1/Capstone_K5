@@ -107,7 +107,11 @@ class ArgumentMetadata
      * @return array<object>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getAttributes(?string $name = null, int $flags = 0): array
+=======
+    public function getAttributes(string $name = null, int $flags = 0): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getAttributes(string $name = null, int $flags = 0): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

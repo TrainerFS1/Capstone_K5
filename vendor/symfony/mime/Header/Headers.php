@@ -62,7 +62,11 @@ final class Headers
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setMaxLineLength(int $lineLength): void
+=======
+    public function setMaxLineLength(int $lineLength)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setMaxLineLength(int $lineLength)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,8 +156,11 @@ final class Headers
         } elseif ('addIdentificationHeader' === $method) {
             $method = 'addIdHeader';
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ('addMailboxListHeader' === $method && !\is_array($argument)) {
             $argument = [$argument];
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -198,7 +205,11 @@ final class Headers
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function all(?string $name = null): iterable
+=======
+    public function all(string $name = null): iterable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function all(string $name = null): iterable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -278,7 +289,11 @@ final class Headers
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHeaderBody(string $name): mixed
+=======
+    public function getHeaderBody(string $name)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getHeaderBody(string $name)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require __DIR__ . '/../ArrayItem.php';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace PhpParser\Node\Expr;
 
 use PhpParser\Node\Expr;
@@ -42,4 +45,7 @@ class ArrayItem extends Expr
         return 'Expr_ArrayItem';
     }
 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

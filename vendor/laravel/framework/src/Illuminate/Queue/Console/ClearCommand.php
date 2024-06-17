@@ -6,7 +6,10 @@ use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Contracts\Queue\ClearableQueue;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Str;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReflectionClass;
@@ -58,11 +61,17 @@ class ClearCommand extends Command
             $count = $queue->clear($queueName);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->components->info('Cleared '.$count.' '.Str::plural('job', $count).' from the ['.$queueName.'] queue');
         } else {
             $this->components->error('Clearing queues is not supported on ['.(new ReflectionClass($queue))->getShortName().']');
 
             return 1;
+=======
+            $this->components->info('Cleared '.$count.' jobs from the ['.$queueName.'] queue');
+        } else {
+            $this->components->error('Clearing queues is not supported on ['.(new ReflectionClass($queue))->getShortName().']');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->components->info('Cleared '.$count.' jobs from the ['.$queueName.'] queue');
         } else {

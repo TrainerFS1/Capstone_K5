@@ -8,7 +8,10 @@ use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Log\LogManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Env;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Monolog\Handler\NullHandler;
@@ -123,7 +126,11 @@ class HandleExceptions
         return ! class_exists(LogManager::class)
             || ! static::$app->hasBeenBootstrapped()
 <<<<<<< HEAD
+<<<<<<< HEAD
             || (static::$app->runningUnitTests() && ! Env::get('LOG_DEPRECATIONS_WHILE_TESTING'));
+=======
+            || static::$app->runningUnitTests();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             || static::$app->runningUnitTests();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -190,7 +197,11 @@ class HandleExceptions
             $this->getExceptionHandler()->report($e);
         } catch (Exception) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $exceptionHandlerFailed = true;
+=======
+            //
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             //
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -199,10 +210,13 @@ class HandleExceptions
         if (static::$app->runningInConsole()) {
             $this->renderForConsole($e);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             if ($exceptionHandlerFailed ?? false) {
                 exit(1);
             }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {

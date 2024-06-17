@@ -13,7 +13,11 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <li class="breadcrumb-item"><a href="{{ '/ ' }}">Home</a></li>
+=======
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

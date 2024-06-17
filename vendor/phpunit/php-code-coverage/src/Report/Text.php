@@ -79,7 +79,11 @@ final class Text
             $colors['classes'] = $this->coverageColor(
                 $report->numberOfTestedClassesAndTraits(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfClassesAndTraits(),
+=======
+                $report->numberOfClassesAndTraits()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfClassesAndTraits()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -88,7 +92,11 @@ final class Text
             $colors['methods'] = $this->coverageColor(
                 $report->numberOfTestedMethods(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfMethods(),
+=======
+                $report->numberOfMethods()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfMethods()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,7 +105,11 @@ final class Text
             $colors['lines'] = $this->coverageColor(
                 $report->numberOfExecutedLines(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfExecutableLines(),
+=======
+                $report->numberOfExecutableLines()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfExecutableLines()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -106,7 +118,11 @@ final class Text
             $colors['branches'] = $this->coverageColor(
                 $report->numberOfExecutedBranches(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfExecutableBranches(),
+=======
+                $report->numberOfExecutableBranches()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfExecutableBranches()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -115,7 +131,11 @@ final class Text
             $colors['paths'] = $this->coverageColor(
                 $report->numberOfExecutedPaths(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfExecutablePaths(),
+=======
+                $report->numberOfExecutablePaths()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfExecutablePaths()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -130,15 +150,21 @@ final class Text
             Percentage::fromFractionAndTotal(
                 $report->numberOfTestedClassesAndTraits(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfClassesAndTraits(),
             )->asString(),
             $report->numberOfTestedClassesAndTraits(),
             $report->numberOfClassesAndTraits(),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $report->numberOfClassesAndTraits()
             )->asString(),
             $report->numberOfTestedClassesAndTraits(),
             $report->numberOfClassesAndTraits()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
@@ -150,7 +176,11 @@ final class Text
             )->asString(),
             $report->numberOfTestedMethods(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $report->numberOfMethods(),
+=======
+            $report->numberOfMethods()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $report->numberOfMethods()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -168,7 +198,11 @@ final class Text
                 )->asString(),
                 $report->numberOfExecutedPaths(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfExecutablePaths(),
+=======
+                $report->numberOfExecutablePaths()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfExecutablePaths()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -182,7 +216,11 @@ final class Text
                 )->asString(),
                 $report->numberOfExecutedBranches(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $report->numberOfExecutableBranches(),
+=======
+                $report->numberOfExecutableBranches()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $report->numberOfExecutableBranches()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -197,7 +235,11 @@ final class Text
             )->asString(),
             $report->numberOfExecutedLines(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $report->numberOfExecutableLines(),
+=======
+            $report->numberOfExecutableLines()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $report->numberOfExecutableLines()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -259,6 +301,7 @@ final class Text
 
                     $classMethods++;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $classExecutableLines    += $method['executableLines'];
                     $classExecutedLines      += $method['executedLines'];
                     $classExecutableBranches += $method['executableBranches'];
@@ -266,12 +309,17 @@ final class Text
                     $classExecutablePaths    += $method['executablePaths'];
                     $classExecutedPaths      += $method['executedPaths'];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $classExecutableLines += $method['executableLines'];
                     $classExecutedLines += $method['executedLines'];
                     $classExecutableBranches += $method['executableBranches'];
                     $classExecutedBranches += $method['executedBranches'];
                     $classExecutablePaths += $method['executablePaths'];
                     $classExecutedPaths += $method['executedPaths'];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     if ($method['coverage'] == 100) {
@@ -331,7 +379,11 @@ final class Text
         $coverage = Percentage::fromFractionAndTotal(
             $numberOfCoveredElements,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $totalNumberOfElements,
+=======
+            $totalNumberOfElements
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $totalNumberOfElements
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -355,7 +407,11 @@ final class Text
         return Percentage::fromFractionAndTotal(
             $numberOfCoveredElements,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $totalNumberOfElements,
+=======
+            $totalNumberOfElements
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $totalNumberOfElements
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -365,6 +421,7 @@ final class Text
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function format(string $color, int $padding, false|string $string): string
     {
         if ($color === '') {
@@ -373,11 +430,16 @@ final class Text
 
         return $color . str_pad((string) $string, $padding) . self::COLOR_RESET . PHP_EOL;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function format(string $color, int $padding, string|false $string): string
     {
         $reset = $color ? self::COLOR_RESET : '';
 
         return $color . str_pad((string) $string, $padding) . $reset . PHP_EOL;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

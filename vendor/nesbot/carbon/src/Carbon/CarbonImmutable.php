@@ -34,6 +34,7 @@ use DateTimeZone;
  * @property      int                 $micro
  * @property      int                 $microsecond
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property      int|float|string    $timestamp                                                                                      seconds since the Unix Epoch
  * @property      string              $englishDayOfWeek                                                                               the day of week in English
  * @property      string              $shortEnglishDayOfWeek                                                                          the abbreviated day of week in English
@@ -506,6 +507,8 @@ use DateTimeZone;
  * @method        static static|false createFromFormat(string $format, string $time, DateTimeZone|string|false|null $timezone = null) Parse a string into a new CarbonImmutable object according to the specified format.
  * @method        static static       __set_state(array $array)                                                                       https://php.net/manual/en/datetime.set-state.php
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @property      int|float|string    $timestamp                                                                           seconds since the Unix Epoch
  * @property      string              $englishDayOfWeek                                                                    the day of week in English
  * @property      string              $shortEnglishDayOfWeek                                                               the abbreviated day of week in English
@@ -977,6 +980,9 @@ use DateTimeZone;
  * @method        string              longRelativeToOtherDiffForHumans(DateTimeInterface $other = null, int $parts = 1)    Get the difference (long format, 'RelativeToOther' mode) in a human readable format in the current locale. ($other and $parts parameters can be swapped.)
  * @method        static static|false createFromFormat(string $format, string $time, string|DateTimeZone $timezone = null) Parse a string into a new CarbonImmutable object according to the specified format.
  * @method        static static       __set_state(array $array)                                                            https://php.net/manual/en/datetime.set-state.php
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * </autodoc>

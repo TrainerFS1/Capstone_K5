@@ -6,8 +6,11 @@ use Doctrine\DBAL\Exception as DBALException;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Platforms\MariaDb1027Platform;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Doctrine\DBAL\Platforms\MariaDb1052Platform;
 use Doctrine\DBAL\Platforms\MariaDb1060Platform;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Doctrine\DBAL\Platforms\MariaDBPlatform;
@@ -38,9 +41,13 @@ class TimestampType extends Type implements PhpDateTimeMappingType
             MySQL80Platform::class,
             MariaDBPlatform::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
             MariaDb1027Platform::class,
             MariaDb1052Platform::class,
             MariaDb1060Platform::class => $this->getMySqlPlatformSQLDeclaration($column),
+=======
+            MariaDb1027Platform::class => $this->getMySqlPlatformSQLDeclaration($column),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             MariaDb1027Platform::class => $this->getMySqlPlatformSQLDeclaration($column),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -104,8 +111,11 @@ class TimestampType extends Type implements PhpDateTimeMappingType
     /**
      * {@inheritdoc}
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

@@ -16,6 +16,7 @@ final class EdgeIterator implements IteratorAggregate
      * @var int[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $bytes = [];
 
     private ?int $size;
@@ -24,6 +25,8 @@ final class EdgeIterator implements IteratorAggregate
 
     private int $height;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $bytes = [];
 
     /**
@@ -40,6 +43,9 @@ final class EdgeIterator implements IteratorAggregate
      * @var int
      */
     private $height;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(ByteMatrix $matrix)

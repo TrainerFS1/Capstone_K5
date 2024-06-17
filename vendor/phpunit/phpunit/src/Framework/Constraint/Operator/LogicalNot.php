@@ -52,6 +52,7 @@ final class LogicalNot extends UnaryOperator
         preg_match('/(\'[\w\W]*\')([\w\W]*)("[\w\W]*")/i', $string, $matches);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (count($matches) === 0) {
             preg_match('/(\'[\w\W]*\')([\w\W]*)(\'[\w\W]*\')/i', $string, $matches);
         }
@@ -59,6 +60,11 @@ final class LogicalNot extends UnaryOperator
         $positives = array_map(
             static fn (string $s) => '/\\b' . preg_quote($s, '/') . '/',
             $positives,
+=======
+        $positives = array_map(
+            static fn (string $s) => '/\\b' . preg_quote($s, '/') . '/',
+            $positives
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $positives = array_map(
             static fn (string $s) => '/\\b' . preg_quote($s, '/') . '/',
@@ -75,9 +81,15 @@ final class LogicalNot extends UnaryOperator
                     $positives,
                     $negatives,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $nonInput,
                 ),
                 $string,
+=======
+                    $nonInput
+                ),
+                $string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $nonInput
                 ),
@@ -89,7 +101,11 @@ final class LogicalNot extends UnaryOperator
                 $positives,
                 $negatives,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $string,
+=======
+                $string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

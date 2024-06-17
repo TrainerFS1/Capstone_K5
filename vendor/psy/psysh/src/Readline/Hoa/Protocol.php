@@ -88,7 +88,11 @@ class Protocol extends ProtocolNode
     {
         $root = \dirname(__DIR__, 3);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $argv0 = isset($_SERVER['argv'][0]) ? \realpath($_SERVER['argv'][0]) : false;
+=======
+        $argv0 = \realpath($_SERVER['argv'][0]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $argv0 = \realpath($_SERVER['argv'][0]);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

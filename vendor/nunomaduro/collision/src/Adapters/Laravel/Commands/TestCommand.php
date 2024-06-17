@@ -13,12 +13,18 @@ use Illuminate\Support\Str;
 use NunoMaduro\Collision\Adapters\Laravel\Exceptions\RequirementsException;
 use NunoMaduro\Collision\Coverage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use ParaTest\Options;
 use PHPUnit\Runner\Version;
 use RuntimeException;
 use SebastianBergmann\Environment\Console;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Input\InputDefinition;
+=======
+use PHPUnit\Runner\Version;
+use RuntimeException;
+use SebastianBergmann\Environment\Console;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Runner\Version;
 use RuntimeException;
@@ -49,7 +55,10 @@ class TestCommand extends Command
         {--recreate-databases : Indicates if the test databases should be re-created}
         {--drop-databases : Indicates if the test databases should be dropped}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {--without-databases : Indicates if database configuration should be performed}
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ';
@@ -205,7 +214,11 @@ class TestCommand extends Command
         if ($this->option('ansi')) {
             $arguments[] = '--colors=always';
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($this->option('no-ansi')) { // @phpstan-ignore-line
+=======
+        } elseif ($this->option('no-ansi')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif ($this->option('no-ansi')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -250,6 +263,7 @@ class TestCommand extends Command
         }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return array_merge($this->commonArguments(), ['--configuration='.$this->getConfigurationFile()], $options);
     }
 
@@ -262,12 +276,18 @@ class TestCommand extends Command
     {
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! file_exists($file = base_path('phpunit.xml'))) {
             $file = base_path('phpunit.xml.dist');
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $file;
+=======
+        return array_merge($this->commonArguments(), ["--configuration=$file"], $options);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return array_merge($this->commonArguments(), ["--configuration=$file"], $options);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -292,6 +312,7 @@ class TestCommand extends Command
                 && ! Str::startsWith($option, '-p')
                 && ! Str::startsWith($option, '--parallel')
                 && ! Str::startsWith($option, '--recreate-databases')
+<<<<<<< HEAD
 <<<<<<< HEAD
                 && ! Str::startsWith($option, '--drop-databases')
                 && ! Str::startsWith($option, '--without-databases');
@@ -322,6 +343,8 @@ class TestCommand extends Command
 
         return $options;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 && ! Str::startsWith($option, '--drop-databases');
         }));
 
@@ -333,6 +356,9 @@ class TestCommand extends Command
             "--configuration=$file",
             "--runner=\Illuminate\Testing\ParallelRunner",
         ], $options);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -370,7 +396,10 @@ class TestCommand extends Command
             'LARAVEL_PARALLEL_TESTING_RECREATE_DATABASES' => $this->option('recreate-databases'),
             'LARAVEL_PARALLEL_TESTING_DROP_DATABASES' => $this->option('drop-databases'),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'LARAVEL_PARALLEL_TESTING_WITHOUT_DATABASES' => $this->option('without-databases'),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
@@ -433,7 +462,10 @@ class TestCommand extends Command
         return class_exists(\ParaTest\ParaTestCommand::class);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Get the composer command for the environment.
@@ -450,5 +482,8 @@ class TestCommand extends Command
 
         return 'composer';
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

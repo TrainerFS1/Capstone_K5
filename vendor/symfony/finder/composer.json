@@ -20,7 +20,11 @@
     },
     "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "symfony/filesystem": "^6.0|^7.0"
+=======
+        "symfony/filesystem": "^6.0"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "symfony/filesystem": "^6.0"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

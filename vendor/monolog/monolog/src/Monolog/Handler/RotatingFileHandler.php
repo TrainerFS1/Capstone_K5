@@ -44,6 +44,7 @@ class RotatingFileHandler extends StreamHandler
      * @param bool     $useLocking     Try to lock log file before doing any writes
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $filename, int $maxFiles = 0, int|string|Level $level = Level::Debug, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false, string $dateFormat = self::FILE_PER_DAY, string $filenameFormat  = '{filename}-{date}')
     {
         $this->filename = Utils::canonicalizePath($filename);
@@ -51,6 +52,8 @@ class RotatingFileHandler extends StreamHandler
         $this->setFilenameFormat($filenameFormat, $dateFormat);
         $this->nextRotation = $this->getNextRotation();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(string $filename, int $maxFiles = 0, int|string|Level $level = Level::Debug, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false)
     {
         $this->filename = Utils::canonicalizePath($filename);
@@ -58,6 +61,9 @@ class RotatingFileHandler extends StreamHandler
         $this->nextRotation = new \DateTimeImmutable('tomorrow');
         $this->filenameFormat = '{filename}-{date}';
         $this->dateFormat = static::FILE_PER_DAY;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         parent::__construct($this->getTimedFilename(), $level, $bubble, $filePermission, $useLocking);
@@ -88,6 +94,7 @@ class RotatingFileHandler extends StreamHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
@@ -95,6 +102,8 @@ class RotatingFileHandler extends StreamHandler
     {
         $this->setDateFormat($dateFormat);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setFilenameFormat(string $filenameFormat, string $dateFormat): self
     {
         if (0 === preg_match('{^[Yy](([/_.-]?m)([/_.-]?d)?)?$}', $dateFormat)) {
@@ -105,6 +114,9 @@ class RotatingFileHandler extends StreamHandler
                 'date formats using slashes, underscores and/or dots instead of dashes.'
             );
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (substr_count($filenameFormat, '{date}') === 0) {
             throw new InvalidArgumentException(
@@ -113,6 +125,10 @@ class RotatingFileHandler extends StreamHandler
         }
         $this->filenameFormat = $filenameFormat;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $this->dateFormat = $dateFormat;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->dateFormat = $dateFormat;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -148,7 +164,11 @@ class RotatingFileHandler extends StreamHandler
         // update filename
         $this->url = $this->getTimedFilename();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->nextRotation = $this->getNextRotation();
+=======
+        $this->nextRotation = new \DateTimeImmutable('tomorrow');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->nextRotation = new \DateTimeImmutable('tomorrow');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -224,6 +244,7 @@ class RotatingFileHandler extends StreamHandler
         return $glob;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     protected function setDateFormat(string $dateFormat): void
     {
@@ -246,6 +267,8 @@ class RotatingFileHandler extends StreamHandler
             default => (new \DateTimeImmutable('tomorrow'))->setTime(0, 0, 0),
         };
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

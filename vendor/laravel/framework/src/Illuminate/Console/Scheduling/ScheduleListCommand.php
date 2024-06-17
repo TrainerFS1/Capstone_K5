@@ -63,8 +63,11 @@ class ScheduleListCommand extends Command
         $expressionSpacing = $this->getCronExpressionSpacing($events);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $repeatExpressionSpacing = $this->getRepeatExpressionSpacing($events);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $timezone = new DateTimeZone($this->option('timezone') ?? config('app.timezone'));
@@ -72,9 +75,12 @@ class ScheduleListCommand extends Command
         $events = $this->sortEvents($events, $timezone);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $events = $events->map(function ($event) use ($terminalWidth, $expressionSpacing, $repeatExpressionSpacing, $timezone) {
             return $this->listEvent($event, $terminalWidth, $expressionSpacing, $repeatExpressionSpacing, $timezone);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $events = $events->map(function ($event) use ($terminalWidth, $expressionSpacing, $timezone) {
             $expression = $this->formatCronExpression($event->expression, $expressionSpacing);
 
@@ -131,6 +137,9 @@ class ScheduleListCommand extends Command
                 '⇁',
                 $description
             ) : ''];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
 
@@ -141,7 +150,11 @@ class ScheduleListCommand extends Command
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the spacing to be used on each event row.
+=======
+     * Gets the spacing to be used on each event row.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Gets the spacing to be used on each event row.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -157,6 +170,7 @@ class ScheduleListCommand extends Command
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Get the spacing to be used on each event row.
      *
@@ -256,6 +270,9 @@ class ScheduleListCommand extends Command
 =======
      * Sorts the events by due date if option set.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Sorts the events by due date if option set.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  \Illuminate\Support\Collection  $events
      * @param  \DateTimeZone  $timezone
@@ -278,7 +295,11 @@ class ScheduleListCommand extends Command
     private function getNextDueDateForEvent($event, DateTimeZone $timezone)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $nextDueDate = Carbon::instance(
+=======
+        return Carbon::instance(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return Carbon::instance(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -286,6 +307,7 @@ class ScheduleListCommand extends Command
                 ->getNextRunDate(Carbon::now()->setTimezone($event->timezone))
                 ->setTimezone($timezone)
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if (! $event->isRepeatable()) {
@@ -312,10 +334,15 @@ class ScheduleListCommand extends Command
     /**
      * Format the cron expression based on the spacing provided.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Formats the cron expression based on the spacing provided.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $expression
@@ -340,7 +367,13 @@ class ScheduleListCommand extends Command
     private function getClosureLocation(CallbackEvent $event)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $callback = (new ReflectionClass($event))->getProperty('callback')->getValue($event);
+=======
+        $callback = tap((new ReflectionClass($event))->getProperty('callback'))
+                        ->setAccessible(true)
+                        ->getValue($event);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $callback = tap((new ReflectionClass($event))->getProperty('callback'))
                         ->setAccessible(true)

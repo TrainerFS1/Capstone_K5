@@ -64,9 +64,12 @@ class DOMCaster
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castException(\DOMException $e, array $a, Stub $stub, bool $isNested)
@@ -80,9 +83,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castLength($dom, array $a, Stub $stub, bool $isNested)
@@ -95,9 +101,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castImplementation(\DOMImplementation $dom, array $a, Stub $stub, bool $isNested)
@@ -111,9 +120,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castNode(\DOMNode $dom, array $a, Stub $stub, bool $isNested)
@@ -141,9 +153,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castNameSpaceNode(\DOMNameSpaceNode $dom, array $a, Stub $stub, bool $isNested)
@@ -163,9 +178,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castDocument(\DOMDocument $dom, array $a, Stub $stub, bool $isNested, int $filter = 0)
@@ -203,9 +221,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castCharacterData(\DOMCharacterData $dom, array $a, Stub $stub, bool $isNested)
@@ -219,9 +240,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castAttr(\DOMAttr $dom, array $a, Stub $stub, bool $isNested)
@@ -238,9 +262,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castElement(\DOMElement $dom, array $a, Stub $stub, bool $isNested)
@@ -254,9 +281,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castText(\DOMText $dom, array $a, Stub $stub, bool $isNested)
@@ -269,9 +299,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castDocumentType(\DOMDocumentType $dom, array $a, Stub $stub, bool $isNested)
@@ -289,9 +322,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castNotation(\DOMNotation $dom, array $a, Stub $stub, bool $isNested)
@@ -305,9 +341,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castEntity(\DOMEntity $dom, array $a, Stub $stub, bool $isNested)
@@ -325,9 +364,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castProcessingInstruction(\DOMProcessingInstruction $dom, array $a, Stub $stub, bool $isNested)
@@ -341,9 +383,12 @@ class DOMCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castXPath(\DOMXPath $dom, array $a, Stub $stub, bool $isNested)

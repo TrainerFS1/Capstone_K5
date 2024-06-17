@@ -45,7 +45,11 @@ final class Loaded implements Event
             'Test Suite Loaded (%d test%s)',
             $this->testSuite->count(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->testSuite->count() !== 1 ? 's' : '',
+=======
+            $this->testSuite->count() !== 1 ? 's' : ''
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->testSuite->count() !== 1 ? 's' : ''
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

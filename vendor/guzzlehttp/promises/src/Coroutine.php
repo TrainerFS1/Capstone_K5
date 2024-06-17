@@ -1,10 +1,16 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace GuzzleHttp\Promise;
 
+=======
+namespace GuzzleHttp\Promise;
+
+use Exception;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 namespace GuzzleHttp\Promise;
 
@@ -35,7 +41,11 @@ use Throwable;
  *         try {
  *             $value = (yield createPromise($value . 'b'));
 <<<<<<< HEAD
+<<<<<<< HEAD
  *         } catch (\Throwable $e) {
+=======
+ *         } catch (\Exception $e) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  *         } catch (\Exception $e) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -52,7 +62,11 @@ use Throwable;
  * @return Promise
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @see https://github.com/petkaantonov/bluebird/blob/master/API.md#generators inspiration
+=======
+ * @link https://github.com/petkaantonov/bluebird/blob/master/API.md#generators inspiration
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @link https://github.com/petkaantonov/bluebird/blob/master/API.md#generators inspiration
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -78,7 +92,11 @@ final class Coroutine implements PromiseInterface
     {
         $this->generator = $generatorFn();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->result = new Promise(function (): void {
+=======
+        $this->result = new Promise(function () {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->result = new Promise(function () {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -89,6 +107,11 @@ final class Coroutine implements PromiseInterface
         try {
             $this->nextCoroutine($this->generator->current());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        } catch (\Exception $exception) {
+            $this->result->reject($exception);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } catch (\Exception $exception) {
             $this->result->reject($exception);
@@ -101,13 +124,19 @@ final class Coroutine implements PromiseInterface
     /**
      * Create a new coroutine.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function of(callable $generatorFn): self
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return self
      */
     public static function of(callable $generatorFn)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return new self($generatorFn);
@@ -117,24 +146,34 @@ final class Coroutine implements PromiseInterface
         callable $onFulfilled = null,
         callable $onRejected = null
 <<<<<<< HEAD
+<<<<<<< HEAD
     ): PromiseInterface {
         return $this->result->then($onFulfilled, $onRejected);
     }
 
     public function otherwise(callable $onRejected): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         return $this->result->then($onFulfilled, $onRejected);
     }
 
     public function otherwise(callable $onRejected)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->result->otherwise($onRejected);
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function wait(bool $unwrap = true)
+=======
+    public function wait($unwrap = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function wait($unwrap = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -143,7 +182,11 @@ final class Coroutine implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getState(): string
+=======
+    public function getState()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getState()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,7 +195,11 @@ final class Coroutine implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function resolve($value): void
+=======
+    public function resolve($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function resolve($value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -161,7 +208,11 @@ final class Coroutine implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reject($reason): void
+=======
+    public function reject($reason)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function reject($reason)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -170,7 +221,11 @@ final class Coroutine implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function cancel(): void
+=======
+    public function cancel()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function cancel()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -180,7 +235,11 @@ final class Coroutine implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function nextCoroutine($yielded): void
+=======
+    private function nextCoroutine($yielded)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function nextCoroutine($yielded)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -193,7 +252,11 @@ final class Coroutine implements PromiseInterface
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function _handleSuccess($value): void
+=======
+    public function _handleSuccess($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function _handleSuccess($value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -207,6 +270,11 @@ final class Coroutine implements PromiseInterface
                 $this->result->resolve($value);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        } catch (Exception $exception) {
+            $this->result->reject($exception);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } catch (Exception $exception) {
             $this->result->reject($exception);
@@ -220,7 +288,11 @@ final class Coroutine implements PromiseInterface
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function _handleFailure($reason): void
+=======
+    public function _handleFailure($reason)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function _handleFailure($reason)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -231,6 +303,11 @@ final class Coroutine implements PromiseInterface
             // The throw was caught, so keep iterating on the coroutine
             $this->nextCoroutine($nextYield);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        } catch (Exception $exception) {
+            $this->result->reject($exception);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } catch (Exception $exception) {
             $this->result->reject($exception);

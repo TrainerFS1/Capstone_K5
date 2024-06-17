@@ -36,6 +36,11 @@ use Symfony\Contracts\Service\ResetInterface;
  * @author Johannes M. Schmitt <schmittjoh@gmail.com>
  * @author Tobias Schultze <http://tobion.de>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ *
+ * @internal
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  *
  * @internal
@@ -46,6 +51,7 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     public const NO_AUTO_CACHE_CONTROL_HEADER = 'Symfony-Session-NoAutoCacheControl';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
@@ -54,11 +60,15 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
 =======
     protected $container;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    protected $container;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private bool $debug;
 
     /**
      * @var array<string, mixed>
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     private array $sessionOptions;
 
@@ -71,6 +81,11 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
 
     public function __construct(ContainerInterface $container = null, bool $debug = false, array $sessionOptions = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    private $sessionOptions;
+
+    public function __construct(ContainerInterface $container = null, bool $debug = false, array $sessionOptions = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->container = $container;
         $this->debug = $debug;
@@ -78,10 +93,14 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
     public function onKernelRequest(RequestEvent $event): void
+=======
+    public function onKernelRequest(RequestEvent $event)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function onKernelRequest(RequestEvent $event)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -93,6 +112,7 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         $request = $event->getRequest();
         if (!$request->hasSession()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $request->setSessionFactory(function () use ($request) {
                 // Prevent calling `$this->getSession()` twice in case the Request (and the below factory) is cloned
                 static $sess;
@@ -101,11 +121,16 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
                     $sess = $this->getSession();
                     $request->setSession($sess);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // This variable prevents calling `$this->getSession()` twice in case the Request (and the below factory) is cloned
             $sess = null;
             $request->setSessionFactory(function () use (&$sess, $request) {
                 if (!$sess) {
                     $sess = $this->getSession();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     /*
@@ -126,10 +151,14 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
     public function onKernelResponse(ResponseEvent $event): void
+=======
+    public function onKernelResponse(ResponseEvent $event)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function onKernelResponse(ResponseEvent $event)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -261,9 +290,12 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function onSessionUsage(): void
@@ -302,9 +334,12 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function getSubscribedEvents(): array
@@ -317,9 +352,12 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @internal
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset(): void
@@ -339,8 +377,11 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     /**
      * Gets the session object.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @internal
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

@@ -78,6 +78,7 @@ class ImplicitReturnPass extends CodeCleanerPass
             // @codeCoverageIgnoreStart
             $nodes[\count($nodes) - 1] = new Return_($last, [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'startLine' => $last->getStartLine(),
                 'endLine'   => $last->getEndLine(),
             ]);
@@ -87,6 +88,8 @@ class ImplicitReturnPass extends CodeCleanerPass
                 'startLine' => $last->getStartLine(),
                 'endLine'   => $last->getEndLine(),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'startLine' => $last->getLine(),
                 'endLine'   => $last->getLine(),
             ]);
@@ -96,6 +99,9 @@ class ImplicitReturnPass extends CodeCleanerPass
             $nodes[\count($nodes) - 1] = new Return_($last->expr, [
                 'startLine' => $last->getLine(),
                 'endLine'   => $last->getLine(),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ]);
         } elseif ($last instanceof Namespace_) {

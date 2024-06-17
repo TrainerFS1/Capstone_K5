@@ -31,7 +31,11 @@ Read the documentation for a detailed overview of ":doc:`/reference/phpunit_inte
 
 As of 1.0.0 the ``\Mockery\Matcher\MustBe`` matcher is deprecated and will be removed in
 <<<<<<< HEAD
+<<<<<<< HEAD
 Mockery 2.0.0. We recommend instead to use the PHPUnit equivalents of the
+=======
+Mockery 2.0.0. We recommend instead to use the PHPUnit or Hamcrest equivalents of the
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 Mockery 2.0.0. We recommend instead to use the PHPUnit or Hamcrest equivalents of the
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

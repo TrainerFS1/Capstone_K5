@@ -10,11 +10,16 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Contracts\Container\Container as ContainerContract;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Events\ShouldDispatchAfterCommit;
 use Illuminate\Contracts\Events\ShouldHandleEventsAfterCommit;
 use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\Queue\ShouldQueueAfterCommit;
+=======
+use Illuminate\Contracts\Queue\ShouldBeEncrypted;
+use Illuminate\Contracts\Queue\ShouldQueue;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -66,6 +71,7 @@ class Dispatcher implements DispatcherContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The database transaction manager resolver instance.
      *
      * @var callable
@@ -73,6 +79,8 @@ class Dispatcher implements DispatcherContract
     protected $transactionManagerResolver;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new event dispatcher instance.
@@ -234,7 +242,11 @@ class Dispatcher implements DispatcherContract
      * @param  string|object  $event
      * @param  mixed  $payload
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return mixed
+=======
+     * @return array|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return array|null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -257,6 +269,7 @@ class Dispatcher implements DispatcherContract
         // When the given "event" is actually an object we will assume it is an event
         // object and use the class as the event name and this event itself as the
         // payload to the handler, which makes object based events quite simple.
+<<<<<<< HEAD
 <<<<<<< HEAD
         [$isEventObject, $event, $payload] = [
             is_object($event),
@@ -290,10 +303,15 @@ class Dispatcher implements DispatcherContract
     protected function invokeListeners($event, $payload, $halt = false)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         [$event, $payload] = $this->parseEventAndPayload(
             $event, $payload
         );
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->shouldBroadcast($payload)) {
             $this->broadcastEvent($payload[0]);
@@ -582,9 +600,13 @@ class Dispatcher implements DispatcherContract
     protected function handlerShouldBeDispatchedAfterDatabaseTransactions($listener)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (($listener->afterCommit ?? null) ||
                 $listener instanceof ShouldHandleEventsAfterCommit) &&
                 $this->resolveTransactionManager();
+=======
+        return ($listener->afterCommit ?? null) && $this->container->bound('db.transactions');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return ($listener->afterCommit ?? null) && $this->container->bound('db.transactions');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -603,7 +625,11 @@ class Dispatcher implements DispatcherContract
             $payload = func_get_args();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->resolveTransactionManager()->addCallback(
+=======
+            $this->container->make('db.transactions')->addCallback(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->container->make('db.transactions')->addCallback(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -646,6 +672,7 @@ class Dispatcher implements DispatcherContract
 
         $connection = $this->resolveQueue()->connection(method_exists($listener, 'viaConnection')
 <<<<<<< HEAD
+<<<<<<< HEAD
             ? (isset($arguments[0]) ? $listener->viaConnection($arguments[0]) : $listener->viaConnection())
             : $listener->connection ?? null);
 
@@ -661,6 +688,8 @@ class Dispatcher implements DispatcherContract
             ? $connection->pushOn($queue, $job)
             : $connection->laterOn($queue, $delay, $job);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ? (isset($arguments[0]) ? $listener->viaConnection($arguments[0]) : $listener->viaConnection())
                     : $listener->connection ?? null);
 
@@ -671,6 +700,9 @@ class Dispatcher implements DispatcherContract
         isset($listener->delay)
                     ? $connection->laterOn($queue, $listener->delay, $job)
                     : $connection->pushOn($queue, $job);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -704,6 +736,7 @@ class Dispatcher implements DispatcherContract
             $data = array_values($job->data);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($listener instanceof ShouldQueueAfterCommit) {
                 $job->afterCommit = true;
             } else {
@@ -713,13 +746,19 @@ class Dispatcher implements DispatcherContract
 =======
             $job->afterCommit = property_exists($listener, 'afterCommit') ? $listener->afterCommit : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            $job->afterCommit = property_exists($listener, 'afterCommit') ? $listener->afterCommit : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $job->backoff = method_exists($listener, 'backoff') ? $listener->backoff(...$data) : ($listener->backoff ?? null);
             $job->maxExceptions = $listener->maxExceptions ?? null;
             $job->retryUntil = method_exists($listener, 'retryUntil') ? $listener->retryUntil(...$data) : null;
             $job->shouldBeEncrypted = $listener instanceof ShouldBeEncrypted;
             $job->timeout = $listener->timeout ?? null;
 <<<<<<< HEAD
+<<<<<<< HEAD
             $job->failOnTimeout = $listener->failOnTimeout ?? false;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $job->tries = $listener->tries ?? null;
@@ -791,6 +830,7 @@ class Dispatcher implements DispatcherContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the database transaction manager implementation from the resolver.
      *
      * @return \Illuminate\Database\DatabaseTransactionsManager|null
@@ -814,6 +854,8 @@ class Dispatcher implements DispatcherContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets the raw, unprepared listeners.

@@ -3,6 +3,7 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Comment implements \JsonSerializable {
     protected string $text;
     protected int $startLine;
@@ -12,6 +13,8 @@ class Comment implements \JsonSerializable {
     protected int $endFilePos;
     protected int $endTokenPos;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Comment implements \JsonSerializable
 {
     protected $text;
@@ -21,21 +24,30 @@ class Comment implements \JsonSerializable
     protected $endLine;
     protected $endFilePos;
     protected $endTokenPos;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs a comment node.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $text Comment text (including comment delimiters like /*)
      * @param int $startLine Line number the comment started on
      * @param int $startFilePos File offset the comment started on
      * @param int $startTokenPos Token offset the comment started on
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $text          Comment text (including comment delimiters like /*)
      * @param int    $startLine     Line number the comment started on
      * @param int    $startFilePos  File offset the comment started on
      * @param int    $startTokenPos Token offset the comment started on
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(
@@ -58,7 +70,11 @@ class Comment implements \JsonSerializable
      * @return string The comment text (including comment delimiters like /*)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getText(): string {
+=======
+    public function getText() : string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getText() : string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -71,7 +87,11 @@ class Comment implements \JsonSerializable
      * @return int Line number (or -1 if not available)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getStartLine(): int {
+=======
+    public function getStartLine() : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getStartLine() : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,7 +104,11 @@ class Comment implements \JsonSerializable
      * @return int File offset (or -1 if not available)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getStartFilePos(): int {
+=======
+    public function getStartFilePos() : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getStartFilePos() : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,7 +121,11 @@ class Comment implements \JsonSerializable
      * @return int Token offset (or -1 if not available)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getStartTokenPos(): int {
+=======
+    public function getStartTokenPos() : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getStartTokenPos() : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -110,7 +138,11 @@ class Comment implements \JsonSerializable
      * @return int Line number (or -1 if not available)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getEndLine(): int {
+=======
+    public function getEndLine() : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getEndLine() : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -123,7 +155,11 @@ class Comment implements \JsonSerializable
      * @return int File offset (or -1 if not available)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getEndFilePos(): int {
+=======
+    public function getEndFilePos() : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getEndFilePos() : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -136,7 +172,11 @@ class Comment implements \JsonSerializable
      * @return int Token offset (or -1 if not available)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getEndTokenPos(): int {
+=======
+    public function getEndTokenPos() : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getEndTokenPos() : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -145,7 +185,10 @@ class Comment implements \JsonSerializable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets the line number the comment started on.
      *
      * @deprecated Use getStartLine() instead
@@ -179,13 +222,20 @@ class Comment implements \JsonSerializable
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets the comment text.
      *
      * @return string The comment text (including comment delimiters like /*)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __toString(): string {
+=======
+    public function __toString() : string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __toString() : string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -198,6 +248,7 @@ class Comment implements \JsonSerializable
      * "Reformatted" here means that we try to clean up the whitespace at the
      * starts of the lines. This is necessary because we receive the comments
 <<<<<<< HEAD
+<<<<<<< HEAD
      * without leading whitespace on the first line, but with leading whitespace
      * on all subsequent lines.
      *
@@ -206,6 +257,8 @@ class Comment implements \JsonSerializable
     public function getReformattedText(): string {
         $text = str_replace("\r\n", "\n", $this->text);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * without trailing whitespace on the first line, but with trailing whitespace
      * on all subsequent lines.
      *
@@ -213,14 +266,21 @@ class Comment implements \JsonSerializable
      */
     public function getReformattedText() {
         $text = trim($this->text);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $newlinePos = strpos($text, "\n");
         if (false === $newlinePos) {
             // Single line comments don't need further processing
             return $text;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         if (preg_match('(^.*(?:\n\s+\*.*)+$)', $text)) {
+=======
+        } elseif (preg_match('((*BSR_ANYCRLF)(*ANYCRLF)^.*(?:\R\s+\*.*)+$)', $text)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif (preg_match('((*BSR_ANYCRLF)(*ANYCRLF)^.*(?:\R\s+\*.*)+$)', $text)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -233,9 +293,14 @@ class Comment implements \JsonSerializable
             //
             // is handled by replacing the whitespace sequences before the * by a single space
 <<<<<<< HEAD
+<<<<<<< HEAD
             return preg_replace('(^\s+\*)m', ' *', $text);
         }
         if (preg_match('(^/\*\*?\s*\n)', $text) && preg_match('(\n(\s*)\*/$)', $text, $matches)) {
+=======
+            return preg_replace('(^\s+\*)m', ' *', $this->text);
+        } elseif (preg_match('(^/\*\*?\s*[\r\n])', $text) && preg_match('(\n(\s*)\*/$)', $text, $matches)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return preg_replace('(^\s+\*)m', ' *', $this->text);
         } elseif (preg_match('(^/\*\*?\s*[\r\n])', $text) && preg_match('(\n(\s*)\*/$)', $text, $matches)) {
@@ -252,8 +317,12 @@ class Comment implements \JsonSerializable
             // start of all lines.
             return preg_replace('(^' . preg_quote($matches[1]) . ')m', '', $text);
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         if (preg_match('(^/\*\*?\s*(?!\s))', $text, $matches)) {
+=======
+        } elseif (preg_match('(^/\*\*?\s*(?!\s))', $text, $matches)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif (preg_match('(^/\*\*?\s*(?!\s))', $text, $matches)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -284,9 +353,15 @@ class Comment implements \JsonSerializable
      * @return int Length in characters. Tabs count as single characters.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getShortestWhitespacePrefixLen(string $str): int {
         $lines = explode("\n", $str);
         $shortestPrefixLen = \PHP_INT_MAX;
+=======
+    private function getShortestWhitespacePrefixLen(string $str) : int {
+        $lines = explode("\n", $str);
+        $shortestPrefixLen = \INF;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getShortestWhitespacePrefixLen(string $str) : int {
         $lines = explode("\n", $str);
@@ -304,14 +379,20 @@ class Comment implements \JsonSerializable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array{nodeType:string, text:mixed, line:mixed, filePos:mixed}
      */
     public function jsonSerialize(): array {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return       array
      * @psalm-return array{nodeType:string, text:mixed, line:mixed, filePos:mixed}
      */
     public function jsonSerialize() : array {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Technically not a node, but we make it look like one anyway
         $type = $this instanceof Comment\Doc ? 'Comment_Doc' : 'Comment';

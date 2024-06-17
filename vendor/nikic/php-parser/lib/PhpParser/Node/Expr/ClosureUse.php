@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require __DIR__ . '/../ClosureUse.php';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace PhpParser\Node\Expr;
 
 use PhpParser\Node\Expr;
@@ -35,4 +38,7 @@ class ClosureUse extends Expr
         return 'Expr_ClosureUse';
     }
 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -30,15 +30,21 @@ final class Factory
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param list<non-empty-string>|non-empty-string $paths
      * @psalm-param list<non-empty-string>|string $suffixes
      * @psalm-param list<non-empty-string>|string $prefixes
      * @psalm-param list<non-empty-string> $exclude
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-param list<string>|string $paths
      * @psalm-param list<string>|string $suffixes
      * @psalm-param list<string>|string $prefixes
      * @psalm-param list<string> $exclude
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function getFileIterator(array|string $paths, array|string $suffixes = '', array|string $prefixes = '', array $exclude = []): AppendIterator
@@ -91,9 +97,15 @@ final class Factory
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param list<non-empty-string> $paths
      *
      * @psalm-return list<non-empty-string>
+=======
+     * @psalm-param list<string> $paths
+     *
+     * @psalm-return list<string>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param list<string> $paths
      *

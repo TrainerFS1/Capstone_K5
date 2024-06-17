@@ -7,7 +7,10 @@ use Illuminate\Contracts\Mail\Factory as MailFactory;
 use Illuminate\Contracts\Mail\Mailable as MailableContract;
 use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Queue\ShouldQueueAfterCommit;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Queue\InteractsWithQueue;
@@ -61,6 +64,7 @@ class SendQueuedMailable
     {
         $this->mailable = $mailable;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if ($mailable instanceof ShouldQueueAfterCommit) {
             $this->afterCommit = true;
@@ -75,11 +79,16 @@ class SendQueuedMailable
         $this->timeout = property_exists($mailable, 'timeout') ? $mailable->timeout : null;
         $this->tries = property_exists($mailable, 'tries') ? $mailable->tries : null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->tries = property_exists($mailable, 'tries') ? $mailable->tries : null;
         $this->timeout = property_exists($mailable, 'timeout') ? $mailable->timeout : null;
         $this->maxExceptions = property_exists($mailable, 'maxExceptions') ? $mailable->maxExceptions : null;
         $this->afterCommit = property_exists($mailable, 'afterCommit') ? $mailable->afterCommit : null;
         $this->shouldBeEncrypted = $mailable instanceof ShouldBeEncrypted;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

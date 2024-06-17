@@ -16,7 +16,11 @@ use Symfony\Component\Uid\Ulid;
 class UlidFactory
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function create(?\DateTimeInterface $time = null): Ulid
+=======
+    public function create(\DateTimeInterface $time = null): Ulid
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function create(\DateTimeInterface $time = null): Ulid
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

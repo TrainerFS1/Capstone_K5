@@ -31,9 +31,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function newLine(int $count = 1)
@@ -47,9 +50,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function write(string|iterable $messages, bool $newline = false, int $type = self::OUTPUT_NORMAL)
@@ -58,9 +64,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function writeln(string|iterable $messages, int $type = self::OUTPUT_NORMAL)
@@ -69,9 +78,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setVerbosity(int $level)
@@ -85,9 +97,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setDecorated(bool $decorated)
@@ -101,9 +116,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setFormatter(OutputFormatterInterface $formatter)
@@ -137,9 +155,12 @@ abstract class OutputStyle implements OutputInterface, StyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return OutputInterface
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function getErrorOutput()

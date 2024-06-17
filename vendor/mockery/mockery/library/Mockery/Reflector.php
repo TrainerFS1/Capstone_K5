@@ -2,12 +2,15 @@
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Mockery (https://docs.mockery.io/)
  *
  * @copyright https://github.com/mockery/mockery/blob/HEAD/COPYRIGHT.md
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * Mockery
  *
  * LICENSE
@@ -24,11 +27,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2017 Dave Marshall https://github.com/davedevelopment
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use InvalidArgumentException;
 use ReflectionClass;
@@ -54,12 +61,15 @@ use const PHP_VERSION_ID;
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * @internal
  */
 class Reflector
 {
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * List of built-in types.
      *
@@ -88,6 +98,8 @@ class Reflector
      */
     private const TRAVERSABLE_ARRAY = ['\Traversable', 'array'];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the parameter is typed as an array.
      *
      * @param \ReflectionParameter $param
@@ -121,11 +133,15 @@ class Reflector
 
         return (!$withoutNullable && $type->allowsNull()) ? self::formatNullableType($typeHint) : $typeHint;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Compute the string representation for the return type.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param bool $withoutNullable
      *
@@ -147,6 +163,8 @@ class Reflector
 
         return (! $withoutNullable && $type->allowsNull()) ? self::formatNullableType($typeHint) : $typeHint;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param \ReflectionParameter $param
      * @param bool $withoutNullable
      *
@@ -167,12 +185,16 @@ class Reflector
         $typeHint = self::typeToString($type, $method->getDeclaringClass());
 
         return (!$withoutNullable && $type->allowsNull()) ? self::formatNullableType($typeHint) : $typeHint;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Compute the string representation for the simplest return type.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return null|string
      */
@@ -186,6 +208,8 @@ class Reflector
 
         if (! $type instanceof ReflectionType || $type->allowsNull()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param \ReflectionParameter $param
      *
      * @return string|null
@@ -199,6 +223,9 @@ class Reflector
         }
 
         if (is_null($type) || $type->allowsNull()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return null;
         }
@@ -221,6 +248,7 @@ class Reflector
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Compute the string representation for the paramater type.
      *
@@ -345,6 +373,8 @@ class Reflector
 
         throw new InvalidArgumentException('Unknown ReflectionType: ' . get_debug_type($type));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the string representation of the given type.
      *
      * @param \ReflectionType $type
@@ -357,12 +387,16 @@ class Reflector
         return \implode('|', \array_map(function (array $typeInformation) {
             return $typeInformation['typeHint'];
         }, self::getTypeInformation($type, $declaringClass)));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Get the string representation of the given type.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return list<array{typeHint:string,isPrimitive:bool}>
      */
@@ -371,6 +405,8 @@ class Reflector
         // PHP 8 union types and PHP 8.1 intersection types can be recursively processed
         if ($type instanceof ReflectionUnionType || $type instanceof ReflectionIntersectionType) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param \ReflectionType  $type
      * @param \ReflectionClass $declaringClass
      *
@@ -380,6 +416,9 @@ class Reflector
     {
         // PHP 8 union types and PHP 8.1 intersection types can be recursively processed
         if ($type instanceof \ReflectionUnionType || $type instanceof \ReflectionIntersectionType) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $types = [];
 
@@ -405,7 +444,11 @@ class Reflector
                 [
                     'typeHint' => $typeHint,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'isPrimitive' => in_array($typeHint, self::BUILTIN_TYPES, true),
+=======
+                    'isPrimitive' => in_array($typeHint, ['array', 'bool', 'int', 'float', 'null', 'object', 'string']),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'isPrimitive' => in_array($typeHint, ['array', 'bool', 'int', 'float', 'null', 'object', 'string']),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -442,7 +485,10 @@ class Reflector
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Format the given type as a nullable type.
@@ -459,5 +505,8 @@ class Reflector
 
         return $typeHint === 'mixed' ? 'mixed' : sprintf('%s|null', $typeHint);
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -18,8 +18,11 @@ use Psy\Shell;
 /**
  * A runkit-based code reloader, which is pretty much magic.
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @todo Remove RunkitReloader once we drop support for PHP 7.x :(
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -40,11 +43,14 @@ class RunkitReloader extends AbstractListener
     /**
      * Construct a Runkit Reloader.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function __construct()
     {
         $this->parser = (new ParserFactory())->createParser();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @todo Pass in Parser Factory instance for dependency injection?
      */
@@ -52,6 +58,9 @@ class RunkitReloader extends AbstractListener
     {
         $parserFactory = new ParserFactory();
         $this->parser = $parserFactory->createParser();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

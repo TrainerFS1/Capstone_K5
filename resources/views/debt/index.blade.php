@@ -11,12 +11,15 @@
                         <h1 class="m-0">Daftar Hutang</h1>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ '/' }}">Home</a></li>
                             <li class="breadcrumb-item active">Hutang</li>
                         </ol>
                     </div>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 </div>
@@ -38,16 +41,22 @@
                                     <thead>
                                         <tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <th>No</th>
                                             <th>Jenis Hutang</th>
                                             <th>
                                                 <a
                                                     href="{{ request()->fullUrlWithQuery(['field' => 'date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                             <th>No</th>                                            
                                             <th>Jenis Hutang</th> 
                                             <th>
                                                 <a href="{{ request()->fullUrlWithQuery(['field' => 'date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                                     Tanggal
                                                     @if (request()->query('field') == 'date')
@@ -61,10 +70,16 @@
                                                     @endif
                                                 </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             </th>
                                             <th>
                                                 <a
                                                     href="{{ request()->fullUrlWithQuery(['field' => 'amount', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+=======
+                                            </th>                                            
+                                            <th>
+                                                <a href="{{ request()->fullUrlWithQuery(['field' => 'amount', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                             </th>                                            
                                             <th>
@@ -82,10 +97,16 @@
                                                     @endif
                                                 </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             </th>
                                             <th>
                                                 <a
                                                     href="{{ request()->fullUrlWithQuery(['field' => 'due_date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+=======
+                                            </th>                                                                                    
+                                            <th>
+                                                <a href="{{ request()->fullUrlWithQuery(['field' => 'due_date', 'sort' => request()->query('sort') == 'asc' ? 'desc' : 'asc']) }}">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                             </th>                                                                                    
                                             <th>
@@ -111,6 +132,7 @@
                                         @foreach ($debts as $debt)
                                             <tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 <td>{{ $loop->iteration + ($debts->currentPage() - 1) * $debts->perPage() }}
                                                 </td>
                                                 <td>{{ $debt->debt_type }}</td>
@@ -127,6 +149,8 @@
                                                         action="{{ route('delete.debt', $debt->id) }}" method="POST"
                                                         style="display: none;">
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                                 <td>{{ $loop->iteration + ($debts->currentPage() - 1) * $debts->perPage() }}</td>
                                                 <td>{{ $debt->debt_type }}</td>
                                                 <td>{{ date('d-m-Y', strtotime($debt->date)) }}</td>                                                
@@ -137,6 +161,9 @@
                                                     <a href="{{ route('edit.debt', $debt->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                                     <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ $debt->id }})">Delete</button>
                                                     <form id="delete-form-{{ $debt->id }}" action="{{ route('delete.debt', $debt->id) }}" method="POST" style="display: none;">
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                                         @csrf
                                                         @method('DELETE')

@@ -187,7 +187,11 @@ class CodePointString extends AbstractUnicodeString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function slice(int $start = 0, ?int $length = null): static
+=======
+    public function slice(int $start = 0, int $length = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function slice(int $start = 0, int $length = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -199,7 +203,11 @@ class CodePointString extends AbstractUnicodeString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function splice(string $replacement, int $start = 0, ?int $length = null): static
+=======
+    public function splice(string $replacement, int $start = 0, int $length = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function splice(string $replacement, int $start = 0, int $length = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -217,7 +225,11 @@ class CodePointString extends AbstractUnicodeString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function split(string $delimiter, ?int $limit = null, ?int $flags = null): array
+=======
+    public function split(string $delimiter, int $limit = null, int $flags = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function split(string $delimiter, int $limit = null, int $flags = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

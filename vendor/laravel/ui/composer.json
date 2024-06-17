@@ -12,6 +12,7 @@
     "require": {
         "php": "^8.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "illuminate/console": "^9.21|^10.0|^11.0",
         "illuminate/filesystem": "^9.21|^10.0|^11.0",
         "illuminate/support": "^9.21|^10.0|^11.0",
@@ -22,6 +23,8 @@
         "orchestra/testbench": "^7.35|^8.15|^9.0",
         "phpunit/phpunit": "^9.3|^10.4|^11.0"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "illuminate/console": "^9.21|^10.0",
         "illuminate/filesystem": "^9.21|^10.0",
         "illuminate/support": "^9.21|^10.0",
@@ -30,6 +33,9 @@
     "require-dev": {
         "orchestra/testbench": "^7.0|^8.0",
         "phpunit/phpunit": "^9.3"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {

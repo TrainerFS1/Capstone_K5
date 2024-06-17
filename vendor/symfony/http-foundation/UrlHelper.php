@@ -13,7 +13,10 @@ namespace Symfony\Component\HttpFoundation;
 
 use Symfony\Component\Routing\RequestContext;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Routing\RequestContextAwareInterface;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -25,11 +28,14 @@ use Symfony\Component\Routing\RequestContextAwareInterface;
 final class UrlHelper
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private RequestStack $requestStack,
         private RequestContextAwareInterface|RequestContext|null $requestContext = null,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private RequestStack $requestStack;
     private ?RequestContext $requestContext;
 
@@ -37,6 +43,9 @@ final class UrlHelper
     {
         $this->requestStack = $requestStack;
         $this->requestContext = $requestContext;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -85,6 +94,7 @@ final class UrlHelper
     private function getAbsoluteUrlFromContext(string $path): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null === $context = $this->requestContext) {
             return $path;
         }
@@ -116,6 +126,8 @@ final class UrlHelper
         if ('/' !== $path[0]) {
             $path = rtrim($context->getBaseUrl(), '/').'/'.$path;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (null === $this->requestContext || '' === $host = $this->requestContext->getHost()) {
             return $path;
         }
@@ -138,6 +150,9 @@ final class UrlHelper
 
         if ('/' !== $path[0]) {
             $path = rtrim($this->requestContext->getBaseUrl(), '/').'/'.$path;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

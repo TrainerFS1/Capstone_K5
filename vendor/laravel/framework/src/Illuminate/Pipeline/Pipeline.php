@@ -6,7 +6,10 @@ use Closure;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Pipeline\Pipeline as PipelineContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Traits\Conditionable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use RuntimeException;
@@ -15,8 +18,11 @@ use Throwable;
 class Pipeline implements PipelineContract
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     use Conditionable;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**

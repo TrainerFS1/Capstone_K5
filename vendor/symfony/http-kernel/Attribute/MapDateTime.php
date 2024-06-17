@@ -12,14 +12,18 @@
 namespace Symfony\Component\HttpKernel\Attribute;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\DateTimeValueResolver;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Controller parameter tag to configure DateTime arguments.
  */
 #[\Attribute(\Attribute::TARGET_PARAMETER)]
+<<<<<<< HEAD
 <<<<<<< HEAD
 class MapDateTime extends ValueResolver
 {
@@ -30,11 +34,16 @@ class MapDateTime extends ValueResolver
     ) {
         parent::__construct($resolver, $disabled);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class MapDateTime
 {
     public function __construct(
         public readonly ?string $format = null
     ) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -40,8 +40,13 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
     public const PREG_SPLIT_OFFSET_CAPTURE = \PREG_SPLIT_OFFSET_CAPTURE;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected string $string = '';
     protected ?bool $ignoreCase = false;
+=======
+    protected $string = '';
+    protected $ignoreCase = false;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected $string = '';
     protected $ignoreCase = false;
@@ -389,7 +394,11 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract public function join(array $strings, ?string $lastGlue = null): static;
+=======
+    abstract public function join(array $strings, string $lastGlue = null): static;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract public function join(array $strings, string $lastGlue = null): static;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -439,24 +448,34 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
     abstract public function reverse(): static;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract public function slice(int $start = 0, ?int $length = null): static;
 
     abstract public function snake(): static;
 
     abstract public function splice(string $replacement, int $start = 0, ?int $length = null): static;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     abstract public function slice(int $start = 0, int $length = null): static;
 
     abstract public function snake(): static;
 
     abstract public function splice(string $replacement, int $start = 0, int $length = null): static;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @return static[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function split(string $delimiter, ?int $limit = null, ?int $flags = null): array
+=======
+    public function split(string $delimiter, int $limit = null, int $flags = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function split(string $delimiter, int $limit = null, int $flags = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -470,7 +489,11 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
+=======
+        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -521,7 +544,11 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
     abstract public function title(bool $allWords = false): static;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toByteString(?string $toEncoding = null): ByteString
+=======
+    public function toByteString(string $toEncoding = null): ByteString
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toByteString(string $toEncoding = null): ByteString
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -537,6 +564,7 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
         } catch (\ValueError $e) {
@@ -546,6 +574,8 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
 
             $b->string = iconv('UTF-8', $toEncoding, $this->string);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
 
         try {
@@ -560,6 +590,9 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
             }
         } finally {
             restore_error_handler();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

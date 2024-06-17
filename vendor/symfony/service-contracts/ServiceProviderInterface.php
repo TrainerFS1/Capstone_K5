@@ -20,7 +20,11 @@ use Psr\Container\ContainerInterface;
  * @author Mateusz Sip <mateusz.sip@gmail.com>
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @template-covariant T of mixed
+=======
+ * @template T of mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @template T of mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -44,7 +48,11 @@ interface ServiceProviderInterface extends ContainerInterface
      *  * ['bar' => '?Bar\Baz'] means the container provides a service "bar" of type Bar\Baz|null
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<string, string> The provided service types, keyed by service names
+=======
+     * @return string[] The provided service types, keyed by service names
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return string[] The provided service types, keyed by service names
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

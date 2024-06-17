@@ -28,8 +28,11 @@ class DateTimeImmutable extends \DateTimeImmutable implements \JsonSerializable
         $this->useMicroseconds = $useMicroseconds;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // if you like to use a custom time to pass to Logger::addRecord directly,
         // call modify() or setTimestamp() on this instance to change the date after creating it
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         parent::__construct('now', $timezone);

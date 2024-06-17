@@ -4,10 +4,15 @@ namespace Illuminate\View\Engines;
 
 use Illuminate\Filesystem\Filesystem;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\View\Compilers\CompilerInterface;
 use Illuminate\View\ViewException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+=======
+use Illuminate\View\Compilers\CompilerInterface;
+use Illuminate\View\ViewException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\View\Compilers\CompilerInterface;
 use Illuminate\View\ViewException;
@@ -108,10 +113,13 @@ class CompilerEngine extends PhpEngine
     protected function handleViewException(Throwable $e, $obLevel)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($e instanceof HttpException || $e instanceof HttpResponseException) {
             parent::handleViewException($e, $obLevel);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $e = new ViewException($this->getMessage($e), 0, 1, $e->getFile(), $e->getLine(), $e);

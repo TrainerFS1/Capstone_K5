@@ -17,6 +17,7 @@ final class ReedSolomonCodec
     /**
      * Symbol size in bits.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     private int $symbolSize;
 
@@ -50,6 +51,8 @@ final class ReedSolomonCodec
      */
     private int $padding;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @var int
      */
@@ -96,6 +99,9 @@ final class ReedSolomonCodec
      * @var int
      */
     private $padding;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -104,7 +110,11 @@ final class ReedSolomonCodec
      * @var SplFixedArray
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SplFixedArray $alphaTo;
+=======
+    private $alphaTo;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $alphaTo;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -115,7 +125,11 @@ final class ReedSolomonCodec
      * @var SplFixedArray
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SplFixedArray $indexOf;
+=======
+    private $indexOf;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $indexOf;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -126,7 +140,11 @@ final class ReedSolomonCodec
      * @var SplFixedArray
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SplFixedArray $generatorPoly;
+=======
+    private $generatorPoly;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $generatorPoly;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -270,7 +288,11 @@ final class ReedSolomonCodec
      * Decodes received data.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function decode(SplFixedArray $data, ?SplFixedArray $erasures = null) : ?int
+=======
+    public function decode(SplFixedArray $data, SplFixedArray $erasures = null) : ?int
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function decode(SplFixedArray $data, SplFixedArray $erasures = null) : ?int
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

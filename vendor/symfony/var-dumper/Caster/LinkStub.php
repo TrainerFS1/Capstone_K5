@@ -24,7 +24,11 @@ class LinkStub extends ConstStub
     private static array $composerRoots = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $label, int $line = 0, ?string $href = null)
+=======
+    public function __construct(string $label, int $line = 0, string $href = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $label, int $line = 0, string $href = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,7 +69,11 @@ class LinkStub extends ConstStub
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getComposerRoot(string $file, bool &$inVendor): string|false
+=======
+    private function getComposerRoot(string $file, bool &$inVendor)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getComposerRoot(string $file, bool &$inVendor)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

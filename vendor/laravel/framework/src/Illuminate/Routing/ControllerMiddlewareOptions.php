@@ -26,7 +26,11 @@ class ControllerMiddlewareOptions
      * Set the controller methods the middleware should apply to.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string|mixed  $methods
+=======
+     * @param  array|string|dynamic  $methods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array|string|dynamic  $methods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,7 +47,11 @@ class ControllerMiddlewareOptions
      * Set the controller methods the middleware should exclude.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string|mixed  $methods
+=======
+     * @param  array|string|dynamic  $methods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array|string|dynamic  $methods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

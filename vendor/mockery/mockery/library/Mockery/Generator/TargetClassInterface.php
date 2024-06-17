@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,6 +28,9 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -34,22 +40,29 @@ interface TargetClassInterface
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Returns a new instance of the current TargetClassInterface's implementation.
      *
      * @param class-string $name
      *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Returns a new instance of the current
      * TargetClassInterface's
      * implementation.
      *
      * @param string $name
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return TargetClassInterface
      */
     public static function factory($name);
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Returns the targetClass's attributes.
      *
@@ -64,18 +77,27 @@ interface TargetClassInterface
      */
     public function getInterfaces();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Returns the targetClass's name.
      *
      * @return string
      */
     public function getName();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Returns the targetClass's methods.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<Method>
+=======
+     * @return array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,17 +106,23 @@ interface TargetClassInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Returns the targetClass's name.
      *
      * @return class-string
      */
     public function getName();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Returns the targetClass's interfaces.
      *
      * @return array
      */
     public function getInterfaces();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -112,6 +140,7 @@ interface TargetClassInterface
     public function getShortName();
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Returns whether the targetClass has
      * an internal ancestor.
@@ -146,6 +175,11 @@ interface TargetClassInterface
      *
      * @return boolean
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Returns whether the targetClass is abstract.
+     *
+     * @return boolean
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function isAbstract();
 
@@ -153,10 +187,13 @@ interface TargetClassInterface
      * Returns whether the targetClass is final.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return bool
      */
     public function isFinal();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return boolean
      */
     public function isFinal();
@@ -184,5 +221,8 @@ interface TargetClassInterface
      * @return boolean
      */
     public function hasInternalAncestor();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

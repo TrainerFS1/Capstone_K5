@@ -10,11 +10,14 @@ interface OperationInterface
      */
     public function translate(float $x, float $y) : self;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Rotates the operation's coordinates.
      */
     public function rotate(int $degrees) : self;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

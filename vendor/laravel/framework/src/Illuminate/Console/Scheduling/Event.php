@@ -39,6 +39,7 @@ class Event
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * How often to repeat the event during a minute.
      *
      * @var int|null
@@ -46,6 +47,8 @@ class Event
     public $repeatSeconds = null;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The timezone the date should be evaluated on.
@@ -168,6 +171,7 @@ class Event
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The last time the event was checked for eligibility to run.
      *
      * Utilized by sub-minute repeated events.
@@ -177,6 +181,8 @@ class Event
     protected $lastChecked;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The exit status code of the command.
@@ -245,6 +251,7 @@ class Event
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if the event has been configured to repeat multiple times per minute.
      *
      * @return bool
@@ -266,6 +273,8 @@ class Event
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Run the command process.
@@ -417,8 +426,11 @@ class Event
     public function filtersPass($app)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->lastChecked = Date::now();
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($this->filters as $callback) {

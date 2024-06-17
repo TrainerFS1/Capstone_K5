@@ -56,7 +56,11 @@ class Middleware
      * Specify the controller methods the middleware should not apply to.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string  $except
+=======
+     * @param  array|string  $only
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array|string  $only
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

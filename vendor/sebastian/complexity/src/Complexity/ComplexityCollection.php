@@ -10,12 +10,16 @@
 namespace SebastianBergmann\Complexity;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_filter;
 use function array_merge;
 use function array_reverse;
 use function array_values;
 use function count;
 use function usort;
+=======
+use function count;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function count;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -31,7 +35,11 @@ final class ComplexityCollection implements Countable, IteratorAggregate
      * @psalm-var list<Complexity>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly array $items;
+=======
+    private array $items;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private array $items;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -63,9 +71,12 @@ final class ComplexityCollection implements Countable, IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function count(): int
@@ -79,9 +90,12 @@ final class ComplexityCollection implements Countable, IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function cyclomaticComplexity(): int
@@ -94,6 +108,7 @@ final class ComplexityCollection implements Countable, IteratorAggregate
 
         return $cyclomaticComplexity;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function isFunction(): self
@@ -144,6 +159,8 @@ final class ComplexityCollection implements Countable, IteratorAggregate
 
         return new self(array_reverse($items));
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

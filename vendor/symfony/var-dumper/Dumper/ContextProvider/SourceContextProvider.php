@@ -12,8 +12,12 @@
 namespace Symfony\Component\VarDumper\Dumper\ContextProvider;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\ErrorHandler\ErrorRenderer\FileLinkFormatter;
 use Symfony\Component\HttpKernel\Debug\FileLinkFormatter as LegacyFileLinkFormatter;
+=======
+use Symfony\Component\HttpKernel\Debug\FileLinkFormatter;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpKernel\Debug\FileLinkFormatter;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -34,9 +38,15 @@ final class SourceContextProvider implements ContextProviderInterface
     private ?string $charset;
     private ?string $projectDir;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter;
 
     public function __construct(?string $charset = null, ?string $projectDir = null, FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter = null, int $limit = 9)
+=======
+    private ?FileLinkFormatter $fileLinkFormatter;
+
+    public function __construct(string $charset = null, string $projectDir = null, FileLinkFormatter $fileLinkFormatter = null, int $limit = 9)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private ?FileLinkFormatter $fileLinkFormatter;
 
@@ -56,7 +66,11 @@ final class SourceContextProvider implements ContextProviderInterface
         $file = $trace[1]['file'];
         $line = $trace[1]['line'];
 <<<<<<< HEAD
+<<<<<<< HEAD
         $name = '-' === $file || 'Standard input code' === $file ? 'Standard input code' : false;
+=======
+        $name = false;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $name = false;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

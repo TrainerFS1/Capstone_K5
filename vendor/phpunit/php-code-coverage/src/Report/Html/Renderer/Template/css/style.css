@@ -121,7 +121,11 @@ svg text {
 .scrollbox {
  height:245px;
 <<<<<<< HEAD
+<<<<<<< HEAD
  overflow-x:scroll;
+=======
+ overflow-x:hidden;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  overflow-x:hidden;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -132,6 +136,7 @@ table + .structure-heading {
  border-top: 1px solid lightgrey;
  padding-top: 0.5em;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 .legend {
@@ -161,5 +166,7 @@ table + .structure-heading {
 .not-coverable {
  background-color: {{warning}};
 }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

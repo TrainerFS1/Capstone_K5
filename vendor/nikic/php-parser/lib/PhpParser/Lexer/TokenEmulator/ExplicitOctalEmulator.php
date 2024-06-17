@@ -3,6 +3,7 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\PhpVersion;
 use PhpParser\Token;
 
@@ -10,11 +11,16 @@ class ExplicitOctalEmulator extends TokenEmulator {
     public function getPhpVersion(): PhpVersion {
         return PhpVersion::fromComponents(8, 1);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Lexer\Emulative;
 
 class ExplicitOctalEmulator extends TokenEmulator {
     public function getPhpVersion(): string {
         return Emulative::PHP_8_1;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -25,6 +31,7 @@ class ExplicitOctalEmulator extends TokenEmulator {
     public function emulate(string $code, array $tokens): array {
         for ($i = 0, $c = count($tokens); $i < $c; ++$i) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $token = $tokens[$i];
             if ($token->id == \T_LNUMBER && $token->text === '0' &&
                 isset($tokens[$i + 1]) && $tokens[$i + 1]->id == \T_STRING &&
@@ -34,6 +41,8 @@ class ExplicitOctalEmulator extends TokenEmulator {
                 array_splice($tokens, $i, 2, [
                     new Token($tokenKind, '0' . $tokens[$i + 1]->text, $token->line, $token->pos),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($tokens[$i][0] == \T_LNUMBER && $tokens[$i][1] === '0' &&
                 isset($tokens[$i + 1]) && $tokens[$i + 1][0] == \T_STRING &&
                 preg_match('/[oO][0-7]+(?:_[0-7]+)*/', $tokens[$i + 1][1])
@@ -41,6 +50,9 @@ class ExplicitOctalEmulator extends TokenEmulator {
                 $tokenKind = $this->resolveIntegerOrFloatToken($tokens[$i + 1][1]);
                 array_splice($tokens, $i, 2, [
                     [$tokenKind, '0' . $tokens[$i + 1][1], $tokens[$i][2]],
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ]);
                 $c--;
@@ -50,7 +62,12 @@ class ExplicitOctalEmulator extends TokenEmulator {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function resolveIntegerOrFloatToken(string $str): int {
+=======
+    private function resolveIntegerOrFloatToken(string $str): int
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function resolveIntegerOrFloatToken(string $str): int
     {
@@ -66,7 +83,11 @@ class ExplicitOctalEmulator extends TokenEmulator {
         return $tokens;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 }
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -38,7 +38,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      * @var array<string, Alias>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $aliases = [];
+=======
+    private $aliases = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $aliases = [];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -87,9 +91,12 @@ class RouteCollection implements \IteratorAggregate, \Countable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function add(string $name, Route $route, int $priority = 0)
@@ -114,7 +121,13 @@ class RouteCollection implements \IteratorAggregate, \Countable
             $priorities = $this->priorities;
             $keysOrder = array_flip(array_keys($this->routes));
 <<<<<<< HEAD
+<<<<<<< HEAD
             uksort($this->routes, static fn ($n1, $n2) => (($priorities[$n2] ?? 0) <=> ($priorities[$n1] ?? 0)) ?: ($keysOrder[$n1] <=> $keysOrder[$n2]));
+=======
+            uksort($this->routes, static function ($n1, $n2) use ($priorities, $keysOrder) {
+                return (($priorities[$n2] ?? 0) <=> ($priorities[$n1] ?? 0)) ?: ($keysOrder[$n1] <=> $keysOrder[$n2]);
+            });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             uksort($this->routes, static function ($n1, $n2) use ($priorities, $keysOrder) {
                 return (($priorities[$n2] ?? 0) <=> ($priorities[$n1] ?? 0)) ?: ($keysOrder[$n1] <=> $keysOrder[$n2]);
@@ -156,6 +169,7 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * @param string|string[] $name The route name or an array of route names
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
@@ -180,12 +194,17 @@ class RouteCollection implements \IteratorAggregate, \Countable
             }
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function remove(string|array $name)
     {
         foreach ((array) $name as $n) {
             unset($this->routes[$n], $this->priorities[$n], $this->aliases[$n]);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -193,8 +212,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      * Adds a route collection at the end of the current set by appending all
      * routes of the added collection.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -225,8 +247,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
     /**
      * Adds a prefix to the path of all child routes.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -248,8 +273,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
     /**
      * Adds a prefix to the name of all the routes within in the collection.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -281,8 +309,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
     /**
      * Sets the host pattern on all routes.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -300,8 +331,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * Existing conditions will be overridden.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -317,8 +351,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * An existing default value under the same name in a route will be overridden.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -336,8 +373,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * An existing requirement under the same name in a route will be overridden.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -355,8 +395,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * An existing option value under the same name in a route will be overridden.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -374,8 +417,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * @param string|string[] $schemes The scheme or an array of schemes
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -391,8 +437,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      *
      * @param string|string[] $methods The method or an array of methods
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -417,8 +466,11 @@ class RouteCollection implements \IteratorAggregate, \Countable
      * Adds a resource for this collection. If the resource already exists
      * it is not added.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -463,11 +515,14 @@ class RouteCollection implements \IteratorAggregate, \Countable
         return $this->aliases[$name] ?? null;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function getPriority(string $name): ?int
     {
         return $this->priorities[$name] ?? null;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

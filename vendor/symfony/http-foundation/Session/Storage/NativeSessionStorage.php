@@ -90,7 +90,11 @@ class NativeSessionStorage implements SessionStorageInterface
      * trans_sid_tags, "a=href,area=href,frame=src,form="
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(array $options = [], AbstractProxy|\SessionHandlerInterface|null $handler = null, ?MetadataBag $metaBag = null)
+=======
+    public function __construct(array $options = [], AbstractProxy|\SessionHandlerInterface $handler = null, MetadataBag $metaBag = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(array $options = [], AbstractProxy|\SessionHandlerInterface $handler = null, MetadataBag $metaBag = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -188,9 +192,12 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setId(string $id)
@@ -204,9 +211,12 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
@@ -215,7 +225,11 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function regenerate(bool $destroy = false, ?int $lifetime = null): bool
+=======
+    public function regenerate(bool $destroy = false, int $lifetime = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function regenerate(bool $destroy = false, int $lifetime = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -243,9 +257,12 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function save()
@@ -288,9 +305,12 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function clear()
@@ -308,9 +328,12 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerBag(SessionBagInterface $bag)
@@ -338,10 +361,14 @@ class NativeSessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function setMetadataBag(?MetadataBag $metaBag = null)
+=======
+    public function setMetadataBag(MetadataBag $metaBag = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setMetadataBag(MetadataBag $metaBag = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -351,6 +378,10 @@ class NativeSessionStorage implements SessionStorageInterface
         }
         $this->metadataBag = $metaBag ?? new MetadataBag();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -379,8 +410,11 @@ class NativeSessionStorage implements SessionStorageInterface
      *
      * @see https://php.net/session.configuration
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -427,11 +461,17 @@ class NativeSessionStorage implements SessionStorageInterface
      * @see https://php.net/sessionhandler
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
      * @throws \InvalidArgumentException
      */
     public function setSaveHandler(AbstractProxy|\SessionHandlerInterface|null $saveHandler = null)
+=======
+     * @throws \InvalidArgumentException
+     */
+    public function setSaveHandler(AbstractProxy|\SessionHandlerInterface $saveHandler = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \InvalidArgumentException
      */
@@ -467,10 +507,15 @@ class NativeSessionStorage implements SessionStorageInterface
      * PHP takes the return value from the read() handler, unserializes it
      * and populates $_SESSION with the result automatically.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
     protected function loadSession(?array &$session = null)
+=======
+     */
+    protected function loadSession(array &$session = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      */
     protected function loadSession(array &$session = null)

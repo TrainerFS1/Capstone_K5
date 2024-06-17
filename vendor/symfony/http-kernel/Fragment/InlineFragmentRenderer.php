@@ -31,7 +31,11 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
     private ?EventDispatcherInterface $dispatcher;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(HttpKernelInterface $kernel, ?EventDispatcherInterface $dispatcher = null)
+=======
+    public function __construct(HttpKernelInterface $kernel, EventDispatcherInterface $dispatcher = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(HttpKernelInterface $kernel, EventDispatcherInterface $dispatcher = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -108,9 +112,12 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return Request
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function createSubRequest(string $uri, Request $request)
@@ -138,12 +145,15 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
             $subRequest->setLocale($request->getLocale());
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($request->attributes->has('_stateless')) {
             $subRequest->attributes->set('_stateless', $request->attributes->get('_stateless'));
         }
         if ($request->attributes->has('_check_controller_is_allowed')) {
             $subRequest->attributes->set('_check_controller_is_allowed', $request->attributes->get('_check_controller_is_allowed'));
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 

@@ -13,9 +13,13 @@ namespace Symfony\Component\HttpKernel\Controller;
 
 use Psr\Log\LoggerInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\AsController;
+=======
+use Symfony\Component\HttpFoundation\Request;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpFoundation\Request;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -31,6 +35,7 @@ class ControllerResolver implements ControllerResolverInterface
 {
     private ?LoggerInterface $logger;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $allowedControllerTypes = [];
     private array $allowedControllerAttributes = [AsController::class => AsController::class];
 
@@ -39,10 +44,15 @@ class ControllerResolver implements ControllerResolverInterface
 
     public function __construct(LoggerInterface $logger = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+
+    public function __construct(LoggerInterface $logger = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->logger = $logger;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @param array<class-string> $types
@@ -64,6 +74,8 @@ class ControllerResolver implements ControllerResolverInterface
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getController(Request $request): callable|false
     {
         if (!$controller = $request->attributes->get('_controller')) {
@@ -79,7 +91,11 @@ class ControllerResolver implements ControllerResolverInterface
                 } catch (\Error|\LogicException $e) {
                     if (\is_callable($controller)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         return $this->checkController($request, $controller);
+=======
+                        return $controller;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         return $controller;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,7 +110,11 @@ class ControllerResolver implements ControllerResolverInterface
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->checkController($request, $controller);
+=======
+            return $controller;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $controller;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -106,17 +126,23 @@ class ControllerResolver implements ControllerResolverInterface
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->checkController($request, $controller);
         }
 
         if (\function_exists($controller)) {
             return $this->checkController($request, $controller);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $controller;
         }
 
         if (\function_exists($controller)) {
             return $controller;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -131,7 +157,11 @@ class ControllerResolver implements ControllerResolverInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->checkController($request, $callable);
+=======
+        return $callable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $callable;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -252,6 +282,7 @@ class ControllerResolver implements ControllerResolverInterface
         $methods = get_class_methods($classOrObject);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return array_filter($methods, fn (string $method) => 0 !== strncmp($method, '__', 2));
     }
 
@@ -308,6 +339,11 @@ class ControllerResolver implements ControllerResolverInterface
         }
 
         throw new BadRequestException(sprintf('Callable "%s()" is not allowed as a controller. Did you miss tagging it with "#[AsController]" or registering its type with "%s::allowControllers()"?', $name, self::class));
+=======
+        return array_filter($methods, function (string $method) {
+            return 0 !== strncmp($method, '__', 2);
+        });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return array_filter($methods, function (string $method) {
             return 0 !== strncmp($method, '__', 2);

@@ -4,7 +4,10 @@ namespace Illuminate\Database\Query\Grammars;
 
 use Illuminate\Database\Query\Builder;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Query\JoinLateralClause;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
@@ -28,10 +31,15 @@ class MySqlGrammar extends Grammar
     protected function whereNull(Builder $query, $where)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $columnValue = (string) $this->getValue($where['column']);
 
         if ($this->isJsonSelector($columnValue)) {
             [$field, $path] = $this->wrapJsonFieldAndPath($columnValue);
+=======
+        if ($this->isJsonSelector($where['column'])) {
+            [$field, $path] = $this->wrapJsonFieldAndPath($where['column']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->isJsonSelector($where['column'])) {
             [$field, $path] = $this->wrapJsonFieldAndPath($where['column']);
@@ -53,10 +61,15 @@ class MySqlGrammar extends Grammar
     protected function whereNotNull(Builder $query, $where)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $columnValue = (string) $this->getValue($where['column']);
 
         if ($this->isJsonSelector($columnValue)) {
             [$field, $path] = $this->wrapJsonFieldAndPath($columnValue);
+=======
+        if ($this->isJsonSelector($where['column'])) {
+            [$field, $path] = $this->wrapJsonFieldAndPath($where['column']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->isJsonSelector($where['column'])) {
             [$field, $path] = $this->wrapJsonFieldAndPath($where['column']);
@@ -122,6 +135,7 @@ class MySqlGrammar extends Grammar
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Compile an insert ignore statement using a subquery into SQL.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -135,6 +149,8 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a "JSON contains" statement into SQL.
@@ -286,6 +302,7 @@ class MySqlGrammar extends Grammar
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Compile a "lateral join" clause.
      *
      * @param  \Illuminate\Database\Query\JoinLateralClause  $join
@@ -298,6 +315,8 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Prepare a JSON column being updated using the JSON_SET function.

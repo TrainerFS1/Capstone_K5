@@ -52,7 +52,11 @@ class Finder implements \IteratorAggregate
 	 * Begins search for files and directories matching mask.
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function find(string|array $masks = ['*']): static
+=======
+	public static function find(string|array $masks): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public static function find(string|array $masks): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +70,11 @@ class Finder implements \IteratorAggregate
 	 * Begins search for files matching mask.
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function findFiles(string|array $masks = ['*']): static
+=======
+	public static function findFiles(string|array $masks): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public static function findFiles(string|array $masks): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -80,7 +88,11 @@ class Finder implements \IteratorAggregate
 	 * Begins search for directories matching mask.
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function findDirectories(string|array $masks = ['*']): static
+=======
+	public static function findDirectories(string|array $masks): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public static function findDirectories(string|array $masks): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,7 +106,11 @@ class Finder implements \IteratorAggregate
 	 * Finds files matching the specified masks.
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function files(string|array $masks = ['*']): static
+=======
+	public function files(string|array $masks): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public function files(string|array $masks): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -107,7 +123,11 @@ class Finder implements \IteratorAggregate
 	 * Finds directories matching the specified masks.
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function directories(string|array $masks = ['*']): static
+=======
+	public function directories(string|array $masks): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public function directories(string|array $masks): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -330,16 +350,22 @@ class Finder implements \IteratorAggregate
 	/**
 	 * Returns an array with all found files and directories.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @return list<FileInfo>
 	 */
 	public function collect(): array
 	{
 		return iterator_to_array($this->getIterator(), preserve_keys: false);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function collect(): array
 	{
 		return iterator_to_array($this->getIterator());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
@@ -365,7 +391,11 @@ class Finder implements \IteratorAggregate
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @param  array<object{pattern: string, mode: string, recursive: bool}>  $searches
+=======
+	 * @param  array<\stdClass{pattern: string, mode: string, recursive: bool}>  $searches
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @param  array<\stdClass{pattern: string, mode: string, recursive: bool}>  $searches
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -378,7 +408,11 @@ class Finder implements \IteratorAggregate
 			return;
 		} elseif (!is_dir($dir)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			throw new Nette\InvalidStateException(sprintf("Directory '%s' does not exist.", rtrim($dir, '/\\')));
+=======
+			throw new Nette\InvalidStateException("Directory '$dir' not found.");
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 			throw new Nette\InvalidStateException("Directory '$dir' not found.");
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -421,7 +455,11 @@ class Finder implements \IteratorAggregate
 			foreach ($searches as $search) {
 				if (
 <<<<<<< HEAD
+<<<<<<< HEAD
 					$file->{'is' . $search->mode}()
+=======
+					$file->getType() === $search->mode
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 					$file->getType() === $search->mode
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -467,7 +505,11 @@ class Finder implements \IteratorAggregate
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/** @return array<string, array<object{pattern: string, mode: string, recursive: bool}>> */
+=======
+	/** @return array<string, array<\stdClass{pattern: string, mode: string, recursive: bool}>> */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	/** @return array<string, array<\stdClass{pattern: string, mode: string, recursive: bool}>> */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -495,10 +537,13 @@ class Finder implements \IteratorAggregate
 					: [strtr($base, ['[[]' => '[', '[]]' => ']'])]; // unescape [ and ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 				if (!$dirs) {
 					throw new Nette\InvalidStateException(sprintf("Directory '%s' does not exist.", rtrim($base, '/\\')));
 				}
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$search = (object) ['pattern' => $this->buildPattern($rest), 'mode' => $mode, 'recursive' => $recursive];

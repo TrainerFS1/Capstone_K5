@@ -44,6 +44,7 @@ class MySqlGrammar extends Grammar
     public function compileCreateDatabase($name, $connection)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $charset = $connection->getConfig('charset');
         $collation = $connection->getConfig('collation');
 
@@ -60,11 +61,16 @@ class MySqlGrammar extends Grammar
             $this->wrapValue($charset),
             $this->wrapValue($collation),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return sprintf(
             'create database %s default character set %s default collate %s',
             $this->wrapValue($name),
             $this->wrapValue($connection->getConfig('charset')),
             $this->wrapValue($connection->getConfig('collation')),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -87,8 +93,11 @@ class MySqlGrammar extends Grammar
      * Compile the query to determine the list of tables.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
@@ -99,6 +108,7 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Compile the query to determine the tables.
      *
@@ -165,6 +175,10 @@ class MySqlGrammar extends Grammar
      * Compile the query to determine the list of columns.
      *
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Compile the query to determine the list of columns.
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
      */
     public function compileColumnListing()
@@ -173,6 +187,7 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Compile the query to determine the columns.
      *
@@ -241,6 +256,8 @@ class MySqlGrammar extends Grammar
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a create table command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -278,6 +295,7 @@ class MySqlGrammar extends Grammar
     protected function compileCreateTable($blueprint, $command, $connection)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $tableStructure = $this->getColumns($blueprint);
 
         if ($primaryKey = $this->getCommandByName($blueprint, 'primary')) {
@@ -295,10 +313,15 @@ class MySqlGrammar extends Grammar
             $this->wrapTable($blueprint),
             implode(', ', $tableStructure)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return sprintf('%s table %s (%s)',
             $blueprint->temporary ? 'create temporary' : 'create',
             $this->wrapTable($blueprint),
             implode(', ', $this->getColumns($blueprint))
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -686,7 +709,10 @@ class MySqlGrammar extends Grammar
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the SQL needed to retrieve all table names.
      *
      * @return string
@@ -707,6 +733,9 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the command to enable foreign key constraints.
      *
@@ -1227,7 +1256,11 @@ class MySqlGrammar extends Grammar
 
         if (! is_null($virtualAs = $column->virtualAs)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return " as ({$this->getValue($virtualAs)})";
+=======
+            return " as ({$virtualAs})";
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return " as ({$virtualAs})";
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1253,7 +1286,11 @@ class MySqlGrammar extends Grammar
 
         if (! is_null($storedAs = $column->storedAs)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return " as ({$this->getValue($storedAs)}) stored";
+=======
+            return " as ({$storedAs}) stored";
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return " as ({$storedAs}) stored";
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

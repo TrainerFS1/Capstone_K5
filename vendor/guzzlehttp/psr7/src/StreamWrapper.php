@@ -42,7 +42,11 @@ final class StreamWrapper
         } else {
             throw new \InvalidArgumentException('The stream must be readable, '
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .'writable, or both.');
+=======
+                . 'writable, or both.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 . 'writable, or both.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,7 +64,11 @@ final class StreamWrapper
     {
         return stream_context_create([
 <<<<<<< HEAD
+<<<<<<< HEAD
             'guzzle' => ['stream' => $stream],
+=======
+            'guzzle' => ['stream' => $stream]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'guzzle' => ['stream' => $stream]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -124,7 +132,11 @@ final class StreamWrapper
     public function stream_cast(int $cast_as)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $stream = clone $this->stream;
+=======
+        $stream = clone($this->stream);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $stream = clone($this->stream);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,6 +146,7 @@ final class StreamWrapper
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return array{
      *   dev: int,
@@ -153,10 +166,14 @@ final class StreamWrapper
 =======
      * @return array<int|string, int>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * @return array<int|string, int>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function stream_stat(): array
     {
         static $modeMap = [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'r' => 33060,
             'rb' => 33060,
@@ -180,6 +197,8 @@ final class StreamWrapper
             'blksize' => 0,
             'blocks' => 0,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'r'  => 33060,
             'rb' => 33060,
             'r+' => 33206,
@@ -201,11 +220,15 @@ final class StreamWrapper
             'ctime'   => 0,
             'blksize' => 0,
             'blocks'  => 0
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return array{
      *   dev: int,
@@ -225,10 +248,14 @@ final class StreamWrapper
 =======
      * @return array<int|string, int>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * @return array<int|string, int>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function url_stat(string $path, int $flags): array
     {
         return [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'dev' => 0,
             'ino' => 0,
@@ -244,6 +271,8 @@ final class StreamWrapper
             'blksize' => 0,
             'blocks' => 0,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'dev'     => 0,
             'ino'     => 0,
             'mode'    => 0,
@@ -257,6 +286,9 @@ final class StreamWrapper
             'ctime'   => 0,
             'blksize' => 0,
             'blocks'  => 0
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }

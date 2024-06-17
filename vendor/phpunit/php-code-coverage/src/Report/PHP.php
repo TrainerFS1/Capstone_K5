@@ -13,7 +13,10 @@ use function dirname;
 use function file_put_contents;
 use function serialize;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function str_contains;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\CodeCoverage\CodeCoverage;
@@ -25,8 +28,11 @@ final class PHP
     public function process(CodeCoverage $coverage, ?string $target = null): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $coverage->clearCache();
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $buffer = "<?php
@@ -34,9 +40,13 @@ return \unserialize(<<<'END_OF_COVERAGE_SERIALIZATION'" . PHP_EOL . serialize($c
 
         if ($target !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!str_contains($target, '://')) {
                 Filesystem::createDirectory(dirname($target));
             }
+=======
+            Filesystem::createDirectory(dirname($target));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             Filesystem::createDirectory(dirname($target));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

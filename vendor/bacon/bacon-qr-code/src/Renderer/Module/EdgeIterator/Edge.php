@@ -7,10 +7,13 @@ final class Edge
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array<int[]>
      */
     private array $points = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var bool
      */
     private $positive;
@@ -19,11 +22,15 @@ final class Edge
      * @var array<int[]>
      */
     private $points = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var array<int[]>|null
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     private ?array $simplifiedPoints = null;
 
@@ -38,6 +45,8 @@ final class Edge
     public function __construct(private readonly bool $positive)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $simplifiedPoints;
 
     /**
@@ -63,6 +72,9 @@ final class Edge
     public function __construct(bool $positive)
     {
         $this->positive = $positive;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

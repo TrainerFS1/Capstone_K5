@@ -6,7 +6,10 @@
         "Brick",
         "Math",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Mathematics",
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "Arbitrary-precision",
@@ -14,6 +17,7 @@
         "BigInteger",
         "BigDecimal",
         "BigRational",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "BigNumber",
         "Bignum",
@@ -30,6 +34,8 @@
         "php-coveralls/php-coveralls": "^2.2",
         "vimeo/psalm": "5.16.0"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "Bignum"
     ],
     "license": "MIT",
@@ -41,6 +47,9 @@
         "phpunit/phpunit": "^9.0",
         "php-coveralls/php-coveralls": "^2.2",
         "vimeo/psalm": "4.25.0"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {

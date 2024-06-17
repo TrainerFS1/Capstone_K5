@@ -6,10 +6,13 @@ use Illuminate\Http\Client\Factory;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Http\Client\Factory globalMiddleware(callable $middleware)
  * @method static \Illuminate\Http\Client\Factory globalRequestMiddleware(callable $middleware)
  * @method static \Illuminate\Http\Client\Factory globalResponseMiddleware(callable $middleware)
  * @method static \Illuminate\Http\Client\Factory globalOptions(array $options)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \GuzzleHttp\Promise\PromiseInterface response(array|string|null $body = null, int $status = 200, array $headers = [])
@@ -25,7 +28,10 @@ use Illuminate\Http\Client\Factory;
  * @method static \Illuminate\Support\Collection recorded(callable $callback = null)
  * @method static \Illuminate\Contracts\Events\Dispatcher|null getDispatcher()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static array getGlobalMiddleware()
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void macro(string $name, object|callable $macro)
@@ -35,7 +41,11 @@ use Illuminate\Http\Client\Factory;
  * @method static mixed macroCall(string $method, array $parameters)
  * @method static \Illuminate\Http\Client\PendingRequest baseUrl(string $url)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Http\Client\PendingRequest withBody(\Psr\Http\Message\StreamInterface|string $content, string $contentType = 'application/json')
+=======
+ * @method static \Illuminate\Http\Client\PendingRequest withBody(string $content, string $contentType = 'application/json')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static \Illuminate\Http\Client\PendingRequest withBody(string $content, string $contentType = 'application/json')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -45,7 +55,10 @@ use Illuminate\Http\Client\Factory;
  * @method static \Illuminate\Http\Client\PendingRequest asMultipart()
  * @method static \Illuminate\Http\Client\PendingRequest bodyFormat(string $format)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Http\Client\PendingRequest withQueryParameters(array $parameters)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Http\Client\PendingRequest contentType(string $contentType)
@@ -53,8 +66,11 @@ use Illuminate\Http\Client\Factory;
  * @method static \Illuminate\Http\Client\PendingRequest accept(string $contentType)
  * @method static \Illuminate\Http\Client\PendingRequest withHeaders(array $headers)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Http\Client\PendingRequest withHeader(string $name, mixed $value)
  * @method static \Illuminate\Http\Client\PendingRequest replaceHeaders(array $headers)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Http\Client\PendingRequest withBasicAuth(string $username, string $password)
@@ -70,11 +86,17 @@ use Illuminate\Http\Client\Factory;
  * @method static \Illuminate\Http\Client\PendingRequest timeout(int $seconds)
  * @method static \Illuminate\Http\Client\PendingRequest connectTimeout(int $seconds)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Http\Client\PendingRequest retry(array|int $times, \Closure|int $sleepMilliseconds = 0, callable|null $when = null, bool $throw = true)
  * @method static \Illuminate\Http\Client\PendingRequest withOptions(array $options)
  * @method static \Illuminate\Http\Client\PendingRequest withMiddleware(callable $middleware)
  * @method static \Illuminate\Http\Client\PendingRequest withRequestMiddleware(callable $middleware)
  * @method static \Illuminate\Http\Client\PendingRequest withResponseMiddleware(callable $middleware)
+=======
+ * @method static \Illuminate\Http\Client\PendingRequest retry(int $times, int $sleepMilliseconds = 0, callable|null $when = null, bool $throw = true)
+ * @method static \Illuminate\Http\Client\PendingRequest withOptions(array $options)
+ * @method static \Illuminate\Http\Client\PendingRequest withMiddleware(callable $middleware)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static \Illuminate\Http\Client\PendingRequest retry(int $times, int $sleepMilliseconds = 0, callable|null $when = null, bool $throw = true)
  * @method static \Illuminate\Http\Client\PendingRequest withOptions(array $options)

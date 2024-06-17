@@ -37,7 +37,11 @@ class HttpKernelBrowser extends AbstractBrowser
      * @param array $server The server parameters (equivalent of $_SERVER)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(HttpKernelInterface $kernel, array $server = [], ?History $history = null, ?CookieJar $cookieJar = null)
+=======
+    public function __construct(HttpKernelInterface $kernel, array $server = [], History $history = null, CookieJar $cookieJar = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(HttpKernelInterface $kernel, array $server = [], History $history = null, CookieJar $cookieJar = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -52,8 +56,11 @@ class HttpKernelBrowser extends AbstractBrowser
     /**
      * Sets whether to catch exceptions when the kernel is handling a request.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -120,9 +127,12 @@ EOF;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function getHandleScript()

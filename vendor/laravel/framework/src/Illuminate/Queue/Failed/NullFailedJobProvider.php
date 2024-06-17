@@ -3,7 +3,11 @@
 namespace Illuminate\Queue\Failed;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NullFailedJobProvider implements CountableFailedJobProvider, FailedJobProviderInterface
+=======
+class NullFailedJobProvider implements FailedJobProviderInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class NullFailedJobProvider implements FailedJobProviderInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -24,6 +28,7 @@ class NullFailedJobProvider implements FailedJobProviderInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the IDs of all of the failed jobs.
      *
      * @param  string|null  $queue
@@ -35,6 +40,8 @@ class NullFailedJobProvider implements FailedJobProviderInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a list of all of the failed jobs.
@@ -79,6 +86,7 @@ class NullFailedJobProvider implements FailedJobProviderInterface
         //
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Count the failed jobs.
@@ -91,6 +99,8 @@ class NullFailedJobProvider implements FailedJobProviderInterface
     {
         return 0;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

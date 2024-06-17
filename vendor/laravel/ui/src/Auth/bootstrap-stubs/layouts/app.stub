@@ -11,7 +11,11 @@
 
     <!-- Fonts -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link rel="dns-prefetch" href="//fonts.bunny.net">
+=======
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

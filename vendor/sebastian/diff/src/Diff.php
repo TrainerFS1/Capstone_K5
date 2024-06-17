@@ -10,6 +10,7 @@
 namespace SebastianBergmann\Diff;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use ArrayIterator;
 use IteratorAggregate;
 use Traversable;
@@ -32,6 +33,11 @@ final class Diff
 {
     private string $from;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+final class Diff
+{
+    private string $from;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private string $to;
 
     /**
@@ -41,8 +47,11 @@ final class Diff
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $from
      * @psalm-param non-empty-string $to
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-param list<Chunk> $chunks
@@ -55,10 +64,14 @@ final class Diff
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
     public function from(): string
+=======
+    public function getFrom(): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getFrom(): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -67,10 +80,14 @@ final class Diff
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
     public function to(): string
+=======
+    public function getTo(): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getTo(): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,7 +99,11 @@ final class Diff
      * @psalm-return list<Chunk>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function chunks(): array
+=======
+    public function getChunks(): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getChunks(): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,6 +118,7 @@ final class Diff
     {
         $this->chunks = $chunks;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -133,6 +155,8 @@ final class Diff
     {
         return new ArrayIterator($this->chunks);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

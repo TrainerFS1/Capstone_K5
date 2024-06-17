@@ -24,8 +24,13 @@ class ProcessTimedOutException extends RuntimeException
     public const TYPE_IDLE = 2;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Process $process;
     private int $timeoutType;
+=======
+    private $process;
+    private $timeoutType;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $process;
     private $timeoutType;
@@ -44,9 +49,12 @@ class ProcessTimedOutException extends RuntimeException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return Process
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getProcess()
@@ -55,9 +63,12 @@ class ProcessTimedOutException extends RuntimeException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return bool
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isGeneralTimeout()
@@ -66,9 +77,12 @@ class ProcessTimedOutException extends RuntimeException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return bool
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isIdleTimeout()
@@ -77,7 +91,11 @@ class ProcessTimedOutException extends RuntimeException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getExceededTimeout(): ?float
+=======
+    public function getExceededTimeout()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getExceededTimeout()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator\StringManipulation\Pass;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Mockery;
 use Mockery\Generator\MockConfiguration;
@@ -44,17 +51,26 @@ class ClassPass implements Pass
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Generator\MockConfiguration;
 
 class ClassPass implements Pass
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function apply($code, MockConfiguration $config)
     {
         $target = $config->getTargetClass();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $target) {
+=======
+        if (!$target) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!$target) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,6 +81,7 @@ class ClassPass implements Pass
             return $code;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $className = ltrim($target->getName(), '\\');
 
@@ -78,6 +95,8 @@ class ClassPass implements Pass
             $code
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $className = ltrim($target->getName(), "\\");
 
         if (!class_exists($className)) {
@@ -91,6 +110,9 @@ class ClassPass implements Pass
         );
 
         return $code;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

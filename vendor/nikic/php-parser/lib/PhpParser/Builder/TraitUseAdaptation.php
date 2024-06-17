@@ -5,6 +5,7 @@ namespace PhpParser\Builder;
 use PhpParser\Builder;
 use PhpParser\BuilderHelpers;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
 use PhpParser\Node;
 use PhpParser\Node\Stmt;
@@ -22,6 +23,8 @@ class TraitUseAdaptation implements Builder {
     /** @var Node\Name[] */
     protected array $insteadof = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
 use PhpParser\Node\Stmt;
 
@@ -41,14 +44,22 @@ class TraitUseAdaptation implements Builder
     protected $alias = null;
 
     protected $insteadof = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Creates a trait use adaptation builder.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Node\Name|string|null $trait Name of adapted trait
      * @param Node\Identifier|string $method Name of adapted method
+=======
+     * @param Node\Name|string|null  $trait  Name of adaptated trait
+     * @param Node\Identifier|string $method Name of adaptated method
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param Node\Name|string|null  $trait  Name of adaptated trait
      * @param Node\Identifier|string $method Name of adaptated method
@@ -58,7 +69,11 @@ class TraitUseAdaptation implements Builder
         $this->type = self::TYPE_UNDEFINED;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->trait = is_null($trait) ? null : BuilderHelpers::normalizeName($trait);
+=======
+        $this->trait = is_null($trait)? null: BuilderHelpers::normalizeName($trait);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->trait = is_null($trait)? null: BuilderHelpers::normalizeName($trait);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +84,11 @@ class TraitUseAdaptation implements Builder
      * Sets alias of method.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Node\Identifier|string $alias Alias for adapted method
+=======
+     * @param Node\Identifier|string $alias Alias for adaptated method
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param Node\Identifier|string $alias Alias for adaptated method
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -86,7 +105,11 @@ class TraitUseAdaptation implements Builder
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->alias = BuilderHelpers::normalizeIdentifier($alias);
+=======
+        $this->alias = $alias;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->alias = $alias;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -95,7 +118,11 @@ class TraitUseAdaptation implements Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Sets adapted method public.
+=======
+     * Sets adaptated method public.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Sets adaptated method public.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -104,7 +131,11 @@ class TraitUseAdaptation implements Builder
      */
     public function makePublic() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->setModifier(Modifiers::PUBLIC);
+=======
+        $this->setModifier(Stmt\Class_::MODIFIER_PUBLIC);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->setModifier(Stmt\Class_::MODIFIER_PUBLIC);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -113,7 +144,11 @@ class TraitUseAdaptation implements Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Sets adapted method protected.
+=======
+     * Sets adaptated method protected.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Sets adaptated method protected.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -122,7 +157,11 @@ class TraitUseAdaptation implements Builder
      */
     public function makeProtected() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->setModifier(Modifiers::PROTECTED);
+=======
+        $this->setModifier(Stmt\Class_::MODIFIER_PROTECTED);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->setModifier(Stmt\Class_::MODIFIER_PROTECTED);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,7 +170,11 @@ class TraitUseAdaptation implements Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Sets adapted method private.
+=======
+     * Sets adaptated method private.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Sets adaptated method private.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -140,7 +183,11 @@ class TraitUseAdaptation implements Builder
      */
     public function makePrivate() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->setModifier(Modifiers::PRIVATE);
+=======
+        $this->setModifier(Stmt\Class_::MODIFIER_PRIVATE);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->setModifier(Stmt\Class_::MODIFIER_PRIVATE);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -175,7 +222,11 @@ class TraitUseAdaptation implements Builder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function setModifier(int $modifier): void {
+=======
+    protected function setModifier(int $modifier) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function setModifier(int $modifier) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -200,7 +251,11 @@ class TraitUseAdaptation implements Builder
      * @return Node The built node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): Node {
+=======
+    public function getNode() : Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNode() : Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

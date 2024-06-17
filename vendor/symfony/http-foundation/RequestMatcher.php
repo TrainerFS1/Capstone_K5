@@ -52,7 +52,11 @@ class RequestMatcher implements RequestMatcherInterface
      * @param string|string[]|null $schemes
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $path = null, ?string $host = null, string|array|null $methods = null, string|array|null $ips = null, array $attributes = [], string|array|null $schemes = null, ?int $port = null)
+=======
+    public function __construct(string $path = null, string $host = null, string|array $methods = null, string|array $ips = null, array $attributes = [], string|array $schemes = null, int $port = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $path = null, string $host = null, string|array $methods = null, string|array $ips = null, array $attributes = [], string|array $schemes = null, int $port = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -74,8 +78,11 @@ class RequestMatcher implements RequestMatcherInterface
      *
      * @param string|string[]|null $scheme An HTTP scheme or an array of HTTP schemes
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -87,8 +94,11 @@ class RequestMatcher implements RequestMatcherInterface
     /**
      * Adds a check for the URL host name.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -99,11 +109,17 @@ class RequestMatcher implements RequestMatcherInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Adds a check for the URL port.
      *
      * @param int|null $port The port number to connect to
      *
      * @return void
+=======
+     * Adds a check for the the URL port.
+     *
+     * @param int|null $port The port number to connect to
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Adds a check for the the URL port.
      *
@@ -118,8 +134,11 @@ class RequestMatcher implements RequestMatcherInterface
     /**
      * Adds a check for the URL path info.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -133,8 +152,11 @@ class RequestMatcher implements RequestMatcherInterface
      *
      * @param string $ip A specific IP address or a range specified using IP/netmask like 192.168.1.0/24
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -148,8 +170,11 @@ class RequestMatcher implements RequestMatcherInterface
      *
      * @param string|string[]|null $ips A specific IP address or a range specified using IP/netmask like 192.168.1.0/24
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -158,7 +183,13 @@ class RequestMatcher implements RequestMatcherInterface
         $ips = null !== $ips ? (array) $ips : [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->ips = array_reduce($ips, static fn (array $ips, string $ip) => array_merge($ips, preg_split('/\s*,\s*/', $ip)), []);
+=======
+        $this->ips = array_reduce($ips, static function (array $ips, string $ip) {
+            return array_merge($ips, preg_split('/\s*,\s*/', $ip));
+        }, []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->ips = array_reduce($ips, static function (array $ips, string $ip) {
             return array_merge($ips, preg_split('/\s*,\s*/', $ip));
@@ -171,8 +202,11 @@ class RequestMatcher implements RequestMatcherInterface
      *
      * @param string|string[]|null $method An HTTP method or an array of HTTP methods
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -184,8 +218,11 @@ class RequestMatcher implements RequestMatcherInterface
     /**
      * Adds a check for request attribute.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

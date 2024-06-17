@@ -32,12 +32,15 @@ class Token
     public const TYPE_STRING = 'string';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private ?string $type,
         private ?string $value,
         private ?int $position,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private ?string $type;
     private ?string $value;
     private ?int $position;
@@ -47,6 +50,9 @@ class Token
         $this->type = $type;
         $this->value = $value;
         $this->position = $position;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -81,7 +87,11 @@ class Token
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return \in_array($this->value, $values, true);
+=======
+        return \in_array($this->value, $values);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return \in_array($this->value, $values);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

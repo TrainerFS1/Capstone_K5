@@ -35,9 +35,12 @@ abstract class AbstractHeader implements HeaderInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setCharset(string $charset)
@@ -55,8 +58,11 @@ abstract class AbstractHeader implements HeaderInterface
      *
      * For example, for US English, 'en-us'.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -76,9 +82,12 @@ abstract class AbstractHeader implements HeaderInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMaxLineLength(int $lineLength)
@@ -247,7 +256,11 @@ abstract class AbstractHeader implements HeaderInterface
      * Generate a list of all tokens in the final header.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function toTokens(?string $string = null): array
+=======
+    protected function toTokens(string $string = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function toTokens(string $string = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -283,8 +296,13 @@ abstract class AbstractHeader implements HeaderInterface
         foreach ($tokens as $i => $token) {
             // Line longer than specified maximum or token was just a new line
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (("\r\n" === $token)
                 || ($i > 0 && \strlen($currentLine.$token) > $this->lineLength)
+=======
+            if (("\r\n" === $token) ||
+                ($i > 0 && \strlen($currentLine.$token) > $this->lineLength)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (("\r\n" === $token) ||
                 ($i > 0 && \strlen($currentLine.$token) > $this->lineLength)

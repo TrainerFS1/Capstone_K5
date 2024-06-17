@@ -36,12 +36,18 @@ abstract class AbstractOperation implements OperationInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var array|null The domains affected by this operation
      */
     private $domains;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * This array stores 'all', 'new' and 'obsolete' messages for all valid domains.
      *
@@ -66,8 +72,11 @@ abstract class AbstractOperation implements OperationInterface
     protected $messages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $domains;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -88,7 +97,11 @@ abstract class AbstractOperation implements OperationInterface
     public function getDomains(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!isset($this->domains)) {
+=======
+        if (null === $this->domains) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (null === $this->domains) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -196,8 +209,11 @@ abstract class AbstractOperation implements OperationInterface
      *
      * @param string $domain The domain which the operation will be performed for
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

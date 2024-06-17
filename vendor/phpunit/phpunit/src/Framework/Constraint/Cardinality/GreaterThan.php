@@ -10,8 +10,11 @@
 namespace PHPUnit\Framework\Constraint;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
@@ -30,9 +33,15 @@ final class GreaterThan extends Constraint
      * Returns a string representation of the constraint.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toString(bool $exportObjects = false): string
     {
         return 'is greater than ' . Exporter::export($this->value, $exportObjects);
+=======
+    public function toString(): string
+    {
+        return 'is greater than ' . $this->exporter()->export($this->value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toString(): string
     {

@@ -69,6 +69,7 @@ abstract class MorphOneOrMany extends HasOneOrMany
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Create a new instance of the related model. Allow mass-assignment.
      *
      * @param  array  $attributes
@@ -83,6 +84,8 @@ abstract class MorphOneOrMany extends HasOneOrMany
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the foreign ID and type for creating a related model.

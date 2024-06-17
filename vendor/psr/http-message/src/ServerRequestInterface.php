@@ -52,7 +52,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getServerParams(): array;
+=======
+    public function getServerParams();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getServerParams();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,7 +72,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCookieParams(): array;
+=======
+    public function getCookieParams();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getCookieParams();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,7 +99,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return static
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withCookieParams(array $cookies): ServerRequestInterface;
+=======
+    public function withCookieParams(array $cookies);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withCookieParams(array $cookies);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,7 +121,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getQueryParams(): array;
+=======
+    public function getQueryParams();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getQueryParams();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,7 +153,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return static
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withQueryParams(array $query): ServerRequestInterface;
+=======
+    public function withQueryParams(array $query);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withQueryParams(array $query);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -155,7 +175,11 @@ interface ServerRequestInterface extends RequestInterface
      *     array MUST be returned if no data is present.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getUploadedFiles(): array;
+=======
+    public function getUploadedFiles();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getUploadedFiles();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -172,7 +196,11 @@ interface ServerRequestInterface extends RequestInterface
      * @throws \InvalidArgumentException if an invalid structure is provided.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withUploadedFiles(array $uploadedFiles): ServerRequestInterface;
+=======
+    public function withUploadedFiles(array $uploadedFiles);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withUploadedFiles(array $uploadedFiles);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -223,7 +251,11 @@ interface ServerRequestInterface extends RequestInterface
      *     provided.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withParsedBody($data): ServerRequestInterface;
+=======
+    public function withParsedBody($data);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withParsedBody($data);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -240,7 +272,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return array Attributes derived from the request.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getAttributes(): array;
+=======
+    public function getAttributes();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getAttributes();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -261,7 +297,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return mixed
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getAttribute(string $name, $default = null);
+=======
+    public function getAttribute($name, $default = null);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getAttribute($name, $default = null);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -282,7 +322,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return static
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withAttribute(string $name, $value): ServerRequestInterface;
+=======
+    public function withAttribute($name, $value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withAttribute($name, $value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -302,7 +346,11 @@ interface ServerRequestInterface extends RequestInterface
      * @return static
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withoutAttribute(string $name): ServerRequestInterface;
+=======
+    public function withoutAttribute($name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withoutAttribute($name);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

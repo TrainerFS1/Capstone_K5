@@ -24,7 +24,11 @@ final class State
      * The current test case class.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ?string $testCaseName;
+=======
+    public string|null $testCaseName;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public string|null $testCaseName;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -72,6 +76,7 @@ final class State
         $this->testCaseName = $test->testCaseName;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $levels = array_flip([
             TestResult::PASS,
             TestResult::RUNS,
@@ -93,6 +98,8 @@ final class State
             }
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->testCaseTests[$test->id] = $test;
@@ -126,7 +133,11 @@ final class State
 
         foreach ($this->testCaseTests as $test) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($test->type !== TestResult::PASS && $test->type !== TestResult::TODO && $test->type !== TestResult::DEPRECATED && $test->type !== TestResult::NOTICE) {
+=======
+            if ($test->type !== TestResult::PASS && $test->type !== TestResult::TODO) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($test->type !== TestResult::PASS && $test->type !== TestResult::TODO) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,6 +145,7 @@ final class State
             }
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         foreach ($this->testCaseTests as $test) {
             if ($test->type === TestResult::NOTICE) {
@@ -147,6 +159,8 @@ final class State
             }
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->todosCount() > 0 && (count($this->testCaseTests) === $this->todosCount())) {
@@ -191,6 +205,7 @@ final class State
 
         foreach ($this->testCaseTests as $test) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($test->type !== TestResult::PASS && $test->type !== TestResult::TODO && $test->type !== TestResult::DEPRECATED) {
                 return 'yellow';
             }
@@ -198,6 +213,9 @@ final class State
 
         foreach ($this->testCaseTests as $test) {
             if ($test->type === TestResult::DEPRECATED) {
+=======
+            if ($test->type !== TestResult::PASS && $test->type !== TestResult::TODO) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($test->type !== TestResult::PASS && $test->type !== TestResult::TODO) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

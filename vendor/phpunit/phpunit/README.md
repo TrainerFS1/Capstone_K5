@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<h1 align="center">🇺🇦 <a href="https://phpunit.de/stand-with-ukraine.html">UKRAINE NEEDS YOUR HELP NOW!</a></h1>
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 <h1 align="center">🇺🇦 <a href="https://phpunit.de/stand-with-ukraine.html">UKRAINE NEEDS YOUR HELP NOW!</a></h1>
 
@@ -25,7 +30,11 @@ $ php phpunit-X.Y.phar --version
 Please replace `X.Y` with the version of PHPUnit you are interested in.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Alternatively, you may use [Composer](https://getcomposer.org/) to download and install PHPUnit as well as its dependencies. Please refer to the [documentation](https://phpunit.de/documentation.html) for details on how to install PHPUnit.
+=======
+Alternatively, you may use [Composer](https://getcomposer.org/) to download and install PHPUnit as well as its dependencies. Please refer to the "[Getting Started](https://phpunit.de/getting-started-with-phpunit.html)" guide for details on how to install PHPUnit.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 Alternatively, you may use [Composer](https://getcomposer.org/) to download and install PHPUnit as well as its dependencies. Please refer to the "[Getting Started](https://phpunit.de/getting-started-with-phpunit.html)" guide for details on how to install PHPUnit.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

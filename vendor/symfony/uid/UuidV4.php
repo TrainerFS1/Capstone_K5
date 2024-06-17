@@ -21,7 +21,11 @@ class UuidV4 extends Uuid
     protected const TYPE = 4;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $uuid = null)
+=======
+    public function __construct(string $uuid = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $uuid = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

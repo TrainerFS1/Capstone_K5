@@ -5,9 +5,15 @@ namespace Spatie\LaravelIgnition\Exceptions;
 use Exception;
 use Monolog\Level;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\BaseSolution;
 use Spatie\ErrorSolutions\Contracts\ProvidesSolution;
 use Spatie\ErrorSolutions\Contracts\Solution;
+=======
+use Spatie\Ignition\Contracts\BaseSolution;
+use Spatie\Ignition\Contracts\ProvidesSolution;
+use Spatie\Ignition\Contracts\Solution;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Spatie\Ignition\Contracts\BaseSolution;
 use Spatie\Ignition\Contracts\ProvidesSolution;

@@ -56,8 +56,11 @@ class SqlServerBuilder extends Builder
      * Drop all tables from the database.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array
@@ -73,8 +76,11 @@ class SqlServerBuilder extends Builder
      * Get all of the view names for the database.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array

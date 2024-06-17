@@ -37,13 +37,19 @@ final class MacroScanner
      * Return true if the given pair class-method is a Carbon macro.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param class-string $className
      * @param string       $methodName
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $className
      * @phpstan-param class-string $className
      *
      * @param string $methodName
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return bool
@@ -67,13 +73,19 @@ final class MacroScanner
      * Return the Macro for a given pair class-method.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param class-string $className
      * @param string       $methodName
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $className
      * @phpstan-param class-string $className
      *
      * @param string $methodName
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws ReflectionException

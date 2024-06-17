@@ -21,8 +21,13 @@ use Symfony\Component\Translation\Exception\LogicException;
 class IntlFormatter implements IntlFormatterInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool $hasMessageFormatter;
     private array $cache = [];
+=======
+    private $hasMessageFormatter;
+    private $cache = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $hasMessageFormatter;
     private $cache = [];

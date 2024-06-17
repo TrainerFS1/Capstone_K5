@@ -80,6 +80,7 @@ class DynamoDbFailedJobProvider implements FailedJobProviderInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the IDs of all of the failed jobs.
      *
      * @param  string|null  $queue
@@ -94,6 +95,8 @@ class DynamoDbFailedJobProvider implements FailedJobProviderInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a list of all of the failed jobs.

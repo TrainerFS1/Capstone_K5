@@ -5,7 +5,12 @@ namespace PhpParser\Node\Expr;
 use PhpParser\Node\Expr;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Variable extends Expr {
+=======
+class Variable extends Expr
+{
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class Variable extends Expr
 {
@@ -17,8 +22,13 @@ class Variable extends Expr
      * Constructs a variable node.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|Expr $name Name
      * @param array<string, mixed> $attributes Additional attributes
+=======
+     * @param string|Expr $name       Name
+     * @param array       $attributes Additional attributes
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string|Expr $name       Name
      * @param array       $attributes Additional attributes
@@ -30,17 +40,23 @@ class Variable extends Expr
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['name'];
     }
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getSubNodeNames() : array {
         return ['name'];
     }
     
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Expr_Variable';
     }

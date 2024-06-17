@@ -5,6 +5,7 @@ namespace PhpParser\Builder;
 use PhpParser;
 use PhpParser\BuilderHelpers;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
 use PhpParser\Node;
 
@@ -19,6 +20,8 @@ class Param implements PhpParser\Builder {
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
 
 class Param implements PhpParser\Builder
@@ -36,6 +39,9 @@ class Param implements PhpParser\Builder
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -78,7 +84,10 @@ class Param implements PhpParser\Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Sets type for the parameter.
      *
      * @param string|Node\Name|Node\Identifier|Node\ComplexType $type Parameter type
@@ -92,6 +101,9 @@ class Param implements PhpParser\Builder
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Make the parameter accept the value by reference.
      *
@@ -115,6 +127,7 @@ class Param implements PhpParser\Builder
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Makes the (promoted) parameter public.
      *
@@ -162,6 +175,8 @@ class Param implements PhpParser\Builder
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Adds an attribute group.
      *
      * @param Node\Attribute|Node\AttributeGroup $attribute
@@ -180,15 +195,21 @@ class Param implements PhpParser\Builder
      * @return Node\Param The built parameter node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): Node {
         return new Node\Param(
             new Node\Expr\Variable($this->name),
             $this->default, $this->type, $this->byRef, $this->variadic, [], $this->flags, $this->attributeGroups
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getNode() : Node {
         return new Node\Param(
             new Node\Expr\Variable($this->name),
             $this->default, $this->type, $this->byRef, $this->variadic, [], 0, $this->attributeGroups
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }

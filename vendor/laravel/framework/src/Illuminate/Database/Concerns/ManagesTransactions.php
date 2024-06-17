@@ -42,8 +42,11 @@ trait ManagesTransactions
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $levelBeingCommitted = $this->transactions;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             try {
@@ -54,11 +57,17 @@ trait ManagesTransactions
 
                 $this->transactions = max(0, $this->transactions - 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 if ($this->afterCommitCallbacksShouldBeExecuted()) {
                     $this->transactionsManager?->commit($this->getName());
                 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } catch (Throwable $e) {
                 $this->handleCommitTransactionException(
@@ -69,12 +78,15 @@ trait ManagesTransactions
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->transactionsManager?->commit(
                 $this->getName(),
                 $levelBeingCommitted,
                 $this->transactions
             );
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->fireConnectionEvent('committed');
@@ -132,10 +144,13 @@ trait ManagesTransactions
     public function beginTransaction()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->beforeStartingTransaction as $callback) {
             $callback($this);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->createTransaction();
@@ -219,6 +234,7 @@ trait ManagesTransactions
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         [$levelBeingCommitted, $this->transactions] = [
             $this->transactions,
             max(0, $this->transactions - 1),
@@ -228,11 +244,16 @@ trait ManagesTransactions
             $this->getName(), $levelBeingCommitted, $this->transactions
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->transactions = max(0, $this->transactions - 1);
 
         if ($this->afterCommitCallbacksShouldBeExecuted()) {
             $this->transactionsManager?->commit($this->getName());
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->fireConnectionEvent('committed');
@@ -240,7 +261,10 @@ trait ManagesTransactions
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if after commit callbacks should be executed.
      *
      * @return bool
@@ -253,6 +277,9 @@ trait ManagesTransactions
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an exception encountered when committing a transaction.
      *

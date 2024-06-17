@@ -20,12 +20,15 @@ namespace Symfony\Component\EventDispatcher\Attribute;
 class AsEventListener
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param string|null $event      The event name to listen to
      * @param string|null $method     The method to run when the listened event is triggered
      * @param int         $priority   The priority of this listener if several are declared for the same event
      * @param string|null $dispatcher The service id of the event dispatcher to listen to
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(

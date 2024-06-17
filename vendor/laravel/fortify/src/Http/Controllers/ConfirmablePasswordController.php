@@ -6,7 +6,10 @@ use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Date;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\Fortify\Actions\ConfirmPassword;
@@ -59,7 +62,11 @@ class ConfirmablePasswordController extends Controller
 
         if ($confirmed) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $request->session()->put('auth.password_confirmed_at', Date::now()->unix());
+=======
+            $request->session()->put('auth.password_confirmed_at', time());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $request->session()->put('auth.password_confirmed_at', time());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

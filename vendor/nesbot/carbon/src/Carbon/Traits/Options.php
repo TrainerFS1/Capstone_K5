@@ -23,7 +23,11 @@ use Throwable;
  * Depends on the following methods:
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static shiftTimezone($timezone) Set the timezone
+=======
+ * @method \Carbon\Carbon|\Carbon\CarbonImmutable shiftTimezone($timezone) Set the timezone
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method \Carbon\Carbon|\Carbon\CarbonImmutable shiftTimezone($timezone) Set the timezone
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -101,9 +105,15 @@ trait Options
         'e' => '([a-zA-Z]{1,5})|([a-zA-Z]*\\/[a-zA-Z]*)',
         'I' => '(0|1)',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'O' => '([+-](1[0123]|0[0-9])[0134][05])',
         'P' => '([+-](1[0123]|0[0-9]):[0134][05])',
         'p' => '(Z|[+-](1[0123]|0[0-9]):[0134][05])',
+=======
+        'O' => '([+-](1[012]|0[0-9])[0134][05])',
+        'P' => '([+-](1[012]|0[0-9]):[0134][05])',
+        'p' => '(Z|[+-](1[012]|0[0-9]):[0134][05])',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'O' => '([+-](1[012]|0[0-9])[0134][05])',
         'P' => '([+-](1[012]|0[0-9]):[0134][05])',
@@ -433,7 +443,11 @@ trait Options
             $value = $this->$property ?? null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($value !== null && ($key !== 'locale' || $value !== 'en' || $this->localTranslator)) {
+=======
+            if ($value !== null) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($value !== null) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -452,7 +466,11 @@ trait Options
     public function __debugInfo()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $infos = array_filter(get_object_vars($this), static function ($var) {
+=======
+        $infos = array_filter(get_object_vars($this), function ($var) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $infos = array_filter(get_object_vars($this), function ($var) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

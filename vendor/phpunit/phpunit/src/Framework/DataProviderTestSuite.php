@@ -34,14 +34,20 @@ final class DataProviderTestSuite extends TestSuite
         foreach ($this->tests() as $test) {
             if (!$test instanceof TestCase) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 continue;
             }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // @codeCoverageIgnoreStart
                 continue;
                 // @codeCoverageIgnoreStart
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $test->setDependencies($dependencies);
         }
@@ -54,7 +60,11 @@ final class DataProviderTestSuite extends TestSuite
     {
         if ($this->providedTests === null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->providedTests = [new ExecutionOrderDependency($this->name())];
+=======
+            $this->providedTests = [new ExecutionOrderDependency($this->getName())];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->providedTests = [new ExecutionOrderDependency($this->getName())];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -75,17 +85,23 @@ final class DataProviderTestSuite extends TestSuite
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Returns the size of each test created using the data provider(s).
      */
     public function size(): TestSize
     {
         [$className, $methodName] = explode('::', $this->name());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Returns the size of the each test created using the data provider(s).
      */
     public function size(): TestSize
     {
         [$className, $methodName] = explode('::', $this->getName());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return (new Groups)->size($className, $methodName);

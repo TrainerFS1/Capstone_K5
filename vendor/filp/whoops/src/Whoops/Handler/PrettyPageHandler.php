@@ -288,7 +288,10 @@ class PrettyPageHandler extends Handler
 
         $plainTextHandler = new PlainTextHandler();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $plainTextHandler->setRun($this->getRun());
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $plainTextHandler->setException($this->getException());
@@ -309,7 +312,11 @@ class PrettyPageHandler extends Handler
     protected function getExceptionFrames()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $frames = $this->getInspector()->getFrames($this->getRun()->getFrameFilters());
+=======
+        $frames = $this->getInspector()->getFrames();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $frames = $this->getInspector()->getFrames();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -362,6 +369,10 @@ class PrettyPageHandler extends Handler
      *
      * @param string $label
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param array  $data
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array  $data
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -395,7 +406,11 @@ class PrettyPageHandler extends Handler
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->extraTables[$label] = function (\Whoops\Inspector\InspectorInterface $inspector = null) use ($callback) {
+=======
+        $this->extraTables[$label] = function (\Whoops\Exception\Inspector $inspector = null) use ($callback) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->extraTables[$label] = function (\Whoops\Exception\Inspector $inspector = null) use ($callback) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -771,15 +786,21 @@ class PrettyPageHandler extends Handler
      * Set the application paths.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      */
     public function setApplicationPaths(array $applicationPaths)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $applicationPaths
      *
      * @return void
      */
     public function setApplicationPaths($applicationPaths)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->applicationPaths = $applicationPaths;

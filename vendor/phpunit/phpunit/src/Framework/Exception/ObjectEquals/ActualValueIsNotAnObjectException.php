@@ -10,6 +10,11 @@
 namespace PHPUnit\Framework;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use const PHP_EOL;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use const PHP_EOL;
 
@@ -23,10 +28,13 @@ final class ActualValueIsNotAnObjectException extends Exception
     {
         parent::__construct(
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Actual value is not an object',
         );
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'Actual value is not an object'
         );
     }
@@ -35,5 +43,8 @@ final class ActualValueIsNotAnObjectException extends Exception
     {
         return $this->getMessage() . PHP_EOL;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

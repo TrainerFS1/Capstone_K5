@@ -101,6 +101,7 @@ Route::post('/email/verification-notification', [EmailVerificationController::cl
     ->middleware(['auth', 'throttle:6,1'])
     ->name('verification.send');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // mendapatkan tanggal jatuh tempo tagihan hari ini
 Route::get('/due-bills', [BillController::class, 'getDueBills']);
@@ -109,5 +110,7 @@ Route::get('/due-bills', [BillController::class, 'getDueBills']);
 Route::put('/bills/mark-as-paid/{id}', [BillController::class, 'markAsPaid'])->name('bills.markAsPaid');
 
 Route::get('/due-debts', [DebtController::class, 'getDueDebts'])->name('due-debts');
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

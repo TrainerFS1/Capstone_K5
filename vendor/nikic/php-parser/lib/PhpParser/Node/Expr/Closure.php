@@ -4,6 +4,7 @@ namespace PhpParser\Node\Expr;
 
 use PhpParser\Node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\ClosureUse;
 use PhpParser\Node\Expr;
 use PhpParser\Node\FunctionLike;
@@ -24,6 +25,8 @@ class Closure extends Expr implements FunctionLike {
     /** @var Node\AttributeGroup[] PHP attribute groups */
     public array $attrGroups;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Expr;
 use PhpParser\Node\FunctionLike;
 
@@ -43,11 +46,15 @@ class Closure extends Expr implements FunctionLike
     public $stmts;
     /** @var Node\AttributeGroup[] PHP attribute groups */
     public $attrGroups;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs a lambda function node.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param array{
      *     static?: bool,
@@ -67,6 +74,8 @@ class Closure extends Expr implements FunctionLike
      *             'attrGroups' => array(): PHP attributes groups
      * @param array<string, mixed> $attributes Additional attributes
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $subNodes   Array of the following optional subnodes:
      *                          'static'     => false  : Whether the closure is static
      *                          'byRef'      => false  : Whether to return by reference
@@ -76,6 +85,9 @@ class Closure extends Expr implements FunctionLike
      *                          'stmts'      => array(): Statements
      *                          'attrGroups' => array(): PHP attributes groups
      * @param array $attributes Additional attributes
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(array $subNodes = [], array $attributes = []) {
@@ -85,7 +97,12 @@ class Closure extends Expr implements FunctionLike
         $this->params = $subNodes['params'] ?? [];
         $this->uses = $subNodes['uses'] ?? [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->returnType = $subNodes['returnType'] ?? null;
+=======
+        $returnType = $subNodes['returnType'] ?? null;
+        $this->returnType = \is_string($returnType) ? new Node\Identifier($returnType) : $returnType;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $returnType = $subNodes['returnType'] ?? null;
         $this->returnType = \is_string($returnType) ? new Node\Identifier($returnType) : $returnType;
@@ -94,6 +111,7 @@ class Closure extends Expr implements FunctionLike
         $this->attrGroups = $subNodes['attrGroups'] ?? [];
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['attrGroups', 'static', 'byRef', 'params', 'uses', 'returnType', 'stmts'];
@@ -105,6 +123,8 @@ class Closure extends Expr implements FunctionLike
 
     public function getParams(): array {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getSubNodeNames() : array {
         return ['attrGroups', 'static', 'byRef', 'params', 'uses', 'returnType', 'stmts'];
     }
@@ -114,6 +134,9 @@ class Closure extends Expr implements FunctionLike
     }
 
     public function getParams() : array {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->params;
     }
@@ -123,6 +146,7 @@ class Closure extends Expr implements FunctionLike
     }
 
     /** @return Node\Stmt[] */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function getStmts(): array {
         return $this->stmts;
@@ -134,6 +158,8 @@ class Closure extends Expr implements FunctionLike
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getStmts() : array {
         return $this->stmts;
     }
@@ -143,6 +169,9 @@ class Closure extends Expr implements FunctionLike
     }
 
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Expr_Closure';
     }

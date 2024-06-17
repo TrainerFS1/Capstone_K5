@@ -15,8 +15,11 @@ use Laravel\Octane\Events\TickReceived;
 use Monolog\Level;
 use Monolog\Logger;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
 use Spatie\ErrorSolutions\SolutionProviderRepository;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\FlareClient\Flare;
@@ -25,6 +28,10 @@ use Spatie\Ignition\Config\FileConfigManager;
 use Spatie\Ignition\Config\IgnitionConfig;
 use Spatie\Ignition\Contracts\ConfigManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Spatie\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Spatie\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,6 +50,10 @@ use Spatie\LaravelIgnition\Recorders\LogRecorder\LogRecorder;
 use Spatie\LaravelIgnition\Recorders\QueryRecorder\QueryRecorder;
 use Spatie\LaravelIgnition\Renderers\IgnitionExceptionRenderer;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Spatie\LaravelIgnition\Solutions\SolutionProviders\SolutionProviderRepository;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\SolutionProviderRepository;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,9 +140,13 @@ class IgnitionServiceProvider extends ServiceProvider
                 ->setContextProviderDetector(new LaravelContextProviderDetector())
                 ->registerMiddleware($this->getFlareMiddleware())
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->registerMiddleware(new AddSolutions(new SolutionProviderRepository($this->getSolutionProviders())))
                 ->argumentReducers(config('ignition.argument_reducers', []))
                 ->withStackFrameArguments(config('ignition.with_stack_frame_arguments', true));
+=======
+                ->registerMiddleware(new AddSolutions(new SolutionProviderRepository($this->getSolutionProviders())));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ->registerMiddleware(new AddSolutions(new SolutionProviderRepository($this->getSolutionProviders())));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -161,7 +176,12 @@ class IgnitionServiceProvider extends ServiceProvider
         $this->app->singleton(
             Ignition::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
             fn () => (new Ignition($this->app->make(Flare::class)))->applicationPath(base_path())
+=======
+            fn () => (new Ignition())
+                ->applicationPath(base_path())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             fn () => (new Ignition())
                 ->applicationPath(base_path())
@@ -202,7 +222,11 @@ class IgnitionServiceProvider extends ServiceProvider
     public function configureTinker(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->app->runningInConsole()) {
+=======
+        if (! $this->app->runningInConsole()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (! $this->app->runningInConsole()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

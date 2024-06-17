@@ -35,7 +35,11 @@ class BinaryFileResponse extends Response
     protected $maxlen = -1;
     protected $deleteFileAfterSend = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $chunkSize = 16 * 1024;
+=======
+    protected $chunkSize = 8 * 1024;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected $chunkSize = 8 * 1024;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -50,7 +54,11 @@ class BinaryFileResponse extends Response
      * @param bool                $autoLastModified   Whether the Last-Modified header should be automatically set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(\SplFileInfo|string $file, int $status = 200, array $headers = [], bool $public = true, ?string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true)
+=======
+    public function __construct(\SplFileInfo|string $file, int $status = 200, array $headers = [], bool $public = true, string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(\SplFileInfo|string $file, int $status = 200, array $headers = [], bool $public = true, string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -72,7 +80,11 @@ class BinaryFileResponse extends Response
      * @throws FileException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setFile(\SplFileInfo|string $file, ?string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true): static
+=======
+    public function setFile(\SplFileInfo|string $file, string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setFile(\SplFileInfo|string $file, string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -138,7 +150,11 @@ class BinaryFileResponse extends Response
     public function setAutoLastModified(): static
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->setLastModified(\DateTimeImmutable::createFromFormat('U', $this->file->getMTime()));
+=======
+        $this->setLastModified(\DateTime::createFromFormat('U', $this->file->getMTime()));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->setLastModified(\DateTime::createFromFormat('U', $this->file->getMTime()));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -257,7 +273,11 @@ class BinaryFileResponse extends Response
 
                 if (str_starts_with($range, 'bytes=')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     [$start, $end] = explode('-', substr($range, 6), 2) + [1 => 0];
+=======
+                    [$start, $end] = explode('-', substr($range, 6), 2) + [0];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     [$start, $end] = explode('-', substr($range, 6), 2) + [0];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -314,7 +334,11 @@ class BinaryFileResponse extends Response
         try {
             if (!$this->isSuccessful()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return $this;
+=======
+                return parent::sendContent();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return parent::sendContent();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -336,6 +360,7 @@ class BinaryFileResponse extends Response
             $length = $this->maxlen;
             while ($length && !feof($file)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $read = $length > $this->chunkSize || 0 > $length ? $this->chunkSize : $length;
 
                 if (false === $data = fread($file, $read)) {
@@ -352,6 +377,8 @@ class BinaryFileResponse extends Response
                     $data = substr($data, $read);
                 }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $read = ($length > $this->chunkSize) ? $this->chunkSize : $length;
                 $length -= $read;
 
@@ -360,6 +387,9 @@ class BinaryFileResponse extends Response
                 if (connection_aborted()) {
                     break;
                 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
@@ -394,8 +424,11 @@ class BinaryFileResponse extends Response
     /**
      * Trust X-Sendfile-Type header.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

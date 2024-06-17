@@ -63,7 +63,11 @@ class MockArraySessionStorage implements SessionStorageInterface
     protected $bags = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $name = 'MOCKSESSID', ?MetadataBag $metaBag = null)
+=======
+    public function __construct(string $name = 'MOCKSESSID', MetadataBag $metaBag = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name = 'MOCKSESSID', MetadataBag $metaBag = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -73,9 +77,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setSessionData(array $array)
@@ -99,7 +106,11 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function regenerate(bool $destroy = false, ?int $lifetime = null): bool
+=======
+    public function regenerate(bool $destroy = false, int $lifetime = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function regenerate(bool $destroy = false, int $lifetime = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -120,9 +131,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setId(string $id)
@@ -140,9 +154,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
@@ -151,9 +168,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function save()
@@ -167,9 +187,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function clear()
@@ -187,9 +210,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerBag(SessionBagInterface $bag)
@@ -216,10 +242,14 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function setMetadataBag(?MetadataBag $bag = null)
+=======
+    public function setMetadataBag(MetadataBag $bag = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setMetadataBag(MetadataBag $bag = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -250,9 +280,12 @@ class MockArraySessionStorage implements SessionStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function loadSession()

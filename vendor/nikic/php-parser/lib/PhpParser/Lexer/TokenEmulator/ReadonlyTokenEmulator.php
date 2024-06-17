@@ -3,6 +3,7 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\PhpVersion;
 
 final class ReadonlyTokenEmulator extends KeywordEmulator {
@@ -20,6 +21,8 @@ final class ReadonlyTokenEmulator extends KeywordEmulator {
 
     protected function isKeywordContext(array $tokens, int $pos): bool {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Lexer\Emulative;
 
 final class ReadonlyTokenEmulator extends KeywordEmulator
@@ -41,6 +44,9 @@ final class ReadonlyTokenEmulator extends KeywordEmulator
 
     protected function isKeywordContext(array $tokens, int $pos): bool
     {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!parent::isKeywordContext($tokens, $pos)) {
             return false;
@@ -48,15 +54,21 @@ final class ReadonlyTokenEmulator extends KeywordEmulator
         // Support "function readonly("
         return !(isset($tokens[$pos + 1]) &&
 <<<<<<< HEAD
+<<<<<<< HEAD
                  ($tokens[$pos + 1]->text === '(' ||
                   ($tokens[$pos + 1]->id === \T_WHITESPACE &&
                    isset($tokens[$pos + 2]) &&
                    $tokens[$pos + 2]->text === '(')));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                  ($tokens[$pos + 1][0] === '(' ||
                   ($tokens[$pos + 1][0] === \T_WHITESPACE &&
                    isset($tokens[$pos + 2]) &&
                    $tokens[$pos + 2][0] === '(')));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -22,6 +22,7 @@ final class ConsoleSignalEvent extends ConsoleEvent
 {
     private int $handlingSignal;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private int|false $exitCode;
 
     public function __construct(Command $command, InputInterface $input, OutputInterface $output, int $handlingSignal, int|false $exitCode = 0)
@@ -30,11 +31,16 @@ final class ConsoleSignalEvent extends ConsoleEvent
         $this->handlingSignal = $handlingSignal;
         $this->exitCode = $exitCode;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(Command $command, InputInterface $input, OutputInterface $output, int $handlingSignal)
     {
         parent::__construct($command, $input, $output);
         $this->handlingSignal = $handlingSignal;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -42,6 +48,7 @@ final class ConsoleSignalEvent extends ConsoleEvent
     {
         return $this->handlingSignal;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function setExitCode(int $exitCode): void
@@ -62,6 +69,8 @@ final class ConsoleSignalEvent extends ConsoleEvent
     {
         return $this->exitCode;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

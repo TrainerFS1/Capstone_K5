@@ -28,7 +28,11 @@ Please make sure:
   Use `\GuzzleHttp\Psr7\get_message_body_summary` as an alternative.
 - Function `GuzzleHttp\Cookie\CookieJar::getCookieValue` is removed.
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Request option `exceptions` is removed. Please use `http_errors`.
+=======
+- Request option `exception` is removed. Please use `http_errors`.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 - Request option `exception` is removed. Please use `http_errors`.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,17 +198,23 @@ $client = new GuzzleHttp\Client(['handler' => $handler]);
 ## POST Requests
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 This version added the [`form_params`](https://docs.guzzlephp.org/en/latest/request-options.html#form_params)
 and `multipart` request options. `form_params` is an associative array of
 strings or array of strings and is used to serialize an
 `application/x-www-form-urlencoded` POST request. The
 [`multipart`](https://docs.guzzlephp.org/en/latest/request-options.html#multipart)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 This version added the [`form_params`](http://guzzle.readthedocs.org/en/latest/request-options.html#form_params)
 and `multipart` request options. `form_params` is an associative array of
 strings or array of strings and is used to serialize an
 `application/x-www-form-urlencoded` POST request. The
 [`multipart`](http://guzzle.readthedocs.org/en/latest/request-options.html#multipart)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 option is now used to send a multipart/form-data POST request.
 
@@ -222,7 +232,11 @@ The `base_url` option has been renamed to `base_uri`.
 ## Rewritten Adapter Layer
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Guzzle now uses [RingPHP](https://ringphp.readthedocs.org/en/latest) to send
+=======
+Guzzle now uses [RingPHP](http://ringphp.readthedocs.org/en/latest) to send
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 Guzzle now uses [RingPHP](http://ringphp.readthedocs.org/en/latest) to send
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -592,7 +606,11 @@ of a `GuzzleHttp\Event\BeforeEvent`, `GuzzleHttp\Event\CompleteEvent`, and
 `GuzzleHttp\Event\ErrorEvent` event.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 See: https://docs.guzzlephp.org/en/latest/events.html
+=======
+See: http://docs.guzzlephp.org/en/latest/events.html
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 See: http://docs.guzzlephp.org/en/latest/events.html
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -689,9 +707,15 @@ in separate repositories:
 The service description layer of Guzzle has moved into two separate packages:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - https://github.com/guzzle/command Provides a high level abstraction over web
   services by representing web service operations using commands.
 - https://github.com/guzzle/guzzle-services Provides an implementation of
+=======
+- http://github.com/guzzle/command Provides a high level abstraction over web
+  services by representing web service operations using commands.
+- http://github.com/guzzle/guzzle-services Provides an implementation of
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 - http://github.com/guzzle/command Provides a high level abstraction over web
   services by representing web service operations using commands.
@@ -897,7 +921,11 @@ HeaderInterface (e.g. toArray(), getAll(), etc.).
 ----------
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Base URLs of a client now follow the rules of https://datatracker.ietf.org/doc/html/rfc3986#section-5.2.2 when merging URLs.
+=======
+Base URLs of a client now follow the rules of https://tools.ietf.org/html/rfc3986#section-5.2.2 when merging URLs.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 Base URLs of a client now follow the rules of https://tools.ietf.org/html/rfc3986#section-5.2.2 when merging URLs.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

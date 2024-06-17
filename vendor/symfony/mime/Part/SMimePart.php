@@ -20,6 +20,7 @@ class SMimePart extends AbstractPart
 {
     /** @internal */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected Headers $_headers;
 
     private iterable|string $body;
@@ -30,6 +31,8 @@ class SMimePart extends AbstractPart
     public function __construct(iterable|string $body, string $type, string $subtype, array $parameters)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $_headers;
 
     private $body;
@@ -41,6 +44,9 @@ class SMimePart extends AbstractPart
     {
         unset($this->_headers);
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         parent::__construct();
 

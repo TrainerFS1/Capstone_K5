@@ -37,7 +37,11 @@ trait SmartObject
 				}
 			} elseif ($handlers !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 				throw new UnexpectedValueException("Property $class::$$name must be iterable or null, " . get_debug_type($handlers) . ' given.');
+=======
+				throw new UnexpectedValueException("Property $class::$$name must be iterable or null, " . gettype($handlers) . ' given.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 				throw new UnexpectedValueException("Property $class::$$name must be iterable or null, " . gettype($handlers) . ' given.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -12,7 +12,10 @@ namespace PHPUnit\Event\Test;
 use const PHP_EOL;
 use function sprintf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function trim;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Code\Test;
@@ -29,6 +32,7 @@ final class PhpunitErrorTriggered implements Event
     private readonly Telemetry\Info $telemetryInfo;
     private readonly Test $test;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
@@ -38,6 +42,10 @@ final class PhpunitErrorTriggered implements Event
     /**
      * @psalm-param non-empty-string $message
      */
+=======
+    private readonly string $message;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private readonly string $message;
 
@@ -60,9 +68,12 @@ final class PhpunitErrorTriggered implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function message(): string
@@ -73,7 +84,11 @@ final class PhpunitErrorTriggered implements Event
     public function asString(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $message = trim($this->message);
+=======
+        $message = $this->message;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $message = $this->message;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -86,7 +101,11 @@ final class PhpunitErrorTriggered implements Event
             'Test Triggered PHPUnit Error (%s)%s',
             $this->test->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

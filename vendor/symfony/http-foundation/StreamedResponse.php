@@ -34,7 +34,11 @@ class StreamedResponse extends Response
      * @param int $status The HTTP status code (200 "OK" by default)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?callable $callback = null, int $status = 200, array $headers = [])
+=======
+    public function __construct(callable $callback = null, int $status = 200, array $headers = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(callable $callback = null, int $status = 200, array $headers = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +60,11 @@ class StreamedResponse extends Response
     public function setCallback(callable $callback): static
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->callback = $callback(...);
+=======
+        $this->callback = $callback;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->callback = $callback;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -64,6 +72,7 @@ class StreamedResponse extends Response
         return $this;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function getCallback(): ?\Closure
     {
@@ -83,12 +92,17 @@ class StreamedResponse extends Response
      */
     public function sendHeaders(/* int $statusCode = null */): static
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * This method only sends the headers once.
      *
      * @return $this
      */
     public function sendHeaders(): static
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->headersSent) {
@@ -96,12 +110,18 @@ class StreamedResponse extends Response
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $statusCode = \func_num_args() > 0 ? func_get_arg(0) : null;
         if ($statusCode < 100 || $statusCode >= 200) {
             $this->headersSent = true;
         }
 
         return parent::sendHeaders($statusCode);
+=======
+        $this->headersSent = true;
+
+        return parent::sendHeaders();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->headersSent = true;
 
@@ -123,8 +143,13 @@ class StreamedResponse extends Response
         $this->streamed = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!isset($this->callback)) {
             throw new \LogicException('The Response callback must be set.');
+=======
+        if (null === $this->callback) {
+            throw new \LogicException('The Response callback must not be null.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (null === $this->callback) {
             throw new \LogicException('The Response callback must not be null.');

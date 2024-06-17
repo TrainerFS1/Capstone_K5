@@ -83,7 +83,11 @@ return [
     's_before' => ':count másodperccel',
     'months' => ['január', 'február', 'március', 'április', 'május', 'június', 'július', 'augusztus', 'szeptember', 'október', 'november', 'december'],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'months_short' => ['jan.', 'febr.', 'márc.', 'ápr.', 'máj.', 'jún.', 'júl.', 'aug.', 'szept.', 'okt.', 'nov.', 'dec.'],
+=======
+    'months_short' => ['jan.', 'feb.', 'márc.', 'ápr.', 'máj.', 'jún.', 'júl.', 'aug.', 'szept.', 'okt.', 'nov.', 'dec.'],
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'months_short' => ['jan.', 'feb.', 'márc.', 'ápr.', 'máj.', 'jún.', 'júl.', 'aug.', 'szept.', 'okt.', 'nov.', 'dec.'],
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

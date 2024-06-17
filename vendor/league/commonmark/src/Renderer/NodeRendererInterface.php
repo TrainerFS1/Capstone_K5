@@ -14,7 +14,10 @@ declare(strict_types=1);
 namespace League\CommonMark\Renderer;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\InvalidArgumentException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Node\Node;
@@ -25,7 +28,11 @@ interface NodeRendererInterface
      * @return \Stringable|string|null
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws InvalidArgumentException if the wrong type of Node is provided
+=======
+     * @throws \InvalidArgumentException if the wrong type of Node is provided
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \InvalidArgumentException if the wrong type of Node is provided
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

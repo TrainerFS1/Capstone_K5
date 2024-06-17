@@ -27,7 +27,11 @@ final class Dumper
     private \Closure $handler;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(OutputInterface $output, ?CliDumper $dumper = null, ?ClonerInterface $cloner = null)
+=======
+    public function __construct(OutputInterface $output, CliDumper $dumper = null, ClonerInterface $cloner = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(OutputInterface $output, CliDumper $dumper = null, ClonerInterface $cloner = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -45,6 +49,7 @@ final class Dumper
             };
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->handler = fn ($var): string => match (true) {
                 null === $var => 'null',
                 true === $var => 'true',
@@ -52,6 +57,8 @@ final class Dumper
                 \is_string($var) => '"'.$var.'"',
                 default => rtrim(print_r($var, true)),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->handler = function ($var): string {
                 return match (true) {
                     null === $var => 'null',
@@ -60,6 +67,9 @@ final class Dumper
                     \is_string($var) => '"'.$var.'"',
                     default => rtrim(print_r($var, true)),
                 };
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             };
         }

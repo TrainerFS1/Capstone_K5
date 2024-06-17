@@ -37,7 +37,11 @@ final class IdentificationHeader extends AbstractHeader
      * @throws RfcComplianceException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setBody(mixed $body): void
+=======
+    public function setBody(mixed $body)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setBody(mixed $body)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -58,7 +62,11 @@ final class IdentificationHeader extends AbstractHeader
      * @throws RfcComplianceException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setId(string|array $id): void
+=======
+    public function setId(string|array $id)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setId(string|array $id)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,7 +92,11 @@ final class IdentificationHeader extends AbstractHeader
      * @throws RfcComplianceException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setIds(array $ids): void
+=======
+    public function setIds(array $ids)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setIds(array $ids)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

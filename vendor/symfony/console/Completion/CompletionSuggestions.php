@@ -21,8 +21,13 @@ use Symfony\Component\Console\Input\InputOption;
 final class CompletionSuggestions
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $valueSuggestions = [];
     private array $optionSuggestions = [];
+=======
+    private $valueSuggestions = [];
+    private $optionSuggestions = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $valueSuggestions = [];
     private $optionSuggestions = [];

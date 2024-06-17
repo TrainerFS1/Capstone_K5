@@ -46,7 +46,11 @@ final class LazyCommand extends Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setApplication(?Application $application = null): void
+=======
+    public function setApplication(Application $application = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setApplication(Application $application = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -121,7 +125,11 @@ final class LazyCommand extends Command
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addArgument(string $name, ?int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
+=======
+    public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -136,7 +144,11 @@ final class LazyCommand extends Command
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addOption(string $name, string|array|null $shortcut = null, ?int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
+=======
+    public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

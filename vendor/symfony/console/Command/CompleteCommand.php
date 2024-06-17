@@ -45,9 +45,15 @@ final class CompleteCommand extends Command
     protected static $defaultDescription = 'Internal command to provide shell completion suggestions';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $completionOutputs;
 
     private bool $isDebug = false;
+=======
+    private $completionOutputs;
+
+    private $isDebug = false;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $completionOutputs;
 
@@ -81,7 +87,11 @@ final class CompleteCommand extends Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function initialize(InputInterface $input, OutputInterface $output): void
+=======
+    protected function initialize(InputInterface $input, OutputInterface $output)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function initialize(InputInterface $input, OutputInterface $output)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -145,7 +155,11 @@ final class CompleteCommand extends Command
 
                 if (CompletionInput::TYPE_OPTION_NAME === $completionInput->getCompletionType()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->log('  Completing option names for the <comment>'.($command instanceof LazyCommand ? $command->getCommand() : $command)::class.'</> command.');
+=======
+                    $this->log('  Completing option names for the <comment>'.\get_class($command instanceof LazyCommand ? $command->getCommand() : $command).'</> command.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $this->log('  Completing option names for the <comment>'.\get_class($command instanceof LazyCommand ? $command->getCommand() : $command).'</> command.');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -154,7 +168,11 @@ final class CompleteCommand extends Command
                 } else {
                     $this->log([
 <<<<<<< HEAD
+<<<<<<< HEAD
                         '  Completing using the <comment>'.($command instanceof LazyCommand ? $command->getCommand() : $command)::class.'</> class.',
+=======
+                        '  Completing using the <comment>'.\get_class($command instanceof LazyCommand ? $command->getCommand() : $command).'</> class.',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         '  Completing using the <comment>'.\get_class($command instanceof LazyCommand ? $command->getCommand() : $command).'</> class.',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -174,7 +192,11 @@ final class CompleteCommand extends Command
             $this->log('<info>Suggestions:</>');
             if ($options = $suggestions->getOptionSuggestions()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->log('  --'.implode(' --', array_map(fn ($o) => $o->getName(), $options)));
+=======
+                $this->log('  --'.implode(' --', array_map(function ($o) { return $o->getName(); }, $options)));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->log('  --'.implode(' --', array_map(function ($o) { return $o->getName(); }, $options)));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -196,15 +218,21 @@ final class CompleteCommand extends Command
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return 2;
         }
 
         return 0;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return self::FAILURE;
         }
 
         return self::SUCCESS;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

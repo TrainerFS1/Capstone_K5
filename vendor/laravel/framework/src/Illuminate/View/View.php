@@ -92,6 +92,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the evaluated contents for a given array of fragments or return all fragments.
      *
      * @param  array|null  $fragments
@@ -103,6 +104,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
             ? $this->allFragments()
             : collect($fragments)->map(fn ($f) => $this->fragment($f))->implode('');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the evaluated contents for a given array of fragments.
      *
      * @param  array  $fragments
@@ -111,6 +114,9 @@ class View implements ArrayAccess, Htmlable, ViewContract
     public function fragments(array $fragments)
     {
         return collect($fragments)->map(fn ($f) => $this->fragment($f))->implode('');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -135,15 +141,21 @@ class View implements ArrayAccess, Htmlable, ViewContract
      *
      * @param  bool  $boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|null  $fragments
      * @return string
      */
     public function fragmentsIf($boolean, ?array $fragments = null)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $fragments
      * @return string
      */
     public function fragmentsIf($boolean, array $fragments)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (value($boolean)) {
@@ -155,6 +167,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get all fragments as a single string.
      *
      * @return string
@@ -165,6 +178,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the string contents of the view.

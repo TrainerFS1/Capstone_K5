@@ -14,7 +14,11 @@ Using Laravel? You probably want to use [Ignition for Laravel](https://github.co
 ## Documentation
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 You can find the documentation of this package at [the docs of Flare](https://flareapp.io/docs/flare/general/welcome-to-flare).
+=======
+You can find the documentation of this package at [the docs of Flare](https://flareapp.io/docs/general/projects).
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 You can find the documentation of this package at [the docs of Flare](https://flareapp.io/docs/general/projects).
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -15,7 +15,11 @@ final class Blood implements Extension\BloodExtension
      * @var string[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $bloodTypes = ['A', 'AB', 'B', 'O'];
+=======
+    private $bloodTypes = ['A', 'AB', 'B', 'O'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $bloodTypes = ['A', 'AB', 'B', 'O'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -24,7 +28,11 @@ final class Blood implements Extension\BloodExtension
      * @var string[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $bloodRhFactors = ['+', '-'];
+=======
+    private $bloodRhFactors = ['+', '-'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $bloodRhFactors = ['+', '-'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

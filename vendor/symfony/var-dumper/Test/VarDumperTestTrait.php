@@ -28,7 +28,11 @@ trait VarDumperTestTrait
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function setUpVarDumper(array $casters, ?int $flags = null): void
+=======
+    protected function setUpVarDumper(array $casters, int $flags = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function setUpVarDumper(array $casters, int $flags = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,7 +61,11 @@ trait VarDumperTestTrait
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function getDump(mixed $data, string|int|null $key = null, int $filter = 0): ?string
+=======
+    protected function getDump(mixed $data, string|int $key = null, int $filter = 0): ?string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function getDump(mixed $data, string|int $key = null, int $filter = 0): ?string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -51,7 +51,10 @@ class Finder implements \IteratorAggregate, \Countable
     private array $exclude = [];
     private array $filters = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $pruneFilters = [];
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private array $depths = [];
@@ -167,8 +170,13 @@ class Finder implements \IteratorAggregate, \Countable
      * You can use patterns (delimited with / sign), globs or simple strings.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      *     $finder->name('/\.php$/')
      *     $finder->name('*.php') // same as above, without dot files
+=======
+     *     $finder->name('*.php')
+     *     $finder->name('/\.php$/') // same as above
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *     $finder->name('*.php')
      *     $finder->name('/\.php$/') // same as above
@@ -406,8 +414,11 @@ class Finder implements \IteratorAggregate, \Countable
      *
      * @param string|string[] $pattern VCS patterns to ignore
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -593,15 +604,19 @@ class Finder implements \IteratorAggregate, \Countable
      * to remove files.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param \Closure(SplFileInfo): bool $closure
      * @param bool                        $prune   Whether to skip traversing directories further
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      *
      * @see CustomFilterIterator
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function filter(\Closure $closure /* , bool $prune = false */): static
     {
@@ -613,10 +628,15 @@ class Finder implements \IteratorAggregate, \Countable
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function filter(\Closure $closure): static
     {
         $this->filters[] = $closure;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
@@ -704,7 +724,13 @@ class Finder implements \IteratorAggregate, \Countable
         $iterator = new \AppendIterator();
         foreach ($this->dirs as $dir) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $iterator->append(new \IteratorIterator(new LazyIterator(fn () => $this->searchInDirectory($dir))));
+=======
+            $iterator->append(new \IteratorIterator(new LazyIterator(function () use ($dir) {
+                return $this->searchInDirectory($dir);
+            })));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $iterator->append(new \IteratorIterator(new LazyIterator(function () use ($dir) {
                 return $this->searchInDirectory($dir);
@@ -778,10 +804,13 @@ class Finder implements \IteratorAggregate, \Countable
         $notPaths = $this->notPaths;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->pruneFilters) {
             $exclude = array_merge($exclude, $this->pruneFilters);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (static::IGNORE_VCS_FILES === (static::IGNORE_VCS_FILES & $this->ignore)) {

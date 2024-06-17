@@ -22,12 +22,18 @@ use Symfony\Component\String\UnicodeString;
 abstract class Helper implements HelperInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $helperSet;
 
     /**
      * @return void
      */
     public function setHelperSet(?HelperSet $helperSet = null)
+=======
+    protected $helperSet = null;
+
+    public function setHelperSet(HelperSet $helperSet = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected $helperSet = null;
 
@@ -87,7 +93,11 @@ abstract class Helper implements HelperInterface
      * Returns the subset of a string, using mb_substr if it is available.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function substr(?string $string, int $from, ?int $length = null): string
+=======
+    public static function substr(?string $string, int $from, int $length = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function substr(?string $string, int $from, int $length = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -101,6 +111,7 @@ abstract class Helper implements HelperInterface
         return mb_substr($string, $from, $length, $encoding);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return string
@@ -149,6 +160,8 @@ abstract class Helper implements HelperInterface
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function formatTime(int|float $secs)
     {
         static $timeFormats = [
@@ -178,6 +191,9 @@ abstract class Helper implements HelperInterface
         }
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function formatMemory(int $memory)
     {
@@ -197,9 +213,12 @@ abstract class Helper implements HelperInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function removeDecoration(OutputFormatterInterface $formatter, ?string $string)

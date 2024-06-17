@@ -7,8 +7,14 @@ We'd love you to help out with mockery and no contribution is too small.
 ## Reporting Bugs
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Issues can be reported on the [issue tracker](https://github.com/mockery/mockery/issues). 
 Please try and report any bugs with a minimal reproducible example, it will make things easier for other
+=======
+Issues can be reported on the [issue
+tracker](https://github.com/padraic/mockery/issues). Please try and report any
+bugs with a minimal reproducible example, it will make things easier for other
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 Issues can be reported on the [issue
 tracker](https://github.com/padraic/mockery/issues). Please try and report any
@@ -21,7 +27,12 @@ contributors and your problems will hopefully be resolved quickly.
 
 We're always interested to hear about your ideas and you can request features by
 <<<<<<< HEAD
+<<<<<<< HEAD
 creating a ticket in the [issue tracker](https://github.com/mockery/mockery/issues). We can't always guarantee
+=======
+creating a ticket in the [issue
+tracker](https://github.com/padraic/mockery/issues). We can't always guarantee
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 creating a ticket in the [issue
 tracker](https://github.com/padraic/mockery/issues). We can't always guarantee
@@ -43,7 +54,11 @@ and
 but we'll probably merge any code that looks close enough.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Fork the [repository](https://github.com/mockery/mockery) on GitHub
+=======
+* Fork the [repository](https://github.com/padraic/mockery) on GitHub
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 * Fork the [repository](https://github.com/padraic/mockery) on GitHub
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -52,6 +67,7 @@ but we'll probably merge any code that looks close enough.
 * Optionally, but preferably, write some documentation 
 * Optionally, update the CHANGELOG.md file with your feature or
   [BC](http://en.wikipedia.org/wiki/Backward_compatibility) break
+<<<<<<< HEAD
 <<<<<<< HEAD
 * Send a [Pull Request](https://help.github.com/articles/creating-a-pull-request) to the
   correct target branch (see below)
@@ -62,6 +78,8 @@ the [issue tracker](https://github.com/mockery/mockery/issues) or jump in to \#m
 
 Any code you contribute must be licensed under the [BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause).
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 * Send a [Pull
   Request](https://help.github.com/articles/creating-a-pull-request) to the
   correct target branch (see below)
@@ -74,6 +92,9 @@ the [issue tracker](https://github.com/padraic/mockery/issues) or jump in to
 Any code you contribute must be licensed under the [BSD 3-Clause
 License](http://opensource.org/licenses/BSD-3-Clause).
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 ## Target Branch
@@ -92,7 +113,11 @@ the instructions at [http://getcomposer.org/download/](http://getcomposer.org/do
 then install the dependencies with `php /path/to/composer.phar install`.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 This will install the required dev dependencies and create the
+=======
+This will install the required PHPUnit and Hamcrest dev dependencies and create the
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 This will install the required PHPUnit and Hamcrest dev dependencies and create the
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

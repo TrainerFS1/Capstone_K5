@@ -31,7 +31,13 @@ class IpsRequestMatcher implements RequestMatcherInterface
     public function __construct(array|string $ips)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->ips = array_reduce((array) $ips, static fn (array $ips, string $ip) => array_merge($ips, preg_split('/\s*,\s*/', $ip)), []);
+=======
+        $this->ips = array_reduce((array) $ips, static function (array $ips, string $ip) {
+            return array_merge($ips, preg_split('/\s*,\s*/', $ip));
+        }, []);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->ips = array_reduce((array) $ips, static function (array $ips, string $ip) {
             return array_merge($ips, preg_split('/\s*,\s*/', $ip));

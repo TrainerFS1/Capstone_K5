@@ -26,10 +26,13 @@ use Symfony\Component\Uid\Factory\UlidFactory;
 class GenerateUlidCommand extends Command
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private UlidFactory $factory;
 
     public function __construct(?UlidFactory $factory = null)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private const FORMAT_OPTIONS = [
         'base32',
         'base58',
@@ -39,6 +42,9 @@ class GenerateUlidCommand extends Command
     private UlidFactory $factory;
 
     public function __construct(UlidFactory $factory = null)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->factory = $factory ?? new UlidFactory();
@@ -53,7 +59,11 @@ class GenerateUlidCommand extends Command
                 new InputOption('time', null, InputOption::VALUE_REQUIRED, 'The ULID timestamp: a parsable date/time string'),
                 new InputOption('count', 'c', InputOption::VALUE_REQUIRED, 'The number of ULID to generate', 1),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new InputOption('format', 'f', InputOption::VALUE_REQUIRED, sprintf('The ULID output format ("%s")', implode('", "', $this->getAvailableFormatOptions())), 'base32'),
+=======
+                new InputOption('format', 'f', InputOption::VALUE_REQUIRED, 'The ULID output format: base32, base58 or rfc4122', 'base32'),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new InputOption('format', 'f', InputOption::VALUE_REQUIRED, 'The ULID output format: base32, base58 or rfc4122', 'base32'),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -96,15 +106,21 @@ EOF
         $formatOption = $input->getOption('format');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (\in_array($formatOption, $this->getAvailableFormatOptions())) {
             $format = 'to'.ucfirst($formatOption);
         } else {
             $io->error(sprintf('Invalid format "%s", supported formats are "%s".', $formatOption, implode('", "', $this->getAvailableFormatOptions())));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (\in_array($formatOption, self::FORMAT_OPTIONS)) {
             $format = 'to'.ucfirst($formatOption);
         } else {
             $io->error(sprintf('Invalid format "%s", did you mean "base32", "base58" or "rfc4122"?', $input->getOption('format')));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return 1;
@@ -128,6 +144,7 @@ EOF
     {
         if ($input->mustSuggestOptionValuesFor('format')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $suggestions->suggestValues($this->getAvailableFormatOptions());
         }
     }
@@ -140,6 +157,11 @@ EOF
             'rfc4122',
         ];
     }
+=======
+            $suggestions->suggestValues(self::FORMAT_OPTIONS);
+        }
+    }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $suggestions->suggestValues(self::FORMAT_OPTIONS);
         }

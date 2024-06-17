@@ -4,13 +4,17 @@ namespace Illuminate\Database\Eloquent\Relations;
 
 use Illuminate\Database\Eloquent\Collection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class MorphMany extends MorphOneOrMany
 {
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Convert the relationship to a "morph one" relationship.
      *
@@ -28,6 +32,8 @@ class MorphMany extends MorphOneOrMany
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the results of the relationship.
@@ -83,6 +89,7 @@ class MorphMany extends MorphOneOrMany
         return parent::forceCreate($attributes);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Create a new instance of the related model with mass assignment without raising model events.
@@ -94,6 +101,8 @@ class MorphMany extends MorphOneOrMany
     {
         return Model::withoutEvents(fn () => $this->forceCreate($attributes));
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

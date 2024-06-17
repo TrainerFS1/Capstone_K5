@@ -74,7 +74,11 @@ final class AfterTestMethodFinished implements Event
                 PHP_EOL . '- %s::%s',
                 $calledMethod->className(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod->methodName(),
+=======
+                $calledMethod->methodName()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod->methodName()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

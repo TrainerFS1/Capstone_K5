@@ -10,11 +10,16 @@
 namespace PHPUnit\Event;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Code\ClassMethod;
 use PHPUnit\Event\Code\ComparisonFailure;
 use PHPUnit\Event\Code\Throwable;
 use PHPUnit\Event\Test\DataProviderMethodCalled;
 use PHPUnit\Event\Test\DataProviderMethodFinished;
+=======
+use PHPUnit\Event\Code\ComparisonFailure;
+use PHPUnit\Event\Code\Throwable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\Code\ComparisonFailure;
 use PHPUnit\Event\Code\Throwable;
@@ -29,7 +34,11 @@ use PHPUnit\Event\TestSuite\TestSuite;
 use PHPUnit\Framework\Constraint;
 use PHPUnit\TextUI\Configuration\Configuration;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
+=======
+use SebastianBergmann\Exporter\Exporter;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use SebastianBergmann\Exporter\Exporter;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -44,7 +53,10 @@ final class DispatchingEmitter implements Emitter
     private readonly Telemetry\Snapshot $startSnapshot;
     private Telemetry\Snapshot $previousSnapshot;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool $exportObjects = false;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -54,6 +66,7 @@ final class DispatchingEmitter implements Emitter
         $this->system     = $system;
 
         $this->startSnapshot    = $system->snapshot();
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->previousSnapshot = $this->startSnapshot;
     }
@@ -75,6 +88,9 @@ final class DispatchingEmitter implements Emitter
 =======
         $this->previousSnapshot = $system->snapshot();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        $this->previousSnapshot = $system->snapshot();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -87,8 +103,13 @@ final class DispatchingEmitter implements Emitter
             new Application\Started(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new Runtime\Runtime,
             ),
+=======
+                new Runtime\Runtime
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new Runtime\Runtime
             )
@@ -105,8 +126,13 @@ final class DispatchingEmitter implements Emitter
         $this->dispatcher->dispatch(
             new TestRunner\Started(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->telemetryInfo(),
             ),
+=======
+                $this->telemetryInfo()
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->telemetryInfo()
             )
@@ -124,8 +150,13 @@ final class DispatchingEmitter implements Emitter
             new TestRunner\Configured(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $configuration,
             ),
+=======
+                $configuration
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $configuration
             )
@@ -143,8 +174,13 @@ final class DispatchingEmitter implements Emitter
             new TestRunner\BootstrapFinished(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $filename,
             ),
+=======
+                $filename
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $filename
             )
@@ -164,8 +200,13 @@ final class DispatchingEmitter implements Emitter
                 $filename,
                 $name,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $version,
             ),
+=======
+                $version
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $version
             )
@@ -186,6 +227,7 @@ final class DispatchingEmitter implements Emitter
             new TestRunner\ExtensionBootstrapped(
                 $this->telemetryInfo(),
                 $className,
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $parameters,
             ),
@@ -223,6 +265,10 @@ final class DispatchingEmitter implements Emitter
                 $parameters
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $parameters
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -236,8 +282,13 @@ final class DispatchingEmitter implements Emitter
             new TestSuiteLoaded(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $testSuite,
             ),
+=======
+                $testSuite
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $testSuite
             )
@@ -255,8 +306,13 @@ final class DispatchingEmitter implements Emitter
             new TestSuiteFiltered(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $testSuite,
             ),
+=======
+                $testSuite
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $testSuite
             )
@@ -276,8 +332,13 @@ final class DispatchingEmitter implements Emitter
                 $executionOrder,
                 $executionOrderDefects,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $resolveDependencies,
             ),
+=======
+                $resolveDependencies
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $resolveDependencies
             )
@@ -294,8 +355,13 @@ final class DispatchingEmitter implements Emitter
         $this->dispatcher->dispatch(
             new TestRunner\EventFacadeSealed(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->telemetryInfo(),
             ),
+=======
+                $this->telemetryInfo()
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->telemetryInfo()
             )
@@ -312,6 +378,7 @@ final class DispatchingEmitter implements Emitter
         $this->dispatcher->dispatch(
             new TestRunner\ExecutionStarted(
                 $this->telemetryInfo(),
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $testSuite,
             ),
@@ -341,6 +408,10 @@ final class DispatchingEmitter implements Emitter
                 $testSuite
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $testSuite
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -355,8 +426,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testSuite,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
             ),
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
             )
@@ -374,8 +450,13 @@ final class DispatchingEmitter implements Emitter
             new TestSuiteStarted(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $testSuite,
             ),
+=======
+                $testSuite
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $testSuite
             )
@@ -392,6 +473,7 @@ final class DispatchingEmitter implements Emitter
         $this->dispatcher->dispatch(
             new Test\PreparationStarted(
                 $this->telemetryInfo(),
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $test,
             ),
@@ -413,6 +495,10 @@ final class DispatchingEmitter implements Emitter
                 $test
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $test
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -423,7 +509,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeFirstTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void
+=======
+    public function testBeforeFirstTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeFirstTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -433,8 +523,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod,
             ),
+=======
+                $calledMethod
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod
             )
@@ -449,7 +544,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeFirstTestMethodErrored(string $testClassName, ClassMethod $calledMethod, Throwable $throwable): void
+=======
+    public function testBeforeFirstTestMethodErrored(string $testClassName, Code\ClassMethod $calledMethod, Throwable $throwable): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeFirstTestMethodErrored(string $testClassName, Code\ClassMethod $calledMethod, Throwable $throwable): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -460,8 +559,13 @@ final class DispatchingEmitter implements Emitter
                 $testClassName,
                 $calledMethod,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $throwable,
             ),
+=======
+                $throwable
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $throwable
             )
@@ -476,7 +580,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeFirstTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void
+=======
+    public function testBeforeFirstTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeFirstTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -486,8 +594,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$calledMethods,
             ),
+=======
+                ...$calledMethods
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$calledMethods
             )
@@ -502,7 +615,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void
+=======
+    public function testBeforeTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -512,8 +629,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod,
             ),
+=======
+                $calledMethod
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod
             )
@@ -528,7 +650,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void
+=======
+    public function testBeforeTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -538,8 +664,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$calledMethods,
             ),
+=======
+                ...$calledMethods
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$calledMethods
             )
@@ -554,7 +685,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPreConditionCalled(string $testClassName, ClassMethod $calledMethod): void
+=======
+    public function testPreConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPreConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -564,8 +699,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod,
             ),
+=======
+                $calledMethod
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod
             )
@@ -580,7 +720,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPreConditionFinished(string $testClassName, ClassMethod ...$calledMethods): void
+=======
+    public function testPreConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPreConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -590,8 +734,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$calledMethods,
             ),
+=======
+                ...$calledMethods
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$calledMethods
             )
@@ -609,8 +758,13 @@ final class DispatchingEmitter implements Emitter
             new Test\Prepared(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $test,
             ),
+=======
+                $test
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $test
             )
@@ -630,8 +784,13 @@ final class DispatchingEmitter implements Emitter
             new Test\ComparatorRegistered(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $className,
             ),
+=======
+                $className
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $className
             )
@@ -643,8 +802,11 @@ final class DispatchingEmitter implements Emitter
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -654,17 +816,23 @@ final class DispatchingEmitter implements Emitter
             new Test\AssertionSucceeded(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Exporter::export($value, $this->exportObjects),
                 $constraint->toString($this->exportObjects),
                 $constraint->count(),
                 $message,
             ),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 '',
                 $constraint->toString(),
                 $constraint->count(),
                 $message,
             )
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -673,8 +841,11 @@ final class DispatchingEmitter implements Emitter
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -684,17 +855,23 @@ final class DispatchingEmitter implements Emitter
             new Test\AssertionFailed(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Exporter::export($value, $this->exportObjects),
                 $constraint->toString($this->exportObjects),
                 $constraint->count(),
                 $message,
             ),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 (new Exporter)->export($value),
                 $constraint->toString(),
                 $constraint->count(),
                 $message,
             )
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -711,8 +888,13 @@ final class DispatchingEmitter implements Emitter
             new Test\MockObjectCreated(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $className,
             ),
+=======
+                $className
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $className
             )
@@ -732,8 +914,13 @@ final class DispatchingEmitter implements Emitter
             new Test\MockObjectForIntersectionOfInterfacesCreated(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $interfaces,
             ),
+=======
+                $interfaces
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $interfaces
             )
@@ -753,8 +940,13 @@ final class DispatchingEmitter implements Emitter
             new Test\MockObjectForTraitCreated(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $traitName,
             ),
+=======
+                $traitName
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $traitName
             )
@@ -774,8 +966,13 @@ final class DispatchingEmitter implements Emitter
             new Test\MockObjectForAbstractClassCreated(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $className,
             ),
+=======
+                $className
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $className
             )
@@ -801,8 +998,13 @@ final class DispatchingEmitter implements Emitter
                 $methods,
                 $callOriginalConstructor,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $options,
             ),
+=======
+                $options
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $options
             )
@@ -823,8 +1025,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$methodNames,
             ),
+=======
+                ...$methodNames
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$methodNames
             )
@@ -845,8 +1052,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Exporter::export($constructorArguments, $this->exportObjects),
             ),
+=======
+                (new Exporter)->export($constructorArguments)
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 (new Exporter)->export($constructorArguments)
             )
@@ -866,8 +1078,13 @@ final class DispatchingEmitter implements Emitter
             new Test\TestStubCreated(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $className,
             ),
+=======
+                $className
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $className
             )
@@ -887,8 +1104,13 @@ final class DispatchingEmitter implements Emitter
             new Test\TestStubForIntersectionOfInterfacesCreated(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $interfaces,
             ),
+=======
+                $interfaces
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $interfaces
             )
@@ -907,8 +1129,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $throwable,
             ),
+=======
+                $throwable
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $throwable
             )
@@ -928,8 +1155,13 @@ final class DispatchingEmitter implements Emitter
                 $test,
                 $throwable,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $comparisonFailure,
             ),
+=======
+                $comparisonFailure
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $comparisonFailure
             )
@@ -948,7 +1180,11 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ),
+=======
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -966,8 +1202,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
             ),
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
             )
@@ -986,8 +1227,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $throwable,
             ),
+=======
+                $throwable
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $throwable
             )
@@ -1006,8 +1252,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
             ),
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
             )
@@ -1017,8 +1268,11 @@ final class DispatchingEmitter implements Emitter
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $message
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
@@ -1031,8 +1285,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
             ),
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
             )
@@ -1041,6 +1300,7 @@ final class DispatchingEmitter implements Emitter
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1051,10 +1311,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredPhpDeprecation(Code\Test $test, string $message, string $file, int $line, bool $suppressed, bool $ignoredByBaseline, bool $ignoredByTest): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredPhpDeprecation(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1063,6 +1328,7 @@ final class DispatchingEmitter implements Emitter
                 $test,
                 $message,
                 $file,
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $line,
                 $suppressed,
@@ -1073,10 +1339,15 @@ final class DispatchingEmitter implements Emitter
                 $line
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1087,10 +1358,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredDeprecation(Code\Test $test, string $message, string $file, int $line, bool $suppressed, bool $ignoredByBaseline, bool $ignoredByTest): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredDeprecation(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1099,6 +1375,7 @@ final class DispatchingEmitter implements Emitter
                 $test,
                 $message,
                 $file,
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $line,
                 $suppressed,
@@ -1109,10 +1386,15 @@ final class DispatchingEmitter implements Emitter
                 $line
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1123,10 +1405,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredError(Code\Test $test, string $message, string $file, int $line, bool $suppressed): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredError(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1136,9 +1423,14 @@ final class DispatchingEmitter implements Emitter
                 $message,
                 $file,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $line,
                 $suppressed,
             ),
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $line
             )
@@ -1147,6 +1439,7 @@ final class DispatchingEmitter implements Emitter
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1157,10 +1450,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredNotice(Code\Test $test, string $message, string $file, int $line, bool $suppressed, bool $ignoredByBaseline): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredNotice(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1170,6 +1468,7 @@ final class DispatchingEmitter implements Emitter
                 $message,
                 $file,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $line,
                 $suppressed,
                 $ignoredByBaseline,
@@ -1178,10 +1477,15 @@ final class DispatchingEmitter implements Emitter
                 $line
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1192,10 +1496,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredPhpNotice(Code\Test $test, string $message, string $file, int $line, bool $suppressed, bool $ignoredByBaseline): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredPhpNotice(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1205,6 +1514,7 @@ final class DispatchingEmitter implements Emitter
                 $message,
                 $file,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $line,
                 $suppressed,
                 $ignoredByBaseline,
@@ -1213,10 +1523,15 @@ final class DispatchingEmitter implements Emitter
                 $line
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1227,10 +1542,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredWarning(Code\Test $test, string $message, string $file, int $line, bool $suppressed, bool $ignoredByBaseline): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredWarning(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1240,6 +1560,7 @@ final class DispatchingEmitter implements Emitter
                 $message,
                 $file,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $line,
                 $suppressed,
                 $ignoredByBaseline,
@@ -1248,10 +1569,15 @@ final class DispatchingEmitter implements Emitter
                 $line
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $message
      * @psalm-param non-empty-string $file
@@ -1262,10 +1588,15 @@ final class DispatchingEmitter implements Emitter
      */
     public function testTriggeredPhpWarning(Code\Test $test, string $message, string $file, int $line, bool $suppressed, bool $ignoredByBaseline): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      * @throws UnknownEventTypeException
      */
     public function testTriggeredPhpWarning(Code\Test $test, string $message, string $file, int $line): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher->dispatch(
@@ -1275,10 +1606,15 @@ final class DispatchingEmitter implements Emitter
                 $message,
                 $file,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $line,
                 $suppressed,
                 $ignoredByBaseline,
             ),
+=======
+                $line
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $line
             )
@@ -1288,8 +1624,11 @@ final class DispatchingEmitter implements Emitter
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $message
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
@@ -1303,7 +1642,11 @@ final class DispatchingEmitter implements Emitter
                 $test,
                 $message,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ),
+=======
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1312,8 +1655,11 @@ final class DispatchingEmitter implements Emitter
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $message
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
@@ -1326,6 +1672,7 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
                 $message,
+<<<<<<< HEAD
 <<<<<<< HEAD
             ),
         );
@@ -1347,6 +1694,9 @@ final class DispatchingEmitter implements Emitter
 =======
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -1361,8 +1711,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $test,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $numberOfAssertionsPerformed,
             ),
+=======
+                $numberOfAssertionsPerformed
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $numberOfAssertionsPerformed
             )
@@ -1377,7 +1732,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPostConditionCalled(string $testClassName, ClassMethod $calledMethod): void
+=======
+    public function testPostConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPostConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1387,8 +1746,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod,
             ),
+=======
+                $calledMethod
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod
             )
@@ -1403,7 +1767,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPostConditionFinished(string $testClassName, ClassMethod ...$calledMethods): void
+=======
+    public function testPostConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPostConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1413,8 +1781,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$calledMethods,
             ),
+=======
+                ...$calledMethods
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$calledMethods
             )
@@ -1429,7 +1802,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void
+=======
+    public function testAfterTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1439,8 +1816,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod,
             ),
+=======
+                $calledMethod
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod
             )
@@ -1455,7 +1837,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void
+=======
+    public function testAfterTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1465,8 +1851,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$calledMethods,
             ),
+=======
+                ...$calledMethods
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$calledMethods
             )
@@ -1481,7 +1872,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterLastTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void
+=======
+    public function testAfterLastTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterLastTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1491,8 +1886,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $calledMethod,
             ),
+=======
+                $calledMethod
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $calledMethod
             )
@@ -1507,7 +1907,11 @@ final class DispatchingEmitter implements Emitter
      * @throws UnknownEventTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterLastTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void
+=======
+    public function testAfterLastTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterLastTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1517,8 +1921,13 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testClassName,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ...$calledMethods,
             ),
+=======
+                ...$calledMethods
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ...$calledMethods
             )
@@ -1537,7 +1946,11 @@ final class DispatchingEmitter implements Emitter
                 $this->telemetryInfo(),
                 $testSuite,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ),
+=======
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1554,8 +1967,13 @@ final class DispatchingEmitter implements Emitter
             new TestRunner\DeprecationTriggered(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $message,
             ),
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $message
             )
@@ -1572,6 +1990,7 @@ final class DispatchingEmitter implements Emitter
         $this->dispatcher->dispatch(
             new TestRunner\WarningTriggered(
                 $this->telemetryInfo(),
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $message,
             ),
@@ -1601,6 +2020,10 @@ final class DispatchingEmitter implements Emitter
                 $message
             )
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $message
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -1612,7 +2035,11 @@ final class DispatchingEmitter implements Emitter
     {
         $this->dispatcher->dispatch(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new TestRunner\ExecutionFinished($this->telemetryInfo()),
+=======
+            new TestRunner\ExecutionFinished($this->telemetryInfo())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new TestRunner\ExecutionFinished($this->telemetryInfo())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1627,7 +2054,11 @@ final class DispatchingEmitter implements Emitter
     {
         $this->dispatcher->dispatch(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new TestRunner\Finished($this->telemetryInfo()),
+=======
+            new TestRunner\Finished($this->telemetryInfo())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new TestRunner\Finished($this->telemetryInfo())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1644,8 +2075,13 @@ final class DispatchingEmitter implements Emitter
             new Application\Finished(
                 $this->telemetryInfo(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $shellExitCode,
             ),
+=======
+                $shellExitCode
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $shellExitCode
             )

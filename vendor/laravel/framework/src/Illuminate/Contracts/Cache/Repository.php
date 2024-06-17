@@ -72,7 +72,11 @@ interface Repository extends CacheInterface
      *
      * @param  string  $key
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \DateTimeInterface|\DateInterval|\Closure|int|null  $ttl
+=======
+     * @param  \DateTimeInterface|\DateInterval|int|null  $ttl
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \DateTimeInterface|\DateInterval|int|null  $ttl
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

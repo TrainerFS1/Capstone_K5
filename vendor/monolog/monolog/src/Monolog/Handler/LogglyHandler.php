@@ -90,7 +90,10 @@ class LogglyHandler extends AbstractProcessingHandler
     /**
      * @param string[]|string $tag
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -108,7 +111,10 @@ class LogglyHandler extends AbstractProcessingHandler
     /**
      * @param string[]|string $tag
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -133,7 +139,11 @@ class LogglyHandler extends AbstractProcessingHandler
 
         $records = array_filter($records, function ($record) use ($level) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return ($record->level->value >= $level->value);
+=======
+            return ($record->level >= $level);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return ($record->level >= $level);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

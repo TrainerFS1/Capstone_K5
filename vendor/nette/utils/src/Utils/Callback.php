@@ -95,17 +95,23 @@ final class Callback
 
 		if (is_string($callable) && str_contains($callable, '::')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			return new ReflectionMethod($callable);
 		} elseif (is_array($callable)) {
 			return new ReflectionMethod($callable[0], $callable[1]);
 		} elseif (is_object($callable) && !$callable instanceof \Closure) {
 			return new ReflectionMethod($callable, '__invoke');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			return new \ReflectionMethod($callable);
 		} elseif (is_array($callable)) {
 			return new \ReflectionMethod($callable[0], $callable[1]);
 		} elseif (is_object($callable) && !$callable instanceof \Closure) {
 			return new \ReflectionMethod($callable, '__invoke');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		} else {
 			return new \ReflectionFunction($callable);
@@ -129,6 +135,7 @@ final class Callback
 	{
 		$r = new \ReflectionFunction($closure);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$class = $r->getClosureScopeClass()?->name;
 		if (str_ends_with($r->name, '}')) {
 			return $closure;
@@ -139,6 +146,8 @@ final class Callback
 		} elseif ($class) {
 			return [$class, $r->name];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		if (str_ends_with($r->name, '}')) {
 			return $closure;
 
@@ -147,6 +156,9 @@ final class Callback
 
 		} elseif ($class = $r->getClosureScopeClass()) {
 			return [$class->name, $r->name];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 		} else {

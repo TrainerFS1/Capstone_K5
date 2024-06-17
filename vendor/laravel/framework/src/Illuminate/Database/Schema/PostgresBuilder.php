@@ -55,6 +55,7 @@ class PostgresBuilder extends Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the user-defined types that belong to the database.
      *
      * @return array
@@ -105,6 +106,8 @@ class PostgresBuilder extends Builder
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Drop all tables from the database.
      *
      * @return void
@@ -118,6 +121,7 @@ class PostgresBuilder extends Builder
         );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $schemas = $this->grammar->escapeNames($this->getSchemas());
 
         foreach ($this->getTables() as $table) {
@@ -127,11 +131,16 @@ class PostgresBuilder extends Builder
                 && in_array($this->grammar->escapeNames([$table['schema']])[0], $schemas)) {
                 $tables[] = $qualifiedName;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($this->getAllTables() as $row) {
             $row = (array) $row;
 
             if (empty(array_intersect($this->grammar->escapeNames($row), $excludedTables))) {
                 $tables[] = $row['qualifiedname'] ?? reset($row);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
@@ -155,6 +164,7 @@ class PostgresBuilder extends Builder
         $views = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $schemas = $this->grammar->escapeNames($this->getSchemas());
 
         foreach ($this->getViews() as $view) {
@@ -162,10 +172,15 @@ class PostgresBuilder extends Builder
                 $views[] = $view['schema'].'.'.$view['name'];
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($this->getAllViews() as $row) {
             $row = (array) $row;
 
             $views[] = $row['qualifiedname'] ?? reset($row);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -180,10 +195,13 @@ class PostgresBuilder extends Builder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get all of the type names for the database.
      *
      * @deprecated Will be removed in a future Laravel version.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Drop all types from the database.
      *
      * @return void
@@ -241,6 +259,9 @@ class PostgresBuilder extends Builder
 
     /**
      * Get all of the type names for the database.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array
@@ -253,6 +274,7 @@ class PostgresBuilder extends Builder
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Drop all types from the database.
      *
@@ -289,12 +311,19 @@ class PostgresBuilder extends Builder
 =======
      * Get the column listing for a given table.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Get the column listing for a given table.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $table
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getColumns($table)
+=======
+    public function getColumnListing($table)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getColumnListing($table)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -304,6 +333,7 @@ class PostgresBuilder extends Builder
         $table = $this->connection->getTablePrefix().$table;
 
         $results = $this->connection->selectFromWriteConnection(
+<<<<<<< HEAD
 <<<<<<< HEAD
             $this->grammar->compileColumns($database, $schema, $table)
         );
@@ -356,10 +386,15 @@ class PostgresBuilder extends Builder
             $this->connection->getConfig('search_path') ?: $this->connection->getConfig('schema') ?: 'public'
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->grammar->compileColumnListing(), [$database, $schema, $table]
         );
 
         return $this->connection->getPostProcessor()->processColumnListing($results);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -372,11 +407,17 @@ class PostgresBuilder extends Builder
     protected function parseSchemaAndTable($reference)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $searchPath = $this->parseSearchPath(
             $this->connection->getConfig('search_path') ?: $this->connection->getConfig('schema') ?: 'public'
         );
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $parts = explode('.', $reference);
 
@@ -394,7 +435,11 @@ class PostgresBuilder extends Builder
         // query. If the schema has been specified in the query then we can use it
         // instead of a default schema configured in the connection search path.
 <<<<<<< HEAD
+<<<<<<< HEAD
         $schema = $this->getSchemas()[0];
+=======
+        $schema = $searchPath[0];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $schema = $searchPath[0];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

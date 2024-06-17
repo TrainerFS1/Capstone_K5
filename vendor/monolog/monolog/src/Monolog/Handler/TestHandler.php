@@ -24,6 +24,7 @@ use Monolog\LogRecord;
  * @author Jordi Boggiano <j.boggiano@seld.be>
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method bool hasEmergency(string|array $recordAssertions)
  * @method bool hasAlert(string|array $recordAssertions)
  * @method bool hasCritical(string|array $recordAssertions)
@@ -33,6 +34,8 @@ use Monolog\LogRecord;
  * @method bool hasInfo(string|array $recordAssertions)
  * @method bool hasDebug(string|array $recordAssertions)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method bool hasEmergency($record)
  * @method bool hasAlert($record)
  * @method bool hasCritical($record)
@@ -41,6 +44,9 @@ use Monolog\LogRecord;
  * @method bool hasNotice($record)
  * @method bool hasInfo($record)
  * @method bool hasDebug($record)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @method bool hasEmergencyRecords()
@@ -52,6 +58,7 @@ use Monolog\LogRecord;
  * @method bool hasInfoRecords()
  * @method bool hasDebugRecords()
  *
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @method bool hasEmergencyThatContains(string $message)
  * @method bool hasAlertThatContains(string $message)
@@ -80,6 +87,8 @@ use Monolog\LogRecord;
  * @method bool hasInfoThatPasses(callable $predicate)
  * @method bool hasDebugThatPasses(callable $predicate)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method bool hasEmergencyThatContains($message)
  * @method bool hasAlertThatContains($message)
  * @method bool hasCriticalThatContains($message)
@@ -106,6 +115,9 @@ use Monolog\LogRecord;
  * @method bool hasNoticeThatPasses($message)
  * @method bool hasInfoThatPasses($message)
  * @method bool hasDebugThatPasses($message)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 class TestHandler extends AbstractProcessingHandler

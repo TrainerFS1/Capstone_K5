@@ -100,9 +100,15 @@ class CommandsMatcher extends AbstractMatcher
         switch (true) {
             case self::tokenIs($command, self::T_STRING) &&
 <<<<<<< HEAD
+<<<<<<< HEAD
             !$this->isCommand($command[1]) &&
             $this->matchCommand($command[1]) &&
             empty($tokens):
+=======
+                !$this->isCommand($command[1]) &&
+                $this->matchCommand($command[1]) &&
+                empty($tokens):
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 !$this->isCommand($command[1]) &&
                 $this->matchCommand($command[1]) &&

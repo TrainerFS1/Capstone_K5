@@ -10,6 +10,7 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Enum_ extends Declaration {
     protected string $name;
     protected ?Identifier $scalarType = null;
@@ -26,6 +27,8 @@ class Enum_ extends Declaration {
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Enum_ extends Declaration
 {
     protected $name;
@@ -40,6 +43,9 @@ class Enum_ extends Declaration
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -55,7 +61,11 @@ class Enum_ extends Declaration
      * Sets the scalar type.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|Identifier $scalarType
+=======
+     * @param string|Identifier $type
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string|Identifier $type
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,6 +104,7 @@ class Enum_ extends Declaration
         $stmt = BuilderHelpers::normalizeNode($stmt);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($stmt instanceof Stmt\EnumCase) {
             $this->enumCases[] = $stmt;
         } elseif ($stmt instanceof Stmt\ClassMethod) {
@@ -107,6 +118,8 @@ class Enum_ extends Declaration
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $targets = [
             Stmt\TraitUse::class    => &$this->uses,
             Stmt\EnumCase::class    => &$this->enumCases,
@@ -121,6 +134,9 @@ class Enum_ extends Declaration
 
         $targets[$class][] = $stmt;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
@@ -144,7 +160,11 @@ class Enum_ extends Declaration
      * @return Stmt\Enum_ The built enum node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): PhpParser\Node {
+=======
+    public function getNode() : PhpParser\Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNode() : PhpParser\Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

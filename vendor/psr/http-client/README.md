@@ -8,7 +8,11 @@ Note that this is not a HTTP Client implementation of its own. It is merely abst
 The installable [package][package-url] and [implementations][implementation-url] are listed on Packagist.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [psr-url]: https://www.php-fig.org/psr/psr-18
+=======
+[psr-url]: http://www.php-fig.org/psr/psr-18
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [psr-url]: http://www.php-fig.org/psr/psr-18
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

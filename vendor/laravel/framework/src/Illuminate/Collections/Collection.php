@@ -13,8 +13,12 @@ use Traversable;
 /**
  * @template TKey of array-key
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @template-covariant TValue
+=======
+ * @template TValue
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @template TValue
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -362,7 +366,11 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Get all items except for those with the specified keys.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Support\Enumerable<array-key, TKey>|array<array-key, TKey>|string  $keys
+=======
+     * @param  \Illuminate\Support\Enumerable<array-key, TKey>|array<array-key, TKey>  $keys
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Support\Enumerable<array-key, TKey>|array<array-key, TKey>  $keys
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -371,10 +379,13 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     public function except($keys)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_null($keys)) {
             return new static($this->items);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($keys instanceof Enumerable) {
@@ -390,7 +401,11 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Run a filter over each of the items.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  (callable(TValue, TKey): bool)|null  $callback
+=======
+     * @param (callable(TValue, TKey): bool)|null  $callback
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param (callable(TValue, TKey): bool)|null  $callback
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -444,8 +459,12 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Remove an item from the collection by key.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * \Illuminate\Contracts\Support\Arrayable<array-key, TValue>|iterable<array-key, TKey>|TKey  $keys
      *
+=======
+     * @param  TKey|array<array-key, TKey>  $keys
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  TKey|array<array-key, TKey>  $keys
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -454,7 +473,11 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     public function forget($keys)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->getArrayableItems($keys) as $key) {
+=======
+        foreach ((array) $keys as $key) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         foreach ((array) $keys as $key) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -486,11 +509,17 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Get an item from the collection by key or add it to collection if it does not exist.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TGetOrPutValue
      *
      * @param  mixed  $key
      * @param  TGetOrPutValue|(\Closure(): TGetOrPutValue)  $value
      * @return TValue|TGetOrPutValue
+=======
+     * @param  mixed  $key
+     * @param  mixed  $value
+     * @return mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  mixed  $key
      * @param  mixed  $value
@@ -538,7 +567,10 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
                 $groupKey = match (true) {
                     is_bool($groupKey) => (int) $groupKey,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $groupKey instanceof \BackedEnum => $groupKey->value,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $groupKey instanceof \Stringable => (string) $groupKey,
@@ -855,8 +887,11 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     public function mapWithKeys(callable $callback)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new static(Arr::mapWithKeys($this->items, $callback));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $result = [];
 
         foreach ($this->items as $key => $value) {
@@ -868,6 +903,9 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
         }
 
         return new static($result);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -966,6 +1004,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Select specific values from the items within the collection.
      *
      * @param  \Illuminate\Support\Enumerable<array-key, TKey>|array<array-key, TKey>|string|null  $keys
@@ -987,6 +1026,8 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get and remove the last N items from the collection.
@@ -1048,11 +1089,16 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Push all of the given items onto the collection.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TConcatKey of array-key
      * @template TConcatValue
      *
      * @param  iterable<TConcatKey, TConcatValue>  $source
      * @return static<TKey|TConcatKey, TValue|TConcatValue>
+=======
+     * @param  iterable<array-key, TValue>  $source
+     * @return static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  iterable<array-key, TValue>  $source
      * @return static
@@ -1157,7 +1203,11 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * @param  TValue|(callable(TValue,TKey): bool)  $value
      * @param  bool  $strict
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return TKey|false
+=======
+     * @return TKey|bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return TKey|bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1459,7 +1509,11 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     {
         if (is_array($callback) && ! is_callable($callback)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->sortByMany($callback, $options);
+=======
+            return $this->sortByMany($callback);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $this->sortByMany($callback);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1494,6 +1548,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      *
      * @param  array<array-key, (callable(TValue, TValue): mixed)|(callable(TValue, TKey): mixed)|string|array{string, string}>  $comparisons
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  int  $options
      * @return static
      */
@@ -1503,6 +1558,8 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
 
         uasort($items, function ($a, $b) use ($comparisons, $options) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return static
      */
     protected function sortByMany(array $comparisons = [])
@@ -1510,6 +1567,9 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
         $items = $this->items;
 
         uasort($items, function ($a, $b) use ($comparisons) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($comparisons as $comparison) {
                 $comparison = Arr::wrap($comparison);
@@ -1529,6 +1589,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
                     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     if (($options & SORT_FLAG_CASE) === SORT_FLAG_CASE) {
                         if (($options & SORT_NATURAL) === SORT_NATURAL) {
                             $result = strnatcasecmp($values[0], $values[1]);
@@ -1544,6 +1605,9 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
                             default => $values[0] <=> $values[1],
                         };
                     }
+=======
+                    $result = $values[0] <=> $values[1];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $result = $values[0] <=> $values[1];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1570,6 +1634,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     public function sortByDesc($callback, $options = SORT_REGULAR)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_array($callback) && ! is_callable($callback)) {
             foreach ($callback as $index => $key) {
                 $comparison = Arr::wrap($key);
@@ -1580,6 +1645,8 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
             }
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->sortBy($callback, $options, true);
@@ -1696,6 +1763,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Flatten a multi-dimensional associative array with dots.
      *
      * @return static
@@ -1706,6 +1774,8 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Convert a flatten "dot" notation array into an expanded array.

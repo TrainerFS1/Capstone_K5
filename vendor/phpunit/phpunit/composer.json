@@ -18,8 +18,12 @@
     ],
     "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "issues": "https://github.com/sebastianbergmann/phpunit/issues",
         "security": "https://github.com/sebastianbergmann/phpunit/security/policy"
+=======
+        "issues": "https://github.com/sebastianbergmann/phpunit/issues"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "issues": "https://github.com/sebastianbergmann/phpunit/issues"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -37,7 +41,11 @@
         "phar-io/manifest": "^2.0.3",
         "phar-io/version": "^3.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "phpunit/php-code-coverage": "^10.1.5",
+=======
+        "phpunit/php-code-coverage": "^10.0",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "phpunit/php-code-coverage": "^10.0",
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,8 +59,13 @@
         "sebastian/diff": "^5.0",
         "sebastian/environment": "^6.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "sebastian/exporter": "^5.1",
         "sebastian/global-state": "^6.0.1",
+=======
+        "sebastian/exporter": "^5.0",
+        "sebastian/global-state": "^6.0",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "sebastian/exporter": "^5.0",
         "sebastian/global-state": "^6.0",
@@ -71,7 +84,11 @@
     },
     "suggest": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ext-soap": "To be able to generate mocks based on WSDL files"
+=======
+        "ext-soap": "*"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "ext-soap": "*"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -95,9 +112,13 @@
             "tests/_files/CoverageNamespacedFunctionTest.php",
             "tests/_files/CoveredFunction.php",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "tests/_files/Generator.php",
             "tests/_files/NamespaceCoveredFunction.php",
             "tests/end-to-end/code-coverage/ignore-function-using-attribute/src/CoveredFunction.php"
+=======
+            "tests/_files/NamespaceCoveredFunction.php"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "tests/_files/NamespaceCoveredFunction.php"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -106,7 +127,11 @@
     "extra": {
         "branch-alias": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "dev-main": "10.5-dev"
+=======
+            "dev-main": "10.0-dev"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "dev-main": "10.0-dev"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

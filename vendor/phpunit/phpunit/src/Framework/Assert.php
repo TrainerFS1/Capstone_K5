@@ -52,7 +52,10 @@ use PHPUnit\Framework\Constraint\LogicalOr;
 use PHPUnit\Framework\Constraint\LogicalXor;
 use PHPUnit\Framework\Constraint\ObjectEquals;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Framework\Constraint\ObjectHasProperty;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\Constraint\RegularExpression;
@@ -66,6 +69,10 @@ use PHPUnit\Framework\Constraint\TraversableContainsEqual;
 use PHPUnit\Framework\Constraint\TraversableContainsIdentical;
 use PHPUnit\Framework\Constraint\TraversableContainsOnly;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Util\Type;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Util\Type;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -102,7 +109,11 @@ abstract class Assert
     {
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new ArrayHasKey($key),
+=======
+            new ArrayHasKey($key)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new ArrayHasKey($key)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -115,7 +126,11 @@ abstract class Assert
      * @throws ExpectationFailedException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     final public static function assertIsList(mixed $array, string $message = ''): void
+=======
+    final public static function assertIsList(array $array, string $message = ''): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final public static function assertIsList(array $array, string $message = ''): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -124,7 +139,11 @@ abstract class Assert
             $array,
             new IsList,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -164,7 +183,11 @@ abstract class Assert
     {
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new TraversableContainsIdentical($needle),
+=======
+            new TraversableContainsIdentical($needle)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new TraversableContainsIdentical($needle)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -200,9 +223,15 @@ abstract class Assert
             new TraversableContainsOnly(
                 $type,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $isNativeType,
             ),
             $message,
+=======
+                $isNativeType
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $isNativeType
             ),
@@ -224,9 +253,15 @@ abstract class Assert
             new TraversableContainsOnly(
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 false,
             ),
             $message,
+=======
+                false
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 false
             ),
@@ -253,15 +288,21 @@ abstract class Assert
                 new TraversableContainsOnly(
                     $type,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $isNativeType,
                 ),
             ),
             $message,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $isNativeType
                 )
             ),
             $message
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -283,7 +324,11 @@ abstract class Assert
             $haystack,
             new Count($expectedCount),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -305,7 +350,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new Count($expectedCount),
+=======
+            new Count($expectedCount)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new Count($expectedCount)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -360,7 +409,11 @@ abstract class Assert
         $constraint = new IsEqualWithDelta(
             $expected,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $delta,
+=======
+            $delta
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $delta
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -378,7 +431,11 @@ abstract class Assert
     {
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqual($expected),
+=======
+            new IsEqual($expected)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqual($expected)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -396,7 +453,11 @@ abstract class Assert
     {
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqualCanonicalizing($expected),
+=======
+            new IsEqualCanonicalizing($expected)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqualCanonicalizing($expected)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -414,7 +475,11 @@ abstract class Assert
     {
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqualIgnoringCase($expected),
+=======
+            new IsEqualIgnoringCase($expected)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqualIgnoringCase($expected)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -434,8 +499,13 @@ abstract class Assert
             new IsEqualWithDelta(
                 $expected,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $delta,
             ),
+=======
+                $delta
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $delta
             )
@@ -454,7 +524,11 @@ abstract class Assert
             $actual,
             static::objectEquals($expected, $method),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -516,7 +590,11 @@ abstract class Assert
             $actual,
             static::greaterThanOrEqual($expected),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -572,7 +650,11 @@ abstract class Assert
 
         $constraint = new IsEqualCanonicalizing(
 <<<<<<< HEAD
+<<<<<<< HEAD
             file_get_contents($expected),
+=======
+            file_get_contents($expected)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             file_get_contents($expected)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -610,7 +692,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqual(file_get_contents($expected)),
+=======
+            new IsEqual(file_get_contents($expected))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqual(file_get_contents($expected))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -632,7 +718,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqualCanonicalizing(file_get_contents($expected)),
+=======
+            new IsEqualCanonicalizing(file_get_contents($expected))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqualCanonicalizing(file_get_contents($expected))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -654,7 +744,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqualIgnoringCase(file_get_contents($expected)),
+=======
+            new IsEqualIgnoringCase(file_get_contents($expected))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqualIgnoringCase(file_get_contents($expected))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -720,7 +814,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqual(file_get_contents($expectedFile)),
+=======
+            new IsEqual(file_get_contents($expectedFile))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqual(file_get_contents($expectedFile))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -741,7 +839,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqualCanonicalizing(file_get_contents($expectedFile)),
+=======
+            new IsEqualCanonicalizing(file_get_contents($expectedFile))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqualCanonicalizing(file_get_contents($expectedFile))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -762,7 +864,11 @@ abstract class Assert
 
         $constraint = new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new IsEqualIgnoringCase(file_get_contents($expectedFile)),
+=======
+            new IsEqualIgnoringCase(file_get_contents($expectedFile))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new IsEqualIgnoringCase(file_get_contents($expectedFile))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1043,6 +1149,7 @@ abstract class Assert
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Asserts that an object has a specified property.
      *
      * @throws ExpectationFailedException
@@ -1075,6 +1182,8 @@ abstract class Assert
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Asserts that two variables have the same type and value.
      * Used on objects, it asserts that two variables reference
      * the same object.
@@ -1093,7 +1202,11 @@ abstract class Assert
             $actual,
             new IsIdentical($expected),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1117,9 +1230,15 @@ abstract class Assert
             $actual,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new IsIdentical($expected),
             ),
             $message,
+=======
+                new IsIdentical($expected)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new IsIdentical($expected)
             ),
@@ -1134,7 +1253,10 @@ abstract class Assert
      * @throws Exception
      * @throws ExpectationFailedException
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws UnknownClassOrInterfaceException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -1154,7 +1276,11 @@ abstract class Assert
             $actual,
             new IsInstanceOf($expected),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1183,9 +1309,15 @@ abstract class Assert
             $actual,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new IsInstanceOf($expected),
             ),
             $message,
+=======
+                new IsInstanceOf($expected)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new IsInstanceOf($expected)
             ),
@@ -1208,7 +1340,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_ARRAY),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1229,7 +1365,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_BOOL),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1250,7 +1390,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_FLOAT),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1271,7 +1415,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_INT),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1292,7 +1440,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_NUMERIC),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1313,7 +1465,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_OBJECT),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1334,7 +1490,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_RESOURCE),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1355,7 +1515,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_CLOSED_RESOURCE),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1376,7 +1540,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_STRING),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1397,7 +1565,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_SCALAR),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1418,7 +1590,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_CALLABLE),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1439,7 +1615,11 @@ abstract class Assert
             $actual,
             new IsType(IsType::TYPE_ITERABLE),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1460,7 +1640,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_ARRAY)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1481,7 +1665,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_BOOL)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1502,7 +1690,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_FLOAT)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1523,7 +1715,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_INT)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1544,7 +1740,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_NUMERIC)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1565,7 +1765,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_OBJECT)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1586,7 +1790,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_RESOURCE)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1607,7 +1815,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_CLOSED_RESOURCE)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1628,7 +1840,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_STRING)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1649,7 +1865,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_SCALAR)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1670,7 +1890,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_CALLABLE)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1691,7 +1915,11 @@ abstract class Assert
             $actual,
             new LogicalNot(new IsType(IsType::TYPE_ITERABLE)),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1719,9 +1947,15 @@ abstract class Assert
             $string,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new RegularExpression($pattern),
             ),
             $message,
+=======
+                new RegularExpression($pattern)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new RegularExpression($pattern)
             ),
@@ -1752,7 +1986,11 @@ abstract class Assert
             $actual,
             new SameSize($expected),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $message,
+=======
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $message
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1781,9 +2019,15 @@ abstract class Assert
             $actual,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new SameSize($expected),
             ),
             $message,
+=======
+                new SameSize($expected)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new SameSize($expected)
             ),
@@ -1815,6 +2059,7 @@ abstract class Assert
      *
      * @throws ExpectationFailedException
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     final public static function assertFileMatchesFormat(string $format, string $actualFile, string $message = ''): void
     {
@@ -1851,6 +2096,8 @@ abstract class Assert
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     final public static function assertStringMatchesFormat(string $format, string $string, string $message = ''): void
     {
         static::assertThat($string, new StringMatchesFormatDescription($format), $message);
@@ -1861,8 +2108,11 @@ abstract class Assert
      *
      * @throws ExpectationFailedException
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5472
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1872,9 +2122,15 @@ abstract class Assert
             $string,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new StringMatchesFormatDescription($format),
             ),
             $message,
+=======
+                new StringMatchesFormatDescription($format)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new StringMatchesFormatDescription($format)
             ),
@@ -1896,9 +2152,15 @@ abstract class Assert
             $string,
             new StringMatchesFormatDescription(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 file_get_contents($formatFile),
             ),
             $message,
+=======
+                file_get_contents($formatFile)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 file_get_contents($formatFile)
             ),
@@ -1912,8 +2174,11 @@ abstract class Assert
      *
      * @throws ExpectationFailedException
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5472
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1926,15 +2191,21 @@ abstract class Assert
             new LogicalNot(
                 new StringMatchesFormatDescription(
 <<<<<<< HEAD
+<<<<<<< HEAD
                     file_get_contents($formatFile),
                 ),
             ),
             $message,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     file_get_contents($formatFile)
                 )
             ),
             $message
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -1966,9 +2237,15 @@ abstract class Assert
             $string,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new StringStartsWith($prefix),
             ),
             $message,
+=======
+                new StringStartsWith($prefix)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new StringStartsWith($prefix)
             ),
@@ -2044,9 +2321,15 @@ abstract class Assert
             $string,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new StringEndsWith($suffix),
             ),
             $message,
+=======
+                new StringEndsWith($suffix)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new StringEndsWith($suffix)
             ),
@@ -2178,9 +2461,15 @@ abstract class Assert
      * @throws ExpectationFailedException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     final public static function assertJson(string $actual, string $message = ''): void
     {
         static::assertThat($actual, static::isJson(), $message);
+=======
+    final public static function assertJson(string $actualJson, string $message = ''): void
+    {
+        static::assertThat($actualJson, static::isJson(), $message);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final public static function assertJson(string $actualJson, string $message = ''): void
     {
@@ -2215,9 +2504,15 @@ abstract class Assert
             $actualJson,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new JsonMatches($expectedJson),
             ),
             $message,
+=======
+                new JsonMatches($expectedJson)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new JsonMatches($expectedJson)
             ),
@@ -2259,9 +2554,15 @@ abstract class Assert
             $actualJson,
             new LogicalNot(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new JsonMatches($expectedJson),
             ),
             $message,
+=======
+                new JsonMatches($expectedJson)
+            ),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new JsonMatches($expectedJson)
             ),
@@ -2288,7 +2589,11 @@ abstract class Assert
 
         $constraintExpected = new JsonMatches(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $expectedJson,
+=======
+            $expectedJson
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $expectedJson
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2318,7 +2623,11 @@ abstract class Assert
 
         $constraintExpected = new JsonMatches(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $expectedJson,
+=======
+            $expectedJson
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $expectedJson
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2496,7 +2805,11 @@ abstract class Assert
         return static::logicalOr(
             new IsEqual($value),
 <<<<<<< HEAD
+<<<<<<< HEAD
             new GreaterThan($value),
+=======
+            new GreaterThan($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new GreaterThan($value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2509,9 +2822,12 @@ abstract class Assert
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @throws UnknownClassOrInterfaceException
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     final public static function isInstanceOf(string $className): IsInstanceOf
@@ -2521,8 +2837,11 @@ abstract class Assert
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param 'array'|'boolean'|'bool'|'double'|'float'|'integer'|'int'|'null'|'numeric'|'object'|'real'|'resource'|'resource (closed)'|'string'|'scalar'|'callable'|'iterable' $type
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws Exception
@@ -2542,7 +2861,11 @@ abstract class Assert
         return static::logicalOr(
             new IsEqual($value),
 <<<<<<< HEAD
+<<<<<<< HEAD
             new LessThan($value),
+=======
+            new LessThan($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             new LessThan($value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

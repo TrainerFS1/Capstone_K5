@@ -55,7 +55,11 @@ class ValidationData
         $keys = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $pattern = str_replace('\*', '[^\.]+', preg_quote($attribute, '/'));
+=======
+        $pattern = str_replace('\*', '[^\.]+', preg_quote($attribute));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $pattern = str_replace('\*', '[^\.]+', preg_quote($attribute));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

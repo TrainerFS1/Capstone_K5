@@ -29,7 +29,11 @@ class CollectionConfigurator
     private string|array|null $host = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(RouteCollection $parent, string $name, ?self $parentConfigurator = null, ?array $parentPrefixes = null)
+=======
+    public function __construct(RouteCollection $parent, string $name, self $parentConfigurator = null, array $parentPrefixes = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(RouteCollection $parent, string $name, self $parentConfigurator = null, array $parentPrefixes = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -48,9 +52,12 @@ class CollectionConfigurator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __wakeup()
@@ -126,9 +133,12 @@ class CollectionConfigurator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * This method overrides the one from LocalizedRouteTrait.
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function createRoute(string $path): Route

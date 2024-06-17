@@ -67,6 +67,7 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The callback that is responsible for handling missing translation keys.
      *
      * @var callable|null
@@ -81,6 +82,8 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
     protected $handleMissingTranslationKeys = true;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new translator instance.
@@ -119,6 +122,7 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
     public function has($key, $locale = null, $fallback = true)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $locale = $locale ?: $this->locale;
 
         $line = $this->get($key, [], $locale, $fallback);
@@ -131,6 +135,9 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
         }
 
         return $line !== $key;
+=======
+        return $this->get($key, [], $locale, $fallback) !== $key;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->get($key, [], $locale, $fallback) !== $key;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -168,9 +175,15 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
             $locales = $fallback ? $this->localeArray($locale) : [$locale];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             foreach ($locales as $languageLineLocale) {
                 if (! is_null($line = $this->getLine(
                     $namespace, $group, $languageLineLocale, $item, $replace
+=======
+            foreach ($locales as $locale) {
+                if (! is_null($line = $this->getLine(
+                    $namespace, $group, $locale, $item, $replace
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             foreach ($locales as $locale) {
                 if (! is_null($line = $this->getLine(
@@ -181,10 +194,13 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
                 }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             $key = $this->handleMissingTranslationKey(
                 $key, $replace, $locale, $fallback
             );
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -200,7 +216,11 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
      *
      * @param  string  $key
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Countable|int|float|array  $number
+=======
+     * @param  \Countable|int|array  $number
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Countable|int|array  $number
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -348,6 +368,7 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Handle a missing translation key.
      *
      * @param  string  $key
@@ -390,6 +411,8 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add a new namespace to the loader.

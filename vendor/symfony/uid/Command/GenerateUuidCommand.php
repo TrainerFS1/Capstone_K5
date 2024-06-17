@@ -29,7 +29,11 @@ class GenerateUuidCommand extends Command
     private UuidFactory $factory;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?UuidFactory $factory = null)
+=======
+    public function __construct(UuidFactory $factory = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(UuidFactory $factory = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -50,7 +54,11 @@ class GenerateUuidCommand extends Command
                 new InputOption('random-based', null, InputOption::VALUE_NONE, 'To generate a random-based UUID'),
                 new InputOption('count', 'c', InputOption::VALUE_REQUIRED, 'The number of UUID to generate', 1),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new InputOption('format', 'f', InputOption::VALUE_REQUIRED, sprintf('The UUID output format ("%s")', implode('", "', $this->getAvailableFormatOptions())), 'rfc4122'),
+=======
+                new InputOption('format', 'f', InputOption::VALUE_REQUIRED, 'The UUID output format: rfc4122, base58 or base32', 'rfc4122'),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new InputOption('format', 'f', InputOption::VALUE_REQUIRED, 'The UUID output format: rfc4122, base58 or base32', 'rfc4122'),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -141,7 +149,13 @@ EOF
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $create = fn (): Uuid => $this->factory->timeBased($node)->create(new \DateTimeImmutable($time));
+=======
+                $create = function () use ($node, $time): Uuid {
+                    return $this->factory->timeBased($node)->create(new \DateTimeImmutable($time));
+                };
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $create = function () use ($node, $time): Uuid {
                     return $this->factory->timeBased($node)->create(new \DateTimeImmutable($time));
@@ -186,7 +200,11 @@ EOF
             $format = 'to'.ucfirst($formatOption);
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $io->error(sprintf('Invalid format "%s", supported formats are "%s".', $formatOption, implode('", "', $this->getAvailableFormatOptions())));
+=======
+            $io->error(sprintf('Invalid format "%s", did you mean "base32", "base58" or "rfc4122"?', $formatOption));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $io->error(sprintf('Invalid format "%s", did you mean "base32", "base58" or "rfc4122"?', $formatOption));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

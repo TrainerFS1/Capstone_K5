@@ -63,7 +63,11 @@ final class BuildInformation
         $node = $this->contextNode->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $name,
+=======
+            $name
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $name
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -74,8 +78,13 @@ final class BuildInformation
                 $this->contextNode->ownerDocument->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $name,
                 ),
+=======
+                    $name
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $name
                 )

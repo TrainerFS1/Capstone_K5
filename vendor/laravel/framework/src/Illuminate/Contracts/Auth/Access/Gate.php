@@ -58,9 +58,15 @@ interface Gate
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if all of the given abilities should be granted for the current user.
      *
      * @param  iterable|string  $ability
+=======
+     * Determine if the given ability should be granted for the current user.
+     *
+     * @param  string  $ability
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Determine if the given ability should be granted for the current user.
      *
@@ -73,9 +79,15 @@ interface Gate
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if any of the given abilities should be denied for the current user.
      *
      * @param  iterable|string  $ability
+=======
+     * Determine if the given ability should be denied for the current user.
+     *
+     * @param  string  $ability
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Determine if the given ability should be denied for the current user.
      *

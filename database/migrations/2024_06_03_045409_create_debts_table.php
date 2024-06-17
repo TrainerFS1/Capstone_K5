@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('debt_type');
             $table->date('date');
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->decimal('amount', 15, 2);
+=======
+            $table->decimal('amount', 10, 2);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $table->decimal('amount', 10, 2);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

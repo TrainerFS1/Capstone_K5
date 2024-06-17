@@ -37,9 +37,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
@@ -48,9 +51,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function initialize(array &$attributes)
@@ -74,9 +80,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $name, mixed $value)
@@ -90,9 +99,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $attributes)

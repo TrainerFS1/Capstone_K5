@@ -18,9 +18,13 @@ trait InteractsWithSignals
      * Define a callback to be run when the given signal(s) occurs.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TSignals of iterable<array-key, int>|int
      *
      * @param  (\Closure():(TSignals))|TSignals  $signals
+=======
+     * @param  iterable<array-key, int>|int  $signals
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  iterable<array-key, int>|int  $signals
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -35,7 +39,11 @@ trait InteractsWithSignals
             );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             collect(Arr::wrap(value($signals)))
+=======
+            collect(Arr::wrap($signals))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             collect(Arr::wrap($signals))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

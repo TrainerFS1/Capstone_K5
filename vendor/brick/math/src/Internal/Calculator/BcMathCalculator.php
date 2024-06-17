@@ -16,6 +16,12 @@ use Brick\Math\Internal\Calculator;
 class BcMathCalculator extends Calculator
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -27,6 +33,12 @@ class BcMathCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -38,6 +50,12 @@ class BcMathCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -49,19 +67,26 @@ class BcMathCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * {@inheritdoc}
      *
      * @psalm-suppress InvalidNullableReturnType
      * @psalm-suppress NullableReturnStatement
      */
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function divQ(string $a, string $b) : string
     {
         return \bcdiv($a, $b, 0);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function divR(string $a, string $b) : string
     {
@@ -73,6 +98,8 @@ class BcMathCalculator extends Calculator
         $q = \bcdiv($a, $b, 0);
         $r = \bcmod($a, $b, 0);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * {@inheritdoc}
      *
@@ -103,12 +130,21 @@ class BcMathCalculator extends Calculator
 
         assert($q !== null);
         assert($r !== null);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return [$q, $r];
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -120,6 +156,12 @@ class BcMathCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -131,6 +173,12 @@ class BcMathCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritDoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritDoc}

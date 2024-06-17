@@ -49,6 +49,7 @@ class SortableIterator implements \IteratorAggregate
 
         if (self::SORT_BY_NAME === $sort) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->sort = static fn (\SplFileInfo $a, \SplFileInfo $b) => $order * strcmp($a->getRealPath() ?: $a->getPathname(), $b->getRealPath() ?: $b->getPathname());
         } elseif (self::SORT_BY_NAME_NATURAL === $sort) {
             $this->sort = static fn (\SplFileInfo $a, \SplFileInfo $b) => $order * strnatcmp($a->getRealPath() ?: $a->getPathname(), $b->getRealPath() ?: $b->getPathname());
@@ -57,6 +58,8 @@ class SortableIterator implements \IteratorAggregate
         } elseif (self::SORT_BY_NAME_NATURAL_CASE_INSENSITIVE === $sort) {
             $this->sort = static fn (\SplFileInfo $a, \SplFileInfo $b) => $order * strnatcasecmp($a->getRealPath() ?: $a->getPathname(), $b->getRealPath() ?: $b->getPathname());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->sort = static function (\SplFileInfo $a, \SplFileInfo $b) use ($order) {
                 return $order * strcmp($a->getRealPath() ?: $a->getPathname(), $b->getRealPath() ?: $b->getPathname());
             };
@@ -72,6 +75,9 @@ class SortableIterator implements \IteratorAggregate
             $this->sort = static function (\SplFileInfo $a, \SplFileInfo $b) use ($order) {
                 return $order * strnatcasecmp($a->getRealPath() ?: $a->getPathname(), $b->getRealPath() ?: $b->getPathname());
             };
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif (self::SORT_BY_TYPE === $sort) {
             $this->sort = static function (\SplFileInfo $a, \SplFileInfo $b) use ($order) {
@@ -84,6 +90,7 @@ class SortableIterator implements \IteratorAggregate
                 return $order * strcmp($a->getRealPath() ?: $a->getPathname(), $b->getRealPath() ?: $b->getPathname());
             };
         } elseif (self::SORT_BY_ACCESSED_TIME === $sort) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             $this->sort = static fn (\SplFileInfo $a, \SplFileInfo $b) => $order * ($a->getATime() - $b->getATime());
         } elseif (self::SORT_BY_CHANGED_TIME === $sort) {
@@ -99,6 +106,8 @@ class SortableIterator implements \IteratorAggregate
         } elseif (\is_callable($sort)) {
             $this->sort = $reverseOrder ? static fn (\SplFileInfo $a, \SplFileInfo $b) => -$sort($a, $b) : $sort(...);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->sort = static function (\SplFileInfo $a, \SplFileInfo $b) use ($order) {
                 return $order * ($a->getATime() - $b->getATime());
             };
@@ -122,6 +131,9 @@ class SortableIterator implements \IteratorAggregate
             $this->sort = $order;
         } elseif (\is_callable($sort)) {
             $this->sort = $reverseOrder ? static function (\SplFileInfo $a, \SplFileInfo $b) use ($sort) { return -$sort($a, $b); } : $sort(...);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             throw new \InvalidArgumentException('The SortableIterator takes a PHP callable or a valid built-in sort algorithm as an argument.');

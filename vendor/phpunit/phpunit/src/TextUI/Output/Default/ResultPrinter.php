@@ -11,6 +11,7 @@ namespace PHPUnit\TextUI\Output\Default;
 
 use const PHP_EOL;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_keys;
 use function array_merge;
 use function array_reverse;
@@ -20,11 +21,16 @@ use function count;
 use function explode;
 use function ksort;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function array_merge;
 use function array_reverse;
 use function assert;
 use function count;
 use function explode;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function range;
 use function sprintf;
@@ -47,7 +53,11 @@ use PHPUnit\Event\Test\PhpunitWarningTriggered;
 use PHPUnit\Event\Test\PhpWarningTriggered;
 use PHPUnit\Event\Test\WarningTriggered;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\TestRunner\TestResult\Issues\Issue;
+=======
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -61,12 +71,15 @@ final class ResultPrinter
 {
     private readonly Printer $printer;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly bool $displayPhpunitErrors;
     private readonly bool $displayPhpunitWarnings;
     private readonly bool $displayTestsWithErrors;
     private readonly bool $displayTestsWithFailedAssertions;
     private readonly bool $displayRiskyTests;
     private readonly bool $displayPhpunitDeprecations;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly bool $displayDetailsOnIncompleteTests;
@@ -79,6 +92,7 @@ final class ResultPrinter
     private bool $listPrinted = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Printer $printer, bool $displayPhpunitErrors, bool $displayPhpunitWarnings, bool $displayPhpunitDeprecations, bool $displayTestsWithErrors, bool $displayTestsWithFailedAssertions, bool $displayRiskyTests, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $displayDefectsInReverseOrder)
     {
         $this->printer                                      = $printer;
@@ -88,6 +102,11 @@ final class ResultPrinter
         $this->displayTestsWithErrors                       = $displayTestsWithErrors;
         $this->displayTestsWithFailedAssertions             = $displayTestsWithFailedAssertions;
         $this->displayRiskyTests                            = $displayRiskyTests;
+=======
+    public function __construct(Printer $printer, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $displayDefectsInReverseOrder)
+    {
+        $this->printer                                      = $printer;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Printer $printer, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $displayDefectsInReverseOrder)
     {
@@ -104,6 +123,7 @@ final class ResultPrinter
 
     public function print(TestResult $result): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($this->displayPhpunitErrors) {
             $this->printPhpunitErrors($result);
@@ -137,12 +157,17 @@ final class ResultPrinter
             $this->printRiskyTests($result);
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printPhpunitErrors($result);
         $this->printPhpunitWarnings($result);
         $this->printTestsWithErrors($result);
         $this->printTestsWithFailedAssertions($result);
         $this->printRiskyTests($result);
         $this->printDetailsOnTestsThatTriggeredPhpunitDeprecations($result);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($this->displayDetailsOnIncompleteTests) {
@@ -154,6 +179,7 @@ final class ResultPrinter
             $this->printSkippedTests($result);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($this->displayDetailsOnTestsThatTriggerErrors) {
             $this->printIssueList('error', $result->errors());
@@ -173,6 +199,8 @@ final class ResultPrinter
             $this->printIssueList('PHP deprecation', $result->phpDeprecations());
             $this->printIssueList('deprecation', $result->deprecations());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->displayDetailsOnTestsThatTriggerDeprecations) {
             $this->printDetailsOnTestsThatTriggerPhpDeprecations($result);
             $this->printDetailsOnTestsThatTriggerDeprecations($result);
@@ -190,6 +218,9 @@ final class ResultPrinter
         if ($this->displayDetailsOnTestsThatTriggerWarnings) {
             $this->printDetailsOnTestsThatTriggerPhpWarnings($result);
             $this->printDetailsOnTestsThatTriggerWarnings($result);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
@@ -205,6 +236,7 @@ final class ResultPrinter
             return;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $elements = $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpunitErrorEvents());
 
@@ -233,6 +265,8 @@ final class ResultPrinter
     {
         if (!$result->hasTestRunnerTriggeredWarningEvents()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printList(
             $result->numberOfTestsWithTestTriggeredPhpunitErrorEvents(),
             $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpunitErrorEvents()),
@@ -244,6 +278,9 @@ final class ResultPrinter
     {
         if (!$result->hasTestRunnerTriggeredWarningEvents() &&
             !$result->hasTestTriggeredPhpunitWarningEvents()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
@@ -257,6 +294,7 @@ final class ResultPrinter
             ];
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->printListHeaderWithNumber(count($elements), 'PHPUnit test runner warning');
         $this->printList($elements);
@@ -297,6 +335,8 @@ final class ResultPrinter
 
         $this->printList($elements['elements']);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $elements = array_merge(
             $elements,
             $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpunitWarningEvents())
@@ -320,6 +360,9 @@ final class ResultPrinter
             $this->mapTestsWithIssuesEventsToElements($result->testTriggeredPhpunitDeprecationEvents()),
             'PHPUnit deprecation'
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -345,8 +388,12 @@ final class ResultPrinter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->printListHeaderWithNumber(count($elements), 'error');
         $this->printList($elements);
+=======
+        $this->printList(count($elements), $elements, 'error');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->printList(count($elements), $elements, 'error');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -374,8 +421,12 @@ final class ResultPrinter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->printListHeaderWithNumber(count($elements), 'failure');
         $this->printList($elements);
+=======
+        $this->printList(count($elements), $elements, 'failure');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->printList(count($elements), $elements, 'failure');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -388,16 +439,22 @@ final class ResultPrinter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $elements = $this->mapTestsWithIssuesEventsToElements($result->testConsideredRiskyEvents());
 
         $this->printListHeaderWithNumber($elements['numberOfTestsWithIssues'], 'risky test');
         $this->printList($elements['elements']);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printList(
             $result->numberOfTestsWithTestConsideredRiskyEvents(),
             $this->mapTestsWithIssuesEventsToElements($result->testConsideredRiskyEvents()),
             'risky test'
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -417,8 +474,12 @@ final class ResultPrinter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->printListHeaderWithNumber(count($elements), 'incomplete test');
         $this->printList($elements);
+=======
+        $this->printList(count($elements), $elements, 'incomplete test');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->printList(count($elements), $elements, 'incomplete test');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -440,8 +501,12 @@ final class ResultPrinter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->printListHeaderWithNumber(count($elements), 'skipped test suite');
         $this->printList($elements);
+=======
+        $this->printList(count($elements), $elements, 'skipped test suite');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->printList(count($elements), $elements, 'skipped test suite');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -462,6 +527,7 @@ final class ResultPrinter
             ];
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->printListHeaderWithNumber(count($elements), 'skipped test');
         $this->printList($elements);
@@ -563,6 +629,8 @@ final class ResultPrinter
 
     private function printListHeader(string $header): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printList(count($elements), $elements, 'skipped test');
     }
 
@@ -661,6 +729,9 @@ final class ResultPrinter
      * @psalm-param list<array{title: string, body: string}> $elements
      */
     private function printList(int $count, array $elements, string $type): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->listPrinted) {
@@ -669,6 +740,7 @@ final class ResultPrinter
 
         $this->listPrinted = true;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->printer->print($header);
     }
@@ -679,6 +751,8 @@ final class ResultPrinter
     private function printList(array $elements): void
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->printer->print(
             sprintf(
                 "There %s %d %s%s:\n\n",
@@ -689,6 +763,9 @@ final class ResultPrinter
             )
         );
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $i = 1;
 
@@ -715,6 +792,7 @@ final class ResultPrinter
                 $title,
                 $body,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 !empty($body) ? "\n" : '',
             ),
         );
@@ -736,6 +814,8 @@ final class ResultPrinter
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 !empty($body) ? "\n" : ''
             )
         );
@@ -744,12 +824,16 @@ final class ResultPrinter
     /**
      * @throws NoDataSetFromDataProviderException
      */
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function name(Test $test): string
     {
         if ($test->isTestMethod()) {
             assert($test instanceof TestMethod);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (!$test->testData()->hasDataFromDataProvider()) {
                 return $test->nameWithClass();
@@ -759,17 +843,23 @@ final class ResultPrinter
 =======
             return $test->nameWithClass();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            return $test->nameWithClass();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $test->name();
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-param array<string,list<ConsideredRisky|DeprecationTriggered|PhpDeprecationTriggered|PhpunitDeprecationTriggered|ErrorTriggered|NoticeTriggered|PhpNoticeTriggered|WarningTriggered|PhpWarningTriggered|PhpunitErrorTriggered|PhpunitWarningTriggered>> $events
      *
      * @psalm-return array{numberOfTestsWithIssues: int, numberOfIssues: int, elements: list<array{title: string, body: string}>}
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function location(Test $test): string
     {
         if (!$test->isTestMethod()) {
@@ -790,11 +880,15 @@ final class ResultPrinter
      * @psalm-param array<string,list<ConsideredRisky|DeprecationTriggered|PhpDeprecationTriggered|PhpunitDeprecationTriggered|ErrorTriggered|NoticeTriggered|PhpNoticeTriggered|WarningTriggered|PhpWarningTriggered|PhpunitErrorTriggered|PhpunitWarningTriggered>> $events
      *
      * @psalm-return list<array{title: string, body: string}>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function mapTestsWithIssuesEventsToElements(array $events): array
     {
         $elements = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
         $issues   = 0;
 
@@ -822,6 +916,8 @@ final class ResultPrinter
             if (!empty($testLocation)) {
                 $body .= $testLocation;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($events as $reasons) {
             $test     = $reasons[0]->test();
@@ -855,6 +951,9 @@ final class ResultPrinter
 
             if (!empty($location)) {
                 $body .= $location;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
@@ -864,6 +963,7 @@ final class ResultPrinter
             ];
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return [
             'numberOfTestsWithIssues' => count($events),
@@ -928,6 +1028,9 @@ final class ResultPrinter
             $reason->line(),
             PHP_EOL,
         );
+=======
+        return $elements;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $elements;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -5,7 +5,11 @@ namespace Illuminate\Mail\Transport;
 use Aws\Exception\AwsException;
 use Aws\SesV2\SesV2Client;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Mailer\Exception\TransportException;
+=======
+use Exception;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Exception;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +60,11 @@ class SesV2Transport extends AbstractTransport
             foreach ($message->getOriginalMessage()->getHeaders()->all() as $header) {
                 if ($header instanceof MetadataHeader) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $options['EmailTags'][] = ['Name' => $header->getKey(), 'Value' => $header->getValue()];
+=======
+                    $options['Tags'][] = ['Name' => $header->getKey(), 'Value' => $header->getValue()];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $options['Tags'][] = ['Name' => $header->getKey(), 'Value' => $header->getValue()];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +77,11 @@ class SesV2Transport extends AbstractTransport
                 array_merge(
                     $options, [
 <<<<<<< HEAD
+<<<<<<< HEAD
                         'Source' => $message->getEnvelope()->getSender()->toString(),
+=======
+                        'ReplyToAddresses' => [$message->getEnvelope()->getSender()->toString()],
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         'ReplyToAddresses' => [$message->getEnvelope()->getSender()->toString()],
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -92,7 +104,11 @@ class SesV2Transport extends AbstractTransport
             $reason = $e->getAwsErrorMessage() ?? $e->getMessage();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new TransportException(
+=======
+            throw new Exception(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new Exception(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

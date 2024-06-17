@@ -37,22 +37,32 @@ class InputArgument
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string                                                                        $name            The argument name
      * @param int|null                                                                      $mode            The argument mode: a bit mask of self::REQUIRED, self::OPTIONAL and self::IS_ARRAY
      * @param string                                                                        $description     A description text
      * @param string|bool|int|float|array|null                                              $default         The default value (for self::OPTIONAL mode only)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string                           $name        The argument name
      * @param int|null                         $mode        The argument mode: self::REQUIRED or self::OPTIONAL
      * @param string                           $description A description text
      * @param string|bool|int|float|array|null $default     The default value (for self::OPTIONAL mode only)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      *
      * @throws InvalidArgumentException When argument mode is not valid
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $name, ?int $mode = null, string $description = '', string|bool|int|float|array|null $default = null, \Closure|array $suggestedValues = [])
+=======
+    public function __construct(string $name, int $mode = null, string $description = '', string|bool|int|float|array $default = null, \Closure|array $suggestedValues = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name, int $mode = null, string $description = '', string|bool|int|float|array $default = null, \Closure|array $suggestedValues = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,11 +113,17 @@ class InputArgument
      * Sets the default value.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
      * @throws LogicException When incorrect default value is given
      */
     public function setDefault(string|bool|int|float|array|null $default = null)
+=======
+     * @throws LogicException When incorrect default value is given
+     */
+    public function setDefault(string|bool|int|float|array $default = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws LogicException When incorrect default value is given
      */

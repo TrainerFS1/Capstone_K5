@@ -58,7 +58,11 @@ class MessageIDParser extends Parser
         $localPartResult = $localPartParser->parse();
         $this->idLeft = $localPartParser->localPart();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->warnings = [...$localPartParser->getWarnings(), ...$this->warnings];
+=======
+        $this->warnings = array_merge($localPartParser->getWarnings(), $this->warnings);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->warnings = array_merge($localPartParser->getWarnings(), $this->warnings);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -72,7 +76,11 @@ class MessageIDParser extends Parser
         $domainPartResult = $domainPartParser->parse();
         $this->idRight = $domainPartParser->domainPart();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->warnings = [...$domainPartParser->getWarnings(), ...$this->warnings];
+=======
+        $this->warnings = array_merge($domainPartParser->getWarnings(), $this->warnings);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->warnings = array_merge($domainPartParser->getWarnings(), $this->warnings);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

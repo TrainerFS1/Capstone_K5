@@ -12,13 +12,19 @@ namespace SebastianBergmann\Diff;
 final class Line
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const ADDED     = 1;
     public const REMOVED   = 2;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const ADDED = 1;
 
     public const REMOVED = 2;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const UNCHANGED = 3;
     private int $type;
@@ -30,6 +36,7 @@ final class Line
         $this->content = $content;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function content(): string
     {
@@ -61,15 +68,20 @@ final class Line
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getContent(): string
     {
         return $this->content;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getType(): int

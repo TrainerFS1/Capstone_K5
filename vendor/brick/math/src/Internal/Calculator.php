@@ -26,7 +26,11 @@ abstract class Calculator
      * The maximum exponent value allowed for the pow() method.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const MAX_POWER = 1_000_000;
+=======
+    public const MAX_POWER = 1000000;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public const MAX_POWER = 1000000;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -48,6 +52,11 @@ abstract class Calculator
      *
      * @param Calculator|null $calculator The calculator instance, or NULL to revert to autodetect.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return void
@@ -64,6 +73,11 @@ abstract class Calculator
      * If none has been explicitly set, the fastest available implementation will be returned.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return Calculator
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return Calculator
      *
@@ -86,6 +100,11 @@ abstract class Calculator
      *
      * @codeCoverageIgnore
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return Calculator
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return Calculator
@@ -108,6 +127,12 @@ abstract class Calculator
      * Extracts the sign & digits of the operands.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param string $a The first operand.
+     * @param string $b The second operand.
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $a The first operand.
      * @param string $b The second operand.
@@ -129,11 +154,17 @@ abstract class Calculator
     /**
      * Returns the absolute value of a number.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $n The number.
      *
      * @return string The absolute value.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     final public function abs(string $n) : string
@@ -144,11 +175,17 @@ abstract class Calculator
     /**
      * Negates a number.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $n The number.
      *
      * @return string The negated value.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     final public function neg(string $n) : string
@@ -168,14 +205,20 @@ abstract class Calculator
      * Compares two numbers.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return -1|0|1
      *
      * @return int -1 if the first number is less than, 0 if equal to, 1 if greater than the second number.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $a The first number.
      * @param string $b The second number.
      *
      * @return int [-1, 0, 1] If the first number is less than, equal to, or greater than the second number.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     final public function cmp(string $a, string $b) : int
@@ -207,12 +250,18 @@ abstract class Calculator
     /**
      * Adds two numbers.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a The augend.
      * @param string $b The addend.
      *
      * @return string The sum.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract public function add(string $a, string $b) : string;
@@ -220,12 +269,18 @@ abstract class Calculator
     /**
      * Subtracts two numbers.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a The minuend.
      * @param string $b The subtrahend.
      *
      * @return string The difference.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract public function sub(string $a, string $b) : string;
@@ -233,12 +288,18 @@ abstract class Calculator
     /**
      * Multiplies two numbers.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a The multiplicand.
      * @param string $b The multiplier.
      *
      * @return string The product.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract public function mul(string $a, string $b) : string;
@@ -285,12 +346,18 @@ abstract class Calculator
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $b The modulus; must not be zero.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $a
      * @param string $b The modulus; must not be zero.
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function mod(string $a, string $b) : string
@@ -306,12 +373,18 @@ abstract class Calculator
      * This method can be overridden by the concrete implementation if the underlying library has built-in support.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $m The modulus; must not be negative or zero.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $x
      * @param string $m The modulus; must not be negative or zero.
      *
      * @return string|null
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function modInverse(string $x, string $m) : ?string
@@ -342,6 +415,11 @@ abstract class Calculator
      * @param string $exp  The exponent; must be positive or zero.
      * @param string $mod  The modulus; must be strictly positive.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return string The power.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return string The power.
@@ -356,6 +434,12 @@ abstract class Calculator
      * has built-in support for GCD calculations.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param string $a The first number.
+     * @param string $b The second number.
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $a The first number.
      * @param string $b The second number.
@@ -399,11 +483,17 @@ abstract class Calculator
      * The result is the largest x such that x² ≤ n.
      * The input MUST NOT be negative.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $n The number.
      *
      * @return string The square root.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract public function sqrt(string $n) : string;
@@ -533,15 +623,21 @@ abstract class Calculator
      * Rounding is performed when the remainder of the division is not zero.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string       $a            The dividend.
      * @param string       $b            The divisor, must not be zero.
      * @param RoundingMode $roundingMode The rounding mode.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $a            The dividend.
      * @param string $b            The divisor, must not be zero.
      * @param int    $roundingMode The rounding mode.
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws \InvalidArgumentException  If the rounding mode is invalid.
@@ -550,7 +646,11 @@ abstract class Calculator
      * @psalm-suppress ImpureFunctionCall
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     final public function divRound(string $a, string $b, RoundingMode $roundingMode) : string
+=======
+    final public function divRound(string $a, string $b, int $roundingMode) : string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final public function divRound(string $a, string $b, int $roundingMode) : string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -630,12 +730,18 @@ abstract class Calculator
      * This method can be overridden by the concrete implementation if the underlying library
      * has built-in support for bitwise operations.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a
      * @param string $b
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function and(string $a, string $b) : string
@@ -649,12 +755,18 @@ abstract class Calculator
      * This method can be overridden by the concrete implementation if the underlying library
      * has built-in support for bitwise operations.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a
      * @param string $b
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function or(string $a, string $b) : string
@@ -668,12 +780,18 @@ abstract class Calculator
      * This method can be overridden by the concrete implementation if the underlying library
      * has built-in support for bitwise operations.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a
      * @param string $b
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function xor(string $a, string $b) : string
@@ -688,6 +806,11 @@ abstract class Calculator
      * @param string           $a        The left operand.
      * @param string           $b        The right operand.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return string
@@ -717,6 +840,7 @@ abstract class Calculator
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $value = match ($operator) {
             'and' => $aBin & $bBin,
             'or' => $aBin | $bBin,
@@ -729,6 +853,8 @@ abstract class Calculator
             'xor' => $aNeg xor $bNeg,
         };
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         switch ($operator) {
             case 'and':
                 $value = $aBin & $bBin;
@@ -750,6 +876,9 @@ abstract class Calculator
                 throw new \InvalidArgumentException('Invalid bitwise operator.');
             // @codeCoverageIgnoreEnd
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($negative) {
@@ -764,6 +893,11 @@ abstract class Calculator
     /**
      * @param string $number A positive, binary number.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return string
@@ -798,6 +932,11 @@ abstract class Calculator
      *
      * @param string $number The number to convert, positive or zero, only digits.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return string
@@ -820,6 +959,11 @@ abstract class Calculator
      *
      * @param string $bytes The bytes representing the number.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return string

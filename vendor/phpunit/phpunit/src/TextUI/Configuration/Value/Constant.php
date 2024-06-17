@@ -31,7 +31,11 @@ final class Constant
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function value(): bool|string
+=======
+    public function value(): mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function value(): mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

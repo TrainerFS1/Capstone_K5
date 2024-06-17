@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![Monolog](logo.jpg)
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 # Monolog - Logging for PHP [![Continuous Integration](https://github.com/Seldaek/monolog/workflows/Continuous%20Integration/badge.svg?branch=main)](https://github.com/Seldaek/monolog/actions)
@@ -9,8 +12,13 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/monolog/monolog.svg)](https://packagist.org/packages/monolog/monolog)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >**Note** This is the **documentation for Monolog 3.x**, if you are using older releases
 >see the documentation for [Monolog 2.x](https://github.com/Seldaek/monolog/blob/2.x/README.md) or [Monolog 1.x](https://github.com/Seldaek/monolog/blob/1.x/README.md)
+=======
+> ⚠ This is the **documentation for Monolog 3.x**, if you are using older releases
+> see the documentation for [Monolog 2.x](https://github.com/Seldaek/monolog/blob/2.x/README.md) or [Monolog 1.x](https://github.com/Seldaek/monolog/blob/1.x/README.md) ⚠
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 > ⚠ This is the **documentation for Monolog 3.x**, if you are using older releases
 > see the documentation for [Monolog 2.x](https://github.com/Seldaek/monolog/blob/2.x/README.md) or [Monolog 1.x](https://github.com/Seldaek/monolog/blob/1.x/README.md) ⚠
@@ -27,6 +35,7 @@ make sure you can always use another compatible logger at a later time.
 As of 1.11.0 Monolog public APIs will also accept PSR-3 log levels.
 Internally Monolog still uses its own level scheme since it predates PSR-3.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div align="center">
   <hr>
@@ -46,13 +55,19 @@ Internally Monolog still uses its own level scheme since it predates PSR-3.
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## Installation
 
 Install the latest version with
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 composer require monolog/monolog
+=======
+$ composer require monolog/monolog
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 $ composer require monolog/monolog
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

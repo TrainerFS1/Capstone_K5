@@ -21,10 +21,13 @@ class UnsupportedSchemeException extends LogicException
 {
     private const SCHEME_TO_PACKAGE_MAP = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'brevo' => [
             'class' => Bridge\Brevo\Transport\BrevoTransportFactory::class,
             'package' => 'symfony/brevo-mailer',
         ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'gmail' => [
@@ -36,10 +39,13 @@ class UnsupportedSchemeException extends LogicException
             'package' => 'symfony/infobip-mailer',
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
         'mailersend' => [
             'class' => Bridge\MailerSend\Transport\MailerSendTransportFactory::class,
             'package' => 'symfony/mailersend-mailer',
         ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'mailgun' => [
@@ -51,10 +57,13 @@ class UnsupportedSchemeException extends LogicException
             'package' => 'symfony/mailjet-mailer',
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
         'mailpace' => [
             'class' => Bridge\MailPace\Transport\MailPaceTransportFactory::class,
             'package' => 'symfony/mail-pace-mailer',
         ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'mandrill' => [
@@ -70,10 +79,13 @@ class UnsupportedSchemeException extends LogicException
             'package' => 'symfony/postmark-mailer',
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
         'scaleway' => [
             'class' => Bridge\Scaleway\Transport\ScalewayTransportFactory::class,
             'package' => 'symfony/scaleway-mailer',
         ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'sendgrid' => [
@@ -91,7 +103,11 @@ class UnsupportedSchemeException extends LogicException
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Dsn $dsn, ?string $name = null, array $supported = [])
+=======
+    public function __construct(Dsn $dsn, string $name = null, array $supported = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Dsn $dsn, string $name = null, array $supported = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +119,11 @@ class UnsupportedSchemeException extends LogicException
         $package = self::SCHEME_TO_PACKAGE_MAP[$provider] ?? null;
         if ($package && !class_exists($package['class'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             parent::__construct(sprintf('Unable to send emails via "%s" as the bridge is not installed. Try running "composer require %s".', $provider, $package['package']));
+=======
+            parent::__construct(sprintf('Unable to send emails via "%s" as the bridge is not installed; try running "composer require %s".', $provider, $package['package']));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             parent::__construct(sprintf('Unable to send emails via "%s" as the bridge is not installed; try running "composer require %s".', $provider, $package['package']));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

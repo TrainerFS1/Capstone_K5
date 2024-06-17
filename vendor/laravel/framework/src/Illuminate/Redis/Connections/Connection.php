@@ -119,9 +119,13 @@ abstract class Connection
 
         if (isset($this->events)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->event(new CommandExecuted(
                 $method, $this->parseParametersForEvent($parameters), $time, $this
             ));
+=======
+            $this->event(new CommandExecuted($method, $parameters, $time, $this));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->event(new CommandExecuted($method, $parameters, $time, $this));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,6 +135,7 @@ abstract class Connection
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Parse the command's parameters for event dispatching.
      *
@@ -143,6 +148,8 @@ abstract class Connection
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Fire the given event if possible.

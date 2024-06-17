@@ -45,7 +45,11 @@ class RetryMiddleware
         $this->decider = $decider;
         $this->nextHandler = $nextHandler;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->delay = $delay ?: __CLASS__.'::exponentialDelay';
+=======
+        $this->delay = $delay ?: __CLASS__ . '::exponentialDelay';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->delay = $delay ?: __CLASS__ . '::exponentialDelay';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -59,7 +63,11 @@ class RetryMiddleware
     public static function exponentialDelay(int $retries): int
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (int) 2 ** ($retries - 1) * 1000;
+=======
+        return (int) \pow(2, $retries - 1) * 1000;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return (int) \pow(2, $retries - 1) * 1000;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -73,7 +81,10 @@ class RetryMiddleware
 
         $fn = $this->nextHandler;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $fn($request, $options)
@@ -98,7 +109,10 @@ class RetryMiddleware
                 return $value;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->doRetry($request, $options, $value);
@@ -120,7 +134,10 @@ class RetryMiddleware
                 return P\Create::rejectionFor($reason);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->doRetry($req, $options);

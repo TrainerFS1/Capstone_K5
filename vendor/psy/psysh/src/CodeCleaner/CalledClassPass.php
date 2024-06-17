@@ -67,7 +67,11 @@ class CalledClassPass extends CodeCleanerPass
             if (\in_array($name, ['get_class', 'get_called_class'])) {
                 $msg = \sprintf('%s() called without object from outside a class', $name);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new ErrorException($msg, 0, \E_USER_WARNING, null, $node->getStartLine());
+=======
+                throw new ErrorException($msg, 0, \E_USER_WARNING, null, $node->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new ErrorException($msg, 0, \E_USER_WARNING, null, $node->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

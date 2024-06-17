@@ -76,10 +76,15 @@ return array(
     'BaconQrCode\\Renderer\\Eye\\EyeInterface' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/EyeInterface.php',
     'BaconQrCode\\Renderer\\Eye\\ModuleEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/ModuleEye.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'BaconQrCode\\Renderer\\Eye\\PointyEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/PointyEye.php',
     'BaconQrCode\\Renderer\\Eye\\SimpleCircleEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/SimpleCircleEye.php',
     'BaconQrCode\\Renderer\\Eye\\SquareEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/SquareEye.php',
     'BaconQrCode\\Renderer\\GDLibRenderer' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/GDLibRenderer.php',
+=======
+    'BaconQrCode\\Renderer\\Eye\\SimpleCircleEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/SimpleCircleEye.php',
+    'BaconQrCode\\Renderer\\Eye\\SquareEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/SquareEye.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'BaconQrCode\\Renderer\\Eye\\SimpleCircleEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/SimpleCircleEye.php',
     'BaconQrCode\\Renderer\\Eye\\SquareEye' => $vendorDir . '/bacon/bacon-qr-code/src/Renderer/Eye/SquareEye.php',
@@ -140,6 +145,7 @@ return array(
     'Carbon\\CarbonTimeZone' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonTimeZone.php',
     'Carbon\\Cli\\Invoker' => $vendorDir . '/nesbot/carbon/src/Carbon/Cli/Invoker.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Carbon\\Doctrine\\CarbonDoctrineType' => $vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonDoctrineType.php',
     'Carbon\\Doctrine\\CarbonImmutableType' => $vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonImmutableType.php',
     'Carbon\\Doctrine\\CarbonType' => $vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonType.php',
@@ -148,6 +154,8 @@ return array(
     'Carbon\\Doctrine\\DateTimeImmutableType' => $vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/DateTimeImmutableType.php',
     'Carbon\\Doctrine\\DateTimeType' => $vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/DateTimeType.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Carbon\\Doctrine\\CarbonDoctrineType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/CarbonDoctrineType.php',
     'Carbon\\Doctrine\\CarbonImmutableType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/CarbonImmutableType.php',
     'Carbon\\Doctrine\\CarbonType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/CarbonType.php',
@@ -155,6 +163,9 @@ return array(
     'Carbon\\Doctrine\\DateTimeDefaultPrecision' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/DateTimeDefaultPrecision.php',
     'Carbon\\Doctrine\\DateTimeImmutableType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/DateTimeImmutableType.php',
     'Carbon\\Doctrine\\DateTimeType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/DateTimeType.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Carbon\\Exceptions\\BadComparisonUnitException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/BadComparisonUnitException.php',
     'Carbon\\Exceptions\\BadFluentConstructorException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/BadFluentConstructorException.php',
@@ -246,6 +257,7 @@ return array(
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'DateError' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
     'DateException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
     'DateInvalidOperationException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
@@ -259,6 +271,11 @@ return array(
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
     'DeepCopy\\Filter\\ChainableFilter' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Filter/ChainableFilter.php',
+=======
+    'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
+    'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
+    'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
@@ -925,7 +942,10 @@ return array(
     'Faker\\Provider\\nl_NL\\Text' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_NL/Text.php',
     'Faker\\Provider\\pl_PL\\Address' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Address.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Faker\\Provider\\pl_PL\\Color' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Color.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Faker\\Provider\\pl_PL\\Company' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/pl_PL/Company.php',
@@ -1310,10 +1330,15 @@ return array(
     'Illuminate\\Bus\\Batchable' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/Batchable.php',
     'Illuminate\\Bus\\BusServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/BusServiceProvider.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Bus\\ChainedBatch' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/ChainedBatch.php',
     'Illuminate\\Bus\\DatabaseBatchRepository' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/DatabaseBatchRepository.php',
     'Illuminate\\Bus\\Dispatcher' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/Dispatcher.php',
     'Illuminate\\Bus\\DynamoBatchRepository' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/DynamoBatchRepository.php',
+=======
+    'Illuminate\\Bus\\DatabaseBatchRepository' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/DatabaseBatchRepository.php',
+    'Illuminate\\Bus\\Dispatcher' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/Dispatcher.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Illuminate\\Bus\\DatabaseBatchRepository' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/DatabaseBatchRepository.php',
     'Illuminate\\Bus\\Dispatcher' => $vendorDir . '/laravel/framework/src/Illuminate/Bus/Dispatcher.php',
@@ -1376,7 +1401,10 @@ return array(
     'Illuminate\\Console\\CommandMutex' => $vendorDir . '/laravel/framework/src/Illuminate/Console/CommandMutex.php',
     'Illuminate\\Console\\Concerns\\CallsCommands' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Console\\Concerns\\ConfiguresPrompts' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Concerns/ConfiguresPrompts.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Console\\Concerns\\CreatesMatchingTest' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Concerns/CreatesMatchingTest.php',
@@ -1397,10 +1425,15 @@ return array(
     'Illuminate\\Console\\Events\\ScheduledTaskStarting' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Events/ScheduledTaskStarting.php',
     'Illuminate\\Console\\GeneratorCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Console/GeneratorCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Console\\MigrationGeneratorCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Console/MigrationGeneratorCommand.php',
     'Illuminate\\Console\\OutputStyle' => $vendorDir . '/laravel/framework/src/Illuminate/Console/OutputStyle.php',
     'Illuminate\\Console\\Parser' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Parser.php',
     'Illuminate\\Console\\PromptValidationException' => $vendorDir . '/laravel/framework/src/Illuminate/Console/PromptValidationException.php',
+=======
+    'Illuminate\\Console\\OutputStyle' => $vendorDir . '/laravel/framework/src/Illuminate/Console/OutputStyle.php',
+    'Illuminate\\Console\\Parser' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Parser.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Illuminate\\Console\\OutputStyle' => $vendorDir . '/laravel/framework/src/Illuminate/Console/OutputStyle.php',
     'Illuminate\\Console\\Parser' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Parser.php',
@@ -1418,7 +1451,10 @@ return array(
     'Illuminate\\Console\\Scheduling\\ScheduleClearCacheCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleClearCacheCommand.php',
     'Illuminate\\Console\\Scheduling\\ScheduleFinishCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleFinishCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Console\\Scheduling\\ScheduleInterruptCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleInterruptCommand.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Console\\Scheduling\\ScheduleListCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleListCommand.php',
@@ -1443,7 +1479,10 @@ return array(
     'Illuminate\\Console\\View\\Components\\Mutators\\EnsurePunctuation' => $vendorDir . '/laravel/framework/src/Illuminate/Console/View/Components/Mutators/EnsurePunctuation.php',
     'Illuminate\\Console\\View\\Components\\Mutators\\EnsureRelativePaths' => $vendorDir . '/laravel/framework/src/Illuminate/Console/View/Components/Mutators/EnsureRelativePaths.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Console\\View\\Components\\Secret' => $vendorDir . '/laravel/framework/src/Illuminate/Console/View/Components/Secret.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Console\\View\\Components\\Task' => $vendorDir . '/laravel/framework/src/Illuminate/Console/View/Components/Task.php',
@@ -1504,7 +1543,10 @@ return array(
     'Illuminate\\Contracts\\Database\\ModelIdentifier' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Database/ModelIdentifier.php',
     'Illuminate\\Contracts\\Database\\Query\\Builder' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Database/Query/Builder.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Contracts\\Database\\Query\\ConditionExpression' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Database/Query/ConditionExpression.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Contracts\\Database\\Query\\Expression' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Database/Query/Expression.php',
@@ -1515,8 +1557,11 @@ return array(
     'Illuminate\\Contracts\\Encryption\\StringEncrypter' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Encryption/StringEncrypter.php',
     'Illuminate\\Contracts\\Events\\Dispatcher' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Events/Dispatcher.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Contracts\\Events\\ShouldDispatchAfterCommit' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Events/ShouldDispatchAfterCommit.php',
     'Illuminate\\Contracts\\Events\\ShouldHandleEventsAfterCommit' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Events/ShouldHandleEventsAfterCommit.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Contracts\\Filesystem\\Cloud' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Filesystem/Cloud.php',
@@ -1559,7 +1604,10 @@ return array(
     'Illuminate\\Contracts\\Queue\\ShouldBeUniqueUntilProcessing' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldBeUniqueUntilProcessing.php',
     'Illuminate\\Contracts\\Queue\\ShouldQueue' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueue.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Contracts\\Queue\\ShouldQueueAfterCommit' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueueAfterCommit.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Contracts\\Redis\\Connection' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Redis/Connection.php',
@@ -1657,11 +1705,16 @@ return array(
     'Illuminate\\Database\\DetectsConcurrencyErrors' => $vendorDir . '/laravel/framework/src/Illuminate/Database/DetectsConcurrencyErrors.php',
     'Illuminate\\Database\\DetectsLostConnections' => $vendorDir . '/laravel/framework/src/Illuminate/Database/DetectsLostConnections.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Database\\Eloquent\\Attributes\\ObservedBy' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Attributes/ObservedBy.php',
     'Illuminate\\Database\\Eloquent\\Attributes\\ScopedBy' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Attributes/ScopedBy.php',
     'Illuminate\\Database\\Eloquent\\BroadcastableModelEventOccurred' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastableModelEventOccurred.php',
     'Illuminate\\Database\\Eloquent\\BroadcastsEvents' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastsEvents.php',
     'Illuminate\\Database\\Eloquent\\BroadcastsEventsAfterCommit' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastsEventsAfterCommit.php',
+=======
+    'Illuminate\\Database\\Eloquent\\BroadcastableModelEventOccurred' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastableModelEventOccurred.php',
+    'Illuminate\\Database\\Eloquent\\BroadcastsEvents' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastsEvents.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Illuminate\\Database\\Eloquent\\BroadcastableModelEventOccurred' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastableModelEventOccurred.php',
     'Illuminate\\Database\\Eloquent\\BroadcastsEvents' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/BroadcastsEvents.php',
@@ -1677,7 +1730,10 @@ return array(
     'Illuminate\\Database\\Eloquent\\Casts\\AsStringable' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsStringable.php',
     'Illuminate\\Database\\Eloquent\\Casts\\Attribute' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/Attribute.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Database\\Eloquent\\Casts\\Json' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/Json.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Database\\Eloquent\\Collection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php',
@@ -1689,7 +1745,10 @@ return array(
     'Illuminate\\Database\\Eloquent\\Concerns\\HasTimestamps' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasTimestamps.php',
     'Illuminate\\Database\\Eloquent\\Concerns\\HasUlids' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasUlids.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Database\\Eloquent\\Concerns\\HasUniqueIds' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasUniqueIds.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Database\\Eloquent\\Concerns\\HasUuids' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasUuids.php',
@@ -1749,8 +1808,11 @@ return array(
     'Illuminate\\Database\\Events\\MigrationsEvent' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Events/MigrationsEvent.php',
     'Illuminate\\Database\\Events\\MigrationsStarted' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Events/MigrationsStarted.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Database\\Events\\ModelPruningFinished' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Events/ModelPruningFinished.php',
     'Illuminate\\Database\\Events\\ModelPruningStarting' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Events/ModelPruningStarting.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Database\\Events\\ModelsPruned' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Events/ModelsPruned.php',
@@ -1794,7 +1856,10 @@ return array(
     'Illuminate\\Database\\Query\\IndexHint' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Query/IndexHint.php',
     'Illuminate\\Database\\Query\\JoinClause' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Query/JoinClause.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Database\\Query\\JoinLateralClause' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Query/JoinLateralClause.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Database\\Query\\Processors\\MySqlProcessor' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Query/Processors/MySqlProcessor.php',
@@ -1829,7 +1894,10 @@ return array(
     'Illuminate\\Database\\Seeder' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Seeder.php',
     'Illuminate\\Database\\SqlServerConnection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/SqlServerConnection.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Database\\UniqueConstraintViolationException' => $vendorDir . '/laravel/framework/src/Illuminate/Database/UniqueConstraintViolationException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Encryption\\Encrypter' => $vendorDir . '/laravel/framework/src/Illuminate/Encryption/Encrypter.php',
@@ -1879,7 +1947,10 @@ return array(
     'Illuminate\\Foundation\\Console\\AboutCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/AboutCommand.php',
     'Illuminate\\Foundation\\Console\\CastMakeCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/CastMakeCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Console\\ChannelListCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ChannelListCommand.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\Console\\ChannelMakeCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ChannelMakeCommand.php',
@@ -1890,7 +1961,10 @@ return array(
     'Illuminate\\Foundation\\Console\\ConfigCacheCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ConfigCacheCommand.php',
     'Illuminate\\Foundation\\Console\\ConfigClearCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ConfigClearCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Console\\ConfigShowCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ConfigShowCommand.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\Console\\ConsoleMakeCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ConsoleMakeCommand.php',
@@ -1930,7 +2004,10 @@ return array(
     'Illuminate\\Foundation\\Console\\ServeCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ServeCommand.php',
     'Illuminate\\Foundation\\Console\\StorageLinkCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/StorageLinkCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Console\\StorageUnlinkCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/StorageUnlinkCommand.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\Console\\StubPublishCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/StubPublishCommand.php',
@@ -1940,7 +2017,10 @@ return array(
     'Illuminate\\Foundation\\Console\\ViewCacheCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ViewCacheCommand.php',
     'Illuminate\\Foundation\\Console\\ViewClearCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Console\\ViewMakeCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Console/ViewMakeCommand.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\EnvironmentDetector' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/EnvironmentDetector.php',
@@ -1995,7 +2075,10 @@ return array(
     'Illuminate\\Foundation\\Testing\\Concerns\\InteractsWithRedis' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithRedis.php',
     'Illuminate\\Foundation\\Testing\\Concerns\\InteractsWithSession' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithSession.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Testing\\Concerns\\InteractsWithTestCaseLifecycle' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\Testing\\Concerns\\InteractsWithTime' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTime.php',
@@ -2004,7 +2087,10 @@ return array(
     'Illuminate\\Foundation\\Testing\\DatabaseMigrations' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseMigrations.php',
     'Illuminate\\Foundation\\Testing\\DatabaseTransactions' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseTransactions.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Testing\\DatabaseTransactionsManager' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseTransactionsManager.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\Testing\\DatabaseTruncation' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseTruncation.php',
@@ -2014,7 +2100,10 @@ return array(
     'Illuminate\\Foundation\\Testing\\TestCase' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php',
     'Illuminate\\Foundation\\Testing\\Traits\\CanConfigureMigrationCommands' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Traits/CanConfigureMigrationCommands.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\Testing\\WithConsoleEvents' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/WithConsoleEvents.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Foundation\\Testing\\WithFaker' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/WithFaker.php',
@@ -2024,7 +2113,10 @@ return array(
     'Illuminate\\Foundation\\Validation\\ValidatesRequests' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php',
     'Illuminate\\Foundation\\Vite' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Vite.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Foundation\\ViteManifestNotFoundException' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/ViteManifestNotFoundException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Hashing\\AbstractHasher' => $vendorDir . '/laravel/framework/src/Illuminate/Hashing/AbstractHasher.php',
@@ -2105,7 +2197,10 @@ return array(
     'Illuminate\\Mail\\SendQueuedMailable' => $vendorDir . '/laravel/framework/src/Illuminate/Mail/SendQueuedMailable.php',
     'Illuminate\\Mail\\SentMessage' => $vendorDir . '/laravel/framework/src/Illuminate/Mail/SentMessage.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Mail\\TextMessage' => $vendorDir . '/laravel/framework/src/Illuminate/Mail/TextMessage.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Mail\\Transport\\ArrayTransport' => $vendorDir . '/laravel/framework/src/Illuminate/Mail/Transport/ArrayTransport.php',
@@ -2159,11 +2254,17 @@ return array(
     'Illuminate\\Process\\InvokedProcessPool' => $vendorDir . '/laravel/framework/src/Illuminate/Process/InvokedProcessPool.php',
     'Illuminate\\Process\\PendingProcess' => $vendorDir . '/laravel/framework/src/Illuminate/Process/PendingProcess.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Process\\Pipe' => $vendorDir . '/laravel/framework/src/Illuminate/Process/Pipe.php',
     'Illuminate\\Process\\Pool' => $vendorDir . '/laravel/framework/src/Illuminate/Process/Pool.php',
     'Illuminate\\Process\\ProcessPoolResults' => $vendorDir . '/laravel/framework/src/Illuminate/Process/ProcessPoolResults.php',
     'Illuminate\\Process\\ProcessResult' => $vendorDir . '/laravel/framework/src/Illuminate/Process/ProcessResult.php',
     'Illuminate\\Queue\\Attributes\\WithoutRelations' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Attributes/WithoutRelations.php',
+=======
+    'Illuminate\\Process\\Pool' => $vendorDir . '/laravel/framework/src/Illuminate/Process/Pool.php',
+    'Illuminate\\Process\\ProcessPoolResults' => $vendorDir . '/laravel/framework/src/Illuminate/Process/ProcessPoolResults.php',
+    'Illuminate\\Process\\ProcessResult' => $vendorDir . '/laravel/framework/src/Illuminate/Process/ProcessResult.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Illuminate\\Process\\Pool' => $vendorDir . '/laravel/framework/src/Illuminate/Process/Pool.php',
     'Illuminate\\Process\\ProcessPoolResults' => $vendorDir . '/laravel/framework/src/Illuminate/Process/ProcessPoolResults.php',
@@ -2199,6 +2300,7 @@ return array(
     'Illuminate\\Queue\\Events\\JobExceptionOccurred' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobExceptionOccurred.php',
     'Illuminate\\Queue\\Events\\JobFailed' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobFailed.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Queue\\Events\\JobPopped' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobPopped.php',
     'Illuminate\\Queue\\Events\\JobPopping' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobPopping.php',
     'Illuminate\\Queue\\Events\\JobProcessed' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobProcessed.php',
@@ -2213,6 +2315,8 @@ return array(
     'Illuminate\\Queue\\Events\\WorkerStopping' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/WorkerStopping.php',
     'Illuminate\\Queue\\Failed\\CountableFailedJobProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/CountableFailedJobProvider.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Queue\\Events\\JobProcessed' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobProcessed.php',
     'Illuminate\\Queue\\Events\\JobProcessing' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobProcessing.php',
     'Illuminate\\Queue\\Events\\JobQueued' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/JobQueued.php',
@@ -2221,13 +2325,19 @@ return array(
     'Illuminate\\Queue\\Events\\Looping' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/Looping.php',
     'Illuminate\\Queue\\Events\\QueueBusy' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/QueueBusy.php',
     'Illuminate\\Queue\\Events\\WorkerStopping' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Events/WorkerStopping.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Queue\\Failed\\DatabaseFailedJobProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/DatabaseFailedJobProvider.php',
     'Illuminate\\Queue\\Failed\\DatabaseUuidFailedJobProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/DatabaseUuidFailedJobProvider.php',
     'Illuminate\\Queue\\Failed\\DynamoDbFailedJobProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/DynamoDbFailedJobProvider.php',
     'Illuminate\\Queue\\Failed\\FailedJobProviderInterface' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/FailedJobProviderInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Queue\\Failed\\FileFailedJobProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/FileFailedJobProvider.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Queue\\Failed\\NullFailedJobProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Failed/NullFailedJobProvider.php',
@@ -2263,7 +2373,10 @@ return array(
     'Illuminate\\Queue\\SqsQueue' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/SqsQueue.php',
     'Illuminate\\Queue\\SyncQueue' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/SyncQueue.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Queue\\TimeoutExceededException' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/TimeoutExceededException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Queue\\Worker' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/Worker.php',
@@ -2297,8 +2410,11 @@ return array(
     'Illuminate\\Routing\\Controllers\\Middleware' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Controllers/Middleware.php',
     'Illuminate\\Routing\\CreatesRegularExpressionRouteConstraints' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/CreatesRegularExpressionRouteConstraints.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Routing\\Events\\PreparingResponse' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Events/PreparingResponse.php',
     'Illuminate\\Routing\\Events\\ResponsePrepared' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Events/ResponsePrepared.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Routing\\Events\\RouteMatched' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Events/RouteMatched.php',
@@ -2308,7 +2424,10 @@ return array(
     'Illuminate\\Routing\\Exceptions\\StreamedResponseException' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Exceptions/StreamedResponseException.php',
     'Illuminate\\Routing\\Exceptions\\UrlGenerationException' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Exceptions/UrlGenerationException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Routing\\FiltersControllerMiddleware' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/FiltersControllerMiddleware.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Routing\\ImplicitRouteBinding' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/ImplicitRouteBinding.php',
@@ -2328,7 +2447,10 @@ return array(
     'Illuminate\\Routing\\RedirectController' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/RedirectController.php',
     'Illuminate\\Routing\\Redirector' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/Redirector.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Routing\\ResolvesRouteDependencies' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/ResolvesRouteDependencies.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Routing\\ResourceRegistrar' => $vendorDir . '/laravel/framework/src/Illuminate/Routing/ResourceRegistrar.php',
@@ -2376,7 +2498,10 @@ return array(
     'Illuminate\\Support\\ConfigurationUrlParser' => $vendorDir . '/laravel/framework/src/Illuminate/Support/ConfigurationUrlParser.php',
     'Illuminate\\Support\\DateFactory' => $vendorDir . '/laravel/framework/src/Illuminate/Support/DateFactory.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Support\\DefaultProviders' => $vendorDir . '/laravel/framework/src/Illuminate/Support/DefaultProviders.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Support\\Enumerable' => $vendorDir . '/laravel/framework/src/Illuminate/Collections/Enumerable.php',
@@ -2407,7 +2532,10 @@ return array(
     'Illuminate\\Support\\Facades\\ParallelTesting' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Facades/ParallelTesting.php',
     'Illuminate\\Support\\Facades\\Password' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Facades/Password.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Support\\Facades\\Pipeline' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Facades/Pipeline.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Support\\Facades\\Process' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Facades/Process.php',
@@ -2441,7 +2569,10 @@ return array(
     'Illuminate\\Support\\MultipleItemsFoundException' => $vendorDir . '/laravel/framework/src/Illuminate/Collections/MultipleItemsFoundException.php',
     'Illuminate\\Support\\NamespacedItemResolver' => $vendorDir . '/laravel/framework/src/Illuminate/Support/NamespacedItemResolver.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Support\\Number' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Number.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Support\\Optional' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Optional.php',
@@ -2450,7 +2581,10 @@ return array(
     'Illuminate\\Support\\Reflector' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Reflector.php',
     'Illuminate\\Support\\ServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Support/ServiceProvider.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Support\\Sleep' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Sleep.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Support\\Str' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Str.php',
@@ -2459,9 +2593,13 @@ return array(
     'Illuminate\\Support\\Testing\\Fakes\\BatchRepositoryFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/BatchRepositoryFake.php',
     'Illuminate\\Support\\Testing\\Fakes\\BusFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/BusFake.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Support\\Testing\\Fakes\\ChainedBatchTruthTest' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/ChainedBatchTruthTest.php',
     'Illuminate\\Support\\Testing\\Fakes\\EventFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/EventFake.php',
     'Illuminate\\Support\\Testing\\Fakes\\Fake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/Fake.php',
+=======
+    'Illuminate\\Support\\Testing\\Fakes\\EventFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/EventFake.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Illuminate\\Support\\Testing\\Fakes\\EventFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/EventFake.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2510,7 +2648,10 @@ return array(
     'Illuminate\\Testing\\TestView' => $vendorDir . '/laravel/framework/src/Illuminate/Testing/TestView.php',
     'Illuminate\\Translation\\ArrayLoader' => $vendorDir . '/laravel/framework/src/Illuminate/Translation/ArrayLoader.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Translation\\CreatesPotentiallyTranslatedStrings' => $vendorDir . '/laravel/framework/src/Illuminate/Translation/CreatesPotentiallyTranslatedStrings.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Translation\\FileLoader' => $vendorDir . '/laravel/framework/src/Illuminate/Translation/FileLoader.php',
@@ -2533,7 +2674,10 @@ return array(
     'Illuminate\\Validation\\PresenceVerifierInterface' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/PresenceVerifierInterface.php',
     'Illuminate\\Validation\\Rule' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Rule.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\Validation\\Rules\\Can' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Rules/Can.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Illuminate\\Validation\\Rules\\DatabaseRule' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Rules/DatabaseRule.php',
@@ -2579,11 +2723,17 @@ return array(
     'Illuminate\\View\\Compilers\\Concerns\\CompilesLoops' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php',
     'Illuminate\\View\\Compilers\\Concerns\\CompilesRawPhp' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesRawPhp.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Illuminate\\View\\Compilers\\Concerns\\CompilesSessions' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesSessions.php',
     'Illuminate\\View\\Compilers\\Concerns\\CompilesStacks' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php',
     'Illuminate\\View\\Compilers\\Concerns\\CompilesStyles' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesStyles.php',
     'Illuminate\\View\\Compilers\\Concerns\\CompilesTranslations' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesTranslations.php',
     'Illuminate\\View\\Compilers\\Concerns\\CompilesUseStatements' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesUseStatements.php',
+=======
+    'Illuminate\\View\\Compilers\\Concerns\\CompilesStacks' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php',
+    'Illuminate\\View\\Compilers\\Concerns\\CompilesStyles' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesStyles.php',
+    'Illuminate\\View\\Compilers\\Concerns\\CompilesTranslations' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesTranslations.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Illuminate\\View\\Compilers\\Concerns\\CompilesStacks' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php',
     'Illuminate\\View\\Compilers\\Concerns\\CompilesStyles' => $vendorDir . '/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesStyles.php',
@@ -2616,7 +2766,10 @@ return array(
     'Illuminate\\View\\ViewServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
     'Laravel\\Fortify\\Actions\\AttemptToAuthenticate' => $vendorDir . '/laravel/fortify/src/Actions/AttemptToAuthenticate.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Laravel\\Fortify\\Actions\\CanonicalizeUsername' => $vendorDir . '/laravel/fortify/src/Actions/CanonicalizeUsername.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Laravel\\Fortify\\Actions\\CompletePasswordReset' => $vendorDir . '/laravel/fortify/src/Actions/CompletePasswordReset.php',
@@ -2629,10 +2782,15 @@ return array(
     'Laravel\\Fortify\\Actions\\PrepareAuthenticatedSession' => $vendorDir . '/laravel/fortify/src/Actions/PrepareAuthenticatedSession.php',
     'Laravel\\Fortify\\Actions\\RedirectIfTwoFactorAuthenticatable' => $vendorDir . '/laravel/fortify/src/Actions/RedirectIfTwoFactorAuthenticatable.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Laravel\\Fortify\\Console\\InstallCommand' => $vendorDir . '/laravel/fortify/src/Console/InstallCommand.php',
     'Laravel\\Fortify\\Contracts\\ConfirmPasswordViewResponse' => $vendorDir . '/laravel/fortify/src/Contracts/ConfirmPasswordViewResponse.php',
     'Laravel\\Fortify\\Contracts\\CreatesNewUsers' => $vendorDir . '/laravel/fortify/src/Contracts/CreatesNewUsers.php',
     'Laravel\\Fortify\\Contracts\\EmailVerificationNotificationSentResponse' => $vendorDir . '/laravel/fortify/src/Contracts/EmailVerificationNotificationSentResponse.php',
+=======
+    'Laravel\\Fortify\\Contracts\\ConfirmPasswordViewResponse' => $vendorDir . '/laravel/fortify/src/Contracts/ConfirmPasswordViewResponse.php',
+    'Laravel\\Fortify\\Contracts\\CreatesNewUsers' => $vendorDir . '/laravel/fortify/src/Contracts/CreatesNewUsers.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Laravel\\Fortify\\Contracts\\ConfirmPasswordViewResponse' => $vendorDir . '/laravel/fortify/src/Contracts/ConfirmPasswordViewResponse.php',
     'Laravel\\Fortify\\Contracts\\CreatesNewUsers' => $vendorDir . '/laravel/fortify/src/Contracts/CreatesNewUsers.php',
@@ -2667,7 +2825,10 @@ return array(
     'Laravel\\Fortify\\Contracts\\VerifyEmailResponse' => $vendorDir . '/laravel/fortify/src/Contracts/VerifyEmailResponse.php',
     'Laravel\\Fortify\\Contracts\\VerifyEmailViewResponse' => $vendorDir . '/laravel/fortify/src/Contracts/VerifyEmailViewResponse.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Laravel\\Fortify\\Events\\PasswordUpdatedViaController' => $vendorDir . '/laravel/fortify/src/Events/PasswordUpdatedViaController.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Laravel\\Fortify\\Events\\RecoveryCodeReplaced' => $vendorDir . '/laravel/fortify/src/Events/RecoveryCodeReplaced.php',
@@ -2701,7 +2862,10 @@ return array(
     'Laravel\\Fortify\\Http\\Requests\\TwoFactorLoginRequest' => $vendorDir . '/laravel/fortify/src/Http/Requests/TwoFactorLoginRequest.php',
     'Laravel\\Fortify\\Http\\Requests\\VerifyEmailRequest' => $vendorDir . '/laravel/fortify/src/Http/Requests/VerifyEmailRequest.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Laravel\\Fortify\\Http\\Responses\\EmailVerificationNotificationSentResponse' => $vendorDir . '/laravel/fortify/src/Http/Responses/EmailVerificationNotificationSentResponse.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Laravel\\Fortify\\Http\\Responses\\FailedPasswordConfirmationResponse' => $vendorDir . '/laravel/fortify/src/Http/Responses/FailedPasswordConfirmationResponse.php',
@@ -2726,6 +2890,7 @@ return array(
     'Laravel\\Fortify\\Http\\Responses\\VerifyEmailResponse' => $vendorDir . '/laravel/fortify/src/Http/Responses/VerifyEmailResponse.php',
     'Laravel\\Fortify\\LoginRateLimiter' => $vendorDir . '/laravel/fortify/src/LoginRateLimiter.php',
     'Laravel\\Fortify\\RecoveryCode' => $vendorDir . '/laravel/fortify/src/RecoveryCode.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Laravel\\Fortify\\RoutePath' => $vendorDir . '/laravel/fortify/src/RoutePath.php',
     'Laravel\\Fortify\\Rules\\Password' => $vendorDir . '/laravel/fortify/src/Rules/Password.php',
@@ -2790,6 +2955,11 @@ return array(
     'Laravel\\Fortify\\TwoFactorAuthenticatable' => $vendorDir . '/laravel/fortify/src/TwoFactorAuthenticatable.php',
     'Laravel\\Fortify\\TwoFactorAuthenticationProvider' => $vendorDir . '/laravel/fortify/src/TwoFactorAuthenticationProvider.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    'Laravel\\Fortify\\Rules\\Password' => $vendorDir . '/laravel/fortify/src/Rules/Password.php',
+    'Laravel\\Fortify\\TwoFactorAuthenticatable' => $vendorDir . '/laravel/fortify/src/TwoFactorAuthenticatable.php',
+    'Laravel\\Fortify\\TwoFactorAuthenticationProvider' => $vendorDir . '/laravel/fortify/src/TwoFactorAuthenticationProvider.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Laravel\\Sail\\Console\\AddCommand' => $vendorDir . '/laravel/sail/src/Console/AddCommand.php',
     'Laravel\\Sail\\Console\\Concerns\\InteractsWithDockerComposeServices' => $vendorDir . '/laravel/sail/src/Console/Concerns/InteractsWithDockerComposeServices.php',
     'Laravel\\Sail\\Console\\InstallCommand' => $vendorDir . '/laravel/sail/src/Console/InstallCommand.php',
@@ -2843,12 +3013,15 @@ return array(
     'League\\CommonMark\\Event\\DocumentRenderedEvent' => $vendorDir . '/league/commonmark/src/Event/DocumentRenderedEvent.php',
     'League\\CommonMark\\Event\\ListenerData' => $vendorDir . '/league/commonmark/src/Event/ListenerData.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\CommonMark\\Exception\\AlreadyInitializedException' => $vendorDir . '/league/commonmark/src/Exception/AlreadyInitializedException.php',
     'League\\CommonMark\\Exception\\CommonMarkException' => $vendorDir . '/league/commonmark/src/Exception/CommonMarkException.php',
     'League\\CommonMark\\Exception\\IOException' => $vendorDir . '/league/commonmark/src/Exception/IOException.php',
     'League\\CommonMark\\Exception\\InvalidArgumentException' => $vendorDir . '/league/commonmark/src/Exception/InvalidArgumentException.php',
     'League\\CommonMark\\Exception\\LogicException' => $vendorDir . '/league/commonmark/src/Exception/LogicException.php',
     'League\\CommonMark\\Exception\\MissingDependencyException' => $vendorDir . '/league/commonmark/src/Exception/MissingDependencyException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'League\\CommonMark\\Exception\\UnexpectedEncodingException' => $vendorDir . '/league/commonmark/src/Exception/UnexpectedEncodingException.php',
@@ -3084,7 +3257,10 @@ return array(
     'League\\CommonMark\\Parser\\MarkdownParserState' => $vendorDir . '/league/commonmark/src/Parser/MarkdownParserState.php',
     'League\\CommonMark\\Parser\\MarkdownParserStateInterface' => $vendorDir . '/league/commonmark/src/Parser/MarkdownParserStateInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\CommonMark\\Parser\\ParserLogicException' => $vendorDir . '/league/commonmark/src/Parser/ParserLogicException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'League\\CommonMark\\Reference\\Reference' => $vendorDir . '/league/commonmark/src/Reference/Reference.php',
@@ -3103,7 +3279,10 @@ return array(
     'League\\CommonMark\\Renderer\\Inline\\TextRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Inline/TextRenderer.php',
     'League\\CommonMark\\Renderer\\MarkdownRendererInterface' => $vendorDir . '/league/commonmark/src/Renderer/MarkdownRendererInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\CommonMark\\Renderer\\NoMatchingRendererException' => $vendorDir . '/league/commonmark/src/Renderer/NoMatchingRendererException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'League\\CommonMark\\Renderer\\NodeRendererInterface' => $vendorDir . '/league/commonmark/src/Renderer/NodeRendererInterface.php',
@@ -3139,7 +3318,10 @@ return array(
     'League\\Flysystem\\Config' => $vendorDir . '/league/flysystem/src/Config.php',
     'League\\Flysystem\\CorruptedPathDetected' => $vendorDir . '/league/flysystem/src/CorruptedPathDetected.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\Flysystem\\DecoratedAdapter' => $vendorDir . '/league/flysystem/src/DecoratedAdapter.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'League\\Flysystem\\DirectoryAttributes' => $vendorDir . '/league/flysystem/src/DirectoryAttributes.php',
@@ -3155,8 +3337,13 @@ return array(
     'League\\Flysystem\\InvalidStreamProvided' => $vendorDir . '/league/flysystem/src/InvalidStreamProvided.php',
     'League\\Flysystem\\InvalidVisibilityProvided' => $vendorDir . '/league/flysystem/src/InvalidVisibilityProvided.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\Flysystem\\Local\\FallbackMimeTypeDetector' => $vendorDir . '/league/flysystem-local/FallbackMimeTypeDetector.php',
     'League\\Flysystem\\Local\\LocalFilesystemAdapter' => $vendorDir . '/league/flysystem-local/LocalFilesystemAdapter.php',
+=======
+    'League\\Flysystem\\Local\\FallbackMimeTypeDetector' => $vendorDir . '/league/flysystem/src/Local/FallbackMimeTypeDetector.php',
+    'League\\Flysystem\\Local\\LocalFilesystemAdapter' => $vendorDir . '/league/flysystem/src/Local/LocalFilesystemAdapter.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'League\\Flysystem\\Local\\FallbackMimeTypeDetector' => $vendorDir . '/league/flysystem/src/Local/FallbackMimeTypeDetector.php',
     'League\\Flysystem\\Local\\LocalFilesystemAdapter' => $vendorDir . '/league/flysystem/src/Local/LocalFilesystemAdapter.php',
@@ -3168,7 +3355,10 @@ return array(
     'League\\Flysystem\\PortableVisibilityGuard' => $vendorDir . '/league/flysystem/src/PortableVisibilityGuard.php',
     'League\\Flysystem\\ProxyArrayAccessToProperties' => $vendorDir . '/league/flysystem/src/ProxyArrayAccessToProperties.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\Flysystem\\ResolveIdenticalPathConflict' => $vendorDir . '/league/flysystem/src/ResolveIdenticalPathConflict.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'League\\Flysystem\\StorageAttributes' => $vendorDir . '/league/flysystem/src/StorageAttributes.php',
@@ -3203,7 +3393,10 @@ return array(
     'League\\Flysystem\\WhitespacePathNormalizer' => $vendorDir . '/league/flysystem/src/WhitespacePathNormalizer.php',
     'League\\MimeTypeDetection\\EmptyExtensionToMimeTypeMap' => $vendorDir . '/league/mime-type-detection/src/EmptyExtensionToMimeTypeMap.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'League\\MimeTypeDetection\\ExtensionLookup' => $vendorDir . '/league/mime-type-detection/src/ExtensionLookup.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'League\\MimeTypeDetection\\ExtensionMimeTypeDetector' => $vendorDir . '/league/mime-type-detection/src/ExtensionMimeTypeDetector.php',
@@ -3233,6 +3426,10 @@ return array(
     'Masterminds\\HTML5\\Serializer\\RulesInterface' => $vendorDir . '/masterminds/html5/src/HTML5/Serializer/RulesInterface.php',
     'Masterminds\\HTML5\\Serializer\\Traverser' => $vendorDir . '/masterminds/html5/src/HTML5/Serializer/Traverser.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Mockery' => $vendorDir . '/mockery/mockery/library/Mockery.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Mockery' => $vendorDir . '/mockery/mockery/library/Mockery.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -3250,7 +3447,10 @@ return array(
     'Mockery\\CountValidator\\AtMost' => $vendorDir . '/mockery/mockery/library/Mockery/CountValidator/AtMost.php',
     'Mockery\\CountValidator\\CountValidatorAbstract' => $vendorDir . '/mockery/mockery/library/Mockery/CountValidator/CountValidatorAbstract.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Mockery\\CountValidator\\CountValidatorInterface' => $vendorDir . '/mockery/mockery/library/Mockery/CountValidator/CountValidatorInterface.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Mockery\\CountValidator\\Exact' => $vendorDir . '/mockery/mockery/library/Mockery/CountValidator/Exact.php',
@@ -3261,7 +3461,10 @@ return array(
     'Mockery\\Exception\\InvalidCountException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/InvalidCountException.php',
     'Mockery\\Exception\\InvalidOrderException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/InvalidOrderException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Mockery\\Exception\\MockeryExceptionInterface' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/MockeryExceptionInterface.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Mockery\\Exception\\NoMatchingExpectationException' => $vendorDir . '/mockery/mockery/library/Mockery/Exception/NoMatchingExpectationException.php',
@@ -3283,7 +3486,10 @@ return array(
     'Mockery\\Generator\\StringManipulation\\Pass\\AvoidMethodClashPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/AvoidMethodClashPass.php',
     'Mockery\\Generator\\StringManipulation\\Pass\\CallTypeHintPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/CallTypeHintPass.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Mockery\\Generator\\StringManipulation\\Pass\\ClassAttributesPass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/ClassAttributesPass.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Mockery\\Generator\\StringManipulation\\Pass\\ClassNamePass' => $vendorDir . '/mockery/mockery/library/Mockery/Generator/StringManipulation/Pass/ClassNamePass.php',
@@ -3317,10 +3523,14 @@ return array(
     'Mockery\\Matcher\\HasKey' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/HasKey.php',
     'Mockery\\Matcher\\HasValue' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/HasValue.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Mockery\\Matcher\\IsEqual' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/IsEqual.php',
     'Mockery\\Matcher\\IsSame' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/IsSame.php',
     'Mockery\\Matcher\\MatcherAbstract' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MatcherAbstract.php',
     'Mockery\\Matcher\\MatcherInterface' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MatcherInterface.php',
+=======
+    'Mockery\\Matcher\\MatcherAbstract' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MatcherAbstract.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Mockery\\Matcher\\MatcherAbstract' => $vendorDir . '/mockery/mockery/library/Mockery/Matcher/MatcherAbstract.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -3343,7 +3553,10 @@ return array(
     'Mockery\\VerificationExpectation' => $vendorDir . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
     'Monolog\\Attribute\\AsMonologProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Monolog\\Attribute\\WithMonologChannel' => $vendorDir . '/monolog/monolog/src/Monolog/Attribute/WithMonologChannel.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Monolog\\DateTimeImmutable' => $vendorDir . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
@@ -3448,7 +3661,10 @@ return array(
     'Monolog\\Processor\\HostnameProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Processor/HostnameProcessor.php',
     'Monolog\\Processor\\IntrospectionProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Processor/IntrospectionProcessor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Monolog\\Processor\\LoadAverageProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Processor/LoadAverageProcessor.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Monolog\\Processor\\MemoryPeakUsageProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Processor/MemoryPeakUsageProcessor.php',
@@ -3512,10 +3728,14 @@ return array(
     'Nette\\Utils\\IHtmlString' => $vendorDir . '/nette/utils/src/compatibility.php',
     'Nette\\Utils\\Image' => $vendorDir . '/nette/utils/src/Utils/Image.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Nette\\Utils\\ImageColor' => $vendorDir . '/nette/utils/src/Utils/ImageColor.php',
     'Nette\\Utils\\ImageException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
     'Nette\\Utils\\ImageType' => $vendorDir . '/nette/utils/src/Utils/ImageType.php',
     'Nette\\Utils\\Iterables' => $vendorDir . '/nette/utils/src/Utils/Iterables.php',
+=======
+    'Nette\\Utils\\ImageException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Nette\\Utils\\ImageException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -3526,7 +3746,10 @@ return array(
     'Nette\\Utils\\Random' => $vendorDir . '/nette/utils/src/Utils/Random.php',
     'Nette\\Utils\\Reflection' => $vendorDir . '/nette/utils/src/Utils/Reflection.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Nette\\Utils\\ReflectionMethod' => $vendorDir . '/nette/utils/src/Utils/ReflectionMethod.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Nette\\Utils\\RegexpException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
@@ -3550,7 +3773,10 @@ return array(
     'NunoMaduro\\Collision\\Adapters\\Phpunit\\Subscribers\\EnsurePrinterIsRegisteredSubscriber' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/Subscribers/EnsurePrinterIsRegisteredSubscriber.php',
     'NunoMaduro\\Collision\\Adapters\\Phpunit\\Subscribers\\Subscriber' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/Subscribers/Subscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'NunoMaduro\\Collision\\Adapters\\Phpunit\\Support\\ResultReflection' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/Support/ResultReflection.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'NunoMaduro\\Collision\\Adapters\\Phpunit\\TestResult' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/TestResult.php',
@@ -3558,7 +3784,10 @@ return array(
     'NunoMaduro\\Collision\\ConsoleColor' => $vendorDir . '/nunomaduro/collision/src/ConsoleColor.php',
     'NunoMaduro\\Collision\\Contracts\\Adapters\\Phpunit\\HasPrintableTestCaseName' => $vendorDir . '/nunomaduro/collision/src/Contracts/Adapters/Phpunit/HasPrintableTestCaseName.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'NunoMaduro\\Collision\\Contracts\\RenderableOnCollisionEditor' => $vendorDir . '/nunomaduro/collision/src/Contracts/RenderableOnCollisionEditor.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'NunoMaduro\\Collision\\Contracts\\RenderlessEditor' => $vendorDir . '/nunomaduro/collision/src/Contracts/RenderlessEditor.php',
@@ -3569,7 +3798,10 @@ return array(
     'NunoMaduro\\Collision\\Exceptions\\ShouldNotHappen' => $vendorDir . '/nunomaduro/collision/src/Exceptions/ShouldNotHappen.php',
     'NunoMaduro\\Collision\\Exceptions\\TestException' => $vendorDir . '/nunomaduro/collision/src/Exceptions/TestException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'NunoMaduro\\Collision\\Exceptions\\TestOutcome' => $vendorDir . '/nunomaduro/collision/src/Exceptions/TestOutcome.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'NunoMaduro\\Collision\\Handler' => $vendorDir . '/nunomaduro/collision/src/Handler.php',
@@ -3578,7 +3810,10 @@ return array(
     'NunoMaduro\\Collision\\SolutionsRepositories\\NullSolutionsRepository' => $vendorDir . '/nunomaduro/collision/src/SolutionsRepositories/NullSolutionsRepository.php',
     'NunoMaduro\\Collision\\Writer' => $vendorDir . '/nunomaduro/collision/src/Writer.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Override' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/Override.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Application\\Finished' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
@@ -3588,8 +3823,11 @@ return array(
     'PHPUnit\\Event\\Code\\ClassMethod' => $vendorDir . '/phpunit/phpunit/src/Event/Value/ClassMethod.php',
     'PHPUnit\\Event\\Code\\ComparisonFailure' => $vendorDir . '/phpunit/phpunit/src/Event/Value/ComparisonFailure.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Code\\ComparisonFailureBuilder' => $vendorDir . '/phpunit/phpunit/src/Event/Value/ComparisonFailureBuilder.php',
     'PHPUnit\\Event\\Code\\NoTestCaseObjectOnCallStackException' => $vendorDir . '/phpunit/phpunit/src/Event/Exception/NoTestCaseObjectOnCallStackException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Code\\Phpt' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/Phpt.php',
@@ -3598,11 +3836,16 @@ return array(
     'PHPUnit\\Event\\Code\\TestCollectionIterator' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestCollectionIterator.php',
     'PHPUnit\\Event\\Code\\TestDox' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestDox.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Code\\TestDoxBuilder' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestDoxBuilder.php',
     'PHPUnit\\Event\\Code\\TestMethod' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestMethod.php',
     'PHPUnit\\Event\\Code\\TestMethodBuilder' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestMethodBuilder.php',
     'PHPUnit\\Event\\Code\\Throwable' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Throwable.php',
     'PHPUnit\\Event\\Code\\ThrowableBuilder' => $vendorDir . '/phpunit/phpunit/src/Event/Value/ThrowableBuilder.php',
+=======
+    'PHPUnit\\Event\\Code\\TestMethod' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestMethod.php',
+    'PHPUnit\\Event\\Code\\Throwable' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Throwable.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\Event\\Code\\TestMethod' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Test/TestMethod.php',
     'PHPUnit\\Event\\Code\\Throwable' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Throwable.php',
@@ -3635,8 +3878,11 @@ return array(
     'PHPUnit\\Event\\SubscriberTypeAlreadyRegisteredException' => $vendorDir . '/phpunit/phpunit/src/Event/Exception/SubscriberTypeAlreadyRegisteredException.php',
     'PHPUnit\\Event\\Telemetry\\Duration' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/Duration.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Telemetry\\GarbageCollectorStatus' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/GarbageCollectorStatus.php',
     'PHPUnit\\Event\\Telemetry\\GarbageCollectorStatusProvider' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/GarbageCollectorStatusProvider.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Telemetry\\HRTime' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/HRTime.php',
@@ -3644,8 +3890,11 @@ return array(
     'PHPUnit\\Event\\Telemetry\\MemoryMeter' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/MemoryMeter.php',
     'PHPUnit\\Event\\Telemetry\\MemoryUsage' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/MemoryUsage.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Telemetry\\Php81GarbageCollectorStatusProvider' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/Php81GarbageCollectorStatusProvider.php',
     'PHPUnit\\Event\\Telemetry\\Php83GarbageCollectorStatusProvider' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/Php83GarbageCollectorStatusProvider.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Telemetry\\Snapshot' => $vendorDir . '/phpunit/phpunit/src/Event/Value/Telemetry/Snapshot.php',
@@ -3670,8 +3919,11 @@ return array(
     'PHPUnit\\Event\\TestRunner\\EventFacadeSealed' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/EventFacadeSealed.php',
     'PHPUnit\\Event\\TestRunner\\EventFacadeSealedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/EventFacadeSealedSubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\TestRunner\\ExecutionAborted' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/ExecutionAborted.php',
     'PHPUnit\\Event\\TestRunner\\ExecutionAbortedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/ExecutionAbortedSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\TestRunner\\ExecutionFinished' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/ExecutionFinished.php',
@@ -3685,12 +3937,15 @@ return array(
     'PHPUnit\\Event\\TestRunner\\Finished' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/Finished.php',
     'PHPUnit\\Event\\TestRunner\\FinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/FinishedSubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\TestRunner\\GarbageCollectionDisabled' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/GarbageCollectionDisabled.php',
     'PHPUnit\\Event\\TestRunner\\GarbageCollectionDisabledSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/GarbageCollectionDisabledSubscriber.php',
     'PHPUnit\\Event\\TestRunner\\GarbageCollectionEnabled' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/GarbageCollectionEnabled.php',
     'PHPUnit\\Event\\TestRunner\\GarbageCollectionEnabledSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/GarbageCollectionEnabledSubscriber.php',
     'PHPUnit\\Event\\TestRunner\\GarbageCollectionTriggered' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/GarbageCollectionTriggered.php',
     'PHPUnit\\Event\\TestRunner\\GarbageCollectionTriggeredSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/GarbageCollectionTriggeredSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\TestRunner\\Started' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestRunner/Started.php',
@@ -3711,7 +3966,10 @@ return array(
     'PHPUnit\\Event\\TestSuite\\StartedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/TestSuite/StartedSubscriber.php',
     'PHPUnit\\Event\\TestSuite\\TestSuite' => $vendorDir . '/phpunit/phpunit/src/Event/Value/TestSuite/TestSuite.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\TestSuite\\TestSuiteBuilder' => $vendorDir . '/phpunit/phpunit/src/Event/Value/TestSuite/TestSuiteBuilder.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\TestSuite\\TestSuiteForTestClass' => $vendorDir . '/phpunit/phpunit/src/Event/Value/TestSuite/TestSuiteForTestClass.php',
@@ -3744,10 +4002,13 @@ return array(
     'PHPUnit\\Event\\Test\\ConsideredRisky' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Issue/ConsideredRisky.php',
     'PHPUnit\\Event\\Test\\ConsideredRiskySubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Issue/ConsideredRiskySubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Test\\DataProviderMethodCalled' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/DataProviderMethodCalled.php',
     'PHPUnit\\Event\\Test\\DataProviderMethodCalledSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/DataProviderMethodCalledSubscriber.php',
     'PHPUnit\\Event\\Test\\DataProviderMethodFinished' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/DataProviderMethodFinished.php',
     'PHPUnit\\Event\\Test\\DataProviderMethodFinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/DataProviderMethodFinishedSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Test\\DeprecationTriggered' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Issue/DeprecationTriggered.php',
@@ -3800,8 +4061,11 @@ return array(
     'PHPUnit\\Event\\Test\\PreConditionFinished' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/HookMethod/PreConditionFinished.php',
     'PHPUnit\\Event\\Test\\PreConditionFinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/HookMethod/PreConditionFinishedSubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Test\\PreparationFailed' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/PreparationFailed.php',
     'PHPUnit\\Event\\Test\\PreparationFailedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/PreparationFailedSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Test\\PreparationStarted' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/PreparationStarted.php',
@@ -3809,8 +4073,11 @@ return array(
     'PHPUnit\\Event\\Test\\Prepared' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/Prepared.php',
     'PHPUnit\\Event\\Test\\PreparedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Lifecycle/PreparedSubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Event\\Test\\PrintedUnexpectedOutput' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/PrintedUnexpectedOutput.php',
     'PHPUnit\\Event\\Test\\PrintedUnexpectedOutputSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/PrintedUnexpectedOutputSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Event\\Test\\Skipped' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Test/Outcome/Skipped.php',
@@ -3859,10 +4126,13 @@ return array(
     'PHPUnit\\Framework\\Attributes\\ExcludeStaticPropertyFromBackup' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/ExcludeStaticPropertyFromBackup.php',
     'PHPUnit\\Framework\\Attributes\\Group' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/Group.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Framework\\Attributes\\IgnoreClassForCodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/IgnoreClassForCodeCoverage.php',
     'PHPUnit\\Framework\\Attributes\\IgnoreDeprecations' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/IgnoreDeprecations.php',
     'PHPUnit\\Framework\\Attributes\\IgnoreFunctionForCodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/IgnoreFunctionForCodeCoverage.php',
     'PHPUnit\\Framework\\Attributes\\IgnoreMethodForCodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/IgnoreMethodForCodeCoverage.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Framework\\Attributes\\Large' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/Large.php',
@@ -3890,7 +4160,10 @@ return array(
     'PHPUnit\\Framework\\Attributes\\UsesClass' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/UsesClass.php',
     'PHPUnit\\Framework\\Attributes\\UsesFunction' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/UsesFunction.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Framework\\Attributes\\WithoutErrorHandler' => $vendorDir . '/phpunit/phpunit/src/Framework/Attributes/WithoutErrorHandler.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Framework\\CodeCoverageException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/CodeCoverageException.php',
@@ -3908,8 +4181,11 @@ return array(
     'PHPUnit\\Framework\\Constraint\\Exception' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Exception/Exception.php',
     'PHPUnit\\Framework\\Constraint\\ExceptionCode' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Exception/ExceptionCode.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Framework\\Constraint\\ExceptionMessageIsOrContains' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Exception/ExceptionMessageIsOrContains.php',
     'PHPUnit\\Framework\\Constraint\\ExceptionMessageMatchesRegularExpression' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Exception/ExceptionMessageMatchesRegularExpression.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Framework\\Constraint\\FileExists' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Filesystem/FileExists.php',
@@ -3935,6 +4211,10 @@ return array(
     'PHPUnit\\Framework\\Constraint\\IsWritable' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Filesystem/IsWritable.php',
     'PHPUnit\\Framework\\Constraint\\JsonMatches' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/JsonMatches.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'PHPUnit\\Framework\\Constraint\\JsonMatchesErrorMessageProvider' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/JsonMatchesErrorMessageProvider.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\Framework\\Constraint\\JsonMatchesErrorMessageProvider' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/JsonMatchesErrorMessageProvider.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -3944,8 +4224,14 @@ return array(
     'PHPUnit\\Framework\\Constraint\\LogicalOr' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Operator/LogicalOr.php',
     'PHPUnit\\Framework\\Constraint\\LogicalXor' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Operator/LogicalXor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Framework\\Constraint\\ObjectEquals' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Object/ObjectEquals.php',
     'PHPUnit\\Framework\\Constraint\\ObjectHasProperty' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Object/ObjectHasProperty.php',
+=======
+    'PHPUnit\\Framework\\Constraint\\MessageIsOrContains' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Message/MessageIsOrContains.php',
+    'PHPUnit\\Framework\\Constraint\\MessageMatchesRegularExpression' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Message/MessageMatchesRegularExpression.php',
+    'PHPUnit\\Framework\\Constraint\\ObjectEquals' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/ObjectEquals.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\Framework\\Constraint\\MessageIsOrContains' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Message/MessageIsOrContains.php',
     'PHPUnit\\Framework\\Constraint\\MessageMatchesRegularExpression' => $vendorDir . '/phpunit/phpunit/src/Framework/Constraint/Message/MessageMatchesRegularExpression.php',
@@ -3967,6 +4253,10 @@ return array(
     'PHPUnit\\Framework\\DataProviderTestSuite' => $vendorDir . '/phpunit/phpunit/src/Framework/DataProviderTestSuite.php',
     'PHPUnit\\Framework\\EmptyStringException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/EmptyStringException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'PHPUnit\\Framework\\Error' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/Error.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\Framework\\Error' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/Error.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -3980,6 +4270,7 @@ return array(
     'PHPUnit\\Framework\\InvalidCoversTargetException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/InvalidCoversTargetException.php',
     'PHPUnit\\Framework\\InvalidDataProviderException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/InvalidDataProviderException.php',
     'PHPUnit\\Framework\\InvalidDependencyException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/InvalidDependencyException.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'PHPUnit\\Framework\\MockObject\\BadMethodCallException' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Exception/BadMethodCallException.php',
     'PHPUnit\\Framework\\MockObject\\Builder\\Identity' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Builder/Identity.php',
@@ -4059,6 +4350,8 @@ return array(
     'PHPUnit\\Framework\\MockObject\\Stub\\ReturnValueMap' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Stub/ReturnValueMap.php',
     'PHPUnit\\Framework\\MockObject\\Stub\\Stub' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Stub/Stub.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Framework\\MockObject\\Api' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Api/Api.php',
     'PHPUnit\\Framework\\MockObject\\BadMethodCallException' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Exception/BadMethodCallException.php',
     'PHPUnit\\Framework\\MockObject\\Builder\\Identity' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Builder/Identity.php',
@@ -4130,6 +4423,9 @@ return array(
     'PHPUnit\\Framework\\MockObject\\UnknownTypeException' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Exception/UnknownTypeException.php',
     'PHPUnit\\Framework\\MockObject\\UnmockedCloneMethod' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Api/UnmockedCloneMethod.php',
     'PHPUnit\\Framework\\MockObject\\Verifiable' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Verifiable.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Framework\\NoChildTestSuiteException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/NoChildTestSuiteException.php',
     'PHPUnit\\Framework\\PhptAssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/PhptAssertionFailedError.php',
@@ -4164,8 +4460,13 @@ return array(
     'PHPUnit\\Framework\\TestSuite' => $vendorDir . '/phpunit/phpunit/src/Framework/TestSuite.php',
     'PHPUnit\\Framework\\TestSuiteIterator' => $vendorDir . '/phpunit/phpunit/src/Framework/TestSuiteIterator.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Framework\\UnknownClassOrInterfaceException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/UnknownClassOrInterfaceException.php',
     'PHPUnit\\Framework\\UnknownTypeException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/UnknownTypeException.php',
+=======
+    'PHPUnit\\Framework\\UnknownClassException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/UnknownClassException.php',
+    'PHPUnit\\Framework\\UnknownClassOrInterfaceException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/UnknownClassOrInterfaceException.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\Framework\\UnknownClassException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/UnknownClassException.php',
     'PHPUnit\\Framework\\UnknownClassOrInterfaceException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/UnknownClassOrInterfaceException.php',
@@ -4179,8 +4480,11 @@ return array(
     'PHPUnit\\Logging\\JUnit\\TestFinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/JUnit/Subscriber/TestFinishedSubscriber.php',
     'PHPUnit\\Logging\\JUnit\\TestMarkedIncompleteSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/JUnit/Subscriber/TestMarkedIncompleteSubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Logging\\JUnit\\TestPreparationFailedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/JUnit/Subscriber/TestPreparationFailedSubscriber.php',
     'PHPUnit\\Logging\\JUnit\\TestPreparationStartedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/JUnit/Subscriber/TestPreparationStartedSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Logging\\JUnit\\TestPreparedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/JUnit/Subscriber/TestPreparedSubscriber.php',
@@ -4203,6 +4507,7 @@ return array(
     'PHPUnit\\Logging\\TestDox\\HtmlRenderer' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/HtmlRenderer.php',
     'PHPUnit\\Logging\\TestDox\\NamePrettifier' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/NamePrettifier.php',
     'PHPUnit\\Logging\\TestDox\\PlainTextRenderer' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/PlainTextRenderer.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'PHPUnit\\Logging\\TestDox\\Subscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/Subscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestConsideredRiskySubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestConsideredRiskySubscriber.php',
@@ -4227,6 +4532,8 @@ return array(
     'PHPUnit\\Logging\\TestDox\\TestTriggeredPhpunitWarningSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredPhpunitWarningSubscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestTriggeredWarningSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestResult/Subscriber/TestTriggeredWarningSubscriber.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Logging\\TestDox\\Subscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/Subscriber/Subscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestConsideredRiskySubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/Subscriber/TestConsideredRiskySubscriber.php',
     'PHPUnit\\Logging\\TestDox\\TestCreatedMockObjectForAbstractClassSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/Subscriber/TestCreatedMockObjectForAbstractClassSubscriber.php',
@@ -4247,6 +4554,9 @@ return array(
     'PHPUnit\\Logging\\TestDox\\TestResultCollectionIterator' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestMethod/TestResultCollectionIterator.php',
     'PHPUnit\\Logging\\TestDox\\TestResultCollector' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/TestMethod/TestResultCollector.php',
     'PHPUnit\\Logging\\TestDox\\TestSkippedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Logging/TestDox/Subscriber/TestSkippedSubscriber.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Metadata\\After' => $vendorDir . '/phpunit/phpunit/src/Metadata/After.php',
     'PHPUnit\\Metadata\\AfterClass' => $vendorDir . '/phpunit/phpunit/src/Metadata/AfterClass.php',
@@ -4264,6 +4574,10 @@ return array(
     'PHPUnit\\Metadata\\Before' => $vendorDir . '/phpunit/phpunit/src/Metadata/Before.php',
     'PHPUnit\\Metadata\\BeforeClass' => $vendorDir . '/phpunit/phpunit/src/Metadata/BeforeClass.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'PHPUnit\\Metadata\\CodeCoverageIgnore' => $vendorDir . '/phpunit/phpunit/src/Metadata/CodeCoverageIgnore.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\Metadata\\CodeCoverageIgnore' => $vendorDir . '/phpunit/phpunit/src/Metadata/CodeCoverageIgnore.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -4281,10 +4595,13 @@ return array(
     'PHPUnit\\Metadata\\ExcludeStaticPropertyFromBackup' => $vendorDir . '/phpunit/phpunit/src/Metadata/ExcludeStaticPropertyFromBackup.php',
     'PHPUnit\\Metadata\\Group' => $vendorDir . '/phpunit/phpunit/src/Metadata/Group.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Metadata\\IgnoreClassForCodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Metadata/IgnoreClassForCodeCoverage.php',
     'PHPUnit\\Metadata\\IgnoreDeprecations' => $vendorDir . '/phpunit/phpunit/src/Metadata/IgnoreDeprecations.php',
     'PHPUnit\\Metadata\\IgnoreFunctionForCodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Metadata/IgnoreFunctionForCodeCoverage.php',
     'PHPUnit\\Metadata\\IgnoreMethodForCodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Metadata/IgnoreMethodForCodeCoverage.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Metadata\\InvalidVersionRequirementException' => $vendorDir . '/phpunit/phpunit/src/Metadata/Exception/InvalidVersionRequirementException.php',
@@ -4324,6 +4641,7 @@ return array(
     'PHPUnit\\Metadata\\Version\\ConstraintRequirement' => $vendorDir . '/phpunit/phpunit/src/Metadata/Version/ConstraintRequirement.php',
     'PHPUnit\\Metadata\\Version\\Requirement' => $vendorDir . '/phpunit/phpunit/src/Metadata/Version/Requirement.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Metadata\\WithoutErrorHandler' => $vendorDir . '/phpunit/phpunit/src/Metadata/WithoutErrorHandler.php',
     'PHPUnit\\Runner\\Baseline\\Baseline' => $vendorDir . '/phpunit/phpunit/src/Runner/Baseline/Baseline.php',
     'PHPUnit\\Runner\\Baseline\\CannotLoadBaselineException' => $vendorDir . '/phpunit/phpunit/src/Runner/Baseline/Exception/CannotLoadBaselineException.php',
@@ -4348,6 +4666,8 @@ return array(
     'PHPUnit\\Runner\\ErrorException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/ErrorException.php',
     'PHPUnit\\Runner\\ErrorHandler' => $vendorDir . '/phpunit/phpunit/src/Runner/ErrorHandler.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Runner\\ClassCannotBeFoundException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/ClassCannotBeFoundException.php',
     'PHPUnit\\Runner\\ClassCannotBeInstantiatedException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/ClassCannotBeInstantiatedException.php',
     'PHPUnit\\Runner\\ClassDoesNotExistException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/ClassDoesNotExistException.php',
@@ -4355,6 +4675,9 @@ return array(
     'PHPUnit\\Runner\\ClassIsAbstractException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/ClassIsAbstractException.php',
     'PHPUnit\\Runner\\CodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Runner/CodeCoverage.php',
     'PHPUnit\\Runner\\DirectoryCannotBeCreatedException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/DirectoryCannotBeCreatedException.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Runner\\Exception' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/Exception.php',
     'PHPUnit\\Runner\\Extension\\Extension' => $vendorDir . '/phpunit/phpunit/src/Runner/Extension/Extension.php',
@@ -4369,12 +4692,15 @@ return array(
     'PHPUnit\\Runner\\Filter\\IncludeGroupFilterIterator' => $vendorDir . '/phpunit/phpunit/src/Runner/Filter/IncludeGroupFilterIterator.php',
     'PHPUnit\\Runner\\Filter\\NameFilterIterator' => $vendorDir . '/phpunit/phpunit/src/Runner/Filter/NameFilterIterator.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Runner\\Filter\\TestIdFilterIterator' => $vendorDir . '/phpunit/phpunit/src/Runner/Filter/TestIdFilterIterator.php',
     'PHPUnit\\Runner\\GarbageCollection\\ExecutionFinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/GarbageCollection/Subscriber/ExecutionFinishedSubscriber.php',
     'PHPUnit\\Runner\\GarbageCollection\\ExecutionStartedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/GarbageCollection/Subscriber/ExecutionStartedSubscriber.php',
     'PHPUnit\\Runner\\GarbageCollection\\GarbageCollectionHandler' => $vendorDir . '/phpunit/phpunit/src/Runner/GarbageCollection/GarbageCollectionHandler.php',
     'PHPUnit\\Runner\\GarbageCollection\\Subscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/GarbageCollection/Subscriber/Subscriber.php',
     'PHPUnit\\Runner\\GarbageCollection\\TestFinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/GarbageCollection/Subscriber/TestFinishedSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Runner\\InvalidOrderException' => $vendorDir . '/phpunit/phpunit/src/Runner/Exception/InvalidOrderException.php',
@@ -4407,7 +4733,10 @@ return array(
     'PHPUnit\\TestRunner\\TestResult\\ExecutionStartedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/TestResult/Subscriber/ExecutionStartedSubscriber.php',
     'PHPUnit\\TestRunner\\TestResult\\Facade' => $vendorDir . '/phpunit/phpunit/src/Runner/TestResult/Facade.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TestRunner\\TestResult\\Issues\\Issue' => $vendorDir . '/phpunit/phpunit/src/Runner/TestResult/Issue.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TestRunner\\TestResult\\PassedTests' => $vendorDir . '/phpunit/phpunit/src/Runner/TestResult/PassedTests.php',
@@ -4437,7 +4766,10 @@ return array(
     'PHPUnit\\TestRunner\\TestResult\\TestTriggeredWarningSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/TestResult/Subscriber/TestTriggeredWarningSubscriber.php',
     'PHPUnit\\TextUI\\Application' => $vendorDir . '/phpunit/phpunit/src/TextUI/Application.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\CannotOpenSocketException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Exception/CannotOpenSocketException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\CliArguments\\Builder' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Cli/Builder.php',
@@ -4489,7 +4821,10 @@ return array(
     'PHPUnit\\TextUI\\Configuration\\LoggingNotConfiguredException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Exception/LoggingNotConfiguredException.php',
     'PHPUnit\\TextUI\\Configuration\\Merger' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Merger.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\Configuration\\NoBaselineException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Exception/NoBaselineException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\Configuration\\NoBootstrapException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Exception/NoBootstrapException.php',
@@ -4504,9 +4839,12 @@ return array(
     'PHPUnit\\TextUI\\Configuration\\PhpHandler' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/PhpHandler.php',
     'PHPUnit\\TextUI\\Configuration\\Registry' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Registry.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\Configuration\\Source' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Value/Source.php',
     'PHPUnit\\TextUI\\Configuration\\SourceFilter' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/SourceFilter.php',
     'PHPUnit\\TextUI\\Configuration\\SourceMapper' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/SourceMapper.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\Configuration\\TestDirectory' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Value/TestDirectory.php',
@@ -4526,7 +4864,10 @@ return array(
     'PHPUnit\\TextUI\\ExtensionsNotConfiguredException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Exception/ExtensionsNotConfiguredException.php',
     'PHPUnit\\TextUI\\Help' => $vendorDir . '/phpunit/phpunit/src/TextUI/Help.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\InvalidSocketException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Exception/InvalidSocketException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\Output\\DefaultPrinter' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Printer/DefaultPrinter.php',
@@ -4543,7 +4884,10 @@ return array(
     'PHPUnit\\TextUI\\Output\\Default\\ProgressPrinter\\TestSkippedSubscriber' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/ProgressPrinter/Subscriber/TestSkippedSubscriber.php',
     'PHPUnit\\TextUI\\Output\\Default\\ProgressPrinter\\TestTriggeredDeprecationSubscriber' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/ProgressPrinter/Subscriber/TestTriggeredDeprecationSubscriber.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\Output\\Default\\ProgressPrinter\\TestTriggeredErrorSubscriber' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/ProgressPrinter/Subscriber/TestTriggeredErrorSubscriber.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\Output\\Default\\ProgressPrinter\\TestTriggeredNoticeSubscriber' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/ProgressPrinter/Subscriber/TestTriggeredNoticeSubscriber.php',
@@ -4555,7 +4899,10 @@ return array(
     'PHPUnit\\TextUI\\Output\\Default\\ProgressPrinter\\TestTriggeredWarningSubscriber' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/ProgressPrinter/Subscriber/TestTriggeredWarningSubscriber.php',
     'PHPUnit\\TextUI\\Output\\Default\\ResultPrinter' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/ResultPrinter.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\Output\\Default\\UnexpectedOutputPrinter' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Default/UnexpectedOutputPrinter.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\Output\\Facade' => $vendorDir . '/phpunit/phpunit/src/TextUI/Output/Facade.php',
@@ -4571,7 +4918,10 @@ return array(
     'PHPUnit\\TextUI\\TestRunner' => $vendorDir . '/phpunit/phpunit/src/TextUI/TestRunner.php',
     'PHPUnit\\TextUI\\TestSuiteFilterProcessor' => $vendorDir . '/phpunit/phpunit/src/TextUI/TestSuiteFilterProcessor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\XmlConfiguration\\CannotFindSchemaException' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Exception/CannotFindSchemaException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\XmlConfiguration\\CodeCoverage\\CodeCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/CodeCoverage/CodeCoverage.php',
@@ -4593,7 +4943,10 @@ return array(
     'PHPUnit\\TextUI\\XmlConfiguration\\DefaultConfiguration' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/DefaultConfiguration.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\Exception' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Exception.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\XmlConfiguration\\FailedSchemaDetectionResult' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/SchemaDetector/FailedSchemaDetectionResult.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\XmlConfiguration\\Generator' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Generator.php',
@@ -4616,9 +4969,14 @@ return array(
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveAttributesFromFilterWhitelistToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveAttributesFromFilterWhitelistToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveAttributesFromRootToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveAttributesFromRootToCoverage.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveCoverageDirectoriesToSource' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveCoverageDirectoriesToSource.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistExcludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveWhitelistExcludesToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistIncludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveWhitelistIncludesToCoverage.php',
+=======
+    'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistDirectoriesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveWhitelistDirectoriesToCoverage.php',
+    'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistExcludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveWhitelistExcludesToCoverage.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistDirectoriesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveWhitelistDirectoriesToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistExcludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/MoveWhitelistExcludesToCoverage.php',
@@ -4644,6 +5002,7 @@ return array(
     'PHPUnit\\TextUI\\XmlConfiguration\\RenameBeStrictAboutCoversAnnotationAttribute' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/RenameBeStrictAboutCoversAnnotationAttribute.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\RenameForceCoversAnnotationAttribute' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/RenameForceCoversAnnotationAttribute.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\TextUI\\XmlConfiguration\\SchemaDetectionResult' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/SchemaDetector/SchemaDetectionResult.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\SchemaDetector' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/SchemaDetector/SchemaDetector.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\SchemaFinder' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/SchemaFinder.php',
@@ -4659,6 +5018,8 @@ return array(
     'PHPUnit\\Util\\ExcludeList' => $vendorDir . '/phpunit/phpunit/src/Util/ExcludeList.php',
     'PHPUnit\\Util\\Exporter' => $vendorDir . '/phpunit/phpunit/src/Util/Exporter.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\TextUI\\XmlConfiguration\\TestSuiteMapper' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/TestSuiteMapper.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\UpdateSchemaLocation' => $vendorDir . '/phpunit/phpunit/src/TextUI/Configuration/Xml/Migration/Migrations/UpdateSchemaLocation.php',
     'PHPUnit\\Util\\Cloner' => $vendorDir . '/phpunit/phpunit/src/Util/Cloner.php',
@@ -4667,6 +5028,9 @@ return array(
     'PHPUnit\\Util\\ErrorHandler' => $vendorDir . '/phpunit/phpunit/src/Util/ErrorHandler.php',
     'PHPUnit\\Util\\Exception' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/Exception.php',
     'PHPUnit\\Util\\ExcludeList' => $vendorDir . '/phpunit/phpunit/src/Util/ExcludeList.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Util\\Filesystem' => $vendorDir . '/phpunit/phpunit/src/Util/Filesystem.php',
     'PHPUnit\\Util\\Filter' => $vendorDir . '/phpunit/phpunit/src/Util/Filter.php',
@@ -4674,12 +5038,15 @@ return array(
     'PHPUnit\\Util\\InvalidDirectoryException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/InvalidDirectoryException.php',
     'PHPUnit\\Util\\InvalidJsonException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/InvalidJsonException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Util\\InvalidVersionOperatorException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/InvalidVersionOperatorException.php',
     'PHPUnit\\Util\\Json' => $vendorDir . '/phpunit/phpunit/src/Util/Json.php',
     'PHPUnit\\Util\\PHP\\AbstractPhpProcess' => $vendorDir . '/phpunit/phpunit/src/Util/PHP/AbstractPhpProcess.php',
     'PHPUnit\\Util\\PHP\\DefaultPhpProcess' => $vendorDir . '/phpunit/phpunit/src/Util/PHP/DefaultPhpProcess.php',
     'PHPUnit\\Util\\PHP\\PhpProcessException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/PhpProcessException.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Util\\InvalidSocketException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/InvalidSocketException.php',
     'PHPUnit\\Util\\InvalidVersionOperatorException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/InvalidVersionOperatorException.php',
     'PHPUnit\\Util\\Json' => $vendorDir . '/phpunit/phpunit/src/Util/Json.php',
@@ -4688,15 +5055,21 @@ return array(
     'PHPUnit\\Util\\PHP\\DefaultPhpProcess' => $vendorDir . '/phpunit/phpunit/src/Util/PHP/DefaultPhpProcess.php',
     'PHPUnit\\Util\\PHP\\PhpProcessException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/PhpProcessException.php',
     'PHPUnit\\Util\\PHP\\WindowsPhpProcess' => $vendorDir . '/phpunit/phpunit/src/Util/PHP/WindowsPhpProcess.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Util\\Reflection' => $vendorDir . '/phpunit/phpunit/src/Util/Reflection.php',
     'PHPUnit\\Util\\Test' => $vendorDir . '/phpunit/phpunit/src/Util/Test.php',
     'PHPUnit\\Util\\ThrowableToStringMapper' => $vendorDir . '/phpunit/phpunit/src/Util/ThrowableToStringMapper.php',
     'PHPUnit\\Util\\VersionComparisonOperator' => $vendorDir . '/phpunit/phpunit/src/Util/VersionComparisonOperator.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PHPUnit\\Util\\Xml' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/Xml.php',
     'PHPUnit\\Util\\Xml\\Loader' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/Loader.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Util\\Xml' => $vendorDir . '/phpunit/phpunit/src/Util/Xml.php',
     'PHPUnit\\Util\\Xml\\Exception' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/Exception.php',
     'PHPUnit\\Util\\Xml\\FailedSchemaDetectionResult' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/FailedSchemaDetectionResult.php',
@@ -4708,6 +5081,9 @@ return array(
     'PHPUnit\\Util\\Xml\\SuccessfulSchemaDetectionResult' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/SuccessfulSchemaDetectionResult.php',
     'PHPUnit\\Util\\Xml\\ValidationResult' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/ValidationResult.php',
     'PHPUnit\\Util\\Xml\\Validator' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/Validator.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PHPUnit\\Util\\Xml\\XmlException' => $vendorDir . '/phpunit/phpunit/src/Util/Exception/XmlException.php',
     'ParagonIE\\ConstantTime\\Base32' => $vendorDir . '/paragonie/constant_time_encoding/src/Base32.php',
@@ -4763,7 +5139,10 @@ return array(
     'PharIo\\Manifest\\ManifestLoaderException' => $vendorDir . '/phar-io/manifest/src/exceptions/ManifestLoaderException.php',
     'PharIo\\Manifest\\ManifestSerializer' => $vendorDir . '/phar-io/manifest/src/ManifestSerializer.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PharIo\\Manifest\\NoEmailAddressException' => $vendorDir . '/phar-io/manifest/src/exceptions/NoEmailAddressException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PharIo\\Manifest\\PhpElement' => $vendorDir . '/phar-io/manifest/src/xml/PhpElement.php',
@@ -4831,7 +5210,10 @@ return array(
     'PhpParser\\Internal\\Differ' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Internal/Differ.php',
     'PhpParser\\Internal\\PrintableNewAnonClassNode' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Internal/PrintableNewAnonClassNode.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Internal\\TokenPolyfill' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Internal/TokenPolyfill.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Internal\\TokenStream' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Internal/TokenStream.php',
@@ -4840,12 +5222,15 @@ return array(
     'PhpParser\\Lexer\\Emulative' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php',
     'PhpParser\\Lexer\\TokenEmulator\\AttributeEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/AttributeEmulator.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Lexer\\TokenEmulator\\EnumTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/EnumTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\ExplicitOctalEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ExplicitOctalEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\KeywordEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/KeywordEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\MatchTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/MatchTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\NullsafeTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NullsafeTokenEmulator.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Lexer\\TokenEmulator\\CoaleseEqualTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/CoaleseEqualTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\EnumTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/EnumTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\ExplicitOctalEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ExplicitOctalEmulator.php',
@@ -4855,13 +5240,19 @@ return array(
     'PhpParser\\Lexer\\TokenEmulator\\MatchTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/MatchTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\NullsafeTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NullsafeTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\NumericLiteralSeparatorEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NumericLiteralSeparatorEmulator.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Lexer\\TokenEmulator\\ReadonlyFunctionTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReadonlyFunctionTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\ReadonlyTokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReadonlyTokenEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\ReverseEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReverseEmulator.php',
     'PhpParser\\Lexer\\TokenEmulator\\TokenEmulator' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/TokenEmulator.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Modifiers' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Modifiers.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\NameContext' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NameContext.php',
@@ -4875,7 +5266,10 @@ return array(
     'PhpParser\\NodeVisitorAbstract' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NodeVisitorAbstract.php',
     'PhpParser\\NodeVisitor\\CloningVisitor' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NodeVisitor/CloningVisitor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\NodeVisitor\\CommentAnnotatingVisitor' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NodeVisitor/CommentAnnotatingVisitor.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\NodeVisitor\\FindingVisitor' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NodeVisitor/FindingVisitor.php',
@@ -4884,6 +5278,7 @@ return array(
     'PhpParser\\NodeVisitor\\NodeConnectingVisitor' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NodeVisitor/NodeConnectingVisitor.php',
     'PhpParser\\NodeVisitor\\ParentConnectingVisitor' => $vendorDir . '/nikic/php-parser/lib/PhpParser/NodeVisitor/ParentConnectingVisitor.php',
     'PhpParser\\Node\\Arg' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Arg.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'PhpParser\\Node\\ArrayItem' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/ArrayItem.php',
     'PhpParser\\Node\\Attribute' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Attribute.php',
@@ -4895,6 +5290,8 @@ return array(
     'PhpParser\\Node\\Expr' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr.php',
     'PhpParser\\Node\\Expr\\ArrayDimFetch' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayDimFetch.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Attribute' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Attribute.php',
     'PhpParser\\Node\\AttributeGroup' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/AttributeGroup.php',
     'PhpParser\\Node\\ComplexType' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/ComplexType.php',
@@ -4902,6 +5299,9 @@ return array(
     'PhpParser\\Node\\Expr' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr.php',
     'PhpParser\\Node\\Expr\\ArrayDimFetch' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayDimFetch.php',
     'PhpParser\\Node\\Expr\\ArrayItem' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrayItem.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Expr\\Array_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/Array_.php',
     'PhpParser\\Node\\Expr\\ArrowFunction' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/ArrowFunction.php',
@@ -4964,6 +5364,10 @@ return array(
     'PhpParser\\Node\\Expr\\Clone_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/Clone_.php',
     'PhpParser\\Node\\Expr\\Closure' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/Closure.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'PhpParser\\Node\\Expr\\ClosureUse' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/ClosureUse.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PhpParser\\Node\\Expr\\ClosureUse' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Expr/ClosureUse.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5002,7 +5406,10 @@ return array(
     'PhpParser\\Node\\FunctionLike' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/FunctionLike.php',
     'PhpParser\\Node\\Identifier' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Identifier.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Node\\InterpolatedStringPart' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/InterpolatedStringPart.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\IntersectionType' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/IntersectionType.php',
@@ -5013,17 +5420,23 @@ return array(
     'PhpParser\\Node\\NullableType' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/NullableType.php',
     'PhpParser\\Node\\Param' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Param.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Node\\PropertyItem' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/PropertyItem.php',
     'PhpParser\\Node\\Scalar' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar.php',
     'PhpParser\\Node\\Scalar\\Float_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/Float_.php',
     'PhpParser\\Node\\Scalar\\Int_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/Int_.php',
     'PhpParser\\Node\\Scalar\\InterpolatedString' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/InterpolatedString.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Scalar' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar.php',
     'PhpParser\\Node\\Scalar\\DNumber' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/DNumber.php',
     'PhpParser\\Node\\Scalar\\Encapsed' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/Encapsed.php',
     'PhpParser\\Node\\Scalar\\EncapsedStringPart' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/EncapsedStringPart.php',
     'PhpParser\\Node\\Scalar\\LNumber' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/LNumber.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Scalar\\MagicConst' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst.php',
     'PhpParser\\Node\\Scalar\\MagicConst\\Class_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Class_.php',
@@ -5036,9 +5449,13 @@ return array(
     'PhpParser\\Node\\Scalar\\MagicConst\\Trait_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Trait_.php',
     'PhpParser\\Node\\Scalar\\String_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Scalar/String_.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Node\\StaticVar' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/StaticVar.php',
     'PhpParser\\Node\\Stmt' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt.php',
     'PhpParser\\Node\\Stmt\\Block' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Block.php',
+=======
+    'PhpParser\\Node\\Stmt' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PhpParser\\Node\\Stmt' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5052,6 +5469,10 @@ return array(
     'PhpParser\\Node\\Stmt\\Const_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Const_.php',
     'PhpParser\\Node\\Stmt\\Continue_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Continue_.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'PhpParser\\Node\\Stmt\\DeclareDeclare' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/DeclareDeclare.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'PhpParser\\Node\\Stmt\\DeclareDeclare' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/DeclareDeclare.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5079,16 +5500,22 @@ return array(
     'PhpParser\\Node\\Stmt\\Nop' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Nop.php',
     'PhpParser\\Node\\Stmt\\Property' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Property.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Node\\Stmt\\Return_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Return_.php',
     'PhpParser\\Node\\Stmt\\Static_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Static_.php',
     'PhpParser\\Node\\Stmt\\Switch_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Switch_.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Stmt\\PropertyProperty' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/PropertyProperty.php',
     'PhpParser\\Node\\Stmt\\Return_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Return_.php',
     'PhpParser\\Node\\Stmt\\StaticVar' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/StaticVar.php',
     'PhpParser\\Node\\Stmt\\Static_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Static_.php',
     'PhpParser\\Node\\Stmt\\Switch_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Switch_.php',
     'PhpParser\\Node\\Stmt\\Throw_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Throw_.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Stmt\\TraitUse' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUse.php',
     'PhpParser\\Node\\Stmt\\TraitUseAdaptation' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/TraitUseAdaptation.php',
@@ -5098,21 +5525,28 @@ return array(
     'PhpParser\\Node\\Stmt\\TryCatch' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/TryCatch.php',
     'PhpParser\\Node\\Stmt\\Unset_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Unset_.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'PhpParser\\Node\\Stmt\\Use_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Use_.php',
     'PhpParser\\Node\\Stmt\\While_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/While_.php',
     'PhpParser\\Node\\UnionType' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/UnionType.php',
     'PhpParser\\Node\\UseItem' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/UseItem.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\Stmt\\UseUse' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/UseUse.php',
     'PhpParser\\Node\\Stmt\\Use_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Use_.php',
     'PhpParser\\Node\\Stmt\\While_' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/Stmt/While_.php',
     'PhpParser\\Node\\UnionType' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/UnionType.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Node\\VarLikeIdentifier' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/VarLikeIdentifier.php',
     'PhpParser\\Node\\VariadicPlaceholder' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Node/VariadicPlaceholder.php',
     'PhpParser\\Parser' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser.php',
     'PhpParser\\ParserAbstract' => $vendorDir . '/nikic/php-parser/lib/PhpParser/ParserAbstract.php',
     'PhpParser\\ParserFactory' => $vendorDir . '/nikic/php-parser/lib/PhpParser/ParserFactory.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'PhpParser\\Parser\\Php7' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Php7.php',
     'PhpParser\\Parser\\Php8' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Php8.php',
@@ -5122,12 +5556,17 @@ return array(
     'PhpParser\\PrettyPrinter\\Standard' => $vendorDir . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
     'PhpParser\\Token' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Token.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpParser\\Parser\\Multiple' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Multiple.php',
     'PhpParser\\Parser\\Php5' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Php5.php',
     'PhpParser\\Parser\\Php7' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Php7.php',
     'PhpParser\\Parser\\Tokens' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Tokens.php',
     'PhpParser\\PrettyPrinterAbstract' => $vendorDir . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
     'PhpParser\\PrettyPrinter\\Standard' => $vendorDir . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'PhpToken' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
     'PragmaRX\\Google2FA\\Exceptions\\Contracts\\Google2FA' => $vendorDir . '/pragmarx/google2fa/src/Exceptions/Contracts/Google2FA.php',
@@ -5145,7 +5584,10 @@ return array(
     'PragmaRX\\Google2FA\\Support\\Constants' => $vendorDir . '/pragmarx/google2fa/src/Support/Constants.php',
     'PragmaRX\\Google2FA\\Support\\QRCode' => $vendorDir . '/pragmarx/google2fa/src/Support/QRCode.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Psr\\Clock\\ClockInterface' => $vendorDir . '/psr/clock/src/ClockInterface.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Psr\\Container\\ContainerExceptionInterface' => $vendorDir . '/psr/container/src/ContainerExceptionInterface.php',
@@ -5195,6 +5637,10 @@ return array(
     'Psy\\CodeCleaner\\FunctionReturnInWriteContextPass' => $vendorDir . '/psy/psysh/src/CodeCleaner/FunctionReturnInWriteContextPass.php',
     'Psy\\CodeCleaner\\ImplicitReturnPass' => $vendorDir . '/psy/psysh/src/CodeCleaner/ImplicitReturnPass.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Psy\\CodeCleaner\\InstanceOfPass' => $vendorDir . '/psy/psysh/src/CodeCleaner/InstanceOfPass.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Psy\\CodeCleaner\\InstanceOfPass' => $vendorDir . '/psy/psysh/src/CodeCleaner/InstanceOfPass.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5218,7 +5664,10 @@ return array(
     'Psy\\Command\\BufferCommand' => $vendorDir . '/psy/psysh/src/Command/BufferCommand.php',
     'Psy\\Command\\ClearCommand' => $vendorDir . '/psy/psysh/src/Command/ClearCommand.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Psy\\Command\\CodeArgumentParser' => $vendorDir . '/psy/psysh/src/Command/CodeArgumentParser.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Psy\\Command\\Command' => $vendorDir . '/psy/psysh/src/Command/Command.php',
@@ -5263,6 +5712,10 @@ return array(
     'Psy\\Exception\\RuntimeException' => $vendorDir . '/psy/psysh/src/Exception/RuntimeException.php',
     'Psy\\Exception\\ThrowUpException' => $vendorDir . '/psy/psysh/src/Exception/ThrowUpException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Psy\\Exception\\TypeErrorException' => $vendorDir . '/psy/psysh/src/Exception/TypeErrorException.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Psy\\Exception\\TypeErrorException' => $vendorDir . '/psy/psysh/src/Exception/TypeErrorException.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5276,6 +5729,10 @@ return array(
     'Psy\\Formatter\\CodeFormatter' => $vendorDir . '/psy/psysh/src/Formatter/CodeFormatter.php',
     'Psy\\Formatter\\DocblockFormatter' => $vendorDir . '/psy/psysh/src/Formatter/DocblockFormatter.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Psy\\Formatter\\Formatter' => $vendorDir . '/psy/psysh/src/Formatter/Formatter.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Psy\\Formatter\\Formatter' => $vendorDir . '/psy/psysh/src/Formatter/Formatter.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5294,6 +5751,10 @@ return array(
     'Psy\\ParserFactory' => $vendorDir . '/psy/psysh/src/ParserFactory.php',
     'Psy\\Readline\\GNUReadline' => $vendorDir . '/psy/psysh/src/Readline/GNUReadline.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Psy\\Readline\\HoaConsole' => $vendorDir . '/psy/psysh/src/Readline/HoaConsole.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Psy\\Readline\\HoaConsole' => $vendorDir . '/psy/psysh/src/Readline/HoaConsole.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -5357,7 +5818,13 @@ return array(
     'Psy\\Readline\\Transient' => $vendorDir . '/psy/psysh/src/Readline/Transient.php',
     'Psy\\Readline\\Userland' => $vendorDir . '/psy/psysh/src/Readline/Userland.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Psy\\Reflection\\ReflectionConstant' => $vendorDir . '/psy/psysh/src/Reflection/ReflectionConstant.php',
+=======
+    'Psy\\Reflection\\ReflectionClassConstant' => $vendorDir . '/psy/psysh/src/Reflection/ReflectionClassConstant.php',
+    'Psy\\Reflection\\ReflectionConstant' => $vendorDir . '/psy/psysh/src/Reflection/ReflectionConstant.php',
+    'Psy\\Reflection\\ReflectionConstant_' => $vendorDir . '/psy/psysh/src/Reflection/ReflectionConstant_.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Psy\\Reflection\\ReflectionClassConstant' => $vendorDir . '/psy/psysh/src/Reflection/ReflectionClassConstant.php',
     'Psy\\Reflection\\ReflectionConstant' => $vendorDir . '/psy/psysh/src/Reflection/ReflectionConstant.php',
@@ -5371,7 +5838,10 @@ return array(
     'Psy\\Sudo\\SudoVisitor' => $vendorDir . '/psy/psysh/src/Sudo/SudoVisitor.php',
     'Psy\\SuperglobalsEnv' => $vendorDir . '/psy/psysh/src/SuperglobalsEnv.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Psy\\SystemEnv' => $vendorDir . '/psy/psysh/src/SystemEnv.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Psy\\TabCompletion\\AutoCompleter' => $vendorDir . '/psy/psysh/src/TabCompletion/AutoCompleter.php',
@@ -5561,7 +6031,10 @@ return array(
     'RealRashid\\SweetAlert\\ToSweetAlert' => $vendorDir . '/realrashid/sweet-alert/src/ToSweetAlert.php',
     'RealRashid\\SweetAlert\\Toaster' => $vendorDir . '/realrashid/sweet-alert/src/Toaster.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'SQLite3Exception' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Sabberworm\\CSS\\CSSList\\AtRuleBlockList' => $vendorDir . '/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php',
@@ -5626,7 +6099,10 @@ return array(
     'SebastianBergmann\\CodeCoverage\\Driver\\XdebugNotEnabledException' => $vendorDir . '/phpunit/php-code-coverage/src/Exception/XdebugNotEnabledException.php',
     'SebastianBergmann\\CodeCoverage\\Exception' => $vendorDir . '/phpunit/php-code-coverage/src/Exception/Exception.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'SebastianBergmann\\CodeCoverage\\FileCouldNotBeWrittenException' => $vendorDir . '/phpunit/php-code-coverage/src/Exception/FileCouldNotBeWrittenException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'SebastianBergmann\\CodeCoverage\\Filter' => $vendorDir . '/phpunit/php-code-coverage/src/Filter.php',
@@ -5811,6 +6287,7 @@ return array(
     'SebastianBergmann\\Type\\VoidType' => $vendorDir . '/sebastian/type/src/type/VoidType.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Spatie\\Backtrace\\Arguments\\ArgumentReducers' => $vendorDir . '/spatie/backtrace/src/Arguments/ArgumentReducers.php',
     'Spatie\\Backtrace\\Arguments\\ProvidedArgument' => $vendorDir . '/spatie/backtrace/src/Arguments/ProvidedArgument.php',
     'Spatie\\Backtrace\\Arguments\\ReduceArgumentPayloadAction' => $vendorDir . '/spatie/backtrace/src/Arguments/ReduceArgumentPayloadAction.php',
@@ -5899,10 +6376,15 @@ return array(
     'Spatie\\ErrorSolutions\\Support\\Laravel\\LivewireComponentParser' => $vendorDir . '/spatie/error-solutions/src/Support/Laravel/LivewireComponentParser.php',
     'Spatie\\ErrorSolutions\\Support\\Laravel\\StringComparator' => $vendorDir . '/spatie/error-solutions/src/Support/Laravel/StringComparator.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\Backtrace\\Backtrace' => $vendorDir . '/spatie/backtrace/src/Backtrace.php',
     'Spatie\\Backtrace\\CodeSnippet' => $vendorDir . '/spatie/backtrace/src/CodeSnippet.php',
     'Spatie\\Backtrace\\File' => $vendorDir . '/spatie/backtrace/src/File.php',
     'Spatie\\Backtrace\\Frame' => $vendorDir . '/spatie/backtrace/src/Frame.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\FlareClient\\Api' => $vendorDir . '/spatie/flare-client-php/src/Api.php',
     'Spatie\\FlareClient\\Concerns\\HasContext' => $vendorDir . '/spatie/flare-client-php/src/Concerns/HasContext.php',
@@ -5938,7 +6420,10 @@ return array(
     'Spatie\\FlareClient\\Report' => $vendorDir . '/spatie/flare-client-php/src/Report.php',
     'Spatie\\FlareClient\\Solutions\\ReportSolution' => $vendorDir . '/spatie/flare-client-php/src/Solutions/ReportSolution.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Spatie\\FlareClient\\Support\\PhpStackFrameArgumentsFixer' => $vendorDir . '/spatie/flare-client-php/src/Support/PhpStackFrameArgumentsFixer.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\FlareClient\\Time\\SystemTime' => $vendorDir . '/spatie/flare-client-php/src/Time/SystemTime.php',
@@ -5947,7 +6432,10 @@ return array(
     'Spatie\\FlareClient\\Truncation\\ReportTrimmer' => $vendorDir . '/spatie/flare-client-php/src/Truncation/ReportTrimmer.php',
     'Spatie\\FlareClient\\Truncation\\TrimContextItemsStrategy' => $vendorDir . '/spatie/flare-client-php/src/Truncation/TrimContextItemsStrategy.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Spatie\\FlareClient\\Truncation\\TrimStackFrameArgumentsStrategy' => $vendorDir . '/spatie/flare-client-php/src/Truncation/TrimStackFrameArgumentsStrategy.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\FlareClient\\Truncation\\TrimStringsStrategy' => $vendorDir . '/spatie/flare-client-php/src/Truncation/TrimStringsStrategy.php',
@@ -5955,6 +6443,7 @@ return array(
     'Spatie\\FlareClient\\View' => $vendorDir . '/spatie/flare-client-php/src/View.php',
     'Spatie\\Ignition\\Config\\FileConfigManager' => $vendorDir . '/spatie/ignition/src/Config/FileConfigManager.php',
     'Spatie\\Ignition\\Config\\IgnitionConfig' => $vendorDir . '/spatie/ignition/src/Config/IgnitionConfig.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Spatie\\Ignition\\Contracts\\BaseSolution' => $vendorDir . '/spatie/error-solutions/legacy/ignition/Contracts/BaseSolution.php',
     'Spatie\\Ignition\\Contracts\\ConfigManager' => $vendorDir . '/spatie/ignition/src/Contracts/ConfigManager.php',
@@ -5981,6 +6470,8 @@ return array(
     'Spatie\\LaravelIgnition\\ArgumentReducers\\CollectionArgumentReducer' => $vendorDir . '/spatie/laravel-ignition/src/ArgumentReducers/CollectionArgumentReducer.php',
     'Spatie\\LaravelIgnition\\ArgumentReducers\\ModelArgumentReducer' => $vendorDir . '/spatie/laravel-ignition/src/ArgumentReducers/ModelArgumentReducer.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\Ignition\\Contracts\\BaseSolution' => $vendorDir . '/spatie/ignition/src/Contracts/BaseSolution.php',
     'Spatie\\Ignition\\Contracts\\ConfigManager' => $vendorDir . '/spatie/ignition/src/Contracts/ConfigManager.php',
     'Spatie\\Ignition\\Contracts\\HasSolutionsForThrowable' => $vendorDir . '/spatie/ignition/src/Contracts/HasSolutionsForThrowable.php',
@@ -5998,6 +6489,9 @@ return array(
     'Spatie\\Ignition\\Solutions\\SolutionTransformer' => $vendorDir . '/spatie/ignition/src/Solutions/SolutionTransformer.php',
     'Spatie\\Ignition\\Solutions\\SuggestCorrectVariableNameSolution' => $vendorDir . '/spatie/ignition/src/Solutions/SuggestCorrectVariableNameSolution.php',
     'Spatie\\Ignition\\Solutions\\SuggestImportSolution' => $vendorDir . '/spatie/ignition/src/Solutions/SuggestImportSolution.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\LaravelIgnition\\Commands\\SolutionMakeCommand' => $vendorDir . '/spatie/laravel-ignition/src/Commands/SolutionMakeCommand.php',
     'Spatie\\LaravelIgnition\\Commands\\SolutionProviderMakeCommand' => $vendorDir . '/spatie/laravel-ignition/src/Commands/SolutionProviderMakeCommand.php',
@@ -6012,10 +6506,15 @@ return array(
     'Spatie\\LaravelIgnition\\Exceptions\\ViewExceptionWithSolution' => $vendorDir . '/spatie/laravel-ignition/src/Exceptions/ViewExceptionWithSolution.php',
     'Spatie\\LaravelIgnition\\Facades\\Flare' => $vendorDir . '/spatie/laravel-ignition/src/Facades/Flare.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Spatie\\LaravelIgnition\\FlareMiddleware\\AddContext' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddContext.php',
     'Spatie\\LaravelIgnition\\FlareMiddleware\\AddDumps' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddDumps.php',
     'Spatie\\LaravelIgnition\\FlareMiddleware\\AddEnvironmentInformation' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddEnvironmentInformation.php',
     'Spatie\\LaravelIgnition\\FlareMiddleware\\AddExceptionHandledStatus' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddExceptionHandledStatus.php',
+=======
+    'Spatie\\LaravelIgnition\\FlareMiddleware\\AddDumps' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddDumps.php',
+    'Spatie\\LaravelIgnition\\FlareMiddleware\\AddEnvironmentInformation' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddEnvironmentInformation.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Spatie\\LaravelIgnition\\FlareMiddleware\\AddDumps' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddDumps.php',
     'Spatie\\LaravelIgnition\\FlareMiddleware\\AddEnvironmentInformation' => $vendorDir . '/spatie/laravel-ignition/src/FlareMiddleware/AddEnvironmentInformation.php',
@@ -6044,6 +6543,7 @@ return array(
     'Spatie\\LaravelIgnition\\Recorders\\QueryRecorder\\QueryRecorder' => $vendorDir . '/spatie/laravel-ignition/src/Recorders/QueryRecorder/QueryRecorder.php',
     'Spatie\\LaravelIgnition\\Renderers\\ErrorPageRenderer' => $vendorDir . '/spatie/laravel-ignition/src/Renderers/ErrorPageRenderer.php',
     'Spatie\\LaravelIgnition\\Renderers\\IgnitionExceptionRenderer' => $vendorDir . '/spatie/laravel-ignition/src/Renderers/IgnitionExceptionRenderer.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Spatie\\LaravelIgnition\\Solutions\\GenerateAppKeySolution' => $vendorDir . '/spatie/error-solutions/legacy/laravel-ignition/Solutions/GenerateAppKeySolution.php',
     'Spatie\\LaravelIgnition\\Solutions\\LivewireDiscoverSolution' => $vendorDir . '/spatie/error-solutions/legacy/laravel-ignition/Solutions/LivewireDiscoverSolution.php',
@@ -6088,6 +6588,8 @@ return array(
     'Spatie\\LaravelIgnition\\Support\\RunnableSolutionsGuard' => $vendorDir . '/spatie/laravel-ignition/src/Support/RunnableSolutionsGuard.php',
     'Spatie\\LaravelIgnition\\Support\\SentReports' => $vendorDir . '/spatie/laravel-ignition/src/Support/SentReports.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\LaravelIgnition\\Solutions\\GenerateAppKeySolution' => $vendorDir . '/spatie/laravel-ignition/src/Solutions/GenerateAppKeySolution.php',
     'Spatie\\LaravelIgnition\\Solutions\\LivewireDiscoverSolution' => $vendorDir . '/spatie/laravel-ignition/src/Solutions/LivewireDiscoverSolution.php',
     'Spatie\\LaravelIgnition\\Solutions\\MakeViewVariableOptionalSolution' => $vendorDir . '/spatie/laravel-ignition/src/Solutions/MakeViewVariableOptionalSolution.php',
@@ -6129,6 +6631,9 @@ return array(
     'Spatie\\LaravelIgnition\\Support\\RunnableSolutionsGuard' => $vendorDir . '/spatie/laravel-ignition/src/Support/RunnableSolutionsGuard.php',
     'Spatie\\LaravelIgnition\\Support\\SentReports' => $vendorDir . '/spatie/laravel-ignition/src/Support/SentReports.php',
     'Spatie\\LaravelIgnition\\Support\\StringComparator' => $vendorDir . '/spatie/laravel-ignition/src/Support/StringComparator.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => $vendorDir . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
     'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => $vendorDir . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
@@ -6178,7 +6683,10 @@ return array(
     'Symfony\\Component\\Console\\Command\\LockableTrait' => $vendorDir . '/symfony/console/Command/LockableTrait.php',
     'Symfony\\Component\\Console\\Command\\SignalableCommandInterface' => $vendorDir . '/symfony/console/Command/SignalableCommandInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Console\\Command\\TraceableCommand' => $vendorDir . '/symfony/console/Command/TraceableCommand.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Console\\Completion\\CompletionInput' => $vendorDir . '/symfony/console/Completion/CompletionInput.php',
@@ -6191,8 +6699,11 @@ return array(
     'Symfony\\Component\\Console\\ConsoleEvents' => $vendorDir . '/symfony/console/ConsoleEvents.php',
     'Symfony\\Component\\Console\\Cursor' => $vendorDir . '/symfony/console/Cursor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Console\\DataCollector\\CommandDataCollector' => $vendorDir . '/symfony/console/DataCollector/CommandDataCollector.php',
     'Symfony\\Component\\Console\\Debug\\CliRequest' => $vendorDir . '/symfony/console/Debug/CliRequest.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Console\\DependencyInjection\\AddConsoleCommandPass' => $vendorDir . '/symfony/console/DependencyInjection/AddConsoleCommandPass.php',
@@ -6202,7 +6713,10 @@ return array(
     'Symfony\\Component\\Console\\Descriptor\\JsonDescriptor' => $vendorDir . '/symfony/console/Descriptor/JsonDescriptor.php',
     'Symfony\\Component\\Console\\Descriptor\\MarkdownDescriptor' => $vendorDir . '/symfony/console/Descriptor/MarkdownDescriptor.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Console\\Descriptor\\ReStructuredTextDescriptor' => $vendorDir . '/symfony/console/Descriptor/ReStructuredTextDescriptor.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Console\\Descriptor\\TextDescriptor' => $vendorDir . '/symfony/console/Descriptor/TextDescriptor.php',
@@ -6221,7 +6735,10 @@ return array(
     'Symfony\\Component\\Console\\Exception\\MissingInputException' => $vendorDir . '/symfony/console/Exception/MissingInputException.php',
     'Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException' => $vendorDir . '/symfony/console/Exception/NamespaceNotFoundException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Console\\Exception\\RunCommandFailedException' => $vendorDir . '/symfony/console/Exception/RunCommandFailedException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Console\\Exception\\RuntimeException' => $vendorDir . '/symfony/console/Exception/RuntimeException.php',
@@ -6265,9 +6782,12 @@ return array(
     'Symfony\\Component\\Console\\Input\\StringInput' => $vendorDir . '/symfony/console/Input/StringInput.php',
     'Symfony\\Component\\Console\\Logger\\ConsoleLogger' => $vendorDir . '/symfony/console/Logger/ConsoleLogger.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Console\\Messenger\\RunCommandContext' => $vendorDir . '/symfony/console/Messenger/RunCommandContext.php',
     'Symfony\\Component\\Console\\Messenger\\RunCommandMessage' => $vendorDir . '/symfony/console/Messenger/RunCommandMessage.php',
     'Symfony\\Component\\Console\\Messenger\\RunCommandMessageHandler' => $vendorDir . '/symfony/console/Messenger/RunCommandMessageHandler.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Console\\Output\\AnsiColorMode' => $vendorDir . '/symfony/console/Output/AnsiColorMode.php',
@@ -6284,7 +6804,10 @@ return array(
     'Symfony\\Component\\Console\\Question\\ConfirmationQuestion' => $vendorDir . '/symfony/console/Question/ConfirmationQuestion.php',
     'Symfony\\Component\\Console\\Question\\Question' => $vendorDir . '/symfony/console/Question/Question.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Console\\SignalRegistry\\SignalMap' => $vendorDir . '/symfony/console/SignalRegistry/SignalMap.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Console\\SignalRegistry\\SignalRegistry' => $vendorDir . '/symfony/console/SignalRegistry/SignalRegistry.php',
@@ -6312,7 +6835,10 @@ return array(
     'Symfony\\Component\\CssSelector\\Node\\FunctionNode' => $vendorDir . '/symfony/css-selector/Node/FunctionNode.php',
     'Symfony\\Component\\CssSelector\\Node\\HashNode' => $vendorDir . '/symfony/css-selector/Node/HashNode.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\CssSelector\\Node\\MatchingNode' => $vendorDir . '/symfony/css-selector/Node/MatchingNode.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\CssSelector\\Node\\NegationNode' => $vendorDir . '/symfony/css-selector/Node/NegationNode.php',
@@ -6321,7 +6847,10 @@ return array(
     'Symfony\\Component\\CssSelector\\Node\\SelectorNode' => $vendorDir . '/symfony/css-selector/Node/SelectorNode.php',
     'Symfony\\Component\\CssSelector\\Node\\Specificity' => $vendorDir . '/symfony/css-selector/Node/Specificity.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\CssSelector\\Node\\SpecificityAdjustmentNode' => $vendorDir . '/symfony/css-selector/Node/SpecificityAdjustmentNode.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\CssSelector\\Parser\\Handler\\CommentHandler' => $vendorDir . '/symfony/css-selector/Parser/Handler/CommentHandler.php',
@@ -6365,7 +6894,10 @@ return array(
     'Symfony\\Component\\ErrorHandler\\ErrorRenderer\\CliErrorRenderer' => $vendorDir . '/symfony/error-handler/ErrorRenderer/CliErrorRenderer.php',
     'Symfony\\Component\\ErrorHandler\\ErrorRenderer\\ErrorRendererInterface' => $vendorDir . '/symfony/error-handler/ErrorRenderer/ErrorRendererInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\ErrorHandler\\ErrorRenderer\\FileLinkFormatter' => $vendorDir . '/symfony/error-handler/ErrorRenderer/FileLinkFormatter.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer' => $vendorDir . '/symfony/error-handler/ErrorRenderer/HtmlErrorRenderer.php',
@@ -6424,7 +6956,10 @@ return array(
     'Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException' => $vendorDir . '/symfony/http-foundation/Exception/SessionNotFoundException.php',
     'Symfony\\Component\\HttpFoundation\\Exception\\SuspiciousOperationException' => $vendorDir . '/symfony/http-foundation/Exception/SuspiciousOperationException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpFoundation\\Exception\\UnexpectedValueException' => $vendorDir . '/symfony/http-foundation/Exception/UnexpectedValueException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpFoundation\\ExpressionRequestMatcher' => $vendorDir . '/symfony/http-foundation/ExpressionRequestMatcher.php',
@@ -6508,7 +7043,10 @@ return array(
     'Symfony\\Component\\HttpFoundation\\Session\\Storage\\SessionStorageFactoryInterface' => $vendorDir . '/symfony/http-foundation/Session/Storage/SessionStorageFactoryInterface.php',
     'Symfony\\Component\\HttpFoundation\\Session\\Storage\\SessionStorageInterface' => $vendorDir . '/symfony/http-foundation/Session/Storage/SessionStorageInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpFoundation\\StreamedJsonResponse' => $vendorDir . '/symfony/http-foundation/StreamedJsonResponse.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpFoundation\\StreamedResponse' => $vendorDir . '/symfony/http-foundation/StreamedResponse.php',
@@ -6518,7 +7056,10 @@ return array(
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHasCookie' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseHasCookie.php',
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHasHeader' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseHasHeader.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHeaderLocationSame' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseHeaderLocationSame.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseHeaderSame' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseHeaderSame.php',
@@ -6526,6 +7067,7 @@ return array(
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseIsSuccessful' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseIsSuccessful.php',
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseIsUnprocessable' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseIsUnprocessable.php',
     'Symfony\\Component\\HttpFoundation\\Test\\Constraint\\ResponseStatusCodeSame' => $vendorDir . '/symfony/http-foundation/Test/Constraint/ResponseStatusCodeSame.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Symfony\\Component\\HttpFoundation\\UriSigner' => $vendorDir . '/symfony/http-foundation/UriSigner.php',
     'Symfony\\Component\\HttpFoundation\\UrlHelper' => $vendorDir . '/symfony/http-foundation/UrlHelper.php',
@@ -6540,10 +7082,15 @@ return array(
     'Symfony\\Component\\HttpKernel\\Attribute\\WithHttpStatus' => $vendorDir . '/symfony/http-kernel/Attribute/WithHttpStatus.php',
     'Symfony\\Component\\HttpKernel\\Attribute\\WithLogLevel' => $vendorDir . '/symfony/http-kernel/Attribute/WithLogLevel.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpFoundation\\UrlHelper' => $vendorDir . '/symfony/http-foundation/UrlHelper.php',
     'Symfony\\Component\\HttpKernel\\Attribute\\AsController' => $vendorDir . '/symfony/http-kernel/Attribute/AsController.php',
     'Symfony\\Component\\HttpKernel\\Attribute\\Cache' => $vendorDir . '/symfony/http-kernel/Attribute/Cache.php',
     'Symfony\\Component\\HttpKernel\\Attribute\\MapDateTime' => $vendorDir . '/symfony/http-kernel/Attribute/MapDateTime.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpKernel\\Bundle\\AbstractBundle' => $vendorDir . '/symfony/http-kernel/Bundle/AbstractBundle.php',
     'Symfony\\Component\\HttpKernel\\Bundle\\Bundle' => $vendorDir . '/symfony/http-kernel/Bundle/Bundle.php',
@@ -6567,9 +7114,13 @@ return array(
     'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/DefaultValueResolver.php',
     'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/NotTaggedControllerValueResolver.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\QueryParameterValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/QueryParameterValueResolver.php',
     'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/RequestAttributeValueResolver.php',
     'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestPayloadValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/RequestPayloadValueResolver.php',
+=======
+    'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/RequestAttributeValueResolver.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver' => $vendorDir . '/symfony/http-kernel/Controller/ArgumentResolver/RequestAttributeValueResolver.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -6602,10 +7153,15 @@ return array(
     'Symfony\\Component\\HttpKernel\\DataCollector\\RouterDataCollector' => $vendorDir . '/symfony/http-kernel/DataCollector/RouterDataCollector.php',
     'Symfony\\Component\\HttpKernel\\DataCollector\\TimeDataCollector' => $vendorDir . '/symfony/http-kernel/DataCollector/TimeDataCollector.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpKernel\\Debug\\ErrorHandlerConfigurator' => $vendorDir . '/symfony/http-kernel/Debug/ErrorHandlerConfigurator.php',
     'Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter' => $vendorDir . '/symfony/http-kernel/Debug/FileLinkFormatter.php',
     'Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher' => $vendorDir . '/symfony/http-kernel/Debug/TraceableEventDispatcher.php',
     'Symfony\\Component\\HttpKernel\\Debug\\VirtualRequestStack' => $vendorDir . '/symfony/http-kernel/Debug/VirtualRequestStack.php',
+=======
+    'Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter' => $vendorDir . '/symfony/http-kernel/Debug/FileLinkFormatter.php',
+    'Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher' => $vendorDir . '/symfony/http-kernel/Debug/TraceableEventDispatcher.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter' => $vendorDir . '/symfony/http-kernel/Debug/FileLinkFormatter.php',
     'Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher' => $vendorDir . '/symfony/http-kernel/Debug/TraceableEventDispatcher.php',
@@ -6665,7 +7221,10 @@ return array(
     'Symfony\\Component\\HttpKernel\\Exception\\PreconditionFailedHttpException' => $vendorDir . '/symfony/http-kernel/Exception/PreconditionFailedHttpException.php',
     'Symfony\\Component\\HttpKernel\\Exception\\PreconditionRequiredHttpException' => $vendorDir . '/symfony/http-kernel/Exception/PreconditionRequiredHttpException.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpKernel\\Exception\\ResolverNotFoundException' => $vendorDir . '/symfony/http-kernel/Exception/ResolverNotFoundException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpKernel\\Exception\\ServiceUnavailableHttpException' => $vendorDir . '/symfony/http-kernel/Exception/ServiceUnavailableHttpException.php',
@@ -6702,7 +7261,10 @@ return array(
     'Symfony\\Component\\HttpKernel\\KernelEvents' => $vendorDir . '/symfony/http-kernel/KernelEvents.php',
     'Symfony\\Component\\HttpKernel\\KernelInterface' => $vendorDir . '/symfony/http-kernel/KernelInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\HttpKernel\\Log\\DebugLoggerConfigurator' => $vendorDir . '/symfony/http-kernel/Log/DebugLoggerConfigurator.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\HttpKernel\\Log\\DebugLoggerInterface' => $vendorDir . '/symfony/http-kernel/Log/DebugLoggerInterface.php',
@@ -6735,7 +7297,10 @@ return array(
     'Symfony\\Component\\Mailer\\Exception\\TransportException' => $vendorDir . '/symfony/mailer/Exception/TransportException.php',
     'Symfony\\Component\\Mailer\\Exception\\TransportExceptionInterface' => $vendorDir . '/symfony/mailer/Exception/TransportExceptionInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Mailer\\Exception\\UnexpectedResponseException' => $vendorDir . '/symfony/mailer/Exception/UnexpectedResponseException.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Mailer\\Exception\\UnsupportedSchemeException' => $vendorDir . '/symfony/mailer/Exception/UnsupportedSchemeException.php',
@@ -6845,7 +7410,10 @@ return array(
     'Symfony\\Component\\Mime\\Test\\Constraint\\EmailHeaderSame' => $vendorDir . '/symfony/mime/Test/Constraint/EmailHeaderSame.php',
     'Symfony\\Component\\Mime\\Test\\Constraint\\EmailHtmlBodyContains' => $vendorDir . '/symfony/mime/Test/Constraint/EmailHtmlBodyContains.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Mime\\Test\\Constraint\\EmailSubjectContains' => $vendorDir . '/symfony/mime/Test/Constraint/EmailSubjectContains.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Mime\\Test\\Constraint\\EmailTextBodyContains' => $vendorDir . '/symfony/mime/Test/Constraint/EmailTextBodyContains.php',
@@ -6855,6 +7423,7 @@ return array(
     'Symfony\\Component\\Process\\Exception\\ProcessFailedException' => $vendorDir . '/symfony/process/Exception/ProcessFailedException.php',
     'Symfony\\Component\\Process\\Exception\\ProcessSignaledException' => $vendorDir . '/symfony/process/Exception/ProcessSignaledException.php',
     'Symfony\\Component\\Process\\Exception\\ProcessTimedOutException' => $vendorDir . '/symfony/process/Exception/ProcessTimedOutException.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Symfony\\Component\\Process\\Exception\\RunProcessFailedException' => $vendorDir . '/symfony/process/Exception/RunProcessFailedException.php',
     'Symfony\\Component\\Process\\Exception\\RuntimeException' => $vendorDir . '/symfony/process/Exception/RuntimeException.php',
@@ -6867,11 +7436,16 @@ return array(
     'Symfony\\Component\\Process\\PhpProcess' => $vendorDir . '/symfony/process/PhpProcess.php',
     'Symfony\\Component\\Process\\PhpSubprocess' => $vendorDir . '/symfony/process/PhpSubprocess.php',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Process\\Exception\\RuntimeException' => $vendorDir . '/symfony/process/Exception/RuntimeException.php',
     'Symfony\\Component\\Process\\ExecutableFinder' => $vendorDir . '/symfony/process/ExecutableFinder.php',
     'Symfony\\Component\\Process\\InputStream' => $vendorDir . '/symfony/process/InputStream.php',
     'Symfony\\Component\\Process\\PhpExecutableFinder' => $vendorDir . '/symfony/process/PhpExecutableFinder.php',
     'Symfony\\Component\\Process\\PhpProcess' => $vendorDir . '/symfony/process/PhpProcess.php',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Process\\Pipes\\AbstractPipes' => $vendorDir . '/symfony/process/Pipes/AbstractPipes.php',
     'Symfony\\Component\\Process\\Pipes\\PipesInterface' => $vendorDir . '/symfony/process/Pipes/PipesInterface.php',
@@ -6882,9 +7456,13 @@ return array(
     'Symfony\\Component\\Routing\\Alias' => $vendorDir . '/symfony/routing/Alias.php',
     'Symfony\\Component\\Routing\\Annotation\\Route' => $vendorDir . '/symfony/routing/Annotation/Route.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Routing\\Attribute\\Route' => $vendorDir . '/symfony/routing/Attribute/Route.php',
     'Symfony\\Component\\Routing\\CompiledRoute' => $vendorDir . '/symfony/routing/CompiledRoute.php',
     'Symfony\\Component\\Routing\\DependencyInjection\\AddExpressionLanguageProvidersPass' => $vendorDir . '/symfony/routing/DependencyInjection/AddExpressionLanguageProvidersPass.php',
+=======
+    'Symfony\\Component\\Routing\\CompiledRoute' => $vendorDir . '/symfony/routing/CompiledRoute.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Symfony\\Component\\Routing\\CompiledRoute' => $vendorDir . '/symfony/routing/CompiledRoute.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -6910,9 +7488,12 @@ return array(
     'Symfony\\Component\\Routing\\Loader\\AnnotationDirectoryLoader' => $vendorDir . '/symfony/routing/Loader/AnnotationDirectoryLoader.php',
     'Symfony\\Component\\Routing\\Loader\\AnnotationFileLoader' => $vendorDir . '/symfony/routing/Loader/AnnotationFileLoader.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Routing\\Loader\\AttributeClassLoader' => $vendorDir . '/symfony/routing/Loader/AttributeClassLoader.php',
     'Symfony\\Component\\Routing\\Loader\\AttributeDirectoryLoader' => $vendorDir . '/symfony/routing/Loader/AttributeDirectoryLoader.php',
     'Symfony\\Component\\Routing\\Loader\\AttributeFileLoader' => $vendorDir . '/symfony/routing/Loader/AttributeFileLoader.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Routing\\Loader\\ClosureLoader' => $vendorDir . '/symfony/routing/Loader/ClosureLoader.php',
@@ -6983,8 +7564,11 @@ return array(
     'Symfony\\Component\\Translation\\DataCollectorTranslator' => $vendorDir . '/symfony/translation/DataCollectorTranslator.php',
     'Symfony\\Component\\Translation\\DataCollector\\TranslationDataCollector' => $vendorDir . '/symfony/translation/DataCollector/TranslationDataCollector.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\Translation\\DependencyInjection\\DataCollectorTranslatorPass' => $vendorDir . '/symfony/translation/DependencyInjection/DataCollectorTranslatorPass.php',
     'Symfony\\Component\\Translation\\DependencyInjection\\LoggingTranslatorPass' => $vendorDir . '/symfony/translation/DependencyInjection/LoggingTranslatorPass.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\Translation\\DependencyInjection\\TranslationDumperPass' => $vendorDir . '/symfony/translation/DependencyInjection/TranslationDumperPass.php',
@@ -7127,7 +7711,10 @@ return array(
     'Symfony\\Component\\VarDumper\\Caster\\ReflectionCaster' => $vendorDir . '/symfony/var-dumper/Caster/ReflectionCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\ResourceCaster' => $vendorDir . '/symfony/var-dumper/Caster/ResourceCaster.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\VarDumper\\Caster\\ScalarStub' => $vendorDir . '/symfony/var-dumper/Caster/ScalarStub.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\VarDumper\\Caster\\SplCaster' => $vendorDir . '/symfony/var-dumper/Caster/SplCaster.php',
@@ -7135,7 +7722,10 @@ return array(
     'Symfony\\Component\\VarDumper\\Caster\\SymfonyCaster' => $vendorDir . '/symfony/var-dumper/Caster/SymfonyCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\TraceStub' => $vendorDir . '/symfony/var-dumper/Caster/TraceStub.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\VarDumper\\Caster\\UninitializedStub' => $vendorDir . '/symfony/var-dumper/Caster/UninitializedStub.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\VarDumper\\Caster\\UuidCaster' => $vendorDir . '/symfony/var-dumper/Caster/UuidCaster.php',
@@ -7147,7 +7737,10 @@ return array(
     'Symfony\\Component\\VarDumper\\Cloner\\Data' => $vendorDir . '/symfony/var-dumper/Cloner/Data.php',
     'Symfony\\Component\\VarDumper\\Cloner\\DumperInterface' => $vendorDir . '/symfony/var-dumper/Cloner/DumperInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Component\\VarDumper\\Cloner\\Internal\\NoDefault' => $vendorDir . '/symfony/var-dumper/Cloner/Internal/NoDefault.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Component\\VarDumper\\Cloner\\Stub' => $vendorDir . '/symfony/var-dumper/Cloner/Stub.php',
@@ -7189,9 +7782,13 @@ return array(
     'Symfony\\Contracts\\Service\\Attribute\\SubscribedService' => $vendorDir . '/symfony/service-contracts/Attribute/SubscribedService.php',
     'Symfony\\Contracts\\Service\\ResetInterface' => $vendorDir . '/symfony/service-contracts/ResetInterface.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Contracts\\Service\\ServiceCollectionInterface' => $vendorDir . '/symfony/service-contracts/ServiceCollectionInterface.php',
     'Symfony\\Contracts\\Service\\ServiceLocatorTrait' => $vendorDir . '/symfony/service-contracts/ServiceLocatorTrait.php',
     'Symfony\\Contracts\\Service\\ServiceMethodsSubscriberTrait' => $vendorDir . '/symfony/service-contracts/ServiceMethodsSubscriberTrait.php',
+=======
+    'Symfony\\Contracts\\Service\\ServiceLocatorTrait' => $vendorDir . '/symfony/service-contracts/ServiceLocatorTrait.php',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'Symfony\\Contracts\\Service\\ServiceLocatorTrait' => $vendorDir . '/symfony/service-contracts/ServiceLocatorTrait.php',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -7214,7 +7811,10 @@ return array(
     'Symfony\\Polyfill\\Php80\\Php80' => $vendorDir . '/symfony/polyfill-php80/Php80.php',
     'Symfony\\Polyfill\\Php80\\PhpToken' => $vendorDir . '/symfony/polyfill-php80/PhpToken.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Symfony\\Polyfill\\Php83\\Php83' => $vendorDir . '/symfony/polyfill-php83/Php83.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Symfony\\Polyfill\\Uuid\\Uuid' => $vendorDir . '/symfony/polyfill-uuid/Uuid.php',
@@ -7289,9 +7889,12 @@ return array(
     'Whoops\\Handler\\PrettyPageHandler' => $vendorDir . '/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php',
     'Whoops\\Handler\\XmlResponseHandler' => $vendorDir . '/filp/whoops/src/Whoops/Handler/XmlResponseHandler.php',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Whoops\\Inspector\\InspectorFactory' => $vendorDir . '/filp/whoops/src/Whoops/Inspector/InspectorFactory.php',
     'Whoops\\Inspector\\InspectorFactoryInterface' => $vendorDir . '/filp/whoops/src/Whoops/Inspector/InspectorFactoryInterface.php',
     'Whoops\\Inspector\\InspectorInterface' => $vendorDir . '/filp/whoops/src/Whoops/Inspector/InspectorInterface.php',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'Whoops\\Run' => $vendorDir . '/filp/whoops/src/Whoops/Run.php',

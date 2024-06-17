@@ -45,7 +45,11 @@ final class Parser
      * @throws UnknownOptionException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function parse(array $argv, string $shortOptions, ?array $longOptions = null): array
+=======
+    public function parse(array $argv, string $shortOptions, array $longOptions = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function parse(array $argv, string $shortOptions, array $longOptions = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +102,11 @@ final class Parser
                     $longOptions,
                     $options,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $argv,
+=======
+                    $argv
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $argv
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,7 +120,11 @@ final class Parser
                 $shortOptions,
                 $options,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $argv,
+=======
+                $argv
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $argv
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

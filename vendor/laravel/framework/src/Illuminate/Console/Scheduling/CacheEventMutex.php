@@ -3,7 +3,10 @@
 namespace Illuminate\Console\Scheduling;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Cache\DynamoDbStore;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Cache\Factory as Cache;
@@ -45,7 +48,11 @@ class CacheEventMutex implements EventMutex, CacheAware
     public function create(Event $event)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->shouldUseLocks($this->cache->store($this->store)->getStore())) {
+=======
+        if ($this->cache->store($this->store)->getStore() instanceof LockProvider) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->cache->store($this->store)->getStore() instanceof LockProvider) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,7 +75,11 @@ class CacheEventMutex implements EventMutex, CacheAware
     public function exists(Event $event)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->shouldUseLocks($this->cache->store($this->store)->getStore())) {
+=======
+        if ($this->cache->store($this->store)->getStore() instanceof LockProvider) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->cache->store($this->store)->getStore() instanceof LockProvider) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -89,7 +100,11 @@ class CacheEventMutex implements EventMutex, CacheAware
     public function forget(Event $event)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->shouldUseLocks($this->cache->store($this->store)->getStore())) {
+=======
+        if ($this->cache->store($this->store)->getStore() instanceof LockProvider) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->cache->store($this->store)->getStore() instanceof LockProvider) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -105,6 +120,7 @@ class CacheEventMutex implements EventMutex, CacheAware
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if the given store should use locks for cache event mutexes.
      *
      * @param  \Illuminate\Contracts\Cache\Store  $store
@@ -116,6 +132,8 @@ class CacheEventMutex implements EventMutex, CacheAware
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Specify the cache store that should be used.

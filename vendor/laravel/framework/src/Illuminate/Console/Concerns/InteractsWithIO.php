@@ -451,6 +451,7 @@ trait InteractsWithIO
         return $this->output;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Get the output component factory implementation.
@@ -461,6 +462,8 @@ trait InteractsWithIO
     {
         return $this->components;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

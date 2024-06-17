@@ -20,6 +20,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  *
  * @author Francesco Levorato <git@flevour.net>
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @author Jules Pietri <jules@heahprod.com>
  */
 final class ConsoleTerminateEvent extends ConsoleEvent
@@ -33,6 +34,8 @@ final class ConsoleTerminateEvent extends ConsoleEvent
     ) {
         parent::__construct($command, $input, $output);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class ConsoleTerminateEvent extends ConsoleEvent
 {
@@ -43,6 +46,9 @@ final class ConsoleTerminateEvent extends ConsoleEvent
         parent::__construct($command, $input, $output);
 
         $this->setExitCode($exitCode);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -56,11 +62,14 @@ final class ConsoleTerminateEvent extends ConsoleEvent
         return $this->exitCode;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function getInterruptingSignal(): ?int
     {
         return $this->interruptingSignal;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

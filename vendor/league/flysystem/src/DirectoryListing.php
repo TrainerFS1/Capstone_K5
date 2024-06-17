@@ -22,11 +22,14 @@ class DirectoryListing implements IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param callable(T): bool $filter
      *
      * @return DirectoryListing<T>
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function filter(callable $filter): DirectoryListing
@@ -43,6 +46,7 @@ class DirectoryListing implements IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @template R
      *
@@ -50,6 +54,8 @@ class DirectoryListing implements IteratorAggregate
      *
      * @return DirectoryListing<R>
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function map(callable $mapper): DirectoryListing
@@ -64,9 +70,12 @@ class DirectoryListing implements IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return DirectoryListing<T>
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function sortByPath(): DirectoryListing

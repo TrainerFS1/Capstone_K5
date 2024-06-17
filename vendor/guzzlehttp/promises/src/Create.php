@@ -1,8 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace GuzzleHttp\Promise;
@@ -14,13 +17,19 @@ final class Create
      *
      * @param mixed $value Promise or value.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function promiseFor($value): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
     public static function promiseFor($value)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($value instanceof PromiseInterface) {
@@ -34,7 +43,10 @@ final class Create
             $promise = new Promise($wfn, $cfn);
             $value->then([$promise, 'resolve'], [$promise, 'reject']);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $promise;
@@ -49,13 +61,19 @@ final class Create
      *
      * @param mixed $reason Promise or reason.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function rejectionFor($reason): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return PromiseInterface
      */
     public static function rejectionFor($reason)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($reason instanceof PromiseInterface) {
@@ -70,17 +88,23 @@ final class Create
      *
      * @param mixed $reason
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function exceptionFor($reason): \Throwable
     {
         if ($reason instanceof \Throwable) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return \Exception|\Throwable
      */
     public static function exceptionFor($reason)
     {
         if ($reason instanceof \Exception || $reason instanceof \Throwable) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $reason;
         }
@@ -93,13 +117,19 @@ final class Create
      *
      * @param mixed $value
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function iterFor($value): \Iterator
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return \Iterator
      */
     public static function iterFor($value)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($value instanceof \Iterator) {

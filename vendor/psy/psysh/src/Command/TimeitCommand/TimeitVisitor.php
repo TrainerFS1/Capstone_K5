@@ -85,7 +85,11 @@ class TimeitVisitor extends NodeVisitorAbstract
     {
         // prepend a `markStart` call
 <<<<<<< HEAD
+<<<<<<< HEAD
         \array_unshift($nodes, new Expression($this->getStartCall(), []));
+=======
+        \array_unshift($nodes, $this->maybeExpression($this->getStartCall()));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         \array_unshift($nodes, $this->maybeExpression($this->getStartCall()));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -102,7 +106,11 @@ class TimeitVisitor extends NodeVisitorAbstract
             // nothing to do here, we're already ending with a return call
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $nodes[] = new Expression($this->getEndCall(), []);
+=======
+            $nodes[] = $this->maybeExpression($this->getEndCall());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $nodes[] = $this->maybeExpression($this->getEndCall());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,7 +137,11 @@ class TimeitVisitor extends NodeVisitorAbstract
      * @param Expr|null $arg
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getEndCall(?Expr $arg = null): StaticCall
+=======
+    private function getEndCall(Expr $arg = null): StaticCall
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getEndCall(Expr $arg = null): StaticCall
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -141,7 +153,10 @@ class TimeitVisitor extends NodeVisitorAbstract
         return new StaticCall(new FullyQualifiedName(TimeitCommand::class), 'markEnd', [new Arg($arg)]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Compatibility shim for PHP Parser 3.x.
@@ -157,5 +172,8 @@ class TimeitVisitor extends NodeVisitorAbstract
     {
         return \class_exists(Expression::class) ? new Expression($expr, $attrs) : $expr;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

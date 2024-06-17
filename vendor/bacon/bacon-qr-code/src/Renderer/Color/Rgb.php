@@ -9,7 +9,10 @@ final class Rgb implements ColorInterface
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var int
      */
     private $red;
@@ -25,13 +28,20 @@ final class Rgb implements ColorInterface
     private $blue;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $red the red amount of the color, 0 to 255
      * @param int $green the green amount of the color, 0 to 255
      * @param int $blue the blue amount of the color, 0 to 255
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(private readonly int $red, private readonly int $green, private readonly int $blue)
+=======
+    public function __construct(int $red, int $green, int $blue)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(int $red, int $green, int $blue)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -48,11 +58,17 @@ final class Rgb implements ColorInterface
             throw new Exception\InvalidArgumentException('Blue must be between 0 and 255');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->red = $red;
         $this->green = $green;
         $this->blue = $blue;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -84,10 +100,13 @@ final class Rgb implements ColorInterface
         $k = min($c, $m, $y);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($k === 0) {
             return new Cmyk(0, 0, 0, 0);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new Cmyk(

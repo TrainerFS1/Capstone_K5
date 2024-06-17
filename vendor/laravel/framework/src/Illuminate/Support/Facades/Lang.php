@@ -7,10 +7,16 @@ namespace Illuminate\Support\Facades;
  * @method static bool has(string $key, string|null $locale = null, bool $fallback = true)
  * @method static string|array get(string $key, array $replace = [], string|null $locale = null, bool $fallback = true)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static string choice(string $key, \Countable|int|float|array $number, array $replace = [], string|null $locale = null)
  * @method static void addLines(array $lines, string $locale, string $namespace = '*')
  * @method static void load(string $namespace, string $group, string $locale)
  * @method static \Illuminate\Translation\Translator handleMissingKeysUsing(callable|null $callback)
+=======
+ * @method static string choice(string $key, \Countable|int|array $number, array $replace = [], string|null $locale = null)
+ * @method static void addLines(array $lines, string $locale, string $namespace = '*')
+ * @method static void load(string $namespace, string $group, string $locale)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static string choice(string $key, \Countable|int|array $number, array $replace = [], string|null $locale = null)
  * @method static void addLines(array $lines, string $locale, string $namespace = '*')

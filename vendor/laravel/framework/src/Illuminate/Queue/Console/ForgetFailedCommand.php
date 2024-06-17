@@ -26,7 +26,11 @@ class ForgetFailedCommand extends Command
      * Execute the console command.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return int|null
+=======
+     * @return void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -38,8 +42,11 @@ class ForgetFailedCommand extends Command
         } else {
             $this->components->error('No failed job matches the given ID.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return 1;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }

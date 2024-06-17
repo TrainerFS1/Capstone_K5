@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,15 +28,22 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Mockery\Generator\StringManipulation\Pass\AvoidMethodClashPass;
 use Mockery\Generator\StringManipulation\Pass\CallTypeHintPass;
 use Mockery\Generator\StringManipulation\Pass\ClassAttributesPass;
+=======
+use Mockery\Generator\StringManipulation\Pass\CallTypeHintPass;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Mockery\Generator\StringManipulation\Pass\CallTypeHintPass;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -49,6 +59,7 @@ use Mockery\Generator\StringManipulation\Pass\RemoveBuiltinMethodsThatAreFinalPa
 use Mockery\Generator\StringManipulation\Pass\RemoveDestructorPass;
 use Mockery\Generator\StringManipulation\Pass\RemoveUnserializeForInternalSerializableClassesPass;
 use Mockery\Generator\StringManipulation\Pass\TraitPass;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use function file_get_contents;
 
@@ -100,11 +111,16 @@ class StringManipulationGenerator implements Generator
         return new MockDefinition($namedConfig, $code);
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Generator\StringManipulation\Pass\AvoidMethodClashPass;
 
 class StringManipulationGenerator implements Generator
 {
     protected $passes = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -129,10 +145,13 @@ class StringManipulationGenerator implements Generator
             new RemoveDestructorPass(),
             new ConstantsPass(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             new ClassAttributesPass(),
         ]);
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]);
     }
 
@@ -159,5 +178,8 @@ class StringManipulationGenerator implements Generator
     {
         $this->passes[] = $pass;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

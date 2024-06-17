@@ -13,7 +13,10 @@ use function sprintf;
 use function trim;
 use PHPUnit\Framework\ExpectationFailedException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\Comparator\ComparisonFailure;
@@ -60,7 +63,11 @@ final class IsEqualWithDelta extends Constraint
             $comparator = $comparatorFactory->getComparatorFor(
                 $this->value,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $other,
+=======
+                $other
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $other
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,7 +77,11 @@ final class IsEqualWithDelta extends Constraint
                 $this->value,
                 $other,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->delta,
+=======
+                $this->delta
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->delta
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -83,7 +94,11 @@ final class IsEqualWithDelta extends Constraint
             throw new ExpectationFailedException(
                 trim($description . "\n" . $f->getMessage()),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $f,
+=======
+                $f
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $f
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,6 +112,7 @@ final class IsEqualWithDelta extends Constraint
      * Returns a string representation of the constraint.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toString(bool $exportObjects = false): string
     {
         return sprintf(
@@ -104,12 +120,17 @@ final class IsEqualWithDelta extends Constraint
             Exporter::export($this->value, $exportObjects),
             $this->delta,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function toString(): string
     {
         return sprintf(
             'is equal to %s with delta <%F>>',
             $this->exporter()->export($this->value),
             $this->delta
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }

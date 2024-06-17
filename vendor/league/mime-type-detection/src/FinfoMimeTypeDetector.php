@@ -10,7 +10,11 @@ use const PATHINFO_EXTENSION;
 use finfo;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class FinfoMimeTypeDetector implements MimeTypeDetector, ExtensionLookup
+=======
+class FinfoMimeTypeDetector implements MimeTypeDetector
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class FinfoMimeTypeDetector implements MimeTypeDetector
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,6 +98,7 @@ class FinfoMimeTypeDetector implements MimeTypeDetector
         return (string) substr($contents, 0, $this->bufferSampleSize);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function lookupExtension(string $mimetype): ?string
     {
@@ -108,6 +113,8 @@ class FinfoMimeTypeDetector implements MimeTypeDetector
             ? $this->extensionMap->lookupAllExtensions($mimetype)
             : [];
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

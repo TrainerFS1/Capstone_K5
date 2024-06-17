@@ -9,7 +9,11 @@ functionality like query string parsing.
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Features
+=======
+# Stream implementation
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 # Stream implementation
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -18,6 +22,7 @@ This package comes with a number of stream implementations and stream
 decorators.
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Installation
 
@@ -33,6 +38,8 @@ composer require guzzlehttp/psr7
 | 2.x     | Latest              | >=7.2.5,<8.4 |
 
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## AppendStream
@@ -267,8 +274,11 @@ class EofCallbackStream implements StreamInterface
     private $callback;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private $stream;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(StreamInterface $stream, callable $cb)
@@ -284,7 +294,11 @@ class EofCallbackStream implements StreamInterface
         // Invoke the callback when EOF is hit.
         if ($this->eof()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             ($this->callback)();
+=======
+            call_user_func($this->callback);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             call_user_func($this->callback);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -652,7 +666,11 @@ An instance of `Psr\Http\Message\UriInterface` can either be an absolute URI or 
 An absolute URI has a scheme. A relative reference is used to express a URI relative to another URI,
 the base URI. Relative references can be divided into several forms according to
 <<<<<<< HEAD
+<<<<<<< HEAD
 [RFC 3986 Section 4.2](https://datatracker.ietf.org/doc/html/rfc3986#section-4.2):
+=======
+[RFC 3986 Section 4.2](https://tools.ietf.org/html/rfc3986#section-4.2):
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [RFC 3986 Section 4.2](https://tools.ietf.org/html/rfc3986#section-4.2):
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -715,8 +733,13 @@ or the standard port. This method can be used independently of the implementatio
 
 Composes a URI reference string from its various components according to
 <<<<<<< HEAD
+<<<<<<< HEAD
 [RFC 3986 Section 5.3](https://datatracker.ietf.org/doc/html/rfc3986#section-5.3). Usually this method does not need
 to be called manually but instead is used indirectly via `Psr\Http\Message\UriInterface::__toString`.
+=======
+[RFC 3986 Section 5.3](https://tools.ietf.org/html/rfc3986#section-5.3). Usually this method does not need to be called
+manually but instead is used indirectly via `Psr\Http\Message\UriInterface::__toString`.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [RFC 3986 Section 5.3](https://tools.ietf.org/html/rfc3986#section-5.3). Usually this method does not need to be called
 manually but instead is used indirectly via `Psr\Http\Message\UriInterface::__toString`.
@@ -765,8 +788,13 @@ Determines if a modified URL should be considered cross-origin with respect to a
 
 `GuzzleHttp\Psr7\UriResolver` provides methods to resolve a URI reference in the context of a base URI according
 <<<<<<< HEAD
+<<<<<<< HEAD
 to [RFC 3986 Section 5](https://datatracker.ietf.org/doc/html/rfc3986#section-5). This is for example also what web
 browsers do when resolving a link in a website based on the current request URI.
+=======
+to [RFC 3986 Section 5](https://tools.ietf.org/html/rfc3986#section-5). This is for example also what web browsers
+do when resolving a link in a website based on the current request URI.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 to [RFC 3986 Section 5](https://tools.ietf.org/html/rfc3986#section-5). This is for example also what web browsers
 do when resolving a link in a website based on the current request URI.
@@ -784,7 +812,11 @@ Converts the relative URI into a new URI that is resolved against the base URI.
 
 Removes dot segments from a path and returns the new path according to
 <<<<<<< HEAD
+<<<<<<< HEAD
 [RFC 3986 Section 5.2.4](https://datatracker.ietf.org/doc/html/rfc3986#section-5.2.4).
+=======
+[RFC 3986 Section 5.2.4](https://tools.ietf.org/html/rfc3986#section-5.2.4).
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [RFC 3986 Section 5.2.4](https://tools.ietf.org/html/rfc3986#section-5.2.4).
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -814,7 +846,11 @@ echo UriResolver::relativize($base, new Uri('http://example.org/a/b/'));   // pr
 
 `GuzzleHttp\Psr7\UriNormalizer` provides methods to normalize and compare URIs according to
 <<<<<<< HEAD
+<<<<<<< HEAD
 [RFC 3986 Section 6](https://datatracker.ietf.org/doc/html/rfc3986#section-6).
+=======
+[RFC 3986 Section 6](https://tools.ietf.org/html/rfc3986#section-6).
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [RFC 3986 Section 6](https://tools.ietf.org/html/rfc3986#section-6).
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -900,7 +936,10 @@ equivalence or difference of relative references does not mean anything.
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## Version Guidance
 
 | Version | Status         | PHP Version      |
@@ -909,6 +948,9 @@ equivalence or difference of relative references does not mean anything.
 | 2.x     | Latest         | ^7.2.5 \|\| ^8.0 |
 
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## Security
 

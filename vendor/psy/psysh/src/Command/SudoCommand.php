@@ -15,6 +15,10 @@ use PhpParser\NodeTraverser;
 use PhpParser\PrettyPrinter\Standard as Printer;
 use Psy\Input\CodeArgument;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Psy\ParserFactory;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Psy\ParserFactory;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -39,9 +43,15 @@ class SudoCommand extends Command
     public function __construct($name = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->parser = new CodeArgumentParser();
 
         // @todo Pass visitor directly to once we drop support for PHP-Parser 4.x
+=======
+        $parserFactory = new ParserFactory();
+        $this->parser = $parserFactory->createParser();
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $parserFactory = new ParserFactory();
         $this->parser = $parserFactory->createParser();
@@ -108,7 +118,11 @@ HELP
      * @return int 0 if everything went fine, or an exit code
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
+=======
+    protected function execute(InputInterface $input, OutputInterface $output)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function execute(InputInterface $input, OutputInterface $output)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -125,13 +139,19 @@ HELP
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $nodes = $this->traverser->traverse($this->parser->parse($code));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (\strpos($code, '<?') === false) {
             $code = '<?php '.$code;
         }
 
         $nodes = $this->traverser->traverse($this->parse($code));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $sudoCode = $this->printer->prettyPrint($nodes);
@@ -141,7 +161,10 @@ HELP
         return 0;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Lex and parse a string of code into statements.
@@ -163,5 +186,8 @@ HELP
             return $this->parser->parse($code.';');
         }
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

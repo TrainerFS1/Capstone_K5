@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use ReflectionAttribute;
 use ReflectionClass;
@@ -133,6 +140,8 @@ class DefinedTargetClass implements TargetClassInterface
      * @return class-string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class DefinedTargetClass implements TargetClassInterface
 {
     private $rfc;
@@ -149,6 +158,9 @@ class DefinedTargetClass implements TargetClassInterface
         return new self(new \ReflectionClass($name), $alias);
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getName()
     {
@@ -156,10 +168,13 @@ class DefinedTargetClass implements TargetClassInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isAbstract()
     {
         return $this->rfc->isAbstract();
@@ -190,6 +205,9 @@ class DefinedTargetClass implements TargetClassInterface
         return $this->getName();
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getNamespaceName()
     {
@@ -197,15 +215,21 @@ class DefinedTargetClass implements TargetClassInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function inNamespace()
     {
         return $this->rfc->inNamespace();
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getShortName()
     {
@@ -213,15 +237,21 @@ class DefinedTargetClass implements TargetClassInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return bool
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function implementsInterface($interface)
     {
         return $this->rfc->implementsInterface($interface);
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function hasInternalAncestor()
     {
@@ -235,7 +265,10 @@ class DefinedTargetClass implements TargetClassInterface
                 return true;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $child = $parent;
@@ -243,6 +276,7 @@ class DefinedTargetClass implements TargetClassInterface
 
         return false;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -277,6 +311,8 @@ class DefinedTargetClass implements TargetClassInterface
     {
         return $this->rfc->isFinal();
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

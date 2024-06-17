@@ -19,7 +19,11 @@ use Psr\Http\Message\StreamInterface;
 final class PumpStream implements StreamInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var callable(int): (string|false|null)|null */
+=======
+    /** @var callable|null */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /** @var callable|null */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -39,7 +43,11 @@ final class PumpStream implements StreamInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param callable(int): (string|false|null)  $source  Source of the stream data. The callable MAY
+=======
+     * @param callable(int): (string|null|false)  $source  Source of the stream data. The callable MAY
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param callable(int): (string|null|false)  $source  Source of the stream data. The callable MAY
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +77,10 @@ final class PumpStream implements StreamInterface
             }
             trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return '';
@@ -162,6 +173,11 @@ final class PumpStream implements StreamInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * {@inheritdoc}
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * {@inheritdoc}
      *
@@ -180,6 +196,7 @@ final class PumpStream implements StreamInterface
     private function pump(int $length): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->source !== null) {
             do {
                 $data = ($this->source)($length);
@@ -187,11 +204,16 @@ final class PumpStream implements StreamInterface
                     $this->source = null;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->source) {
             do {
                 $data = call_user_func($this->source, $length);
                 if ($data === false || $data === null) {
                     $this->source = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return;
                 }

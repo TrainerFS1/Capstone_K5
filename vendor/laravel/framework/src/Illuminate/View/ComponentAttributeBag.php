@@ -12,10 +12,16 @@ use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use IteratorAggregate;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use JsonSerializable;
 use Traversable;
 
 class ComponentAttributeBag implements ArrayAccess, IteratorAggregate, JsonSerializable, Htmlable
+=======
+use Traversable;
+
+class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Traversable;
 
@@ -69,7 +75,11 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
      * Determine if a given attribute exists in the attribute array.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string  $key
+=======
+     * @param  string  $key
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $key
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -77,6 +87,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
      */
     public function has($key)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $keys = is_array($key) ? $key : func_get_args();
 
@@ -113,6 +124,9 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
 =======
         return array_key_exists($key, $this->attributes);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        return array_key_exists($key, $this->attributes);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -124,7 +138,11 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
     public function missing($key)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return ! $this->has($key);
+=======
+        return ! $this->has($key, $this->attributes);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return ! $this->has($key, $this->attributes);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -370,6 +388,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if the attribute bag is empty.
      *
      * @return bool
@@ -390,6 +409,8 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get all of the raw attributes.
@@ -499,6 +520,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Convert the object into a JSON serializable form.
      *
      * @return mixed
@@ -509,6 +531,8 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Implode the attributes into a single HTML ready string.

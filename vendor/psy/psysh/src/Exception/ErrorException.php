@@ -29,7 +29,11 @@ class ErrorException extends \ErrorException implements Exception
      * @param \Throwable|null $previous (default: null)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, ?\Throwable $previous = null)
+=======
+    public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, \Throwable $previous = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, \Throwable $previous = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -106,6 +110,7 @@ class ErrorException extends \ErrorException implements Exception
      * Create an ErrorException from an Error.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated PsySH no longer wraps Errors
      *
      * @param \Error $e
@@ -114,6 +119,8 @@ class ErrorException extends \ErrorException implements Exception
     {
         @\trigger_error('PsySH no longer wraps Errors', \E_USER_DEPRECATED);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated psySH no longer wraps Errors
      *
      * @param \Error $e
@@ -121,6 +128,9 @@ class ErrorException extends \ErrorException implements Exception
     public static function fromError(\Error $e): self
     {
         return new self($e->getMessage(), $e->getCode(), 1, $e->getFile(), $e->getLine(), $e);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -2,15 +2,21 @@
 
 @section('content')
 <<<<<<< HEAD
+<<<<<<< HEAD
 <body class="hold-transition login-page" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
     <div class="login-box">
       <div class="login-logo">
         <a href="{{ route('home') }}" style="color: #eb47ebcc;"><b>{{ config('app.name', 'Laravel') }}</b> 1.0</a>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
         <a href="{{ route('home') }}"><b>{{ config('app.name', 'Laravel') }}</b> 1.0</a>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
       </div>
       <!-- /.login-logo -->
@@ -59,7 +65,11 @@
             <div class="row">
               <div class="col-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <button type="submit" class="btn btn-primary btn-block" style="background-color: #eb47ebcc; border-color: #eb47ebcc; color: white;">Change password</button>
+=======
+                <button type="submit" class="btn btn-primary btn-block">Change password</button>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 <button type="submit" class="btn btn-primary btn-block">Change password</button>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,7 +80,11 @@
           @if (Route::has('login'))
           <p class="mt-3 mb-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a href="{{ route('login') }}" style="color: #eb47ebcc;">Login</a>
+=======
+            <a href="{{ route('login') }}">Login</a>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             <a href="{{ route('login') }}">Login</a>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -32,11 +32,14 @@ use Symfony\Component\CssSelector\Parser\TokenStream;
 class StringHandler implements HandlerInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private TokenizerPatterns $patterns,
         private TokenizerEscaping $escaping,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private TokenizerPatterns $patterns;
     private TokenizerEscaping $escaping;
 
@@ -44,6 +47,9 @@ class StringHandler implements HandlerInterface
     {
         $this->patterns = $patterns;
         $this->escaping = $escaping;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

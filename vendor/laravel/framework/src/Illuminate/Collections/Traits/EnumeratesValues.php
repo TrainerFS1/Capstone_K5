@@ -12,7 +12,10 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use Illuminate\Support\HigherOrderCollectionProxy;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use InvalidArgumentException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use JsonSerializable;
@@ -21,6 +24,7 @@ use Traversable;
 use UnexpectedValueException;
 use UnitEnum;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use WeakMap;
 
 /**
@@ -28,10 +32,15 @@ use WeakMap;
  *
  * @template-covariant TValue
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @template TKey of array-key
  * @template TValue
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @property-read HigherOrderCollectionProxy $average
@@ -50,7 +59,10 @@ use WeakMap;
  * @property-read HigherOrderCollectionProxy $min
  * @property-read HigherOrderCollectionProxy $partition
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property-read HigherOrderCollectionProxy $percentage
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @property-read HigherOrderCollectionProxy $reject
@@ -100,7 +112,10 @@ trait EnumeratesValues
         'min',
         'partition',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'percentage',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'reject',
@@ -318,11 +333,17 @@ trait EnumeratesValues
      * Get a single key's value from the first matching item in the collection.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TValueDefault
      *
      * @param  string  $key
      * @param  TValueDefault|(\Closure(): TValueDefault)  $default
      * @return TValue|TValueDefault
+=======
+     * @param  string  $key
+     * @param  mixed  $default
+     * @return mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $key
      * @param  mixed  $default
@@ -339,6 +360,7 @@ trait EnumeratesValues
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Ensure that every item in the collection is of the expected type.
      *
@@ -371,6 +393,8 @@ trait EnumeratesValues
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the collection is not empty.
      *
      * @return bool
@@ -386,7 +410,11 @@ trait EnumeratesValues
      * @template TMapSpreadValue
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  callable(mixed...): TMapSpreadValue  $callback
+=======
+     * @param  callable(mixed): TMapSpreadValue  $callback
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  callable(mixed): TMapSpreadValue  $callback
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -522,6 +550,7 @@ trait EnumeratesValues
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Calculate the percentage of items that pass a given truth test.
      *
      * @param  (callable(TValue, TKey): bool)  $callback
@@ -541,6 +570,8 @@ trait EnumeratesValues
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the sum of the given values.
@@ -782,10 +813,15 @@ trait EnumeratesValues
      * Pass the collection into a new class.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TPipeIntoValue
      *
      * @param  class-string<TPipeIntoValue>  $class
      * @return TPipeIntoValue
+=======
+     * @param  class-string  $class
+     * @return mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  class-string  $class
      * @return mixed
@@ -1062,6 +1098,7 @@ trait EnumeratesValues
         if (is_array($items)) {
             return $items;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
         return match (true) {
@@ -1075,6 +1112,8 @@ trait EnumeratesValues
             default => (array) $items,
         };
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif ($items instanceof Enumerable) {
             return $items->all();
         } elseif ($items instanceof Arrayable) {
@@ -1090,6 +1129,9 @@ trait EnumeratesValues
         }
 
         return (array) $items;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

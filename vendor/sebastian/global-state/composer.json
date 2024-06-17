@@ -3,7 +3,11 @@
     "description": "Snapshotting of global state",
     "keywords": ["global state"],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "homepage": "https://www.github.com/sebastianbergmann/global-state",
+=======
+    "homepage": "http://www.github.com/sebastianbergmann/global-state",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     "homepage": "http://www.github.com/sebastianbergmann/global-state",
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -15,10 +19,13 @@
         }
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "support": {
         "issues": "https://github.com/sebastianbergmann/global-state/issues",
         "security": "https://github.com/sebastianbergmann/global-state/security/policy"
     },
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "prefer-stable": true,

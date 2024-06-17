@@ -20,6 +20,7 @@ use function explode;
 use function gettype;
 use function implode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function is_bool;
 use function is_float;
 use function is_int;
@@ -30,6 +31,8 @@ use function preg_quote;
 use function preg_replace;
 use function rtrim;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function in_array;
 use function is_bool;
 use function is_float;
@@ -42,6 +45,9 @@ use function ord;
 use function preg_quote;
 use function preg_replace;
 use function range;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function sprintf;
 use function str_contains;
@@ -58,7 +64,10 @@ use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
 use PHPUnit\Metadata\TestDox;
 use PHPUnit\Util\Color;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use ReflectionEnum;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReflectionMethod;
@@ -72,7 +81,11 @@ final class NamePrettifier
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-var array<string, int>
+=======
+     * @psalm-var list<string>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-var list<string>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -130,6 +143,7 @@ final class NamePrettifier
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // NOTE: this method is on a hot path and very performance sensitive. change with care.
     public function prettifyTestMethodName(string $name): string
     {
@@ -144,6 +158,8 @@ final class NamePrettifier
         } elseif ($string === $name) {
             self::$strings[$string] = 1;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function prettifyTestMethodName(string $name): string
     {
         $buffer = '';
@@ -158,6 +174,9 @@ final class NamePrettifier
             $name = $string;
         } elseif ($count === 0) {
             self::$strings[] = $string;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -169,7 +188,11 @@ final class NamePrettifier
 
         if ($name === '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return '';
+=======
+            return $buffer;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $buffer;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -177,6 +200,7 @@ final class NamePrettifier
 
         $name[0] = strtoupper($name[0]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $noUnderscore = str_replace('_', ' ', $name);
 
@@ -186,10 +210,15 @@ final class NamePrettifier
         if (str_contains($name, '_')) {
             return trim(str_replace('_', ' ', $name));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        if (str_contains($name, '_')) {
+            return trim(str_replace('_', ' ', $name));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $wasNumeric = false;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $buffer = '';
 
@@ -201,11 +230,16 @@ final class NamePrettifier
             } else {
                 $isNumeric = $name[$i] >= '0' && $name[$i] <= '9';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach (range(0, strlen($name) - 1) as $i) {
             if ($i > 0 && ord($name[$i]) >= 65 && ord($name[$i]) <= 90) {
                 $buffer .= ' ' . strtolower($name[$i]);
             } else {
                 $isNumeric = is_numeric($name[$i]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 if (!$wasNumeric && $isNumeric) {
@@ -244,9 +278,15 @@ final class NamePrettifier
                     static fn (string $variable): string => sprintf(
                         '/%s(?=\b)/',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         preg_quote($variable, '/'),
                     ),
                     array_keys($providedData),
+=======
+                        preg_quote($variable, '/')
+                    ),
+                    array_keys($providedData)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         preg_quote($variable, '/')
                     ),
@@ -307,6 +347,7 @@ final class NamePrettifier
 
                 if ($reflector->isEnum()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $enumReflector = new ReflectionEnum($value);
 
                     if ($enumReflector->isBacked()) {
@@ -314,6 +355,9 @@ final class NamePrettifier
                     } else {
                         $value = $value->name;
                     }
+=======
+                    $value = $value->value;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $value = $value->value;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -327,10 +371,13 @@ final class NamePrettifier
             if (!is_scalar($value)) {
                 $value = gettype($value);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 if ($value === 'NULL') {
                     $value = 'null';
                 }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
@@ -352,10 +399,14 @@ final class NamePrettifier
 
         if ($colorize) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $providedData = array_map(
                 static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)),
                 $providedData,
             );
+=======
+            $providedData = array_map(static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)), $providedData);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $providedData = array_map(static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)), $providedData);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

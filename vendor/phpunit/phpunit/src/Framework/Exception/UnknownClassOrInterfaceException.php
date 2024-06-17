@@ -22,8 +22,13 @@ final class UnknownClassOrInterfaceException extends InvalidArgumentException
             sprintf(
                 'Class or interface "%s" does not exist',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $name,
             ),
+=======
+                $name
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $name
             )

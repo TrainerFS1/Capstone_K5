@@ -24,9 +24,15 @@ class Dumper extends CliDumper
     private $forceArrayIndexes;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private const ONLY_CONTROL_CHARS = '/^[\x00-\x1F\x7F]+$/';
     private const CONTROL_CHARS = '/([\x00-\x1F\x7F]+)/';
     private const CONTROL_CHARS_MAP = [
+=======
+    protected static $onlyControlCharsRx = '/^[\x00-\x1F\x7F]+$/';
+    protected static $controlCharsRx = '/([\x00-\x1F\x7F]+)/';
+    protected static $controlCharsMap = [
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected static $onlyControlCharsRx = '/^[\x00-\x1F\x7F]+$/';
     protected static $controlCharsRx = '/([\x00-\x1F\x7F]+)/';
@@ -53,7 +59,11 @@ class Dumper extends CliDumper
      * {@inheritdoc}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function enterHash(Cursor $cursor, $type, $class, $hasChild): void
+=======
+    public function enterHash(Cursor $cursor, $type, $class, $hasChild)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function enterHash(Cursor $cursor, $type, $class, $hasChild)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,7 +78,11 @@ class Dumper extends CliDumper
      * {@inheritdoc}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function dumpKey(Cursor $cursor): void
+=======
+    protected function dumpKey(Cursor $cursor)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function dumpKey(Cursor $cursor)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -86,6 +100,7 @@ class Dumper extends CliDumper
 
         $styled = '';
 <<<<<<< HEAD
+<<<<<<< HEAD
         $cchr = $this->styles['cchr'];
 
         $chunks = \preg_split(self::CONTROL_CHARS, $value, -1, \PREG_SPLIT_NO_EMPTY | \PREG_SPLIT_DELIM_CAPTURE);
@@ -96,6 +111,8 @@ class Dumper extends CliDumper
                 do {
                     $chars .= isset(self::CONTROL_CHARS_MAP[$chunk[$i]]) ? self::CONTROL_CHARS_MAP[$chunk[$i]] : \sprintf('\x%02X', \ord($chunk[$i]));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $map = self::$controlCharsMap;
         $cchr = $this->styles['cchr'];
 
@@ -106,6 +123,9 @@ class Dumper extends CliDumper
                 $i = 0;
                 do {
                     $chars .= isset($map[$chunk[$i]]) ? $map[$chunk[$i]] : \sprintf('\x%02X', \ord($chunk[$i]));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 } while (isset($chunk[++$i]));
 
@@ -125,7 +145,11 @@ class Dumper extends CliDumper
      * {@inheritdoc}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function dumpLine($depth, $endOfValue = false): void
+=======
+    protected function dumpLine($depth, $endOfValue = false)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function dumpLine($depth, $endOfValue = false)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

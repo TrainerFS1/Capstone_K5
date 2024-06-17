@@ -19,7 +19,11 @@ final class MimeType
         '123' => 'application/vnd.lotus-1-2-3',
         'aab' => 'application/x-authorware-bin',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'aac' => 'audio/aac',
+=======
+        'aac' => 'audio/x-acc',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'aac' => 'audio/x-acc',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -34,7 +38,10 @@ final class MimeType
         'acutc' => 'application/vnd.acucorp',
         'adp' => 'audio/adpcm',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'adts' => 'audio/aac',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'aep' => 'application/vnd.audiograph',
@@ -50,8 +57,11 @@ final class MimeType
         'ait' => 'application/vnd.dvb.ait',
         'ami' => 'application/vnd.amiga.ami',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'aml' => 'application/automationml-aml+xml',
         'amlx' => 'application/automationml-amlx+zip',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'amr' => 'audio/amr',
@@ -59,10 +69,14 @@ final class MimeType
         'apng' => 'image/apng',
         'appcache' => 'text/cache-manifest',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'appinstaller' => 'application/appinstaller',
         'application' => 'application/x-ms-application',
         'appx' => 'application/appx',
         'appxbundle' => 'application/appxbundle',
+=======
+        'application' => 'application/x-ms-application',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'application' => 'application/x-ms-application',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,7 +125,10 @@ final class MimeType
         'bpmn' => 'application/octet-stream',
         'bsp' => 'model/vnd.valve.source.compiled-map',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'btf' => 'image/prs.btif',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'btif' => 'image/prs.btif',
@@ -166,7 +183,10 @@ final class MimeType
         'cla' => 'application/vnd.claymore',
         'class' => 'application/octet-stream',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'cld' => 'model/vnd.cld',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'clkk' => 'application/vnd.crick.clicker.keyboard',
@@ -204,7 +224,10 @@ final class MimeType
         'cu' => 'application/cu-seeme',
         'curl' => 'text/vnd.curl',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'cwl' => 'application/cwl',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'cww' => 'application/prs.cww',
@@ -230,7 +253,10 @@ final class MimeType
         'dfac' => 'application/vnd.dreamfactory',
         'dgc' => 'application/x-dgc-compressed',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'dib' => 'image/bmp',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'dic' => 'text/x-c',
@@ -256,7 +282,10 @@ final class MimeType
         'dp' => 'application/vnd.osgi.dp',
         'dpg' => 'application/vnd.dpgraph',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'dpx' => 'image/dpx',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'dra' => 'audio/vnd.dra',
@@ -296,6 +325,10 @@ final class MimeType
         'eps' => 'application/postscript',
         'epub' => 'application/epub+zip',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        'es' => 'application/ecmascript',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'es' => 'application/ecmascript',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -492,7 +525,10 @@ final class MimeType
         'jsonml' => 'application/jsonml+json',
         'jsx' => 'text/jsx',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'jt' => 'model/jt',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'jxr' => 'image/jxr',
@@ -600,7 +636,11 @@ final class MimeType
         'mj2' => 'video/mj2',
         'mjp2' => 'video/mj2',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'mjs' => 'text/javascript',
+=======
+        'mjs' => 'application/javascript',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'mjs' => 'application/javascript',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -654,8 +694,11 @@ final class MimeType
         'msh' => 'model/mesh',
         'msi' => 'application/x-msdownload',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'msix' => 'application/msix',
         'msixbundle' => 'application/msixbundle',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'msl' => 'application/vnd.mobius.msl',
@@ -832,8 +875,11 @@ final class MimeType
         'pwn' => 'application/vnd.3m.post-it-notes',
         'pya' => 'audio/vnd.ms-playready.media.pya',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'pyo' => 'model/vnd.pytha.pyox',
         'pyox' => 'model/vnd.pytha.pyox',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'pyv' => 'video/vnd.ms-playready.media.pyv',
@@ -985,7 +1031,10 @@ final class MimeType
         'stc' => 'application/vnd.sun.xml.calc.template',
         'std' => 'application/vnd.sun.xml.draw.template',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'step' => 'application/STEP',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'stf' => 'application/vnd.wt.stf',
@@ -993,7 +1042,10 @@ final class MimeType
         'stk' => 'application/hyperstudio',
         'stl' => 'model/stl',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'stp' => 'application/STEP',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'stpx' => 'model/step+xml',
@@ -1083,7 +1135,10 @@ final class MimeType
         'umj' => 'application/vnd.umajin',
         'unityweb' => 'application/vnd.unity',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'uo' => 'application/vnd.uoml+xml',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'uoml' => 'application/vnd.uoml+xml',
@@ -1091,7 +1146,10 @@ final class MimeType
         'uris' => 'text/uri-list',
         'urls' => 'text/uri-list',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'usda' => 'model/vnd.usda',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'usdz' => 'model/vnd.usdz+zip',
@@ -1174,7 +1232,10 @@ final class MimeType
         'webp' => 'image/webp',
         'wg' => 'application/vnd.pmi.widget',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'wgsl' => 'text/wgsl',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'wgt' => 'application/widget',
@@ -1232,10 +1293,16 @@ final class MimeType
         'xenc' => 'application/xenc+xml',
         'xer' => 'application/patch-ops-error+xml',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'xfdf' => 'application/xfdf',
         'xfdl' => 'application/vnd.xfdl',
         'xht' => 'application/xhtml+xml',
         'xhtm' => 'application/vnd.pwg-xhtml-print+xml',
+=======
+        'xfdf' => 'application/vnd.adobe.xfdf',
+        'xfdl' => 'application/vnd.xfdl',
+        'xht' => 'application/xhtml+xml',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'xfdf' => 'application/vnd.adobe.xfdf',
         'xfdl' => 'application/vnd.xfdl',
@@ -1272,7 +1339,10 @@ final class MimeType
         'xpx' => 'application/vnd.intercon.formnet',
         'xsd' => 'application/xml',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'xsf' => 'application/prs.xsf+xml',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'xsl' => 'application/xml',
@@ -1311,7 +1381,11 @@ final class MimeType
      * Determines the mimetype of a file by looking at its extension.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://raw.githubusercontent.com/jshttp/mime-db/master/db.json
+=======
+     * @link https://raw.githubusercontent.com/jshttp/mime-db/master/db.json
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://raw.githubusercontent.com/jshttp/mime-db/master/db.json
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1325,7 +1399,11 @@ final class MimeType
      * Maps a file extensions to a mimetype.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://raw.githubusercontent.com/jshttp/mime-db/master/db.json
+=======
+     * @link https://raw.githubusercontent.com/jshttp/mime-db/master/db.json
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link https://raw.githubusercontent.com/jshttp/mime-db/master/db.json
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

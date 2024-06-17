@@ -36,9 +36,12 @@ class ReflectionCaster
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castClosure(\Closure $c, array $a, Stub $stub, bool $isNested, int $filter = 0)
@@ -49,7 +52,11 @@ class ReflectionCaster
         $a = static::castFunctionAbstract($c, $a, $stub, $isNested, $filter);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!str_contains($c->name, '{closure')) {
+=======
+        if (!str_contains($c->name, '{closure}')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!str_contains($c->name, '{closure}')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,9 +89,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function unsetClosureFileInfo(\Closure $c, array $a)
@@ -95,7 +105,11 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function castGenerator(\Generator $c, array $a, Stub $stub, bool $isNested): array
+=======
+    public static function castGenerator(\Generator $c, array $a, Stub $stub, bool $isNested)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function castGenerator(\Generator $c, array $a, Stub $stub, bool $isNested)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -104,8 +118,11 @@ class ReflectionCaster
         try {
             $reflectionGenerator = new \ReflectionGenerator($c);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return self::castReflectionGenerator($reflectionGenerator, $a, $stub, $isNested);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (\Exception) {
@@ -114,16 +131,22 @@ class ReflectionCaster
             return $a;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
     /**
      * @return array
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return self::castReflectionGenerator($reflectionGenerator, $a, $stub, $isNested);
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castType(\ReflectionType $c, array $a, Stub $stub, bool $isNested)
     {
@@ -148,6 +171,7 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
@@ -164,21 +188,29 @@ class ReflectionCaster
 
         self::addMap($a, $c, $map);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castAttribute(\ReflectionAttribute $c, array $a, Stub $stub, bool $isNested)
     {
         self::addMap($a, $c, [
             'name' => 'getName',
             'arguments' => 'getArguments',
         ]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $a;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castReflectionGenerator(\ReflectionGenerator $c, array $a, Stub $stub, bool $isNested)
@@ -217,9 +249,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castClass(\ReflectionClass $c, array $a, Stub $stub, bool $isNested, int $filter = 0)
@@ -254,9 +289,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castFunctionAbstract(\ReflectionFunctionAbstract $c, array $a, Stub $stub, bool $isNested, int $filter = 0)
@@ -274,7 +312,11 @@ class ReflectionCaster
             $v = $a[$prefix.'returnType'];
             $v = $v instanceof \ReflectionNamedType ? $v->getName() : (string) $v;
 <<<<<<< HEAD
+<<<<<<< HEAD
             $a[$prefix.'returnType'] = new ClassStub($a[$prefix.'returnType'] instanceof \ReflectionNamedType && $a[$prefix.'returnType']->allowsNull() && !\in_array($v, ['mixed', 'null'], true) ? '?'.$v : $v, [class_exists($v, false) || interface_exists($v, false) || trait_exists($v, false) ? $v : '', '']);
+=======
+            $a[$prefix.'returnType'] = new ClassStub($a[$prefix.'returnType'] instanceof \ReflectionNamedType && $a[$prefix.'returnType']->allowsNull() && 'mixed' !== $v ? '?'.$v : $v, [class_exists($v, false) || interface_exists($v, false) || trait_exists($v, false) ? $v : '', '']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $a[$prefix.'returnType'] = new ClassStub($a[$prefix.'returnType'] instanceof \ReflectionNamedType && $a[$prefix.'returnType']->allowsNull() && 'mixed' !== $v ? '?'.$v : $v, [class_exists($v, false) || interface_exists($v, false) || trait_exists($v, false) ? $v : '', '']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -322,9 +364,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castClassConstant(\ReflectionClassConstant $c, array $a, Stub $stub, bool $isNested)
@@ -338,9 +383,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castMethod(\ReflectionMethod $c, array $a, Stub $stub, bool $isNested)
@@ -351,9 +399,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castParameter(\ReflectionParameter $c, array $a, Stub $stub, bool $isNested)
@@ -384,7 +435,11 @@ class ReflectionCaster
             try {
                 $a[$prefix.'default'] = $v = $c->getDefaultValue();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ($c->isDefaultValueConstant() && !\is_object($v)) {
+=======
+                if ($c->isDefaultValueConstant()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 if ($c->isDefaultValueConstant()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -401,9 +456,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castProperty(\ReflectionProperty $c, array $a, Stub $stub, bool $isNested)
@@ -417,9 +475,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castReference(\ReflectionReference $c, array $a, Stub $stub, bool $isNested)
@@ -430,9 +491,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castExtension(\ReflectionExtension $c, array $a, Stub $stub, bool $isNested)
@@ -452,9 +516,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castZendExtension(\ReflectionZendExtension $c, array $a, Stub $stub, bool $isNested)
@@ -470,9 +537,12 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function getSignature(array $a)
@@ -488,7 +558,11 @@ class ReflectionCaster
                         $signature .= $type.' ';
                     } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         if ($param->allowsNull() && !\in_array($type->getName(), ['mixed', 'null'], true)) {
+=======
+                        if (!$param->isOptional() && $param->allowsNull() && 'mixed' !== $type->getName()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         if (!$param->isOptional() && $param->allowsNull() && 'mixed' !== $type->getName()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -532,7 +606,11 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function addExtra(array &$a, \Reflector $c): void
+=======
+    private static function addExtra(array &$a, \Reflector $c)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function addExtra(array &$a, \Reflector $c)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -552,7 +630,11 @@ class ReflectionCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function addMap(array &$a, object $c, array $map, string $prefix = Caster::PREFIX_VIRTUAL): void
+=======
+    private static function addMap(array &$a, object $c, array $map, string $prefix = Caster::PREFIX_VIRTUAL)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function addMap(array &$a, object $c, array $map, string $prefix = Caster::PREFIX_VIRTUAL)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

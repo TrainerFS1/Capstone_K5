@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php declare(strict_types=1);
+=======
+<?php
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 <?php
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -8,7 +12,10 @@ namespace PhpParser\Parser;
 
 use PhpParser\Error;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
@@ -20,7 +27,11 @@ use PhpParser\Node\Stmt;
 /* This is an automatically GENERATED file, which should not be manually edited.
  * Instead edit one of the following:
 <<<<<<< HEAD
+<<<<<<< HEAD
  *  * the grammar file grammar/php.y
+=======
+ *  * the grammar files grammar/php5.y or grammar/php7.y
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  *  * the grammar files grammar/php5.y or grammar/php7.y
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -29,6 +40,7 @@ use PhpParser\Node\Stmt;
  */
 class Php7 extends \PhpParser\ParserAbstract
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     public const YYERRTOK = 256;
     public const T_THROW = 257;
@@ -185,6 +197,8 @@ class Php7 extends \PhpParser\ParserAbstract
 
     protected array $symbolToName = array(
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $tokenToSymbolMapSize = 396;
     protected $actionTableSize = 1223;
     protected $gotoTableSize = 626;
@@ -198,6 +212,9 @@ class Php7 extends \PhpParser\ParserAbstract
     protected $numNonLeafStates = 726;
 
     protected $symbolToName = array(
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "EOF",
         "error",
@@ -361,15 +378,21 @@ class Php7 extends \PhpParser\ParserAbstract
         "';'",
         "']'",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "'('",
         "')'",
         "'{'",
         "'}'",
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "'{'",
         "'}'",
         "'('",
         "')'",
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "'`'",
         "'\"'",
@@ -377,7 +400,11 @@ class Php7 extends \PhpParser\ParserAbstract
     );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected array $tokenToSymbol = array(
+=======
+    protected $tokenToSymbol = array(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected $tokenToSymbol = array(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -386,7 +413,11 @@ class Php7 extends \PhpParser\ParserAbstract
           168,  168,  168,  168,  168,  168,  168,  168,  168,  168,
           168,  168,  168,   56,  166,  168,  167,   55,  168,  168,
 <<<<<<< HEAD
+<<<<<<< HEAD
           161,  162,   53,   50,    8,   51,   52,   54,  168,  168,
+=======
+          163,  164,   53,   50,    8,   51,   52,   54,  168,  168,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
           163,  164,   53,   50,    8,   51,   52,   54,  168,  168,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -398,7 +429,11 @@ class Php7 extends \PhpParser\ParserAbstract
           168,  168,  168,  168,  168,  168,  168,  168,  168,  168,
           168,  168,  168,  168,  168,  168,  168,  168,  168,  168,
 <<<<<<< HEAD
+<<<<<<< HEAD
           168,  168,  168,  163,   35,  164,   58,  168,  168,  168,
+=======
+          168,  168,  168,  161,   35,  162,   58,  168,  168,  168,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
           168,  168,  168,  161,   35,  162,   58,  168,  168,  168,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -431,6 +466,7 @@ class Php7 extends \PhpParser\ParserAbstract
           153,  154,  155,  156,  157,  158
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected array $action = array(
           133,  134,  135,  582,  136,  137,    0,  751,  752,  753,
@@ -819,6 +855,8 @@ class Php7 extends \PhpParser\ParserAbstract
           387,  387,32767,32767,  541,  541,  541,  541,  541,  541,
         32767,32767,32767,32767,32767,32767,  470,32767,32767,32767,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $action = array(
           132,  133,  134,  575,  135,  136,    0,  738,  739,  740,
           137,   37,  850,  825,  851,  476,-32766,-32766,-32766,-32767,
@@ -1197,6 +1235,9 @@ class Php7 extends \PhpParser\ParserAbstract
           593,32767,32767,  253,  103,32767,32767,  467,  385,  385,
           385,32767,32767,  537,  537,  537,  537,  537,  537,32767,
         32767,32767,32767,32767,32767,  467,32767,32767,32767,32767,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
@@ -1204,6 +1245,7 @@ class Php7 extends \PhpParser\ParserAbstract
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
         32767,32767,32767,32767,32767,32767,32767,32767,32767,32767,
+<<<<<<< HEAD
 <<<<<<< HEAD
         32767,32767,32767,32767,32767,32767,32767,32767,32767,  100,
         32767,32767,32767,   36,    7,    8,   10,   11,   49,   17,
@@ -1334,6 +1376,8 @@ class Php7 extends \PhpParser\ParserAbstract
             9,   66,   66,   66,   66,   66,   66,   66,   66,   66,
            86,   86,   26,   86,   86,   86,   27,   42,   42,   42,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         32767,32767,32767,32767,32767,32767,32767,32767,  101,32767,
         32767,32767,   37,    7,    8,   10,   11,   50,   17,  323,
         32767,32767,32767,32767,  103,32767,32767,32767,32767,32767,
@@ -1467,6 +1511,9 @@ class Php7 extends \PhpParser\ParserAbstract
            42,   42,   72,   65,   65,   96,   55,   55,   65,   65,
            65,   65,   65,   65,   65,   65,   65,   65,   78,   78,
             9,  126,   78,   78,   78,   78,   42,   42,   42,   42,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
@@ -1481,6 +1528,7 @@ class Php7 extends \PhpParser\ParserAbstract
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
+<<<<<<< HEAD
 <<<<<<< HEAD
            42,   42,   42,   15,  149,  149,   23,   23,   23,   23,
           108,  108,   97,  149,  108,  130,  108,  108,  108,  108,
@@ -1571,6 +1619,8 @@ class Php7 extends \PhpParser\ParserAbstract
 
     protected array $ruleToNonTerminal = array(
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
            42,   23,   23,   23,   23,   15,  129,   85,   85,   48,
            85,   85,   85,   48,   48,   48,   26,   13,   48,   13,
            27,   14,   48,   48,   48,   48,   48,   48,  107,  107,
@@ -1665,6 +1715,9 @@ class Php7 extends \PhpParser\ParserAbstract
     );
 
     protected $ruleToNonTerminal = array(
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             0,    1,    3,    3,    2,    5,    5,    6,    6,    6,
             6,    6,    6,    6,    6,    6,    6,    6,    6,    6,
@@ -1673,6 +1726,7 @@ class Php7 extends \PhpParser\ParserAbstract
             6,    6,    6,    6,    6,    6,    6,    6,    6,    6,
             6,    6,    6,    6,    6,    6,    6,    6,    6,    6,
             6,    6,    6,    6,    6,    6,    6,    6,    6,    6,
+<<<<<<< HEAD
 <<<<<<< HEAD
             6,    6,    6,    6,    6,    6,    6,    7,    7,    7,
             7,    7,    7,    7,    7,    8,    8,    9,   10,   11,
@@ -1707,6 +1761,8 @@ class Php7 extends \PhpParser\ParserAbstract
           144,  144,  144,  144,  144,  144,  144,  136,  146,  146,
           148,  147,  147,   62,  104,  149,  149,   56,   56,   42,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             6,    6,    6,    6,    6,    6,    6,    6,    7,    7,
             7,    7,    7,    7,    7,    7,    8,    8,    9,   10,
            11,   11,   11,   12,   12,   13,   13,   14,   15,   15,
@@ -1739,6 +1795,9 @@ class Php7 extends \PhpParser\ParserAbstract
           137,  137,  134,  134,  136,  136,  144,  144,  143,  143,
           143,  143,  143,  143,  143,  135,  145,  145,  147,  146,
           146,   61,  103,  148,  148,   55,   55,   42,   42,   42,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
@@ -1749,6 +1808,7 @@ class Php7 extends \PhpParser\ParserAbstract
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
            42,   42,   42,   42,   42,   42,   42,   42,   42,   42,
+<<<<<<< HEAD
 <<<<<<< HEAD
            42,   42,   42,  156,  150,  150,  155,  155,  158,  159,
           159,  160,  161,  162,  162,  162,  162,   19,   19,   73,
@@ -1768,6 +1828,8 @@ class Php7 extends \PhpParser\ParserAbstract
 
     protected array $ruleToLength = array(
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
           155,  149,  149,  154,  154,  157,  158,  158,  159,  160,
           161,  161,  161,  161,   19,   19,   72,   72,   72,   72,
           150,  150,  150,  150,  163,  163,  151,  151,  153,  153,
@@ -1785,6 +1847,9 @@ class Php7 extends \PhpParser\ParserAbstract
     );
 
     protected $ruleToLength = array(
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             1,    1,    2,    0,    1,    1,    1,    1,    1,    1,
             1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -1795,6 +1860,7 @@ class Php7 extends \PhpParser\ParserAbstract
             1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
             1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
             1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+<<<<<<< HEAD
 <<<<<<< HEAD
             1,    1,    1,    1,    1,    1,    1,    1,    1,    0,
             1,    0,    1,    1,    2,    1,    3,    4,    1,    2,
@@ -3411,6 +3477,8 @@ class Php7 extends \PhpParser\ParserAbstract
             },
             615 => null,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
             0,    1,    0,    1,    1,    2,    1,    3,    4,    1,
             2,    0,    1,    1,    1,    1,    1,    3,    5,    4,
@@ -5347,6 +5415,9 @@ class Php7 extends \PhpParser\ParserAbstract
             611 => function ($stackPos) {
                  $this->semValue = $this->semStack[$stackPos-(1-1)];
             },
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }

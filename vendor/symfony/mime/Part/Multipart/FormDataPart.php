@@ -24,7 +24,11 @@ use Symfony\Component\Mime\Part\TextPart;
 final class FormDataPart extends AbstractMultipartPart
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $fields = [];
+=======
+    private $fields = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $fields = [];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -37,9 +41,12 @@ final class FormDataPart extends AbstractMultipartPart
         parent::__construct();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->fields = $fields;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($fields as $name => $value) {
             if (!\is_string($value) && !\is_array($value) && !$value instanceof TextPart) {
                 throw new InvalidArgumentException(sprintf('The value of the form field "%s" can only be a string, an array, or an instance of TextPart ("%s" given).', $name, get_debug_type($value)));
@@ -47,6 +54,9 @@ final class FormDataPart extends AbstractMultipartPart
 
             $this->fields[$name] = $value;
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // HTTP does not support \r\n in header values
         $this->getHeaders()->setMaxLineLength(\PHP_INT_MAX);
@@ -68,7 +78,11 @@ final class FormDataPart extends AbstractMultipartPart
 
         $prepare = function ($item, $key, $root = null) use (&$values, &$prepare) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (null === $root && \is_int($key) && \is_array($item)) {
+=======
+            if (\is_int($key) && \is_array($item)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (\is_int($key) && \is_array($item)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -89,10 +103,13 @@ final class FormDataPart extends AbstractMultipartPart
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!\is_string($item) && !$item instanceof TextPart) {
                 throw new InvalidArgumentException(sprintf('The value of the form field "%s" can only be a string, an array, or an instance of TextPart, "%s" given.', $fieldName, get_debug_type($item)));
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $values[] = $this->preparePart($fieldName, $item);

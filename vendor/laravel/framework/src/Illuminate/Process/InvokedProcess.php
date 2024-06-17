@@ -106,8 +106,11 @@ class InvokedProcess implements InvokedProcessContract
      * @param  callable|null  $output
      * @return \Illuminate\Process\ProcessResult
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws \Illuminate\Process\Exceptions\ProcessTimedOutException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

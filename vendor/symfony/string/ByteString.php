@@ -12,7 +12,10 @@
 namespace Symfony\Component\String;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Random\Randomizer;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\String\Exception\ExceptionInterface;
@@ -47,7 +50,11 @@ class ByteString extends AbstractString
      */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function fromRandom(int $length = 16, ?string $alphabet = null): self
+=======
+    public static function fromRandom(int $length = 16, string $alphabet = null): self
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function fromRandom(int $length = 16, string $alphabet = null): self
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -64,10 +71,13 @@ class ByteString extends AbstractString
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (\PHP_VERSION_ID >= 80300) {
             return new static((new Randomizer())->getBytesFromString($alphabet, $length));
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $ret = '';
@@ -221,7 +231,11 @@ class ByteString extends AbstractString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function join(array $strings, ?string $lastGlue = null): static
+=======
+    public function join(array $strings, string $lastGlue = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function join(array $strings, string $lastGlue = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -256,7 +270,11 @@ class ByteString extends AbstractString
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
+=======
+        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -324,7 +342,11 @@ class ByteString extends AbstractString
         $replace = \is_array($to) || $to instanceof \Closure ? 'preg_replace_callback' : 'preg_replace';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
+=======
+        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -360,7 +382,11 @@ class ByteString extends AbstractString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function slice(int $start = 0, ?int $length = null): static
+=======
+    public function slice(int $start = 0, int $length = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function slice(int $start = 0, int $length = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -380,7 +406,11 @@ class ByteString extends AbstractString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function splice(string $replacement, int $start = 0, ?int $length = null): static
+=======
+    public function splice(string $replacement, int $start = 0, int $length = null): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function splice(string $replacement, int $start = 0, int $length = null): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -392,7 +422,11 @@ class ByteString extends AbstractString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function split(string $delimiter, ?int $limit = null, ?int $flags = null): array
+=======
+    public function split(string $delimiter, int $limit = null, int $flags = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function split(string $delimiter, int $limit = null, int $flags = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -442,7 +476,11 @@ class ByteString extends AbstractString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toUnicodeString(?string $fromEncoding = null): UnicodeString
+=======
+    public function toUnicodeString(string $fromEncoding = null): UnicodeString
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toUnicodeString(string $fromEncoding = null): UnicodeString
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -451,7 +489,11 @@ class ByteString extends AbstractString
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toCodePointString(?string $fromEncoding = null): CodePointString
+=======
+    public function toCodePointString(string $fromEncoding = null): CodePointString
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toCodePointString(string $fromEncoding = null): CodePointString
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -465,7 +507,11 @@ class ByteString extends AbstractString
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
+=======
+        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

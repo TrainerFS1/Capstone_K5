@@ -15,7 +15,11 @@ if ('cli' !== \PHP_SAPI) {
 
 // load new map
 <<<<<<< HEAD
+<<<<<<< HEAD
 $data = json_decode(file_get_contents('https://cdn.jsdelivr.net/gh/jshttp/mime-db/db.json'), true);
+=======
+$data = json_decode(file_get_contents('https://cdn.jsdelivr.net/gh/jshttp/mime-db@v1.49.0/db.json'), true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 $data = json_decode(file_get_contents('https://cdn.jsdelivr.net/gh/jshttp/mime-db@v1.49.0/db.json'), true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +102,10 @@ $exts = [
     'pdf' => ['application/pdf'],
     'php' => ['application/x-php'],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'png' => ['image/png'],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'ppt' => ['application/vnd.ms-powerpoint'],
@@ -115,8 +122,11 @@ $exts = [
     'wmv' => ['audio/x-ms-wmv'],
     'xls' => ['application/vnd.ms-excel'],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'yaml' => ['application/yaml'],
     'yml' => ['application/yaml'],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'zip' => ['application/zip'],
@@ -172,7 +182,11 @@ foreach (explode("\n", $data) as $line) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $updated = preg_replace('{Updated from upstream on .+?\.}', sprintf('Updated from upstream on %s.', date('Y-m-d')), $updated, -1);
+=======
+$updated = preg_replace('{Updated from upstream on .+?\.}', 'Updated from upstream on '.date('Y-m-d'), $updated, -1);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 $updated = preg_replace('{Updated from upstream on .+?\.}', 'Updated from upstream on '.date('Y-m-d'), $updated, -1);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

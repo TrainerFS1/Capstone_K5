@@ -81,7 +81,11 @@ class Escaper
         // Determines if the PHP value contains any single characters that would
         // cause it to require single quoting in YAML.
 <<<<<<< HEAD
+<<<<<<< HEAD
         return 0 < preg_match('/[\s\'"\:\{\}\[\],&\*\#\?] | \A[\-?|<>=!%@`\p{Zs}]/xu', $value);
+=======
+        return 0 < preg_match('/[ \s \' " \: \{ \} \[ \] , & \* \# \?] | \A[ \- ? | < > = ! % @ ` \p{Zs}]/xu', $value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return 0 < preg_match('/[ \s \' " \: \{ \} \[ \] , & \* \# \?] | \A[ \- ? | < > = ! % @ ` \p{Zs}]/xu', $value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

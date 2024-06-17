@@ -29,7 +29,11 @@ interface FragmentUriGeneratorInterface
      * @param bool $sign     Whether to sign the URL or not
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function generate(ControllerReference $controller, ?Request $request = null, bool $absolute = false, bool $strict = true, bool $sign = true): string;
+=======
+    public function generate(ControllerReference $controller, Request $request = null, bool $absolute = false, bool $strict = true, bool $sign = true): string;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function generate(ControllerReference $controller, Request $request = null, bool $absolute = false, bool $strict = true, bool $sign = true): string;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

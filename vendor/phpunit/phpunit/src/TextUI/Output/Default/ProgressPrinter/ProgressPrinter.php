@@ -17,6 +17,7 @@ use function strlen;
 use PHPUnit\Event\EventFacadeIsSealedException;
 use PHPUnit\Event\Facade;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Test\DeprecationTriggered;
 use PHPUnit\Event\Test\Errored;
 use PHPUnit\Event\Test\ErrorTriggered;
@@ -31,10 +32,15 @@ use PHPUnit\Framework\TestStatus\TestStatus;
 use PHPUnit\TextUI\Configuration\Source;
 use PHPUnit\TextUI\Configuration\SourceFilter;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Test\Errored;
 use PHPUnit\Event\TestRunner\ExecutionStarted;
 use PHPUnit\Event\UnknownSubscriberTypeException;
 use PHPUnit\Framework\TestStatus\TestStatus;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\Output\Printer;
 use PHPUnit\Util\Color;
@@ -48,7 +54,10 @@ final class ProgressPrinter
     private readonly bool $colors;
     private readonly int $numberOfColumns;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly Source $source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $column             = 0;
@@ -64,7 +73,11 @@ final class ProgressPrinter
      * @throws UnknownSubscriberTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Printer $printer, Facade $facade, bool $colors, int $numberOfColumns, Source $source)
+=======
+    public function __construct(Printer $printer, bool $colors, int $numberOfColumns)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Printer $printer, bool $colors, int $numberOfColumns)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -73,9 +86,14 @@ final class ProgressPrinter
         $this->colors          = $colors;
         $this->numberOfColumns = $numberOfColumns;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->source          = $source;
 
         $this->registerSubscribers($facade);
+=======
+
+        $this->registerSubscribers();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
         $this->registerSubscribers();
@@ -85,10 +103,15 @@ final class ProgressPrinter
     public function testRunnerExecutionStarted(ExecutionStarted $event): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->numberOfTestsRun   = 0;
         $this->numberOfTests      = $event->testSuite()->count();
         $this->numberOfTestsWidth = strlen((string) $this->numberOfTests);
         $this->column             = 0;
+=======
+        $this->numberOfTests      = $event->testSuite()->count();
+        $this->numberOfTestsWidth = strlen((string) $this->numberOfTests);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->numberOfTests      = $event->testSuite()->count();
         $this->numberOfTestsWidth = strlen((string) $this->numberOfTests);
@@ -121,6 +144,7 @@ final class ProgressPrinter
         $this->updateTestStatus(TestStatus::incomplete());
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function testTriggeredNotice(NoticeTriggered $event): void
     {
@@ -196,12 +220,17 @@ final class ProgressPrinter
 
     public function testTriggeredPhpunitDeprecation(): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testTriggeredNotice(): void
     {
         $this->updateTestStatus(TestStatus::notice());
     }
 
     public function testTriggeredDeprecation(): void
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->updateTestStatus(TestStatus::deprecation());
@@ -212,6 +241,7 @@ final class ProgressPrinter
         $this->updateTestStatus(TestStatus::risky());
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function testTriggeredWarning(WarningTriggered $event): void
     {
@@ -253,10 +283,14 @@ final class ProgressPrinter
 =======
     public function testTriggeredWarning(): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    public function testTriggeredWarning(): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->updateTestStatus(TestStatus::warning());
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function testTriggeredError(ErrorTriggered $event): void
     {
@@ -267,6 +301,8 @@ final class ProgressPrinter
         $this->updateTestStatus(TestStatus::error());
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testFailed(): void
@@ -323,9 +359,15 @@ final class ProgressPrinter
      * @throws UnknownSubscriberTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function registerSubscribers(Facade $facade): void
     {
         $facade->registerSubscribers(
+=======
+    private function registerSubscribers(): void
+    {
+        Facade::registerSubscribers(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function registerSubscribers(): void
     {
@@ -434,8 +476,13 @@ final class ProgressPrinter
                     $this->numberOfTestsRun,
                     $this->numberOfTests,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     floor(($this->numberOfTestsRun / $this->numberOfTests) * 100),
                 ),
+=======
+                    floor(($this->numberOfTestsRun / $this->numberOfTests) * 100)
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     floor(($this->numberOfTestsRun / $this->numberOfTests) * 100)
                 )

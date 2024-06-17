@@ -16,6 +16,10 @@ use function preg_match;
 use function preg_quote;
 use function preg_replace;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function sprintf;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function sprintf;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -29,6 +33,7 @@ use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
 final class StringMatchesFormatDescription extends Constraint
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly string $formatDescription;
 
     public function __construct(string $formatDescription)
@@ -40,6 +45,8 @@ final class StringMatchesFormatDescription extends Constraint
     {
         return 'matches format description:' . PHP_EOL . $this->formatDescription;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private string $formatDescription;
     private readonly string $regularExpression;
 
@@ -61,6 +68,9 @@ final class StringMatchesFormatDescription extends Constraint
             'matches PCRE pattern "%s"',
             $this->regularExpression
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -73,6 +83,7 @@ final class StringMatchesFormatDescription extends Constraint
         $other = $this->convertNewlines($other);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $matches = preg_match(
             $this->regularExpressionForFormatDescription(
                 $this->convertNewlines($this->formatDescription),
@@ -81,6 +92,9 @@ final class StringMatchesFormatDescription extends Constraint
         );
 
         return $matches > 0;
+=======
+        return preg_match($this->regularExpression, $other) > 0;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return preg_match($this->regularExpression, $other) > 0;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -99,7 +113,11 @@ final class StringMatchesFormatDescription extends Constraint
         foreach ($from as $index => $line) {
             if (isset($to[$index]) && $line !== $to[$index]) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $line = $this->regularExpressionForFormatDescription($line);
+=======
+                $line = $this->createRegularExpressionFromFormatDescription($line);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $line = $this->createRegularExpressionFromFormatDescription($line);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,6 +129,7 @@ final class StringMatchesFormatDescription extends Constraint
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $from = implode("\n", $from);
         $to   = implode("\n", $to);
 
@@ -119,6 +138,8 @@ final class StringMatchesFormatDescription extends Constraint
 
     private function regularExpressionForFormatDescription(string $string): string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->formatDescription = implode("\n", $from);
         $other                   = implode("\n", $to);
 
@@ -126,6 +147,9 @@ final class StringMatchesFormatDescription extends Constraint
     }
 
     private function createRegularExpressionFromFormatDescription(string $string): string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $string = strtr(
@@ -144,7 +168,11 @@ final class StringMatchesFormatDescription extends Constraint
                 '%f' => '[+-]?\.?\d+\.?\d*(?:[Ee][+-]?\d+)?',
                 '%c' => '.',
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,11 +186,14 @@ final class StringMatchesFormatDescription extends Constraint
         return preg_replace('/\r\n/', "\n", $text);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private function differ(): Differ
     {
         return new Differ(new UnifiedDiffOutputBuilder("--- Expected\n+++ Actual\n"));
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

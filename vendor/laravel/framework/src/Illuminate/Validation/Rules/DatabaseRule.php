@@ -3,7 +3,10 @@
 namespace Illuminate\Validation\Rules;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use BackedEnum;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Closure;
@@ -86,7 +89,11 @@ trait DatabaseRule
      *
      * @param  \Closure|string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|\Closure|array|string|int|bool|null  $value
+=======
+     * @param  \Illuminate\Contracts\Support\Arrayable|array|string|int|null  $value
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Contracts\Support\Arrayable|array|string|int|null  $value
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -107,10 +114,13 @@ trait DatabaseRule
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($value instanceof BackedEnum) {
             $value = $value->value;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->wheres[] = compact('column', 'value');
@@ -123,7 +133,11 @@ trait DatabaseRule
      *
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array|string  $value
+=======
+     * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $value
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $value
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -136,10 +150,13 @@ trait DatabaseRule
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($value instanceof BackedEnum) {
             $value = $value->value;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->where($column, '!'.$value);
@@ -172,7 +189,11 @@ trait DatabaseRule
      *
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array  $values
+=======
+     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -190,7 +211,11 @@ trait DatabaseRule
      *
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array  $values
+=======
+     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

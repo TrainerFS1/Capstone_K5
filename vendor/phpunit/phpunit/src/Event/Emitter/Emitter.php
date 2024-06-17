@@ -10,7 +10,10 @@
 namespace PHPUnit\Event;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Event\Code\ClassMethod;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Code\ComparisonFailure;
@@ -25,6 +28,7 @@ use PHPUnit\TextUI\Configuration\Configuration;
 interface Emitter
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
@@ -35,6 +39,8 @@ interface Emitter
      */
     public function exportsObjects(): bool;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function applicationStarted(): void;
@@ -54,10 +60,13 @@ interface Emitter
     public function testRunnerBootstrappedExtension(string $className, array $parameters): void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function dataProviderMethodCalled(ClassMethod $testMethod, ClassMethod $dataProviderMethod): void;
 
     public function dataProviderMethodFinished(ClassMethod $testMethod, ClassMethod ...$calledMethods): void;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testSuiteLoaded(TestSuite $testSuite): void;
@@ -71,10 +80,13 @@ interface Emitter
     public function testRunnerExecutionStarted(TestSuite $testSuite): void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testRunnerDisabledGarbageCollection(): void;
 
     public function testRunnerTriggeredGarbageCollection(): void;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testSuiteSkipped(TestSuite $testSuite, string $message): void;
@@ -84,19 +96,29 @@ interface Emitter
     public function testPreparationStarted(Code\Test $test): void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPreparationFailed(Code\Test $test): void;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @psalm-param class-string $testClassName
      */
     public function testBeforeFirstTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeFirstTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void;
+=======
+    public function testBeforeFirstTestMethodErrored(string $testClassName, Code\ClassMethod $calledMethod, Throwable $throwable): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeFirstTestMethodErrored(string $testClassName, Code\ClassMethod $calledMethod, Throwable $throwable): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -105,7 +127,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeFirstTestMethodErrored(string $testClassName, ClassMethod $calledMethod, Throwable $throwable): void;
+=======
+    public function testBeforeFirstTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeFirstTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -114,7 +140,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeFirstTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void;
+=======
+    public function testBeforeTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -123,7 +153,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void;
+=======
+    public function testBeforeTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testBeforeTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -132,7 +166,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testBeforeTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void;
+=======
+    public function testPreConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPreConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -141,12 +179,16 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPreConditionCalled(string $testClassName, ClassMethod $calledMethod): void;
 
     /**
      * @psalm-param class-string $testClassName
      */
     public function testPreConditionFinished(string $testClassName, ClassMethod ...$calledMethods): void;
+=======
+    public function testPreConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPreConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -159,6 +201,7 @@ interface Emitter
     public function testRegisteredComparator(string $className): void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
@@ -167,6 +210,10 @@ interface Emitter
     /**
      * @deprecated
      */
+=======
+    public function testAssertionSucceeded(mixed $value, Constraint\Constraint $constraint, string $message): void;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAssertionSucceeded(mixed $value, Constraint\Constraint $constraint, string $message): void;
 
@@ -226,15 +273,19 @@ interface Emitter
     public function testPassed(Code\Test $test): void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $message
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testConsideredRisky(Code\Test $test, string $message): void;
 
     public function testMarkedAsIncomplete(Code\Test $test, Throwable $throwable): void;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $message
@@ -311,6 +362,8 @@ interface Emitter
     public function testPrintedUnexpectedOutput(string $output): void;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testSkipped(Code\Test $test, string $message): void;
 
     public function testTriggeredPhpunitDeprecation(Code\Test $test, string $message): void;
@@ -333,6 +386,9 @@ interface Emitter
 
     public function testTriggeredPhpunitWarning(Code\Test $test, string $message): void;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testFinished(Code\Test $test, int $numberOfAssertionsPerformed): void;
 
@@ -340,7 +396,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPostConditionCalled(string $testClassName, ClassMethod $calledMethod): void;
+=======
+    public function testPostConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPostConditionCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -349,7 +409,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testPostConditionFinished(string $testClassName, ClassMethod ...$calledMethods): void;
+=======
+    public function testPostConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testPostConditionFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -358,7 +422,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void;
+=======
+    public function testAfterTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -367,7 +435,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void;
+=======
+    public function testAfterTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -376,7 +448,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterLastTestMethodCalled(string $testClassName, ClassMethod $calledMethod): void;
+=======
+    public function testAfterLastTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterLastTestMethodCalled(string $testClassName, Code\ClassMethod $calledMethod): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -385,7 +461,11 @@ interface Emitter
      * @psalm-param class-string $testClassName
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testAfterLastTestMethodFinished(string $testClassName, ClassMethod ...$calledMethods): void;
+=======
+    public function testAfterLastTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testAfterLastTestMethodFinished(string $testClassName, Code\ClassMethod ...$calledMethods): void;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -397,10 +477,13 @@ interface Emitter
     public function testRunnerTriggeredWarning(string $message): void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testRunnerEnabledGarbageCollection(): void;
 
     public function testRunnerExecutionAborted(): void;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testRunnerExecutionFinished(): void;

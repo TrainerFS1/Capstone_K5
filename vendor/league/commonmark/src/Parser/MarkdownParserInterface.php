@@ -14,7 +14,10 @@ declare(strict_types=1);
 namespace League\CommonMark\Parser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\CommonMarkException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Node\Block\Document;
@@ -23,7 +26,11 @@ interface MarkdownParserInterface
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CommonMarkException
+=======
+     * @throws \RuntimeException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \RuntimeException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

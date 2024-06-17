@@ -16,18 +16,24 @@ use function defined;
 use function dirname;
 use function explode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function is_numeric;
 use function preg_match;
 use function realpath;
 use function str_contains;
 use function str_starts_with;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function is_file;
 use function is_numeric;
 use function preg_match;
 use function str_contains;
 use function str_starts_with;
 use function stream_resolve_include_path;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function strlen;
 use function strtolower;
@@ -36,11 +42,17 @@ use function trim;
 use DOMDocument;
 use DOMElement;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use DOMNode;
 use DOMXPath;
 use PHPUnit\Runner\TestSuiteSorter;
 use PHPUnit\Runner\Version;
 use PHPUnit\TextUI\Configuration\Configuration;
+=======
+use DOMXPath;
+use PHPUnit\Runner\TestSuiteSorter;
+use PHPUnit\Runner\Version;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use DOMXPath;
 use PHPUnit\Runner\TestSuiteSorter;
@@ -62,7 +74,10 @@ use PHPUnit\TextUI\Configuration\IniSetting;
 use PHPUnit\TextUI\Configuration\IniSettingCollection;
 use PHPUnit\TextUI\Configuration\Php;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\TextUI\Configuration\Source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\Configuration\TestDirectory;
@@ -89,6 +104,11 @@ use PHPUnit\TextUI\XmlConfiguration\Logging\TestDox\Text as TestDoxText;
 use PHPUnit\Util\VersionComparisonOperator;
 use PHPUnit\Util\Xml\Loader as XmlLoader;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Util\Xml\SchemaFinder;
+use PHPUnit\Util\Xml\Validator;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Util\Xml\SchemaFinder;
 use PHPUnit\Util\Xml\Validator;
@@ -109,7 +129,11 @@ final class Loader
     {
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $document = (new XmlLoader)->loadFile($filename);
+=======
+            $document = (new XmlLoader)->loadFile($filename, false, true, true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $document = (new XmlLoader)->loadFile($filename, false, true, true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -118,7 +142,11 @@ final class Loader
                 $e->getMessage(),
                 $e->getCode(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $e,
+=======
+                $e
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $e
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,6 +157,7 @@ final class Loader
 
         try {
             $xsdFilename = (new SchemaFinder)->find(Version::series());
+<<<<<<< HEAD
 <<<<<<< HEAD
         } catch (CannotFindSchemaException $e) {
             throw new Exception(
@@ -152,6 +181,8 @@ final class Loader
             $this->phpunit($configurationFileRealpath, $document),
             $this->testSuite($configurationFileRealpath, $xpath),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (XmlException $e) {
             throw new Exception(
                 $e->getMessage(),
@@ -170,6 +201,9 @@ final class Loader
             $this->php($filename, $xpath),
             $this->phpunit($filename, $document),
             $this->testSuite($filename, $xpath)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
@@ -185,9 +219,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -205,9 +245,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -225,9 +271,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -245,9 +297,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -261,7 +319,11 @@ final class Loader
             $teamCity,
             $testDoxHtml,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $testDoxText,
+=======
+            $testDoxText
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $testDoxText
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -286,7 +348,11 @@ final class Loader
             $extensionBootstrappers[] = new ExtensionBootstrap(
                 $bootstrap->getAttribute('class'),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $parameters,
+=======
+                $parameters
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $parameters
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -297,10 +363,14 @@ final class Loader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
     private function toAbsolutePath(string $filename, string $path): string
+=======
+    private function toAbsolutePath(string $filename, string $path, bool $useIncludePath = false): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function toAbsolutePath(string $filename, string $path, bool $useIncludePath = false): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -321,7 +391,10 @@ final class Loader
         //  - c:/windows
         if (defined('PHP_WINDOWS_VERSION_BUILD') &&
 <<<<<<< HEAD
+<<<<<<< HEAD
             !empty($path) &&
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ($path[0] === '\\' || (strlen($path) >= 3 && preg_match('#^[A-Z]:[/\\\]#i', substr($path, 0, 3))))) {
@@ -332,6 +405,7 @@ final class Loader
             return $path;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return dirname($filename) . DIRECTORY_SEPARATOR . $path;
     }
@@ -390,6 +464,8 @@ final class Loader
             $ignoreSuppressionOfPhpWarnings,
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $file = dirname($filename) . DIRECTORY_SEPARATOR . $path;
 
         if ($useIncludePath && !is_file($file)) {
@@ -401,6 +477,9 @@ final class Loader
         }
 
         return $file;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -420,7 +499,11 @@ final class Loader
             if ($cacheDirectory !== null) {
                 $cacheDirectory = new Directory(
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->toAbsolutePath($filename, $cacheDirectory),
+=======
+                    $this->toAbsolutePath($filename, $cacheDirectory)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $this->toAbsolutePath($filename, $cacheDirectory)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -431,7 +514,11 @@ final class Loader
                 $element,
                 'pathCoverage',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 false,
+=======
+                false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 false
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -441,7 +528,11 @@ final class Loader
                 $element,
                 'includeUncoveredFiles',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 true,
+=======
+                true
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 true
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -451,7 +542,11 @@ final class Loader
                 $element,
                 'ignoreDeprecatedCodeUnits',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 false,
+=======
+                false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 false
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -461,7 +556,11 @@ final class Loader
                 $element,
                 'disableCodeCoverageIgnore',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 false,
+=======
+                false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 false
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -477,9 +576,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -497,9 +602,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -517,15 +628,21 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
                 $this->getIntegerAttribute($element, 'threshold', 30),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
                 ),
                 $this->getIntegerAttribute($element, 'threshold', 30)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -542,8 +659,13 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputDirectory'),
                     ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputDirectory')
+                    )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputDirectory')
                     )
@@ -557,7 +679,11 @@ final class Loader
                 $this->getStringAttributeWithDefault($element, 'colorWarning', $defaultColors->warning()),
                 $this->getStringAttributeWithDefault($element, 'colorDanger', $defaultColors->danger()),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->getStringAttribute($element, 'customCssFile'),
+=======
+                $this->getStringAttribute($element, 'customCssFile')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->getStringAttribute($element, 'customCssFile')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -573,9 +699,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputFile')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
@@ -593,17 +725,23 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputFile'),
                     ),
                 ),
                 $this->getBooleanAttribute($element, 'showUncoveredFiles', false),
                 $this->getBooleanAttribute($element, 'showOnlySummary', false),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         (string) $this->getStringAttribute($element, 'outputFile')
                     )
                 ),
                 $this->getBooleanAttribute($element, 'showUncoveredFiles', false),
                 $this->getBooleanAttribute($element, 'showOnlySummary', false)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -617,9 +755,15 @@ final class Loader
                     $this->toAbsolutePath(
                         $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         (string) $this->getStringAttribute($element, 'outputDirectory'),
                     ),
                 ),
+=======
+                        (string) $this->getStringAttribute($element, 'outputDirectory')
+                    )
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         (string) $this->getStringAttribute($element, 'outputDirectory')
                     )
@@ -645,17 +789,23 @@ final class Loader
             $php,
             $text,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $xml,
         );
     }
 
     private function getBoolean(string $value, bool $default): bool
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $xml
         );
     }
 
     private function getBoolean(string $value, bool|string $default): bool|string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (strtolower($value) === 'false') {
@@ -670,6 +820,7 @@ final class Loader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getValue(string $value): bool|string
     {
         if (strtolower($value) === 'false') {
@@ -683,6 +834,8 @@ final class Loader
         return $value;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function readFilterDirectories(string $filename, DOMXPath $xpath, string $query): FilterDirectoryCollection
@@ -714,8 +867,11 @@ final class Loader
 
         foreach ($xpath->query($query) as $file) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             assert($file instanceof DOMNode);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $filePath = $file->textContent;
@@ -734,6 +890,7 @@ final class Loader
         $exclude = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($xpath->query('groups/include/group') as $group) {
             assert($group instanceof DOMNode);
 
@@ -744,11 +901,16 @@ final class Loader
             assert($group instanceof DOMNode);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($xpath->query('groups' . '/include/group') as $group) {
             $include[] = new Group($group->textContent);
         }
 
         foreach ($xpath->query('groups' . '/exclude/group') as $group) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $exclude[] = new Group($group->textContent);
         }
@@ -756,7 +918,11 @@ final class Loader
         return new Groups(
             GroupCollection::fromArray($include),
 <<<<<<< HEAD
+<<<<<<< HEAD
             GroupCollection::fromArray($exclude),
+=======
+            GroupCollection::fromArray($exclude)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             GroupCollection::fromArray($exclude)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -770,9 +936,15 @@ final class Loader
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->getBoolean(
             $element->getAttribute($attribute),
             false,
+=======
+        return (bool) $this->getBoolean(
+            $element->getAttribute($attribute),
+            false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return (bool) $this->getBoolean(
             $element->getAttribute($attribute),
@@ -790,7 +962,11 @@ final class Loader
         return $this->getInteger(
             $element->getAttribute($attribute),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $default,
+=======
+            $default
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $default
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -830,8 +1006,11 @@ final class Loader
 
         foreach ($xpath->query('php/includePath') as $includePath) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             assert($includePath instanceof DOMNode);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $path = $includePath->textContent;
@@ -849,7 +1028,11 @@ final class Loader
             $iniSettings[] = new IniSetting(
                 $ini->getAttribute('name'),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ini->getAttribute('value'),
+=======
+                $ini->getAttribute('value')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $ini->getAttribute('value')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -866,7 +1049,11 @@ final class Loader
             $constants[] = new Constant(
                 $const->getAttribute('name'),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->getValue($value),
+=======
+                $this->getBoolean($value, $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->getBoolean($value, $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -895,7 +1082,11 @@ final class Loader
 
                 if ($var->hasAttribute('force')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $force = $this->getBoolean($var->getAttribute('force'), false);
+=======
+                    $force = (bool) $this->getBoolean($var->getAttribute('force'), false);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $force = (bool) $this->getBoolean($var->getAttribute('force'), false);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -907,7 +1098,11 @@ final class Loader
 
                 if (!$verbatim) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $value = $this->getValue($value);
+=======
+                    $value = $this->getBoolean($value, $value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $value = $this->getBoolean($value, $value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1052,6 +1247,7 @@ final class Loader
             $bootstrap,
             $this->getBooleanAttribute($document->documentElement, 'processIsolation', false),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->getBooleanAttribute($document->documentElement, 'failOnDeprecation', false),
             $this->getBooleanAttribute($document->documentElement, 'failOnEmptyTestSuite', false),
             $this->getBooleanAttribute($document->documentElement, 'failOnIncomplete', false),
@@ -1060,10 +1256,15 @@ final class Loader
             $this->getBooleanAttribute($document->documentElement, 'failOnEmptyTestSuite', false),
             $this->getBooleanAttribute($document->documentElement, 'failOnIncomplete', false),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            $this->getBooleanAttribute($document->documentElement, 'failOnEmptyTestSuite', false),
+            $this->getBooleanAttribute($document->documentElement, 'failOnIncomplete', false),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->getBooleanAttribute($document->documentElement, 'failOnRisky', false),
             $this->getBooleanAttribute($document->documentElement, 'failOnSkipped', false),
             $this->getBooleanAttribute($document->documentElement, 'failOnWarning', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnDefect', false),
+<<<<<<< HEAD
 <<<<<<< HEAD
             $this->getBooleanAttribute($document->documentElement, 'stopOnDeprecation', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnError', false),
@@ -1074,12 +1275,17 @@ final class Loader
             $this->getBooleanAttribute($document->documentElement, 'stopOnSkipped', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnWarning', false),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->getBooleanAttribute($document->documentElement, 'stopOnError', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnFailure', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnWarning', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnIncomplete', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnRisky', false),
             $this->getBooleanAttribute($document->documentElement, 'stopOnSkipped', false),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $extensionsDirectory,
             $this->getBooleanAttribute($document->documentElement, 'beStrictAboutChangesToGlobalState', false),
@@ -1099,9 +1305,13 @@ final class Loader
             $backupStaticProperties,
             $this->getBooleanAttribute($document->documentElement, 'registerMockObjectsFromTestArgumentsRecursively', false),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->getBooleanAttribute($document->documentElement, 'testdox', false),
             $this->getBooleanAttribute($document->documentElement, 'controlGarbageCollector', false),
             $this->getIntegerAttribute($document->documentElement, 'numberOfTestsBeforeGarbageCollection', 100),
+=======
+            $this->getBooleanAttribute($document->documentElement, 'testdox', false)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->getBooleanAttribute($document->documentElement, 'testdox', false)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1111,7 +1321,11 @@ final class Loader
     private function getColors(DOMDocument $document): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $colors = Configuration::COLOR_DEFAULT;
+=======
+        $colors = \PHPUnit\TextUI\Configuration\Configuration::COLOR_DEFAULT;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $colors = \PHPUnit\TextUI\Configuration\Configuration::COLOR_DEFAULT;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1121,9 +1335,15 @@ final class Loader
               'always' only allowed from command line */
             if ($this->getBoolean($document->documentElement->getAttribute('colors'), false)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $colors = Configuration::COLOR_AUTO;
             } else {
                 $colors = Configuration::COLOR_NEVER;
+=======
+                $colors = \PHPUnit\TextUI\Configuration\Configuration::COLOR_AUTO;
+            } else {
+                $colors = \PHPUnit\TextUI\Configuration\Configuration::COLOR_NEVER;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $colors = \PHPUnit\TextUI\Configuration\Configuration::COLOR_AUTO;
             } else {
@@ -1206,7 +1426,11 @@ final class Loader
                     $suffix,
                     $phpVersion,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $phpVersionOperator,
+=======
+                    $phpVersionOperator
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $phpVersionOperator
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1240,6 +1464,7 @@ final class Loader
                     $this->toAbsolutePath($filename, $file),
                     $phpVersion,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $phpVersionOperator,
                 );
             }
@@ -1254,6 +1479,8 @@ final class Loader
                 TestFileCollection::fromArray($files),
                 FileCollection::fromArray($exclude),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $phpVersionOperator
                 );
             }
@@ -1263,6 +1490,9 @@ final class Loader
                 TestDirectoryCollection::fromArray($directories),
                 TestFileCollection::fromArray($files),
                 FileCollection::fromArray($exclude)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }

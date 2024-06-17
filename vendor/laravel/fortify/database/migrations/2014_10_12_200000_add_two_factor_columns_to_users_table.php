@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->text('two_factor_secret')
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->after('password')
                 ->nullable();
 
@@ -27,6 +28,8 @@ return new class extends Migration
                     ->after('two_factor_recovery_codes')
                     ->nullable();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ->after('password')
                     ->nullable();
 
@@ -38,6 +41,9 @@ return new class extends Migration
                 $table->timestamp('two_factor_confirmed_at')
                         ->after('two_factor_recovery_codes')
                         ->nullable();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         });

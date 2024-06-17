@@ -76,6 +76,7 @@ class JobRecorder
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             if (is_string($payload['data'])) {
                 $properties['data'] = json_decode($payload['data'], true, 512, JSON_THROW_ON_ERROR);
@@ -83,6 +84,8 @@ class JobRecorder
         } catch (Exception $exception) {
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($pushedAt = DateTime::createFromFormat('U.u', $payload->get('pushedAt', ''))) {

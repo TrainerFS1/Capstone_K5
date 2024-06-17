@@ -14,6 +14,7 @@ class DiscoverEvents
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The callback to be used to guess class names.
      *
      * @var callable(SplFileInfo, string): string|null
@@ -21,6 +22,8 @@ class DiscoverEvents
     public static $guessClassNamesUsingCallback;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get all of the events and listeners by searching the given listener directory.
@@ -33,7 +36,11 @@ class DiscoverEvents
     {
         $listeners = collect(static::getListenerEvents(
 <<<<<<< HEAD
+<<<<<<< HEAD
             Finder::create()->files()->in($listenerPath), $basePath
+=======
+            (new Finder)->files()->in($listenerPath), $basePath
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             (new Finder)->files()->in($listenerPath), $basePath
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -102,10 +109,13 @@ class DiscoverEvents
     protected static function classFromFile(SplFileInfo $file, $basePath)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (static::$guessClassNamesUsingCallback) {
             return call_user_func(static::$guessClassNamesUsingCallback, $file, $basePath);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $class = trim(Str::replaceFirst($basePath, '', $file->getRealPath()), DIRECTORY_SEPARATOR);
@@ -116,6 +126,7 @@ class DiscoverEvents
             ucfirst(Str::replaceLast('.php', '', $class))
         );
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -128,6 +139,8 @@ class DiscoverEvents
     {
         static::$guessClassNamesUsingCallback = $callback;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

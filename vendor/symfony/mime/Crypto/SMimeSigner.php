@@ -32,7 +32,11 @@ final class SMimeSigner extends SMime
      * @param int|null    $signOptions          Bitwise operator options for openssl_pkcs7_sign() (@see https://secure.php.net/manual/en/openssl.pkcs7.flags.php)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $certificate, string $privateKey, ?string $privateKeyPassphrase = null, ?string $extraCerts = null, ?int $signOptions = null)
+=======
+    public function __construct(string $certificate, string $privateKey, string $privateKeyPassphrase = null, string $extraCerts = null, int $signOptions = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $certificate, string $privateKey, string $privateKeyPassphrase = null, string $extraCerts = null, int $signOptions = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

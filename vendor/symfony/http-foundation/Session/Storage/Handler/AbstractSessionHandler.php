@@ -39,6 +39,7 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function doRead(#[\SensitiveParameter] string $sessionId): string;
 
     abstract protected function doWrite(#[\SensitiveParameter] string $sessionId, string $data): bool;
@@ -47,6 +48,8 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
 
     public function validateId(#[\SensitiveParameter] string $sessionId): bool
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     abstract protected function doRead(string $sessionId): string;
 
     abstract protected function doWrite(string $sessionId, string $data): bool;
@@ -54,6 +57,9 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     abstract protected function doDestroy(string $sessionId): bool;
 
     public function validateId(string $sessionId): bool
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->prefetchData = $this->read($sessionId);
@@ -63,7 +69,11 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function read(#[\SensitiveParameter] string $sessionId): string
+=======
+    public function read(string $sessionId): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function read(string $sessionId): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -87,7 +97,11 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function write(#[\SensitiveParameter] string $sessionId, string $data): bool
+=======
+    public function write(string $sessionId, string $data): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function write(string $sessionId, string $data): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +117,11 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function destroy(#[\SensitiveParameter] string $sessionId): bool
+=======
+    public function destroy(string $sessionId): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function destroy(string $sessionId): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

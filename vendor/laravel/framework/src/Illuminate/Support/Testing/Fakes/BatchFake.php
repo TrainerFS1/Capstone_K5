@@ -7,7 +7,10 @@ use Illuminate\Bus\Batch;
 use Illuminate\Bus\UpdatedBatchJobCounts;
 use Illuminate\Support\Carbon;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Collection;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -84,8 +87,11 @@ class BatchFake extends Batch
     public function add($jobs)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $jobs = Collection::wrap($jobs);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($jobs as $job) {

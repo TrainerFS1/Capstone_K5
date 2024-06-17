@@ -59,7 +59,11 @@ class CacheManager implements FactoryContract
         $name = $name ?: $this->getDefaultDriver();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->stores[$name] ??= $this->resolve($name);
+=======
+        return $this->stores[$name] = $this->get($name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->stores[$name] = $this->get($name);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -78,7 +82,10 @@ class CacheManager implements FactoryContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Attempt to get the store from the local cache.
      *
      * @param  string  $name
@@ -90,6 +97,9 @@ class CacheManager implements FactoryContract
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Resolve the given store.
      *
@@ -109,6 +119,7 @@ class CacheManager implements FactoryContract
         if (isset($this->customCreators[$config['driver']])) {
             return $this->callCustomCreator($config);
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
         $driverMethod = 'create'.ucfirst($config['driver']).'Driver';
@@ -119,6 +130,8 @@ class CacheManager implements FactoryContract
 
         throw new InvalidArgumentException("Driver [{$config['driver']}] is not supported.");
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             $driverMethod = 'create'.ucfirst($config['driver']).'Driver';
 
@@ -128,6 +141,9 @@ class CacheManager implements FactoryContract
                 throw new InvalidArgumentException("Driver [{$config['driver']}] is not supported.");
             }
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -175,10 +191,14 @@ class CacheManager implements FactoryContract
     protected function createFileDriver(array $config)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->repository(
             (new FileStore($this->app['files'], $config['path'], $config['permission'] ?? null))
                 ->setLockDirectory($config['lock_path'] ?? null)
         );
+=======
+        return $this->repository(new FileStore($this->app['files'], $config['path'], $config['permission'] ?? null));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->repository(new FileStore($this->app['files'], $config['path'], $config['permission'] ?? null));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -249,8 +269,12 @@ class CacheManager implements FactoryContract
             $this->getPrefix($config),
             $config['lock_table'] ?? 'cache_locks',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $config['lock_lottery'] ?? [2, 100],
             $config['lock_timeout'] ?? 86400,
+=======
+            $config['lock_lottery'] ?? [2, 100]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $config['lock_lottery'] ?? [2, 100]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -297,6 +321,7 @@ class CacheManager implements FactoryContract
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! empty($config['key']) && ! empty($config['secret'])) {
             $dynamoConfig['credentials'] = Arr::only(
                 $config, ['key', 'secret']
@@ -308,12 +333,17 @@ class CacheManager implements FactoryContract
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($config['key'], $config['secret'])) {
             $dynamoConfig['credentials'] = Arr::only(
                 $config, ['key', 'secret', 'token']
             );
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new DynamoDbClient($dynamoConfig);
     }
@@ -453,6 +483,7 @@ class CacheManager implements FactoryContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Set the application instance used by the manager.
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
@@ -466,6 +497,8 @@ class CacheManager implements FactoryContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Dynamically call the default driver instance.

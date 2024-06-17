@@ -3,7 +3,10 @@
 namespace Illuminate\Queue;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Queue\Attributes\WithoutRelations;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReflectionClass;
@@ -23,6 +26,7 @@ trait SerializesModels
         $values = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $reflectionClass = new ReflectionClass($this);
 
         [$class, $properties, $classLevelWithoutRelations] = [
@@ -35,6 +39,11 @@ trait SerializesModels
 
         $class = get_class($this);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        $properties = (new ReflectionClass($this))->getProperties();
+
+        $class = get_class($this);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($properties as $property) {
             if ($property->isStatic()) {
@@ -42,6 +51,11 @@ trait SerializesModels
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            $property->setAccessible(true);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $property->setAccessible(true);
 
@@ -65,11 +79,15 @@ trait SerializesModels
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $values[$name] = $this->getSerializedPropertyValue(
                 $value,
                 ! $classLevelWithoutRelations &&
                     empty($property->getAttributes(WithoutRelations::class))
             );
+=======
+            $values[$name] = $this->getSerializedPropertyValue($value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $values[$name] = $this->getSerializedPropertyValue($value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -108,6 +126,11 @@ trait SerializesModels
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            $property->setAccessible(true);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $property->setAccessible(true);
 
@@ -127,6 +150,11 @@ trait SerializesModels
     protected function getPropertyValue(ReflectionProperty $property)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $property->setAccessible(true);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $property->setAccessible(true);
 

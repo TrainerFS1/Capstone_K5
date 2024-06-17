@@ -333,7 +333,11 @@ class Migrator
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return tap($this->resetMigrations($migrations, Arr::wrap($paths), $pretend), function () {
+=======
+        return tap($this->resetMigrations($migrations, $paths, $pretend), function () {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return tap($this->resetMigrations($migrations, $paths, $pretend), function () {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -443,7 +447,10 @@ class Migrator
 
             $this->write(TwoColumnDetail::class, $name);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->write(BulletList::class, collect($this->getQueries($migration, $method))->map(function ($query) {

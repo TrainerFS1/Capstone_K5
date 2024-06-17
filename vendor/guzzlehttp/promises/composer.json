@@ -27,23 +27,34 @@
     ],
     "require": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "php": "^7.2.5 || ^8.0"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.8.2",
         "phpunit/phpunit": "^8.5.36 || ^9.6.15"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "php": ">=5.5"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.4 || ^5.1"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {
         "psr-4": {
             "GuzzleHttp\\Promise\\": "src/"
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
+=======
+        },
+        "files": ["src/functions_include.php"]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         },
         "files": ["src/functions_include.php"]
@@ -54,6 +65,7 @@
             "GuzzleHttp\\Promise\\Tests\\": "tests/"
         }
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     "extra": {
         "bamarni-bin": {
@@ -66,6 +78,8 @@
             "bamarni/composer-bin-plugin": true
         },
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "scripts": {
         "test": "vendor/bin/simple-phpunit",
         "test-ci": "vendor/bin/simple-phpunit --coverage-text"
@@ -76,6 +90,9 @@
         }
     },
     "config": {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "preferred-install": "dist",
         "sort-packages": true

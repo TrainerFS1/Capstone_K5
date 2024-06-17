@@ -80,7 +80,13 @@ class Gitignore
 
         $regex = preg_quote(str_replace('\\', '', $gitignoreLine), '~');
 <<<<<<< HEAD
+<<<<<<< HEAD
         $regex = preg_replace_callback('~\\\\\[((?:\\\\!)?)([^\[\]]*)\\\\\]~', fn (array $matches): string => '['.('' !== $matches[1] ? '^' : '').str_replace('\\-', '-', $matches[2]).']', $regex);
+=======
+        $regex = preg_replace_callback('~\\\\\[((?:\\\\!)?)([^\[\]]*)\\\\\]~', function (array $matches): string {
+            return '['.('' !== $matches[1] ? '^' : '').str_replace('\\-', '-', $matches[2]).']';
+        }, $regex);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $regex = preg_replace_callback('~\\\\\[((?:\\\\!)?)([^\[\]]*)\\\\\]~', function (array $matches): string {
             return '['.('' !== $matches[1] ? '^' : '').str_replace('\\-', '-', $matches[2]).']';

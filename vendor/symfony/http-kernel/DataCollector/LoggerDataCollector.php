@@ -16,9 +16,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Log\DebugLoggerConfigurator;
 use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
 use Symfony\Component\VarDumper\Cloner\Data;
+=======
+use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -31,7 +35,11 @@ use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
 class LoggerDataCollector extends DataCollector implements LateDataCollectorInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?DebugLoggerInterface $logger;
+=======
+    private DebugLoggerInterface $logger;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private DebugLoggerInterface $logger;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,23 +49,33 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     private ?array $processedLogs = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?object $logger = null, ?string $containerPathPrefix = null, ?RequestStack $requestStack = null)
     {
         $this->logger = DebugLoggerConfigurator::getDebugLogger($logger);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(object $logger = null, string $containerPathPrefix = null, RequestStack $requestStack = null)
     {
         if ($logger instanceof DebugLoggerInterface) {
             $this->logger = $logger;
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->containerPathPrefix = $containerPathPrefix;
         $this->requestStack = $requestStack;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
+=======
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function collect(Request $request, Response $response, \Throwable $exception = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,10 +84,13 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function lateCollect(): void
     {
         if ($this->logger) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset()
     {
         if (isset($this->logger)) {
@@ -81,6 +102,9 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     public function lateCollect()
     {
         if (isset($this->logger)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $containerDeprecationLogs = $this->getContainerDeprecationLogs();
             $this->data = $this->computeErrorsCount($containerDeprecationLogs);
@@ -94,7 +118,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getLogs(): Data|array
+=======
+    public function getLogs()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getLogs()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +131,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getProcessedLogs(): array
+=======
+    public function getProcessedLogs()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getProcessedLogs()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -145,7 +177,13 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
 
         // sort logs from oldest to newest
 <<<<<<< HEAD
+<<<<<<< HEAD
         usort($logs, static fn ($logA, $logB) => $logA['timestamp'] <=> $logB['timestamp']);
+=======
+        usort($logs, static function ($logA, $logB) {
+            return $logA['timestamp'] <=> $logB['timestamp'];
+        });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         usort($logs, static function ($logA, $logB) {
             return $logA['timestamp'] <=> $logB['timestamp'];
@@ -156,7 +194,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getFilters(): array
+=======
+    public function getFilters()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getFilters()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -191,7 +233,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getPriorities(): Data|array
+=======
+    public function getPriorities()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getPriorities()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -200,7 +246,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function countErrors(): int
+=======
+    public function countErrors()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function countErrors()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -209,7 +259,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function countDeprecations(): int
+=======
+    public function countDeprecations()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function countDeprecations()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -218,7 +272,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function countWarnings(): int
+=======
+    public function countWarnings()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function countWarnings()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -227,7 +285,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function countScreams(): int
+=======
+    public function countScreams()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function countScreams()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -236,7 +298,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCompilerLogs(): Data
+=======
+    public function getCompilerLogs()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getCompilerLogs()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -277,9 +343,15 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getContainerCompilerLogs(?string $compilerLogsFilepath = null): array
     {
         if (!$compilerLogsFilepath || !is_file($compilerLogsFilepath)) {
+=======
+    private function getContainerCompilerLogs(string $compilerLogsFilepath = null): array
+    {
+        if (!is_file($compilerLogsFilepath)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getContainerCompilerLogs(string $compilerLogsFilepath = null): array
     {
@@ -302,7 +374,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function sanitizeLogs(array $logs): array
+=======
+    private function sanitizeLogs(array $logs)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function sanitizeLogs(array $logs)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -338,7 +414,11 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $errorId = hash('xxh128', "{$exception->getSeverity()}/{$exception->getLine()}/{$exception->getFile()}\0{$message}", true);
+=======
+            $errorId = md5("{$exception->getSeverity()}/{$exception->getLine()}/{$exception->getFile()}\0{$message}", true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $errorId = md5("{$exception->getSeverity()}/{$exception->getLine()}/{$exception->getFile()}\0{$message}", true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -10,6 +10,7 @@
 namespace PHPUnit\Framework\Constraint;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function gettype;
 use function sprintf;
 use function strtolower;
@@ -19,12 +20,17 @@ use PHPUnit\Framework\SelfDescribing;
 use PHPUnit\Util\Exporter;
 use SebastianBergmann\Comparator\ComparisonFailure;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function sprintf;
 use Countable;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\SelfDescribing;
 use SebastianBergmann\Comparator\ComparisonFailure;
 use SebastianBergmann\Exporter\Exporter;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
@@ -33,6 +39,11 @@ use SebastianBergmann\Exporter\Exporter;
 abstract class Constraint implements Countable, SelfDescribing
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private ?Exporter $exporter = null;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private ?Exporter $exporter = null;
 
@@ -77,6 +88,7 @@ abstract class Constraint implements Countable, SelfDescribing
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @deprecated
      */
@@ -84,6 +96,8 @@ abstract class Constraint implements Countable, SelfDescribing
     {
         return new \SebastianBergmann\Exporter\Exporter;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function exporter(): Exporter
     {
         if ($this->exporter === null) {
@@ -91,6 +105,9 @@ abstract class Constraint implements Countable, SelfDescribing
         }
 
         return $this->exporter;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -100,6 +117,11 @@ abstract class Constraint implements Countable, SelfDescribing
      *
      * This method can be overridden to implement the evaluation algorithm.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @codeCoverageIgnore
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @codeCoverageIgnore
@@ -116,17 +138,23 @@ abstract class Constraint implements Countable, SelfDescribing
      * @throws ExpectationFailedException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function fail(mixed $other, string $description, ?ComparisonFailure $comparisonFailure = null): never
     {
         $failureDescription = sprintf(
             'Failed asserting that %s.',
             $this->failureDescription($other),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function fail(mixed $other, string $description, ComparisonFailure $comparisonFailure = null): never
     {
         $failureDescription = sprintf(
             'Failed asserting that %s.',
             $this->failureDescription($other)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
@@ -143,7 +171,11 @@ abstract class Constraint implements Countable, SelfDescribing
         throw new ExpectationFailedException(
             $failureDescription,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $comparisonFailure,
+=======
+            $comparisonFailure
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $comparisonFailure
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -173,7 +205,11 @@ abstract class Constraint implements Countable, SelfDescribing
     protected function failureDescription(mixed $other): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Exporter::export($other, true) . ' ' . $this->toString(true);
+=======
+        return $this->exporter()->export($other) . ' ' . $this->toString();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->exporter()->export($other) . ' ' . $this->toString();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -217,7 +253,11 @@ abstract class Constraint implements Countable, SelfDescribing
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Exporter::export($other, true) . ' ' . $string;
+=======
+        return $this->exporter()->export($other) . ' ' . $string;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->exporter()->export($other) . ' ' . $string;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -288,6 +328,7 @@ abstract class Constraint implements Countable, SelfDescribing
         return $this;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-return non-empty-string
@@ -311,6 +352,8 @@ abstract class Constraint implements Countable, SelfDescribing
             default => 'a value of ' . $type . ' ',
         };
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

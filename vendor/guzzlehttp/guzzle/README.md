@@ -4,7 +4,11 @@
 
 [![Latest Version](https://img.shields.io/github/release/guzzle/guzzle.svg?style=flat-square)](https://github.com/guzzle/guzzle/releases)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Build Status](https://img.shields.io/github/actions/workflow/status/guzzle/guzzle/ci.yml?label=ci%20build&style=flat-square)](https://github.com/guzzle/guzzle/actions?query=workflow%3ACI)
+=======
+[![Build Status](https://img.shields.io/github/workflow/status/guzzle/guzzle/CI?label=ci%20build&style=flat-square)](https://github.com/guzzle/guzzle/actions?query=workflow%3ACI)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [![Build Status](https://img.shields.io/github/workflow/status/guzzle/guzzle/CI?label=ci%20build&style=flat-square)](https://github.com/guzzle/guzzle/actions?query=workflow%3ACI)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,6 +69,7 @@ composer require guzzlehttp/guzzle
 ## Version Guidance
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 | Version | Status              | Packagist           | Namespace    | Repo                | Docs                | PSR-7 | PHP Version  |
 |---------|---------------------|---------------------|--------------|---------------------|---------------------|-------|--------------|
 | 3.x     | EOL                 | `guzzle/guzzle`     | `Guzzle`     | [v3][guzzle-3-repo] | [v3][guzzle-3-docs] | No    | >=5.3.3,<7.0 |
@@ -73,6 +78,8 @@ composer require guzzlehttp/guzzle
 | 6.x     | Security fixes only | `guzzlehttp/guzzle` | `GuzzleHttp` | [v6][guzzle-6-repo] | [v6][guzzle-6-docs] | Yes   | >=5.5,<8.0   |
 | 7.x     | Latest              | `guzzlehttp/guzzle` | `GuzzleHttp` | [v7][guzzle-7-repo] | [v7][guzzle-7-docs] | Yes   | >=7.2.5,<8.4 |
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 | Version | Status         | Packagist           | Namespace    | Repo                | Docs                | PSR-7 | PHP Version  |
 |---------|----------------|---------------------|--------------|---------------------|---------------------|-------|--------------|
 | 3.x     | EOL            | `guzzle/guzzle`     | `Guzzle`     | [v3][guzzle-3-repo] | [v3][guzzle-3-docs] | No    | >=5.3.3,<7.0 |
@@ -80,6 +87,9 @@ composer require guzzlehttp/guzzle
 | 5.x     | EOL            | `guzzlehttp/guzzle` | `GuzzleHttp` | [v5][guzzle-5-repo] | [v5][guzzle-5-docs] | No    | >=5.4,<7.4   |
 | 6.x     | Security fixes | `guzzlehttp/guzzle` | `GuzzleHttp` | [v6][guzzle-6-repo] | [v6][guzzle-6-docs] | Yes   | >=5.5,<8.0   |
 | 7.x     | Latest         | `guzzlehttp/guzzle` | `GuzzleHttp` | [v7][guzzle-7-repo] | [v7][guzzle-7-docs] | Yes   | >=7.2.5,<8.2 |
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 [guzzle-3-repo]: https://github.com/guzzle/guzzle3

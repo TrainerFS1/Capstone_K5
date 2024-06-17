@@ -7,6 +7,7 @@ use Spatie\Backtrace\Frame as SpatieFrame;
 class Frame
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function fromSpatieFrame(
         SpatieFrame $frame,
     ): self {
@@ -17,6 +18,8 @@ class Frame
         protected SpatieFrame $frame,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected SpatieFrame $frame;
 
     public static function fromSpatieFrame(SpatieFrame $frame): self
@@ -27,6 +30,9 @@ class Frame
     public function __construct(SpatieFrame $frame)
     {
         $this->frame = $frame;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -39,7 +45,10 @@ class Frame
             'class' => $this->frame->class,
             'code_snippet' => $this->frame->getSnippet(30),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'arguments' => $this->frame->arguments,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'application_frame' => $this->frame->applicationFrame,

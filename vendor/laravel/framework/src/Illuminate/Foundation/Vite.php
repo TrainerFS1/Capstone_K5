@@ -57,6 +57,7 @@ class Vite implements Htmlable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The custom asset path resolver.
      *
      * @var callable|null
@@ -64,6 +65,8 @@ class Vite implements Htmlable
     protected $assetPathResolver = null;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The script tag attributes resolvers.
@@ -172,6 +175,7 @@ class Vite implements Htmlable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Resolve asset paths using the provided resolver.
      *
      * @param  callable|null  $urlResolver
@@ -185,6 +189,8 @@ class Vite implements Htmlable
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the Vite "hot" file path.
@@ -683,6 +689,7 @@ class Vite implements Htmlable
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the content of a given asset.
      *
      * @param  string  $asset
@@ -709,6 +716,8 @@ class Vite implements Htmlable
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Generate an asset path for the application.
      *
      * @param  string  $path
@@ -718,7 +727,11 @@ class Vite implements Htmlable
     protected function assetPath($path, $secure = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return ($this->assetPathResolver ?? asset(...))($path, $secure);
+=======
+        return asset($path, $secure);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return asset($path, $secure);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -731,7 +744,11 @@ class Vite implements Htmlable
      * @return array
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws \Illuminate\Foundation\ViteManifestNotFoundException
+=======
+     * @throws \Exception
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \Exception
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -743,7 +760,11 @@ class Vite implements Htmlable
         if (! isset(static::$manifests[$path])) {
             if (! is_file($path)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new ViteManifestNotFoundException("Vite manifest not found at: $path");
+=======
+                throw new Exception("Vite manifest not found at: {$path}");
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new Exception("Vite manifest not found at: {$path}");
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

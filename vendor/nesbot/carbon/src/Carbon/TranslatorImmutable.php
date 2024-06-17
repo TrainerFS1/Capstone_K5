@@ -67,7 +67,11 @@ class TranslatorImmutable extends Translator
      * @codeCoverageIgnore
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setConfigCacheFactory(ConfigCacheFactoryInterface $configCacheFactory): void
+=======
+    public function setConfigCacheFactory(ConfigCacheFactoryInterface $configCacheFactory)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setConfigCacheFactory(ConfigCacheFactoryInterface $configCacheFactory)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -16,7 +16,10 @@ declare(strict_types=1);
 namespace League\CommonMark\Extension\Table;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Extension\Attributes\Util\AttributesHelper;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Node\Node;
@@ -27,6 +30,7 @@ use League\CommonMark\Xml\XmlNodeRendererInterface;
 
 final class TableCellRenderer implements NodeRendererInterface, XmlNodeRendererInterface
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     private const DEFAULT_ATTRIBUTES = [
         TableCell::ALIGN_LEFT   => ['align' => 'left'],
@@ -47,6 +51,8 @@ final class TableCellRenderer implements NodeRendererInterface, XmlNodeRendererI
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @param TableCell $node
      *
@@ -60,8 +66,14 @@ final class TableCellRenderer implements NodeRendererInterface, XmlNodeRendererI
 
         $attrs = $node->data->get('attributes');
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (($alignment = $node->getAlign()) !== null) {
             $attrs = AttributesHelper::mergeAttributes($attrs, $this->alignmentAttributes[$alignment]);
+=======
+
+        if ($node->getAlign() !== null) {
+            $attrs['align'] = $node->getAlign();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
         if ($node->getAlign() !== null) {

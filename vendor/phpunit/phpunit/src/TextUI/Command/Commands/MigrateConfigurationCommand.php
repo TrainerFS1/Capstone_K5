@@ -12,7 +12,10 @@ namespace PHPUnit\TextUI\Command;
 use function copy;
 use function file_put_contents;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function sprintf;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\XmlConfiguration\Migrator;
@@ -32,6 +35,7 @@ final class MigrateConfigurationCommand implements Command
 
     public function execute(): Result
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         try {
             $migrated = (new Migrator)->migrate($this->filename);
@@ -62,6 +66,8 @@ final class MigrateConfigurationCommand implements Command
             );
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         copy($this->filename, $this->filename . '.bak');
 
         $buffer        = 'Created backup:         ' . $this->filename . '.bak' . PHP_EOL;
@@ -81,6 +87,9 @@ final class MigrateConfigurationCommand implements Command
         }
 
         return Result::from($buffer, $shellExitCode);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -29,7 +29,11 @@ abstract class AbstractHttpTransport extends AbstractTransport
     protected $client;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?HttpClientInterface $client = null, ?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null)
+=======
+    public function __construct(HttpClientInterface $client = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(HttpClientInterface $client = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -71,6 +75,10 @@ abstract class AbstractHttpTransport extends AbstractTransport
     protected function doSend(SentMessage $message): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $response = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $response = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

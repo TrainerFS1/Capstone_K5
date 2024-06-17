@@ -41,10 +41,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32Encode(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32Encode(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32Encode(string $str): string
     {
@@ -60,10 +65,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32EncodeUpper(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32EncodeUpper(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32EncodeUpper(string $str): string
     {
@@ -79,10 +89,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32Decode(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32Decode(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32Decode(string $str): string
     {
@@ -98,10 +113,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32DecodeUpper(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32DecodeUpper(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32DecodeUpper(string $str): string
     {
@@ -117,10 +137,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32HexEncode(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32HexEncode(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32HexEncode(string $str): string
     {
@@ -136,10 +161,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32HexEncodeUpper(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32HexEncodeUpper(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32HexEncodeUpper(string $str): string
     {
@@ -155,10 +185,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32HexDecode(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32HexDecode(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32HexDecode(string $str): string
     {
@@ -174,10 +209,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base32HexDecodeUpper(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base32HexDecodeUpper(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base32HexDecodeUpper(string $str): string
     {
@@ -193,10 +233,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base64Encode(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base64Encode(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base64Encode(string $str): string
     {
@@ -212,10 +257,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base64Decode(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base64Decode(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base64Decode(string $str): string
     {
@@ -232,10 +282,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base64EncodeDotSlash(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base64EncodeDotSlash(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base64EncodeDotSlash(string $str): string
     {
@@ -254,10 +309,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base64DecodeDotSlash(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base64DecodeDotSlash(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base64DecodeDotSlash(string $str): string
     {
@@ -274,10 +334,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base64EncodeDotSlashOrdered(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base64EncodeDotSlashOrdered(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base64EncodeDotSlashOrdered(string $str): string
     {
@@ -296,10 +361,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function base64DecodeDotSlashOrdered(
         #[\SensitiveParameter]
         string $str
     ): string {
+=======
+    public static function base64DecodeDotSlashOrdered(string $str): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function base64DecodeDotSlashOrdered(string $str): string
     {
@@ -316,10 +386,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function hexEncode(
         #[\SensitiveParameter]
         string $bin_string
     ): string {
+=======
+    public static function hexEncode(string $bin_string): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function hexEncode(string $bin_string): string
     {
@@ -336,10 +411,15 @@ abstract class Encoding
      * @throws \RangeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function hexDecode(
         #[\SensitiveParameter]
         string $hex_string
     ): string {
+=======
+    public static function hexDecode(string $hex_string): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function hexDecode(string $hex_string): string
     {
@@ -356,10 +436,15 @@ abstract class Encoding
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function hexEncodeUpper(
         #[\SensitiveParameter]
         string $bin_string
     ): string {
+=======
+    public static function hexEncodeUpper(string $bin_string): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function hexEncodeUpper(string $bin_string): string
     {
@@ -375,10 +460,15 @@ abstract class Encoding
      * @return string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function hexDecodeUpper(
         #[\SensitiveParameter]
         string $bin_string
     ): string {
+=======
+    public static function hexDecodeUpper(string $bin_string): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function hexDecodeUpper(string $bin_string): string
     {

@@ -3,7 +3,10 @@
 namespace Illuminate\Foundation\Testing;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Carbon\CarbonImmutable;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Database\Eloquent\Model;
@@ -16,6 +19,9 @@ use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Mockery;
 use Mockery\Exception\InvalidCountException;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Throwable;
@@ -32,11 +38,14 @@ abstract class TestCase extends BaseTestCase
         Concerns\InteractsWithSession,
         Concerns\InteractsWithTime,
 <<<<<<< HEAD
+<<<<<<< HEAD
         Concerns\InteractsWithTestCaseLifecycle,
         Concerns\InteractsWithViews;
 
     /**
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Concerns\InteractsWithViews;
 
     /**
@@ -75,6 +84,9 @@ abstract class TestCase extends BaseTestCase
     protected $setUpHasRun = false;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Creates the application.
      *
@@ -94,8 +106,11 @@ abstract class TestCase extends BaseTestCase
         static::$latestResponse = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->setUpTheTestEnvironment();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Facade::clearResolvedInstances();
 
         if (! $this->app) {
@@ -113,6 +128,9 @@ abstract class TestCase extends BaseTestCase
         Model::setEventDispatcher($this->app['events']);
 
         $this->setUpHasRun = true;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -128,7 +146,10 @@ abstract class TestCase extends BaseTestCase
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Boot the testing helper traits.
      *
      * @return array
@@ -179,6 +200,9 @@ abstract class TestCase extends BaseTestCase
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * {@inheritdoc}
      */
@@ -209,8 +233,11 @@ abstract class TestCase extends BaseTestCase
     protected function tearDown(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->tearDownTheTestEnvironment();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->app) {
             $this->callBeforeApplicationDestroyedCallbacks();
 
@@ -269,6 +296,9 @@ abstract class TestCase extends BaseTestCase
         if ($this->callbackException) {
             throw $this->callbackException;
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -282,8 +312,11 @@ abstract class TestCase extends BaseTestCase
         static::$latestResponse = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::tearDownAfterClassUsingTestCase();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ([
             \PHPUnit\Util\Annotation\Registry::class,
             \PHPUnit\Metadata\Annotation\Parser\Registry::class,
@@ -339,6 +372,9 @@ abstract class TestCase extends BaseTestCase
                 }
             }
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

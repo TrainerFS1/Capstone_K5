@@ -37,8 +37,11 @@ interface OutputInterface
      * @param int  $options A bitmask of options (one of the OUTPUT or VERBOSITY constants),
      *                      0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -50,8 +53,11 @@ interface OutputInterface
      * @param int $options A bitmask of options (one of the OUTPUT or VERBOSITY constants),
      *                     0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -60,10 +66,13 @@ interface OutputInterface
     /**
      * Sets the verbosity of the output.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @param self::VERBOSITY_* $level
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -72,8 +81,11 @@ interface OutputInterface
     /**
      * Gets the current verbosity of the output.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return self::VERBOSITY_*
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -102,8 +114,11 @@ interface OutputInterface
     /**
      * Sets the decorated flag.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -115,9 +130,12 @@ interface OutputInterface
     public function isDecorated(): bool;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setFormatter(OutputFormatterInterface $formatter);

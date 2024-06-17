@@ -21,6 +21,7 @@
         "psr/event-dispatcher": "^1",
         "psr/log": "^1|^2|^3",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
         "symfony/mime": "^6.2|^7.0",
         "symfony/service-contracts": "^2.5|^3"
@@ -34,6 +35,8 @@
     "conflict": {
         "symfony/http-client-contracts": "<2.5",
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "symfony/event-dispatcher": "^5.4|^6.0",
         "symfony/mime": "^6.2",
         "symfony/service-contracts": "^1.1|^2|^3"
@@ -45,6 +48,9 @@
         "symfony/twig-bridge": "^6.2"
     },
     "conflict": {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "symfony/http-kernel": "<5.4",
         "symfony/messenger": "<6.2",

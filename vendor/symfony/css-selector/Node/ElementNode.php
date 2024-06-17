@@ -24,11 +24,14 @@ namespace Symfony\Component\CssSelector\Node;
 class ElementNode extends AbstractNode
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private ?string $namespace = null,
         private ?string $element = null,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private ?string $namespace;
     private ?string $element;
 
@@ -36,6 +39,9 @@ class ElementNode extends AbstractNode
     {
         $this->namespace = $namespace;
         $this->element = $element;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

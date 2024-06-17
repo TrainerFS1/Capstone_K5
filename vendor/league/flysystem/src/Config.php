@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace League\Flysystem;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_diff_key;
 use function array_flip;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function array_merge;
@@ -14,11 +17,16 @@ use function array_merge;
 class Config
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const OPTION_COPY_IDENTICAL_PATH = 'copy_destination_same_as_source';
     public const OPTION_MOVE_IDENTICAL_PATH = 'move_destination_same_as_source';
     public const OPTION_VISIBILITY = 'visibility';
     public const OPTION_DIRECTORY_VISIBILITY = 'directory_visibility';
     public const OPTION_RETAIN_VISIBILITY = 'retain_visibility';
+=======
+    public const OPTION_VISIBILITY = 'visibility';
+    public const OPTION_DIRECTORY_VISIBILITY = 'directory_visibility';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public const OPTION_VISIBILITY = 'visibility';
     public const OPTION_DIRECTORY_VISIBILITY = 'directory_visibility';
@@ -48,6 +56,7 @@ class Config
         return new Config($this->options + $defaults);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function toArray(): array
     {
@@ -63,6 +72,8 @@ class Config
     {
         return new Config(array_diff_key($this->options, array_flip($settings)));
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

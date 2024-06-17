@@ -23,9 +23,12 @@ namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdateTimestampHandlerInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private \SessionHandlerInterface&\SessionUpdateTimestampHandlerInterface $currentHandler;
     private \SessionHandlerInterface&\SessionUpdateTimestampHandlerInterface $writeOnlyHandler;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var \SessionHandlerInterface&\SessionUpdateTimestampHandlerInterface
      */
@@ -35,6 +38,9 @@ class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdat
      * @var \SessionHandlerInterface&\SessionUpdateTimestampHandlerInterface
      */
     private \SessionHandlerInterface $writeOnlyHandler;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(\SessionHandlerInterface $currentHandler, \SessionHandlerInterface $writeOnlyHandler)
@@ -59,7 +65,11 @@ class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdat
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function destroy(#[\SensitiveParameter] string $sessionId): bool
+=======
+    public function destroy(string $sessionId): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function destroy(string $sessionId): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -87,7 +97,11 @@ class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdat
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function read(#[\SensitiveParameter] string $sessionId): string
+=======
+    public function read(string $sessionId): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function read(string $sessionId): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,7 +111,11 @@ class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdat
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function write(#[\SensitiveParameter] string $sessionId, string $sessionData): bool
+=======
+    public function write(string $sessionId, string $sessionData): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function write(string $sessionId, string $sessionData): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,7 +127,11 @@ class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdat
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function validateId(#[\SensitiveParameter] string $sessionId): bool
+=======
+    public function validateId(string $sessionId): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function validateId(string $sessionId): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -119,7 +141,11 @@ class MigratingSessionHandler implements \SessionHandlerInterface, \SessionUpdat
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function updateTimestamp(#[\SensitiveParameter] string $sessionId, string $sessionData): bool
+=======
+    public function updateTimestamp(string $sessionId, string $sessionData): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function updateTimestamp(string $sessionId, string $sessionData): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

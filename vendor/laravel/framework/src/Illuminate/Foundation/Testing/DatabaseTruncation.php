@@ -25,8 +25,11 @@ trait DatabaseTruncation
     protected function truncateDatabaseTables(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->beforeTruncatingDatabase();
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Migrate and seed the database on first run...
@@ -51,8 +54,11 @@ trait DatabaseTruncation
             $this->artisan('db:seed');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $this->afterTruncatingDatabase();
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -96,8 +102,13 @@ trait DatabaseTruncation
                 fn ($tables) => $tables->diff($this->exceptTables($name))
             )
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->filter(fn ($table) => $connection->table($this->withoutTablePrefix($connection, $table))->exists())
             ->each(fn ($table) => $connection->table($this->withoutTablePrefix($connection, $table))->truncate());
+=======
+            ->filter(fn ($table) => $connection->table($table)->exists())
+            ->each(fn ($table) => $connection->table($table)->truncate());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ->filter(fn ($table) => $connection->table($table)->exists())
             ->each(fn ($table) => $connection->table($table)->truncate());
@@ -107,6 +118,7 @@ trait DatabaseTruncation
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Remove the table prefix from a table name, if it exists.
      *
@@ -124,6 +136,8 @@ trait DatabaseTruncation
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The database connections that should have their tables truncated.
@@ -146,6 +160,7 @@ trait DatabaseTruncation
     {
         if (property_exists($this, 'exceptTables')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $migrationsTable = $this->app['config']->get('database.migrations');
 
             if (array_is_list($this->exceptTables ?? [])) {
@@ -163,11 +178,17 @@ trait DatabaseTruncation
                 $this->exceptTables[$connectionName] ?? [],
                 [$this->app['config']->get('database.migrations')]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            return array_merge(
+                $this->exceptTables[$connectionName] ?? [],
+                [$this->app['config']->get('database.migrations')]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
         return [$this->app['config']->get('database.migrations')];
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -189,6 +210,8 @@ trait DatabaseTruncation
     {
         //
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -69,11 +69,14 @@ final class Info
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function garbageCollectorStatus(): GarbageCollectorStatus
     {
         return $this->current->garbageCollectorStatus();
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function asString(): string
@@ -83,7 +86,11 @@ final class Info
             $this->durationSinceStart()->asString(),
             $this->durationSincePrevious()->asString(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->memoryUsage()->bytes(),
+=======
+            $this->memoryUsage()->bytes()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->memoryUsage()->bytes()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -124,7 +124,11 @@ interface ResponseFactory
      * Create a new redirect response to a controller action.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string  $action
+=======
+     * @param  string  $action
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $action
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

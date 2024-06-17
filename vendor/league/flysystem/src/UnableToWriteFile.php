@@ -20,7 +20,11 @@ final class UnableToWriteFile extends RuntimeException implements FilesystemOper
     private $reason;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function atLocation(string $location, string $reason = '', ?Throwable $previous = null): UnableToWriteFile
+=======
+    public static function atLocation(string $location, string $reason = '', Throwable $previous = null): UnableToWriteFile
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function atLocation(string $location, string $reason = '', Throwable $previous = null): UnableToWriteFile
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if [ "$SUPERVISOR_PHP_USER" != "root" ] && [ "$SUPERVISOR_PHP_USER" != "sail" ]; then
     echo "You should set SUPERVISOR_PHP_USER to either 'sail' or 'root'."
     exit 1
 fi
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if [ ! -z "$WWWUSER" ]; then
@@ -20,11 +23,15 @@ chmod -R ugo+rw /.composer
 
 if [ $# -gt 0 ]; then
 <<<<<<< HEAD
+<<<<<<< HEAD
     if [ "$SUPERVISOR_PHP_USER" = "root" ]; then
         exec "$@"
     else
         exec gosu $WWWUSER "$@"
     fi
+=======
+    exec gosu $WWWUSER "$@"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     exec gosu $WWWUSER "$@"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

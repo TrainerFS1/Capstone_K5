@@ -120,6 +120,7 @@ trait Test
      * /!\ Use this method for unit tests only.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template T
      *
      * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
@@ -129,12 +130,17 @@ trait Test
      */
     public static function withTestNow($testNow, $callback)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
      * @param Closure|null                                       $callback
      *
      * @return mixed
      */
     public static function withTestNow($testNow = null, $callback = null)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         static::setTestNow($testNow);

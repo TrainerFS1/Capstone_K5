@@ -1,8 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace GuzzleHttp\Promise;
@@ -13,8 +16,11 @@ namespace GuzzleHttp\Promise;
  * Thenning off of this promise will invoke the onRejected callback
  * immediately and ignore other callbacks.
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @final
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -23,9 +29,12 @@ class RejectedPromise implements PromiseInterface
     private $reason;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param mixed $reason
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct($reason)
@@ -43,7 +52,11 @@ class RejectedPromise implements PromiseInterface
         callable $onFulfilled = null,
         callable $onRejected = null
 <<<<<<< HEAD
+<<<<<<< HEAD
     ): PromiseInterface {
+=======
+    ) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     ) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +69,11 @@ class RejectedPromise implements PromiseInterface
         $reason = $this->reason;
         $p = new Promise([$queue, 'run']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $queue->add(static function () use ($p, $reason, $onRejected): void {
+=======
+        $queue->add(static function () use ($p, $reason, $onRejected) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $queue->add(static function () use ($p, $reason, $onRejected) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,6 +85,12 @@ class RejectedPromise implements PromiseInterface
                     // onRejected threw, so return a rejected promise.
                     $p->reject($e);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                } catch (\Exception $e) {
+                    // onRejected threw, so return a rejected promise.
+                    $p->reject($e);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 } catch (\Exception $e) {
                     // onRejected threw, so return a rejected promise.
@@ -81,7 +104,11 @@ class RejectedPromise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function otherwise(callable $onRejected): PromiseInterface
+=======
+    public function otherwise(callable $onRejected)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function otherwise(callable $onRejected)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -90,7 +117,11 @@ class RejectedPromise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function wait(bool $unwrap = true)
+=======
+    public function wait($unwrap = true, $defaultDelivery = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function wait($unwrap = true, $defaultDelivery = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +134,11 @@ class RejectedPromise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getState(): string
+=======
+    public function getState()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getState()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,6 +146,7 @@ class RejectedPromise implements PromiseInterface
         return self::REJECTED;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function resolve($value): void
     {
@@ -126,6 +162,8 @@ class RejectedPromise implements PromiseInterface
 
     public function cancel(): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function resolve($value)
     {
         throw new \LogicException("Cannot resolve a rejected promise");
@@ -139,6 +177,9 @@ class RejectedPromise implements PromiseInterface
     }
 
     public function cancel()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // pass

@@ -7,7 +7,11 @@ use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Support\Facades\Date;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class DatabaseFailedJobProvider implements CountableFailedJobProvider, FailedJobProviderInterface, PrunableFailedJobProvider
+=======
+class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableFailedJobProvider
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableFailedJobProvider
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,6 +74,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableF
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the IDs of all of the failed jobs.
      *
      * @param  string|null  $queue
@@ -85,6 +90,8 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableF
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a list of all of the failed jobs.
@@ -154,6 +161,7 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableF
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Count the failed jobs.
      *
      * @param  string|null  $connection
@@ -169,6 +177,8 @@ class DatabaseFailedJobProvider implements FailedJobProviderInterface, PrunableF
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a new query builder instance for the table.

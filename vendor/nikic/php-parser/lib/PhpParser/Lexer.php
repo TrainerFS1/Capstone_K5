@@ -3,6 +3,7 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require __DIR__ . '/compatibility_tokens.php';
 
 class Lexer {
@@ -24,6 +25,8 @@ class Lexer {
      */
     public function tokenize(string $code, ?ErrorHandler $errorHandler = null): array {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Parser\Tokens;
 
 class Lexer
@@ -92,17 +95,23 @@ class Lexer
      *                                        ErrorHandler\Throwing
      */
     public function startLexing(string $code, ErrorHandler $errorHandler = null) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (null === $errorHandler) {
             $errorHandler = new ErrorHandler\Throwing();
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $scream = ini_set('xdebug.scream', '0');
 
         $tokens = @Token::tokenize($code);
         $this->postprocessTokens($tokens, $errorHandler);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->code = $code; // keep the code around for __halt_compiler() handling
         $this->pos  = -1;
         $this->line =  1;
@@ -116,11 +125,15 @@ class Lexer
 
         $this->tokens = @token_get_all($code);
         $this->postprocessTokens($errorHandler);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (false !== $scream) {
             ini_set('xdebug.scream', $scream);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return $tokens;
@@ -201,6 +214,8 @@ class Lexer
         // Add sentinel token.
         $tokens[] = new Token(0, "\0", $lastToken->getEndLine(), $lastToken->getEndPos());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     private function handleInvalidCharacterRange($start, $end, $line, ErrorHandler $errorHandler) {
@@ -666,6 +681,9 @@ class Lexer
             \T_CLASS_C, \T_TRAIT_C, \T_FUNC_C, \T_METHOD_C, \T_LINE, \T_FILE, \T_DIR, \T_NS_C, \T_HALT_COMPILER, \T_FN,
             \T_MATCH,
         ], true);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

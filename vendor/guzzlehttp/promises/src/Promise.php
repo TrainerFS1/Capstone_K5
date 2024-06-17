@@ -1,8 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace GuzzleHttp\Promise;
@@ -11,9 +14,13 @@ namespace GuzzleHttp\Promise;
  * Promises/A+ implementation that avoids recursion when possible.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @see https://promisesaplus.com/
  *
  * @final
+=======
+ * @link https://promisesaplus.com/
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @link https://promisesaplus.com/
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,7 +50,11 @@ class Promise implements PromiseInterface
         callable $onFulfilled = null,
         callable $onRejected = null
 <<<<<<< HEAD
+<<<<<<< HEAD
     ): PromiseInterface {
+=======
+    ) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     ) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -53,7 +64,10 @@ class Promise implements PromiseInterface
             $p->waitList = $this->waitList;
             $p->waitList[] = $this;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $p;
@@ -63,7 +77,10 @@ class Promise implements PromiseInterface
         if ($this->state === self::FULFILLED) {
             $promise = Create::promiseFor($this->result);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $onFulfilled ? $promise->then($onFulfilled) : $promise;
@@ -73,23 +90,33 @@ class Promise implements PromiseInterface
         // and immediately invoke any callbacks.
         $rejection = Create::rejectionFor($this->result);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return $onRejected ? $rejection->then(null, $onRejected) : $rejection;
     }
 
     public function otherwise(callable $onRejected): PromiseInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $onRejected ? $rejection->then(null, $onRejected) : $rejection;
     }
 
     public function otherwise(callable $onRejected)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->then(null, $onRejected);
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function wait(bool $unwrap = true)
+=======
+    public function wait($unwrap = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function wait($unwrap = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,7 +136,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getState(): string
+=======
+    public function getState()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getState()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -118,7 +149,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function cancel(): void
+=======
+    public function cancel()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function cancel()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,6 +172,11 @@ class Promise implements PromiseInterface
             } catch (\Throwable $e) {
                 $this->reject($e);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            } catch (\Exception $e) {
+                $this->reject($e);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } catch (\Exception $e) {
                 $this->reject($e);
@@ -152,7 +192,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function resolve($value): void
+=======
+    public function resolve($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function resolve($value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -161,7 +205,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reject($reason): void
+=======
+    public function reject($reason)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function reject($reason)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -170,7 +218,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function settle(string $state, $value): void
+=======
+    private function settle($state, $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function settle($state, $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -207,7 +259,11 @@ class Promise implements PromiseInterface
             $id = $state === self::FULFILLED ? 1 : 2;
             // It's a success, so resolve the handlers in the queue.
 <<<<<<< HEAD
+<<<<<<< HEAD
             Utils::queue()->add(static function () use ($id, $value, $handlers): void {
+=======
+            Utils::queue()->add(static function () use ($id, $value, $handlers) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             Utils::queue()->add(static function () use ($id, $value, $handlers) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -222,7 +278,11 @@ class Promise implements PromiseInterface
             // Resolve the handlers when the forwarded promise is resolved.
             $value->then(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 static function ($value) use ($handlers): void {
+=======
+                static function ($value) use ($handlers) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 static function ($value) use ($handlers) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -231,7 +291,11 @@ class Promise implements PromiseInterface
                     }
                 },
 <<<<<<< HEAD
+<<<<<<< HEAD
                 static function ($reason) use ($handlers): void {
+=======
+                static function ($reason) use ($handlers) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 static function ($reason) use ($handlers) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -251,7 +315,11 @@ class Promise implements PromiseInterface
      * @param array $handler Array of handler data (promise and callbacks).
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function callHandler(int $index, $value, array $handler): void
+=======
+    private static function callHandler($index, $value, array $handler)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function callHandler($index, $value, array $handler)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -286,17 +354,23 @@ class Promise implements PromiseInterface
         } catch (\Throwable $reason) {
             $promise->reject($reason);
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
     }
 
     private function waitIfPending(): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (\Exception $reason) {
             $promise->reject($reason);
         }
     }
 
     private function waitIfPending()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->state !== self::PENDING) {
@@ -309,9 +383,15 @@ class Promise implements PromiseInterface
             // If there's no wait function, then reject the promise.
             $this->reject('Cannot wait on a promise that has '
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .'no internal wait function. You must provide a wait '
                 .'function when constructing the promise to be able to '
                 .'wait on a promise.');
+=======
+                . 'no internal wait function. You must provide a wait '
+                . 'function when constructing the promise to be able to '
+                . 'wait on a promise.');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 . 'no internal wait function. You must provide a wait '
                 . 'function when constructing the promise to be able to '
@@ -328,7 +408,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function invokeWaitFn(): void
+=======
+    private function invokeWaitFn()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function invokeWaitFn()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -338,7 +422,11 @@ class Promise implements PromiseInterface
             $this->waitFn = null;
             $wfn(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (\Throwable $reason) {
+=======
+        } catch (\Exception $reason) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } catch (\Exception $reason) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -355,7 +443,11 @@ class Promise implements PromiseInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function invokeWaitList(): void
+=======
+    private function invokeWaitList()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function invokeWaitList()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

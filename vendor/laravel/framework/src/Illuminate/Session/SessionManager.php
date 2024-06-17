@@ -238,6 +238,7 @@ class SessionManager extends Manager
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the maximum number of seconds the session lock should be held for.
      *
      * @return int
@@ -258,6 +259,8 @@ class SessionManager extends Manager
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the session configuration.

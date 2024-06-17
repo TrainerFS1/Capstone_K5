@@ -27,7 +27,11 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
     private static array $rand = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $ulid = null)
+=======
+    public function __construct(string $ulid = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $ulid = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -119,6 +123,7 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Returns the identifier as a base32 case insensitive string.
      *
@@ -126,6 +131,8 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
      *
      * @example 09EJ0S614A9FXVG9C5537Q9ZE1 (len=26)
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function toBase32(): string
@@ -156,7 +163,11 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function generate(?\DateTimeInterface $time = null): string
+=======
+    public static function generate(\DateTimeInterface $time = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function generate(\DateTimeInterface $time = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

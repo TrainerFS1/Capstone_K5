@@ -38,7 +38,11 @@ class Profiler implements ResetInterface
     private bool $enabled = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(ProfilerStorageInterface $storage, ?LoggerInterface $logger = null, bool $enable = true)
+=======
+    public function __construct(ProfilerStorageInterface $storage, LoggerInterface $logger = null, bool $enable = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(ProfilerStorageInterface $storage, LoggerInterface $logger = null, bool $enable = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,8 +55,11 @@ class Profiler implements ResetInterface
     /**
      * Disables the profiler.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -64,8 +71,11 @@ class Profiler implements ResetInterface
     /**
      * Enables the profiler.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -113,7 +123,11 @@ class Profiler implements ResetInterface
 
         if (!($ret = $this->storage->write($profile)) && null !== $this->logger) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->logger->warning('Unable to store the profiler information.', ['configured_storage' => $this->storage::class]);
+=======
+            $this->logger->warning('Unable to store the profiler information.', ['configured_storage' => \get_class($this->storage)]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->logger->warning('Unable to store the profiler information.', ['configured_storage' => \get_class($this->storage)]);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -125,8 +139,11 @@ class Profiler implements ResetInterface
     /**
      * Purges all data from the storage.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -138,6 +155,7 @@ class Profiler implements ResetInterface
     /**
      * Finds profiler tokens for the given criteria.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param int|null      $limit  The maximum number of tokens to return
      * @param string|null   $start  The start date to search from
@@ -152,6 +170,8 @@ class Profiler implements ResetInterface
 
         return $this->storage->find($ip, $url, $limit, $method, $this->getTimestamp($start), $this->getTimestamp($end), $statusCode, $filter);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string|null $limit The maximum number of tokens to return
      * @param string|null $start The start date to search from
      * @param string|null $end   The end date to search to
@@ -161,6 +181,9 @@ class Profiler implements ResetInterface
     public function find(?string $ip, ?string $url, ?string $limit, ?string $method, ?string $start, ?string $end, string $statusCode = null): array
     {
         return $this->storage->find($ip, $url, $limit, $method, $this->getTimestamp($start), $this->getTimestamp($end), $statusCode);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -168,7 +191,11 @@ class Profiler implements ResetInterface
      * Collects data for the given Response.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): ?Profile
+=======
+    public function collect(Request $request, Response $response, \Throwable $exception = null): ?Profile
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function collect(Request $request, Response $response, \Throwable $exception = null): ?Profile
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -189,10 +216,13 @@ class Profiler implements ResetInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($request->attributes->has('_virtual_type')) {
             $profile->setVirtualType($request->attributes->get('_virtual_type'));
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($prevToken = $response->headers->get('X-Debug-Token')) {
@@ -212,9 +242,12 @@ class Profiler implements ResetInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset()
@@ -238,8 +271,11 @@ class Profiler implements ResetInterface
      *
      * @param DataCollectorInterface[] $collectors An array of collectors
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -254,8 +290,11 @@ class Profiler implements ResetInterface
     /**
      * Adds a Collector.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

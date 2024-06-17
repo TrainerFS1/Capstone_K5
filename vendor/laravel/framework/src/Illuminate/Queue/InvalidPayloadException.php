@@ -8,6 +8,7 @@ class InvalidPayloadException extends InvalidArgumentException
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The value that failed to decode.
      *
      * @var mixed
@@ -27,6 +28,8 @@ class InvalidPayloadException extends InvalidArgumentException
 
         $this->value = $value;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new exception instance.
      *
      * @param  string|null  $message
@@ -35,6 +38,9 @@ class InvalidPayloadException extends InvalidArgumentException
     public function __construct($message = null)
     {
         parent::__construct($message ?: json_last_error());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

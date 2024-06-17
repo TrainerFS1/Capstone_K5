@@ -8,6 +8,7 @@ final class EllipticArc implements OperationInterface
     private const ZERO_TOLERANCE = 1e-05;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private float $xRadius;
     private float $yRadius;
     private float $xAxisAngle;
@@ -21,6 +22,8 @@ final class EllipticArc implements OperationInterface
         private readonly float $x,
         private readonly float $y
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var float
      */
@@ -64,17 +67,26 @@ final class EllipticArc implements OperationInterface
         bool $sweep,
         float $x,
         float $y
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         $this->xRadius = abs($xRadius);
         $this->yRadius = abs($yRadius);
         $this->xAxisAngle = $xAxisAngle % 360;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->largeArc = $largeArc;
         $this->sweep = $sweep;
         $this->x = $x;
         $this->y = $y;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -131,6 +143,7 @@ final class EllipticArc implements OperationInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return self
      */
     public function rotate(int $degrees) : OperationInterface
@@ -152,6 +165,8 @@ final class EllipticArc implements OperationInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Converts the elliptic arc to multiple curves.
@@ -222,7 +237,11 @@ final class EllipticArc implements OperationInterface
      * @return float[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function calculateCenterPointParameters(float $fromX, float $fromY, float $xAngle): array
+=======
+    private function calculateCenterPointParameters(float $fromX, float $fromY, float $xAngle)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function calculateCenterPointParameters(float $fromX, float $fromY, float $xAngle)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

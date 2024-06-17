@@ -16,10 +16,16 @@ trait SerializesAndRestoresModelIdentifiers
      *
      * @param  mixed  $value
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  bool  $withRelations
      * @return mixed
      */
     protected function getSerializedPropertyValue($value, $withRelations = true)
+=======
+     * @return mixed
+     */
+    protected function getSerializedPropertyValue($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return mixed
      */
@@ -31,7 +37,11 @@ trait SerializesAndRestoresModelIdentifiers
                 $value->getQueueableClass(),
                 $value->getQueueableIds(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $withRelations ? $value->getQueueableRelations() : [],
+=======
+                $value->getQueueableRelations(),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $value->getQueueableRelations(),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -48,7 +58,11 @@ trait SerializesAndRestoresModelIdentifiers
                 get_class($value),
                 $value->getQueueableId(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $withRelations ? $value->getQueueableRelations() : [],
+=======
+                $value->getQueueableRelations(),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $value->getQueueableRelations(),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

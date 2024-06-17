@@ -18,7 +18,11 @@ use Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider;
  * @author Nicolas Grekas <p@tchwork.com>
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Data implements \ArrayAccess, \Countable, \IteratorAggregate, \Stringable
+=======
+class Data implements \ArrayAccess, \Countable, \IteratorAggregate
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class Data implements \ArrayAccess, \Countable, \IteratorAggregate
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -126,9 +130,12 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return mixed
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __get(string $key)
@@ -222,11 +229,14 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getContext(): array
     {
         return $this->context;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -276,8 +286,11 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Dumps data with a DumperInterface dumper.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -285,6 +298,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
     {
         $refs = [0];
         $cursor = new Cursor();
+<<<<<<< HEAD
 <<<<<<< HEAD
         $cursor->hashType = -1;
         $cursor->attr = $this->context[SourceContextProvider::class] ?? [];
@@ -295,6 +309,8 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
         }
         $cursor->hashType = 0;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($cursor->attr = $this->context[SourceContextProvider::class] ?? []) {
             $cursor->attr['if_links'] = true;
@@ -305,6 +321,9 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
             $cursor->hashType = 0;
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->dumpItem($dumper, $cursor, $refs, $this->data[$this->position][$this->key]);
     }
@@ -315,7 +334,11 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param mixed $item A Stub object or the original value being dumped
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function dumpItem(DumperInterface $dumper, Cursor $cursor, array &$refs, mixed $item): void
+=======
+    private function dumpItem(DumperInterface $dumper, Cursor $cursor, array &$refs, mixed $item)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function dumpItem(DumperInterface $dumper, Cursor $cursor, array &$refs, mixed $item)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -401,10 +424,13 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
                     break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 case Stub::TYPE_SCALAR:
                     $dumper->dumpScalar($cursor, 'default', $item->attr['value']);
                     break;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 default:
@@ -448,7 +474,11 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getStub(mixed $item): mixed
+=======
+    private function getStub(mixed $item)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getStub(mixed $item)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

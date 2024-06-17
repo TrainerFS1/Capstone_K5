@@ -14,8 +14,13 @@ class DirectoryAttributes implements StorageAttributes
         private ?string $visibility = null,
         private ?int $lastModified = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
         private array $extraMetadata = []
     ) {
+=======
+        private array $extraMetadata = [])
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         private array $extraMetadata = [])
     {

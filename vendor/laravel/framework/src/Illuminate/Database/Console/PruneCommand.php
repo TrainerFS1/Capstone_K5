@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Prunable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Events\ModelPruningFinished;
 use Illuminate\Database\Events\ModelPruningStarting;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Events\ModelsPruned;
@@ -28,7 +31,10 @@ class PruneCommand extends Command
                                 {--model=* : Class names of the models to be pruned}
                                 {--except=* : Class names of the models to be excluded from pruning}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 {--path=* : Absolute path(s) to directories where models are located}
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 {--chunk=1000 : The number of models to retrieve per chunk of models to be deleted}
@@ -80,8 +86,11 @@ class PruneCommand extends Command
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $events->dispatch(new ModelPruningStarting($models->all()));
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $models->each(function ($model) {
@@ -89,8 +98,11 @@ class PruneCommand extends Command
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $events->dispatch(new ModelPruningFinished($models->all()));
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $events->forget(ModelsPruned::class);
@@ -139,7 +151,11 @@ class PruneCommand extends Command
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return collect(Finder::create()->in($this->getPath())->files()->name('*.php'))
+=======
+        return collect((new Finder)->in($this->getDefaultPath())->files()->name('*.php'))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return collect((new Finder)->in($this->getDefaultPath())->files()->name('*.php'))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -157,9 +173,15 @@ class PruneCommand extends Command
                 });
             })->filter(function ($model) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return class_exists($model);
             })->filter(function ($model) {
                 return $this->isPrunable($model);
+=======
+                return $this->isPrunable($model);
+            })->filter(function ($model) {
+                return class_exists($model);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return $this->isPrunable($model);
             })->filter(function ($model) {
@@ -169,6 +191,7 @@ class PruneCommand extends Command
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Get the path where models are located.
      *
@@ -183,12 +206,17 @@ class PruneCommand extends Command
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the default path where models are located.
      *
      * @return string|string[]
      */
     protected function getDefaultPath()
     {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return app_path('Models');
     }

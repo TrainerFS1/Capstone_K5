@@ -13,7 +13,10 @@ use function array_key_exists;
 use function is_array;
 use ArrayAccess;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -35,7 +38,11 @@ final class ArrayHasKey extends Constraint
     public function toString(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return 'has the key ' . Exporter::export($this->key);
+=======
+        return 'has the key ' . $this->exporter()->export($this->key);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return 'has the key ' . $this->exporter()->export($this->key);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -67,7 +74,11 @@ final class ArrayHasKey extends Constraint
     protected function failureDescription(mixed $other): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return 'an array ' . $this->toString(true);
+=======
+        return 'an array ' . $this->toString();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return 'an array ' . $this->toString();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

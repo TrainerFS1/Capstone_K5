@@ -18,11 +18,14 @@ namespace Symfony\Component\Yaml\Tag;
 final class TaggedValue
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private string $tag,
         private mixed $value,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private string $tag;
     private mixed $value;
 
@@ -30,6 +33,9 @@ final class TaggedValue
     {
         $this->tag = $tag;
         $this->value = $value;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -39,7 +45,11 @@ final class TaggedValue
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getValue(): mixed
+=======
+    public function getValue()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getValue()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

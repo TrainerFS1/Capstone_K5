@@ -29,7 +29,11 @@ interface UploadedFileInterface
      *     created.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getStream(): StreamInterface;
+=======
+    public function getStream();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getStream();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -67,7 +71,11 @@ interface UploadedFileInterface
      *     the second or subsequent call to the method.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function moveTo(string $targetPath): void;
+=======
+    public function moveTo($targetPath);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function moveTo($targetPath);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,7 +90,11 @@ interface UploadedFileInterface
      * @return int|null The file size in bytes or null if unknown.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSize(): ?int;
+=======
+    public function getSize();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getSize();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -102,7 +114,11 @@ interface UploadedFileInterface
      * @return int One of PHP's UPLOAD_ERR_XXX constants.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getError(): int;
+=======
+    public function getError();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getError();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -121,7 +137,11 @@ interface UploadedFileInterface
      *     was provided.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getClientFilename(): ?string;
+=======
+    public function getClientFilename();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getClientFilename();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -140,7 +160,11 @@ interface UploadedFileInterface
      *     was provided.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getClientMediaType(): ?string;
+=======
+    public function getClientMediaType();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getClientMediaType();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

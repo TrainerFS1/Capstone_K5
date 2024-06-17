@@ -5,7 +5,10 @@ namespace Illuminate\Redis\Connections;
 use Closure;
 use Illuminate\Contracts\Redis\Connection as ConnectionContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Predis\Command\Argument\ArrayableArgument;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -55,6 +58,7 @@ class PredisConnection extends Connection implements ConnectionContract
         unset($loop);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Parse the command's parameters for event dispatching.
@@ -71,6 +75,8 @@ class PredisConnection extends Connection implements ConnectionContract
                     : $parameter;
             })->all();
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

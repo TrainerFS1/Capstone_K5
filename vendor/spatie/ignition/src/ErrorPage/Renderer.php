@@ -10,9 +10,15 @@ class Renderer
      * @return void
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function render(array $data, string $viewPath): void
     {
         $viewFile = $viewPath;
+=======
+    public function render(array $data): void
+    {
+        $viewFile = __DIR__ . '/../../resources/views/errorPage.php';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function render(array $data): void
     {
@@ -24,6 +30,7 @@ class Renderer
         include $viewFile;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function renderAsString(array $date, string $viewPath): string
     {
@@ -33,6 +40,8 @@ class Renderer
 
         return ob_get_clean();
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -39,7 +39,11 @@ final class UidValueResolver implements ArgumentValueResolverInterface, ValueRes
             || !\is_string($value = $request->attributes->get($argument->getName()))
             || null === ($uidClass = $argument->getType())
 <<<<<<< HEAD
+<<<<<<< HEAD
             || !is_subclass_of($uidClass, AbstractUid::class, true)
+=======
+            || !is_subclass_of($argument->getType(), AbstractUid::class, true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             || !is_subclass_of($argument->getType(), AbstractUid::class, true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -48,6 +52,10 @@ final class UidValueResolver implements ArgumentValueResolverInterface, ValueRes
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        /* @var class-string<AbstractUid> $uidClass */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         /* @var class-string<AbstractUid> $uidClass */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

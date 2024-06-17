@@ -52,7 +52,11 @@ class CurlFactory implements CurlFactoryInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $easy = new EasyHandle();
+=======
+        $easy = new EasyHandle;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $easy = new EasyHandle;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -166,17 +170,23 @@ class CurlFactory implements CurlFactoryInterface
     {
         static $connectionErrors = [
 <<<<<<< HEAD
+<<<<<<< HEAD
             \CURLE_OPERATION_TIMEOUTED => true,
             \CURLE_COULDNT_RESOLVE_HOST => true,
             \CURLE_COULDNT_CONNECT => true,
             \CURLE_SSL_CONNECT_ERROR => true,
             \CURLE_GOT_NOTHING => true,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             \CURLE_OPERATION_TIMEOUTED  => true,
             \CURLE_COULDNT_RESOLVE_HOST => true,
             \CURLE_COULDNT_CONNECT      => true,
             \CURLE_SSL_CONNECT_ERROR    => true,
             \CURLE_GOT_NOTHING          => true,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
 
@@ -232,6 +242,7 @@ class CurlFactory implements CurlFactoryInterface
     {
         $conf = [
 <<<<<<< HEAD
+<<<<<<< HEAD
             '_headers' => $easy->request->getHeaders(),
             \CURLOPT_CUSTOMREQUEST => $easy->request->getMethod(),
             \CURLOPT_URL => (string) $easy->request->getUri()->withFragment(''),
@@ -239,12 +250,17 @@ class CurlFactory implements CurlFactoryInterface
             \CURLOPT_HEADER => false,
             \CURLOPT_CONNECTTIMEOUT => 300,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             '_headers'              => $easy->request->getHeaders(),
             \CURLOPT_CUSTOMREQUEST  => $easy->request->getMethod(),
             \CURLOPT_URL            => (string) $easy->request->getUri()->withFragment(''),
             \CURLOPT_RETURNTRANSFER => false,
             \CURLOPT_HEADER         => false,
             \CURLOPT_CONNECTTIMEOUT => 150,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
 
@@ -272,7 +288,10 @@ class CurlFactory implements CurlFactoryInterface
         if ($size === null || $size > 0) {
             $this->applyBody($easy->request, $easy->options, $conf);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
@@ -281,7 +300,11 @@ class CurlFactory implements CurlFactoryInterface
         $method = $easy->request->getMethod();
         if ($method === 'PUT' || $method === 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // See https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.2
+=======
+            // See https://tools.ietf.org/html/rfc7230#section-3.3.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             // See https://tools.ietf.org/html/rfc7230#section-3.3.2
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -371,7 +394,10 @@ class CurlFactory implements CurlFactoryInterface
             if (!\strcasecmp($key, $name)) {
                 unset($options['_headers'][$key]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return;
@@ -399,17 +425,23 @@ class CurlFactory implements CurlFactoryInterface
                     // If not, it's probably a file, or a link to a file, so use CURLOPT_CAINFO.
                     if (
 <<<<<<< HEAD
+<<<<<<< HEAD
                         \is_dir($options['verify'])
                         || (
                             \is_link($options['verify']) === true
                             && ($verifyLink = \readlink($options['verify'])) !== false
                             && \is_dir($verifyLink)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         \is_dir($options['verify']) ||
                         (
                             \is_link($options['verify']) === true &&
                             ($verifyLink = \readlink($options['verify'])) !== false &&
                             \is_dir($verifyLink)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         )
                     ) {
@@ -485,9 +517,13 @@ class CurlFactory implements CurlFactoryInterface
                 if (isset($options['proxy'][$scheme])) {
                     $host = $easy->request->getUri()->getHost();
 <<<<<<< HEAD
+<<<<<<< HEAD
                     if (isset($options['proxy']['no']) && Utils::isHostInNoProxy($host, $options['proxy']['no'])) {
                         unset($conf[\CURLOPT_PROXY]);
                     } else {
+=======
+                    if (!isset($options['proxy']['no']) || !Utils::isHostInNoProxy($host, $options['proxy']['no'])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     if (!isset($options['proxy']['no']) || !Utils::isHostInNoProxy($host, $options['proxy']['no'])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -497,6 +533,7 @@ class CurlFactory implements CurlFactoryInterface
             }
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (isset($options['crypto_method'])) {
             if (\STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT === $options['crypto_method']) {
@@ -526,6 +563,8 @@ class CurlFactory implements CurlFactoryInterface
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($options['cert'])) {
             $cert = $options['cert'];
             if (\is_array($cert)) {
@@ -536,8 +575,13 @@ class CurlFactory implements CurlFactoryInterface
                 throw new \InvalidArgumentException("SSL certificate not found: {$cert}");
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             // OpenSSL (versions 0.9.3 and later) also support "P12" for PKCS#12-encoded files.
             // see https://curl.se/libcurl/c/CURLOPT_SSLCERTTYPE.html
+=======
+            # OpenSSL (versions 0.9.3 and later) also support "P12" for PKCS#12-encoded files.
+            # see https://curl.se/libcurl/c/CURLOPT_SSLCERTTYPE.html
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             # OpenSSL (versions 0.9.3 and later) also support "P12" for PKCS#12-encoded files.
             # see https://curl.se/libcurl/c/CURLOPT_SSLCERTTYPE.html
@@ -605,10 +649,16 @@ class CurlFactory implements CurlFactoryInterface
         } catch (\RuntimeException $e) {
             $ctx['error'] = 'The connection unexpectedly failed without '
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .'providing an error. The request would have been retried, '
                 .'but attempting to rewind the request body failed. '
                 .'Exception: '.$e;
 
+=======
+                . 'providing an error. The request would have been retried, '
+                . 'but attempting to rewind the request body failed. '
+                . 'Exception: ' . $e;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 . 'providing an error. The request would have been retried, '
                 . 'but attempting to rewind the request body failed. '
@@ -623,6 +673,7 @@ class CurlFactory implements CurlFactoryInterface
         } elseif ($easy->options['_curl_retries'] == 2) {
             $ctx['error'] = 'The cURL request was retried 3 times '
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .'and did not succeed. The most likely reason for the failure '
                 .'is that cURL was unable to rewind the body of the request '
                 .'and subsequent retries resulted in the same error. Turn on '
@@ -633,6 +684,8 @@ class CurlFactory implements CurlFactoryInterface
         } else {
             ++$easy->options['_curl_retries'];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 . 'and did not succeed. The most likely reason for the failure '
                 . 'is that cURL was unable to rewind the body of the request '
                 . 'and subsequent retries resulted in the same error. Turn on '
@@ -641,6 +694,9 @@ class CurlFactory implements CurlFactoryInterface
             return self::createRejection($easy, $ctx);
         } else {
             $easy->options['_curl_retries']++;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -672,7 +728,10 @@ class CurlFactory implements CurlFactoryInterface
                 } catch (\Exception $e) {
                     $easy->createResponseException = $e;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return -1;
@@ -685,7 +744,10 @@ class CurlFactory implements CurlFactoryInterface
                         // a curl header write error by returning 0.
                         $easy->onHeadersException = $e;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return -1;
@@ -697,6 +759,7 @@ class CurlFactory implements CurlFactoryInterface
             } else {
                 $easy->headers[] = $value;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             return \strlen($h);
@@ -710,6 +773,11 @@ class CurlFactory implements CurlFactoryInterface
             unset($this->handles[$id]);
         }
     }
+=======
+            return \strlen($h);
+        };
+    }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return \strlen($h);
         };

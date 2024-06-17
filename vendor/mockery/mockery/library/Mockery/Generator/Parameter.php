@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,12 +28,16 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
 use Mockery\Reflector;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use ReflectionClass;
 use ReflectionParameter;
@@ -53,6 +60,8 @@ class Parameter
 
     public function __construct(ReflectionParameter $rfp)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class Parameter
 {
@@ -63,11 +72,15 @@ class Parameter
     private $rfp;
 
     public function __construct(\ReflectionParameter $rfp)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->rfp = $rfp;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * Proxy all method calls to the reflection parameter.
@@ -89,6 +102,11 @@ class Parameter
     {
         return call_user_func_array(array($this->rfp, $method), $args);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    public function __call($method, array $args)
+    {
+        return call_user_func_array(array($this->rfp, $method), $args);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -97,7 +115,11 @@ class Parameter
      * This will be null if there was no type, or it was a scalar or a union.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return null|ReflectionClass
+=======
+     * @return \ReflectionClass|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \ReflectionClass|null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -108,6 +130,7 @@ class Parameter
     {
         $typeHint = Reflector::getTypeHint($this->rfp, true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return class_exists($typeHint) ? DefinedTargetClass::factory($typeHint, false) : null;
     }
@@ -131,13 +154,20 @@ class Parameter
 =======
         return \class_exists($typeHint) ? DefinedTargetClass::factory($typeHint, false) : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        return \class_exists($typeHint) ? DefinedTargetClass::factory($typeHint, false) : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Get the string representation for the paramater type.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return null|string
+=======
+     * @return string|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return string|null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -161,7 +191,10 @@ class Parameter
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the name of the parameter.
      *
      * Some internal classes have funny looking definitions!
@@ -179,6 +212,9 @@ class Parameter
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the parameter is an array.
      *

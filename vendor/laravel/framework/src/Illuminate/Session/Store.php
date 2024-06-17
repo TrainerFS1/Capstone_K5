@@ -247,6 +247,7 @@ class Store implements Session
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get all the session data except for a specified array of items.
      *
      * @param  array  $keys
@@ -258,6 +259,8 @@ class Store implements Session
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Checks if a key exists.

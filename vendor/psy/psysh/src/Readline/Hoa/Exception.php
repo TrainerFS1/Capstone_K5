@@ -53,7 +53,11 @@ class Exception extends ExceptionIdle implements EventSource
         int $code = 0,
         $arguments = [],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?\Throwable $previous = null
+=======
+        \Throwable $previous = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         \Throwable $previous = null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

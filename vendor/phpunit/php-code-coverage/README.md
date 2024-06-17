@@ -32,6 +32,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Facade as HtmlReport;
 
 $filter = new Filter;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $filter->includeFiles(
     [
@@ -39,6 +40,9 @@ $filter->includeFiles(
         '/path/to/another_file.php',
     ]
 );
+=======
+$filter->includeDirectory('/path/to/directory');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 $filter->includeDirectory('/path/to/directory');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

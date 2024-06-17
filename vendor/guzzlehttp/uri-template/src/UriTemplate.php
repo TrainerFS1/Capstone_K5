@@ -8,7 +8,11 @@ namespace GuzzleHttp\UriTemplate;
  * Expands URI templates. Userland implementation of PECL uri_template.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @see https://datatracker.ietf.org/doc/html/rfc6570
+=======
+ * @link http://tools.ietf.org/html/rfc6570
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @link http://tools.ietf.org/html/rfc6570
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,6 +141,10 @@ final class UriTemplate
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            /** @var mixed */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             /** @var mixed */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -178,6 +186,10 @@ final class UriTemplate
 
                     /** @var string $var */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -218,7 +230,11 @@ final class UriTemplate
 
             if ($actuallyUseQuery) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ($expanded === '' && $joiner !== '&') {
+=======
+                if (!$expanded && $joiner !== '&') {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 if (!$expanded && $joiner !== '&') {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

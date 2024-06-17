@@ -72,6 +72,7 @@ class Schedule
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The cache of mutex results.
      *
      * @var array<string, bool>
@@ -79,6 +80,8 @@ class Schedule
     protected $mutexCache = [];
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new schedule instance.
@@ -310,7 +313,11 @@ class Schedule
     public function serverShouldRun(Event $event, DateTimeInterface $time)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->mutexCache[$event->mutexName()] ??= $this->schedulingMutex->create($event, $time);
+=======
+        return $this->schedulingMutex->create($event, $time);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->schedulingMutex->create($event, $time);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -36,7 +36,11 @@ final class ExecutionOrderDependency implements Stringable
             '',
             false,
 <<<<<<< HEAD
+<<<<<<< HEAD
             false,
+=======
+            false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             false
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -50,7 +54,11 @@ final class ExecutionOrderDependency implements Stringable
             'class',
             $metadata->deepClone(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $metadata->shallowClone(),
+=======
+            $metadata->shallowClone()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $metadata->shallowClone()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -64,7 +72,11 @@ final class ExecutionOrderDependency implements Stringable
             $metadata->methodName(),
             $metadata->deepClone(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $metadata->shallowClone(),
+=======
+            $metadata->shallowClone()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $metadata->shallowClone()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,8 +94,13 @@ final class ExecutionOrderDependency implements Stringable
             array_filter(
                 $dependencies,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 static fn (self $d) => $d->isValid(),
             ),
+=======
+                static fn (self $d) => $d->isValid()
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 static fn (self $d) => $d->isValid()
             )
@@ -102,6 +119,7 @@ final class ExecutionOrderDependency implements Stringable
         $existingTargets = array_map(
             static fn ($dependency) => $dependency->getTarget(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $existing,
         );
 
@@ -114,6 +132,8 @@ final class ExecutionOrderDependency implements Stringable
 
             $existingTargets[] = $additionalTarget;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $existing
         );
 
@@ -123,6 +143,9 @@ final class ExecutionOrderDependency implements Stringable
             }
 
             $existingTargets[] = $dependency->getTarget();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $existing[]        = $dependency;
         }
@@ -150,7 +173,11 @@ final class ExecutionOrderDependency implements Stringable
         $rightTargets = array_map(
             static fn ($dependency) => $dependency->getTarget(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $right,
+=======
+            $right
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $right
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -170,9 +197,12 @@ final class ExecutionOrderDependency implements Stringable
     public function __construct(string $classOrCallableName, ?string $methodName = null, bool $deepClone = false, bool $shallowClone = false)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->deepClone    = $deepClone;
         $this->shallowClone = $shallowClone;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($classOrCallableName === '') {
@@ -186,6 +216,12 @@ final class ExecutionOrderDependency implements Stringable
             $this->methodName = !empty($methodName) ? $methodName : 'class';
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        $this->deepClone    = $deepClone;
+        $this->shallowClone = $shallowClone;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
         $this->deepClone    = $deepClone;

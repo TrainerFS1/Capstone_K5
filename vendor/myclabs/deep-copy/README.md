@@ -4,7 +4,11 @@ DeepCopy helps you create deep copies (clones) of your objects. It is designed t
 
 [![Total Downloads](https://poser.pugx.org/myclabs/deep-copy/downloads.svg)](https://packagist.org/packages/myclabs/deep-copy)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Integrate](https://github.com/myclabs/DeepCopy/actions/workflows/ci.yaml/badge.svg?branch=1.x)](https://github.com/myclabs/DeepCopy/actions/workflows/ci.yaml)
+=======
+[![Integrate](https://github.com/myclabs/DeepCopy/workflows/ci/badge.svg?branch=1.x)](https://github.com/myclabs/DeepCopy/actions)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [![Integrate](https://github.com/myclabs/DeepCopy/workflows/ci/badge.svg?branch=1.x)](https://github.com/myclabs/DeepCopy/actions)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -191,9 +195,12 @@ $matcher = new TypeMatcher('Doctrine\Common\Collections\Collection');
 - `DeepCopy\TypeFilter` applies a transformation to any element matched by `DeepCopy\TypeMatcher`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 By design, matching a filter will stop the chain of filters (i.e. the next ones will not be applied).
 Using the ([`ChainableFilter`](#chainablefilter-filter)) won't stop the chain of filters.
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -237,6 +244,7 @@ $copy = $copier->copy($object);
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #### `ChainableFilter` (filter)
 
 If you use cloning on proxy classes, you might want to apply two filters for:
@@ -265,6 +273,8 @@ echo $copy->id; // null
 ```
 
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #### `DoctrineCollectionFilter` (filter)
@@ -310,8 +320,11 @@ You can use the `DoctrineProxyFilter` to load the actual entity behind the Doctr
 **Make sure, though, to put this as one of your very first filters in the filter chain so that the entity is loaded
 before other filters are applied!**
 <<<<<<< HEAD
+<<<<<<< HEAD
 We recommend to decorate the `DoctrineProxyFilter` with the `ChainableFilter` to allow applying other filters to the
 cloned lazy loaded entities.
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -322,7 +335,11 @@ use DeepCopy\Matcher\Doctrine\DoctrineProxyMatcher;
 
 $copier = new DeepCopy();
 <<<<<<< HEAD
+<<<<<<< HEAD
 $copier->addFilter(new ChainableFilter(new DoctrineProxyFilter()), new DoctrineProxyMatcher());
+=======
+$copier->addFilter(new DoctrineProxyFilter(), new DoctrineProxyMatcher());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 $copier->addFilter(new DoctrineProxyFilter(), new DoctrineProxyMatcher());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

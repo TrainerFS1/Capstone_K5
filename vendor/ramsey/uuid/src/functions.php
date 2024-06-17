@@ -151,7 +151,11 @@ function v7(?DateTimeInterface $dateTime = null): string
  *     MUST NOT rely on these bits for your application needs.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @return non-empty-string Version 8 UUID as a string
+=======
+ * @return non-empty-string Version 7 UUID as a string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @return non-empty-string Version 7 UUID as a string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

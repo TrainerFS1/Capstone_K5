@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Closure;
 use Throwable;
@@ -38,6 +45,8 @@ interface LegacyMockInterface
 {
     /**
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 interface LegacyMockInterface
 {
     /**
@@ -126,6 +135,9 @@ interface LegacyMockInterface
     public function shouldNotHaveBeenCalled(array $args = null);
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * In the event shouldReceive() accepting an array of methods/returns
      * this method will switch them from normal expectations to default
@@ -137,12 +149,15 @@ interface LegacyMockInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Set mock to defer unexpected methods to its parent if possible
      *
      * @return self
      */
     public function makePartial();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Iterate across all expectation directors and validate each
      *
      * @throws \Mockery\CountValidator\Exception
@@ -156,6 +171,9 @@ interface LegacyMockInterface
      * @return void
      */
     public function mockery_teardown();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -166,6 +184,7 @@ interface LegacyMockInterface
     public function mockery_allocateOrder();
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Find an expectation matching the given method and arguments
      *
@@ -185,6 +204,8 @@ interface LegacyMockInterface
      */
     public function mockery_getContainer();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set ordering for a group
      *
      * @param mixed $group
@@ -205,6 +226,9 @@ interface LegacyMockInterface
      * @param int $order
      */
     public function mockery_setCurrentOrder($order);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -216,7 +240,10 @@ interface LegacyMockInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Validate the current mock's ordering
      *
      * @param string $method
@@ -227,6 +254,9 @@ interface LegacyMockInterface
     public function mockery_validateOrder($method, $order);
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets the count of expectations for this mock
      *
@@ -238,10 +268,13 @@ interface LegacyMockInterface
      * Return the expectations director for the given method
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $method
      *
      * @return null|ExpectationDirector
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var string $method
      * @return \Mockery\ExpectationDirector|null
      */
@@ -252,11 +285,15 @@ interface LegacyMockInterface
      *
      * @var string $method
      * @return \Mockery\ExpectationDirector|null
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function mockery_getExpectationsFor($method);
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Fetch array of ordered groups
      *
@@ -274,6 +311,8 @@ interface LegacyMockInterface
      */
     public function mockery_getMockableProperties();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Find an expectation matching the given method and arguments
      *
      * @var string $method
@@ -288,6 +327,9 @@ interface LegacyMockInterface
      * @return \Mockery\Container
      */
     public function mockery_getContainer();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -299,6 +341,7 @@ interface LegacyMockInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Alternative setup method to constructor
      *
      * @param object $partialObject
@@ -307,6 +350,8 @@ interface LegacyMockInterface
      */
     public function mockery_init(?Container $container = null, $partialObject = null);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array
      */
     public function mockery_getMockableProperties();
@@ -315,12 +360,16 @@ interface LegacyMockInterface
      * @return string[]
      */
     public function mockery_getMockableMethods();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @return bool
      */
     public function mockery_isAnonymous();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -460,6 +509,8 @@ interface LegacyMockInterface
      * @return Expectation|ExpectationInterface|HigherOrderMessage
      */
     public function shouldReceive(...$methodNames);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -3,10 +3,13 @@
 namespace Illuminate\Validation\Rules;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use BackedEnum;
 use Illuminate\Contracts\Support\Arrayable;
 use UnitEnum;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class NotIn
@@ -29,6 +32,7 @@ class NotIn
      * Create a new "not in" rule instance.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $values
      * @return void
      */
@@ -40,12 +44,17 @@ class NotIn
 
         $this->values = is_array($values) ? $values : func_get_args();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $values
      * @return void
      */
     public function __construct(array $values)
     {
         $this->values = $values;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -58,12 +67,15 @@ class NotIn
     {
         $values = array_map(function ($value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $value = match (true) {
                 $value instanceof BackedEnum => $value->value,
                 $value instanceof UnitEnum => $value->name,
                 default => $value,
             };
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return '"'.str_replace('"', '""', $value).'"';

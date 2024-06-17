@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Livewire\LivewireManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Livewire\Mechanisms\ComponentRegistry;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -42,6 +45,7 @@ class LaravelLivewireRequestContextProvider extends LaravelRequestContextProvide
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return array<int, mixed> */
     protected function getLivewireInformation(): array
     {
@@ -70,6 +74,11 @@ class LaravelLivewireRequestContextProvider extends LaravelRequestContextProvide
     protected function getLivewireInformation(): array
     {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    /** @return array<string, mixed> */
+    protected function getLivewireInformation(): array
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         /** @phpstan-ignore-next-line */
         $componentId = $this->request->input('fingerprint.id');
 
@@ -87,6 +96,7 @@ class LaravelLivewireRequestContextProvider extends LaravelRequestContextProvide
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
         $updates = $this->request->input('updates') ?? [];
 
@@ -102,12 +112,17 @@ class LaravelLivewireRequestContextProvider extends LaravelRequestContextProvide
                 'updates' => $this->resolveUpdates($updates),
             ],
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return [
             'component_class' => $componentClass,
             'component_alias' => $componentAlias,
             'component_id' => $componentId,
             'data' => $this->resolveData(),
             'updates' => $this->resolveUpdates(),
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
@@ -134,7 +149,11 @@ class LaravelLivewireRequestContextProvider extends LaravelRequestContextProvide
 
     /** @return array<string, mixed> */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function resolveUpdates(array $updates): array
+=======
+    protected function resolveUpdates(): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function resolveUpdates(): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

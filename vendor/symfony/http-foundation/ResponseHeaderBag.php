@@ -56,9 +56,12 @@ class ResponseHeaderBag extends HeaderBag
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function allPreserveCaseWithoutCookies()
@@ -72,9 +75,12 @@ class ResponseHeaderBag extends HeaderBag
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $headers = [])
@@ -93,7 +99,11 @@ class ResponseHeaderBag extends HeaderBag
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function all(?string $key = null): array
+=======
+    public function all(string $key = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function all(string $key = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -114,9 +124,12 @@ class ResponseHeaderBag extends HeaderBag
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $key, string|array|null $values, bool $replace = true)
@@ -148,9 +161,12 @@ class ResponseHeaderBag extends HeaderBag
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function remove(string $key)
@@ -186,9 +202,12 @@ class ResponseHeaderBag extends HeaderBag
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setCookie(Cookie $cookie)
@@ -200,10 +219,15 @@ class ResponseHeaderBag extends HeaderBag
     /**
      * Removes a cookie from the array, but does not unset it in the browser.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
     public function removeCookie(string $name, ?string $path = '/', ?string $domain = null)
+=======
+     */
+    public function removeCookie(string $name, ?string $path = '/', string $domain = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      */
     public function removeCookie(string $name, ?string $path = '/', string $domain = null)
@@ -258,6 +282,7 @@ class ResponseHeaderBag extends HeaderBag
     /**
      * Clears a cookie in the browser.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @param bool $partitioned
      *
@@ -269,18 +294,26 @@ class ResponseHeaderBag extends HeaderBag
 
         $this->setCookie(new Cookie($name, null, 1, $path, $domain, $secure, $httpOnly, false, $sameSite, $partitioned));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function clearCookie(string $name, ?string $path = '/', string $domain = null, bool $secure = false, bool $httpOnly = true, string $sameSite = null)
     {
         $this->setCookie(new Cookie($name, null, 1, $path, $domain, $secure, $httpOnly, false, $sameSite));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * @see HeaderUtils::makeDisposition()
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

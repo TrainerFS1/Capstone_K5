@@ -3,7 +3,10 @@
 namespace Illuminate\Console\Concerns;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Closure;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Console\PromptsForMissingInput as PromptsForMissingInputContract;
@@ -11,8 +14,11 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\text;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 trait PromptsForMissingInput
@@ -46,6 +52,7 @@ trait PromptsForMissingInput
             ->filter(fn ($argument) => $argument->isRequired() && is_null($input->getArgument($argument->getName())))
             ->filter(fn ($argument) => $argument->getName() !== 'command')
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->each(function ($argument) use ($input) {
                 $label = $this->promptForMissingArgumentsUsing()[$argument->getName()] ??
                     'What is '.lcfirst($argument->getDescription() ?: ('the '.$argument->getName())).'?';
@@ -65,6 +72,8 @@ trait PromptsForMissingInput
                 ));
             })
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->each(fn ($argument) => $input->setArgument(
                 $argument->getName(),
                 $this->askPersistently(
@@ -72,6 +81,9 @@ trait PromptsForMissingInput
                     'What is '.lcfirst($argument->getDescription()).'?'
                 )
             ))
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->isNotEmpty();
 
@@ -115,7 +127,10 @@ trait PromptsForMissingInput
             ->isNotEmpty();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Continue asking a question until an answer is provided.
@@ -137,5 +152,8 @@ trait PromptsForMissingInput
 
         return $answer;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

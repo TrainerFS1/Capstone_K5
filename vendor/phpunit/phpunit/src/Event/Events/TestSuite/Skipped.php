@@ -49,11 +49,14 @@ final class Skipped implements Event
     public function asString(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return sprintf(
             'Test Suite Skipped (%s, %s)',
             $this->testSuite->name(),
             $this->message,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $name = '';
 
         if (!empty($this->testSuite->name())) {
@@ -64,6 +67,9 @@ final class Skipped implements Event
             'Test Suite Skipped (%s%s)',
             $name,
             $this->message
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }

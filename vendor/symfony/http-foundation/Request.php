@@ -90,8 +90,11 @@ class Request
      * Request body parameters ($_POST).
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see getPayload() for portability between content types
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var InputBag
@@ -140,7 +143,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string[]|null
+=======
+     * @var string[]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string[]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -149,7 +156,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string[]|null
+=======
+     * @var string[]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string[]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,7 +169,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string[]|null
+=======
+     * @var string[]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string[]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -167,7 +182,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string[]|null
+=======
+     * @var string[]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string[]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -176,7 +195,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -185,7 +208,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,7 +221,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -203,7 +234,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -212,7 +247,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,7 +260,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -230,7 +273,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var SessionInterface|callable():SessionInterface|null
+=======
+     * @var SessionInterface|callable(): SessionInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var SessionInterface|callable(): SessionInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -239,7 +286,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var string|null
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -253,7 +304,11 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array<string, string[]>|null
+=======
+     * @var array<string, string[]>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var array<string, string[]>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -268,8 +323,11 @@ class Request
     private bool $isSafeContentPreferred;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $trustedValuesCache = [];
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static int $trustedHeaderSet = -1;
@@ -300,9 +358,12 @@ class Request
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var bool */
     private $isIisRewrite = false;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -332,8 +393,11 @@ class Request
      * @param array                $server     The SERVER parameters
      * @param string|resource|null $content    The raw body data
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -414,10 +478,13 @@ class Request
 
         $components = parse_url($uri);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (false === $components) {
             trigger_deprecation('symfony/http-foundation', '6.3', 'Calling "%s()" with an invalid URI is deprecated.', __METHOD__);
             $components = [];
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($components['host'])) {
@@ -498,8 +565,11 @@ class Request
      * to keep BC with an existing system. It should not be used for any
      * other purpose.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -512,6 +582,7 @@ class Request
      * Clones a request and overrides some of its parameters.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array|null $query      The GET parameters
      * @param array|null $request    The POST parameters
      * @param array|null $attributes The request attributes (parameters parsed from the PATH_INFO, ...)
@@ -521,6 +592,8 @@ class Request
      */
     public function duplicate(?array $query = null, ?array $request = null, ?array $attributes = null, ?array $cookies = null, ?array $files = null, ?array $server = null): static
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $query      The GET parameters
      * @param array $request    The POST parameters
      * @param array $attributes The request attributes (parameters parsed from the PATH_INFO, ...)
@@ -529,6 +602,9 @@ class Request
      * @param array $server     The SERVER parameters
      */
     public function duplicate(array $query = null, array $request = null, array $attributes = null, array $cookies = null, array $files = null, array $server = null): static
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $dup = clone $this;
@@ -618,8 +694,11 @@ class Request
      * It overrides $_GET, $_POST, $_REQUEST, $_SERVER, $_COOKIE.
      * $_FILES is never overridden, see rfc1867
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -663,8 +742,11 @@ class Request
      * @param array $proxies          A list of trusted proxies, the string 'REMOTE_ADDR' will be replaced with $_SERVER['REMOTE_ADDR']
      * @param int   $trustedHeaderSet A bit field of Request::HEADER_*, to set which headers to trust from your proxies
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -709,6 +791,7 @@ class Request
      *
      * @param array $hostPatterns A list of trusted host patterns
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
      */
@@ -716,12 +799,17 @@ class Request
     {
         self::$trustedHostPatterns = array_map(fn ($hostPattern) => sprintf('{%s}i', $hostPattern), $hostPatterns);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function setTrustedHosts(array $hostPatterns)
     {
         self::$trustedHostPatterns = array_map(function ($hostPattern) {
             return sprintf('{%s}i', $hostPattern);
         }, $hostPatterns);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // we need to reset trusted hosts on trusted host patterns change
         self::$trustedHosts = [];
@@ -766,8 +854,11 @@ class Request
      *
      * The HTTP method can only be overridden when the real HTTP method is POST.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -856,9 +947,12 @@ class Request
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setSession(SessionInterface $session)
@@ -872,9 +966,15 @@ class Request
      * @param callable(): SessionInterface $factory
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setSessionFactory(callable $factory): void
     {
         $this->session = $factory(...);
+=======
+    public function setSessionFactory(callable $factory)
+    {
+        $this->session = $factory;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setSessionFactory(callable $factory)
     {
@@ -1288,8 +1388,11 @@ class Request
     /**
      * Sets the request method.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1414,8 +1517,11 @@ class Request
      *
      * @param string|string[] $mimeTypes The associated mime types (the preferred one must be the first as it will be used as the content type)
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1449,8 +1555,11 @@ class Request
     /**
      * Sets the request format.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1484,8 +1593,11 @@ class Request
     /**
      * Sets the default locale.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1509,8 +1621,11 @@ class Request
     /**
      * Sets the locale.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -1525,7 +1640,11 @@ class Request
     public function getLocale(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->locale ?? $this->defaultLocale;
+=======
+        return null === $this->locale ? $this->defaultLocale : $this->locale;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return null === $this->locale ? $this->defaultLocale : $this->locale;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1598,7 +1717,10 @@ class Request
      *
      * @return string|resource
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-return ($asResource is true ? resource : string)
@@ -1643,6 +1765,7 @@ class Request
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Gets the decoded form or json request body.
      *
      * @throws JsonException When the body cannot be decoded to an array
@@ -1675,6 +1798,10 @@ class Request
      *
      * @see getPayload() for portability between content types
      *
+=======
+     * Gets the request body decoded as array, typically from a JSON payload.
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Gets the request body decoded as array, typically from a JSON payload.
      *
@@ -1724,7 +1851,11 @@ class Request
     public function getPreferredFormat(?string $default = 'html'): ?string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->preferredFormat ??= $this->getRequestFormat(null)) {
+=======
+        if (null !== $this->preferredFormat || null !== $this->preferredFormat = $this->getRequestFormat(null)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (null !== $this->preferredFormat || null !== $this->preferredFormat = $this->getRequestFormat(null)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1746,7 +1877,11 @@ class Request
      * @param string[] $locales An array of ordered available locales
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getPreferredLanguage(?array $locales = null): ?string
+=======
+    public function getPreferredLanguage(array $locales = null): ?string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getPreferredLanguage(array $locales = null): ?string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1826,13 +1961,19 @@ class Request
     public function getCharsets(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->charsets ??= array_map('strval', array_keys(AcceptHeader::fromString($this->headers->get('Accept-Charset'))->all()));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (null !== $this->charsets) {
             return $this->charsets;
         }
 
         return $this->charsets = array_map('strval', array_keys(AcceptHeader::fromString($this->headers->get('Accept-Charset'))->all()));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1844,13 +1985,19 @@ class Request
     public function getEncodings(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->encodings ??= array_map('strval', array_keys(AcceptHeader::fromString($this->headers->get('Accept-Encoding'))->all()));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (null !== $this->encodings) {
             return $this->encodings;
         }
 
         return $this->encodings = array_map('strval', array_keys(AcceptHeader::fromString($this->headers->get('Accept-Encoding'))->all()));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1862,13 +2009,19 @@ class Request
     public function getAcceptableContentTypes(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->acceptableContentTypes ??= array_map('strval', array_keys(AcceptHeader::fromString($this->headers->get('Accept'))->all()));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (null !== $this->acceptableContentTypes) {
             return $this->acceptableContentTypes;
         }
 
         return $this->acceptableContentTypes = array_map('strval', array_keys(AcceptHeader::fromString($this->headers->get('Accept'))->all()));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1913,9 +2066,12 @@ class Request
      */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function prepareRequestUri()
@@ -1923,16 +2079,22 @@ class Request
         $requestUri = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->isIisRewrite() && '' != $this->server->get('UNENCODED_URL')) {
             // IIS7 with URL Rewrite: make sure we get the unencoded URL (double slash problem)
             $requestUri = $this->server->get('UNENCODED_URL');
             $this->server->remove('UNENCODED_URL');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ('1' == $this->server->get('IIS_WasUrlRewritten') && '' != $this->server->get('UNENCODED_URL')) {
             // IIS7 with URL Rewrite: make sure we get the unencoded URL (double slash problem)
             $requestUri = $this->server->get('UNENCODED_URL');
             $this->server->remove('UNENCODED_URL');
             $this->server->remove('IIS_WasUrlRewritten');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif ($this->server->has('REQUEST_URI')) {
             $requestUri = $this->server->get('REQUEST_URI');
@@ -2094,8 +2256,11 @@ class Request
     /**
      * Initializes HTTP request formats.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -2136,6 +2301,7 @@ class Request
     private function getUrlencodedPrefix(string $string, string $prefix): ?string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->isIisRewrite()) {
             // ISS with UrlRewriteModule might report SCRIPT_NAME/PHP_SELF with wrong case
             // see https://github.com/php/php-src/issues/11981
@@ -2143,6 +2309,9 @@ class Request
                 return null;
             }
         } elseif (!str_starts_with(rawurldecode($string), $prefix)) {
+=======
+        if (!str_starts_with(rawurldecode($string), $prefix)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!str_starts_with(rawurldecode($string), $prefix)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2185,6 +2354,7 @@ class Request
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * This method is rather heavy because it splits and merges headers, and it's called by many other methods such as
      * getPort(), isSecure(), getHost(), getClientIps(), getBaseUrl() etc. Thus, we try to cache the results for
@@ -2203,6 +2373,10 @@ class Request
     private function getTrustedValues(int $type, string $ip = null): array
     {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    private function getTrustedValues(int $type, string $ip = null): array
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $clientValues = [];
         $forwardedValues = [];
 
@@ -2216,6 +2390,10 @@ class Request
             $forwarded = $this->headers->get(self::TRUSTED_HEADERS[self::HEADER_FORWARDED]);
             $parts = HeaderUtils::split($forwarded, ',;=');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            $forwardedValues = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $forwardedValues = [];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2241,6 +2419,7 @@ class Request
 
         if ($forwardedValues === $clientValues || !$clientValues) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->trustedValuesCache[$cacheKey] = $forwardedValues;
         }
 
@@ -2251,6 +2430,8 @@ class Request
         if (!$this->isForwardedValid) {
             return $this->trustedValuesCache[$cacheKey] = null !== $ip ? ['0.0.0.0', $ip] : [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $forwardedValues;
         }
 
@@ -2260,6 +2441,9 @@ class Request
 
         if (!$this->isForwardedValid) {
             return null !== $ip ? ['0.0.0.0', $ip] : [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
         $this->isForwardedValid = false;
@@ -2307,6 +2491,7 @@ class Request
         return $clientIps ? array_reverse($clientIps) : [$firstTrustedIp];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Is this IIS with UrlRewriteModule?
@@ -2323,6 +2508,8 @@ class Request
 
         return $this->isIisRewrite;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -6,6 +6,7 @@ class Text extends \Faker\Provider\Text
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The Project Gutenberg EBook of Dom Casmurro, by Machado de Assis
      *
      * This eBook is for the use of anyone anywhere in the United States and most
@@ -53,6 +54,8 @@ class Text extends \Faker\Provider\Text
      *
      * @var string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *   The Project Gutenberg EBook of Dom Casmurro, by Machado de Assis
      *
      *   This eBook is for the use of anyone anywhere in the United States and most
@@ -99,6 +102,9 @@ class Text extends \Faker\Provider\Text
      *   @see https://www.gutenberg.org/cache/epub/55752/pg55752.txt
      *
      *   @var string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected static $baseText = <<<'EOT'

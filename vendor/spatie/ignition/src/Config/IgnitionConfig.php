@@ -151,11 +151,14 @@ class IgnitionConfig implements Arrayable
             'editor' => 'vscode',
             'editor_options' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'clipboard' => [
                     'label' => 'Clipboard',
                     'url' => '%path:%line',
                     'clipboard' => true,
                 ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'sublime' => [
@@ -179,10 +182,13 @@ class IgnitionConfig implements Arrayable
                     'url' => 'phpstorm://open?file=%path&line=%line',
                 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'phpstorm-remote' => [
                     'label' => 'PHPStorm Remote',
                     'url' => 'javascript:r = new XMLHttpRequest;r.open("get", "http://localhost:63342/api/file/%path:%line");r.send()',
                 ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'idea' => [
@@ -210,10 +216,13 @@ class IgnitionConfig implements Arrayable
                     'url' => 'vscodium://file/%path:%line',
                 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'cursor' => [
                     'label' => 'Cursor',
                     'url' => 'cursor://file/%path:%line',
                 ],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'atom' => [
@@ -223,7 +232,11 @@ class IgnitionConfig implements Arrayable
                 'nova' => [
                     'label' => 'Nova',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'url' => 'nova://open?path=%path&line=%line',
+=======
+                    'url' => 'nova://core/open/file?filename=%path&line=%line',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'url' => 'nova://core/open/file?filename=%path&line=%line',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

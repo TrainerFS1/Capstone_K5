@@ -12,7 +12,10 @@ use Illuminate\Database\Eloquent\Relations\Concerns\AsPivot;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithPivotTable;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
@@ -140,7 +143,11 @@ class BelongsToMany extends Relation
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  \Illuminate\Database\Eloquent\Model  $parent
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|class-string<\Illuminate\Database\Eloquent\Model>  $table
+=======
+     * @param  string  $table
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $table
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -618,7 +625,11 @@ class BelongsToMany extends Relation
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the first record matching the attributes. If the record is not found, create it.
+=======
+     * Get the first related record matching the attributes or create it.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Get the first related record matching the attributes or create it.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -634,6 +645,7 @@ class BelongsToMany extends Relation
         if (is_null($instance = (clone $this)->where($attributes)->first())) {
             if (is_null($instance = $this->related->where($attributes)->first())) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $instance = $this->createOrFirst($attributes, $values, $joining, $touch);
             } else {
                 try {
@@ -646,6 +658,11 @@ class BelongsToMany extends Relation
             } else {
                 $this->attach($instance, $joining, $touch);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                $instance = $this->create(array_merge($attributes, $values), $joining, $touch);
+            } else {
+                $this->attach($instance, $joining, $touch);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -653,6 +670,7 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Attempt to create the record. If a unique constraint violation occurs, attempt to find the matching record.
      *
@@ -682,6 +700,8 @@ class BelongsToMany extends Relation
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create or update a related record matching the attributes, and fill it with values.
      *
      * @param  array  $attributes
@@ -693,6 +713,7 @@ class BelongsToMany extends Relation
     public function updateOrCreate(array $attributes, array $values = [], array $joining = [], $touch = true)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values, $joining, $touch), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values);
@@ -701,6 +722,8 @@ class BelongsToMany extends Relation
             }
         });
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (is_null($instance = (clone $this)->where($attributes)->first())) {
             if (is_null($instance = $this->related->where($attributes)->first())) {
                 return $this->create(array_merge($attributes, $values), $joining, $touch);
@@ -714,6 +737,9 @@ class BelongsToMany extends Relation
         $instance->save(['touch' => false]);
 
         return $instance;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1034,6 +1060,7 @@ class BelongsToMany extends Relation
     public function chunkById($count, callable $callback, $column = null, $alias = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->orderedChunkById($count, $callback, $column, $alias);
     }
 
@@ -1087,6 +1114,10 @@ class BelongsToMany extends Relation
         $this->prepareQueryBuilder();
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        $this->prepareQueryBuilder();
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $column ??= $this->getRelated()->qualifyColumn(
             $this->getRelatedKeyName()
         );
@@ -1094,17 +1125,23 @@ class BelongsToMany extends Relation
         $alias ??= $this->getRelatedKeyName();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->prepareQueryBuilder()->orderedChunkById($count, function ($results, $page) use ($callback) {
             $this->hydratePivotRelation($results->all());
 
             return $callback($results, $page);
         }, $column, $alias, $descending);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->query->chunkById($count, function ($results) use ($callback) {
             $this->hydratePivotRelation($results->all());
 
             return $callback($results);
         }, $column, $alias);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1166,6 +1203,7 @@ class BelongsToMany extends Relation
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Query lazily, by chunking the results of a query by comparing IDs in descending order.
      *
      * @param  int  $chunkSize
@@ -1189,6 +1227,8 @@ class BelongsToMany extends Relation
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a lazy collection for the given query.
@@ -1302,10 +1342,13 @@ class BelongsToMany extends Relation
     public function touch()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->related->isIgnoringTouch()) {
             return;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $columns = [

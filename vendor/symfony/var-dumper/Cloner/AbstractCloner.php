@@ -29,7 +29,10 @@ abstract class AbstractCloner implements ClonerInterface
         'Symfony\Component\VarDumper\Caster\ConstStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castStub'],
         'Symfony\Component\VarDumper\Caster\EnumStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castEnum'],
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Symfony\Component\VarDumper\Caster\ScalarStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castScalar'],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -99,7 +102,10 @@ abstract class AbstractCloner implements ClonerInterface
         'Symfony\Component\VarDumper\Caster\FrameStub' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castFrameStub'],
         'Symfony\Component\VarDumper\Cloner\AbstractCloner' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'cutInternals'],
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Symfony\Component\ErrorHandler\Exception\FlattenException' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castFlattenException'],
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Symfony\Component\ErrorHandler\Exception\SilencedErrorContext' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castSilencedErrorContext'],
@@ -134,11 +140,17 @@ abstract class AbstractCloner implements ClonerInterface
         'SplPriorityQueue' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castHeap'],
         'OuterIterator' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castOuterIterator'],
 <<<<<<< HEAD
+<<<<<<< HEAD
         'WeakMap' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakMap'],
         'WeakReference' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakReference'],
 
         'Redis' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
         'Relay\Relay' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
+=======
+        'WeakReference' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakReference'],
+
+        'Redis' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'WeakReference' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakReference'],
 
@@ -232,7 +244,11 @@ abstract class AbstractCloner implements ClonerInterface
      * @see addCasters
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?array $casters = null)
+=======
+    public function __construct(array $casters = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(array $casters = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -250,8 +266,11 @@ abstract class AbstractCloner implements ClonerInterface
      *
      * @param callable[] $casters A map of casters
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -265,8 +284,11 @@ abstract class AbstractCloner implements ClonerInterface
     /**
      * Sets the maximum number of items to clone past the minimum depth in nested structures.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -278,8 +300,11 @@ abstract class AbstractCloner implements ClonerInterface
     /**
      * Sets the maximum cloned length for strings.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -292,8 +317,11 @@ abstract class AbstractCloner implements ClonerInterface
      * Sets the minimum tree depth where we are guaranteed to clone all the items.  After this
      * depth is reached, only setMaxItems items will be cloned.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

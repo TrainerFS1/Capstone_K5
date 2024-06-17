@@ -20,8 +20,11 @@ use Symfony\Component\Console\Input\StringInput;
 class ShellInput extends StringInput
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const REGEX_STRING = '([^\s]+?)(?:\s|(?<!\\\\)"|(?<!\\\\)\'|$)';
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $hasCodeArgument = false;
@@ -51,7 +54,11 @@ class ShellInput extends StringInput
      * @throws \InvalidArgumentException if $definition has CodeArgument before the final argument position
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function bind(InputDefinition $definition): void
+=======
+    public function bind(InputDefinition $definition)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function bind(InputDefinition $definition)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -76,7 +83,11 @@ class ShellInput extends StringInput
         $this->hasCodeArgument = $hasCodeArgument;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         parent::bind($definition);
+=======
+        return parent::bind($definition);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return parent::bind($definition);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,7 +123,11 @@ class ShellInput extends StringInput
                     \stripcslashes(\substr($input, $cursor)),
                 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
             } elseif (\preg_match('/'.self::REGEX_STRING.'/A', $input, $match, 0, $cursor)) {
+=======
+            } elseif (\preg_match('/'.StringInput::REGEX_STRING.'/A', $input, $match, 0, $cursor)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } elseif (\preg_match('/'.StringInput::REGEX_STRING.'/A', $input, $match, 0, $cursor)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,7 +152,11 @@ class ShellInput extends StringInput
      * Same as parent, but with some bonus handling for code arguments.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function parse(): void
+=======
+    protected function parse()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function parse()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

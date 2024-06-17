@@ -48,7 +48,11 @@ class Inflectible
         yield new Transformation(new Pattern('(tax)a$'), '\1on');
         yield new Transformation(new Pattern('(c)riteria$'), '\1riterion');
 <<<<<<< HEAD
+<<<<<<< HEAD
         yield new Transformation(new Pattern('([ti])a(?<!regatta)$'), '\1um');
+=======
+        yield new Transformation(new Pattern('([ti])a$'), '\1um');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         yield new Transformation(new Pattern('([ti])a$'), '\1um');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +102,10 @@ class Inflectible
     {
         yield new Substitution(new Word('atlas'), new Word('atlases'));
 <<<<<<< HEAD
+<<<<<<< HEAD
         yield new Substitution(new Word('axis'), new Word('axes'));
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('axe'), new Word('axes'));
@@ -107,7 +114,10 @@ class Inflectible
         yield new Substitution(new Word('brother'), new Word('brothers'));
         yield new Substitution(new Word('cafe'), new Word('cafes'));
 <<<<<<< HEAD
+<<<<<<< HEAD
         yield new Substitution(new Word('cave'), new Word('caves'));
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('chateau'), new Word('chateaux'));
@@ -116,7 +126,10 @@ class Inflectible
         yield new Substitution(new Word('canvas'), new Word('canvases'));
         yield new Substitution(new Word('cookie'), new Word('cookies'));
 <<<<<<< HEAD
+<<<<<<< HEAD
         yield new Substitution(new Word('brownie'), new Word('brownies'));
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('corpus'), new Word('corpuses'));
@@ -127,7 +140,10 @@ class Inflectible
         yield new Substitution(new Word('domino'), new Word('dominoes'));
         yield new Substitution(new Word('echo'), new Word('echoes'));
 <<<<<<< HEAD
+<<<<<<< HEAD
         yield new Substitution(new Word('epoch'), new Word('epochs'));
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('foot'), new Word('feet'));

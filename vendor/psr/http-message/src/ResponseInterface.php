@@ -28,7 +28,11 @@ interface ResponseInterface extends MessageInterface
      * @return int Status code.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getStatusCode(): int;
+=======
+    public function getStatusCode();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getStatusCode();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -54,7 +58,11 @@ interface ResponseInterface extends MessageInterface
      * @throws \InvalidArgumentException For invalid status code arguments.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withStatus(int $code, string $reasonPhrase = ''): ResponseInterface;
+=======
+    public function withStatus($code, $reasonPhrase = '');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withStatus($code, $reasonPhrase = '');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -73,7 +81,11 @@ interface ResponseInterface extends MessageInterface
      * @return string Reason phrase; must return an empty string if none present.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getReasonPhrase(): string;
+=======
+    public function getReasonPhrase();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getReasonPhrase();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

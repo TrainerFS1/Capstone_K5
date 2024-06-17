@@ -91,9 +91,13 @@ class RouteListCommand extends Command
     public function handle()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $this->output->isVeryVerbose()) {
             $this->router->flushMiddlewareGroups();
         }
+=======
+        $this->router->flushMiddlewareGroups();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->router->flushMiddlewareGroups();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -11,6 +11,7 @@ namespace PHPUnit\Metadata;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @psalm-immutable
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -33,6 +34,8 @@ final class RequiresSetting extends Metadata
      * @psalm-param non-empty-string $value
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  *
  * @psalm-immutable
@@ -42,6 +45,9 @@ final class RequiresSetting extends Metadata
     private readonly string $setting;
     private readonly string $value;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function __construct(int $level, string $setting, string $value)
     {
@@ -52,9 +58,12 @@ final class RequiresSetting extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-assert-if-true RequiresSetting $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isRequiresSetting(): bool
@@ -63,9 +72,12 @@ final class RequiresSetting extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setting(): string
@@ -74,9 +86,12 @@ final class RequiresSetting extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function value(): string

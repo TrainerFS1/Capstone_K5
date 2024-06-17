@@ -12,11 +12,15 @@
 namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Schema\DefaultSchemaManagerFactory;
 use Doctrine\DBAL\Tools\DsnParser;
 use Relay\Relay;
+=======
+use Doctrine\DBAL\DriverManager;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Doctrine\DBAL\DriverManager;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,7 +45,10 @@ class SessionHandlerFactory
         switch (true) {
             case $connection instanceof \Redis:
 <<<<<<< HEAD
+<<<<<<< HEAD
             case $connection instanceof Relay:
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             case $connection instanceof \RedisArray:
@@ -67,7 +74,11 @@ class SessionHandlerFactory
             case str_starts_with($connection, 'memcached:'):
                 if (!class_exists(AbstractAdapter::class)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new \InvalidArgumentException('Unsupported Redis or Memcached DSN. Try running "composer require symfony/cache".');
+=======
+                    throw new \InvalidArgumentException(sprintf('Unsupported DSN "%s". Try running "composer require symfony/cache".', $connection));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new \InvalidArgumentException(sprintf('Unsupported DSN "%s". Try running "composer require symfony/cache".', $connection));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -79,6 +90,7 @@ class SessionHandlerFactory
 
             case str_starts_with($connection, 'pdo_oci://'):
                 if (!class_exists(DriverManager::class)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     throw new \InvalidArgumentException('Unsupported PDO OCI DSN. Try running "composer require doctrine/dbal".');
                 }
@@ -92,6 +104,11 @@ class SessionHandlerFactory
                 $connection = DriverManager::getConnection($params, $config);
                 // The condition should be removed once support for DBAL <3.3 is dropped
                 $connection = method_exists($connection, 'getNativeConnection') ? $connection->getNativeConnection() : $connection->getWrappedConnection();
+=======
+                    throw new \InvalidArgumentException(sprintf('Unsupported DSN "%s". Try running "composer require doctrine/dbal".', $connection));
+                }
+                $connection = DriverManager::getConnection(['url' => $connection])->getWrappedConnection();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new \InvalidArgumentException(sprintf('Unsupported DSN "%s". Try running "composer require doctrine/dbal".', $connection));
                 }

@@ -5,9 +5,13 @@ namespace Laravel\Ui;
 use Illuminate\Console\Command;
 use InvalidArgumentException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'ui')]
+=======
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

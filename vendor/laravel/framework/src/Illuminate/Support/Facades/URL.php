@@ -40,7 +40,10 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Routing\UrlGenerator setKeyResolver(callable $keyResolver)
  * @method static \Illuminate\Routing\UrlGenerator withKeyResolver(callable $keyResolver)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Routing\UrlGenerator resolveMissingNamedRoutesUsing(callable $missingNamedRouteResolver)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static string getRootControllerNamespace()

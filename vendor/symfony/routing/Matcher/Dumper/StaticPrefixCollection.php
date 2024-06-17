@@ -62,7 +62,11 @@ class StaticPrefixCollection
      * Adds a route to a group.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addRoute(string $prefix, array|self $route): void
+=======
+    public function addRoute(string $prefix, array|StaticPrefixCollection $route)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addRoute(string $prefix, array|StaticPrefixCollection $route)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,7 +156,11 @@ class StaticPrefixCollection
         $end = min(\strlen($prefix), \strlen($anotherPrefix));
         $staticLength = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         set_error_handler(self::handleError(...));
+=======
+        set_error_handler([__CLASS__, 'handleError']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         set_error_handler([__CLASS__, 'handleError']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -205,10 +213,16 @@ class StaticPrefixCollection
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function handleError(int $type, string $msg): bool
     {
         return str_contains($msg, 'Compilation failed: lookbehind assertion is not fixed length')
             || str_contains($msg, 'Compilation failed: length of lookbehind assertion is not limited');
+=======
+    public static function handleError(int $type, string $msg)
+    {
+        return str_contains($msg, 'Compilation failed: lookbehind assertion is not fixed length');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function handleError(int $type, string $msg)
     {

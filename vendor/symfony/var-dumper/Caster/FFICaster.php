@@ -98,7 +98,11 @@ final class FFICaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function castFFIPointer(Stub $stub, CType $type, ?CData $data = null): array
+=======
+    private static function castFFIPointer(Stub $stub, CType $type, CData $data = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function castFFIPointer(Stub $stub, CType $type, CData $data = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,7 +141,11 @@ final class FFICaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function castFFIStructLike(CType $type, ?CData $data = null): array
+=======
+    private static function castFFIStructLike(CType $type, CData $data = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function castFFIStructLike(CType $type, CData $data = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

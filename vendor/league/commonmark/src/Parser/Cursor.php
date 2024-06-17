@@ -44,12 +44,17 @@ class Cursor
     private bool $partiallyConsumedTab = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @var int|false
      *
      * @psalm-readonly
      */
     private $lastTabPosition;
+=======
+    /** @psalm-readonly */
+    private bool $lineContainsTabs;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /** @psalm-readonly */
     private bool $lineContainsTabs;
@@ -71,15 +76,21 @@ class Cursor
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->line            = $line;
         $this->length          = \mb_strlen($line, 'UTF-8') ?: 0;
         $this->isMultibyte     = $this->length !== \strlen($line);
         $this->lastTabPosition = $this->isMultibyte ? \mb_strrpos($line, "\t", 0, 'UTF-8') : \strrpos($line, "\t");
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->line             = $line;
         $this->length           = \mb_strlen($line, 'UTF-8') ?: 0;
         $this->isMultibyte      = $this->length !== \strlen($line);
         $this->lineContainsTabs = \strpos($line, "\t") !== false;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -92,6 +103,7 @@ class Cursor
             return $this->nextNonSpaceCache;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($this->currentPosition >= $this->length) {
             return $this->length;
@@ -111,6 +123,8 @@ class Cursor
                 $cols++;
             } elseif ($c === "\t") {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $c    = null;
         $i    = $this->currentPosition;
         $cols = $this->column;
@@ -121,6 +135,9 @@ class Cursor
                 $cols++;
             } elseif ($c === "\t") {
                 $i++;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $cols += 4 - ($cols % 4);
             } else {
@@ -129,14 +146,20 @@ class Cursor
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->indent = $cols - $this->column;
 
         return $this->nextNonSpaceCache = $i;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $nextNonSpace = $c === null ? $this->length : $i;
         $this->indent = $cols - $this->column;
 
         return $this->nextNonSpaceCache = $nextNonSpace;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -145,6 +168,7 @@ class Cursor
      */
     public function getNextNonSpaceCharacter(): ?string
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $index = $this->getNextNonSpacePosition();
         if ($index >= $this->length) {
@@ -156,6 +180,9 @@ class Cursor
         }
 
         return $this->line[$index];
+=======
+        return $this->getCharacter($this->getNextNonSpacePosition());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->getCharacter($this->getNextNonSpacePosition());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -252,6 +279,7 @@ class Cursor
     public function advanceBy(int $characters, bool $advanceByColumns = false): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->previousPosition  = $this->currentPosition;
         $this->nextNonSpaceCache = null;
 
@@ -266,6 +294,8 @@ class Cursor
             $this->currentPosition     += $length;
             $this->column              += $length;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->previousPosition = $this->currentPosition;
 
         $this->nextNonSpaceCache = null;
@@ -273,6 +303,9 @@ class Cursor
         // Optimization to avoid tab handling logic if we have no tabs
         if (! $this->lineContainsTabs) {
             $this->advanceWithoutTabCharacters($characters);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return;
@@ -283,7 +316,10 @@ class Cursor
             \substr($this->line, $this->currentPosition, $characters);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($nextFewChars === '') {
             return;
         }
@@ -295,6 +331,9 @@ class Cursor
             return;
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($characters === 1) {
             $asArray = [$nextFewChars];
@@ -334,7 +373,10 @@ class Cursor
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function advanceWithoutTabCharacters(int $characters): void
     {
         $length                     = \min($characters, $this->length - $this->currentPosition);
@@ -343,6 +385,9 @@ class Cursor
         $this->column              += $length;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Advances the cursor by a single space or tab, if present
@@ -465,8 +510,11 @@ class Cursor
      *
      * Returns the matching text and advances to the end of that match
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-param non-empty-string $regex
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -541,11 +589,15 @@ class Cursor
     public function getPreviousText(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->isMultibyte) {
             return \mb_substr($this->line, $this->previousPosition, $this->currentPosition - $this->previousPosition, 'UTF-8');
         }
 
         return \substr($this->line, $this->previousPosition, $this->currentPosition - $this->previousPosition);
+=======
+        return \mb_substr($this->line, $this->previousPosition, $this->currentPosition - $this->previousPosition, 'UTF-8');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return \mb_substr($this->line, $this->previousPosition, $this->currentPosition - $this->previousPosition, 'UTF-8');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

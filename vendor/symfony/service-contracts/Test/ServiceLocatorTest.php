@@ -12,6 +12,7 @@
 namespace Symfony\Contracts\Service\Test;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class_alias(ServiceLocatorTestCase::class, ServiceLocatorTest::class);
 
 if (false) {
@@ -21,6 +22,8 @@ if (false) {
     class ServiceLocatorTest
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Symfony\Contracts\Service\ServiceLocatorTrait;
@@ -98,6 +101,9 @@ abstract class ServiceLocatorTest extends TestCase
         ]);
 
         $locator->get('foo');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

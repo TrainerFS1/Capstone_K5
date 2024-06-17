@@ -14,8 +14,11 @@ declare(strict_types=1);
 namespace League\CommonMark\Parser\Inline;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\InvalidArgumentException;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 final class InlineParserMatch
@@ -40,8 +43,11 @@ final class InlineParserMatch
     /**
      * @internal
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-return non-empty-string
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -85,7 +91,11 @@ final class InlineParserMatch
                 $caseSensitive = $definition->caseSensitive;
             } elseif ($caseSensitive !== $definition->caseSensitive) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new InvalidArgumentException('Case-sensitive and case-insensitive definitions cannot be combined');
+=======
+                throw new \LogicException('Case-sensitive and case-insensitive defintions cannot be comined');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new \LogicException('Case-sensitive and case-insensitive defintions cannot be comined');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

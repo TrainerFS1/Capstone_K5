@@ -130,10 +130,13 @@ class DynamoDbStore implements LockProvider, Store
     public function many(array $keys)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (count($keys) === 0) {
             return [];
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $prefixedKeys = array_map(function ($key) {
@@ -227,10 +230,13 @@ class DynamoDbStore implements LockProvider, Store
     public function putMany(array $values, $seconds)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (count($values) === 0) {
             return true;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $expiration = $this->toTimestamp($seconds);
@@ -292,7 +298,11 @@ class DynamoDbStore implements LockProvider, Store
                 'ExpressionAttributeValues' => [
                     ':now' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                         'N' => (string) $this->currentTime(),
+=======
+                        'N' => (string) Carbon::now()->getTimestamp(),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         'N' => (string) Carbon::now()->getTimestamp(),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -337,7 +347,11 @@ class DynamoDbStore implements LockProvider, Store
                 'ExpressionAttributeValues' => [
                     ':now' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                         'N' => (string) $this->currentTime(),
+=======
+                        'N' => (string) Carbon::now()->getTimestamp(),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         'N' => (string) Carbon::now()->getTimestamp(),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -386,7 +400,11 @@ class DynamoDbStore implements LockProvider, Store
                 'ExpressionAttributeValues' => [
                     ':now' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                         'N' => (string) $this->currentTime(),
+=======
+                        'N' => (string) Carbon::now()->getTimestamp(),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         'N' => (string) Carbon::now()->getTimestamp(),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -488,7 +506,11 @@ class DynamoDbStore implements LockProvider, Store
         return $seconds > 0
                     ? $this->availableAt($seconds)
 <<<<<<< HEAD
+<<<<<<< HEAD
                     : $this->currentTime();
+=======
+                    : Carbon::now()->getTimestamp();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     : Carbon::now()->getTimestamp();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

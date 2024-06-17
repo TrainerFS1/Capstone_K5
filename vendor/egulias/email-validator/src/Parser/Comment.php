@@ -67,7 +67,11 @@ class Comment extends PartParser
         $finalValidations = $this->commentStrategy->endOfLoopValidations($this->lexer);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->warnings = [...$this->warnings, ...$this->commentStrategy->getWarnings()];
+=======
+        $this->warnings = array_merge($this->warnings, $this->commentStrategy->getWarnings());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->warnings = array_merge($this->warnings, $this->commentStrategy->getWarnings());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -77,6 +81,7 @@ class Comment extends PartParser
 
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return void
      */
@@ -90,6 +95,8 @@ class Comment extends PartParser
         if (!$this->lexer->isNextTokenAny(array(EmailLexer::S_SP, EmailLexer::S_HTAB, EmailLexer::C_DEL))) {
             return;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
      */
     private function warnEscaping(): bool
@@ -101,12 +108,19 @@ class Comment extends PartParser
 
         if (!$this->lexer->isNextTokenAny(array(EmailLexer::S_SP, EmailLexer::S_HTAB, EmailLexer::C_DEL))) {
             return false;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $this->warnings[QuotedPart::CODE] =
             new QuotedPart($this->lexer->getPrevious()->type, $this->lexer->current->type);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        return true;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return true;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

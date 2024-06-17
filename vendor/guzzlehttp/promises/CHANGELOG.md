@@ -1,6 +1,7 @@
 # CHANGELOG
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ## 2.0.2 - 2023-12-03
 
@@ -41,6 +42,8 @@
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 1.5.2 - 2022-08-07
 
 ### Changed
@@ -48,7 +51,10 @@
 - Officially support PHP 8.2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 1.5.1 - 2021-10-22
@@ -59,7 +65,10 @@
 - Fix pool memory leak when empty array of promises provided
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 1.5.0 - 2021-10-07
@@ -74,7 +83,10 @@
 - Fix manually settle promises generated with `Utils::task`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 1.4.1 - 2021-02-18
@@ -84,7 +96,10 @@
 - Fixed `each_limit` skipping promises and failing
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 1.4.0 - 2020-09-30

@@ -8,7 +8,10 @@ use Brick\Math\Exception\MathException as BrickMathException;
 use DateTime;
 use DateTimeInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use DateTimeZone;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Egulias\EmailValidator\EmailValidator;
@@ -19,7 +22,10 @@ use Egulias\EmailValidator\Validation\NoRFCWarningsValidation;
 use Egulias\EmailValidator\Validation\RFCValidation;
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Container\Container;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Eloquent\Model;
@@ -34,7 +40,10 @@ use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use ValueError;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -563,6 +572,7 @@ trait ValidatesAttributes
 
         foreach ($parameters as $format) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             try {
                 $date = DateTime::createFromFormat('!'.$format, $value);
 
@@ -572,10 +582,15 @@ trait ValidatesAttributes
             } catch (ValueError) {
                 return false;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $date = DateTime::createFromFormat('!'.$format, $value);
 
             if ($date && $date->format($format) == $value) {
                 return true;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
@@ -609,8 +624,11 @@ trait ValidatesAttributes
     public function validateDecimal($attribute, $value, $parameters)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->requireParameterCount(1, $parameters, 'decimal');
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! $this->validateNumeric($attribute, $value)) {
@@ -618,17 +636,23 @@ trait ValidatesAttributes
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $matches = [];
 
         if (preg_match('/^[+-]?\d*\.?(\d*)$/', $value, $matches) !== 1) {
             return false;
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->requireParameterCount(1, $parameters, 'decimal');
 
         $matches = [];
 
         preg_match('/^[+-]?\d*.(\d*)$/', $value, $matches);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $decimals = strlen(end($matches));
@@ -715,6 +739,7 @@ trait ValidatesAttributes
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $this->isValidFileInstance($value)) {
             return false;
         }
@@ -727,13 +752,20 @@ trait ValidatesAttributes
 =======
         if (! $this->isValidFileInstance($value) || ! $sizeDetails = @getimagesize($value->getRealPath())) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        if (! $this->isValidFileInstance($value) || ! $sizeDetails = @getimagesize($value->getRealPath())) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return false;
         }
 
         $this->requireParameterCount(1, $parameters, 'dimensions');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         [$width, $height] = $dimensions;
+=======
+        [$width, $height] = $sizeDetails;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         [$width, $height] = $sizeDetails;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -877,9 +909,13 @@ trait ValidatesAttributes
             ->all() ?: [new RFCValidation];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $emailValidator = Container::getInstance()->make(EmailValidator::class);
 
         return $emailValidator->isValid($value, new MultipleValidationWithAnd($validations));
+=======
+        return (new EmailValidator)->isValid($value, new MultipleValidationWithAnd($validations));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return (new EmailValidator)->isValid($value, new MultipleValidationWithAnd($validations));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -907,10 +943,13 @@ trait ValidatesAttributes
         $expected = is_array($value) ? count(array_unique($value)) : 1;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($expected === 0) {
             return true;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->getExistCount(
@@ -1120,6 +1159,7 @@ trait ValidatesAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Validate the extension of a file upload attribute is in a set of defined extensions.
      *
      * @param  string  $attribute
@@ -1141,6 +1181,8 @@ trait ValidatesAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Validate the given value is a valid file.
@@ -1338,6 +1380,7 @@ trait ValidatesAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Validate that an attribute is a valid HEX color.
      *
      * @param  string  $attribute
@@ -1350,6 +1393,8 @@ trait ValidatesAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Validate the MIME type of a file is an image MIME type.
@@ -1479,6 +1524,7 @@ trait ValidatesAttributes
     public function validateJson($attribute, $value)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_array($value) || is_null($value)) {
             return false;
         }
@@ -1492,6 +1538,8 @@ trait ValidatesAttributes
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (is_array($value)) {
             return false;
         }
@@ -1500,6 +1548,9 @@ trait ValidatesAttributes
             return false;
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         json_decode($value);
 
@@ -1536,7 +1587,11 @@ trait ValidatesAttributes
     public function validateMaxDigits($attribute, $value, $parameters)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->requireParameterCount(1, $parameters, 'max_digits');
+=======
+        $this->requireParameterCount(1, $parameters, 'max');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->requireParameterCount(1, $parameters, 'max');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1642,7 +1697,11 @@ trait ValidatesAttributes
     public function validateMinDigits($attribute, $value, $parameters)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->requireParameterCount(1, $parameters, 'min_digits');
+=======
+        $this->requireParameterCount(1, $parameters, 'min');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->requireParameterCount(1, $parameters, 'min');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1737,7 +1796,11 @@ trait ValidatesAttributes
     public function validateMissingWithAll($attribute, $value, $parameters)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->requireParameterCount(1, $parameters, 'missing_with_all');
+=======
+        $this->requireParameterCount(1, $parameters, 'missing_with');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->requireParameterCount(1, $parameters, 'missing_with');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1838,6 +1901,7 @@ trait ValidatesAttributes
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Validate that an attribute is present when another attribute has a given value.
      *
      * @param  string  $attribute
@@ -1918,6 +1982,8 @@ trait ValidatesAttributes
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Validate that an attribute passes a regular expression check.
@@ -2487,6 +2553,7 @@ trait ValidatesAttributes
      * @param  string  $attribute
      * @param  mixed  $value
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, null|string>  $parameters
      * @return bool
      */
@@ -2497,11 +2564,16 @@ trait ValidatesAttributes
             isset($parameters[1]) ? Str::upper($parameters[1]) : null,
         ), true);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
      */
     public function validateTimezone($attribute, $value)
     {
         return in_array($value, timezone_identifiers_list(), true);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -2511,6 +2583,7 @@ trait ValidatesAttributes
      * @param  string  $attribute
      * @param  mixed  $value
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<int, string>  $parameters
      * @return bool
      */
@@ -2518,6 +2591,8 @@ trait ValidatesAttributes
     {
         return Str::isUrl($value, $parameters);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
      */
     public function validateUrl($attribute, $value)
@@ -2550,6 +2625,9 @@ trait ValidatesAttributes
         $~ixu';
 
         return preg_match($pattern, $value) > 0;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -2594,7 +2672,11 @@ trait ValidatesAttributes
         // entire length of the string will be considered the attribute size.
         if (is_numeric($value) && $hasNumeric) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->ensureExponentWithinAllowedRange($attribute, $this->trim($value));
+=======
+            return $this->trim($value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $this->trim($value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2715,6 +2797,7 @@ trait ValidatesAttributes
         return is_string($value) ? trim($value) : $value;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Ensure the exponent is within the allowed range.
@@ -2745,6 +2828,8 @@ trait ValidatesAttributes
 
         return $value;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

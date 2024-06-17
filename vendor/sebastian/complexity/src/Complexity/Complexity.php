@@ -10,8 +10,11 @@
 namespace SebastianBergmann\Complexity;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function str_contains;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
@@ -19,6 +22,7 @@ use function str_contains;
  */
 final class Complexity
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @psalm-var non-empty-string
@@ -39,6 +43,11 @@ final class Complexity
     private int $cyclomaticComplexity;
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    private string $name;
+    private int $cyclomaticComplexity;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(string $name, int $cyclomaticComplexity)
     {
         $this->name                 = $name;
@@ -46,9 +55,12 @@ final class Complexity
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function name(): string
@@ -57,15 +69,19 @@ final class Complexity
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return positive-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function cyclomaticComplexity(): int
     {
         return $this->cyclomaticComplexity;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function isFunction(): bool
@@ -77,6 +93,8 @@ final class Complexity
     {
         return str_contains($this->name, '::');
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

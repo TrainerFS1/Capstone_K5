@@ -16,6 +16,7 @@
     "require": {
         "php": "^8.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "filp/whoops": "^2.15.3",
         "nunomaduro/termwind": "^1.15.1",
         "symfony/console": "^6.3.4"
@@ -37,6 +38,8 @@
         "sebastian/environment": "^6.0.1",
         "spatie/laravel-ignition": "^2.3.1"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "filp/whoops": "^2.14.6",
         "nunomaduro/termwind": "^1.15.1",
         "symfony/console": "^6.2.5"
@@ -53,6 +56,9 @@
         "phpunit/phpunit": "^10.0.9",
         "sebastian/environment": "^6.0.0",
         "spatie/laravel-ignition": "^2.0.0"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload-dev": {
@@ -93,11 +99,15 @@
         "test:lint": "pint --test -v",
         "test:types": "phpstan analyse --ansi",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "test:unit:phpunit": [
             "@putenv XDEBUG_MODE=coverage",
             "phpunit --colors=always"
         ],
         "test:unit:pest": [
+=======
+        "test:unit": [
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "test:unit": [
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -108,8 +118,12 @@
             "@test:lint",
             "@test:types",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "@test:unit:phpunit",
             "@test:unit:pest"
+=======
+            "@test:unit"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "@test:unit"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

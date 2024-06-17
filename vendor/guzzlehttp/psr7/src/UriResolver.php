@@ -12,7 +12,11 @@ use Psr\Http\Message\UriInterface;
  * @author Tobias Schultze
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @see https://datatracker.ietf.org/doc/html/rfc3986#section-5
+=======
+ * @link https://tools.ietf.org/html/rfc3986#section-5
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @link https://tools.ietf.org/html/rfc3986#section-5
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -23,7 +27,11 @@ final class UriResolver
      * Removes dot segments from a path and returns the new path.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-5.2.4
+=======
+     * @link http://tools.ietf.org/html/rfc3986#section-5.2.4
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link http://tools.ietf.org/html/rfc3986#section-5.2.4
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -49,7 +57,11 @@ final class UriResolver
         if ($path[0] === '/' && (!isset($newPath[0]) || $newPath[0] !== '/')) {
             // Re-add the leading slash if necessary for cases like "/.."
 <<<<<<< HEAD
+<<<<<<< HEAD
             $newPath = '/'.$newPath;
+=======
+            $newPath = '/' . $newPath;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $newPath = '/' . $newPath;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +78,11 @@ final class UriResolver
      * Converts the relative URI into a new URI that is resolved against the base URI.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-5.2
+=======
+     * @link http://tools.ietf.org/html/rfc3986#section-5.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @link http://tools.ietf.org/html/rfc3986#section-5.2
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,7 +113,11 @@ final class UriResolver
                 } else {
                     if ($targetAuthority != '' && $base->getPath() === '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $targetPath = '/'.$rel->getPath();
+=======
+                        $targetPath = '/' . $rel->getPath();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $targetPath = '/' . $rel->getPath();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -107,7 +127,11 @@ final class UriResolver
                             $targetPath = $rel->getPath();
                         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $targetPath = substr($base->getPath(), 0, $lastSlashPos + 1).$rel->getPath();
+=======
+                            $targetPath = substr($base->getPath(), 0, $lastSlashPos + 1) . $rel->getPath();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $targetPath = substr($base->getPath(), 0, $lastSlashPos + 1) . $rel->getPath();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,8 +176,13 @@ final class UriResolver
     public static function relativize(UriInterface $base, UriInterface $target): UriInterface
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($target->getScheme() !== ''
             && ($base->getScheme() !== $target->getScheme() || $target->getAuthority() === '' && $base->getAuthority() !== '')
+=======
+        if ($target->getScheme() !== '' &&
+            ($base->getScheme() !== $target->getScheme() || $target->getAuthority() === '' && $base->getAuthority() !== '')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($target->getScheme() !== '' &&
             ($base->getScheme() !== $target->getScheme() || $target->getAuthority() === '' && $base->getAuthority() !== '')
@@ -215,7 +244,11 @@ final class UriResolver
         }
         $targetSegments[] = $targetLastSegment;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $relativePath = str_repeat('../', count($sourceSegments)).implode('/', $targetSegments);
+=======
+        $relativePath = str_repeat('../', count($sourceSegments)) . implode('/', $targetSegments);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $relativePath = str_repeat('../', count($sourceSegments)) . implode('/', $targetSegments);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -36,10 +36,14 @@ class HelperSet implements \IteratorAggregate
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function set(HelperInterface $helper, ?string $alias = null)
+=======
+    public function set(HelperInterface $helper, string $alias = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function set(HelperInterface $helper, string $alias = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

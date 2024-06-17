@@ -26,6 +26,7 @@
                 <?php } ?>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <?php if (\count($exception['data'] ?? [])) { ?>
                 <details class="exception-properties-wrapper">
                     <summary>Show exception properties</summary>
@@ -34,6 +35,8 @@
                     </div>
                 </details>
             <?php } ?>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         </div>

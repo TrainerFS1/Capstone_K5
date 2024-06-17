@@ -3,7 +3,10 @@
 namespace Illuminate\Http\Client;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Closure;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Exception;
@@ -14,7 +17,10 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Exception\TransferException;
 use GuzzleHttp\HandlerStack;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use GuzzleHttp\Middleware;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use GuzzleHttp\UriTemplate\UriTemplate;
@@ -26,11 +32,17 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Stringable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use JsonSerializable;
 use OutOfBoundsException;
+=======
+use Illuminate\Support\Traits\Conditionable;
+use Illuminate\Support\Traits\Macroable;
+use JsonSerializable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
@@ -91,7 +103,11 @@ class PendingRequest
      * The raw body for the request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var \Psr\Http\Message\StreamInterface|string
+=======
+     * @var string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -151,7 +167,11 @@ class PendingRequest
      * The number of milliseconds to wait between retries.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var Closure|int
+=======
+     * @var int
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var int
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -240,6 +260,7 @@ class PendingRequest
      *
      * @param  \Illuminate\Http\Client\Factory|null  $factory
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array  $middleware
      * @return void
      */
@@ -248,12 +269,17 @@ class PendingRequest
         $this->factory = $factory;
         $this->middleware = new Collection($middleware);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     public function __construct(Factory $factory = null)
     {
         $this->factory = $factory;
         $this->middleware = new Collection;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->asJson();
@@ -289,7 +315,11 @@ class PendingRequest
      * Attach a raw body to the request.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Psr\Http\Message\StreamInterface|string  $content
+=======
+     * @param  string  $content
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $content
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -383,6 +413,7 @@ class PendingRequest
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Set the given query parameters in the request URI.
      *
      * @param  array  $parameters
@@ -398,6 +429,8 @@ class PendingRequest
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Specify the request's content type.
@@ -450,6 +483,7 @@ class PendingRequest
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Add the given header to the request.
      *
      * @param  string  $name
@@ -475,6 +509,8 @@ class PendingRequest
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Specify the basic authentication username and password for the request.
@@ -640,8 +676,13 @@ class PendingRequest
      * Specify the number of times the request should be attempted.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|int  $times
      * @param  Closure|int  $sleepMilliseconds
+=======
+     * @param  int  $times
+     * @param  int  $sleepMilliseconds
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  int  $times
      * @param  int  $sleepMilliseconds
@@ -651,7 +692,11 @@ class PendingRequest
      * @return $this
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function retry(array|int $times, Closure|int $sleepMilliseconds = 0, ?callable $when = null, bool $throw = true)
+=======
+    public function retry(int $times, int $sleepMilliseconds = 0, ?callable $when = null, bool $throw = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function retry(int $times, int $sleepMilliseconds = 0, ?callable $when = null, bool $throw = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -695,6 +740,7 @@ class PendingRequest
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Add new request middleware the client handler stack.
      *
      * @param  callable  $middleware
@@ -721,6 +767,8 @@ class PendingRequest
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add a new "before sending" callback to the request.
@@ -898,7 +946,11 @@ class PendingRequest
      *
      * @param  callable  $callback
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<array-key, \Illuminate\Http\Client\Response>
+=======
+     * @return array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -947,7 +999,11 @@ class PendingRequest
         return retry($this->tries ?? 1, function ($attempt) use ($method, $url, $options, &$shouldRetry) {
             try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return tap($this->newResponse($this->sendRequest($method, $url, $options)), function ($response) use ($attempt, &$shouldRetry) {
+=======
+                return tap(new Response($this->sendRequest($method, $url, $options)), function ($response) use ($attempt, &$shouldRetry) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return tap(new Response($this->sendRequest($method, $url, $options)), function ($response) use ($attempt, &$shouldRetry) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -981,7 +1037,11 @@ class PendingRequest
                 });
             } catch (ConnectException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->dispatchConnectionFailedEvent(new Request($e->getRequest()));
+=======
+                $this->dispatchConnectionFailedEvent();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->dispatchConnectionFailedEvent();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1067,7 +1127,11 @@ class PendingRequest
         return $this->promise = $this->sendRequest($method, $url, $options)
             ->then(function (MessageInterface $message) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return tap($this->newResponse($message), function ($response) {
+=======
+                return tap(new Response($message), function ($response) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return tap(new Response($message), function ($response) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1076,12 +1140,17 @@ class PendingRequest
                 });
             })
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->otherwise(function (OutOfBoundsException|TransferException $e) {
                 if ($e instanceof ConnectException) {
                     $this->dispatchConnectionFailedEvent(new Request($e->getRequest()));
                 }
 
                 return $e instanceof RequestException && $e->hasResponse() ? $this->populateResponse($this->newResponse($e->getResponse())) : $e;
+=======
+            ->otherwise(function (TransferException $e) {
+                return $e instanceof RequestException && $e->hasResponse() ? $this->populateResponse(new Response($e->getResponse())) : $e;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ->otherwise(function (TransferException $e) {
                 return $e instanceof RequestException && $e->hasResponse() ? $this->populateResponse(new Response($e->getResponse())) : $e;
@@ -1106,6 +1175,7 @@ class PendingRequest
         $laravelData = $this->parseRequestData($method, $url, $options);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $onStats = function ($transferStats) {
             if (($callback = ($this->options['on_stats'] ?? false)) instanceof Closure) {
                 $transferStats = $callback($transferStats) ?: $transferStats;
@@ -1121,12 +1191,17 @@ class PendingRequest
 
         return $this->buildClient()->$clientMethod($method, $url, $mergedOptions);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->buildClient()->$clientMethod($method, $url, $this->mergeOptions([
             'laravel_data' => $laravelData,
             'on_stats' => function ($transferStats) {
                 $this->transferStats = $transferStats;
             },
         ], $options));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1167,6 +1242,7 @@ class PendingRequest
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Normalize the given request options.
      *
      * @param  array  $options
@@ -1186,6 +1262,8 @@ class PendingRequest
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Populate the given response with additional data.
@@ -1267,6 +1345,10 @@ class PendingRequest
         return tap($handlerStack, function ($stack) {
             $stack->push($this->buildBeforeSendingHandler());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            $stack->push($this->buildRecorderHandler());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $stack->push($this->buildRecorderHandler());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1276,7 +1358,10 @@ class PendingRequest
             });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $stack->push($this->buildRecorderHandler());
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $stack->push($this->buildStubHandler());
@@ -1312,7 +1397,11 @@ class PendingRequest
                     $this->factory?->recordRequestResponsePair(
                         (new Request($request))->withData($options['laravel_data']),
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $this->newResponse($response)
+=======
+                        new Response($response)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         new Response($response)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1422,6 +1511,7 @@ class PendingRequest
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Create a new response instance using the given PSR response.
      *
      * @param  \Psr\Http\Message\MessageInterface  $response
@@ -1433,6 +1523,8 @@ class PendingRequest
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Register a stub callable that will intercept requests and be able to return stub responses.
@@ -1504,7 +1596,12 @@ class PendingRequest
     protected function dispatchResponseReceivedEvent(Response $response)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! ($dispatcher = $this->factory?->getDispatcher()) || ! $this->request) {
+=======
+        if (! ($dispatcher = $this->factory?->getDispatcher()) ||
+            ! $this->request) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (! ($dispatcher = $this->factory?->getDispatcher()) ||
             ! $this->request) {
@@ -1519,6 +1616,7 @@ class PendingRequest
      * Dispatch the ConnectionFailed event if a dispatcher is available.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Http\Client\Request  $request
      * @return void
      */
@@ -1527,12 +1625,17 @@ class PendingRequest
         if ($dispatcher = $this->factory?->getDispatcher()) {
             $dispatcher->dispatch(new ConnectionFailed($request));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     protected function dispatchConnectionFailedEvent()
     {
         if ($dispatcher = $this->factory?->getDispatcher()) {
             $dispatcher->dispatch(new ConnectionFailed($this->request));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }

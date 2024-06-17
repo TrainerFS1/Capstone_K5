@@ -61,7 +61,11 @@ final class TestProxyCreated implements Event
         return sprintf(
             'Test Proxy Created (%s)',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->className,
+=======
+            $this->className
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->className
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

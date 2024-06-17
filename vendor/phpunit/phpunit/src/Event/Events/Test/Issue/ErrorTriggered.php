@@ -25,6 +25,7 @@ final class ErrorTriggered implements Event
     private readonly Telemetry\Info $telemetryInfo;
     private readonly Test $test;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
@@ -49,11 +50,16 @@ final class ErrorTriggered implements Event
      */
     public function __construct(Telemetry\Info $telemetryInfo, Test $test, string $message, string $file, int $line, bool $suppressed)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $message;
     private readonly string $file;
     private readonly int $line;
 
     public function __construct(Telemetry\Info $telemetryInfo, Test $test, string $message, string $file, int $line)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->telemetryInfo = $telemetryInfo;
@@ -62,7 +68,10 @@ final class ErrorTriggered implements Event
         $this->file          = $file;
         $this->line          = $line;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->suppressed    = $suppressed;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -78,9 +87,12 @@ final class ErrorTriggered implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function message(): string
@@ -89,9 +101,12 @@ final class ErrorTriggered implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function file(): string
@@ -100,9 +115,12 @@ final class ErrorTriggered implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return positive-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function line(): int
@@ -111,11 +129,14 @@ final class ErrorTriggered implements Event
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function wasSuppressed(): bool
     {
         return $this->suppressed;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function asString(): string
@@ -128,10 +149,16 @@ final class ErrorTriggered implements Event
 
         return sprintf(
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Test Triggered %sError (%s)%s',
             $this->wasSuppressed() ? 'Suppressed ' : '',
             $this->test->id(),
             $message,
+=======
+            'Test Triggered Error (%s)%s',
+            $this->test->id(),
+            $message
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'Test Triggered Error (%s)%s',
             $this->test->id(),

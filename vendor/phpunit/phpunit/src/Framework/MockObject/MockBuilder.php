@@ -11,6 +11,7 @@ namespace PHPUnit\Framework\MockObject;
 
 use function array_merge;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function assert;
 use function trait_exists;
 use PHPUnit\Framework\Exception;
@@ -29,6 +30,8 @@ use PHPUnit\Framework\MockObject\Generator\RuntimeException;
 use PHPUnit\Framework\MockObject\Generator\UnknownTypeException;
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
@@ -40,6 +43,7 @@ use ReflectionClass;
 final class MockBuilder
 {
     private readonly TestCase $testCase;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -58,10 +62,15 @@ final class MockBuilder
      */
     private ?string $mockClassName         = null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $type;
     private ?array $methods                = [];
     private bool $emptyMethodsArray        = false;
     private string $mockClassName          = '';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private array $constructorArgs         = [];
     private bool $originalConstructor      = true;
@@ -76,7 +85,11 @@ final class MockBuilder
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param class-string|trait-string $type
+=======
+     * @psalm-param class-string $type
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param class-string $type
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -92,6 +105,11 @@ final class MockBuilder
      * Creates a mock object using a fluent interface.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @throws \PHPUnit\Framework\InvalidArgumentException
+     * @throws ClassAlreadyExistsException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \PHPUnit\Framework\InvalidArgumentException
      * @throws ClassAlreadyExistsException
@@ -101,9 +119,13 @@ final class MockBuilder
      * @throws ClassIsReadonlyException
      * @throws DuplicateMethodException
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws InvalidArgumentException
      * @throws InvalidMethodNameException
      * @throws NameAlreadyInUseException
+=======
+     * @throws InvalidMethodNameException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws InvalidMethodNameException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -115,6 +137,7 @@ final class MockBuilder
      * @psalm-return MockObject&MockedType
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getMock(): MockObject
     {
         $object = $this->generator->testDouble(
@@ -124,6 +147,8 @@ final class MockBuilder
             $this->constructorArgs,
             $this->mockClassName ?? '',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getMock(bool $register = true): MockObject
     {
         $object = $this->generator->getMock(
@@ -131,6 +156,9 @@ final class MockBuilder
             !$this->emptyMethodsArray ? $this->methods : null,
             $this->constructorArgs,
             $this->mockClassName,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->originalConstructor,
             $this->originalClone,
@@ -140,6 +168,7 @@ final class MockBuilder
             $this->proxyTarget,
             $this->allowMockingUnknownTypes,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->returnValueGeneration,
         );
 
@@ -148,12 +177,17 @@ final class MockBuilder
 
         $this->testCase->registerMockObject($object);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->returnValueGeneration
         );
 
         if ($register) {
             $this->testCase->registerMockObject($object);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $object;
@@ -164,6 +198,7 @@ final class MockBuilder
      *
      * @psalm-return MockObject&MockedType
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @throws Exception
      * @throws ReflectionException
@@ -178,6 +213,8 @@ final class MockBuilder
             $this->constructorArgs,
             $this->mockClassName ?? '',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \PHPUnit\Framework\Exception
      * @throws ReflectionException
      * @throws RuntimeException
@@ -188,17 +225,26 @@ final class MockBuilder
             $this->type,
             $this->constructorArgs,
             $this->mockClassName,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->originalConstructor,
             $this->originalClone,
             $this->autoload,
             $this->methods,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->cloneArguments,
         );
 
         assert($object instanceof MockObject);
 
+=======
+            $this->cloneArguments
+        );
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->cloneArguments
         );
@@ -215,6 +261,7 @@ final class MockBuilder
      * @psalm-return MockObject&MockedType
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws Exception
      * @throws ReflectionException
      * @throws RuntimeException
@@ -230,6 +277,8 @@ final class MockBuilder
             $this->constructorArgs,
             $this->mockClassName ?? '',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \PHPUnit\Framework\Exception
      * @throws ReflectionException
      * @throws RuntimeException
@@ -240,17 +289,26 @@ final class MockBuilder
             $this->type,
             $this->constructorArgs,
             $this->mockClassName,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->originalConstructor,
             $this->originalClone,
             $this->autoload,
             $this->methods,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->cloneArguments,
         );
 
         assert($object instanceof MockObject);
 
+=======
+            $this->cloneArguments
+        );
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->cloneArguments
         );
@@ -265,7 +323,11 @@ final class MockBuilder
      * Specifies the subset of methods to mock, requiring each to exist in the class.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param list<non-empty-string> $methods
+=======
+     * @psalm-param list<string> $methods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param list<string> $methods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -291,15 +353,21 @@ final class MockBuilder
                 $e->getMessage(),
                 $e->getCode(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $e,
             );
             // @codeCoverageIgnoreEnd
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $e
             );
         }
         // @codeCoverageIgnoreEnd
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($methods as $method) {
@@ -309,7 +377,11 @@ final class MockBuilder
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->methods = array_merge($this->methods, $methods);
+=======
+        $this->methods = array_merge($this->methods ?? [], $methods);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->methods = array_merge($this->methods ?? [], $methods);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -321,7 +393,11 @@ final class MockBuilder
      * Specifies methods that don't exist in the class which you want to mock.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param list<non-empty-string> $methods
+=======
+     * @psalm-param list<string> $methods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param list<string> $methods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -332,8 +408,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5320
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -353,15 +432,21 @@ final class MockBuilder
                 $e->getMessage(),
                 $e->getCode(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $e,
             );
             // @codeCoverageIgnoreEnd
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $e
             );
         }
         // @codeCoverageIgnoreEnd
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($methods as $method) {
@@ -371,7 +456,11 @@ final class MockBuilder
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->methods = array_merge($this->methods, $methods);
+=======
+        $this->methods = array_merge($this->methods ?? [], $methods);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->methods = array_merge($this->methods ?? [], $methods);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -395,8 +484,11 @@ final class MockBuilder
      * Specifies the name for the mock class.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param class-string $name
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
@@ -461,8 +553,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5309
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -478,8 +573,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5309
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -495,8 +593,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5315
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -512,8 +613,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5315
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -529,8 +633,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5307
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -546,8 +653,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5307
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -564,8 +674,11 @@ final class MockBuilder
      *
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5307
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -579,8 +692,11 @@ final class MockBuilder
     /**
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5308
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -594,8 +710,11 @@ final class MockBuilder
     /**
      * @return $this
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5308
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

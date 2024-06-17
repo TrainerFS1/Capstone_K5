@@ -35,11 +35,15 @@ class Address extends \Faker\Provider\Address
 
     protected static $buildingNumber = ['%', '%#', '%#', '%#', '%##'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @see https://en.wikipedia.org/wiki/Postal_codes_in_France
      */
     protected static $postcode = ['#####'];
+=======
+    protected static $postcode = ['#####', '## ###'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected static $postcode = ['#####', '## ###'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

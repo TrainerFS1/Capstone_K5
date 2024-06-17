@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator\StringManipulation\Pass;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Mockery\Generator\Method;
 use Mockery\Generator\MockConfiguration;
@@ -46,19 +53,30 @@ use function preg_replace;
 use function rtrim;
 use function sprintf;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Generator\MockConfiguration;
 use Mockery\Generator\TargetClassInterface;
 use Mockery\Generator\Method;
 use Mockery\Generator\Parameter;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class MagicMethodTypeHintsPass implements Pass
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array
      */
     private $mockMagicMethods = [
+=======
+     * @var array $mockMagicMethods
+     */
+    private $mockMagicMethods = array(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var array $mockMagicMethods
      */
@@ -79,8 +97,13 @@ class MagicMethodTypeHintsPass implements Pass
         '__set_state',
         '__clone',
 <<<<<<< HEAD
+<<<<<<< HEAD
         '__debugInfo',
     ];
+=======
+        '__debugInfo'
+    );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         '__debugInfo'
     );
@@ -91,7 +114,11 @@ class MagicMethodTypeHintsPass implements Pass
      *
      * @param string $code
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+     * @param MockConfiguration $config
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param MockConfiguration $config
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -116,6 +143,7 @@ class MagicMethodTypeHintsPass implements Pass
      * passed DefinedTargetClass.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array
      */
     public function getMagicMethods(?TargetClassInterface $class = null)
@@ -137,6 +165,8 @@ class MagicMethodTypeHintsPass implements Pass
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param TargetClassInterface $class
      * @return array
      */
@@ -151,6 +181,9 @@ class MagicMethodTypeHintsPass implements Pass
         });
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Applies type hints of magic methods from
@@ -158,7 +191,11 @@ class MagicMethodTypeHintsPass implements Pass
      *
      * @param int $code
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+     * @param Method $method
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param Method $method
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -168,12 +205,18 @@ class MagicMethodTypeHintsPass implements Pass
     {
         if ($this->isMethodWithinCode($code, $method)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $namedParameters = $this->getOriginalParameters($code, $method);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $namedParameters = $this->getOriginalParameters(
                 $code,
                 $method
             );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $code = preg_replace(
                 $this->getDeclarationRegex($method->getName()),
@@ -182,13 +225,17 @@ class MagicMethodTypeHintsPass implements Pass
             );
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $code;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Returns a regex string used to match the
      * declaration of some method.
@@ -201,6 +248,8 @@ class MagicMethodTypeHintsPass implements Pass
     {
         return sprintf('/public\s+(?:static\s+)?function\s+%s\s*\(.*\)\s*(?=\{)/i', $methodName);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Checks if the method is declared within code.
      *
      * @param int $code
@@ -246,12 +295,16 @@ class MagicMethodTypeHintsPass implements Pass
         $parameterNames = is_array($groupMatches) ? $groupMatches : [$groupMatches];
 
         return $parameterNames;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Gets the declaration code, as a string, for the passed method.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param array $namedParameters
      *
@@ -260,6 +313,8 @@ class MagicMethodTypeHintsPass implements Pass
     private function getMethodDeclaration(Method $method, array $namedParameters)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param Method $method
      * @param array  $namedParameters
      * @return string
@@ -268,6 +323,9 @@ class MagicMethodTypeHintsPass implements Pass
         Method $method,
         array $namedParameters
     ) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $declaration = 'public';
         $declaration .= $method->isStatic() ? ' static' : '';
@@ -276,16 +334,22 @@ class MagicMethodTypeHintsPass implements Pass
         foreach ($method->getParameters() as $index => $parameter) {
             $declaration .= $this->renderTypeHint($parameter);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $name = $namedParameters[$index] ?? $parameter->getName();
             $declaration .= '$' . $name;
             $declaration .= ',';
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $name = isset($namedParameters[$index]) ? $namedParameters[$index] : $parameter->getName();
             $declaration .= '$' . $name;
             $declaration .= ',';
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $declaration = rtrim($declaration, ',');
         $declaration .= ') ';
@@ -298,6 +362,7 @@ class MagicMethodTypeHintsPass implements Pass
         return $declaration;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * Returns the method original parameters, as they're
@@ -334,6 +399,8 @@ class MagicMethodTypeHintsPass implements Pass
     {
         return preg_match($this->getDeclarationRegex($method->getName()), $code) === 1;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function renderTypeHint(Parameter $param)
     {
         $typeHint = $param->getTypeHint();
@@ -351,6 +418,9 @@ class MagicMethodTypeHintsPass implements Pass
     private function getDeclarationRegex($methodName)
     {
         return "/public\s+(?:static\s+)?function\s+$methodName\s*\(.*\)\s*(?=\{)/i";
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -22,7 +22,11 @@ final class ResponseHasCookie extends Constraint
     private ?string $domain;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $name, string $path = '/', ?string $domain = null)
+=======
+    public function __construct(string $name, string $path = '/', string $domain = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name, string $path = '/', string $domain = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +70,13 @@ final class ResponseHasCookie extends Constraint
         $cookies = $response->headers->getCookies();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $filteredCookies = array_filter($cookies, fn (Cookie $cookie) => $cookie->getName() === $this->name && $cookie->getPath() === $this->path && $cookie->getDomain() === $this->domain);
+=======
+        $filteredCookies = array_filter($cookies, function (Cookie $cookie) {
+            return $cookie->getName() === $this->name && $cookie->getPath() === $this->path && $cookie->getDomain() === $this->domain;
+        });
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $filteredCookies = array_filter($cookies, function (Cookie $cookie) {
             return $cookie->getName() === $this->name && $cookie->getPath() === $this->path && $cookie->getDomain() === $this->domain;

@@ -24,8 +24,13 @@ final class ClassIsAbstractException extends RuntimeException implements Excepti
                 'Class %s declared in %s is abstract',
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $file,
             ),
+=======
+                $file
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $file
             )

@@ -22,7 +22,10 @@ use function is_scalar;
 use function is_string;
 use function sprintf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Framework\UnknownTypeException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -119,6 +122,7 @@ final class IsType extends Constraint
         'iterable'          => true,
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var 'array'|'boolean'|'bool'|'double'|'float'|'integer'|'int'|'null'|'numeric'|'object'|'real'|'resource'|'resource (closed)'|'string'|'scalar'|'callable'|'iterable'
@@ -130,18 +134,26 @@ final class IsType extends Constraint
      *
      * @throws UnknownTypeException
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $type;
 
     /**
      * @throws \PHPUnit\Framework\Exception
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(string $type)
     {
         if (!isset(self::KNOWN_TYPES[$type])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new UnknownTypeException($type);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new \PHPUnit\Framework\Exception(
                 sprintf(
                     'Type specified for PHPUnit\Framework\Constraint\IsType <%s> ' .
@@ -149,6 +161,9 @@ final class IsType extends Constraint
                     $type
                 )
             );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -162,8 +177,13 @@ final class IsType extends Constraint
     {
         return sprintf(
 <<<<<<< HEAD
+<<<<<<< HEAD
             'is of type %s',
             $this->type,
+=======
+            'is of type "%s"',
+            $this->type
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'is of type "%s"',
             $this->type

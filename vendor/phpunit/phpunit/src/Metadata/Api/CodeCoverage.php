@@ -10,8 +10,11 @@
 namespace PHPUnit\Metadata\Api;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_unique;
 use function array_values;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function assert;
@@ -22,7 +25,10 @@ use function str_starts_with;
 use PHPUnit\Framework\CodeCoverageException;
 use PHPUnit\Framework\InvalidCoversTargetException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Framework\TestSuite;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Metadata\Covers;
@@ -30,9 +36,12 @@ use PHPUnit\Metadata\CoversClass;
 use PHPUnit\Metadata\CoversDefaultClass;
 use PHPUnit\Metadata\CoversFunction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Metadata\IgnoreClassForCodeCoverage;
 use PHPUnit\Metadata\IgnoreFunctionForCodeCoverage;
 use PHPUnit\Metadata\IgnoreMethodForCodeCoverage;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Metadata\Parser\Registry;
@@ -41,9 +50,13 @@ use PHPUnit\Metadata\UsesClass;
 use PHPUnit\Metadata\UsesDefaultClass;
 use PHPUnit\Metadata\UsesFunction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use RecursiveIteratorIterator;
 use SebastianBergmann\CodeUnit\CodeUnitCollection;
 use SebastianBergmann\CodeUnit\Exception as CodeUnitException;
+=======
+use SebastianBergmann\CodeUnit\CodeUnitCollection;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use SebastianBergmann\CodeUnit\CodeUnitCollection;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -58,9 +71,12 @@ final class CodeCoverage
     /**
      * @psalm-param class-string $className
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
      *
      * @psalm-return array<string,list<int>>|false
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -81,8 +97,13 @@ final class CodeCoverage
                     sprintf(
                         'More than one @coversDefaultClass annotation for class or interface "%s"',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $className,
                     ),
+=======
+                        $className
+                    )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $className
                     )
@@ -102,6 +123,7 @@ final class CodeCoverage
 
         foreach (Registry::parser()->forClassAndMethod($className, $methodName) as $metadata) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$metadata->isCoversClass() && !$metadata->isCoversFunction() && !$metadata->isCovers()) {
                 continue;
             }
@@ -111,6 +133,8 @@ final class CodeCoverage
             if ($metadata->isCoversClass() || $metadata->isCoversFunction()) {
                 $codeUnits = $codeUnits->mergeWith($this->mapToCodeUnits($metadata));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($metadata->isCoversClass() || $metadata->isCoversFunction()) {
                 assert($metadata instanceof CoversClass || $metadata instanceof CoversFunction);
 
@@ -135,6 +159,9 @@ final class CodeCoverage
                         $e
                     );
                 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } elseif ($metadata->isCovers()) {
                 assert($metadata instanceof Covers);
@@ -146,8 +173,13 @@ final class CodeCoverage
                         sprintf(
                             'Trying to @cover interface "%s".',
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $target,
                         ),
+=======
+                            $target
+                        )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $target
                         )
@@ -166,15 +198,21 @@ final class CodeCoverage
                         sprintf(
                             '"@covers %s" is invalid',
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $target,
                         ),
                         $e->getCode(),
                         $e,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $target
                         ),
                         $e->getCode(),
                         $e
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
@@ -187,9 +225,12 @@ final class CodeCoverage
     /**
      * @psalm-param class-string $className
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
      *
      * @psalm-return array<string,list<int>>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -206,8 +247,13 @@ final class CodeCoverage
                     sprintf(
                         'More than one @usesDefaultClass annotation for class or interface "%s"',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $className,
                     ),
+=======
+                        $className
+                    )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $className
                     )
@@ -227,6 +273,7 @@ final class CodeCoverage
 
         foreach (Registry::parser()->forClassAndMethod($className, $methodName) as $metadata) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$metadata->isUsesClass() && !$metadata->isUsesFunction() && !$metadata->isUses()) {
                 continue;
             }
@@ -236,6 +283,8 @@ final class CodeCoverage
             if ($metadata->isUsesClass() || $metadata->isUsesFunction()) {
                 $codeUnits = $codeUnits->mergeWith($this->mapToCodeUnits($metadata));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($metadata->isUsesClass() || $metadata->isUsesFunction()) {
                 assert($metadata instanceof UsesClass || $metadata instanceof UsesFunction);
 
@@ -260,6 +309,9 @@ final class CodeCoverage
                         $e
                     );
                 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } elseif ($metadata->isUses()) {
                 assert($metadata instanceof Uses);
@@ -277,15 +329,21 @@ final class CodeCoverage
                         sprintf(
                             '"@uses %s" is invalid',
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $target,
                         ),
                         $e->getCode(),
                         $e,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $target
                         ),
                         $e->getCode(),
                         $e
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
@@ -296,6 +354,7 @@ final class CodeCoverage
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-return array<string,list<int>>
      */
@@ -316,6 +375,9 @@ final class CodeCoverage
     /**
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
+=======
+     * @psalm-param class-string $className
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param class-string $className
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -341,6 +403,7 @@ final class CodeCoverage
 
         return true;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -419,6 +482,8 @@ final class CodeCoverage
             );
         }
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

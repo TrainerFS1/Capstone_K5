@@ -3,7 +3,10 @@
 namespace Illuminate\Database\Schema\Grammars;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use BackedEnum;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
@@ -314,10 +317,13 @@ abstract class Grammar extends BaseGrammar
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($value instanceof BackedEnum) {
             return "'{$value->value}'";
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return is_bool($value)
@@ -335,17 +341,23 @@ abstract class Grammar extends BaseGrammar
     public function getDoctrineTableDiff(Blueprint $blueprint, SchemaManager $schema)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $tableName = $this->getTablePrefix().$blueprint->getTable();
 
         $table = $schema->introspectTable($tableName);
 
         return new TableDiff(tableName: $tableName, fromTable: $table);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $table = $this->getTablePrefix().$blueprint->getTable();
 
         return tap(new TableDiff($table), function ($tableDiff) use ($schema, $table) {
             $tableDiff->fromTable = $schema->introspectTable($table);
         });
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

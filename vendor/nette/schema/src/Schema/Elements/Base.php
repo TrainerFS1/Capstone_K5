@@ -12,7 +12,10 @@ namespace Nette\Schema\Elements;
 use Nette;
 use Nette\Schema\Context;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Nette\Schema\Helpers;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -22,6 +25,7 @@ use Nette\Schema\Helpers;
  */
 trait Base
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	private bool $required = false;
 	private mixed $default = null;
@@ -36,6 +40,8 @@ trait Base
 
 	public function default(mixed $value): self
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	/** @var bool */
 	private $required = false;
 
@@ -56,6 +62,9 @@ trait Base
 
 
 	public function default($value): self
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->default = $value;
@@ -80,6 +89,7 @@ trait Base
 	public function castTo(string $type): self
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return $this->transform(Helpers::getCastStrategy($type));
 	}
 
@@ -90,12 +100,16 @@ trait Base
 =======
 		$this->castTo = $type;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+		$this->castTo = $type;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		return $this;
 	}
 
 
 	public function assert(callable $handler, ?string $description = null): self
 	{
+<<<<<<< HEAD
 <<<<<<< HEAD
 		$expected = $description ?: (is_string($handler) ? "$handler()" : '#' . count($this->transforms));
 		return $this->transform(function ($value, Context $context) use ($handler, $description, $expected) {
@@ -112,6 +126,10 @@ trait Base
 		$this->asserts[] = [$handler, $description];
 		return $this;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+		$this->asserts[] = [$handler, $description];
+		return $this;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
@@ -124,7 +142,11 @@ trait Base
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function completeDefault(Context $context): mixed
+=======
+	public function completeDefault(Context $context)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public function completeDefault(Context $context)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -133,7 +155,11 @@ trait Base
 			$context->addError(
 				'The mandatory item %path% is missing.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 				Nette\Schema\Message::MissingItem,
+=======
+				Nette\Schema\Message::MISSING_ITEM
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 				Nette\Schema\Message::MISSING_ITEM
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -146,7 +172,11 @@ trait Base
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function doNormalize(mixed $value, Context $context): mixed
+=======
+	public function doNormalize($value, Context $context)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public function doNormalize($value, Context $context)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -165,7 +195,11 @@ trait Base
 			$context->addWarning(
 				$this->deprecated,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				Nette\Schema\Message::Deprecated,
+=======
+				Nette\Schema\Message::DEPRECATED
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 				Nette\Schema\Message::DEPRECATED
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -174,6 +208,7 @@ trait Base
 	}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	private function doTransform(mixed $value, Context $context): mixed
 	{
@@ -212,6 +247,8 @@ trait Base
 		return $this->doTransform($value, $context);
 	}
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	private function doValidate($value, string $expected, Context $context): bool
 	{
 		if (!Nette\Utils\Validators::is($value, $expected)) {
@@ -294,5 +331,8 @@ trait Base
 
 		return $value;
 	}
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

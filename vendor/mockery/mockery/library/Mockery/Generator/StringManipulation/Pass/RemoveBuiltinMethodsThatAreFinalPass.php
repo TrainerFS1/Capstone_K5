@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,6 +28,9 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -32,8 +38,11 @@ namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Mockery\Generator\TargetClassInterface;
 use function preg_replace;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -43,6 +52,7 @@ use function preg_replace;
  * mocked. This pass removes the builtin methods where they are final on the
  * target
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 class RemoveBuiltinMethodsThatAreFinalPass implements Pass
 {
@@ -56,6 +66,8 @@ class RemoveBuiltinMethodsThatAreFinalPass implements Pass
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class RemoveBuiltinMethodsThatAreFinalPass
 {
     protected $methods = array(
@@ -63,13 +75,20 @@ class RemoveBuiltinMethodsThatAreFinalPass
         '__toString' => '/public function __toString\(\)\s+(:\s+string)?\s*\{.*?\}/sm',
     );
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function apply($code, MockConfiguration $config)
     {
         $target = $config->getTargetClass();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $target instanceof TargetClassInterface) {
+=======
+        if (!$target) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!$target) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -77,6 +96,7 @@ class RemoveBuiltinMethodsThatAreFinalPass
         }
 
         foreach ($target->getMethods() as $method) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (! $method->isFinal()) {
                 continue;
@@ -87,6 +107,11 @@ class RemoveBuiltinMethodsThatAreFinalPass
             }
 
             $code = preg_replace($this->methods[$method->getName()], '', $code);
+=======
+            if ($method->isFinal() && isset($this->methods[$method->getName()])) {
+                $code = preg_replace($this->methods[$method->getName()], '', $code);
+            }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($method->isFinal() && isset($this->methods[$method->getName()])) {
                 $code = preg_replace($this->methods[$method->getName()], '', $code);

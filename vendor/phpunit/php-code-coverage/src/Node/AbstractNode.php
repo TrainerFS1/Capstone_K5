@@ -20,11 +20,14 @@ use SebastianBergmann\CodeCoverage\Util\Percentage;
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @psalm-import-type LinesOfCodeType from \SebastianBergmann\CodeCoverage\StaticAnalysis\FileAnalyser
  * @psalm-import-type ProcessedFunctionType from \SebastianBergmann\CodeCoverage\Node\File
  * @psalm-import-type ProcessedClassType from \SebastianBergmann\CodeCoverage\Node\File
  * @psalm-import-type ProcessedTraitType from \SebastianBergmann\CodeCoverage\Node\File
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -37,7 +40,11 @@ abstract class AbstractNode implements Countable
     private string $id;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $name, ?self $parent = null)
+=======
+    public function __construct(string $name, self $parent = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name, self $parent = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -139,7 +146,11 @@ abstract class AbstractNode implements Countable
         return Percentage::fromFractionAndTotal(
             $this->numberOfExecutedBranches(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->numberOfExecutableBranches(),
+=======
+            $this->numberOfExecutableBranches()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->numberOfExecutableBranches()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -151,7 +162,11 @@ abstract class AbstractNode implements Countable
         return Percentage::fromFractionAndTotal(
             $this->numberOfExecutedPaths(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->numberOfExecutablePaths(),
+=======
+            $this->numberOfExecutablePaths()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->numberOfExecutablePaths()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -184,6 +199,7 @@ abstract class AbstractNode implements Countable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return array<string, ProcessedClassType>
      */
@@ -202,6 +218,8 @@ abstract class AbstractNode implements Countable
     /**
      * @psalm-return LinesOfCodeType
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     abstract public function classes(): array;
 
     abstract public function traits(): array;
@@ -210,6 +228,9 @@ abstract class AbstractNode implements Countable
 
     /**
      * @psalm-return array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract public function linesOfCode(): array;

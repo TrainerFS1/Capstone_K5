@@ -15,7 +15,13 @@
 
     <!-- Google Fonts -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+=======
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -51,6 +57,10 @@
                     <li><a href="{{ '/fitur' }}">Fitur</a></li>
                     <li><a href="{{ '/about' }}">About</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    <li><a href="{{ '/contact' }}">Contact Us</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     <li><a href="{{ '/contact' }}">Contact Us</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,11 +78,14 @@
     <section class="hero-section" id="hero">
         <div class="wave">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
                         <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z" id="Path"></path>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -80,6 +93,9 @@
                         <path
                             d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z"
                             id="Path"></path>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     </g>
                 </g>
@@ -107,13 +123,19 @@
 
                         <div class="col-lg-4 iphone-wrap">
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <img src="assetsLanding/img/Uangku1.png" alt="Image" class="phone-1" data-aos="fade-right" />
                             <img src="assetsLanding/img/uangku10.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200" shadow="black" />
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             <img src="assetsLanding/img/Uangku1.png" alt="Image" class="phone-1"
                                 data-aos="fade-right" />
                             <img src="assetsLanding/img/uangku10.png" alt="Image" class="phone-2"
                                 data-aos="fade-right" data-aos-delay="200" shadow="black" />
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         </div>
                     </div>
@@ -138,7 +160,11 @@
                         <div class="feature-1 text-center">
                             <div class="wrap-icon icon-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <i class="bi bi-journal"></i>
+=======
+                                <i class="bi bi-people"></i>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <i class="bi bi-people"></i>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -151,7 +177,11 @@
                         <div class="feature-1 text-center">
                             <div class="wrap-icon icon-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <i class="bi bi-graph-up"></i>
+=======
+                                <i class="bi bi-brightness-high"></i>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <i class="bi bi-brightness-high"></i>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -166,7 +196,11 @@
                         <div class="feature-1 text-center">
                             <div class="wrap-icon icon-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <i class="bi bi-wallet"></i>
+=======
+                                <i class="bi bi-bar-chart"></i>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <i class="bi bi-bar-chart"></i>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -216,7 +250,11 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-left">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assetsLanding/img/undraw_projections_re_ulc6.svg" alt="Image" class="img-fluid" />
+=======
+                        <img src="assetsLanding/img/undraw_svg_2.svg" alt="Image" class="img-fluid" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="assetsLanding/img/undraw_svg_2.svg" alt="Image" class="img-fluid" />
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -254,7 +292,11 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-left">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assetsLanding/img/undraw_online_banking_re_kwqh.svg" alt="Image" class="img-fluid" />
+=======
+                        <img src="assetsLanding/img/undraw_svg_3.svg" alt="Image" class="img-fluid" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="assetsLanding/img/undraw_svg_3.svg" alt="Image" class="img-fluid" />
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -279,7 +321,11 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-right">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assetsLanding/img/undraw_transfer_money_re_6o1h.svg" alt="Image" class="img-fluid" />
+=======
+                        <img src="assetsLanding/img/undraw_svg_4.svg" alt="Image" class="img-fluid" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="assetsLanding/img/undraw_svg_4.svg" alt="Image" class="img-fluid" />
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -324,7 +370,12 @@
 
                                         <p class="review-user">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <img src="assetsLanding/img/person_1.jpg" alt="Image" class="img-fluid rounded-circle mb-3" />
+=======
+                                            <img src="assetsLanding/img/person_1.jpg" alt="Image"
+                                                class="img-fluid rounded-circle mb-3" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                             <img src="assetsLanding/img/person_1.jpg" alt="Image"
                                                 class="img-fluid rounded-circle mb-3" />
@@ -362,7 +413,12 @@
 
                                         <p class="review-user">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <img src="assetsLanding/img/person_2.jpg" alt="Image" class="img-fluid rounded-circle mb-3" />
+=======
+                                            <img src="assetsLanding/img/person_2.jpg" alt="Image"
+                                                class="img-fluid rounded-circle mb-3" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                             <img src="assetsLanding/img/person_2.jpg" alt="Image"
                                                 class="img-fluid rounded-circle mb-3" />
@@ -398,7 +454,12 @@
 
                                         <p class="review-user">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <img src="assetsLanding/img/person_3.jpg" alt="Image" class="img-fluid rounded-circle mb-3" />
+=======
+                                            <img src="assetsLanding/img/person_3.jpg" alt="Image"
+                                                class="img-fluid rounded-circle mb-3" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                             <img src="assetsLanding/img/person_3.jpg" alt="Image"
                                                 class="img-fluid rounded-circle mb-3" />
@@ -425,8 +486,11 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 me-auto text-center text-md-start mb-5 mb-md-0">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <h2>Starts Managing Your Finance</h2>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         <h2>Starts Publishing Your Apps</h2>
                     </div>
                     <div class="col-md-5 text-center text-md-end">
@@ -438,6 +502,9 @@
                                     class="bx bxl-play-store"></i><span>Google
                                     play</span></a>
                         </p>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     </div>
                 </div>
@@ -472,6 +539,10 @@
                                 <li><a href="{{ '/fitur' }}">Features</a></li>
                                 <li><a href="{{ '/about' }}">About</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                <li><a href="{{ '/contact' }}">Contact Us</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <li><a href="{{ '/contact' }}">Contact Us</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -482,6 +553,10 @@
                             <ul class="list-unstyled">
                                 <li><a href="#">Hubungi Kami</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                <li><a href="#">FAQ</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <li><a href="#">FAQ</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -516,7 +591,12 @@
     </footer>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+=======
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
@@ -533,7 +613,11 @@
 </body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 </html>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

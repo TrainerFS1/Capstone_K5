@@ -14,6 +14,10 @@ use function assert;
 use function in_array;
 use PHPUnit\Event\Code\TestMethod;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -58,6 +62,12 @@ final class PassedTests
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws NoDataSetFromDataProviderException
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws NoDataSetFromDataProviderException
@@ -68,7 +78,11 @@ final class PassedTests
         $size = (new Groups)->size(
             $test->className(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $test->methodName(),
+=======
+            $test->methodName()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $test->methodName()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -85,7 +99,11 @@ final class PassedTests
         $this->passedTestClasses = array_merge(
             $this->passedTestClasses,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $other->passedTestClasses,
+=======
+            $other->passedTestClasses
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $other->passedTestClasses
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,7 +112,11 @@ final class PassedTests
         $this->passedTestMethods = array_merge(
             $this->passedTestMethods,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $other->passedTestMethods,
+=======
+            $other->passedTestMethods
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $other->passedTestMethods
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

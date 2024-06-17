@@ -19,7 +19,11 @@ class Argon2IdHasher extends ArgonHasher
     public function check($value, $hashedValue, array $options = [])
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->verifyAlgorithm && ! $this->isUsingCorrectAlgorithm($hashedValue)) {
+=======
+        if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'argon2id') {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'argon2id') {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -35,6 +39,7 @@ class Argon2IdHasher extends ArgonHasher
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Verify the hashed value's algorithm.
      *
      * @param  string  $hashedValue
@@ -46,6 +51,8 @@ class Argon2IdHasher extends ArgonHasher
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the algorithm that should be used for hashing.

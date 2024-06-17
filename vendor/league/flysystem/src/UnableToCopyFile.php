@@ -33,7 +33,11 @@ final class UnableToCopyFile extends RuntimeException implements FilesystemOpera
         string $sourcePath,
         string $destinationPath,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?Throwable $previous = null
+=======
+        Throwable $previous = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         Throwable $previous = null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -45,6 +49,7 @@ final class UnableToCopyFile extends RuntimeException implements FilesystemOpera
         return $e;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static function sourceAndDestinationAreTheSame(string $source, string $destination): UnableToCopyFile
     {
@@ -60,6 +65,8 @@ final class UnableToCopyFile extends RuntimeException implements FilesystemOpera
         return $e;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function operation(): string

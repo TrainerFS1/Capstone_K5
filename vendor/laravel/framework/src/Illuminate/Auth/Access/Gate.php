@@ -70,6 +70,7 @@ class Gate implements GateContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The default denial response for gates and policies.
      *
      * @var \Illuminate\Auth\Access\Response|null
@@ -77,6 +78,8 @@ class Gate implements GateContract
     protected $defaultDenialResponse;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The callback to be used to guess policy names.
@@ -98,6 +101,7 @@ class Gate implements GateContract
      * @return void
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Container $container,
         callable $userResolver,
         array $abilities = [],
@@ -105,6 +109,11 @@ class Gate implements GateContract
         array $beforeCallbacks = [],
         array $afterCallbacks = [],
         callable $guessPolicyNamesUsingCallback = null)
+=======
+    public function __construct(Container $container, callable $userResolver, array $abilities = [],
+                                array $policies = [], array $beforeCallbacks = [], array $afterCallbacks = [],
+                                callable $guessPolicyNamesUsingCallback = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Container $container, callable $userResolver, array $abilities = [],
                                 array $policies = [], array $beforeCallbacks = [], array $afterCallbacks = [],
@@ -328,9 +337,15 @@ class Gate implements GateContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if all of the given abilities should be granted for the current user.
      *
      * @param  iterable|string  $ability
+=======
+     * Determine if the given ability should be granted for the current user.
+     *
+     * @param  string  $ability
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Determine if the given ability should be granted for the current user.
      *
@@ -346,9 +361,15 @@ class Gate implements GateContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if any of the given abilities should be denied for the current user.
      *
      * @param  iterable|string  $ability
+=======
+     * Determine if the given ability should be denied for the current user.
+     *
+     * @param  string  $ability
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Determine if the given ability should be denied for the current user.
      *
@@ -431,9 +452,13 @@ class Gate implements GateContract
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $result
                 ? Response::allow()
                 : ($this->defaultDenialResponse ?? Response::deny());
+=======
+            return $result ? Response::allow() : Response::deny();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $result ? Response::allow() : Response::deny();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -897,6 +922,7 @@ class Gate implements GateContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Set the default denial response for gates and policies.
      *
      * @param  \Illuminate\Auth\Access\Response  $response
@@ -910,6 +936,8 @@ class Gate implements GateContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the container instance used by the gate.

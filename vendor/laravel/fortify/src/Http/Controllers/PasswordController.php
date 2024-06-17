@@ -7,7 +7,10 @@ use Illuminate\Routing\Controller;
 use Laravel\Fortify\Contracts\PasswordUpdateResponse;
 use Laravel\Fortify\Contracts\UpdatesUserPasswords;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Laravel\Fortify\Events\PasswordUpdatedViaController;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -25,8 +28,11 @@ class PasswordController extends Controller
         $updater->update($request->user(), $request->all());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         event(new PasswordUpdatedViaController($request->user()));
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return app(PasswordUpdateResponse::class);

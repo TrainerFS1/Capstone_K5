@@ -152,8 +152,11 @@ class MorphToMany extends BelongsToMany
         $using = $this->using;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $attributes = array_merge([$this->morphType => $this->morphClass], $attributes);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $pivot = $using ? $using::fromRawAttributes($this->parent, $attributes, $this->table, $exists)
@@ -194,6 +197,7 @@ class MorphToMany extends BelongsToMany
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the fully qualified morph type for the relation.
      *
      * @return string
@@ -204,6 +208,8 @@ class MorphToMany extends BelongsToMany
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the class name of the parent model.

@@ -30,6 +30,7 @@ class FileStore implements Store, LockProvider
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The file cache lock directory.
      *
      * @var string|null
@@ -37,6 +38,8 @@ class FileStore implements Store, LockProvider
     protected $lockDirectory;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Octal representation of the cache file permissions.
@@ -221,6 +224,7 @@ class FileStore implements Store, LockProvider
     public function lock($name, $seconds = 0, $owner = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->ensureCacheDirectoryExists($this->lockDirectory ?? $this->directory);
 
         return new FileLock(
@@ -229,6 +233,9 @@ class FileStore implements Store, LockProvider
             $seconds,
             $owner
         );
+=======
+        return new FileLock($this, $name, $seconds, $owner);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return new FileLock($this, $name, $seconds, $owner);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -298,11 +305,17 @@ class FileStore implements Store, LockProvider
         // the expiration UNIX timestamps from the start of the file's contents.
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (is_null($contents = $this->files->get($path, true))) {
                 return $this->emptyPayload();
             }
 
             $expire = substr($contents, 0, 10);
+=======
+            $expire = substr(
+                $contents = $this->files->get($path, true), 0, 10
+            );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $expire = substr(
                 $contents = $this->files->get($path, true), 0, 10
@@ -354,7 +367,11 @@ class FileStore implements Store, LockProvider
      * @return string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function path($key)
+=======
+    protected function path($key)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function path($key)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -399,6 +416,7 @@ class FileStore implements Store, LockProvider
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Set the cache directory where locks should be stored.
      *
      * @param  string|null  $lockDirectory
@@ -412,6 +430,8 @@ class FileStore implements Store, LockProvider
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the cache key prefix.

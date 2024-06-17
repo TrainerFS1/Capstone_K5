@@ -19,7 +19,11 @@ namespace Symfony\Component\HttpFoundation;
  * @implements \IteratorAggregate<string, list<string|null>>
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class HeaderBag implements \IteratorAggregate, \Countable, \Stringable
+=======
+class HeaderBag implements \IteratorAggregate, \Countable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 class HeaderBag implements \IteratorAggregate, \Countable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,9 +72,15 @@ class HeaderBag implements \IteratorAggregate, \Countable
      * @param string|null $key The name of the headers to return or null to get them all
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return ($key is null ? array<string, list<string|null>> : list<string|null>)
      */
     public function all(?string $key = null): array
+=======
+     * @return array<string, array<int, string|null>>|array<int, string|null>
+     */
+    public function all(string $key = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return array<string, array<int, string|null>>|array<int, string|null>
      */
@@ -97,8 +107,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Replaces the current HTTP headers by a new set.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -111,8 +124,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Adds new headers the current HTTP headers set.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -127,7 +143,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
      * Returns the first header by name or the default one.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function get(string $key, ?string $default = null): ?string
+=======
+    public function get(string $key, string $default = null): ?string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function get(string $key, string $default = null): ?string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -151,8 +171,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
      * @param string|string[]|null $values  The value or an array of values
      * @param bool                 $replace Whether to replace the actual value or not (true by default)
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -200,8 +223,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Removes a header.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -220,6 +246,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
      * Returns the HTTP header value converted to a date.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \DateTimeImmutable|null
      *
      * @throws \RuntimeException When the HTTP header is not parseable
@@ -232,6 +259,8 @@ class HeaderBag implements \IteratorAggregate, \Countable
 
         if (false === $date = \DateTimeImmutable::createFromFormat(\DATE_RFC2822, $value)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \RuntimeException When the HTTP header is not parseable
      */
     public function getDate(string $key, \DateTime $default = null): ?\DateTimeInterface
@@ -241,6 +270,9 @@ class HeaderBag implements \IteratorAggregate, \Countable
         }
 
         if (false === $date = \DateTime::createFromFormat(\DATE_RFC2822, $value)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new \RuntimeException(sprintf('The "%s" HTTP header is not parseable (%s).', $key, $value));
         }
@@ -251,8 +283,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Adds a custom Cache-Control directive.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -282,8 +317,11 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Removes a Cache-Control directive.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -313,9 +351,12 @@ class HeaderBag implements \IteratorAggregate, \Countable
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function getCacheControlHeader()

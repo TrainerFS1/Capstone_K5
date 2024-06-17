@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Closure;
 use Hamcrest\Matcher;
@@ -54,6 +61,8 @@ class Configuration
 {
     /**
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Configuration
 {
     /**
@@ -65,6 +74,9 @@ class Configuration
     protected $_allowMockingNonExistentMethod = true;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Boolean assertion of whether we ignore unnecessary mocking of methods,
      * i.e. when method expectations are made, set using a zeroOrMoreTimes()
@@ -76,6 +88,7 @@ class Configuration
     protected $_allowMockingMethodsUnnecessarily = true;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Boolean assertion of whether we can mock methods which do not actually
      * exist for the given class or object (ignored for unreal mocks)
@@ -106,10 +119,16 @@ class Configuration
      */
     protected $_quickDefinitionsConfiguration;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * @var QuickDefinitionsConfiguration
+     */
+    protected $_quickDefinitionsConfiguration;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Parameter map for use with PHP internal classes.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      *  e.g. ['class' => ['method' => ['param1', 'param2']]]
      *
@@ -131,11 +150,16 @@ class Configuration
      */
     protected $_quickDefinitionsConfiguration;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var array
      */
     protected $_internalClassParamMap = array();
 
     protected $_constantsMap = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -152,6 +176,7 @@ class Configuration
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Set boolean to allow/prevent unnecessary mocking of methods
      *
@@ -171,6 +196,8 @@ class Configuration
         $this->_allowMockingMethodsUnnecessarily = (bool) $flag;
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Custom object formatters
      *
      * @var array
@@ -183,6 +210,9 @@ class Configuration
      * @var array
      */
     protected $_defaultMatchers = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -190,8 +220,11 @@ class Configuration
      *
      * @param bool $flag
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -201,6 +234,7 @@ class Configuration
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Disable reflection caching
      *
@@ -361,6 +395,8 @@ class Configuration
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return flag indicating whether mocking non-existent methods allowed
      *
      * @return bool
@@ -372,10 +408,13 @@ class Configuration
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Is reflection cache enabled?
      *
      * @return bool
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set boolean to allow/prevent unnecessary mocking of methods
      *
      * @param bool $flag
@@ -494,6 +533,9 @@ class Configuration
 
     /**
      * Is reflection cache enabled?
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function reflectionCacheEnabled()
@@ -501,6 +543,7 @@ class Configuration
         return $this->_reflectionCacheEnabled;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * Remove all overridden parameter maps from internal PHP classes.
@@ -592,12 +635,17 @@ class Configuration
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setObjectFormatter($class, $formatterCallback)
     {
         $this->_objectFormatters[$class] = $formatterCallback;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function getObjectFormatter($class, $defaultFormatter)
     {
@@ -648,5 +696,8 @@ class Configuration
         }
         return null;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

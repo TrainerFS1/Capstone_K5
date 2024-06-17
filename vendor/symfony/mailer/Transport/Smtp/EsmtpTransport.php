@@ -16,7 +16,10 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Mailer\Exception\UnexpectedResponseException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\Transport\Smtp\Auth\AuthenticatorInterface;
@@ -37,6 +40,7 @@ class EsmtpTransport extends SmtpTransport
     private array $capabilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $host = 'localhost', int $port = 0, ?bool $tls = null, ?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null, ?AbstractStream $stream = null, ?array $authenticators = null)
     {
         parent::__construct($stream, $dispatcher, $logger);
@@ -53,6 +57,8 @@ class EsmtpTransport extends SmtpTransport
         }
         $this->setAuthenticators($authenticators);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(string $host = 'localhost', int $port = 0, bool $tls = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null, AbstractStream $stream = null)
     {
         parent::__construct($stream, $dispatcher, $logger);
@@ -64,6 +70,9 @@ class EsmtpTransport extends SmtpTransport
             new Auth\PlainAuthenticator(),
             new Auth\XOAuth2Authenticator(),
         ];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         /** @var SocketStream $stream */
@@ -118,6 +127,7 @@ class EsmtpTransport extends SmtpTransport
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setAuthenticators(array $authenticators): void
     {
         $this->authenticators = [];
@@ -126,6 +136,8 @@ class EsmtpTransport extends SmtpTransport
         }
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addAuthenticator(AuthenticatorInterface $authenticator): void
@@ -206,7 +218,10 @@ class EsmtpTransport extends SmtpTransport
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $code = null;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $authNames = [];
@@ -224,7 +239,11 @@ class EsmtpTransport extends SmtpTransport
 
                 return;
 <<<<<<< HEAD
+<<<<<<< HEAD
             } catch (UnexpectedResponseException $e) {
+=======
+            } catch (TransportExceptionInterface $e) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             } catch (TransportExceptionInterface $e) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

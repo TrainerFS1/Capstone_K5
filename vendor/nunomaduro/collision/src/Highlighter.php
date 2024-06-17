@@ -259,7 +259,11 @@ final class Highlighter
             $coloredLineNumber = $this->coloredLineNumber(self::LINE_NUMBER, $i, $lineStrlen);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($markLine !== null) {
+=======
+            if (null !== $markLine) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (null !== $markLine) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

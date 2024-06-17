@@ -49,9 +49,12 @@ use Illuminate\Support\Testing\Fakes\MailFake;
  * @method static void assertNotQueued(string|\Closure $mailable, callable|null $callback = null)
  * @method static void assertNothingQueued()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static void assertSentCount(int $count)
  * @method static void assertQueuedCount(int $count)
  * @method static void assertOutgoingCount(int $count)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Support\Collection sent(string|\Closure $mailable, callable|null $callback = null)
@@ -72,6 +75,7 @@ class Mail extends Facade
     public static function fake()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $actualMailManager = static::isFake()
                 ? static::getFacadeRoot()->manager
                 : static::getFacadeRoot();
@@ -79,6 +83,11 @@ class Mail extends Facade
         return tap(new MailFake($actualMailManager), function ($fake) {
             static::swap($fake);
         });
+=======
+        static::swap($fake = new MailFake(static::getFacadeRoot()));
+
+        return $fake;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         static::swap($fake = new MailFake(static::getFacadeRoot()));
 

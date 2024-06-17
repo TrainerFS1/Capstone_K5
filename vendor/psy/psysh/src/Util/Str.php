@@ -61,7 +61,10 @@ EOS;
     {
         $output = \preg_replace_callback(self::UNVIS_RX, [self::class, 'unvisReplace'], $input);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // other escapes & octal are handled by stripcslashes

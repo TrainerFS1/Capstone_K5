@@ -63,7 +63,11 @@ class ProtocolNode implements \ArrayAccess, \IteratorAggregate
      * dynamically. This is useful to create a node on-the-fly.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $name = null, ?string $reach = null, array $children = [])
+=======
+    public function __construct(string $name = null, string $reach = null, array $children = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $name = null, string $reach = null, array $children = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -138,7 +142,11 @@ class ProtocolNode implements \ArrayAccess, \IteratorAggregate
      * the path.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function _resolve(string $path, &$accumulator, ?string $id = null)
+=======
+    protected function _resolve(string $path, &$accumulator, string $id = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function _resolve(string $path, &$accumulator, string $id = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -255,7 +263,11 @@ class ProtocolNode implements \ArrayAccess, \IteratorAggregate
      * Generic one. Must be overrided in children classes.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reach(?string $queue = null)
+=======
+    public function reach(string $queue = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function reach(string $queue = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

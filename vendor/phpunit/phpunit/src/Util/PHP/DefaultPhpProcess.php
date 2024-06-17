@@ -13,6 +13,10 @@ use function array_merge;
 use function fclose;
 use function file_put_contents;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function fread;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function fread;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -22,13 +26,19 @@ use function is_resource;
 use function proc_close;
 use function proc_open;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function stream_get_contents;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function proc_terminate;
 use function rewind;
 use function sprintf;
 use function stream_get_contents;
 use function stream_select;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function sys_get_temp_dir;
 use function tempnam;
@@ -46,8 +56,11 @@ class DefaultPhpProcess extends AbstractPhpProcess
      * Runs a single job (PHP code) using a separate PHP process.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return array{stdout: string, stderr: string}
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws Exception
@@ -56,17 +69,23 @@ class DefaultPhpProcess extends AbstractPhpProcess
     public function runJob(string $job, array $settings = []): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->stdin) {
             if (!($this->tempFile = tempnam(sys_get_temp_dir(), 'phpunit_')) ||
                 file_put_contents($this->tempFile, $job) === false) {
                 throw new PhpProcessException(
                     'Unable to write temporary file',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->stdin || $this->useTemporaryFile()) {
             if (!($this->tempFile = tempnam(sys_get_temp_dir(), 'PHPUnit')) ||
                 file_put_contents($this->tempFile, $job) === false) {
                 throw new PhpProcessException(
                     'Unable to write temporary file'
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
@@ -79,11 +98,14 @@ class DefaultPhpProcess extends AbstractPhpProcess
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Handles creating the child process and returning the STDOUT and STDERR.
      *
      * @psalm-return array{stdout: string, stderr: string}
      *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Returns an array of file handles to be used in place of pipes.
      */
     protected function getHandles(): array
@@ -94,6 +116,9 @@ class DefaultPhpProcess extends AbstractPhpProcess
     /**
      * Handles creating the child process and returning the STDOUT and STDERR.
      *
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws Exception
      * @throws PhpProcessException
@@ -101,6 +126,11 @@ class DefaultPhpProcess extends AbstractPhpProcess
     protected function runProcess(string $job, array $settings): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $handles = $this->getHandles();
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $handles = $this->getHandles();
 
@@ -121,6 +151,7 @@ class DefaultPhpProcess extends AbstractPhpProcess
 
         $pipeSpec = [
 <<<<<<< HEAD
+<<<<<<< HEAD
             0 => ['pipe', 'r'],
             1 => ['pipe', 'w'],
             2 => ['pipe', 'w'],
@@ -131,11 +162,16 @@ class DefaultPhpProcess extends AbstractPhpProcess
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             0 => $handles[0] ?? ['pipe', 'r'],
             1 => $handles[1] ?? ['pipe', 'w'],
             2 => $handles[2] ?? ['pipe', 'w'],
         ];
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $process = proc_open(
             $this->getCommand($settings, $this->tempFile),
@@ -143,7 +179,11 @@ class DefaultPhpProcess extends AbstractPhpProcess
             $pipes,
             null,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $env,
+=======
+            $env
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $env
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,7 +192,11 @@ class DefaultPhpProcess extends AbstractPhpProcess
         if (!is_resource($process)) {
             throw new PhpProcessException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Unable to spawn worker process',
+=======
+                'Unable to spawn worker process'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'Unable to spawn worker process'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -168,6 +212,7 @@ class DefaultPhpProcess extends AbstractPhpProcess
         $stderr = $stdout = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($pipes[1])) {
             $stdout = stream_get_contents($pipes[1]);
 
@@ -179,6 +224,8 @@ class DefaultPhpProcess extends AbstractPhpProcess
 
             fclose($pipes[2]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->timeout) {
             unset($pipes[0]);
 
@@ -266,6 +313,9 @@ class DefaultPhpProcess extends AbstractPhpProcess
             $stderr = stream_get_contents($handles[2]);
 
             fclose($handles[2]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -291,11 +341,17 @@ class DefaultPhpProcess extends AbstractPhpProcess
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     protected function useTemporaryFile(): bool
     {
         return false;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

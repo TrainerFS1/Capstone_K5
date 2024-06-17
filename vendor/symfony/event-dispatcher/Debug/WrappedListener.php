@@ -27,6 +27,7 @@ final class WrappedListener
     private bool $called = false;
     private bool $stoppedPropagation = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private string $pretty;
     private string $callableRef;
     private ClassStub|string $stub;
@@ -42,6 +43,8 @@ final class WrappedListener
         $this->listener = $listener;
         $this->optimizedListener = $listener instanceof \Closure ? $listener : (\is_callable($listener) ? $listener(...) : null);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private Stopwatch $stopwatch;
     private ?EventDispatcherInterface $dispatcher;
     private string $pretty;
@@ -57,6 +60,9 @@ final class WrappedListener
         $this->stopwatch = $stopwatch;
         $this->dispatcher = $dispatcher;
         $this->priority = $priority;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (\is_array($listener)) {
@@ -66,9 +72,15 @@ final class WrappedListener
         } elseif ($listener instanceof \Closure) {
             $r = new \ReflectionFunction($listener);
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($r->isAnonymous()) {
                 $this->pretty = $this->name = 'closure';
             } elseif ($class = $r->getClosureCalledClass()) {
+=======
+            if (str_contains($r->name, '{closure}')) {
+                $this->pretty = $this->name = 'closure';
+            } elseif ($class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (str_contains($r->name, '{closure}')) {
                 $this->pretty = $this->name = 'closure';
@@ -136,6 +148,7 @@ final class WrappedListener
         $e = $this->stopwatch->start($this->name, 'event_listener');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             ($this->optimizedListener ?? $this->listener)($event, $eventName, $dispatcher);
         } finally {
@@ -143,10 +156,15 @@ final class WrappedListener
                 $e->stop();
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ($this->optimizedListener ?? $this->listener)($event, $eventName, $dispatcher);
 
         if ($e->isStarted()) {
             $e->stop();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -167,7 +185,11 @@ final class WrappedListener
 
         if (\is_object($listener[0])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return [get_debug_type($listener[0]), $listener[0]::class];
+=======
+            return [get_debug_type($listener[0]), \get_class($listener[0])];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return [get_debug_type($listener[0]), \get_class($listener[0])];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

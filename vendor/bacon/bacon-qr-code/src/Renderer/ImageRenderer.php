@@ -14,11 +14,14 @@ use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 final class ImageRenderer implements RendererInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private readonly RendererStyle         $rendererStyle,
         private readonly ImageBackEndInterface $imageBackEnd
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var RendererStyle
      */
@@ -33,6 +36,9 @@ final class ImageRenderer implements RendererInterface
     {
         $this->rendererStyle = $rendererStyle;
         $this->imageBackEnd = $imageBackEnd;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -130,12 +136,17 @@ final class ImageRenderer implements RendererInterface
         if ($fill->inheritsBothColors()) {
             return $modulePath
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->append(
                     $externalPath->rotate($rotation)->translate($xTranslation, $yTranslation)
                 )
                 ->append(
                     $internalPath->rotate($rotation)->translate($xTranslation, $yTranslation)
                 );
+=======
+                ->append($externalPath->translate($xTranslation, $yTranslation))
+                ->append($internalPath->translate($xTranslation, $yTranslation));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ->append($externalPath->translate($xTranslation, $yTranslation))
                 ->append($internalPath->translate($xTranslation, $yTranslation));
@@ -151,9 +162,13 @@ final class ImageRenderer implements RendererInterface
 
         if ($fill->inheritsExternalColor()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $modulePath = $modulePath->append(
                 $externalPath->rotate($rotation)->translate($xTranslation, $yTranslation)
             );
+=======
+            $modulePath = $modulePath->append($externalPath->translate($xTranslation, $yTranslation));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $modulePath = $modulePath->append($externalPath->translate($xTranslation, $yTranslation));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -163,9 +178,13 @@ final class ImageRenderer implements RendererInterface
 
         if ($fill->inheritsInternalColor()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $modulePath = $modulePath->append(
                 $internalPath->rotate($rotation)->translate($xTranslation, $yTranslation)
             );
+=======
+            $modulePath = $modulePath->append($internalPath->translate($xTranslation, $yTranslation));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $modulePath = $modulePath->append($internalPath->translate($xTranslation, $yTranslation));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

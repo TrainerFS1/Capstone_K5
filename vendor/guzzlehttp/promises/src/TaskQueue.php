@@ -1,8 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace GuzzleHttp\Promise;
@@ -16,8 +19,11 @@ namespace GuzzleHttp\Promise;
  *
  *     GuzzleHttp\Promise\Utils::queue()->run();
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @final
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -27,15 +33,21 @@ class TaskQueue implements TaskQueueInterface
     private $queue = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(bool $withShutdown = true)
     {
         if ($withShutdown) {
             register_shutdown_function(function (): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct($withShutdown = true)
     {
         if ($withShutdown) {
             register_shutdown_function(function () {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($this->enableShutdown) {
                     // Only run the tasks if an E_ERROR didn't occur.
@@ -49,7 +61,11 @@ class TaskQueue implements TaskQueueInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isEmpty(): bool
+=======
+    public function isEmpty()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isEmpty()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -58,7 +74,11 @@ class TaskQueue implements TaskQueueInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function add(callable $task): void
+=======
+    public function add(callable $task)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function add(callable $task)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -67,7 +87,11 @@ class TaskQueue implements TaskQueueInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function run(): void
+=======
+    public function run()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function run()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -90,7 +114,11 @@ class TaskQueue implements TaskQueueInterface
      * Note: This shutdown will occur before any destructors are triggered.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function disableShutdown(): void
+=======
+    public function disableShutdown()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function disableShutdown()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

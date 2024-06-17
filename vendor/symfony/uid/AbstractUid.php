@@ -15,7 +15,11 @@ namespace Symfony\Component\Uid;
  * @author Nicolas Grekas <p@tchwork.com>
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class AbstractUid implements \JsonSerializable, \Stringable
+=======
+abstract class AbstractUid implements \JsonSerializable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 abstract class AbstractUid implements \JsonSerializable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -93,8 +97,11 @@ abstract class AbstractUid implements \JsonSerializable
     /**
      * Returns the identifier as a base58 case sensitive string.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @example 2AifFTC3zXgZzK5fPrrprL (len=22)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -106,10 +113,13 @@ abstract class AbstractUid implements \JsonSerializable
     /**
      * Returns the identifier as a base32 case insensitive string.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @see https://tools.ietf.org/html/rfc4648#section-6
      *
      * @example 09EJ0S614A9FXVG9C5537Q9ZE1 (len=26)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -132,10 +142,13 @@ abstract class AbstractUid implements \JsonSerializable
     /**
      * Returns the identifier as a RFC4122 case insensitive string.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @see https://tools.ietf.org/html/rfc4122#section-3
      *
      * @example 09748193-048a-4bfb-b825-8528cf74fdc1 (len=36)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -153,8 +166,11 @@ abstract class AbstractUid implements \JsonSerializable
     /**
      * Returns the identifier as a prefixed hexadecimal case insensitive string.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @example 0x09748193048a4bfbb8258528cf74fdc1 (len=34)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

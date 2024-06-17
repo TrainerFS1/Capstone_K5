@@ -12,7 +12,10 @@ use LogicException;
 use ReflectionClass;
 use ReflectionException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use ReflectionFunction;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReflectionParameter;
@@ -653,8 +656,13 @@ class Container implements ArrayAccess, ContainerContract
         $pushedToBuildStack = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (($className = $this->getClassForCallable($callback)) && ! in_array(
             $className,
+=======
+        if (is_array($callback) && ! in_array(
+            $className = (is_string($callback[0]) ? $callback[0] : get_class($callback[0])),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (is_array($callback) && ! in_array(
             $className = (is_string($callback[0]) ? $callback[0] : get_class($callback[0])),
@@ -677,6 +685,7 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Get the class name for the given callback, if one can be determined.
      *
@@ -702,6 +711,8 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a closure to resolve the given type from the container.
@@ -803,15 +814,21 @@ class Container implements ArrayAccess, ContainerContract
         // the binding. This will instantiate the types, as well as resolve any of
         // its "nested" dependencies recursively until all have gotten resolved.
 <<<<<<< HEAD
+<<<<<<< HEAD
         $object = $this->isBuildable($concrete, $abstract)
             ? $this->build($concrete)
             : $this->make($concrete);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->isBuildable($concrete, $abstract)) {
             $object = $this->build($concrete);
         } else {
             $object = $this->make($concrete);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         // If we defined any extenders for this type, we'll need to spin through them

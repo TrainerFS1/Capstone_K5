@@ -4,7 +4,10 @@ namespace Illuminate\Foundation\Http\Middleware;
 
 use Closure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use ErrorException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Foundation\Application;
@@ -47,6 +50,7 @@ class PreventRequestsDuringMaintenance
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws \ErrorException
      */
     public function handle($request, Closure $next)
@@ -66,11 +70,16 @@ class PreventRequestsDuringMaintenance
                 throw $exception;
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function handle($request, Closure $next)
     {
         if ($this->app->maintenanceMode()->active()) {
             $data = $this->app->maintenanceMode()->data();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (isset($data['secret']) && $request->path() === $data['secret']) {
@@ -78,7 +87,12 @@ class PreventRequestsDuringMaintenance
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($this->hasValidBypassCookie($request, $data)) {
+=======
+            if ($this->hasValidBypassCookie($request, $data) ||
+                $this->inExceptArray($request)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($this->hasValidBypassCookie($request, $data) ||
                 $this->inExceptArray($request)) {

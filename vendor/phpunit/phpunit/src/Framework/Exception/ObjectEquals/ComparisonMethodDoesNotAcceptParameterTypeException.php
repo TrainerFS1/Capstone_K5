@@ -10,6 +10,10 @@
 namespace PHPUnit\Framework;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use const PHP_EOL;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use const PHP_EOL;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -28,11 +32,14 @@ final class ComparisonMethodDoesNotAcceptParameterTypeException extends Exceptio
                 $type,
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $methodName,
             ),
         );
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $methodName
             )
         );
@@ -42,5 +49,8 @@ final class ComparisonMethodDoesNotAcceptParameterTypeException extends Exceptio
     {
         return $this->getMessage() . PHP_EOL;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

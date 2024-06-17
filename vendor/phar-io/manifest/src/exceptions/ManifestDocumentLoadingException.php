@@ -3,23 +3,32 @@
  * This file is part of PharIo\Manifest.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Copyright (c) Arne Blankerts <arne@blankerts.de>, Sebastian Heuer <sebastian@phpeople.de>, Sebastian Bergmann <sebastian@phpunit.de> and contributors
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * (c) Arne Blankerts <arne@blankerts.de>, Sebastian Heuer <sebastian@phpeople.de>, Sebastian Bergmann <sebastian@phpunit.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 namespace PharIo\Manifest;
 
 use LibXMLError;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function sprintf;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -38,7 +47,11 @@ class ManifestDocumentLoadingException extends \Exception implements Exception {
 
         parent::__construct(
 <<<<<<< HEAD
+<<<<<<< HEAD
             sprintf(
+=======
+            \sprintf(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             \sprintf(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -20,7 +20,11 @@ use Symfony\Component\Mime\Part\AbstractPart;
 class DraftEmail extends Email
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?Headers $headers = null, ?AbstractPart $body = null)
+=======
+    public function __construct(Headers $headers = null, AbstractPart $body = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Headers $headers = null, AbstractPart $body = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

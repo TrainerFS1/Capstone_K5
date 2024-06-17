@@ -14,8 +14,13 @@ namespace Symfony\Component\HttpKernel\Fragment;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\UriSigner;
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
+=======
+use Symfony\Component\HttpKernel\Controller\ControllerReference;
+use Symfony\Component\HttpKernel\UriSigner;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
 use Symfony\Component\HttpKernel\UriSigner;
@@ -36,9 +41,15 @@ class HIncludeFragmentRenderer extends RoutableFragmentRenderer
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|null $globalDefaultTemplate The global default content (it can be a template name or the content)
      */
     public function __construct(?Environment $twig = null, ?UriSigner $signer = null, ?string $globalDefaultTemplate = null, string $charset = 'utf-8')
+=======
+     * @param string $globalDefaultTemplate The global default content (it can be a template name or the content)
+     */
+    public function __construct(Environment $twig = null, UriSigner $signer = null, string $globalDefaultTemplate = null, string $charset = 'utf-8')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $globalDefaultTemplate The global default content (it can be a template name or the content)
      */

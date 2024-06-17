@@ -17,7 +17,11 @@ interface Schema
 	 * @return mixed
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	function normalize(mixed $value, Context $context);
+=======
+	function normalize($value, Context $context);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	function normalize($value, Context $context);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -27,7 +31,11 @@ interface Schema
 	 * @return mixed
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	function merge(mixed $value, mixed $base);
+=======
+	function merge($value, $base);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	function merge($value, $base);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -37,7 +45,11 @@ interface Schema
 	 * @return mixed
 	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	function complete(mixed $value, Context $context);
+=======
+	function complete($value, Context $context);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	function complete($value, Context $context);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

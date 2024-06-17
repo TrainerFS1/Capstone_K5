@@ -30,6 +30,7 @@ class Authenticate implements AuthenticatesRequests
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Specify the guards for the middleware.
      *
      * @param  string  $guard
@@ -42,6 +43,8 @@ class Authenticate implements AuthenticatesRequests
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an incoming request.

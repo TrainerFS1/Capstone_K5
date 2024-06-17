@@ -11,9 +11,12 @@ use BaconQrCode\Renderer\Path\Path;
 final class CompositeEye implements EyeInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(private readonly EyeInterface $externalEye, private readonly EyeInterface $internalEye)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var EyeInterface
      */
@@ -28,6 +31,9 @@ final class CompositeEye implements EyeInterface
     {
         $this->externalEye = $externalEye;
         $this->internalEye = $internalEye;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

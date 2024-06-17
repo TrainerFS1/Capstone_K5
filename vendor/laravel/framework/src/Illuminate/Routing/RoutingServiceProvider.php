@@ -138,6 +138,7 @@ class RoutingServiceProvider extends ServiceProvider
                 $psr17Factory = new Psr17Factory;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return with((new PsrHttpFactory($psr17Factory, $psr17Factory, $psr17Factory, $psr17Factory))
                     ->createRequest($illuminateRequest = $app->make('request')), function (ServerRequestInterface $request) use ($illuminateRequest) {
                         if ($illuminateRequest->getContentTypeFormat() !== 'json' && $illuminateRequest->request->count() === 0) {
@@ -148,6 +149,10 @@ class RoutingServiceProvider extends ServiceProvider
                             array_merge($request->getParsedBody() ?? [], $illuminateRequest->getPayload()->all())
                         );
                     });
+=======
+                return (new PsrHttpFactory($psr17Factory, $psr17Factory, $psr17Factory, $psr17Factory))
+                    ->createRequest($app->make('request'));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return (new PsrHttpFactory($psr17Factory, $psr17Factory, $psr17Factory, $psr17Factory))
                     ->createRequest($app->make('request'));

@@ -17,11 +17,14 @@ namespace PHPUnit\TextUI\Command;
 final class Result
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const SUCCESS   = 0;
     public const FAILURE   = 1;
     public const EXCEPTION = 2;
     public const CRASH     = 255;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const SUCCESS = 0;
 
     public const FAILURE = 1;
@@ -29,6 +32,9 @@ final class Result
     public const EXCEPTION = 2;
 
     public const CRASH = 255;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $output;
     private readonly int $shellExitCode;

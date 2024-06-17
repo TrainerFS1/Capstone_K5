@@ -25,10 +25,13 @@ abstract class AbstractSurrogate implements SurrogateInterface
 {
     protected $contentTypes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @deprecated since Symfony 6.3
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $phpEscapeMap = [
@@ -63,9 +66,12 @@ abstract class AbstractSurrogate implements SurrogateInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addSurrogateCapability(Request $request)
@@ -115,8 +121,11 @@ abstract class AbstractSurrogate implements SurrogateInterface
     /**
      * Remove the Surrogate from the Surrogate-Control header.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -138,6 +147,7 @@ abstract class AbstractSurrogate implements SurrogateInterface
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     protected static function generateBodyEvalBoundary(): string
     {
@@ -149,6 +159,8 @@ abstract class AbstractSurrogate implements SurrogateInterface
 
         return $boundary;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

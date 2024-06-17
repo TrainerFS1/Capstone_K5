@@ -6,7 +6,10 @@ use Closure;
 use Illuminate\Foundation\Mix;
 use Illuminate\Foundation\Vite;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Facade;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\HtmlString;
@@ -115,6 +118,7 @@ trait InteractsWithContainer
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         Facade::clearResolvedInstance(Vite::class);
 
         $this->swap(Vite::class, new class extends Vite
@@ -126,6 +130,8 @@ trait InteractsWithContainer
 
             public function __call($method, $parameters)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->swap(Vite::class, new class
         {
             public function __invoke()
@@ -134,6 +140,9 @@ trait InteractsWithContainer
             }
 
             public function __call($name, $arguments)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             {
                 return '';
@@ -145,7 +154,11 @@ trait InteractsWithContainer
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             public function useIntegrityKey($key)
+=======
+            public function useIntegrityKey()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             public function useIntegrityKey()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -154,7 +167,11 @@ trait InteractsWithContainer
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             public function useBuildDirectory($path)
+=======
+            public function useBuildDirectory()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             public function useBuildDirectory()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -163,7 +180,11 @@ trait InteractsWithContainer
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             public function useHotFile($path)
+=======
+            public function useHotFile()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             public function useHotFile()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -172,7 +193,11 @@ trait InteractsWithContainer
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             public function withEntryPoints($entryPoints)
+=======
+            public function withEntryPoints()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             public function withEntryPoints()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -181,7 +206,11 @@ trait InteractsWithContainer
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             public function useScriptTagAttributes($attributes)
+=======
+            public function useScriptTagAttributes()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             public function useScriptTagAttributes()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -190,12 +219,16 @@ trait InteractsWithContainer
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             public function useStyleTagAttributes($attributes)
             {
                 return $this;
             }
 
             public function usePreloadTagAttributes($attributes)
+=======
+            public function useStyleTagAttributes()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             public function useStyleTagAttributes()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -207,6 +240,7 @@ trait InteractsWithContainer
             {
                 return [];
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             public function reactRefresh()
@@ -223,6 +257,8 @@ trait InteractsWithContainer
             {
                 return '';
             }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });

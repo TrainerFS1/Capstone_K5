@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # EmailValidator Changelog
+=======
+# EmailValidator v3 Changelog
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 # EmailValidator v3 Changelog
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -35,6 +39,10 @@ PHP version upgrade requirement will happen via MINOR (3.x) version upgrades of 
 ## Thanks
 To contributors, be it with PRs, reporting issues or supporting otherwise.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

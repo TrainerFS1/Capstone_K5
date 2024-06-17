@@ -9,10 +9,13 @@ final class Alpha implements ColorInterface
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $alpha the alpha value, 0 to 100
      */
     public function __construct(private readonly int $alpha, private readonly ColorInterface $baseColor)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var int
      */
     private $alpha;
@@ -26,12 +29,21 @@ final class Alpha implements ColorInterface
      * @param int $alpha the alpha value, 0 to 100
      */
     public function __construct(int $alpha, ColorInterface $baseColor)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($alpha < 0 || $alpha > 100) {
             throw new Exception\InvalidArgumentException('Alpha must be between 0 and 100');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        $this->alpha = $alpha;
+        $this->baseColor = $baseColor;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
         $this->alpha = $alpha;

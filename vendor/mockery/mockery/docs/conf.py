@@ -31,7 +31,10 @@ import os
 extensions = [
     'sphinx.ext.todo',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'sphinx_rtd_theme',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ]
@@ -58,9 +61,15 @@ copyright = u'Pádraic Brady, Dave Marshall and contributors'
 #
 # The short X.Y version.
 <<<<<<< HEAD
+<<<<<<< HEAD
 version = '1.6'
 # The full version, including alpha/beta/rc tags.
 release = '1.6.x'
+=======
+version = '1.0'
+# The full version, including alpha/beta/rc tags.
+release = '1.0-alpha'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 version = '1.0'
 # The full version, including alpha/beta/rc tags.
@@ -111,7 +120,11 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 <<<<<<< HEAD
+<<<<<<< HEAD
 html_theme = 'sphinx_rtd_theme'
+=======
+html_theme = 'default'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 html_theme = 'default'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -271,7 +284,11 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 <<<<<<< HEAD
+<<<<<<< HEAD
     print(sphinx_rtd_theme.get_html_theme_path())
+=======
+    print sphinx_rtd_theme.get_html_theme_path()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     print sphinx_rtd_theme.get_html_theme_path()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -16,8 +16,11 @@ use Nette;
  * Provides the base class for a generic list (items can be accessed by index).
  * @template T
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @implements \IteratorAggregate<int, T>
  * @implements \ArrayAccess<int, T>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -31,7 +34,11 @@ class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 	/**
 	 * Transforms array to ArrayList.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @param  list<T>  $array
+=======
+	 * @param  array<T>  $array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * @param  array<T>  $array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

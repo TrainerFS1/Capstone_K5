@@ -48,10 +48,15 @@ abstract class Base64 implements EncoderInterface
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function encode(
         #[\SensitiveParameter]
         string $binString
     ): string {
+=======
+    public static function encode(string $binString): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function encode(string $binString): string
     {
@@ -70,10 +75,15 @@ abstract class Base64 implements EncoderInterface
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function encodeUnpadded(
         #[\SensitiveParameter]
         string $src
     ): string {
+=======
+    public static function encodeUnpadded(string $src): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function encodeUnpadded(string $src): string
     {
@@ -89,11 +99,16 @@ abstract class Base64 implements EncoderInterface
      * @throws TypeError
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static function doEncode(
         #[\SensitiveParameter]
         string $src,
         bool $pad = true
     ): string {
+=======
+    protected static function doEncode(string $src, bool $pad = true): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected static function doEncode(string $src, bool $pad = true): string
     {
@@ -152,6 +167,7 @@ abstract class Base64 implements EncoderInterface
      * @throws RangeException
      * @throws TypeError
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public static function decode(
         #[\SensitiveParameter]
@@ -159,10 +175,15 @@ abstract class Base64 implements EncoderInterface
         bool $strictPadding = false
     ): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-suppress RedundantCondition
      */
     public static function decode(string $encodedString, bool $strictPadding = false): string
     {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Remove padding
         $srcLen = Binary::safeStrlen($encodedString);
@@ -259,10 +280,15 @@ abstract class Base64 implements EncoderInterface
      * @return string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function decodeNoPadding(
         #[\SensitiveParameter]
         string $encodedString
     ): string {
+=======
+    public static function decodeNoPadding(string $encodedString): string
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function decodeNoPadding(string $encodedString): string
     {
@@ -273,8 +299,12 @@ abstract class Base64 implements EncoderInterface
         }
         if (($srcLen & 3) === 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // If $strLen is not zero, and it is divisible by 4, then it's at least 4.
             if ($encodedString[$srcLen - 1] === '=' || $encodedString[$srcLen - 2] === '=') {
+=======
+            if ($encodedString[$srcLen - 1] === '=') {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($encodedString[$srcLen - 1] === '=') {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -283,7 +313,10 @@ abstract class Base64 implements EncoderInterface
                 );
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (($srcLen & 3) > 1) {
                 if ($encodedString[$srcLen - 2] === '=') {
                     throw new InvalidArgumentException(
@@ -291,6 +324,9 @@ abstract class Base64 implements EncoderInterface
                     );
                 }
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
         return static::decode(

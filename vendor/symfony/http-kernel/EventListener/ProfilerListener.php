@@ -49,7 +49,11 @@ class ProfilerListener implements EventSubscriberInterface
      * @param bool $onlyMainRequests True if the profiler only collects data when the request is the main request, false otherwise
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Profiler $profiler, RequestStack $requestStack, ?RequestMatcherInterface $matcher = null, bool $onlyException = false, bool $onlyMainRequests = false, ?string $collectParameter = null)
+=======
+    public function __construct(Profiler $profiler, RequestStack $requestStack, RequestMatcherInterface $matcher = null, bool $onlyException = false, bool $onlyMainRequests = false, string $collectParameter = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Profiler $profiler, RequestStack $requestStack, RequestMatcherInterface $matcher = null, bool $onlyException = false, bool $onlyMainRequests = false, string $collectParameter = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,7 +72,11 @@ class ProfilerListener implements EventSubscriberInterface
      * Handles the onKernelException event.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function onKernelException(ExceptionEvent $event): void
+=======
+    public function onKernelException(ExceptionEvent $event)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function onKernelException(ExceptionEvent $event)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,7 +92,11 @@ class ProfilerListener implements EventSubscriberInterface
      * Handles the onKernelResponse event.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function onKernelResponse(ResponseEvent $event): void
+=======
+    public function onKernelResponse(ResponseEvent $event)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function onKernelResponse(ResponseEvent $event)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -132,7 +144,11 @@ class ProfilerListener implements EventSubscriberInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function onKernelTerminate(TerminateEvent $event): void
+=======
+    public function onKernelTerminate(TerminateEvent $event)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function onKernelTerminate(TerminateEvent $event)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

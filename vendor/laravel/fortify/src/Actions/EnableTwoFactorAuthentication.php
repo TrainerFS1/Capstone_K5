@@ -32,6 +32,7 @@ class EnableTwoFactorAuthentication
      *
      * @param  mixed  $user
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  bool  $force
      * @return void
      */
@@ -48,6 +49,8 @@ class EnableTwoFactorAuthentication
             TwoFactorAuthenticationEnabled::dispatch($user);
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     public function __invoke($user)
@@ -60,6 +63,9 @@ class EnableTwoFactorAuthentication
         ])->save();
 
         TwoFactorAuthenticationEnabled::dispatch($user);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

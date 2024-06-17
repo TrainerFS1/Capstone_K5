@@ -50,7 +50,11 @@ class FileLink extends File
         string $streamName,
         string $mode,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?string $context = null,
+=======
+        string $context = null,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $context = null,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -6,8 +6,11 @@ namespace Faker\Container;
 
 use Faker\Core;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Faker\Extension;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Faker\Extension\BarcodeExtension;
 use Faker\Extension\BloodExtension;
 use Faker\Extension\ColorExtension;
@@ -16,6 +19,9 @@ use Faker\Extension\FileExtension;
 use Faker\Extension\NumberExtension;
 use Faker\Extension\UuidExtension;
 use Faker\Extension\VersionExtension;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
@@ -26,6 +32,7 @@ final class ContainerBuilder
     /**
      * @var array<string, callable|object|string>
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     private array $definitions = [];
 
@@ -38,6 +45,8 @@ final class ContainerBuilder
     {
         if (!is_string($definition) && !is_callable($definition) && !is_object($definition)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $definitions = [];
 
     /**
@@ -48,6 +57,9 @@ final class ContainerBuilder
     public function add($value, string $name = null): self
     {
         if (!is_string($value) && !is_callable($value) && !is_object($value)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new \InvalidArgumentException(sprintf(
                 'First argument to "%s::add()" must be a string, callable or object.',
@@ -56,8 +68,11 @@ final class ContainerBuilder
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->definitions[$id] = $definition;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($name === null) {
             if (is_string($value)) {
                 $name = $value;
@@ -72,6 +87,9 @@ final class ContainerBuilder
         }
 
         $this->definitions[$name] = $value;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
@@ -82,6 +100,7 @@ final class ContainerBuilder
         return new Container($this->definitions);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     private static function defaultExtensions(): array
     {
@@ -99,6 +118,8 @@ final class ContainerBuilder
 
     public static function withDefaultExtensions(): self
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Get an array with extension that represent the default English
      * functionality.
@@ -118,21 +139,30 @@ final class ContainerBuilder
     }
 
     public static function getDefault(): ContainerInterface
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $instance = new self();
 
         foreach (self::defaultExtensions() as $id => $definition) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $instance->add($id, $definition);
         }
 
         return $instance;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $instance->add($definition, $id);
         }
 
         return $instance->build();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

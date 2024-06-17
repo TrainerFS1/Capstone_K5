@@ -20,6 +20,7 @@ class NativeCalculator extends Calculator
      * For multiplication, this represents the max sum of the lengths of both operands.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * In addition, it is assumed that an extra digit can hold a carry (1) without overflowing.
      * Example: 32-bit: max number 1,999,999,999 (9 digits + carry)
      *          64-bit: max number 1,999,999,999,999,999,999 (18 digits + carry)
@@ -28,6 +29,8 @@ class NativeCalculator extends Calculator
 
     /**
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * For addition, it is assumed that an extra digit can hold a carry (1) without overflowing.
      * Example: 32-bit: max number 1,999,999,999 (9 digits + carry)
      *          64-bit: max number 1,999,999,999,999,999,999 (18 digits + carry)
@@ -37,11 +40,15 @@ class NativeCalculator extends Calculator
     /**
      * Class constructor.
      *
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @codeCoverageIgnore
      */
     public function __construct()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->maxDigits = match (PHP_INT_SIZE) {
             4 => 9,
@@ -51,6 +58,8 @@ class NativeCalculator extends Calculator
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         switch (PHP_INT_SIZE) {
             case 4:
                 $this->maxDigits = 9;
@@ -68,6 +77,9 @@ class NativeCalculator extends Calculator
     /**
      * {@inheritdoc}
      */
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function add(string $a, string $b) : string
     {
@@ -101,6 +113,12 @@ class NativeCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -112,6 +130,12 @@ class NativeCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -161,6 +185,12 @@ class NativeCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -172,6 +202,12 @@ class NativeCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -183,6 +219,12 @@ class NativeCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -217,13 +259,19 @@ class NativeCalculator extends Calculator
                 // the only division that may overflow is PHP_INT_MIN / -1,
                 // which cannot happen here as we've already handled a divisor of -1 above.
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $q = intdiv($na, $nb);
                 $r = $na % $nb;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $r = $na % $nb;
                 $q = ($na - $r) / $nb;
 
                 assert(is_int($q));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 return [
@@ -249,6 +297,12 @@ class NativeCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -282,6 +336,11 @@ class NativeCalculator extends Calculator
     /**
      * Algorithm from: https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * {@inheritdoc}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * {@inheritdoc}
@@ -321,6 +380,11 @@ class NativeCalculator extends Calculator
     /**
      * Adapted from https://cp-algorithms.com/num_methods/roots_newton.html
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * {@inheritDoc}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * {@inheritDoc}
@@ -354,12 +418,18 @@ class NativeCalculator extends Calculator
     /**
      * Performs the addition of two non-signed large integers.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a The first operand.
      * @param string $b The second operand.
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function doAdd(string $a, string $b) : string
@@ -414,12 +484,18 @@ class NativeCalculator extends Calculator
     /**
      * Performs the subtraction of two non-signed large integers.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a The first operand.
      * @param string $b The second operand.
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function doSub(string $a, string $b) : string
@@ -499,12 +575,18 @@ class NativeCalculator extends Calculator
     /**
      * Performs the multiplication of two non-signed large integers.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param string $a The first operand.
      * @param string $b The second operand.
      *
      * @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function doMul(string $a, string $b) : string
@@ -579,6 +661,12 @@ class NativeCalculator extends Calculator
      * Performs the division of two non-signed large integers.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param string $a The first operand.
+     * @param string $b The second operand.
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $a The first operand.
      * @param string $b The second operand.
@@ -643,12 +731,18 @@ class NativeCalculator extends Calculator
      * Compares two non-signed large numbers.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return -1|0|1
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $a The first operand.
      * @param string $b The second operand.
      *
      * @return int [-1, 0, 1]
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function doCmp(string $a, string $b) : int
@@ -663,7 +757,11 @@ class NativeCalculator extends Calculator
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return \strcmp($a, $b) <=> 0; // enforce -1|0|1
+=======
+        return \strcmp($a, $b) <=> 0; // enforce [-1, 0, 1]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return \strcmp($a, $b) <=> 0; // enforce [-1, 0, 1]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -675,6 +773,12 @@ class NativeCalculator extends Calculator
      * The numbers must only consist of digits, without leading minus sign.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param string $a The first operand.
+     * @param string $b The second operand.
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $a The first operand.
      * @param string $b The second operand.

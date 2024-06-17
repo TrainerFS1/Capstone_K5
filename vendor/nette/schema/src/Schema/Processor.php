@@ -18,6 +18,7 @@ use Nette;
 final class Processor
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public array $onNewContext = [];
 	private Context $context;
 	private bool $skipDefaults = false;
@@ -25,6 +26,8 @@ final class Processor
 
 	public function skipDefaults(bool $value = true): void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	use Nette\SmartObject;
 
 	/** @var array */
@@ -38,6 +41,9 @@ final class Processor
 
 
 	public function skipDefaults(bool $value = true)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->skipDefaults = $value;
@@ -47,14 +53,20 @@ final class Processor
 	/**
 	 * Normalizes and validates data. Result is a clean completed data.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @throws ValidationException
 	 */
 	public function process(Schema $schema, mixed $data): mixed
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @return mixed
 	 * @throws ValidationException
 	 */
 	public function process(Schema $schema, $data)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->createContext();
@@ -69,14 +81,20 @@ final class Processor
 	/**
 	 * Normalizes and validates and merges multiple data. Result is a clean completed data.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @throws ValidationException
 	 */
 	public function processMultiple(Schema $schema, array $dataset): mixed
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @return mixed
 	 * @throws ValidationException
 	 */
 	public function processMultiple(Schema $schema, array $dataset)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->createContext();
@@ -118,17 +136,23 @@ final class Processor
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private function createContext(): void
 	{
 		$this->context = new Context;
 		$this->context->skipDefaults = $this->skipDefaults;
 		Nette\Utils\Arrays::invoke($this->onNewContext, $this->context);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	private function createContext()
 	{
 		$this->context = new Context;
 		$this->context->skipDefaults = $this->skipDefaults;
 		$this->onNewContext($this->context);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 }

@@ -22,7 +22,11 @@ final class BigRational extends BigNumber
      * The numerator.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly BigInteger $numerator;
+=======
+    private BigInteger $numerator;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private BigInteger $numerator;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -31,7 +35,11 @@ final class BigRational extends BigNumber
      * The denominator. Always strictly positive.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly BigInteger $denominator;
+=======
+    private BigInteger $denominator;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private BigInteger $denominator;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -64,12 +72,15 @@ final class BigRational extends BigNumber
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-pure
      */
     protected static function from(BigNumber $number): static
     {
         return $number->toBigRational();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Creates a BigRational of the given value.
      *
      * @param BigNumber|int|float|string $value
@@ -83,6 +94,9 @@ final class BigRational extends BigNumber
     public static function of($value) : BigNumber
     {
         return parent::of($value)->toBigRational();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -96,6 +110,11 @@ final class BigRational extends BigNumber
      * @param BigNumber|int|float|string $denominator The denominator. Must be convertible to a BigInteger.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return BigRational
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return BigRational
      *
@@ -107,10 +126,15 @@ final class BigRational extends BigNumber
      * @psalm-pure
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function nd(
         BigNumber|int|float|string $numerator,
         BigNumber|int|float|string $denominator,
     ) : BigRational {
+=======
+    public static function nd($numerator, $denominator) : BigRational
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function nd($numerator, $denominator) : BigRational
     {
@@ -125,6 +149,11 @@ final class BigRational extends BigNumber
      * Returns a BigRational representing zero.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return BigRational
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return BigRational
      *
@@ -150,6 +179,11 @@ final class BigRational extends BigNumber
      * Returns a BigRational representing one.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return BigRational
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return BigRational
      *
@@ -175,6 +209,11 @@ final class BigRational extends BigNumber
      * Returns a BigRational representing ten.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return BigRational
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return BigRational
      *
@@ -197,6 +236,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @return BigInteger
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @return BigInteger
@@ -208,6 +253,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @return BigInteger
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @return BigInteger
@@ -221,6 +272,11 @@ final class BigRational extends BigNumber
     /**
      * Returns the quotient of the division of the numerator by the denominator.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return BigInteger
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return BigInteger
@@ -234,6 +290,11 @@ final class BigRational extends BigNumber
     /**
      * Returns the remainder of the division of the numerator by the denominator.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return BigInteger
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return BigInteger
@@ -249,8 +310,11 @@ final class BigRational extends BigNumber
      *
      * @return BigInteger[]
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-return array{BigInteger, BigInteger}
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -265,15 +329,21 @@ final class BigRational extends BigNumber
      * @param BigNumber|int|float|string $that The number to add.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws MathException If the number is not valid.
      */
     public function plus(BigNumber|int|float|string $that) : BigRational
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return BigRational The result.
      *
      * @throws MathException If the number is not valid.
      */
     public function plus($that) : BigRational
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $that = BigRational::of($that);
@@ -291,15 +361,21 @@ final class BigRational extends BigNumber
      * @param BigNumber|int|float|string $that The number to subtract.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws MathException If the number is not valid.
      */
     public function minus(BigNumber|int|float|string $that) : BigRational
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return BigRational The result.
      *
      * @throws MathException If the number is not valid.
      */
     public function minus($that) : BigRational
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $that = BigRational::of($that);
@@ -317,15 +393,21 @@ final class BigRational extends BigNumber
      * @param BigNumber|int|float|string $that The multiplier.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws MathException If the multiplier is not a valid number.
      */
     public function multipliedBy(BigNumber|int|float|string $that) : BigRational
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return BigRational The result.
      *
      * @throws MathException If the multiplier is not a valid number.
      */
     public function multipliedBy($that) : BigRational
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $that = BigRational::of($that);
@@ -342,15 +424,21 @@ final class BigRational extends BigNumber
      * @param BigNumber|int|float|string $that The divisor.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws MathException If the divisor is not a valid number, or is zero.
      */
     public function dividedBy(BigNumber|int|float|string $that) : BigRational
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return BigRational The result.
      *
      * @throws MathException If the divisor is not a valid number, or is zero.
      */
     public function dividedBy($that) : BigRational
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $that = BigRational::of($that);
@@ -365,11 +453,17 @@ final class BigRational extends BigNumber
      * Returns this number exponentiated to the given value.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $exponent The exponent.
      *
      * @return BigRational The result.
      *
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException If the exponent is not in the range 0 to 1,000,000.
      */
@@ -398,6 +492,11 @@ final class BigRational extends BigNumber
      * The reciprocal has the numerator and denominator swapped.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return BigRational
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return BigRational
      *
@@ -412,6 +511,11 @@ final class BigRational extends BigNumber
     /**
      * Returns the absolute value of this BigRational.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return BigRational
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return BigRational
@@ -425,6 +529,11 @@ final class BigRational extends BigNumber
     /**
      * Returns the negated value of this BigRational.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return BigRational
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return BigRational
@@ -438,6 +547,11 @@ final class BigRational extends BigNumber
     /**
      * Returns the simplified value of this BigRational.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     *
+     * @return BigRational
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return BigRational
@@ -454,18 +568,30 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function compareTo(BigNumber|int|float|string $that) : int
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * {@inheritdoc}
      */
     public function compareTo($that) : int
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->minus($that)->getSign();
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -477,6 +603,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -494,6 +626,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -505,6 +643,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -516,18 +660,30 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toScale(int $scale, RoundingMode $roundingMode = RoundingMode::UNNECESSARY) : BigDecimal
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * {@inheritdoc}
      */
     public function toScale(int $scale, int $roundingMode = RoundingMode::UNNECESSARY) : BigDecimal
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->numerator->toBigDecimal()->dividedBy($this->denominator, $scale, $roundingMode);
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -539,6 +695,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -551,6 +713,12 @@ final class BigRational extends BigNumber
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -589,6 +757,11 @@ final class BigRational extends BigNumber
      * @param array{numerator: BigInteger, denominator: BigInteger} $data
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @return void
+     *
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return void
      *
@@ -605,7 +778,10 @@ final class BigRational extends BigNumber
         $this->denominator = $data['denominator'];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * This method is required by interface Serializable and SHOULD NOT be accessed directly.
@@ -642,5 +818,8 @@ final class BigRational extends BigNumber
         $this->numerator   = BigInteger::of($numerator);
         $this->denominator = BigInteger::of($denominator);
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -12,6 +12,7 @@
     "require": {
         "php": "^7.2.5|^8.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "illuminate/console": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
         "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
         "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
@@ -26,6 +27,8 @@
     "suggest": {
         "illuminate/database": "The Illuminate Database package (^6.0|^7.0|^8.0|^9.0|^10.0|^11.0)."
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "illuminate/console": "^6.0|^7.0|^8.0|^9.0|^10.0",
         "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0",
         "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0",
@@ -38,6 +41,9 @@
     },
     "suggest": {
         "illuminate/database": "The Illuminate Database package (^6.0|^7.0|^8.0|^9.0|^10.0)."
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {
@@ -54,6 +60,12 @@
     },
     "extra": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "branch-alias": {
             "dev-master": "2.x-dev"

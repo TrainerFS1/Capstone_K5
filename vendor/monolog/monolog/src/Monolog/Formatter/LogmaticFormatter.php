@@ -27,9 +27,12 @@ class LogmaticFormatter extends JsonFormatter
     protected string $appName = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setHostname(string $hostname): self
@@ -40,9 +43,12 @@ class LogmaticFormatter extends JsonFormatter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setAppName(string $appName): self

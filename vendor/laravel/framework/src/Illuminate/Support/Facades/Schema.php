@@ -12,6 +12,7 @@ namespace Illuminate\Support\Facades;
  * @method static bool dropDatabaseIfExists(string $name)
  * @method static bool hasTable(string $table)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static bool hasView(string $view)
  * @method static array getTables()
  * @method static array getTableListing()
@@ -19,10 +20,13 @@ namespace Illuminate\Support\Facades;
  * @method static array getTypes()
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static bool hasColumn(string $table, string $column)
  * @method static bool hasColumns(string $table, array $columns)
  * @method static void whenTableHasColumn(string $table, string $column, \Closure $callback)
  * @method static void whenTableDoesntHaveColumn(string $table, string $column, \Closure $callback)
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @method static string getColumnType(string $table, string $column, bool $fullDefinition = false)
  * @method static array getColumnListing(string $table)
@@ -31,6 +35,10 @@ namespace Illuminate\Support\Facades;
  * @method static array getIndexListing(string $table)
  * @method static bool hasIndex(string $table, string|array $index, string|null $type = null)
  * @method static array getForeignKeys(string $table)
+=======
+ * @method static string getColumnType(string $table, string $column)
+ * @method static array getColumnListing(string $table)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static string getColumnType(string $table, string $column)
  * @method static array getColumnListing(string $table)
@@ -44,6 +52,10 @@ namespace Illuminate\Support\Facades;
  * @method static void dropAllViews()
  * @method static void dropAllTypes()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ * @method static array getAllTables()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static array getAllTables()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -55,10 +67,13 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Database\Schema\Builder setConnection(\Illuminate\Database\Connection $connection)
  * @method static void blueprintResolver(\Closure $resolver)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static void macro(string $name, object|callable $macro)
  * @method static void mixin(object $mixin, bool $replace = true)
  * @method static bool hasMacro(string $name)
  * @method static void flushMacros()
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *

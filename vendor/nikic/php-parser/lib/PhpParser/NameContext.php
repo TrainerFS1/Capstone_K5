@@ -7,6 +7,7 @@ use PhpParser\Node\Name\FullyQualified;
 use PhpParser\Node\Stmt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NameContext {
     /** @var null|Name Current namespace */
     protected ?Name $namespace;
@@ -20,6 +21,8 @@ class NameContext {
     /** @var ErrorHandler Error handler */
     protected ErrorHandler $errorHandler;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class NameContext
 {
     /** @var null|Name Current namespace */
@@ -33,6 +36,9 @@ class NameContext
 
     /** @var ErrorHandler Error handler */
     protected $errorHandler;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -52,7 +58,11 @@ class NameContext
      * @param Name|null $namespace Null is the global namespace
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function startNamespace(?Name $namespace = null): void {
+=======
+    public function startNamespace(Name $namespace = null) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function startNamespace(Name $namespace = null) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,6 +78,7 @@ class NameContext
      * Add an alias / import.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Name $name Original name
      * @param string $aliasName Aliased name
      * @param Stmt\Use_::TYPE_* $type One of Stmt\Use_::TYPE_*
@@ -75,12 +86,17 @@ class NameContext
      */
     public function addAlias(Name $name, string $aliasName, int $type, array $errorAttrs = []): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param Name   $name        Original name
      * @param string $aliasName   Aliased name
      * @param int    $type        One of Stmt\Use_::TYPE_*
      * @param array  $errorAttrs Attributes to use to report an error
      */
     public function addAlias(Name $name, string $aliasName, int $type, array $errorAttrs = []) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Constant names are case sensitive, everything else case insensitive
         if ($type === Stmt\Use_::TYPE_CONSTANT) {
@@ -116,7 +132,11 @@ class NameContext
      * @return null|Name Namespace (or null if global namespace)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNamespace(): ?Name {
+=======
+    public function getNamespace() {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNamespace() {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -128,17 +148,23 @@ class NameContext
      *
      * @param Name $name Name to resolve
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Stmt\Use_::TYPE_* $type One of Stmt\Use_::TYPE_{FUNCTION|CONSTANT}
      *
      * @return null|Name Resolved name, or null if static resolution is not possible
      */
     public function getResolvedName(Name $name, int $type): ?Name {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int  $type One of Stmt\Use_::TYPE_{FUNCTION|CONSTANT}
      *
      * @return null|Name Resolved name, or null if static resolution is not possible
      */
     public function getResolvedName(Name $name, int $type) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // don't resolve special class names
         if ($type === Stmt\Use_::TYPE_NORMAL && $name->isSpecialClassName()) {
@@ -183,7 +209,11 @@ class NameContext
      * @return Name Resolved name
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getResolvedClassName(Name $name): Name {
+=======
+    public function getResolvedClassName(Name $name) : Name {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getResolvedClassName(Name $name) : Name {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -195,17 +225,23 @@ class NameContext
      *
      * @param string $name Fully-qualified name (without leading namespace separator)
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Stmt\Use_::TYPE_* $type One of Stmt\Use_::TYPE_*
      *
      * @return Name[] Possible representations of the name
      */
     public function getPossibleNames(string $name, int $type): array {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int    $type One of Stmt\Use_::TYPE_*
      *
      * @return Name[] Possible representations of the name
      */
     public function getPossibleNames(string $name, int $type) : array {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $lcName = strtolower($name);
 
@@ -259,17 +295,23 @@ class NameContext
      *
      * @param string $name Fully-qualified name (without leading namespace separator)
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Stmt\Use_::TYPE_* $type One of Stmt\Use_::TYPE_*
      *
      * @return Name Shortest representation
      */
     public function getShortName(string $name, int $type): Name {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int    $type One of Stmt\Use_::TYPE_*
      *
      * @return Name Shortest representation
      */
     public function getShortName(string $name, int $type) : Name {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $possibleNames = $this->getPossibleNames($name, $type);
 
@@ -285,15 +327,21 @@ class NameContext
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $shortestName;
     }
 
     private function resolveAlias(Name $name, int $type): ?FullyQualified {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
        return $shortestName;
     }
 
     private function resolveAlias(Name $name, $type) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $firstPart = $name->getFirst();
 
@@ -318,7 +366,11 @@ class NameContext
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getNamespaceRelativeName(string $name, string $lcName, int $type): ?Name {
+=======
+    private function getNamespaceRelativeName(string $name, string $lcName, int $type) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getNamespaceRelativeName(string $name, string $lcName, int $type) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -343,7 +395,11 @@ class NameContext
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function normalizeConstName(string $name): string {
+=======
+    private function normalizeConstName(string $name) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function normalizeConstName(string $name) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

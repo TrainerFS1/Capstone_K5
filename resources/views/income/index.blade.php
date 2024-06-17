@@ -11,12 +11,15 @@
                         <h1 class="m-0">Daftar Pemasukan</h1>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ '/' }}">Home</a></li>
                             <li class="breadcrumb-item active">Pemasukan</li>
                         </ol>
                     </div>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 </div>

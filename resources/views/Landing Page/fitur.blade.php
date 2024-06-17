@@ -55,6 +55,10 @@
                     <li><a class="active" href="{{ '/fitur' }}">Fitur</a></li>
                     <li><a href="{{ '/about' }}">About</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    <li><a href="{{ '/contact' }}">Contact Us</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     <li><a href="{{ '/contact' }}">Contact Us</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -118,7 +122,11 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-left">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assetsLanding/img/undraw_projections_re_ulc6.svg" alt="Image" class="img-fluid" />
+=======
+                        <img src="assetsLanding/img/undraw_svg_2.svg" alt="Image" class="img-fluid" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="assetsLanding/img/undraw_svg_2.svg" alt="Image" class="img-fluid" />
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -155,7 +163,11 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-left">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assetsLanding/img/undraw_online_banking_re_kwqh.svg" alt="Image" class="img-fluid" />
+=======
+                        <img src="assetsLanding/img/undraw_svg_3.svg" alt="Image" class="img-fluid" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="assetsLanding/img/undraw_svg_3.svg" alt="Image" class="img-fluid" />
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -178,7 +190,11 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-right">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assetsLanding/img/undraw_transfer_money_re_6o1h.svg" alt="Image" class="img-fluid" />
+=======
+                        <img src="assetsLanding/img/undraw_svg_4.svg" alt="Image" class="img-fluid" />
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         <img src="assetsLanding/img/undraw_svg_4.svg" alt="Image" class="img-fluid" />
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -342,6 +358,10 @@
                                 <li><a href="{{ '/fitur' }}">Features</a></li>
                                 <li><a href="{{ '/about' }}">About</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                <li><a href="{{ '/contact' }}">Contact Us</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <li><a href="{{ '/contact' }}">Contact Us</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -352,6 +372,10 @@
                             <ul class="list-unstyled">
                                 <li><a href="#">Hubungi Kami</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                <li><a href="#">FAQ</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 <li><a href="#">FAQ</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

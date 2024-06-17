@@ -78,15 +78,21 @@ class Envelope
      *
      * @param  \Illuminate\Mail\Mailables\Address|string|null  $from
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<int, \Illuminate\Mail\Mailables\Address|string>  $to
      * @param  array<int, \Illuminate\Mail\Mailables\Address|string>  $cc
      * @param  array<int, \Illuminate\Mail\Mailables\Address|string>  $bcc
      * @param  array<int, \Illuminate\Mail\Mailables\Address|string>  $replyTo
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $to
      * @param  array  $cc
      * @param  array  $bcc
      * @param  array  $replyTo
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string|null  $subject
      * @param  array  $tags
@@ -113,8 +119,13 @@ class Envelope
      * Normalize the given array of addresses.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<int, \Illuminate\Mail\Mailables\Address|string>  $addresses
      * @return array<int, \Illuminate\Mail\Mailables\Address>
+=======
+     * @param  array  $addresses
+     * @return array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array  $addresses
      * @return array
@@ -145,7 +156,11 @@ class Envelope
      * Add a "to" recipient to the message envelope.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Mail\Mailables\Address|array<int, \Illuminate\Mail\Mailables\Address|string>|string  $address
+=======
+     * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -165,7 +180,11 @@ class Envelope
      * Add a "cc" recipient to the message envelope.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Mail\Mailables\Address|array<int, \Illuminate\Mail\Mailables\Address|string>|string  $address
+=======
+     * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -185,7 +204,11 @@ class Envelope
      * Add a "bcc" recipient to the message envelope.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Mail\Mailables\Address|array<int, \Illuminate\Mail\Mailables\Address|string>|string  $address
+=======
+     * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -205,7 +228,11 @@ class Envelope
      * Add a "reply to" recipient to the message envelope.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Mail\Mailables\Address|array<int, \Illuminate\Mail\Mailables\Address|string>|string  $address
+=======
+     * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Mail\Mailables\Address|array|string  $address
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

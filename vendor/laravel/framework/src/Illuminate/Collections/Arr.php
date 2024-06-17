@@ -196,8 +196,11 @@ class Arr
                 return $item;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return value($default);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -230,6 +233,7 @@ class Arr
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Take the first or last {$limit} items from an array.
      *
      * @param  array  $array
@@ -246,6 +250,8 @@ class Arr
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Flatten a multi-dimensional array into a single level.
@@ -499,7 +505,13 @@ class Arr
     public static function prependKeysWith($array, $prependWith)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return static::mapWithKeys($array, fn ($item, $key) => [$prependWith.$key => $item]);
+=======
+        return Collection::make($array)->mapWithKeys(function ($item, $key) use ($prependWith) {
+            return [$prependWith.$key => $item];
+        })->all();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return Collection::make($array)->mapWithKeys(function ($item, $key) use ($prependWith) {
             return [$prependWith.$key => $item];
@@ -520,6 +532,7 @@ class Arr
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Select an array of values from an array.
      *
@@ -547,6 +560,8 @@ class Arr
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Pluck an array of values from an array.
@@ -622,6 +637,7 @@ class Arr
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Run an associative map over each of the items.
      *
      * The callback should return an associative array with a single key/value pair.
@@ -651,6 +667,8 @@ class Arr
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Push an item onto the beginning of an array.
@@ -861,6 +879,7 @@ class Arr
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Recursively sort an array by keys and values in descending order.
      *
      * @param  array  $array
@@ -873,6 +892,8 @@ class Arr
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Conditionally compile classes from an array into a CSS class list.

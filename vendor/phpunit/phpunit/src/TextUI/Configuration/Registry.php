@@ -17,7 +17,10 @@ use function unserialize;
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\TextUI\CliArguments\Configuration as CliConfiguration;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\TextUI\CliArguments\Exception;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\XmlConfiguration\Configuration as XmlConfiguration;
@@ -38,7 +41,11 @@ final class Registry
         $result = file_put_contents(
             $path,
 <<<<<<< HEAD
+<<<<<<< HEAD
             serialize(self::get()),
+=======
+            serialize(self::get())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             serialize(self::get())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -49,9 +56,13 @@ final class Registry
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // @codeCoverageIgnoreStart
         return false;
         // @codeCoverageIgnoreEnd
+=======
+        return false;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return false;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -62,8 +73,11 @@ final class Registry
      *
      * @noinspection PhpUnused
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @codeCoverageIgnore
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -95,9 +109,14 @@ final class Registry
                     TestSuite::class,
                     VersionComparisonOperator::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Source::class,
                 ],
             ],
+=======
+                ],
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 ],
             ]
@@ -114,8 +133,13 @@ final class Registry
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
      * @throws Exception
+=======
+     * @throws \PHPUnit\TextUI\CliArguments\Exception
+     * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \PHPUnit\TextUI\CliArguments\Exception
      * @throws \PHPUnit\TextUI\XmlConfiguration\Exception

@@ -12,12 +12,18 @@ namespace PHPUnit\Framework;
 use function array_keys;
 use function get_object_vars;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use RuntimeException;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Util\Filter;
 use PHPUnit\Util\ThrowableToStringMapper;
 use RuntimeException;
 use Stringable;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
 
@@ -44,17 +50,23 @@ use Throwable;
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Exception extends RuntimeException implements \PHPUnit\Exception
 {
     protected array $serializableTrace;
 
     public function __construct(string $message = '', int $code = 0, ?Throwable $previous = null)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Exception extends RuntimeException implements \PHPUnit\Exception, Stringable
 {
     protected array $serializableTrace;
 
     public function __construct(string $message = '', int $code = 0, Throwable $previous = null)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         parent::__construct($message, $code, $previous);
@@ -67,7 +79,10 @@ class Exception extends RuntimeException implements \PHPUnit\Exception, Stringab
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @throws Exception
      */
@@ -82,6 +97,9 @@ class Exception extends RuntimeException implements \PHPUnit\Exception, Stringab
         return $string;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __sleep(): array
     {

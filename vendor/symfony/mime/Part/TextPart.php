@@ -25,6 +25,7 @@ class TextPart extends AbstractPart
 {
     /** @internal */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected Headers $_headers;
 
     private static array $encoders = [];
@@ -38,6 +39,8 @@ class TextPart extends AbstractPart
     private string $encoding;
     private ?bool $seekable = null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $_headers;
 
     private static $encoders = [];
@@ -52,19 +55,28 @@ class TextPart extends AbstractPart
     private $name;
     private $encoding;
     private $seekable;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param resource|string|File $body Use a File instance to defer loading the file until rendering
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct($body, ?string $charset = 'utf-8', string $subtype = 'plain', ?string $encoding = null)
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct($body, ?string $charset = 'utf-8', string $subtype = 'plain', string $encoding = null)
     {
         unset($this->_headers);
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         parent::__construct();
 
@@ -118,6 +130,7 @@ class TextPart extends AbstractPart
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return ?string null or one of attachment, inline, or form-data
      */
     public function getDisposition(): ?string
@@ -126,6 +139,8 @@ class TextPart extends AbstractPart
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Sets the name of the file (used by FormDataPart).
@@ -151,11 +166,15 @@ class TextPart extends AbstractPart
     {
         if ($this->body instanceof File) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (false === $ret = @file_get_contents($this->body->getPath())) {
                 throw new InvalidArgumentException(error_get_last()['message']);
             }
 
             return $ret;
+=======
+            return file_get_contents($this->body->getPath());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return file_get_contents($this->body->getPath());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -258,7 +277,11 @@ class TextPart extends AbstractPart
     {
         // convert resources to strings for serialization
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null !== $this->seekable) {
+=======
+        if (null !== $this->seekable || $this->body instanceof File) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (null !== $this->seekable || $this->body instanceof File) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -272,9 +295,12 @@ class TextPart extends AbstractPart
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __wakeup()

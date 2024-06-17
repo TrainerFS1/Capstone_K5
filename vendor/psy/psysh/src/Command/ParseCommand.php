@@ -13,6 +13,10 @@ namespace Psy\Command;
 
 use PhpParser\Node;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PhpParser\Parser;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PhpParser\Parser;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,7 +45,12 @@ class ParseCommand extends Command implements ContextAware, PresenterAware
 
     private $presenter;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private $parser;
+=======
+    private $parserFactory;
+    private $parsers;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $parserFactory;
     private $parsers;
@@ -53,7 +62,12 @@ class ParseCommand extends Command implements ContextAware, PresenterAware
     public function __construct($name = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->parser = (new ParserFactory())->createParser();
+=======
+        $this->parserFactory = new ParserFactory();
+        $this->parsers = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->parserFactory = new ParserFactory();
         $this->parsers = [];
@@ -102,6 +116,7 @@ class ParseCommand extends Command implements ContextAware, PresenterAware
     protected function configure()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this
             ->setName('parse')
             ->setDefinition([
@@ -109,6 +124,8 @@ class ParseCommand extends Command implements ContextAware, PresenterAware
                 new InputOption('depth', '', InputOption::VALUE_REQUIRED, 'Depth to parse.', 10),
             ])
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $kindMsg = 'One of PhpParser\\ParserFactory constants: '
             .\implode(', ', ParserFactory::getPossibleKinds())
             ." (default is based on current interpreter's version).";
@@ -120,6 +137,9 @@ class ParseCommand extends Command implements ContextAware, PresenterAware
             new InputOption('depth', '', InputOption::VALUE_REQUIRED, 'Depth to parse.', 10),
             new InputOption('kind', '', InputOption::VALUE_REQUIRED, $kindMsg, $this->parserFactory->getDefaultKind()),
         ])
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->setDescription('Parse PHP code and show the abstract syntax tree.')
             ->setHelp(
@@ -140,6 +160,7 @@ HELP
      * {@inheritdoc}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $code = $input->getArgument('code');
@@ -147,6 +168,8 @@ HELP
 
         $nodes = $this->parser->parse($code);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $code = $input->getArgument('code');
@@ -157,6 +180,9 @@ HELP
         $parserKind = $input->getOption('kind');
         $depth = $input->getOption('depth');
         $nodes = $this->parse($this->getParser($parserKind), $code);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $output->page($this->presenter->present($nodes, $depth));
 
@@ -165,7 +191,10 @@ HELP
         return 0;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Lex and parse a string of code into statements.
@@ -202,5 +231,8 @@ HELP
 
         return $this->parsers[$kind];
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

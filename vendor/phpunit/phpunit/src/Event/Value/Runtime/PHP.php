@@ -53,7 +53,11 @@ final class PHP
         $extensions = array_merge(
             get_loaded_extensions(true),
 <<<<<<< HEAD
+<<<<<<< HEAD
             get_loaded_extensions(),
+=======
+            get_loaded_extensions()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             get_loaded_extensions()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

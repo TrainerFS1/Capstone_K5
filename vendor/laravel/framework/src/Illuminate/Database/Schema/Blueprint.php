@@ -6,7 +6,10 @@ use BadMethodCallException;
 use Closure;
 use Illuminate\Database\Connection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Query\Expression;
@@ -134,10 +137,13 @@ class Blueprint
 
         foreach ($this->commands as $command) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($command->shouldBeSkipped) {
                 continue;
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $method = 'compile'.ucfirst($command->name);
@@ -299,6 +305,7 @@ class Blueprint
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Specify the storage engine that should be used for the table.
      *
      * @param  string  $engine
@@ -343,6 +350,8 @@ class Blueprint
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Indicate that the table needs to be temporary.
@@ -997,6 +1006,7 @@ class Blueprint
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $column = $column ?: $model->getForeignKey();
 
         if ($model->getKeyType() === 'int' && $model->getIncrementing()) {
@@ -1010,6 +1020,11 @@ class Blueprint
         }
 
         return $this->foreignUuid($column);
+=======
+        return $model->getKeyType() === 'int' && $model->getIncrementing()
+                    ? $this->foreignId($column ?: $model->getForeignKey())
+                    : $this->foreignUuid($column ?: $model->getForeignKey());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $model->getKeyType() === 'int' && $model->getIncrementing()
                     ? $this->foreignId($column ?: $model->getForeignKey())
@@ -1850,6 +1865,7 @@ class Blueprint
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the table prefix.
      *
      * @return string
@@ -1860,6 +1876,8 @@ class Blueprint
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the columns on the blueprint.

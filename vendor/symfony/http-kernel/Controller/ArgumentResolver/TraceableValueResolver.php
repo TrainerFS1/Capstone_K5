@@ -43,7 +43,11 @@ final class TraceableValueResolver implements ArgumentValueResolverInterface, Va
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $method = $this->inner::class.'::'.__FUNCTION__;
+=======
+        $method = \get_class($this->inner).'::'.__FUNCTION__;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $method = \get_class($this->inner).'::'.__FUNCTION__;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -59,7 +63,11 @@ final class TraceableValueResolver implements ArgumentValueResolverInterface, Va
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $method = $this->inner::class.'::'.__FUNCTION__;
+=======
+        $method = \get_class($this->inner).'::'.__FUNCTION__;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $method = \get_class($this->inner).'::'.__FUNCTION__;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -3,17 +3,23 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class JsonDecoder {
     /** @var \ReflectionClass<Node>[] Node type to reflection class map */
     private array $reflectionClassCache;
 
     /** @return mixed */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class JsonDecoder
 {
     /** @var \ReflectionClass[] Node type to reflection class map */
     private $reflectionClassCache;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function decode(string $json) {
         $value = json_decode($json, true);
@@ -25,10 +31,13 @@ class JsonDecoder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param mixed $value
      * @return mixed
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function decodeRecursive($value) {
@@ -45,7 +54,11 @@ class JsonDecoder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function decodeArray(array $array): array {
+=======
+    private function decodeArray(array $array) : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function decodeArray(array $array) : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,7 +70,11 @@ class JsonDecoder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function decodeNode(array $value): Node {
+=======
+    private function decodeNode(array $value) : Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function decodeNode(array $value) : Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,6 +85,10 @@ class JsonDecoder
 
         $reflectionClass = $this->reflectionClassFromNodeType($nodeType);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        /** @var Node $node */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         /** @var Node $node */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -93,7 +114,11 @@ class JsonDecoder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function decodeComment(array $value): Comment {
+=======
+    private function decodeComment(array $value) : Comment {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function decodeComment(array $value) : Comment {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -110,8 +135,12 @@ class JsonDecoder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return \ReflectionClass<Node> */
     private function reflectionClassFromNodeType(string $nodeType): \ReflectionClass {
+=======
+    private function reflectionClassFromNodeType(string $nodeType) : \ReflectionClass {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function reflectionClassFromNodeType(string $nodeType) : \ReflectionClass {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -123,8 +152,12 @@ class JsonDecoder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return class-string<Node> */
     private function classNameFromNodeType(string $nodeType): string {
+=======
+    private function classNameFromNodeType(string $nodeType) : string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function classNameFromNodeType(string $nodeType) : string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -84,15 +84,21 @@ final class Helper
     {
         $string = self::replaceWildcard($string, '*', static function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return mt_rand(0, 1) === 1 ? '#' : '?';
         });
 
         return self::lexify(self::numerify($string));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return mt_rand(0, 1) ? '#' : '?';
         });
 
         return static::lexify(static::numerify($string));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

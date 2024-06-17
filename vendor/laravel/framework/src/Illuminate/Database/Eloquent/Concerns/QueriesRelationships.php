@@ -231,10 +231,13 @@ trait QueriesRelationships
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (empty($types)) {
             return $this->where(new Expression('0'), $operator, $count, $boolean);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($types as &$type) {
@@ -456,7 +459,11 @@ trait QueriesRelationships
      *
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Model|string|null  $model
+=======
+     * @param  \Illuminate\Database\Eloquent\Model|string  $model
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Database\Eloquent\Model|string  $model
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -469,10 +476,13 @@ trait QueriesRelationships
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_null($model)) {
             return $this->whereNull($relation->getMorphType(), $boolean);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (is_string($model)) {
@@ -525,7 +535,11 @@ trait QueriesRelationships
      *
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Model|string|null  $model
+=======
+     * @param  \Illuminate\Database\Eloquent\Model|string  $model
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Database\Eloquent\Model|string  $model
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -614,7 +628,11 @@ trait QueriesRelationships
      *
      * @param  mixed  $relations
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Database\Query\Expression|string  $column
+=======
+     * @param  string  $column
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $column
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -649,6 +667,7 @@ trait QueriesRelationships
 
             if ($function) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ($this->getQuery()->getGrammar()->isExpression($column)) {
                     $aggregateColumn = $this->getQuery()->getGrammar()->getValue($column);
                 } else {
@@ -663,6 +682,8 @@ trait QueriesRelationships
             } else {
                 $expression = $this->getQuery()->getGrammar()->getValue($column);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $hashedColumn = $this->getRelationHashedColumn($column, $relation);
 
                 $wrappedColumn = $this->getQuery()->getGrammar()->wrap(
@@ -672,6 +693,9 @@ trait QueriesRelationships
                 $expression = $function === 'exists' ? $wrappedColumn : sprintf('%s(%s)', $function, $wrappedColumn);
             } else {
                 $expression = $column;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
@@ -702,7 +726,11 @@ trait QueriesRelationships
             // for further constraint chaining that needs to take place on the query as needed.
             $alias ??= Str::snake(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 preg_replace('/[^[:alnum:][:space:]_]/u', '', "$name $function {$this->getQuery()->getGrammar()->getValue($column)}")
+=======
+                preg_replace('/[^[:alnum:][:space:]_]/u', '', "$name $function $column")
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 preg_replace('/[^[:alnum:][:space:]_]/u', '', "$name $function $column")
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -729,7 +757,11 @@ trait QueriesRelationships
      *
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\Relation  $relation
+=======
+     * @param  \Illuminate\Database\Eloquent\Relations\Relationship  $relation
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Illuminate\Database\Eloquent\Relations\Relationship  $relation
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -762,7 +794,11 @@ trait QueriesRelationships
      *
      * @param  string|array  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Database\Query\Expression|string  $column
+=======
+     * @param  string  $column
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $column
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -778,7 +814,11 @@ trait QueriesRelationships
      *
      * @param  string|array  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Database\Query\Expression|string  $column
+=======
+     * @param  string  $column
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $column
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -794,7 +834,11 @@ trait QueriesRelationships
      *
      * @param  string|array  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Database\Query\Expression|string  $column
+=======
+     * @param  string  $column
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $column
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -810,7 +854,11 @@ trait QueriesRelationships
      *
      * @param  string|array  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Database\Query\Expression|string  $column
+=======
+     * @param  string  $column
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $column
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -865,7 +913,11 @@ trait QueriesRelationships
             ? $this->requalifyWhereTables(
                 $from->getQuery()->wheres,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $from->getQuery()->grammar->getValue($from->getQuery()->from),
+=======
+                $from->getQuery()->from,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $from->getQuery()->from,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

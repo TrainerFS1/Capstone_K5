@@ -74,6 +74,7 @@ class Person extends \Faker\Provider\Person
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Belgian Rijksregister numbers are used to identify each citizen,
      * it consists of three parts, the person's day of birth, in the
      * format 'ymd', followed by a number between 1 and 997, odd for
@@ -86,6 +87,8 @@ class Person extends \Faker\Provider\Person
      *
      * @return string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *  Belgian Rijksregister numbers are used to identify each citizen,
      *  it consists of three parts, the person's day of birth, in the
      *  format 'ymd', followed by a number between 1 and 997, odd for
@@ -97,6 +100,9 @@ class Person extends \Faker\Provider\Person
      *  @param string|null $gender 'male', 'female' or null for any
      *
      *  @return string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function rrn($gender = null)

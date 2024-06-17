@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Exception;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Mockery\CountValidator\Exception;
 use Mockery\LegacyMockInterface;
@@ -157,6 +164,8 @@ class InvalidCountException extends Exception
      * @return self
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery;
 use Mockery\Exception\RuntimeException;
 
@@ -178,6 +187,9 @@ class InvalidCountException extends Mockery\CountValidator\Exception
         return $this;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMethodName($name)
     {
@@ -185,6 +197,7 @@ class InvalidCountException extends Mockery\CountValidator\Exception
         return $this;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return self
@@ -195,6 +208,8 @@ class InvalidCountException extends Mockery\CountValidator\Exception
         return $this;
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setActualCount($count)
     {
         $this->actual = $count;
@@ -247,5 +262,8 @@ class InvalidCountException extends Mockery\CountValidator\Exception
     {
         return $this->expectedComparative;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

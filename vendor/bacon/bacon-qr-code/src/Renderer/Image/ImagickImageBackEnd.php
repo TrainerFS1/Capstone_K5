@@ -24,6 +24,7 @@ use ImagickPixel;
 final class ImagickImageBackEnd implements ImageBackEndInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private string $imageFormat;
 
     private int $compressionQuality;
@@ -34,6 +35,8 @@ final class ImagickImageBackEnd implements ImageBackEndInterface
 
     private ?int $gradientCount;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var string
      */
@@ -58,22 +61,31 @@ final class ImagickImageBackEnd implements ImageBackEndInterface
      * @var int|null
      */
     private $gradientCount;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var TransformationMatrix[]|null
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?array $matrices;
 
     private ?int $matrixIndex;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $matrices;
 
     /**
      * @var int|null
      */
     private $matrixIndex;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(string $imageFormat = 'png', int $compressionQuality = 100)

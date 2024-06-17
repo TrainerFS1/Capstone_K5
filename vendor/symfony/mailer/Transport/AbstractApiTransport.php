@@ -38,6 +38,7 @@ abstract class AbstractApiTransport extends AbstractHttpTransport
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return Address[]
      */
@@ -45,11 +46,16 @@ abstract class AbstractApiTransport extends AbstractHttpTransport
     {
         return array_filter($envelope->getRecipients(), fn (Address $address) => false === \in_array($address, array_merge($email->getCc(), $email->getBcc()), true));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function getRecipients(Email $email, Envelope $envelope): array
     {
         return array_filter($envelope->getRecipients(), function (Address $address) use ($email) {
             return false === \in_array($address, array_merge($email->getCc(), $email->getBcc()), true);
         });
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

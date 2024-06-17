@@ -35,7 +35,11 @@ class Inline
     private static bool $constantSupport = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function initialize(int $flags, ?int $parsedLineNumber = null, ?string $parsedFilename = null): void
+=======
+    public static function initialize(int $flags, int $parsedLineNumber = null, string $parsedFilename = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function initialize(int $flags, int $parsedLineNumber = null, string $parsedFilename = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,7 +64,11 @@ class Inline
      * @throws ParseException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function parse(string $value, int $flags = 0, array &$references = []): mixed
+=======
+    public static function parse(string $value = null, int $flags = 0, array &$references = []): mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function parse(string $value = null, int $flags = 0, array &$references = []): mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -119,6 +127,7 @@ class Inline
                 return self::dumpNull($flags);
             case $value instanceof \DateTimeInterface:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return $value->format(match (true) {
                     !$length = \strlen(rtrim($value->format('u'), '0')) => 'c',
                     $length < 4 => 'Y-m-d\TH:i:s.vP',
@@ -126,6 +135,11 @@ class Inline
                 });
             case $value instanceof \UnitEnum:
                 return sprintf('!php/enum %s::%s', $value::class, $value->name);
+=======
+                return $value->format('c');
+            case $value instanceof \UnitEnum:
+                return sprintf('!php/const %s::%s', $value::class, $value->name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return $value->format('c');
             case $value instanceof \UnitEnum:
@@ -172,7 +186,11 @@ class Inline
                         // Preserve float data type since storing a whole number will result in integer value.
                         if (!str_contains($repr, 'E')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $repr .= '.0';
+=======
+                            $repr = $repr.'.0';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $repr = $repr.'.0';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -262,10 +280,13 @@ class Inline
         $output = [];
         foreach ($value as $key => $val) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (\is_int($key) && Yaml::DUMP_NUMERIC_KEY_AS_STRING & $flags) {
                 $key = (string) $key;
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $output[] = sprintf('%s: %s', self::dump($key, $flags), self::dump($val, $flags));
@@ -289,7 +310,11 @@ class Inline
      * @throws ParseException When malformed inline YAML string is parsed
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function parseScalar(string $scalar, int $flags = 0, ?array $delimiters = null, int &$i = 0, bool $evaluate = true, array &$references = [], ?bool &$isQuoted = null): mixed
+=======
+    public static function parseScalar(string $scalar, int $flags = 0, array $delimiters = null, int &$i = 0, bool $evaluate = true, array &$references = [], bool &$isQuoted = null): mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function parseScalar(string $scalar, int $flags = 0, array $delimiters = null, int &$i = 0, bool $evaluate = true, array &$references = [], bool &$isQuoted = null): mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -553,7 +578,11 @@ class Inline
                             $output += $value;
                         } elseif ($allowOverwrite || !isset($output[$key])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             if (!$isValueQuoted && \is_string($value) && '' !== $value && '&' === $value[0] && !self::isBinaryString($value) && Parser::preg_match(Parser::REFERENCE_PATTERN, $value, $matches)) {
+=======
+                            if (!$isValueQuoted && \is_string($value) && '' !== $value && '&' === $value[0] && Parser::preg_match(Parser::REFERENCE_PATTERN, $value, $matches)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             if (!$isValueQuoted && \is_string($value) && '' !== $value && '&' === $value[0] && Parser::preg_match(Parser::REFERENCE_PATTERN, $value, $matches)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -586,7 +615,11 @@ class Inline
      * @throws ParseException when object parsing support was disabled and the parser detected a PHP object or when a reference could not be resolved
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function evaluateScalar(string $scalar, int $flags, array &$references = [], ?bool &$isQuotedString = null): mixed
+=======
+    private static function evaluateScalar(string $scalar, int $flags, array &$references = [], bool &$isQuotedString = null): mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function evaluateScalar(string $scalar, int $flags, array &$references = [], bool &$isQuotedString = null): mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -677,6 +710,7 @@ class Inline
 
                             $i = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $enumName = self::parseScalar(substr($scalar, 10), 0, null, $i, false);
                             $useName = str_contains($enumName, '::');
                             $enum = $useName ? strstr($enumName, '::', true) : $enumName;
@@ -698,6 +732,8 @@ class Inline
                             $value = \constant($enumName);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             $enum = self::parseScalar(substr($scalar, 10), 0, null, $i, false);
                             if ($useValue = str_ends_with($enum, '->value')) {
                                 $enum = substr($enum, 0, -7);
@@ -711,13 +747,20 @@ class Inline
                             if (!$value instanceof \UnitEnum) {
                                 throw new ParseException(sprintf('The string "%s" is not the name of a valid enum.', $enum), self::$parsedLineNumber + 1, $scalar, self::$parsedFilename);
                             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             if (!$useValue) {
                                 return $value;
                             }
                             if (!$value instanceof \BackedEnum) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 throw new ParseException(sprintf('The enum "%s" defines no value next to its name.', $enumName), self::$parsedLineNumber + 1, $scalar, self::$parsedFilename);
+=======
+                                throw new ParseException(sprintf('The enum "%s" defines no value next to its name.', $enum), self::$parsedLineNumber + 1, $scalar, self::$parsedFilename);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 throw new ParseException(sprintf('The enum "%s" defines no value next to its name.', $enum), self::$parsedLineNumber + 1, $scalar, self::$parsedFilename);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -777,10 +820,13 @@ class Inline
                         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         if ('' !== rtrim($time->format('u'), '0')) {
                             return (float) $time->format('U.u');
                         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         try {

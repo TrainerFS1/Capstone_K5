@@ -26,7 +26,11 @@ final class Dsn
     private array $options;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $scheme, string $host, ?string $user = null, #[\SensitiveParameter] ?string $password = null, ?int $port = null, array $options = [])
+=======
+    public function __construct(string $scheme, string $host, string $user = null, #[\SensitiveParameter] string $password = null, int $port = null, array $options = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $scheme, string $host, string $user = null, #[\SensitiveParameter] string $password = null, int $port = null, array $options = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -39,6 +43,7 @@ final class Dsn
         $this->options = $options;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static function fromString(#[\SensitiveParameter] string $dsn): self
     {
@@ -61,6 +66,8 @@ final class Dsn
 
         return new self($params['scheme'], $params['host'], $user, $password, $port, $query);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function fromString(string $dsn): self
     {
         if (false === $parsedDsn = parse_url($dsn)) {
@@ -81,6 +88,9 @@ final class Dsn
         parse_str($parsedDsn['query'] ?? '', $query);
 
         return new self($parsedDsn['scheme'], $parsedDsn['host'], $user, $password, $port, $query);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -105,7 +115,11 @@ final class Dsn
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getPort(?int $default = null): ?int
+=======
+    public function getPort(int $default = null): ?int
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getPort(int $default = null): ?int
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -114,7 +128,11 @@ final class Dsn
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getOption(string $key, mixed $default = null): mixed
+=======
+    public function getOption(string $key, mixed $default = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getOption(string $key, mixed $default = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

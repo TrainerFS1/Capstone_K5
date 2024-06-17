@@ -36,7 +36,11 @@ class NumberComparator extends Comparator
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|null $test A comparison string or null
+=======
+     * @param string|int $test A comparison string or an integer
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string|int $test A comparison string or an integer
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -8,7 +8,11 @@ use Illuminate\Filesystem\Filesystem;
  * @method static \Illuminate\Contracts\Filesystem\Filesystem drive(string|null $name = null)
  * @method static \Illuminate\Contracts\Filesystem\Filesystem disk(string|null $name = null)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Contracts\Filesystem\Cloud cloud()
+=======
+ * @method static \Illuminate\Contracts\Filesystem\Filesystem cloud()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static \Illuminate\Contracts\Filesystem\Filesystem cloud()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -29,7 +33,11 @@ use Illuminate\Filesystem\Filesystem;
  * @method static string|null get(string $path)
  * @method static resource|null readStream(string $path)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static bool put(string $path, \Psr\Http\Message\StreamInterface|\Illuminate\Http\File|\Illuminate\Http\UploadedFile|string|resource $contents, mixed $options = [])
+=======
+ * @method static bool put(string $path, string|resource $contents, mixed $options = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static bool put(string $path, string|resource $contents, mixed $options = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -59,7 +67,10 @@ use Illuminate\Filesystem\Filesystem;
  * @method static bool directoryMissing(string $path)
  * @method static string path(string $path)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static array|null json(string $path, int $flags = 0)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Symfony\Component\HttpFoundation\StreamedResponse response(string $path, string|null $name = null, array $headers = [], string|null $disposition = 'inline')

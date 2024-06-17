@@ -20,7 +20,11 @@ final class UnableToReadFile extends RuntimeException implements FilesystemOpera
     private $reason = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function fromLocation(string $location, string $reason = '', ?Throwable $previous = null): UnableToReadFile
+=======
+    public static function fromLocation(string $location, string $reason = '', Throwable $previous = null): UnableToReadFile
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function fromLocation(string $location, string $reason = '', Throwable $previous = null): UnableToReadFile
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

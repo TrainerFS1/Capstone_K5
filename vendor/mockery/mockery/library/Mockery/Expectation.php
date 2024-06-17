@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,12 +28,16 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
 use Closure;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Hamcrest\Matcher;
 use Hamcrest_Matcher;
@@ -141,6 +148,8 @@ class Expectation implements ExpectationInterface
      *
      * @var LegacyMockInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Matcher\NoArgs;
 use Mockery\Matcher\AnyArgs;
 use Mockery\Matcher\AndAnyOtherArgs;
@@ -153,6 +162,9 @@ class Expectation implements ExpectationInterface
      * Mock object to which this expectation belongs
      *
      * @var \Mockery\LegacyMockInterface
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected $_mock = null;
@@ -166,7 +178,10 @@ class Expectation implements ExpectationInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Exception message
      *
      * @var string|null
@@ -231,6 +246,9 @@ class Expectation implements ExpectationInterface
     protected $_setQueue = array();
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Integer representing the call order of this expectation
      *
@@ -240,7 +258,10 @@ class Expectation implements ExpectationInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Integer representing the call order of this expectation on a global basis
      *
      * @var int
@@ -263,6 +284,9 @@ class Expectation implements ExpectationInterface
     protected $_globally = false;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Flag indicating if the return value should be obtained from the original
      * class method instead of returning predefined values from the return queue
@@ -272,6 +296,7 @@ class Expectation implements ExpectationInterface
     protected $_passthru = false;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Array of return values as a queue for multiple return sequence
      *
@@ -307,12 +332,17 @@ class Expectation implements ExpectationInterface
      */
     public function __construct(LegacyMockInterface $mock, $name)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Constructor
      *
      * @param \Mockery\LegacyMockInterface $mock
      * @param string $name
      */
     public function __construct(\Mockery\LegacyMockInterface $mock, $name)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->_mock = $mock;
@@ -321,6 +351,7 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Cloning logic
      */
@@ -341,18 +372,26 @@ class Expectation implements ExpectationInterface
      * Return a string with the method name and arguments formatted
      *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return a string with the method name and arguments formatted
      *
      * @param string $name Name of the expected method
      * @param array $args List of arguments to the method
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
      */
     public function __toString()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Mockery::formatArgs($this->_name, $this->_expectedArgs);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return \Mockery::formatArgs($this->_name, $this->_expectedArgs);
     }
 
@@ -688,6 +727,9 @@ class Expectation implements ExpectationInterface
             }
             return true;
         });
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -696,7 +738,10 @@ class Expectation implements ExpectationInterface
      *
      * @param mixed ...$args
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return self
@@ -705,13 +750,17 @@ class Expectation implements ExpectationInterface
     {
         $this->_returnQueue = $args;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Sets up a closure to return the nth argument from the expected method call
      *
@@ -770,12 +819,21 @@ class Expectation implements ExpectationInterface
      *
      * @param mixed ...$args
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Set a return value, or sequential queue of return values
+     *
+     * @param mixed ...$args
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return self
      */
     public function andReturns(...$args)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->andReturn(...$args);
+=======
+        return call_user_func_array([$this, 'andReturn'], $args);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return call_user_func_array([$this, 'andReturn'], $args);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -793,12 +851,15 @@ class Expectation implements ExpectationInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return self
      */
     public function andReturnTrue()
     {
         return $this->andReturn(true);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set a sequential queue of return values with an array
      *
      * @param array $values
@@ -844,6 +905,9 @@ class Expectation implements ExpectationInterface
 
         $this->_closureQueue = [$closure];
         return $this;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -854,6 +918,7 @@ class Expectation implements ExpectationInterface
      */
     public function andReturnUndefined()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return $this->andReturn(new Undefined());
     }
@@ -874,10 +939,14 @@ class Expectation implements ExpectationInterface
 =======
         $this->andReturn(new \Mockery\Undefined());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        $this->andReturn(new \Mockery\Undefined());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Set a sequential queue of return values with an array
      *
@@ -887,6 +956,8 @@ class Expectation implements ExpectationInterface
     {
         return $this->andReturn(...$values);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return null. This is merely a language construct for Mock describing.
      *
      * @return self
@@ -946,6 +1017,9 @@ class Expectation implements ExpectationInterface
             }
         }
         return $this->andReturnValues($exceptions);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -954,8 +1028,12 @@ class Expectation implements ExpectationInterface
      *
      * @param string $name
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array  ...$values
      *
+=======
+     * @param array ...$values
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array ...$values
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -965,13 +1043,17 @@ class Expectation implements ExpectationInterface
     {
         $this->_setQueue[$name] = $values;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Set Exception class and arguments to that class to be thrown
      *
@@ -1025,10 +1107,16 @@ class Expectation implements ExpectationInterface
      *
      * @param mixed ...$args
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Sets up a closure that will yield each of the provided args
+     *
+     * @param mixed ...$args
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return self
      */
     public function andYield(...$args)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $closure = static function () use ($args) {
             foreach ($args as $arg) {
@@ -1038,6 +1126,8 @@ class Expectation implements ExpectationInterface
 
         $this->_closureQueue = [$closure];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->_closureQueue = [
             static function () use ($args) {
                 foreach ($args as $arg) {
@@ -1045,12 +1135,16 @@ class Expectation implements ExpectationInterface
                 }
             },
         ];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Sets next count validator to the AtLeast instance
      *
@@ -1112,6 +1206,8 @@ class Expectation implements ExpectationInterface
         if ($director instanceof ExpectationDirector) {
             $director->makeExpectationDefault($this);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Alias to andSet(). Allows the natural English construct
      * - set('foo', 'bar')->andReturn('bar')
      *
@@ -1154,6 +1250,9 @@ class Expectation implements ExpectationInterface
         if ('Mockery\CountValidator\Exact' !== $this->_countValidatorClass) {
             $this->_countValidatorClass = 'Mockery\CountValidator\Exact';
             unset($this->_countValidators[$this->_countValidatorClass]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -1161,6 +1260,7 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return null|string
      */
@@ -1267,6 +1367,8 @@ class Expectation implements ExpectationInterface
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Indicates that this expectation is never expected to be called
      *
      * @return self
@@ -1287,6 +1389,7 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Indicates that this expectation must be called in a specific given order
      *
@@ -1384,6 +1487,8 @@ class Expectation implements ExpectationInterface
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Indicates that this expectation is expected exactly twice
      *
      * @return self
@@ -1394,6 +1499,7 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Verify call order
      *
@@ -1475,6 +1581,8 @@ class Expectation implements ExpectationInterface
         $this->_expectedArgs = [new AnyArgs()];
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Sets next count validator to the AtLeast instance
      *
      * @return self
@@ -1482,11 +1590,15 @@ class Expectation implements ExpectationInterface
     public function atLeast()
     {
         $this->_countValidatorClass = 'Mockery\CountValidator\AtLeast';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Expected arguments for the expectation passed as an array or a closure that matches each passed argument on
      * each function call.
@@ -1522,6 +1634,8 @@ class Expectation implements ExpectationInterface
         $this->_expectedArgs = [new NoArgs()];
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Sets next count validator to the AtMost instance
      *
      * @return self
@@ -1529,11 +1643,15 @@ class Expectation implements ExpectationInterface
     public function atMost()
     {
         $this->_countValidatorClass = 'Mockery\CountValidator\AtMost';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Expected arguments should partially match the real arguments
      *
@@ -1563,6 +1681,8 @@ class Expectation implements ExpectationInterface
     {
         return $this->atLeast()->never();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Shorthand for setting minimum and maximum constraints on call counts
      *
      * @param int $minimum
@@ -1612,6 +1732,9 @@ class Expectation implements ExpectationInterface
     {
         $this->_globally = true;
         return $this;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1621,7 +1744,10 @@ class Expectation implements ExpectationInterface
      * @param string $group
      * @param object $ordering
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return int
@@ -1629,6 +1755,7 @@ class Expectation implements ExpectationInterface
     protected function _defineOrdered($group, $ordering)
     {
         $groups = $ordering->mockery_getGroups();
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($group === null) {
             return $ordering->mockery_allocateOrder();
@@ -1643,6 +1770,8 @@ class Expectation implements ExpectationInterface
         $ordering->mockery_setGroup($group, $result);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (is_null($group)) {
             $result = $ordering->mockery_allocateOrder();
         } elseif (isset($groups[$group])) {
@@ -1651,11 +1780,15 @@ class Expectation implements ExpectationInterface
             $result = $ordering->mockery_allocateOrder();
             $ordering->mockery_setGroup($group, $result);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $result;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Fetch the return value for the matching args
      *
@@ -1841,6 +1974,8 @@ class Expectation implements ExpectationInterface
         $this->_expectedArgs = $arguments;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return order number
      *
      * @return int
@@ -1861,11 +1996,15 @@ class Expectation implements ExpectationInterface
         if (!empty($director)) {
             $director->makeExpectationDefault($this);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Expected arguments have to be matched by the given closure.
      *
@@ -1878,6 +2017,8 @@ class Expectation implements ExpectationInterface
         return $this;
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return the parent mock of the expectation
      *
      * @return \Mockery\LegacyMockInterface|\Mockery\MockInterface
@@ -1928,5 +2069,8 @@ class Expectation implements ExpectationInterface
     {
         return $this->_because;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

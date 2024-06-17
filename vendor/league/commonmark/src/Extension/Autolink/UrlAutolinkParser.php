@@ -59,11 +59,15 @@ final class UrlAutolinkParser implements InlineParserInterface
     private array $prefixes = ['www'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-var non-empty-string
      *
      * @psalm-readonly
      */
+=======
+    /** @psalm-readonly */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /** @psalm-readonly */
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -75,9 +79,12 @@ final class UrlAutolinkParser implements InlineParserInterface
     public function __construct(array $allowedProtocols = ['http', 'https', 'ftp'])
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /**
          * @psalm-suppress PropertyTypeCoercion
          */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->finalRegex = \sprintf(self::REGEX, \implode('|', $allowedProtocols));

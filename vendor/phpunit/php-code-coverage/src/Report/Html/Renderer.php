@@ -56,7 +56,11 @@ abstract class Renderer
 
             $classesBar = $this->coverageBar(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data['testedClassesPercent'],
+=======
+                $data['testedClassesPercent']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data['testedClassesPercent']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -76,7 +80,11 @@ abstract class Renderer
 
             $methodsBar = $this->coverageBar(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data['testedMethodsPercent'],
+=======
+                $data['testedMethodsPercent']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data['testedMethodsPercent']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -96,7 +104,11 @@ abstract class Renderer
 
             $linesBar = $this->coverageBar(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data['linesExecutedPercent'],
+=======
+                $data['linesExecutedPercent']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data['linesExecutedPercent']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -116,7 +128,11 @@ abstract class Renderer
 
             $pathsBar = $this->coverageBar(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data['pathsExecutedPercent'],
+=======
+                $data['pathsExecutedPercent']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data['pathsExecutedPercent']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -136,7 +152,11 @@ abstract class Renderer
 
             $branchesBar = $this->coverageBar(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $data['branchesExecutedPercent'],
+=======
+                $data['branchesExecutedPercent']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $data['branchesExecutedPercent']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -174,7 +194,11 @@ abstract class Renderer
                 'classes_level'             => $classesLevel,
                 'classes_number'            => $classesNumber,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -198,7 +222,11 @@ abstract class Renderer
                 'low_upper_bound'  => $this->thresholds->lowUpperBound(),
                 'high_lower_bound' => $this->thresholds->highLowerBound(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -225,7 +253,11 @@ abstract class Renderer
                 $breadcrumbs .= $this->inactiveBreadcrumb(
                     $step,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     array_pop($pathToRoot),
+=======
+                    array_pop($pathToRoot)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     array_pop($pathToRoot)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -243,7 +275,11 @@ abstract class Renderer
         $buffer = sprintf(
             '         <li class="breadcrumb-item active">%s</li>' . "\n",
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->name(),
+=======
+            $node->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -262,7 +298,11 @@ abstract class Renderer
             '         <li class="breadcrumb-item"><a href="%sindex.html">%s</a></li>' . "\n",
             $pathToRoot,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->name(),
+=======
+            $node->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -291,7 +331,11 @@ abstract class Renderer
             $templateName,
             '{{',
 <<<<<<< HEAD
+<<<<<<< HEAD
             '}}',
+=======
+            '}}'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             '}}'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -325,7 +369,11 @@ abstract class Renderer
             $runtime->getVendorUrl(),
             $runtime->getName(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $runtime->getVersion(),
+=======
+            $runtime->getVersion()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $runtime->getVersion()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

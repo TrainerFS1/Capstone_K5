@@ -9,7 +9,11 @@ use Faker\Extension\Helper;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @experimental This class is experimental and does not fall under our BC promise
+=======
+ * @experimental
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @experimental
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -24,16 +28,22 @@ final class DateTime implements DateTimeExtension, GeneratorAwareExtension
      * @var string[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $centuries = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
 
     private ?string $defaultTimezone = null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $centuries = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
 
     /**
      * @var string
      */
     private $defaultTimezone = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -44,7 +54,11 @@ final class DateTime implements DateTimeExtension, GeneratorAwareExtension
      * @return false|int
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getTimestamp($until = 'now')
+=======
+    protected function getTimestamp($until = 'now')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function getTimestamp($until = 'now')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +80,11 @@ final class DateTime implements DateTimeExtension, GeneratorAwareExtension
      * @param int $timestamp the UNIX / POSIX-compatible timestamp
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getTimestampDateTime(int $timestamp): \DateTime
+=======
+    protected function getTimestampDateTime(int $timestamp): \DateTime
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function getTimestampDateTime(int $timestamp): \DateTime
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -75,8 +93,11 @@ final class DateTime implements DateTimeExtension, GeneratorAwareExtension
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function resolveTimezone(?string $timezone): string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function setDefaultTimezone(string $timezone = null): void
     {
         $this->defaultTimezone = $timezone;
@@ -88,6 +109,9 @@ final class DateTime implements DateTimeExtension, GeneratorAwareExtension
     }
 
     protected function resolveTimezone(?string $timezone): string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($timezone !== null) {
@@ -101,7 +125,11 @@ final class DateTime implements DateTimeExtension, GeneratorAwareExtension
      * Internal method to set the timezone on a DateTime object.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function setTimezone(\DateTime $dateTime, ?string $timezone): \DateTime
+=======
+    protected function setTimezone(\DateTime $dateTime, ?string $timezone): \DateTime
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function setTimezone(\DateTime $dateTime, ?string $timezone): \DateTime
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

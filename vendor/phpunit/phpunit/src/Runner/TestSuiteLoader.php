@@ -11,6 +11,7 @@ namespace PHPUnit\Runner;
 
 use function array_diff;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_values;
 use function basename;
 use function get_declared_classes;
@@ -19,6 +20,8 @@ use function str_ends_with;
 use function strpos;
 use function strtolower;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function array_merge;
 use function array_values;
 use function basename;
@@ -27,6 +30,9 @@ use function get_declared_classes;
 use function stripos;
 use function strlen;
 use function strpos;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function substr;
 use PHPUnit\Framework\TestCase;
@@ -41,6 +47,7 @@ final class TestSuiteLoader
      * @psalm-var list<class-string>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static array $declaredClasses = [];
 
     /**
@@ -48,6 +55,8 @@ final class TestSuiteLoader
      */
     private static array $fileToClassesMap = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static array $loadedClasses = [];
 
     /**
@@ -61,6 +70,9 @@ final class TestSuiteLoader
             self::$declaredClasses = get_declared_classes();
         }
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -68,6 +80,7 @@ final class TestSuiteLoader
      */
     public function load(string $suiteClassFile): ReflectionClass
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $suiteClassFile = realpath($suiteClassFile);
         $suiteClassName = $this->classNameFromFileName($suiteClassFile);
@@ -109,6 +122,8 @@ final class TestSuiteLoader
                 throw new ClassDoesNotExtendTestCaseException($className, $suiteClassFile);
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $suiteClassName = $this->classNameFromFileName($suiteClassFile);
 
         if (!class_exists($suiteClassName, false)) {
@@ -156,6 +171,9 @@ final class TestSuiteLoader
             }
 
             return $class;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -173,6 +191,7 @@ final class TestSuiteLoader
 
         return $className;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -216,6 +235,8 @@ final class TestSuiteLoader
 
         return $loadedClasses;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

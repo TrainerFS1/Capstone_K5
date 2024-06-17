@@ -7,6 +7,7 @@ namespace PhpParser;
  * turn is based on work by Masato Bito.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use PhpParser\Node\Expr;
 use PhpParser\Node\Expr\Array_;
@@ -41,6 +42,8 @@ abstract class ParserAbstract implements Parser {
     /** @var PhpVersion PHP version to target on a best-effort basis */
     protected PhpVersion $phpVersion;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Expr;
 use PhpParser\Node\Expr\Cast\Double;
 use PhpParser\Node\Name;
@@ -62,6 +65,9 @@ use PhpParser\Node\VarLikeIdentifier;
 abstract class ParserAbstract implements Parser
 {
     const SYMBOL_NONE = -1;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /*
@@ -69,6 +75,7 @@ abstract class ParserAbstract implements Parser
      */
 
     /** @var int Size of $tokenToSymbol map */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected int $tokenToSymbolMapSize;
     /** @var int Size of $action table */
@@ -100,6 +107,8 @@ abstract class ParserAbstract implements Parser
     /** @var array<int, string> Names of the production rules (only necessary for debugging) */
     protected array $productions;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $tokenToSymbolMapSize;
     /** @var int Size of $action table */
     protected $actionTableSize;
@@ -125,11 +134,15 @@ abstract class ParserAbstract implements Parser
     protected $symbolToName;
     /** @var array Names of the production rules (only necessary for debugging) */
     protected $productions;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /** @var int[] Map of states to a displacement into the $action table. The corresponding action for this
      *             state/symbol pair is $action[$actionBase[$state] + $symbol]. If $actionBase[$state] is 0, the
      *             action is defaulted, i.e. $actionDefault[$state] should be used instead. */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected array $actionBase;
     /** @var int[] Table of actions. Indexed according to $actionBase comment. */
@@ -160,6 +173,8 @@ abstract class ParserAbstract implements Parser
      *             be popped from the stack(s) on reduction. */
     protected array $ruleToLength;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $actionBase;
     /** @var int[] Table of actions. Indexed according to $actionBase comment. */
     protected $action;
@@ -188,12 +203,16 @@ abstract class ParserAbstract implements Parser
     /** @var int[] Map of rules to the length of their right-hand side, which is the number of elements that have to
      *             be popped from the stack(s) on reduction. */
     protected $ruleToLength;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /*
      * The following members are part of the parser state:
      */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /** @var mixed Temporary value containing the result of last semantic action (reduction) */
     protected $semValue;
@@ -217,6 +236,8 @@ abstract class ParserAbstract implements Parser
     /** @var int Current position in token array */
     protected int $tokenPos;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /** @var Lexer Lexer that is used when parsing */
     protected $lexer;
     /** @var mixed Temporary value containing the result of last semantic action (reduction) */
@@ -236,13 +257,20 @@ abstract class ParserAbstract implements Parser
     protected $errorHandler;
     /** @var int Error state, used to avoid error floods */
     protected $errorState;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Initialize $reduceCallbacks map.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function initReduceCallbacks(): void;
+=======
+    abstract protected function initReduceCallbacks();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function initReduceCallbacks();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -250,6 +278,7 @@ abstract class ParserAbstract implements Parser
     /**
      * Creates a parser instance.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Options:
      *  * phpVersion: ?PhpVersion,
@@ -271,6 +300,8 @@ abstract class ParserAbstract implements Parser
             [\T_WHITESPACE, \T_OPEN_TAG, \T_COMMENT, \T_DOC_COMMENT, \T_BAD_CHARACTER], true
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Options: Currently none.
      *
      * @param Lexer $lexer A lexer
@@ -285,6 +316,9 @@ abstract class ParserAbstract implements Parser
         }
 
         $this->initReduceCallbacks();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -301,6 +335,7 @@ abstract class ParserAbstract implements Parser
      * @return Node\Stmt[]|null Array of statements (or null non-throwing error handler is used and
      *                          the parser was unable to recover from an error).
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function parse(string $code, ?ErrorHandler $errorHandler = null): ?array {
         $this->errorHandler = $errorHandler ?: new ErrorHandler\Throwing();
@@ -334,6 +369,8 @@ abstract class ParserAbstract implements Parser
             $traverser->traverse($result);
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function parse(string $code, ErrorHandler $errorHandler = null) {
         $this->errorHandler = $errorHandler ?: new ErrorHandler\Throwing;
 
@@ -346,11 +383,15 @@ abstract class ParserAbstract implements Parser
         $this->endAttributeStack = [];
         $this->semStack = [];
         $this->semValue = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $result;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function getTokens(): array {
         return $this->tokens;
@@ -367,6 +408,8 @@ abstract class ParserAbstract implements Parser
         $this->tokenStartStack = [];
         $this->tokenEndStack = [0];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function doParse() {
         // We start off with no lookahead-token
         $symbol = self::SYMBOL_NONE;
@@ -381,6 +424,9 @@ abstract class ParserAbstract implements Parser
         // Keep stack of start and end attributes
         $this->startAttributeStack = [];
         $this->endAttributeStack = [$endAttributes];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         // Start off in the initial state and keep a stack of previous states
@@ -403,6 +449,7 @@ abstract class ParserAbstract implements Parser
             } else {
                 if ($symbol === self::SYMBOL_NONE) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     do {
                         $token = $this->tokens[++$this->tokenPos];
                         $tokenId = $token->id;
@@ -412,6 +459,8 @@ abstract class ParserAbstract implements Parser
                     $tokenValue = $token->text;
                     if (!isset($this->phpTokenToSymbol[$tokenId])) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     // Fetch the next token id from the lexer and fetch additional info by-ref.
                     // The end attributes are fetched into a temporary variable and only set once the token is really
                     // shifted (not during read). Otherwise you would sometimes get off-by-one errors, when a rule is
@@ -424,6 +473,9 @@ abstract class ParserAbstract implements Parser
                         : $this->invalidSymbol;
 
                     if ($symbol === $this->invalidSymbol) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         throw new \RangeException(sprintf(
                             'The lexer returned an invalid token (id=%d, value=%s)',
@@ -431,7 +483,13 @@ abstract class ParserAbstract implements Parser
                         ));
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $symbol = $this->phpTokenToSymbol[$tokenId];
+=======
+
+                    // Allow productions to access the start attributes of the lookahead token.
+                    $this->lookaheadStartAttributes = $startAttributes;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
                     // Allow productions to access the start attributes of the lookahead token.
@@ -462,8 +520,14 @@ abstract class ParserAbstract implements Parser
                         $stateStack[$stackPos] = $state = $action;
                         $this->semStack[$stackPos] = $tokenValue;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $this->tokenStartStack[$stackPos] = $this->tokenPos;
                         $this->tokenEndStack[$stackPos] = $this->tokenPos;
+=======
+                        $this->startAttributeStack[$stackPos] = $startAttributes;
+                        $this->endAttributeStack[$stackPos] = $endAttributes;
+                        $this->endAttributes = $endAttributes;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $this->startAttributeStack[$stackPos] = $startAttributes;
                         $this->endAttributeStack[$stackPos] = $endAttributes;
@@ -495,6 +559,7 @@ abstract class ParserAbstract implements Parser
                     //$this->traceAccept();
                     return $this->semValue;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 }
                 if ($rule !== $this->unexpectedTokenRule) {
                     /* reduce */
@@ -512,6 +577,8 @@ abstract class ParserAbstract implements Parser
                         if (-1 === $e->getStartLine()) {
                             $e->setStartLine($this->tokens[$this->tokenPos]->line);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 } elseif ($rule !== $this->unexpectedTokenRule) {
                     /* reduce */
                     //$this->traceReduce($rule);
@@ -521,6 +588,9 @@ abstract class ParserAbstract implements Parser
                     } catch (Error $e) {
                         if (-1 === $e->getStartLine() && isset($startAttributes['startLine'])) {
                             $e->setStartLine($startAttributes['startLine']);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         }
 
@@ -531,7 +601,12 @@ abstract class ParserAbstract implements Parser
 
                     /* Goto - shift nonterminal */
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $lastTokenEnd = $this->tokenEndStack[$stackPos];
+=======
+                    $lastEndAttributes = $this->endAttributeStack[$stackPos];
+                    $ruleLength = $this->ruleToLength[$rule];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $lastEndAttributes = $this->endAttributeStack[$stackPos];
                     $ruleLength = $this->ruleToLength[$rule];
@@ -549,15 +624,21 @@ abstract class ParserAbstract implements Parser
                     $stateStack[$stackPos]     = $state;
                     $this->semStack[$stackPos] = $this->semValue;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->tokenEndStack[$stackPos] = $lastTokenEnd;
                     if ($ruleLength === 0) {
                         // Empty productions use the start attributes of the lookahead token.
                         $this->tokenStartStack[$stackPos] = $this->tokenPos;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $this->endAttributeStack[$stackPos] = $lastEndAttributes;
                     if ($ruleLength === 0) {
                         // Empty productions use the start attributes of the lookahead token.
                         $this->startAttributeStack[$stackPos] = $this->lookaheadStartAttributes;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     }
                 } else {
@@ -566,9 +647,14 @@ abstract class ParserAbstract implements Parser
                         case 0:
                             $msg = $this->getErrorMessage($symbol, $state);
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $this->emitError(new Error($msg, $this->getAttributesForToken($this->tokenPos)));
                             // Break missing intentionally
                             // no break
+=======
+                            $this->emitError(new Error($msg, $startAttributes + $endAttributes));
+                            // Break missing intentionally
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $this->emitError(new Error($msg, $startAttributes + $endAttributes));
                             // Break missing intentionally
@@ -600,8 +686,14 @@ abstract class ParserAbstract implements Parser
                             // We treat the error symbol as being empty, so we reset the end attributes
                             // to the end attributes of the last non-error symbol
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $this->tokenStartStack[$stackPos] = $this->tokenPos;
                             $this->tokenEndStack[$stackPos] = $this->tokenEndStack[$stackPos - 1];
+=======
+                            $this->startAttributeStack[$stackPos] = $this->lookaheadStartAttributes;
+                            $this->endAttributeStack[$stackPos] = $this->endAttributeStack[$stackPos - 1];
+                            $this->endAttributes = $this->endAttributeStack[$stackPos - 1];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $this->startAttributeStack[$stackPos] = $this->lookaheadStartAttributes;
                             $this->endAttributeStack[$stackPos] = $this->endAttributeStack[$stackPos - 1];
@@ -634,7 +726,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function emitError(Error $error): void {
+=======
+    protected function emitError(Error $error) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function emitError(Error $error) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -646,17 +742,23 @@ abstract class ParserAbstract implements Parser
      *
      * @param int $symbol Unexpected symbol
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $state State at time of error
      *
      * @return string Formatted error message
      */
     protected function getErrorMessage(int $symbol, int $state): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $state  State at time of error
      *
      * @return string Formatted error message
      */
     protected function getErrorMessage(int $symbol, int $state) : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $expectedString = '';
         if ($expected = $this->getExpectedTokens($state)) {
@@ -674,7 +776,11 @@ abstract class ParserAbstract implements Parser
      * @return string[] Expected tokens. If too many, an empty array is returned.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function getExpectedTokens(int $state): array {
+=======
+    protected function getExpectedTokens(int $state) : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function getExpectedTokens(int $state) : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -705,6 +811,7 @@ abstract class ParserAbstract implements Parser
         return $expected;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * Get attributes for a node with the given start and end token positions.
@@ -750,13 +857,19 @@ abstract class ParserAbstract implements Parser
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /*
      * Tracing functions used for debugging the parser.
      */
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function traceNewState($state, $symbol): void {
+=======
+    protected function traceNewState($state, $symbol) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function traceNewState($state, $symbol) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -764,6 +877,7 @@ abstract class ParserAbstract implements Parser
             . ', Lookahead ' . ($symbol == self::SYMBOL_NONE ? '--none--' : $this->symbolToName[$symbol]) . "\n";
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected function traceRead($symbol): void {
         echo '% Reading ' . $this->symbolToName[$symbol] . "\n";
@@ -787,6 +901,8 @@ abstract class ParserAbstract implements Parser
 
     protected function traceDiscard($symbol): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function traceRead($symbol) {
         echo '% Reading ' . $this->symbolToName[$symbol] . "\n";
     }
@@ -808,6 +924,9 @@ abstract class ParserAbstract implements Parser
     }
 
     protected function traceDiscard($symbol) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         echo '% Discard ' . $this->symbolToName[$symbol] . "\n";
     }
@@ -824,7 +943,11 @@ abstract class ParserAbstract implements Parser
      * @return Node\Stmt[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function handleNamespaces(array $stmts): array {
+=======
+    protected function handleNamespaces(array $stmts) : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function handleNamespaces(array $stmts) : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -834,8 +957,12 @@ abstract class ParserAbstract implements Parser
             // not namespaced, nothing to do
             return $stmts;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         if ('brace' === $style) {
+=======
+        } elseif ('brace' === $style) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } elseif ('brace' === $style) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -857,7 +984,11 @@ abstract class ParserAbstract implements Parser
             // For semicolon namespaces we have to move the statements after a namespace declaration into ->stmts
             $resultStmts = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
             $targetStmts = &$resultStmts;
+=======
+            $targetStmts =& $resultStmts;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $targetStmts =& $resultStmts;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -870,7 +1001,11 @@ abstract class ParserAbstract implements Parser
                     if ($stmt->stmts === null) {
                         $stmt->stmts = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $targetStmts = &$stmt->stmts;
+=======
+                        $targetStmts =& $stmt->stmts;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $targetStmts =& $stmt->stmts;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -879,7 +1014,11 @@ abstract class ParserAbstract implements Parser
                         // This handles the invalid case of mixed style namespaces
                         $resultStmts[] = $stmt;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $targetStmts = &$resultStmts;
+=======
+                        $targetStmts =& $resultStmts;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $targetStmts =& $resultStmts;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -900,7 +1039,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function fixupNamespaceAttributes(Node\Stmt\Namespace_ $stmt): void {
+=======
+    private function fixupNamespaceAttributes(Node\Stmt\Namespace_ $stmt) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function fixupNamespaceAttributes(Node\Stmt\Namespace_ $stmt) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -922,6 +1065,7 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return array<string, mixed> */
     private function getNamespaceErrorAttributes(Namespace_ $node): array {
         $attrs = $node->getAttributes();
@@ -940,6 +1084,8 @@ abstract class ParserAbstract implements Parser
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Determine namespacing style (semicolon or brace)
      *
@@ -948,7 +1094,11 @@ abstract class ParserAbstract implements Parser
      * @return null|string One of "semicolon", "brace" or null (no namespaces)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getNamespacingStyle(array $stmts): ?string {
+=======
+    private function getNamespacingStyle(array $stmts) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getNamespacingStyle(array $stmts) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -963,7 +1113,11 @@ abstract class ParserAbstract implements Parser
                         $this->emitError(new Error(
                             'Namespace declaration statement has to be the very first statement in the script',
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $this->getNamespaceErrorAttributes($stmt)
+=======
+                            $stmt->getLine() // Avoid marking the entire namespace as an error
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $stmt->getLine() // Avoid marking the entire namespace as an error
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -973,7 +1127,11 @@ abstract class ParserAbstract implements Parser
                     $this->emitError(new Error(
                         'Cannot mix bracketed namespace declarations with unbracketed namespace declarations',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $this->getNamespaceErrorAttributes($stmt)
+=======
+                        $stmt->getLine() // Avoid marking the entire namespace as an error
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $stmt->getLine() // Avoid marking the entire namespace as an error
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1003,9 +1161,12 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @return Name|Identifier */
     protected function handleBuiltinTypes(Name $name) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Fix up parsing of static property calls in PHP 5.
      *
@@ -1077,6 +1238,9 @@ abstract class ParserAbstract implements Parser
             'true'     => true,
         ];
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$name->isUnqualified()) {
             return $name;
@@ -1084,7 +1248,11 @@ abstract class ParserAbstract implements Parser
 
         $lowerName = $name->toLowerString();
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$this->phpVersion->supportsBuiltinType($lowerName)) {
+=======
+        if (!isset($builtinTypes[$lowerName])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!isset($builtinTypes[$lowerName])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1098,6 +1266,7 @@ abstract class ParserAbstract implements Parser
      * Get combined start and end attributes at a stack location
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $stackPos Stack location
      *
      * @return array<string, mixed> Combined start and end attributes
@@ -1108,6 +1277,8 @@ abstract class ParserAbstract implements Parser
 
     protected function getFloatCastKind(string $cast): int {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $pos Stack location
      *
      * @return array Combined start and end attributes
@@ -1118,6 +1289,9 @@ abstract class ParserAbstract implements Parser
 
     protected function getFloatCastKind(string $cast): int
     {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $cast = strtolower($cast);
         if (strpos($cast, 'float') !== false) {
@@ -1132,6 +1306,7 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param array<string, mixed> $attributes */
     protected function parseLNumber(string $str, array $attributes, bool $allowInvalidOctal = false): Int_ {
         try {
@@ -1141,6 +1316,8 @@ abstract class ParserAbstract implements Parser
             // Use dummy value
             return new Int_(0, $attributes);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function parseLNumber($str, $attributes, $allowInvalidOctal = false) {
         try {
             return LNumber::fromString($str, $attributes, $allowInvalidOctal);
@@ -1148,6 +1325,9 @@ abstract class ParserAbstract implements Parser
             $this->emitError($error);
             // Use dummy value
             return new LNumber(0, $attributes);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
@@ -1156,15 +1336,21 @@ abstract class ParserAbstract implements Parser
      * Parse a T_NUM_STRING token into either an integer or string node.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $str Number string
      * @param array<string, mixed> $attributes Attributes
      *
      * @return Int_|String_ Integer or string node.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $str        Number string
      * @param array  $attributes Attributes
      *
      * @return LNumber|String_ Integer or string node.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function parseNumString(string $str, array $attributes) {
@@ -1178,6 +1364,7 @@ abstract class ParserAbstract implements Parser
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new Int_($num, $attributes);
     }
 
@@ -1187,6 +1374,8 @@ abstract class ParserAbstract implements Parser
         bool $newlineAtStart, bool $newlineAtEnd, array $attributes
     ): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new LNumber($num, $attributes);
     }
 
@@ -1194,6 +1383,9 @@ abstract class ParserAbstract implements Parser
         string $string, int $indentLen, string $indentChar,
         bool $newlineAtStart, bool $newlineAtEnd, array $attributes
     ) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($indentLen === 0) {
             return $string;
@@ -1224,6 +1416,7 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param string|(Expr|InterpolatedStringPart)[] $contents
      * @param array<string, mixed> $attributes
@@ -1234,10 +1427,15 @@ abstract class ParserAbstract implements Parser
         array $attributes, array $endTokenAttributes, bool $parseUnicodeEscape
     ): Expr {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function parseDocString(
         string $startToken, $contents, string $endToken,
         array $attributes, array $endTokenAttributes, bool $parseUnicodeEscape
     ) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $kind = strpos($startToken, "'") === false
             ? String_::KIND_HEREDOC : String_::KIND_NOWDOC;
@@ -1273,7 +1471,10 @@ abstract class ParserAbstract implements Parser
         if (\is_string($contents)) {
             if ($contents === '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $attributes['rawValue'] = $contents;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return new String_('', $attributes);
@@ -1284,7 +1485,10 @@ abstract class ParserAbstract implements Parser
             );
             $contents = preg_replace('~(\r\n|\n|\r)\z~', '', $contents);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $attributes['rawValue'] = $contents;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -1296,7 +1500,11 @@ abstract class ParserAbstract implements Parser
         } else {
             assert(count($contents) > 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$contents[0] instanceof Node\InterpolatedStringPart) {
+=======
+            if (!$contents[0] instanceof Node\Scalar\EncapsedStringPart) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (!$contents[0] instanceof Node\Scalar\EncapsedStringPart) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1309,7 +1517,11 @@ abstract class ParserAbstract implements Parser
             $newContents = [];
             foreach ($contents as $i => $part) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ($part instanceof Node\InterpolatedStringPart) {
+=======
+                if ($part instanceof Node\Scalar\EncapsedStringPart) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 if ($part instanceof Node\Scalar\EncapsedStringPart) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1319,16 +1531,22 @@ abstract class ParserAbstract implements Parser
                         $i === 0, $isLast, $part->getAttributes()
                     );
 <<<<<<< HEAD
+<<<<<<< HEAD
                     if ($isLast) {
                         $part->value = preg_replace('~(\r\n|\n|\r)\z~', '', $part->value);
                     }
                     $part->setAttribute('rawValue', $part->value);
                     $part->value = String_::parseEscapeSequences($part->value, null, $parseUnicodeEscape);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $part->value = String_::parseEscapeSequences($part->value, null, $parseUnicodeEscape);
                     if ($isLast) {
                         $part->value = preg_replace('~(\r\n|\n|\r)\z~', '', $part->value);
                     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     if ('' === $part->value) {
                         continue;
@@ -1336,6 +1554,7 @@ abstract class ParserAbstract implements Parser
                 }
                 $newContents[] = $part;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
             return new InterpolatedString($newContents, $attributes);
         }
@@ -1473,6 +1692,8 @@ abstract class ParserAbstract implements Parser
         try {
             Modifiers::verifyClassModifier($a, $b);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return new Encapsed($newContents, $attributes);
         }
     }
@@ -1508,6 +1729,9 @@ abstract class ParserAbstract implements Parser
     protected function checkClassModifier($a, $b, $modifierPos) {
         try {
             Class_::verifyClassModifier($a, $b);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (Error $error) {
             $error->setAttributes($this->getAttributesAt($modifierPos));
@@ -1515,16 +1739,22 @@ abstract class ParserAbstract implements Parser
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected function checkModifier(int $a, int $b, int $modifierPos): void {
         // Jumping through some hoops here because verifyModifier() is also used elsewhere
         try {
             Modifiers::verifyModifier($a, $b);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function checkModifier($a, $b, $modifierPos) {
         // Jumping through some hoops here because verifyModifier() is also used elsewhere
         try {
             Class_::verifyModifier($a, $b);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (Error $error) {
             $error->setAttributes($this->getAttributesAt($modifierPos));
@@ -1533,7 +1763,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkParam(Param $node): void {
+=======
+    protected function checkParam(Param $node) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkParam(Param $node) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1546,7 +1780,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkTryCatch(TryCatch $node): void {
+=======
+    protected function checkTryCatch(TryCatch $node) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkTryCatch(TryCatch $node) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1558,7 +1796,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkNamespace(Namespace_ $node): void {
+=======
+    protected function checkNamespace(Namespace_ $node) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkNamespace(Namespace_ $node) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1574,7 +1816,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function checkClassName(?Identifier $name, int $namePos): void {
+=======
+    private function checkClassName($name, $namePos) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function checkClassName($name, $namePos) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1587,8 +1833,12 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param Name[] $interfaces */
     private function checkImplementedInterfaces(array $interfaces): void {
+=======
+    private function checkImplementedInterfaces(array $interfaces) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function checkImplementedInterfaces(array $interfaces) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1603,7 +1853,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkClass(Class_ $node, int $namePos): void {
+=======
+    protected function checkClass(Class_ $node, $namePos) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkClass(Class_ $node, $namePos) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1620,7 +1874,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkInterface(Interface_ $node, int $namePos): void {
+=======
+    protected function checkInterface(Interface_ $node, $namePos) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkInterface(Interface_ $node, $namePos) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1629,7 +1887,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkEnum(Enum_ $node, int $namePos): void {
+=======
+    protected function checkEnum(Enum_ $node, $namePos) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkEnum(Enum_ $node, $namePos) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1638,8 +1900,13 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkClassMethod(ClassMethod $node, int $modifierPos): void {
         if ($node->flags & Modifiers::STATIC) {
+=======
+    protected function checkClassMethod(ClassMethod $node, $modifierPos) {
+        if ($node->flags & Class_::MODIFIER_STATIC) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkClassMethod(ClassMethod $node, $modifierPos) {
         if ($node->flags & Class_::MODIFIER_STATIC) {
@@ -1664,7 +1931,11 @@ abstract class ParserAbstract implements Parser
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($node->flags & Modifiers::READONLY) {
+=======
+        if ($node->flags & Class_::MODIFIER_READONLY) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($node->flags & Class_::MODIFIER_READONLY) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1675,8 +1946,13 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkClassConst(ClassConst $node, int $modifierPos): void {
         if ($node->flags & Modifiers::STATIC) {
+=======
+    protected function checkClassConst(ClassConst $node, $modifierPos) {
+        if ($node->flags & Class_::MODIFIER_STATIC) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkClassConst(ClassConst $node, $modifierPos) {
         if ($node->flags & Class_::MODIFIER_STATIC) {
@@ -1686,7 +1962,11 @@ abstract class ParserAbstract implements Parser
                 $this->getAttributesAt($modifierPos)));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($node->flags & Modifiers::ABSTRACT) {
+=======
+        if ($node->flags & Class_::MODIFIER_ABSTRACT) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($node->flags & Class_::MODIFIER_ABSTRACT) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1695,7 +1975,11 @@ abstract class ParserAbstract implements Parser
                 $this->getAttributesAt($modifierPos)));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($node->flags & Modifiers::READONLY) {
+=======
+        if ($node->flags & Class_::MODIFIER_READONLY) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($node->flags & Class_::MODIFIER_READONLY) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1706,8 +1990,13 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkProperty(Property $node, int $modifierPos): void {
         if ($node->flags & Modifiers::ABSTRACT) {
+=======
+    protected function checkProperty(Property $node, $modifierPos) {
+        if ($node->flags & Class_::MODIFIER_ABSTRACT) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkProperty(Property $node, $modifierPos) {
         if ($node->flags & Class_::MODIFIER_ABSTRACT) {
@@ -1717,7 +2006,11 @@ abstract class ParserAbstract implements Parser
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($node->flags & Modifiers::FINAL) {
+=======
+        if ($node->flags & Class_::MODIFIER_FINAL) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($node->flags & Class_::MODIFIER_FINAL) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1727,7 +2020,11 @@ abstract class ParserAbstract implements Parser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function checkUseUse(UseItem $node, int $namePos): void {
+=======
+    protected function checkUseUse(UseUse $node, $namePos) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function checkUseUse(UseUse $node, $namePos) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1741,6 +2038,7 @@ abstract class ParserAbstract implements Parser
             ));
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -1803,6 +2101,8 @@ abstract class ParserAbstract implements Parser
 
         return $fullTokenMap;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

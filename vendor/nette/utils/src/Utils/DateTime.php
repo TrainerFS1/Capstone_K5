@@ -53,7 +53,11 @@ class DateTime extends \DateTime implements \JsonSerializable
 			}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 			return (new static)->setTimestamp((int) $time);
+=======
+			return (new static('@' . $time))->setTimezone(new \DateTimeZone(date_default_timezone_get()));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 			return (new static('@' . $time))->setTimezone(new \DateTimeZone(date_default_timezone_get()));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -135,7 +139,11 @@ class DateTime extends \DateTime implements \JsonSerializable
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * You'd better use: (clone $dt)->modify(...)
+=======
+	 * Creates a copy with a modified time.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	 * Creates a copy with a modified time.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

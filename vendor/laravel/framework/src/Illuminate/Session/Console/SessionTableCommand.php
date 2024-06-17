@@ -3,12 +3,15 @@
 namespace Illuminate\Session\Console;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Console\MigrationGeneratorCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'session:table')]
 class SessionTableCommand extends MigrationGeneratorCommand
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
@@ -16,6 +19,9 @@ use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'session:table')]
 class SessionTableCommand extends Command
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
@@ -33,6 +39,7 @@ class SessionTableCommand extends Command
     protected $description = 'Create a migration for the session database table';
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Get the migration table name.
      *
@@ -52,6 +59,8 @@ class SessionTableCommand extends Command
     {
         return __DIR__.'/stubs/database.stub';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The filesystem instance.
      *
      * @var \Illuminate\Filesystem\Filesystem
@@ -106,6 +115,9 @@ class SessionTableCommand extends Command
         $path = $this->laravel->databasePath().'/migrations';
 
         return $this->laravel['migration.creator']->create($name, $path);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

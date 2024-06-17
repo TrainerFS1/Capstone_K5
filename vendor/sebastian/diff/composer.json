@@ -15,10 +15,13 @@
         }
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "support": {
         "issues": "https://github.com/sebastianbergmann/diff/issues",
         "security": "https://github.com/sebastianbergmann/diff/security/policy"
     },
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "prefer-stable": true,
@@ -35,7 +38,11 @@
     "require-dev": {
         "phpunit/phpunit": "^10.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "symfony/process": "^6.4"
+=======
+        "symfony/process": "^4.2 || ^5"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "symfony/process": "^4.2 || ^5"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -53,7 +60,11 @@
     "extra": {
         "branch-alias": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "dev-main": "5.1-dev"
+=======
+            "dev-main": "5.0-dev"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "dev-main": "5.0-dev"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

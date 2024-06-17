@@ -139,7 +139,10 @@ class MockHandler implements \Countable
                     ($this->onRejected)($reason);
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return P\Create::rejectionFor($reason);
@@ -164,7 +167,11 @@ class MockHandler implements \Countable
                 $this->queue[] = $value;
             } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new \TypeError('Expected a Response, Promise, Throwable or callable. Found '.Utils::describeType($value));
+=======
+                throw new \TypeError('Expected a Response, Promise, Throwable or callable. Found ' . Utils::describeType($value));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new \TypeError('Expected a Response, Promise, Throwable or callable. Found ' . Utils::describeType($value));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -34,7 +34,11 @@ interface DebugLoggerInterface
      * }>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getLogs(?Request $request = null);
+=======
+    public function getLogs(Request $request = null);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getLogs(Request $request = null);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -45,6 +49,7 @@ interface DebugLoggerInterface
      * @return int
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function countErrors(?Request $request = null);
 
     /**
@@ -52,10 +57,15 @@ interface DebugLoggerInterface
      *
      * @return void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function countErrors(Request $request = null);
 
     /**
      * Removes all log records.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function clear();

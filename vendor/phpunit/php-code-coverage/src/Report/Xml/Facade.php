@@ -65,7 +65,11 @@ final class Facade
 
         $this->project = new Project(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $coverage->getReport()->name(),
+=======
+            $coverage->getReport()->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $coverage->getReport()->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,7 +141,11 @@ final class Facade
         $fileObject = $context->addFile(
             $file->name(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $file->id() . '.xml',
+=======
+            $file->id() . '.xml'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $file->id() . '.xml'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -148,7 +156,11 @@ final class Facade
         $path = substr(
             $file->pathAsString(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             strlen($this->project->projectSourceDirectory()),
+=======
+            strlen($this->project->projectSourceDirectory())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             strlen($this->project->projectSourceDirectory())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -182,7 +194,11 @@ final class Facade
 
         $fileReport->source()->setSourceCode(
 <<<<<<< HEAD
+<<<<<<< HEAD
             file_get_contents($file->pathAsString()),
+=======
+            file_get_contents($file->pathAsString())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             file_get_contents($file->pathAsString())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -203,7 +219,11 @@ final class Facade
             $unit['startLine'],
             $unit['executableLines'],
 <<<<<<< HEAD
+<<<<<<< HEAD
             $unit['executedLines'],
+=======
+            $unit['executedLines']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $unit['executedLines']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,7 +241,11 @@ final class Facade
                 (string) $method['executableLines'],
                 (string) $method['executedLines'],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 (string) $method['coverage'],
+=======
+                (string) $method['coverage']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 (string) $method['coverage']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -258,7 +282,11 @@ final class Facade
             $loc['nonCommentLinesOfCode'],
             $node->numberOfExecutableLines(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->numberOfExecutedLines(),
+=======
+            $node->numberOfExecutedLines()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->numberOfExecutedLines()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -267,7 +295,11 @@ final class Facade
         $totals->setNumClasses(
             $node->numberOfClasses(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->numberOfTestedClasses(),
+=======
+            $node->numberOfTestedClasses()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->numberOfTestedClasses()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -276,7 +308,11 @@ final class Facade
         $totals->setNumTraits(
             $node->numberOfTraits(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->numberOfTestedTraits(),
+=======
+            $node->numberOfTestedTraits()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->numberOfTestedTraits()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -285,7 +321,11 @@ final class Facade
         $totals->setNumMethods(
             $node->numberOfMethods(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->numberOfTestedMethods(),
+=======
+            $node->numberOfTestedMethods()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->numberOfTestedMethods()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -294,7 +334,11 @@ final class Facade
         $totals->setNumFunctions(
             $node->numberOfFunctions(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $node->numberOfTestedFunctions(),
+=======
+            $node->numberOfTestedFunctions()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $node->numberOfTestedFunctions()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

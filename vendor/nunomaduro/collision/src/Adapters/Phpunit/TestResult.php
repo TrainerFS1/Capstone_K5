@@ -29,8 +29,11 @@ final class TestResult
     public const DEPRECATED = 'deprecated';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const NOTICE = 'notice';
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const WARN = 'warnings';
@@ -62,8 +65,11 @@ final class TestResult
     public string $warning = '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public string $warningSource = '';
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -88,6 +94,7 @@ final class TestResult
              || $this->type === TestResult::SKIPPED
              || $this->type === TestResult::DEPRECATED
 <<<<<<< HEAD
+<<<<<<< HEAD
              || $this->type === TestResult::NOTICE
              || $this->type === TestResult::INCOMPLETE;
 
@@ -108,10 +115,15 @@ final class TestResult
             $this->warning = str_replace('__pest_evaluable_', '', $this->warning);
             $this->warning = str_replace('This test depends on "P\\', 'This test depends on "', $this->warning);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
              || $this->type === TestResult::INCOMPLETE;
 
         if ($throwable instanceof Throwable && $asWarning) {
             $this->warning = trim((string) preg_replace("/\r|\n/", ' ', $throwable->message()));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
@@ -154,6 +166,7 @@ final class TestResult
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Creates a new test from the given Pest Parallel Test Case.
      */
     public static function fromPestParallelTestCase(Test $test, string $type, Throwable $throwable = null): self
@@ -186,6 +199,8 @@ final class TestResult
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Creates a new test from the given test case.
@@ -247,6 +262,11 @@ final class TestResult
     {
         switch ($type) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            case self::DEPRECATED:
+                return 'd';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             case self::DEPRECATED:
                 return 'd';
@@ -256,10 +276,15 @@ final class TestResult
             case self::SKIPPED:
                 return '-';
 <<<<<<< HEAD
+<<<<<<< HEAD
             case self::DEPRECATED:
             case self::WARN:
             case self::RISKY:
             case self::NOTICE:
+=======
+            case self::WARN:
+            case self::RISKY:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             case self::WARN:
             case self::RISKY:
@@ -283,6 +308,11 @@ final class TestResult
     {
         switch ($type) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            case self::DEPRECATED:
+                return 'd';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             case self::DEPRECATED:
                 return 'd';
@@ -292,8 +322,11 @@ final class TestResult
             case self::SKIPPED:
                 return 's';
 <<<<<<< HEAD
+<<<<<<< HEAD
             case self::DEPRECATED:
             case self::NOTICE:
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             case self::WARN:
@@ -320,7 +353,10 @@ final class TestResult
                 return 'red';
             case self::DEPRECATED:
 <<<<<<< HEAD
+<<<<<<< HEAD
             case self::NOTICE:
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             case self::SKIPPED:
@@ -348,7 +384,10 @@ final class TestResult
                 return 'red';
             case self::DEPRECATED:
 <<<<<<< HEAD
+<<<<<<< HEAD
             case self::NOTICE:
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             case self::SKIPPED:

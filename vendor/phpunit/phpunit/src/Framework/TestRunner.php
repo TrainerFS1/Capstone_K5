@@ -12,8 +12,13 @@ namespace PHPUnit\Framework;
 use const PHP_EOL;
 use function assert;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function defined;
 use function error_clear_last;
+=======
+use function class_exists;
+use function defined;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function class_exists;
 use function defined;
@@ -32,6 +37,7 @@ use PHPUnit\Event;
 use PHPUnit\Event\NoPreviousThrowableException;
 use PHPUnit\Event\TestData\MoreThanOneDataSetFromDataProviderException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Metadata\Api\CodeCoverage as CodeCoverageMetadataApi;
 use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
 use PHPUnit\Runner\CodeCoverage;
@@ -39,6 +45,8 @@ use PHPUnit\Runner\ErrorHandler;
 use PHPUnit\TextUI\Configuration\Configuration;
 use PHPUnit\TextUI\Configuration\Registry as ConfigurationRegistry;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 use PHPUnit\Metadata\Api\CodeCoverage as CodeCoverageMetadataApi;
 use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
@@ -46,13 +54,19 @@ use PHPUnit\Runner\CodeCoverage;
 use PHPUnit\TextUI\Configuration\Configuration;
 use PHPUnit\TextUI\Configuration\Registry as ConfigurationRegistry;
 use PHPUnit\Util\ErrorHandler;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Util\GlobalState;
 use PHPUnit\Util\PHP\AbstractPhpProcess;
 use ReflectionClass;
 use SebastianBergmann\CodeCoverage\Exception as OriginalCodeCoverageException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\InvalidArgumentException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\CodeCoverage\StaticAnalysisCacheNotConfiguredException;
@@ -78,14 +92,20 @@ final class TestRunner
     /**
      * @throws \PHPUnit\Runner\Exception
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CodeCoverageException
      * @throws InvalidArgumentException
      * @throws MoreThanOneDataSetFromDataProviderException
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \SebastianBergmann\CodeCoverage\InvalidArgumentException
      * @throws CodeCoverageException
      * @throws MoreThanOneDataSetFromDataProviderException
      * @throws NoDataSetFromDataProviderException
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws UnintentionallyCoveredCodeException
      */
@@ -100,7 +120,11 @@ final class TestRunner
         $shouldCodeCoverageBeCollected = (new CodeCoverageMetadataApi)->shouldCodeCoverageBeCollectedFor(
             $test::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $test->name(),
+=======
+            $test->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $test->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -113,11 +137,15 @@ final class TestRunner
         $skipped    = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         error_clear_last();
 
         if ($this->shouldErrorHandlerBeUsed($test)) {
             ErrorHandler::instance()->enable();
         }
+=======
+        ErrorHandler::instance()->enable();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         ErrorHandler::instance()->enable();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -159,8 +187,13 @@ final class TestRunner
                     $e->getMessage(),
                     $frame['file'],
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $frame['line'],
                 ),
+=======
+                    $frame['line']
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $frame['line']
                 )
@@ -174,7 +207,10 @@ final class TestRunner
 
         if ($this->configuration->reportUselessTests() &&
 <<<<<<< HEAD
+<<<<<<< HEAD
             !$test->doesNotPerformAssertions() &&
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $test->numberOfAssertionsPerformed() === 0) {
@@ -187,7 +223,11 @@ final class TestRunner
             Event\Facade::emitter()->testConsideredRisky(
                 $test->valueObjectForEvents(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'This test does not define a code coverage target but is expected to do so',
+=======
+                'This test does not define a code coverage target but is expected to do so'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'This test does not define a code coverage target but is expected to do so'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -206,7 +246,11 @@ final class TestRunner
                     $linesToBeCovered = (new CodeCoverageMetadataApi)->linesToBeCovered(
                         $test::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $test->name(),
+=======
+                        $test->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $test->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -215,7 +259,11 @@ final class TestRunner
                     $linesToBeUsed = (new CodeCoverageMetadataApi)->linesToBeUsed(
                         $test::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $test->name(),
+=======
+                        $test->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $test->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -224,10 +272,15 @@ final class TestRunner
                     Event\Facade::emitter()->testTriggeredPhpunitWarning(
                         $test->valueObjectForEvents(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $cce->getMessage(),
                     );
 
                     $append = false;
+=======
+                        $cce->getMessage()
+                    );
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $cce->getMessage()
                     );
@@ -240,7 +293,11 @@ final class TestRunner
                     $append,
                     $linesToBeCovered,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $linesToBeUsed,
+=======
+                    $linesToBeUsed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $linesToBeUsed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -251,7 +308,11 @@ final class TestRunner
                     'This test executed code that is not listed as code to be covered or used:' .
                     PHP_EOL .
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $cce->getMessage(),
+=======
+                    $cce->getMessage()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $cce->getMessage()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -266,11 +327,14 @@ final class TestRunner
         ErrorHandler::instance()->disable();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$error &&
             !$incomplete &&
             !$skipped &&
             $this->configuration->reportUselessTests() &&
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($e)) {
             if ($test->wasPrepared()) {
                 Event\Facade::emitter()->testFinished(
@@ -283,13 +347,20 @@ final class TestRunner
         }
 
         if ($this->configuration->reportUselessTests() &&
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             !$test->doesNotPerformAssertions() &&
             $test->numberOfAssertionsPerformed() === 0) {
             Event\Facade::emitter()->testConsideredRisky(
                 $test->valueObjectForEvents(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'This test did not perform any assertions',
+=======
+                'This test did not perform any assertions'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'This test did not perform any assertions'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -301,6 +372,7 @@ final class TestRunner
             Event\Facade::emitter()->testConsideredRisky(
                 $test->valueObjectForEvents(),
                 sprintf(
+<<<<<<< HEAD
 <<<<<<< HEAD
                     'This test is not expected to perform assertions but performed %d assertion%s',
                     $test->numberOfAssertionsPerformed(),
@@ -315,6 +387,8 @@ final class TestRunner
 
         if ($this->configuration->disallowTestOutput() && $test->hasUnexpectedOutput()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     'This test is not expected to perform assertions but performed %d assertions',
                     $test->numberOfAssertionsPerformed()
                 )
@@ -322,14 +396,22 @@ final class TestRunner
         }
 
         if ($this->configuration->disallowTestOutput() && $test->hasOutput()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Event\Facade::emitter()->testConsideredRisky(
                 $test->valueObjectForEvents(),
                 sprintf(
                     'This test printed output: %s',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $test->output(),
                 ),
+=======
+                    $test->output()
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $test->output()
                 )
@@ -341,7 +423,11 @@ final class TestRunner
             Event\Facade::emitter()->testFinished(
                 $test->valueObjectForEvents(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $test->numberOfAssertionsPerformed(),
+=======
+                $test->numberOfAssertionsPerformed()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $test->numberOfAssertionsPerformed()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -366,17 +452,23 @@ final class TestRunner
         if ($runEntireClass) {
             $template = new Template(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 __DIR__ . '/../Util/PHP/Template/TestCaseClass.tpl',
             );
         } else {
             $template = new Template(
                 __DIR__ . '/../Util/PHP/Template/TestCaseMethod.tpl',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 __DIR__ . '/../Util/PHP/Template/TestCaseClass.tpl'
             );
         } else {
             $template = new Template(
                 __DIR__ . '/../Util/PHP/Template/TestCaseMethod.tpl'
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -399,9 +491,13 @@ final class TestRunner
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $exportObjects    = Event\Facade::emitter()->exportsObjects() ? 'true' : 'false';
         $coverage         = CodeCoverage::instance()->isActive() ? 'true' : 'false';
         $linesToBeIgnored = var_export(CodeCoverage::instance()->linesToBeIgnored(), true);
+=======
+        $coverage = CodeCoverage::instance()->isActive() ? 'true' : 'false';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $coverage = CodeCoverage::instance()->isActive() ? 'true' : 'false';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -425,6 +521,7 @@ final class TestRunner
         // must do these fixes because TestCaseMethod.tpl has unserialize('{data}') in it, and we can't break BC
         // the lines above used to use addcslashes() rather than var_export(), which breaks null byte escape sequences
 <<<<<<< HEAD
+<<<<<<< HEAD
         $data                    = "'." . $data . ".'";
         $dataName                = "'.(" . $dataName . ").'";
         $dependencyInput         = "'." . $dependencyInput . ".'";
@@ -433,6 +530,8 @@ final class TestRunner
         $serializedConfiguration = $this->saveConfigurationForChildProcess();
         $processResultFile       = tempnam(sys_get_temp_dir(), 'phpunit_');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $data            = "'." . $data . ".'";
         $dataName        = "'.(" . $dataName . ").'";
         $dependencyInput = "'." . $dependencyInput . ".'";
@@ -441,6 +540,9 @@ final class TestRunner
         $offset = hrtime();
 
         $serializedConfiguration = $this->saveConfigurationForChildProcess();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $var = [
@@ -451,7 +553,10 @@ final class TestRunner
             'className'                      => $class->getName(),
             'collectCodeCoverageInformation' => $coverage,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'linesToBeIgnored'               => $linesToBeIgnored,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'data'                           => $data,
@@ -467,8 +572,11 @@ final class TestRunner
             'offsetNanoseconds'              => $offset[1],
             'serializedConfiguration'        => $serializedConfiguration,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'processResultFile'              => $processResultFile,
             'exportObjects'                  => $exportObjects,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
@@ -481,7 +589,11 @@ final class TestRunner
 
         $php = AbstractPhpProcess::factory();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $php->runTestJob($template->render(), $test, $processResultFile);
+=======
+        $php->runTestJob($template->render(), $test);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $php->runTestJob($template->render(), $test);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -491,6 +603,7 @@ final class TestRunner
 
     /**
      * @psalm-param class-string $className
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
      */
@@ -513,6 +626,8 @@ final class TestRunner
                 return true;
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function hasCoverageMetadata(string $className, string $methodName): bool
     {
@@ -532,6 +647,9 @@ final class TestRunner
 
         if ($metadata->isCoversNothing()->isNotEmpty()) {
             return true;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -545,13 +663,19 @@ final class TestRunner
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!class_exists(Invoker::class)) {
             $this->timeLimitCanBeEnforced = false;
 
             return $this->timeLimitCanBeEnforced;
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->timeLimitCanBeEnforced = (new Invoker)->canInvokeWithTimeout();
 
@@ -582,6 +706,7 @@ final class TestRunner
     {
         $_timeout = $this->configuration->defaultTimeLimit();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $testSize = $test->size();
 
         if ($testSize->isSmall()) {
@@ -590,12 +715,17 @@ final class TestRunner
             $_timeout = $this->configuration->timeoutForMediumTests();
         } elseif ($testSize->isLarge()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($test->size()->isSmall()) {
             $_timeout = $this->configuration->timeoutForSmallTests();
         } elseif ($test->size()->isMedium()) {
             $_timeout = $this->configuration->timeoutForMediumTests();
         } elseif ($test->size()->isLarge()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $_timeout = $this->configuration->timeoutForLargeTests();
         }
@@ -609,8 +739,13 @@ final class TestRunner
                     'This test was aborted after %d second%s',
                     $_timeout,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $_timeout !== 1 ? 's' : '',
                 ),
+=======
+                    $_timeout !== 1 ? 's' : ''
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $_timeout !== 1 ? 's' : ''
                 )
@@ -629,9 +764,15 @@ final class TestRunner
     private function saveConfigurationForChildProcess(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $path = tempnam(sys_get_temp_dir(), 'phpunit_');
 
         if ($path === false) {
+=======
+        $path = tempnam(sys_get_temp_dir(), 'PHPUnit');
+
+        if (!$path) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $path = tempnam(sys_get_temp_dir(), 'PHPUnit');
 
@@ -647,6 +788,7 @@ final class TestRunner
         return $path;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private function shouldErrorHandlerBeUsed(TestCase $test): bool
     {
@@ -656,6 +798,8 @@ final class TestRunner
 
         return true;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

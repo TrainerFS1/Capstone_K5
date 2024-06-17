@@ -6,6 +6,7 @@ namespace PhpParser\Internal;
  * @internal
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class DiffElem {
     public const TYPE_KEEP = 0;
     public const TYPE_REMOVE = 1;
@@ -15,6 +16,8 @@ class DiffElem {
     /** @var int One of the TYPE_* constants */
     public int $type;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class DiffElem
 {
     const TYPE_KEEP = 0;
@@ -24,6 +27,9 @@ class DiffElem
 
     /** @var int One of the TYPE_* constants */
     public $type;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /** @var mixed Is null for add operations */
     public $old;
@@ -31,11 +37,14 @@ class DiffElem
     public $new;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param int $type One of the TYPE_* constants
      * @param mixed $old Is null for add operations
      * @param mixed $new Is null for remove operations
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(int $type, $old, $new) {

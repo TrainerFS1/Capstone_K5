@@ -5,6 +5,7 @@ namespace PhpParser\Builder;
 use PhpParser;
 use PhpParser\BuilderHelpers;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
 use PhpParser\Node;
 use PhpParser\Node\Stmt;
@@ -20,6 +21,8 @@ class Method extends FunctionLike {
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
 use PhpParser\Node\Stmt;
 
@@ -33,6 +36,9 @@ class Method extends FunctionLike
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -51,7 +57,11 @@ class Method extends FunctionLike
      */
     public function makePublic() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PUBLIC);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PUBLIC);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PUBLIC);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +76,11 @@ class Method extends FunctionLike
      */
     public function makeProtected() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PROTECTED);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PROTECTED);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PROTECTED);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,7 +95,11 @@ class Method extends FunctionLike
      */
     public function makePrivate() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PRIVATE);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PRIVATE);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PRIVATE);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -96,7 +114,11 @@ class Method extends FunctionLike
      */
     public function makeStatic() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::STATIC);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_STATIC);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_STATIC);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -115,7 +137,11 @@ class Method extends FunctionLike
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::ABSTRACT);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,7 +157,11 @@ class Method extends FunctionLike
      */
     public function makeFinal() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::FINAL);
+=======
+        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -175,7 +205,11 @@ class Method extends FunctionLike
      * @return Stmt\ClassMethod The built method node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): Node {
+=======
+    public function getNode() : Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNode() : Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

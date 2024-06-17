@@ -21,7 +21,11 @@ class TinkerServiceProvider extends ServiceProvider implements DeferrableProvide
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->publishes([$source => $this->app->configPath('tinker.php')]);
+=======
+            $this->publishes([$source => config_path('tinker.php')]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->publishes([$source => config_path('tinker.php')]);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

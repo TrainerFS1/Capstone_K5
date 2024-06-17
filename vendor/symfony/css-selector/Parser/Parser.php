@@ -20,7 +20,11 @@ use Symfony\Component\CssSelector\Parser\Tokenizer\Tokenizer;
  *
  * This component is a port of the Python cssselect library,
 <<<<<<< HEAD
+<<<<<<< HEAD
  * which is copyright Ian Bicking, @see https://github.com/scrapy/cssselect.
+=======
+ * which is copyright Ian Bicking, @see https://github.com/SimonSapin/cssselect.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * which is copyright Ian Bicking, @see https://github.com/SimonSapin/cssselect.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -34,7 +38,11 @@ class Parser implements ParserInterface
     private Tokenizer $tokenizer;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?Tokenizer $tokenizer = null)
+=======
+    public function __construct(Tokenizer $tokenizer = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Tokenizer $tokenizer = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +74,13 @@ class Parser implements ParserInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $joined = trim(implode('', array_map(fn (Token $token) => $token->getValue(), $tokens)));
+=======
+        $joined = trim(implode('', array_map(function (Token $token) {
+            return $token->getValue();
+        }, $tokens)));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $joined = trim(implode('', array_map(function (Token $token) {
             return $token->getValue();
@@ -102,7 +116,11 @@ class Parser implements ParserInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseSelectorList(TokenStream $stream, bool $isArgument = false): array
+=======
+    private function parseSelectorList(TokenStream $stream): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseSelectorList(TokenStream $stream): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,11 +130,15 @@ class Parser implements ParserInterface
 
         while (true) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($isArgument && $stream->getPeek()->isDelimiter([')'])) {
                 break;
             }
 
             $selectors[] = $this->parserSelectorNode($stream, $isArgument);
+=======
+            $selectors[] = $this->parserSelectorNode($stream);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $selectors[] = $this->parserSelectorNode($stream);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -133,9 +155,15 @@ class Parser implements ParserInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parserSelectorNode(TokenStream $stream, bool $isArgument = false): Node\SelectorNode
     {
         [$result, $pseudoElement] = $this->parseSimpleSelector($stream, false, $isArgument);
+=======
+    private function parserSelectorNode(TokenStream $stream): Node\SelectorNode
+    {
+        [$result, $pseudoElement] = $this->parseSimpleSelector($stream);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parserSelectorNode(TokenStream $stream): Node\SelectorNode
     {
@@ -147,11 +175,15 @@ class Parser implements ParserInterface
             $peek = $stream->getPeek();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (
                 $peek->isFileEnd()
                 || $peek->isDelimiter([','])
                 || ($isArgument && $peek->isDelimiter([')']))
             ) {
+=======
+            if ($peek->isFileEnd() || $peek->isDelimiter([','])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($peek->isFileEnd() || $peek->isDelimiter([','])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -170,7 +202,11 @@ class Parser implements ParserInterface
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             [$nextSelector, $pseudoElement] = $this->parseSimpleSelector($stream, false, $isArgument);
+=======
+            [$nextSelector, $pseudoElement] = $this->parseSimpleSelector($stream);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             [$nextSelector, $pseudoElement] = $this->parseSimpleSelector($stream);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -186,7 +222,11 @@ class Parser implements ParserInterface
      * @throws SyntaxErrorException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseSimpleSelector(TokenStream $stream, bool $insideNegation = false, bool $isArgument = false): array
+=======
+    private function parseSimpleSelector(TokenStream $stream, bool $insideNegation = false): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseSimpleSelector(TokenStream $stream, bool $insideNegation = false): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -203,7 +243,11 @@ class Parser implements ParserInterface
                 || $peek->isFileEnd()
                 || $peek->isDelimiter([',', '+', '>', '~'])
 <<<<<<< HEAD
+<<<<<<< HEAD
                 || ($isArgument && $peek->isDelimiter([')']))
+=======
+                || ($insideNegation && $peek->isDelimiter([')']))
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 || ($insideNegation && $peek->isDelimiter([')']))
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -245,6 +289,7 @@ class Parser implements ParserInterface
                 if (!$stream->getPeek()->isDelimiter(['('])) {
                     $result = new Node\PseudoNode($result, $identifier);
 <<<<<<< HEAD
+<<<<<<< HEAD
                     if ('Pseudo[Element[*]:scope]' === $result->__toString()) {
                         $used = \count($stream->getUsed());
                         if (!(2 === $used
@@ -260,6 +305,9 @@ class Parser implements ParserInterface
 =======
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     continue;
                 }
 
@@ -272,7 +320,11 @@ class Parser implements ParserInterface
                     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     [$argument, $argumentPseudoElement] = $this->parseSimpleSelector($stream, true, true);
+=======
+                    [$argument, $argumentPseudoElement] = $this->parseSimpleSelector($stream, true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     [$argument, $argumentPseudoElement] = $this->parseSimpleSelector($stream, true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -287,6 +339,7 @@ class Parser implements ParserInterface
                     }
 
                     $result = new Node\NegationNode($result, $argument);
+<<<<<<< HEAD
 <<<<<<< HEAD
                 } elseif ('is' === strtolower($identifier)) {
                     $selectors = $this->parseSelectorList($stream, true);
@@ -306,6 +359,8 @@ class Parser implements ParserInterface
                     }
 
                     $result = new Node\SpecificityAdjustmentNode($result, $selectors);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 } else {

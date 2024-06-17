@@ -23,7 +23,11 @@ class Debug
         error_reporting(-1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!\in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {
+=======
+        if (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -36,6 +40,10 @@ class Debug
         @ini_set('zend.assertions', 1);
         ini_set('assert.active', 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        ini_set('assert.warning', 0);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         ini_set('assert.warning', 0);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

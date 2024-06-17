@@ -10,8 +10,11 @@
 namespace PHPUnit\TextUI\Configuration;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function assert;
 use function count;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function is_dir;
@@ -41,6 +44,7 @@ final class TestSuiteBuilder
      */
     public function build(Configuration $configuration): TestSuite
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($configuration->hasCliArguments()) {
             $arguments = [];
@@ -83,6 +87,8 @@ final class TestSuiteBuilder
 
         EventFacade::emitter()->testSuiteLoaded(\PHPUnit\Event\TestSuite\TestSuiteBuilder::from($testSuite));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($configuration->hasCliArgument()) {
             $argument = realpath($configuration->cliArgument());
 
@@ -105,12 +111,16 @@ final class TestSuiteBuilder
         }
 
         EventFacade::emitter()->testSuiteLoaded(\PHPUnit\Event\TestSuite\TestSuite::fromTestSuite($testSuite));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $testSuite;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-param non-empty-string $path
      * @psalm-param list<non-empty-string> $suffixes
@@ -124,6 +134,8 @@ final class TestSuiteBuilder
             $suite = $suite ?: TestSuite::empty($path);
             $suite->addTestFile($path);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-param list<string> $suffixes
      *
      * @throws \PHPUnit\Framework\Exception
@@ -135,17 +147,26 @@ final class TestSuiteBuilder
 
             $suite = TestSuite::empty($path);
             $suite->addTestFiles($files);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return $suite;
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_dir($path)) {
             $files = (new FileIteratorFacade)->getFilesAsArray($path, $suffixes);
 
             $suite = $suite ?: TestSuite::empty('CLI Arguments');
             $suite->addTestFiles($files);
+=======
+        if (is_file($path) && str_ends_with($path, '.phpt')) {
+            $suite = TestSuite::empty();
+            $suite->addTestFile($path);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (is_file($path) && str_ends_with($path, '.phpt')) {
             $suite = TestSuite::empty();
@@ -163,6 +184,7 @@ final class TestSuiteBuilder
             exit(1);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (!$suite) {
             return TestSuite::fromClassReflector($testClass);
@@ -188,6 +210,9 @@ final class TestSuiteBuilder
         }
 
         return $suite;
+=======
+        return TestSuite::fromClassReflector($testClass);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return TestSuite::fromClassReflector($testClass);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

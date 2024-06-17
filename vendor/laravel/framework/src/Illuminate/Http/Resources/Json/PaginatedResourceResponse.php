@@ -51,8 +51,12 @@ class PaginatedResourceResponse extends ResourceResponse
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (method_exists($this->resource, 'paginationInformation') ||
             $this->resource->hasMacro('paginationInformation')) {
+=======
+        if (method_exists($this->resource, 'paginationInformation')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (method_exists($this->resource, 'paginationInformation')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

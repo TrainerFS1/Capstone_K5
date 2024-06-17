@@ -65,6 +65,10 @@ class QtFileLoader implements LoaderInterface
                     );
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                $translation = $translation->nextSibling;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $translation = $translation->nextSibling;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

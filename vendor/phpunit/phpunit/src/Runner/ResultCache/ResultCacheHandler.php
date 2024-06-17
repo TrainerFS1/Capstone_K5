@@ -39,17 +39,23 @@ final class ResultCacheHandler
      * @throws UnknownSubscriberTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(ResultCache $cache, Facade $facade)
     {
         $this->cache = $cache;
 
         $this->registerSubscribers($facade);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(ResultCache $cache)
     {
         $this->cache = $cache;
 
         $this->registerSubscribers();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -77,7 +83,11 @@ final class ResultCacheHandler
         $this->cache->setStatus(
             $event->test()->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             TestStatus::incomplete($event->throwable()->message()),
+=======
+            TestStatus::incomplete($event->throwable()->message())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             TestStatus::incomplete($event->throwable()->message())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -89,7 +99,11 @@ final class ResultCacheHandler
         $this->cache->setStatus(
             $event->test()->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             TestStatus::risky($event->message()),
+=======
+            TestStatus::risky($event->message())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             TestStatus::risky($event->message())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -101,7 +115,11 @@ final class ResultCacheHandler
         $this->cache->setStatus(
             $event->test()->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             TestStatus::error($event->throwable()->message()),
+=======
+            TestStatus::error($event->throwable()->message())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             TestStatus::error($event->throwable()->message())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -113,7 +131,11 @@ final class ResultCacheHandler
         $this->cache->setStatus(
             $event->test()->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             TestStatus::failure($event->throwable()->message()),
+=======
+            TestStatus::failure($event->throwable()->message())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             TestStatus::failure($event->throwable()->message())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,7 +151,11 @@ final class ResultCacheHandler
         $this->cache->setStatus(
             $event->test()->id(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             TestStatus::skipped($event->message()),
+=======
+            TestStatus::skipped($event->message())
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             TestStatus::skipped($event->message())
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -167,9 +193,15 @@ final class ResultCacheHandler
      * @throws UnknownSubscriberTypeException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function registerSubscribers(Facade $facade): void
     {
         $facade->registerSubscribers(
+=======
+    private function registerSubscribers(): void
+    {
+        Facade::registerSubscribers(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function registerSubscribers(): void
     {

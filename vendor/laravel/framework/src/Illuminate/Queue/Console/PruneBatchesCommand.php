@@ -47,7 +47,11 @@ class PruneBatchesCommand extends Command
         $this->components->info("{$count} entries deleted.");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->option('unfinished') !== null) {
+=======
+        if ($this->option('unfinished')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->option('unfinished')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -61,7 +65,11 @@ class PruneBatchesCommand extends Command
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->option('cancelled') !== null) {
+=======
+        if ($this->option('cancelled')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($this->option('cancelled')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

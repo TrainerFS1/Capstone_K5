@@ -60,6 +60,7 @@ class PassableByReferencePass extends CodeCleanerPass
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $args = [];
             foreach ($node->args as $position => $arg) {
                 $args[$arg->name !== null ? $arg->name->name : $position] = $arg;
@@ -71,11 +72,16 @@ class PassableByReferencePass extends CodeCleanerPass
                     if ($param->isPassedByReference() && !$this->isPassableByReference($arg)) {
                         throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getStartLine());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($refl->getParameters() as $key => $param) {
                 if (\array_key_exists($key, $node->args)) {
                     $arg = $node->args[$key];
                     if ($param->isPassedByReference() && !$this->isPassableByReference($arg)) {
                         throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     }
                 }
@@ -126,7 +132,11 @@ class PassableByReferencePass extends CodeCleanerPass
                 // There can be *at most* two non-passable-by-reference args in a row. This is about
                 // as close as we can get to validating the arguments for this function :-/
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getStartLine());
+=======
+                throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

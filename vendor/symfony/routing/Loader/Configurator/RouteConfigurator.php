@@ -25,7 +25,11 @@ class RouteConfigurator
     protected $parentConfigurator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(RouteCollection $collection, RouteCollection $route, string $name = '', ?CollectionConfigurator $parentConfigurator = null, ?array $prefixes = null)
+=======
+    public function __construct(RouteCollection $collection, RouteCollection $route, string $name = '', CollectionConfigurator $parentConfigurator = null, array $prefixes = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(RouteCollection $collection, RouteCollection $route, string $name = '', CollectionConfigurator $parentConfigurator = null, array $prefixes = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

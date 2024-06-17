@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Mockery (https://docs.mockery.io/)
  *
@@ -49,6 +50,8 @@ class ConstantsPass implements Pass
 
         return substr_replace($code, $constantsCode, $offset) . '}' . PHP_EOL;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
@@ -78,6 +81,9 @@ class ConstantsPass implements Pass
         $code .= "}\n";
 
         return $code;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

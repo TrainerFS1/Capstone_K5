@@ -40,7 +40,11 @@ final class PhpAstExtractor extends AbstractFileExtractor implements ExtractorIn
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->parser = (new ParserFactory())->createForHostVersion();
+=======
+        $this->parser = (new ParserFactory())->create(ParserFactory::PREFER_PHP7);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->parser = (new ParserFactory())->create(ParserFactory::PREFER_PHP7);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,11 +55,14 @@ final class PhpAstExtractor extends AbstractFileExtractor implements ExtractorIn
         foreach ($this->extractFiles($resource) as $file) {
             $traverser = new NodeTraverser();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             // This is needed to resolve namespaces in class methods/constants.
             $nameResolver = new NodeVisitor\NameResolver();
             $traverser->addVisitor($nameResolver);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             /** @var AbstractVisitor&NodeVisitor $visitor */
@@ -77,9 +84,13 @@ final class PhpAstExtractor extends AbstractFileExtractor implements ExtractorIn
     protected function canBeExtracted(string $file): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return 'php' === pathinfo($file, \PATHINFO_EXTENSION)
             && $this->isFile($file)
             && preg_match('/\bt\(|->trans\(|TranslatableMessage|Symfony\\\\Component\\\\Validator\\\\Constraints/i', file_get_contents($file));
+=======
+        return 'php' === pathinfo($file, \PATHINFO_EXTENSION) && $this->isFile($file);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return 'php' === pathinfo($file, \PATHINFO_EXTENSION) && $this->isFile($file);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

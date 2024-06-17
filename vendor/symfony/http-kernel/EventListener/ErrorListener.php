@@ -13,6 +13,7 @@ namespace Symfony\Component\HttpKernel\EventListener;
 
 use Psr\Log\LoggerInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Psr\Log\LogLevel;
 use Symfony\Component\ErrorHandler\ErrorHandler;
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
@@ -20,6 +21,11 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\WithHttpStatus;
 use Symfony\Component\HttpKernel\Attribute\WithLogLevel;
+=======
+use Symfony\Component\ErrorHandler\Exception\FlattenException;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\Request;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -33,7 +39,11 @@ use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Log\DebugLoggerConfigurator;
+=======
+use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -55,7 +65,11 @@ class ErrorListener implements EventSubscriberInterface
      * @param array<class-string, array{log_level: string|null, status_code: int<100,599>|null}> $exceptionsMapping
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string|object|array|null $controller, ?LoggerInterface $logger = null, bool $debug = false, array $exceptionsMapping = [])
+=======
+    public function __construct(string|object|array|null $controller, LoggerInterface $logger = null, bool $debug = false, array $exceptionsMapping = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string|object|array|null $controller, LoggerInterface $logger = null, bool $debug = false, array $exceptionsMapping = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -67,6 +81,7 @@ class ErrorListener implements EventSubscriberInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
@@ -75,6 +90,8 @@ class ErrorListener implements EventSubscriberInterface
         $throwable = $event->getThrowable();
         $logLevel = $this->resolveLogLevel($throwable);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function logKernelException(ExceptionEvent $event)
     {
         $throwable = $event->getThrowable();
@@ -86,6 +103,9 @@ class ErrorListener implements EventSubscriberInterface
                 break;
             }
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($this->exceptionsMapping as $class => $config) {
@@ -100,6 +120,7 @@ class ErrorListener implements EventSubscriberInterface
             break;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         // There's no specific status code defined in the configuration for this exception
         if (!$throwable instanceof HttpExceptionInterface) {
@@ -126,11 +147,16 @@ class ErrorListener implements EventSubscriberInterface
      * @return void
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $e = FlattenException::createFromThrowable($throwable);
 
         $this->logException($throwable, sprintf('Uncaught PHP Exception %s: "%s" at %s line %s', $e->getClass(), $e->getMessage(), $e->getFile(), $e->getLine()), $logLevel);
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function onKernelException(ExceptionEvent $event)
     {
@@ -139,6 +165,7 @@ class ErrorListener implements EventSubscriberInterface
         }
 
         $throwable = $event->getThrowable();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if ($exceptionHandler = set_exception_handler(var_dump(...))) {
@@ -150,6 +177,8 @@ class ErrorListener implements EventSubscriberInterface
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $request = $this->duplicateRequest($throwable, $event->getRequest());
 
         try {
@@ -158,7 +187,11 @@ class ErrorListener implements EventSubscriberInterface
             $f = FlattenException::createFromThrowable($e);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->logException($e, sprintf('Exception thrown when handling an exception (%s: %s at %s line %s)', $f->getClass(), $f->getMessage(), basename($e->getFile()), $e->getLine()));
+=======
+            $this->logException($e, sprintf('Exception thrown when handling an exception (%s: %s at %s line %s)', $f->getClass(), $f->getMessage(), $e->getFile(), $e->getLine()));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->logException($e, sprintf('Exception thrown when handling an exception (%s: %s at %s line %s)', $f->getClass(), $f->getMessage(), $e->getFile(), $e->getLine()));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -191,9 +224,12 @@ class ErrorListener implements EventSubscriberInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function onControllerArguments(ControllerArgumentsEvent $event)
@@ -229,6 +265,7 @@ class ErrorListener implements EventSubscriberInterface
     /**
      * Logs an exception.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected function logException(\Throwable $exception, string $message, ?string $logLevel = null): void
     {
@@ -269,6 +306,8 @@ class ErrorListener implements EventSubscriberInterface
 
         return LogLevel::ERROR;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function logException(\Throwable $exception, string $message, string $logLevel = null): void
     {
         if (null !== $this->logger) {
@@ -280,6 +319,9 @@ class ErrorListener implements EventSubscriberInterface
                 $this->logger->error($message, ['exception' => $exception]);
             }
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -292,7 +334,11 @@ class ErrorListener implements EventSubscriberInterface
             '_controller' => $this->controller,
             'exception' => $exception,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'logger' => DebugLoggerConfigurator::getDebugLogger($this->logger),
+=======
+            'logger' => $this->logger instanceof DebugLoggerInterface ? $this->logger : null,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'logger' => $this->logger instanceof DebugLoggerInterface ? $this->logger : null,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -12,6 +12,7 @@
 namespace Symfony\Component\Routing\Annotation;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // do not deprecate in 6.4/7.0, to make it easier for the ecosystem to support 6.4, 7.4 and 8.0 simultaneously
 
 class_exists(\Symfony\Component\Routing\Attribute\Route::class);
@@ -21,6 +22,8 @@ if (false) {
     class Route extends \Symfony\Component\Routing\Attribute\Route
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Annotation class for @Route().
  *
@@ -204,6 +207,9 @@ class Route
     public function getEnv(): ?string
     {
         return $this->env;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

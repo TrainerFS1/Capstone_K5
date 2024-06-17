@@ -142,10 +142,13 @@ trait TestDatabases
     protected function whenNotUsingInMemoryDatabase($callback)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (ParallelTesting::option('without_databases')) {
             return;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $database = DB::getConfig('database');

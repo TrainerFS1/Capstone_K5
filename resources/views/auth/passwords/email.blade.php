@@ -2,6 +2,7 @@
 
 @section('content')
 <<<<<<< HEAD
+<<<<<<< HEAD
 <body class="hold-transition login-page" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
     <div class="login-box">
         <div class="login-logo">
@@ -59,6 +60,8 @@
     <!-- /.login-box -->
 </body>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
@@ -108,5 +111,8 @@
     </div>
     <!-- /.login-box -->
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 @endsection

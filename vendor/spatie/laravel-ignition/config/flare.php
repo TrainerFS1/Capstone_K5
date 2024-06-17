@@ -7,7 +7,10 @@ use Spatie\FlareClient\FlareMiddleware\CensorRequestHeaders;
 use Spatie\LaravelIgnition\FlareMiddleware\AddDumps;
 use Spatie\LaravelIgnition\FlareMiddleware\AddEnvironmentInformation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\LaravelIgnition\FlareMiddleware\AddExceptionHandledStatus;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\LaravelIgnition\FlareMiddleware\AddExceptionInformation;
@@ -15,7 +18,10 @@ use Spatie\LaravelIgnition\FlareMiddleware\AddJobs;
 use Spatie\LaravelIgnition\FlareMiddleware\AddLogs;
 use Spatie\LaravelIgnition\FlareMiddleware\AddQueries;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\LaravelIgnition\FlareMiddleware\AddContext;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\LaravelIgnition\FlareMiddleware\AddNotifierName;
@@ -62,8 +68,11 @@ return [
             'max_chained_job_reporting_depth' => 5,
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
         AddContext::class,
         AddExceptionHandledStatus::class,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         CensorRequestBodyFields::class => [
@@ -76,6 +85,7 @@ return [
             'headers' => [
                 'API-KEY',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Authorization',
                 'Cookie',
                 'Set-Cookie',
@@ -83,6 +93,10 @@ return [
                 'X-XSRF-TOKEN',
             ]
         ],
+=======
+            ]
+        ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
         ]

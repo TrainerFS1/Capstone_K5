@@ -21,8 +21,11 @@ interface DumperInterface
     /**
      * Dumps a scalar value.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -35,8 +38,11 @@ interface DumperInterface
      * @param bool   $bin Whether $str is UTF-8 or binary encoded
      * @param int    $cut The number of characters $str has been cut by
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -49,8 +55,11 @@ interface DumperInterface
      * @param string|int|null $class    The object class, resource type or array count
      * @param bool            $hasChild When the dump of the hash has child item
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -64,8 +73,11 @@ interface DumperInterface
      * @param bool            $hasChild When the dump of the hash has child item
      * @param int             $cut      The number of items the hash has been cut by
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

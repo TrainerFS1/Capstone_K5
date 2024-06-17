@@ -23,6 +23,10 @@ use function token_get_all;
 use function trim;
 use PhpParser\Error;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PhpParser\Lexer;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PhpParser\Lexer;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -35,6 +39,7 @@ use SebastianBergmann\LinesOfCode\LineCountingVisitor;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
+<<<<<<< HEAD
 <<<<<<< HEAD
  *
  * @psalm-import-type CodeUnitFunctionType from \SebastianBergmann\CodeCoverage\StaticAnalysis\CodeUnitFindingVisitor
@@ -75,6 +80,8 @@ final class ParsingFileAnalyser implements FileAnalyser
      * @var array<string, LinesType>
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class ParsingFileAnalyser implements FileAnalyser
 {
@@ -87,6 +94,9 @@ final class ParsingFileAnalyser implements FileAnalyser
      */
     private array $linesOfCode     = [];
     private array $ignoredLines    = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private array $executableLines = [];
     private readonly bool $useAnnotationsForIgnoringCode;
@@ -120,6 +130,12 @@ final class ParsingFileAnalyser implements FileAnalyser
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @psalm-return array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @psalm-return array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
@@ -163,14 +179,20 @@ final class ParsingFileAnalyser implements FileAnalyser
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         assert($linesOfCode > 0);
 
         $parser = (new ParserFactory)->createForHostVersion();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $parser = (new ParserFactory)->create(
             ParserFactory::PREFER_PHP7,
             new Lexer
         );
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         try {
@@ -200,15 +222,21 @@ final class ParsingFileAnalyser implements FileAnalyser
                     'Cannot parse %s: %s',
                     $filename,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $error->getMessage(),
                 ),
                 $error->getCode(),
                 $error,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $error->getMessage()
                 ),
                 $error->getCode(),
                 $error
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -226,8 +254,13 @@ final class ParsingFileAnalyser implements FileAnalyser
             array_merge(
                 $this->ignoredLines[$filename],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ignoredLinesFindingVisitor->ignoredLines(),
             ),
+=======
+                $ignoredLinesFindingVisitor->ignoredLines()
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $ignoredLinesFindingVisitor->ignoredLines()
             )
@@ -284,7 +317,11 @@ final class ParsingFileAnalyser implements FileAnalyser
                 $this->ignoredLines[$filename] = array_merge(
                     $this->ignoredLines[$filename],
 <<<<<<< HEAD
+<<<<<<< HEAD
                     range($start, $token[2]),
+=======
+                    range($start, $token[2])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     range($start, $token[2])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

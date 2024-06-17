@@ -24,7 +24,11 @@ interface MessageInterface
      * @return string HTTP protocol version.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getProtocolVersion(): string;
+=======
+    public function getProtocolVersion();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getProtocolVersion();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,7 +47,11 @@ interface MessageInterface
      * @return static
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withProtocolVersion(string $version): MessageInterface;
+=======
+    public function withProtocolVersion($version);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withProtocolVersion($version);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -74,7 +82,11 @@ interface MessageInterface
      *     for that header.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHeaders(): array;
+=======
+    public function getHeaders();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getHeaders();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -88,7 +100,11 @@ interface MessageInterface
      *     no matching header name is found in the message.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function hasHeader(string $name): bool;
+=======
+    public function hasHeader($name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function hasHeader($name);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -108,7 +124,11 @@ interface MessageInterface
      *    return an empty array.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHeader(string $name): array;
+=======
+    public function getHeader($name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getHeader($name);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -133,7 +153,11 @@ interface MessageInterface
      *    the message, this method MUST return an empty string.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHeaderLine(string $name): string;
+=======
+    public function getHeaderLine($name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getHeaderLine($name);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -154,7 +178,11 @@ interface MessageInterface
      * @throws \InvalidArgumentException for invalid header names or values.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withHeader(string $name, $value): MessageInterface;
+=======
+    public function withHeader($name, $value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withHeader($name, $value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -176,7 +204,11 @@ interface MessageInterface
      * @throws \InvalidArgumentException for invalid header names or values.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withAddedHeader(string $name, $value): MessageInterface;
+=======
+    public function withAddedHeader($name, $value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withAddedHeader($name, $value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,7 +226,11 @@ interface MessageInterface
      * @return static
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withoutHeader(string $name): MessageInterface;
+=======
+    public function withoutHeader($name);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withoutHeader($name);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -205,7 +241,11 @@ interface MessageInterface
      * @return StreamInterface Returns the body as a stream.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getBody(): StreamInterface;
+=======
+    public function getBody();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getBody();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -224,7 +264,11 @@ interface MessageInterface
      * @throws \InvalidArgumentException When the body is not valid.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function withBody(StreamInterface $body): MessageInterface;
+=======
+    public function withBody(StreamInterface $body);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function withBody(StreamInterface $body);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

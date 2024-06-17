@@ -138,7 +138,11 @@ class Readline
      * Read a line from the input.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function readLine(?string $prefix = null)
+=======
+    public function readLine(string $prefix = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function readLine(string $prefix = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -275,7 +279,11 @@ class Readline
      * Add an entry in the history.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function addHistory(?string $line = null)
+=======
+    public function addHistory(string $line = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function addHistory(string $line = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -303,7 +311,11 @@ class Readline
      * Get an entry in the history.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHistory(?int $i = null)
+=======
+    public function getHistory(int $i = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getHistory(int $i = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -3,7 +3,12 @@
 namespace PhpParser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Parser {
+=======
+interface Parser
+{
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 interface Parser
 {
@@ -19,6 +24,7 @@ interface Parser
      *                          the parser was unable to recover from an error).
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function parse(string $code, ?ErrorHandler $errorHandler = null): ?array;
 
     /**
@@ -27,6 +33,9 @@ interface Parser
      * @return Token[]
      */
     public function getTokens(): array;
+=======
+    public function parse(string $code, ErrorHandler $errorHandler = null);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function parse(string $code, ErrorHandler $errorHandler = null);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

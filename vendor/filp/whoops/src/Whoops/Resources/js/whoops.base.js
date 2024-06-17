@@ -26,7 +26,11 @@ Zepto(function($) {
    */
   var renderCurrentCodeblock = function(id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     Prism.highlightAllUnder(document.querySelector('.frame-code-container .frame-code.active'));
+=======
+    Prism.highlightAll();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     Prism.highlightAll();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,6 +162,12 @@ Zepto(function($) {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  // Render late enough for highlightCurrentLine to be ready
+  renderCurrentCodeblock();
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
   // Render late enough for highlightCurrentLine to be ready
   renderCurrentCodeblock();
@@ -193,9 +203,12 @@ Zepto(function($) {
     setActiveFramesTab($(this));
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Render late enough for highlightCurrentLine to be ready
   renderCurrentCodeblock();
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 });

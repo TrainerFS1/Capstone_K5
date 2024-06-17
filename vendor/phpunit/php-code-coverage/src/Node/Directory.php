@@ -17,8 +17,11 @@ use RecursiveIteratorIterator;
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @psalm-import-type LinesOfCodeType from \SebastianBergmann\CodeCoverage\StaticAnalysis\FileAnalyser
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -44,7 +47,11 @@ final class Directory extends AbstractNode implements IteratorAggregate
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-var null|LinesOfCodeType
+=======
+     * @psalm-var null|array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-var null|array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,7 +91,11 @@ final class Directory extends AbstractNode implements IteratorAggregate
         return new RecursiveIteratorIterator(
             new Iterator($this),
 <<<<<<< HEAD
+<<<<<<< HEAD
             RecursiveIteratorIterator::SELF_FIRST,
+=======
+            RecursiveIteratorIterator::SELF_FIRST
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             RecursiveIteratorIterator::SELF_FIRST
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,7 +145,11 @@ final class Directory extends AbstractNode implements IteratorAggregate
                 $this->classes = array_merge(
                     $this->classes,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $child->classes(),
+=======
+                    $child->classes()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $child->classes()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -154,7 +169,11 @@ final class Directory extends AbstractNode implements IteratorAggregate
                 $this->traits = array_merge(
                     $this->traits,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $child->traits(),
+=======
+                    $child->traits()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $child->traits()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -174,7 +193,11 @@ final class Directory extends AbstractNode implements IteratorAggregate
                 $this->functions = array_merge(
                     $this->functions,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $child->functions(),
+=======
+                    $child->functions()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $child->functions()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -187,7 +210,11 @@ final class Directory extends AbstractNode implements IteratorAggregate
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-return LinesOfCodeType
+=======
+     * @psalm-return array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-return array{linesOfCode: int, commentLinesOfCode: int, nonCommentLinesOfCode: int}
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -205,8 +232,13 @@ final class Directory extends AbstractNode implements IteratorAggregate
                 $childLinesOfCode = $child->linesOfCode();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->linesOfCode['linesOfCode']           += $childLinesOfCode['linesOfCode'];
                 $this->linesOfCode['commentLinesOfCode']    += $childLinesOfCode['commentLinesOfCode'];
+=======
+                $this->linesOfCode['linesOfCode'] += $childLinesOfCode['linesOfCode'];
+                $this->linesOfCode['commentLinesOfCode'] += $childLinesOfCode['commentLinesOfCode'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->linesOfCode['linesOfCode'] += $childLinesOfCode['linesOfCode'];
                 $this->linesOfCode['commentLinesOfCode'] += $childLinesOfCode['commentLinesOfCode'];

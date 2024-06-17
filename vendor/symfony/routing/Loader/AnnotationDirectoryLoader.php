@@ -12,6 +12,7 @@
 namespace Symfony\Component\Routing\Loader;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 trigger_deprecation('symfony/routing', '6.4', 'The "%s" class is deprecated, use "%s" instead.', AnnotationDirectoryLoader::class, AttributeDirectoryLoader::class);
 
 class_exists(AttributeDirectoryLoader::class);
@@ -23,6 +24,8 @@ if (false) {
     class AnnotationDirectoryLoader extends AttributeDirectoryLoader
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Config\Resource\DirectoryResource;
 use Symfony\Component\Routing\RouteCollection;
 
@@ -95,6 +98,9 @@ class AnnotationDirectoryLoader extends AnnotationFileLoader
         } catch (\Exception) {
             return false;
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

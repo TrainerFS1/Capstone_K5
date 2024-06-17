@@ -29,7 +29,10 @@ final class HtmlRenderer
             body {
                 text-rendering: optimizeLegibility;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 font-family: Source SansSerif Pro, Arial, sans-serif;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 font-variant-ligatures: common-ligatures;
@@ -41,6 +44,10 @@ final class HtmlRenderer
 
             body > ul > li {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -49,9 +56,14 @@ final class HtmlRenderer
 
             h2 {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 font-size: larger;
                 text-decoration-line: underline;
                 text-decoration-thickness: 2px;
+=======
+                font-family: Tahoma, Helvetica, Arial;
+                font-size: larger;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 font-family: Tahoma, Helvetica, Arial;
                 font-size: larger;
@@ -63,13 +75,19 @@ final class HtmlRenderer
             ul {
                 list-style: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 margin: 0 0 2rem;
                 padding: 0 0 0 1rem;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 margin: 0;
                 padding: 0;
                 margin-bottom: 2rem;
                 padding-left: 1rem;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 text-indent: -1rem;
             }
@@ -131,6 +149,7 @@ EOT;
             $buffer .= sprintf(
                 self::CLASS_HEADER,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $prettifiedClassName,
             );
 
@@ -140,6 +159,8 @@ EOT;
                     $outcome,
                     $prettifiedMethodName,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $prettifiedClassName
             );
 
@@ -148,6 +169,9 @@ EOT;
                     "            <li class=\"%s\">%s</li>\n",
                     $test->status()->isSuccess() ? 'success' : 'defect',
                     $test->test()->testDox()->prettifiedMethodName()
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
@@ -157,6 +181,7 @@ EOT;
 
         return $buffer . self::PAGE_FOOTER;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -184,6 +209,8 @@ EOT;
 
         return $result;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

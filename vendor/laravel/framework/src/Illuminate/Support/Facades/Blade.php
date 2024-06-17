@@ -29,7 +29,10 @@ namespace Illuminate\Support\Facades;
  * @method static void directive(string $name, callable $handler)
  * @method static array getCustomDirectives()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\View\Compilers\BladeCompiler prepareStringsForCompilationUsing(callable $callback)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void precompiler(callable $precompiler)

@@ -15,8 +15,11 @@ use PHPUnit\Event\InvalidArgumentException;
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @codeCoverageIgnore
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */

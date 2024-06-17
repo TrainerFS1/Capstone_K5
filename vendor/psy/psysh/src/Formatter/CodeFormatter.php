@@ -33,7 +33,11 @@ class CodeFormatter implements ReflectorFormatter
     const HIGHLIGHT_NUMBER = 'number';
     const HIGHLIGHT_STRING = 'string';
 <<<<<<< HEAD
+<<<<<<< HEAD
     const HIGHLIGHT_COMMENT = 'code_comment';
+=======
+    const HIGHLIGHT_COMMENT = 'comment';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     const HIGHLIGHT_COMMENT = 'comment';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,18 +85,24 @@ class CodeFormatter implements ReflectorFormatter
      * Format the code represented by $reflector for shell output.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param \Reflector $reflector
      *
      * @return string formatted code
      */
     public static function format(\Reflector $reflector): string
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param \Reflector  $reflector
      * @param string|null $colorMode (deprecated and ignored)
      *
      * @return string formatted code
      */
     public static function format(\Reflector $reflector, string $colorMode = null): string
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (self::isReflectable($reflector)) {
@@ -117,7 +127,11 @@ class CodeFormatter implements ReflectorFormatter
      * @return string formatted code
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function formatCode(string $code, int $startLine = 1, ?int $endLine = null, ?int $markLine = null): string
+=======
+    public static function formatCode(string $code, int $startLine = 1, int $endLine = null, int $markLine = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function formatCode(string $code, int $startLine = 1, int $endLine = null, int $markLine = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -224,7 +238,11 @@ class CodeFormatter implements ReflectorFormatter
      * @return \Generator lines, each an array of [$spanType, $spanText] pairs
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function splitLines(\Generator $spans, int $startLine = 1, ?int $endLine = null): \Generator
+=======
+    private static function splitLines(\Generator $spans, int $startLine = 1, int $endLine = null): \Generator
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function splitLines(\Generator $spans, int $startLine = 1, int $endLine = null): \Generator
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -295,7 +313,11 @@ class CodeFormatter implements ReflectorFormatter
      * @return \Generator Numbered, formatted lines
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static function numberLines(\Generator $lines, ?int $markLine = null): \Generator
+=======
+    private static function numberLines(\Generator $lines, int $markLine = null): \Generator
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static function numberLines(\Generator $lines, int $markLine = null): \Generator
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

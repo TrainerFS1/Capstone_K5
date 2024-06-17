@@ -41,17 +41,23 @@ class MessageFormatter implements MessageFormatterInterface
      * Apache Common Log Format.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @see https://httpd.apache.org/docs/2.4/logs.html#common
      *
      * @var string
      */
     public const CLF = '{hostname} {req_header_User-Agent} - [{date_common_log}] "{method} {target} HTTP/{version}" {code} {res_header_Content-Length}';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @link https://httpd.apache.org/docs/2.4/logs.html#common
      *
      * @var string
      */
     public const CLF = "{hostname} {req_header_User-Agent} - [{date_common_log}] \"{method} {target} HTTP/{version}\" {code} {res_header_Content-Length}";
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const DEBUG = ">>>>>>>>\n{request}\n<<<<<<<<\n{response}\n--------\n{error}";
     public const SHORT = '[{ts}] "{method} {target} HTTP/{version}" {code}';
@@ -77,7 +83,11 @@ class MessageFormatter implements MessageFormatterInterface
      * @param \Throwable|null        $error    Exception that was received
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function format(RequestInterface $request, ResponseInterface $response = null, \Throwable $error = null): string
+=======
+    public function format(RequestInterface $request, ?ResponseInterface $response = null, ?\Throwable $error = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function format(RequestInterface $request, ?ResponseInterface $response = null, ?\Throwable $error = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,9 +113,15 @@ class MessageFormatter implements MessageFormatterInterface
                     case 'req_headers':
                         $result = \trim($request->getMethod()
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 .' '.$request->getRequestTarget())
                             .' HTTP/'.$request->getProtocolVersion()."\r\n"
                             .$this->headers($request);
+=======
+                                . ' ' . $request->getRequestTarget())
+                            . ' HTTP/' . $request->getProtocolVersion() . "\r\n"
+                            . $this->headers($request);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                 . ' ' . $request->getRequestTarget())
                             . ' HTTP/' . $request->getProtocolVersion() . "\r\n"
@@ -120,7 +136,11 @@ class MessageFormatter implements MessageFormatterInterface
                                 $response->getStatusCode(),
                                 $response->getReasonPhrase()
 <<<<<<< HEAD
+<<<<<<< HEAD
                             )."\r\n".$this->headers($response)
+=======
+                            ) . "\r\n" . $this->headers($response)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             ) . "\r\n" . $this->headers($response)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -200,7 +220,10 @@ class MessageFormatter implements MessageFormatterInterface
 
                 $cache[$matches[1]] = $result;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $result;
@@ -217,7 +240,11 @@ class MessageFormatter implements MessageFormatterInterface
         $result = '';
         foreach ($message->getHeaders() as $name => $values) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $result .= $name.': '.\implode(', ', $values)."\r\n";
+=======
+            $result .= $name . ': ' . \implode(', ', $values) . "\r\n";
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $result .= $name . ': ' . \implode(', ', $values) . "\r\n";
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

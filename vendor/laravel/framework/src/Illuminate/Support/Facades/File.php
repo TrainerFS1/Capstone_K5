@@ -7,7 +7,10 @@ namespace Illuminate\Support\Facades;
  * @method static bool missing(string $path)
  * @method static string get(string $path, bool $lock = false)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static array json(string $path, int $flags = 0, bool $lock = false)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static string sharedGet(string $path)
@@ -20,7 +23,11 @@ namespace Illuminate\Support\Facades;
  * @method static void replaceInFile(array|string $search, array|string $replace, string $path)
  * @method static int prepend(string $path, string $data)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static int append(string $path, string $data, bool $lock = false)
+=======
+ * @method static int append(string $path, string $data)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static int append(string $path, string $data)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -29,7 +36,11 @@ namespace Illuminate\Support\Facades;
  * @method static bool move(string $path, string $target)
  * @method static bool copy(string $path, string $target)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static bool|null link(string $target, string $link)
+=======
+ * @method static void link(string $target, string $link)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static void link(string $target, string $link)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

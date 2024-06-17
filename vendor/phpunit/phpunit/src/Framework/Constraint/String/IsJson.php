@@ -10,7 +10,10 @@
 namespace PHPUnit\Framework\Constraint;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function is_string;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function json_decode;
@@ -37,7 +40,11 @@ final class IsJson extends Constraint
     protected function matches(mixed $other): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!is_string($other) || $other === '') {
+=======
+        if ($other === '') {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($other === '') {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -62,16 +69,20 @@ final class IsJson extends Constraint
     protected function failureDescription(mixed $other): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!is_string($other)) {
             return $this->valueToTypeStringFragment($other) . 'is valid JSON';
         }
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($other === '') {
             return 'an empty string is valid JSON';
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return sprintf(
             'a string is valid JSON (%s)',
@@ -94,6 +105,8 @@ final class IsJson extends Constraint
         };
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         json_decode($other);
 
         $error = (string) JsonMatchesErrorMessageProvider::determineJsonError(
@@ -106,5 +119,8 @@ final class IsJson extends Constraint
             $error
         );
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

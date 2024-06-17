@@ -14,7 +14,10 @@ class Command extends SymfonyCommand
 {
     use Concerns\CallsCommands,
 <<<<<<< HEAD
+<<<<<<< HEAD
         Concerns\ConfiguresPrompts,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Concerns\HasParameters,
@@ -67,6 +70,7 @@ class Command extends SymfonyCommand
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Indicates whether only one instance of the command can run at any given time.
      *
      * @var bool
@@ -81,6 +85,8 @@ class Command extends SymfonyCommand
     protected $isolatedExitCode = self::SUCCESS;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The console command name aliases.
@@ -162,7 +168,11 @@ class Command extends SymfonyCommand
             InputOption::VALUE_OPTIONAL,
             'Do not run the command if another instance of the command is already running',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->isolated
+=======
+            false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             false
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -179,7 +189,11 @@ class Command extends SymfonyCommand
     public function run(InputInterface $input, OutputInterface $output): int
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->output = $output instanceof OutputStyle ? $output : $this->laravel->make(
+=======
+        $this->output = $this->laravel->make(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->output = $this->laravel->make(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -189,8 +203,11 @@ class Command extends SymfonyCommand
         $this->components = $this->laravel->make(Factory::class, ['output' => $this->output]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->configurePrompts($input);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
@@ -220,7 +237,11 @@ class Command extends SymfonyCommand
             return (int) (is_numeric($this->option('isolated'))
                         ? $this->option('isolated')
 <<<<<<< HEAD
+<<<<<<< HEAD
                         : $this->isolatedExitCode);
+=======
+                        : self::SUCCESS);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         : self::SUCCESS);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

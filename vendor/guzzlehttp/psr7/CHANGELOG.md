@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 2.6.2 - 2023-12-03
 
 ### Fixed
@@ -59,6 +60,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Removed the need for `AllowDynamicProperties` in `LazyOpenStream`
+=======
+## Unreleased
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 ## Unreleased
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

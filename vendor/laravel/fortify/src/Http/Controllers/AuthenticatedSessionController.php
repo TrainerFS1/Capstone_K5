@@ -8,7 +8,10 @@ use Illuminate\Routing\Controller;
 use Illuminate\Routing\Pipeline;
 use Laravel\Fortify\Actions\AttemptToAuthenticate;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Laravel\Fortify\Actions\CanonicalizeUsername;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\Fortify\Actions\EnsureLoginIsNotThrottled;
@@ -88,7 +91,10 @@ class AuthenticatedSessionController extends Controller
         return (new Pipeline(app()))->send($request)->through(array_filter([
             config('fortify.limiters.login') ? null : EnsureLoginIsNotThrottled::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
             config('fortify.lowercase_usernames') ? CanonicalizeUsername::class : null,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Features::enabled(Features::twoFactorAuthentication()) ? RedirectIfTwoFactorAuthenticatable::class : null,
@@ -108,10 +114,16 @@ class AuthenticatedSessionController extends Controller
         $this->guard->logout();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($request->hasSession()) {
             $request->session()->invalidate();
             $request->session()->regenerateToken();
         }
+=======
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $request->session()->invalidate();
 

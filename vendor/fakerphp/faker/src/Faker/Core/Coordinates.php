@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Faker\Core;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Faker\Extension;
 
 /**
@@ -20,10 +21,15 @@ final class Coordinates implements Extension\Extension
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Faker\Extension\Extension;
 
 class Coordinates implements Extension
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @example '77.147489'
@@ -70,8 +76,13 @@ class Coordinates implements Extension
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'latitude' => $this->latitude(),
             'longitude' => $this->longitude(),
+=======
+            'latitude' => static::latitude(),
+            'longitude' => static::longitude(),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'latitude' => static::latitude(),
             'longitude' => static::longitude(),
@@ -86,7 +97,11 @@ class Coordinates implements Extension
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->numberExtension->randomFloat($nbMaxDecimals, $min, $max);
+=======
+        return round($min + mt_rand() / mt_getrandmax() * ($max - $min), $nbMaxDecimals);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return round($min + mt_rand() / mt_getrandmax() * ($max - $min), $nbMaxDecimals);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -11,7 +11,10 @@ use Illuminate\Support\Carbon;
 use Carbon\CarbonPeriod;
 use Illuminate\Support\Facades\Auth;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Notifications\BillReminderNotification;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -56,7 +59,11 @@ class HomeController extends Controller
 
         // Fungsi untuk mengisi data berdasarkan bulan
 <<<<<<< HEAD
+<<<<<<< HEAD
         $fillData = function ($data, $months) {
+=======
+        $fillData = function($data, $months) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $fillData = function($data, $months) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

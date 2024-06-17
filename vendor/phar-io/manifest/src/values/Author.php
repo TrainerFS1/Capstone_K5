@@ -3,6 +3,7 @@
  * This file is part of PharIo\Manifest.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Copyright (c) Arne Blankerts <arne@blankerts.de>, Sebastian Heuer <sebastian@phpeople.de>, Sebastian Bergmann <sebastian@phpunit.de> and contributors
  *
  * For the full copyright and license information, please view the LICENSE
@@ -14,6 +15,8 @@ namespace PharIo\Manifest;
 use function sprintf;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * (c) Arne Blankerts <arne@blankerts.de>, Sebastian Heuer <sebastian@phpeople.de>, Sebastian Bergmann <sebastian@phpunit.de>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -21,21 +24,30 @@ use function sprintf;
  */
 namespace PharIo\Manifest;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Author {
     /** @var string */
     private $name;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var null|Email */
     private $email;
 
     public function __construct(string $name, ?Email $email = null) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /** @var Email */
     private $email;
 
     public function __construct(string $name, Email $email) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->name  = $name;
         $this->email = $email;
@@ -43,11 +55,15 @@ class Author {
 
     public function asString(): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$this->hasEmail()) {
             return $this->name;
         }
 
         return sprintf(
+=======
+        return \sprintf(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return \sprintf(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -62,6 +78,7 @@ class Author {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-assert-if-true Email $this->email
      */
@@ -74,6 +91,9 @@ class Author {
             throw new NoEmailAddressException();
         }
 
+=======
+    public function getEmail(): Email {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getEmail(): Email {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

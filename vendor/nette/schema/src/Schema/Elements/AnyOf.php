@@ -19,12 +19,15 @@ final class AnyOf implements Schema
 {
 	use Base;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	private array $set;
 
 
 	public function __construct(mixed ...$set)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	use Nette\SmartObject;
 
 	/** @var array */
@@ -35,6 +38,9 @@ final class AnyOf implements Schema
 	 * @param  mixed|Schema  ...$set
 	 */
 	public function __construct(...$set)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		if (!$set) {
@@ -70,7 +76,11 @@ final class AnyOf implements Schema
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function normalize(mixed $value, Context $context): mixed
+=======
+	public function normalize($value, Context $context)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public function normalize($value, Context $context)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -80,15 +90,21 @@ final class AnyOf implements Schema
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function merge(mixed $value, mixed $base): mixed
 	{
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	public function merge($value, $base)
 	{
 		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
 			unset($value[Helpers::PREVENT_MERGING]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			return $value;
 		}
@@ -97,6 +113,7 @@ final class AnyOf implements Schema
 	}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public function complete(mixed $value, Context $context): mixed
 	{
@@ -111,6 +128,9 @@ final class AnyOf implements Schema
 =======
 	public function complete($value, Context $context)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+	public function complete($value, Context $context)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$expecteds = $innerErrors = [];
 		foreach ($this->set as $item) {
@@ -121,7 +141,11 @@ final class AnyOf implements Schema
 				if (!$dolly->errors) {
 					$context->warnings = array_merge($context->warnings, $dolly->warnings);
 <<<<<<< HEAD
+<<<<<<< HEAD
 					return $res;
+=======
+					return $this->doFinalize($res, $context);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 					return $this->doFinalize($res, $context);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -137,7 +161,11 @@ final class AnyOf implements Schema
 			} else {
 				if ($item === $value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 					return $value;
+=======
+					return $this->doFinalize($value, $context);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 					return $this->doFinalize($value, $context);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -153,6 +181,7 @@ final class AnyOf implements Schema
 			$context->addError(
 				'The %label% %path% expects to be %expected%, %value% given.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 				Nette\Schema\Message::TypeMismatch,
 				[
 					'value' => $value,
@@ -167,6 +196,8 @@ final class AnyOf implements Schema
 
 	public function completeDefault(Context $context): mixed
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				Nette\Schema\Message::TYPE_MISMATCH,
 				[
 					'value' => $value,
@@ -178,13 +209,20 @@ final class AnyOf implements Schema
 
 
 	public function completeDefault(Context $context)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		if ($this->required) {
 			$context->addError(
 				'The mandatory item %path% is missing.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 				Nette\Schema\Message::MissingItem,
+=======
+				Nette\Schema\Message::MISSING_ITEM
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 				Nette\Schema\Message::MISSING_ITEM
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

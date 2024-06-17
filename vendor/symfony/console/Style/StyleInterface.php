@@ -21,8 +21,11 @@ interface StyleInterface
     /**
      * Formats a command title.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -31,8 +34,11 @@ interface StyleInterface
     /**
      * Formats a section title.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -41,8 +47,11 @@ interface StyleInterface
     /**
      * Formats a list.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -51,8 +60,11 @@ interface StyleInterface
     /**
      * Formats informational text.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -61,8 +73,11 @@ interface StyleInterface
     /**
      * Formats a success result bar.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -71,8 +86,11 @@ interface StyleInterface
     /**
      * Formats an error result bar.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -81,8 +99,11 @@ interface StyleInterface
     /**
      * Formats an warning result bar.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -91,8 +112,11 @@ interface StyleInterface
     /**
      * Formats a note admonition.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -101,8 +125,11 @@ interface StyleInterface
     /**
      * Formats a caution admonition.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -111,8 +138,11 @@ interface StyleInterface
     /**
      * Formats a table.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -122,7 +152,11 @@ interface StyleInterface
      * Asks a question.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function ask(string $question, ?string $default = null, ?callable $validator = null): mixed;
+=======
+    public function ask(string $question, string $default = null, callable $validator = null): mixed;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function ask(string $question, string $default = null, callable $validator = null): mixed;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,7 +165,11 @@ interface StyleInterface
      * Asks a question with the user input hidden.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function askHidden(string $question, ?callable $validator = null): mixed;
+=======
+    public function askHidden(string $question, callable $validator = null): mixed;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function askHidden(string $question, callable $validator = null): mixed;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -149,8 +187,11 @@ interface StyleInterface
     /**
      * Add newline(s).
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -159,8 +200,11 @@ interface StyleInterface
     /**
      * Starts the progress output.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -169,8 +213,11 @@ interface StyleInterface
     /**
      * Advances the progress output X steps.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -179,8 +226,11 @@ interface StyleInterface
     /**
      * Finishes the progress output.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

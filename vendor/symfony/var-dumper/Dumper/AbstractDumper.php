@@ -27,6 +27,7 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
     public const DUMP_TRAILING_COMMA = 8;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var callable|resource|string|null */
     public static $defaultOutput = 'php://output';
 
@@ -35,10 +36,15 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
     protected $lineDumper;
     /** @var resource|null */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static $defaultOutput = 'php://output';
 
     protected $line = '';
     protected $lineDumper;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $outputStream;
     protected $decimalPoint = '.';
@@ -53,7 +59,11 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
      * @param int                           $flags   A bit field of static::DUMP_* constants to fine tune dumps representation
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct($output = null, ?string $charset = null, int $flags = 0)
+=======
+    public function __construct($output = null, string $charset = null, int $flags = 0)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct($output = null, string $charset = null, int $flags = 0)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,9 +80,15 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
      * Sets the output destination of the dumps.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param callable|resource|string|null $output A line dumper callable, an opened stream or an output path
      *
      * @return callable|resource|string|null The previous output destination
+=======
+     * @param callable|resource|string $output A line dumper callable, an opened stream or an output path
+     *
+     * @return callable|resource|string The previous output destination
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param callable|resource|string $output A line dumper callable, an opened stream or an output path
      *
@@ -176,8 +192,11 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
      * @param int $depth The recursive depth in the dumped structure for the line being dumped,
      *                   or -1 to signal the end-of-dump to the line dumper callable
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -190,8 +209,11 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
     /**
      * Generic line dumper callback.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

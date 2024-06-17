@@ -6,7 +6,10 @@ use Closure;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\File\File;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -43,9 +46,15 @@ trait FormatsMessages
 
         $customMessage = $this->getCustomMessageFromTranslator(
 <<<<<<< HEAD
+<<<<<<< HEAD
             in_array($rule, $this->sizeRules)
                 ? [$customKey.".{$this->getAttributeType($attribute)}", $customKey]
                 : $customKey
+=======
+                in_array($rule, $this->sizeRules)
+                    ? [$customKey.".{$this->getAttributeType($attribute)}", $customKey]
+                    : $customKey
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 in_array($rule, $this->sizeRules)
                     ? [$customKey.".{$this->getAttributeType($attribute)}", $customKey]
@@ -229,6 +238,7 @@ trait FormatsMessages
         // means that if the attribute does not have a numeric rule and the files
         // list doesn't have it we'll just consider it a string by elimination.
 <<<<<<< HEAD
+<<<<<<< HEAD
         return match (true) {
             $this->hasRule($attribute, $this->numericRules) => 'numeric',
             $this->hasRule($attribute, ['Array']) => 'array',
@@ -237,6 +247,8 @@ trait FormatsMessages
             default => 'string',
         };
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->hasRule($attribute, $this->numericRules)) {
             return 'numeric';
         } elseif ($this->hasRule($attribute, ['Array'])) {
@@ -246,6 +258,9 @@ trait FormatsMessages
         }
 
         return 'string';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -463,10 +478,13 @@ trait FormatsMessages
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_array($value)) {
             return 'array';
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $key = "validation.values.{$attribute}.{$value}";

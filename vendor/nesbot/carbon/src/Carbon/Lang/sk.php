@@ -34,6 +34,7 @@
  * - AlterwebStudio
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use Carbon\CarbonInterface;
 
@@ -116,6 +117,8 @@ return [
     'second_before' => ':count sekundu|:count sekundy|:count sekúnd',
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 return [
     'year' => 'rok|:count roky|:count rokov',
     'y' => ':count r',
@@ -143,6 +146,9 @@ return [
     'hour_ago' => 'hodinou|:count hodinami|:count hodinami',
     'minute_ago' => 'minútou|:count minútami|:count minútami',
     'second_ago' => 'sekundou|:count sekundami|:count sekundami',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'first_day_of_week' => 1,
     'day_of_first_week_of_year' => 4,
@@ -158,6 +164,7 @@ return [
         'LLL' => 'D. M. HH:mm',
         'LLLL' => 'dddd D. MMMM YYYY HH:mm',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     'calendar' => [
         'sameDay' => '[dnes o] LT',
@@ -179,6 +186,10 @@ return [
     ],
     'weekdays' => ['nedeľa', 'pondelok', 'utorok', 'streda', 'štvrtok', 'piatok', 'sobota'],
     'weekdays_short' => ['ned', 'pon', 'uto', 'str', 'štv', 'pia', 'sob'],
+=======
+    'weekdays' => ['nedeľa', 'pondelok', 'utorok', 'streda', 'štvrtok', 'piatok', 'sobota'],
+    'weekdays_short' => ['ned', 'pod', 'uto', 'str', 'štv', 'pia', 'sob'],
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'weekdays' => ['nedeľa', 'pondelok', 'utorok', 'streda', 'štvrtok', 'piatok', 'sobota'],
     'weekdays_short' => ['ned', 'pod', 'uto', 'str', 'štv', 'pia', 'sob'],

@@ -43,12 +43,17 @@ class FileProfilerStorage implements ProfilerStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param \Closure|null $filter A filter to apply on the list of tokens
      */
     public function find(?string $ip, ?string $url, ?int $limit, ?string $method, ?int $start = null, ?int $end = null, ?string $statusCode = null/* , \Closure $filter = null */): array
     {
         $filter = 7 < \func_num_args() ? func_get_arg(7) : null;
+=======
+    public function find(?string $ip, ?string $url, ?int $limit, ?string $method, int $start = null, int $end = null, string $statusCode = null): array
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function find(?string $ip, ?string $url, ?int $limit, ?string $method, int $start = null, int $end = null, string $statusCode = null): array
     {
@@ -66,6 +71,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
         while (\count($result) < $limit && $line = $this->readLineFromFile($file)) {
             $values = str_getcsv($line);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             if (7 > \count($values)) {
                 // skip invalid lines
@@ -82,10 +88,15 @@ class FileProfilerStorage implements ProfilerStorageInterface
 
             if ($ip && !str_contains($csvIp, $ip) || $urlFilter || $method && !str_contains($csvMethod, $method) || $statusCode && !str_contains($csvStatusCode, $statusCode)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             [$csvToken, $csvIp, $csvMethod, $csvUrl, $csvTime, $csvParent, $csvStatusCode] = $values;
             $csvTime = (int) $csvTime;
 
             if ($ip && !str_contains($csvIp, $ip) || $url && !str_contains($csvUrl, $url) || $method && !str_contains($csvMethod, $method) || $statusCode && !str_contains($csvStatusCode, $statusCode)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 continue;
             }
@@ -99,7 +110,11 @@ class FileProfilerStorage implements ProfilerStorageInterface
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $profile = [
+=======
+            $result[$csvToken] = [
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $result[$csvToken] = [
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -110,6 +125,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
                 'time' => $csvTime,
                 'parent' => $csvParent,
                 'status_code' => $csvStatusCode,
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'virtual_type' => $csvVirtualType ?: 'request',
             ];
@@ -122,6 +138,9 @@ class FileProfilerStorage implements ProfilerStorageInterface
 =======
             ];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            ];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         fclose($file);
@@ -130,9 +149,12 @@ class FileProfilerStorage implements ProfilerStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function purge()
@@ -176,7 +198,13 @@ class FileProfilerStorage implements ProfilerStorageInterface
         // may equal the profile token, resulting in infinite loops
         $parentToken = $profile->getParentToken() !== $profileToken ? $profile->getParentToken() : null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $childrenToken = array_filter(array_map(fn (Profile $p) => $profileToken !== $p->getToken() ? $p->getToken() : null, $profile->getChildren()));
+=======
+        $childrenToken = array_filter(array_map(function (Profile $p) use ($profileToken) {
+            return $profileToken !== $p->getToken() ? $p->getToken() : null;
+        }, $profile->getChildren()));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $childrenToken = array_filter(array_map(function (Profile $p) use ($profileToken) {
             return $profileToken !== $p->getToken() ? $p->getToken() : null;
@@ -195,7 +223,10 @@ class FileProfilerStorage implements ProfilerStorageInterface
             'time' => $profile->getTime(),
             'status_code' => $profile->getStatusCode(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'virtual_type' => $profile->getVirtualType() ?? 'request',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
@@ -222,6 +253,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
                 $profile->getMethod(),
                 $profile->getUrl(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $profile->getTime() ?: time(),
                 $profile->getParentToken(),
                 $profile->getStatusCode(),
@@ -233,11 +265,16 @@ class FileProfilerStorage implements ProfilerStorageInterface
                 $this->removeExpiredProfiles();
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $profile->getTime(),
                 $profile->getParentToken(),
                 $profile->getStatusCode(),
             ]);
             fclose($file);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -310,10 +347,14 @@ class FileProfilerStorage implements ProfilerStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return Profile
      */
     protected function createProfileFromData(string $token, array $data, ?Profile $parent = null)
+=======
+    protected function createProfileFromData(string $token, array $data, Profile $parent = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function createProfileFromData(string $token, array $data, Profile $parent = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -325,7 +366,10 @@ class FileProfilerStorage implements ProfilerStorageInterface
         $profile->setTime($data['time']);
         $profile->setStatusCode($data['status_code']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $profile->setVirtualType($data['virtual_type'] ?: 'request');
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $profile->setCollectors($data['data']);
@@ -348,7 +392,11 @@ class FileProfilerStorage implements ProfilerStorageInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function doRead($token, ?Profile $profile = null): ?Profile
+=======
+    private function doRead($token, Profile $profile = null): ?Profile
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function doRead($token, Profile $profile = null): ?Profile
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -373,6 +421,7 @@ class FileProfilerStorage implements ProfilerStorageInterface
 
         return $this->createProfileFromData($token, $data, $profile);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     private function removeExpiredProfiles(): void
@@ -407,6 +456,8 @@ class FileProfilerStorage implements ProfilerStorageInterface
 
         file_put_contents($file.'.offset', $offset);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

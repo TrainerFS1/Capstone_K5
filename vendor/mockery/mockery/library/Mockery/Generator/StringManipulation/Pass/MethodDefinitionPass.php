@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,12 +28,16 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\Method;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Mockery\Generator\MockConfiguration;
 use Mockery\Generator\Parameter;
@@ -57,11 +64,16 @@ class MethodDefinitionPass implements Pass
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Generator\Parameter;
 use Mockery\Generator\MockConfiguration;
 
 class MethodDefinitionPass implements Pass
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function apply($code, MockConfiguration $config)
     {
@@ -92,12 +104,15 @@ class MethodDefinitionPass implements Pass
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function appendToClass($class, $code)
     {
         $lastBrace = strrpos($class, '}');
         return substr($class, 0, $lastBrace) . $code . "\n    }\n";
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function renderParams(Method $method, $config)
@@ -112,9 +127,14 @@ class MethodDefinitionPass implements Pass
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $methodParams = [];
         $params = $method->getParameters();
         $isPhp81 = PHP_VERSION_ID >= 80100;
+=======
+        $methodParams = array();
+        $params = $method->getParameters();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $methodParams = array();
         $params = $method->getParameters();
@@ -125,6 +145,7 @@ class MethodDefinitionPass implements Pass
             $paramDef .= $param->isVariadic() ? '...' : '';
             $paramDef .= '$' . $param->getName();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (! $param->isVariadic()) {
                 if ($param->isDefaultValueAvailable() !== false) {
@@ -153,10 +174,15 @@ class MethodDefinitionPass implements Pass
 
                     $paramDef .= ' = ' . $prefix;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (!$param->isVariadic()) {
                 if (false !== $param->isDefaultValueAvailable()) {
                     $defaultValue = $param->getDefaultValue();
                     $paramDef .= ' = ' . (is_object($defaultValue) ? get_class($defaultValue) : var_export($defaultValue, true));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 } elseif ($param->isOptional()) {
                     $paramDef .= ' = null';
@@ -166,7 +192,10 @@ class MethodDefinitionPass implements Pass
             $methodParams[] = $paramDef;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return '(' . implode(', ', $methodParams) . ')';
@@ -180,7 +209,10 @@ class MethodDefinitionPass implements Pass
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function appendToClass($class, $code)
     {
         $lastBrace = strrpos($class, "}");
@@ -188,6 +220,9 @@ class MethodDefinitionPass implements Pass
         return $class;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function renderTypeHint(Parameter $param)
     {
@@ -220,8 +255,13 @@ BODY;
                 if (strpos($param, '&') !== false) {
                     $body .= <<<BODY
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (\$argc > {$i}) {
     \$argv[{$i}] = {$param};
+=======
+if (\$argc > $i) {
+    \$argv[$i] = {$param};
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 if (\$argc > $i) {
     \$argv[$i] = {$param};
@@ -237,6 +277,7 @@ BODY;
             for ($i = 0; $i < $paramCount; ++$i) {
                 $param = $params[$i];
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (! $param->isPassedByReference()) {
                     continue;
                 }
@@ -245,12 +286,17 @@ BODY;
 if (\$argc > {$i}) {
     \$argv[{$i}] =& \${$param->getName()};
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if (!$param->isPassedByReference()) {
                     continue;
                 }
                 $body .= <<<BODY
 if (\$argc > $i) {
     \$argv[$i] =& \${$param->getName()};
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }
 
@@ -261,18 +307,24 @@ BODY;
         $body .= "\$ret = {$invoke}(__FUNCTION__, \$argv);\n";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! in_array($method->getReturnType(), ['never', 'void'], true)) {
             $body .= "return \$ret;\n";
         }
 
         return $body . "}\n";
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! in_array($method->getReturnType(), ['never','void'], true)) {
             $body .= "return \$ret;\n";
         }
 
         $body .= "}\n";
         return $body;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -32,7 +32,10 @@ use Illuminate\Support\Testing\Fakes\NotificationFake;
  * @method static \Illuminate\Support\Collection sent(mixed $notifiable, string $notification, callable|null $callback = null)
  * @method static bool hasSent(mixed $notifiable, string $notification)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\NotificationFake serializeAndRestore(bool $serializeAndRestore = true)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static array sentNotifications()
@@ -54,6 +57,7 @@ class Notification extends Facade
     public static function fake()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return tap(new NotificationFake, function ($fake) {
             static::swap($fake);
         });
@@ -74,6 +78,11 @@ class Notification extends Facade
         }
 
         return $notifiable;
+=======
+        static::swap($fake = new NotificationFake);
+
+        return $fake;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         static::swap($fake = new NotificationFake);
 

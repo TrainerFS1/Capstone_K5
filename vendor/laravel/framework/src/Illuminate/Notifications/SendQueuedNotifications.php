@@ -6,7 +6,10 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 use Illuminate\Contracts\Queue\ShouldQueue;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Queue\ShouldQueueAfterCommit;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
@@ -85,6 +88,7 @@ class SendQueuedNotifications implements ShouldQueue
         $this->timeout = property_exists($notification, 'timeout') ? $notification->timeout : null;
         $this->maxExceptions = property_exists($notification, 'maxExceptions') ? $notification->maxExceptions : null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if ($notification instanceof ShouldQueueAfterCommit) {
             $this->afterCommit = true;
@@ -92,6 +96,9 @@ class SendQueuedNotifications implements ShouldQueue
             $this->afterCommit = property_exists($notification, 'afterCommit') ? $notification->afterCommit : null;
         }
 
+=======
+        $this->afterCommit = property_exists($notification, 'afterCommit') ? $notification->afterCommit : null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->afterCommit = property_exists($notification, 'afterCommit') ? $notification->afterCommit : null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

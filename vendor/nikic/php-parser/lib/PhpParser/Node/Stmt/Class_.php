@@ -3,6 +3,7 @@
 namespace PhpParser\Node\Stmt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
 use PhpParser\Node;
 
@@ -32,6 +33,8 @@ class Class_ extends ClassLike {
     /** @var Node\Name[] Names of implemented interfaces */
     public array $implements;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Error;
 use PhpParser\Node;
 
@@ -53,12 +56,16 @@ class Class_ extends ClassLike
     public $extends;
     /** @var Node\Name[] Names of implemented interfaces */
     public $implements;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs a class node.
      *
      * @param string|Node\Identifier|null $name Name
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param array{
      *     flags?: int,
@@ -74,6 +81,8 @@ class Class_ extends ClassLike
      *             'attrGroups'  => array(): PHP attribute groups
      * @param array<string, mixed> $attributes Additional attributes
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array       $subNodes   Array of the following optional subnodes:
      *                                'flags'       => 0      : Flags
      *                                'extends'     => null   : Name of extended class
@@ -81,6 +90,9 @@ class Class_ extends ClassLike
      *                                'stmts'       => array(): Statements
      *                                'attrGroups'  => array(): PHP attribute groups
      * @param array       $attributes Additional attributes
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct($name, array $subNodes = [], array $attributes = []) {
@@ -94,7 +106,11 @@ class Class_ extends ClassLike
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSubNodeNames(): array {
+=======
+    public function getSubNodeNames() : array {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getSubNodeNames() : array {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -104,20 +120,27 @@ class Class_ extends ClassLike
     /**
      * Whether the class is explicitly abstract.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function isAbstract(): bool {
         return (bool) ($this->flags & Modifiers::ABSTRACT);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return bool
      */
     public function isAbstract() : bool {
         return (bool) ($this->flags & self::MODIFIER_ABSTRACT);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Whether the class is final.
+<<<<<<< HEAD
 <<<<<<< HEAD
      */
     public function isFinal(): bool {
@@ -127,6 +150,8 @@ class Class_ extends ClassLike
     public function isReadonly(): bool {
         return (bool) ($this->flags & Modifiers::READONLY);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return bool
      */
@@ -136,11 +161,15 @@ class Class_ extends ClassLike
 
     public function isReadonly() : bool {
         return (bool) ($this->flags & self::MODIFIER_READONLY);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Whether the class is anonymous.
+<<<<<<< HEAD
 <<<<<<< HEAD
      */
     public function isAnonymous(): bool {
@@ -149,6 +178,8 @@ class Class_ extends ClassLike
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return bool
      */
@@ -207,6 +238,9 @@ class Class_ extends ClassLike
     }
 
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Stmt_Class';
     }

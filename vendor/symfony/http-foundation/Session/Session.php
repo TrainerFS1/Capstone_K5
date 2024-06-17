@@ -41,7 +41,11 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     private ?\Closure $usageReporter;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?SessionStorageInterface $storage = null, ?AttributeBagInterface $attributes = null, ?FlashBagInterface $flashes = null, ?callable $usageReporter = null)
+=======
+    public function __construct(SessionStorageInterface $storage = null, AttributeBagInterface $attributes = null, FlashBagInterface $flashes = null, callable $usageReporter = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(SessionStorageInterface $storage = null, AttributeBagInterface $attributes = null, FlashBagInterface $flashes = null, callable $usageReporter = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -74,9 +78,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $name, mixed $value)
@@ -90,9 +97,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $attributes)
@@ -106,9 +116,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function clear()
@@ -165,7 +178,11 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function invalidate(?int $lifetime = null): bool
+=======
+    public function invalidate(int $lifetime = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function invalidate(int $lifetime = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -176,7 +193,11 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function migrate(bool $destroy = false, ?int $lifetime = null): bool
+=======
+    public function migrate(bool $destroy = false, int $lifetime = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function migrate(bool $destroy = false, int $lifetime = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -185,9 +206,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function save()
@@ -201,9 +225,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setId(string $id)
@@ -219,9 +246,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
@@ -240,9 +270,12 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerBag(SessionBagInterface $bag)

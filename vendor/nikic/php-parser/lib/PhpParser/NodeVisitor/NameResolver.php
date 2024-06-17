@@ -12,6 +12,7 @@ use PhpParser\Node\Stmt;
 use PhpParser\NodeVisitorAbstract;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NameResolver extends NodeVisitorAbstract {
     /** @var NameContext Naming context */
     protected NameContext $nameContext;
@@ -22,6 +23,8 @@ class NameResolver extends NodeVisitorAbstract {
     /** @var bool Whether to replace resolved nodes in place, or to add resolvedNode attributes */
     protected bool $replaceNodes;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class NameResolver extends NodeVisitorAbstract
 {
     /** @var NameContext Naming context */
@@ -32,6 +35,9 @@ class NameResolver extends NodeVisitorAbstract
 
     /** @var bool Whether to replace resolved nodes in place, or to add resolvedNode attributes */
     protected $replaceNodes;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -46,15 +52,21 @@ class NameResolver extends NodeVisitorAbstract
      *
      * @param ErrorHandler|null $errorHandler Error handler
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array{preserveOriginalNames?: bool, replaceNodes?: bool} $options Options
      */
     public function __construct(?ErrorHandler $errorHandler = null, array $options = []) {
         $this->nameContext = new NameContext($errorHandler ?? new ErrorHandler\Throwing());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $options Options
      */
     public function __construct(ErrorHandler $errorHandler = null, array $options = []) {
         $this->nameContext = new NameContext($errorHandler ?? new ErrorHandler\Throwing);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->preserveOriginalNames = $options['preserveOriginalNames'] ?? false;
         $this->replaceNodes = $options['replaceNodes'] ?? true;
@@ -63,6 +75,7 @@ class NameResolver extends NodeVisitorAbstract
     /**
      * Get name resolution context.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function getNameContext(): NameContext {
         return $this->nameContext;
@@ -70,6 +83,8 @@ class NameResolver extends NodeVisitorAbstract
 
     public function beforeTraverse(array $nodes): ?array {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return NameContext
      */
@@ -78,6 +93,9 @@ class NameResolver extends NodeVisitorAbstract
     }
 
     public function beforeTraverse(array $nodes) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->nameContext->startNamespace();
         return null;
@@ -107,8 +125,11 @@ class NameResolver extends NodeVisitorAbstract
             if (null !== $node->name) {
                 $this->addNamespacedName($node);
 <<<<<<< HEAD
+<<<<<<< HEAD
             } else {
                 $node->namespacedName = null;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
@@ -120,7 +141,11 @@ class NameResolver extends NodeVisitorAbstract
             $this->resolveAttrGroups($node);
             $this->addNamespacedName($node);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($node instanceof Stmt\Enum_) {
+=======
+         } elseif ($node instanceof Stmt\Enum_) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
          } elseif ($node instanceof Stmt\Enum_) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -130,7 +155,13 @@ class NameResolver extends NodeVisitorAbstract
 
             $this->resolveAttrGroups($node);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->addNamespacedName($node);
+=======
+            if (null !== $node->name) {
+                $this->addNamespacedName($node);
+            }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (null !== $node->name) {
                 $this->addNamespacedName($node);
@@ -159,12 +190,18 @@ class NameResolver extends NodeVisitorAbstract
                 $this->addNamespacedName($const);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($node instanceof Stmt\ClassConst) {
             if (null !== $node->type) {
                 $node->type = $this->resolveType($node->type);
             }
             $this->resolveAttrGroups($node);
         } elseif ($node instanceof Stmt\EnumCase) {
+=======
+        } else if ($node instanceof Stmt\ClassConst) {
+            $this->resolveAttrGroups($node);
+        } else if ($node instanceof Stmt\EnumCase) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } else if ($node instanceof Stmt\ClassConst) {
             $this->resolveAttrGroups($node);
@@ -212,8 +249,12 @@ class NameResolver extends NodeVisitorAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param Stmt\Use_::TYPE_* $type */
     private function addAlias(Node\UseItem $use, int $type, ?Name $prefix = null): void {
+=======
+    private function addAlias(Stmt\UseUse $use, int $type, Name $prefix = null) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addAlias(Stmt\UseUse $use, int $type, Name $prefix = null) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -228,8 +269,13 @@ class NameResolver extends NodeVisitorAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param Stmt\Function_|Stmt\ClassMethod|Expr\Closure|Expr\ArrowFunction $node */
     private function resolveSignature($node): void {
+=======
+    /** @param Stmt\Function_|Stmt\ClassMethod|Expr\Closure $node */
+    private function resolveSignature($node) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /** @param Stmt\Function_|Stmt\ClassMethod|Expr\Closure $node */
     private function resolveSignature($node) {
@@ -242,12 +288,16 @@ class NameResolver extends NodeVisitorAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @template T of Node\Identifier|Name|Node\ComplexType|null
      * @param T $node
      * @return T
      */
     private function resolveType(?Node $node): ?Node {
+=======
+    private function resolveType($node) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function resolveType($node) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -272,17 +322,23 @@ class NameResolver extends NodeVisitorAbstract
      *
      * @param Name $name Function or constant name to resolve
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Stmt\Use_::TYPE_* $type One of Stmt\Use_::TYPE_*
      *
      * @return Name Resolved name, or original name with attribute
      */
     protected function resolveName(Name $name, int $type): Name {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int  $type One of Stmt\Use_::TYPE_*
      *
      * @return Name Resolved name, or original name with attribute
      */
     protected function resolveName(Name $name, int $type) : Name {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$this->replaceNodes) {
             $resolvedName = $this->nameContext->getResolvedName($name, $type);
@@ -315,24 +371,35 @@ class NameResolver extends NodeVisitorAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function resolveClassName(Name $name): Name {
         return $this->resolveName($name, Stmt\Use_::TYPE_NORMAL);
     }
 
     protected function addNamespacedName(Node $node): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function resolveClassName(Name $name) {
         return $this->resolveName($name, Stmt\Use_::TYPE_NORMAL);
     }
 
     protected function addNamespacedName(Node $node) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $node->namespacedName = Name::concat(
             $this->nameContext->getNamespace(), (string) $node->name);
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function resolveAttrGroups(Node $node): void {
+=======
+    protected function resolveAttrGroups(Node $node)
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function resolveAttrGroups(Node $node)
     {

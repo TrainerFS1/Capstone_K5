@@ -629,7 +629,10 @@ EOT;
             $last = end($chars);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // if the last char is a not-valid-end punctuation, remove it
@@ -637,7 +640,10 @@ EOT;
             $text = preg_replace('/.$/u', '', $text);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // if the last char is not a valid punctuation, append a default one.

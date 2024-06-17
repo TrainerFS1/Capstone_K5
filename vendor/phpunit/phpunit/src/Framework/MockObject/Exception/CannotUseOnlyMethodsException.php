@@ -21,15 +21,21 @@ final class CannotUseOnlyMethodsException extends \PHPUnit\Framework\Exception i
         parent::__construct(
             sprintf(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Trying to configure method "%s" with onlyMethods(), but it does not exist in class "%s"',
                 $methodName,
                 $type,
             ),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'Trying to configure method "%s" with onlyMethods(), but it does not exist in class "%s". Use addMethods() for methods that do not exist in the class',
                 $methodName,
                 $type
             )
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }

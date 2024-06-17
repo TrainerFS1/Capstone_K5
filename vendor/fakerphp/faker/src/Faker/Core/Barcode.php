@@ -13,6 +13,7 @@ use Faker\Extension;
 final class Barcode implements Extension\BarcodeExtension
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Extension\NumberExtension $numberExtension;
 
     public function __construct(Extension\NumberExtension $numberExtension = null)
@@ -20,6 +21,8 @@ final class Barcode implements Extension\BarcodeExtension
         $this->numberExtension = $numberExtension ?: new Number();
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function ean(int $length = 13): string
@@ -49,7 +52,11 @@ final class Barcode implements Extension\BarcodeExtension
     public function isbn13(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $code = '97' . $this->numberExtension->numberBetween(8, 9) . Extension\Helper::numerify(str_repeat('#', 9));
+=======
+        $code = '97' . mt_rand(8, 9) . Extension\Helper::numerify(str_repeat('#', 9));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $code = '97' . mt_rand(8, 9) . Extension\Helper::numerify(str_repeat('#', 9));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

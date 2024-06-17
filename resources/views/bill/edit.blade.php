@@ -26,6 +26,7 @@
                                     <div class="form-group">
                                         <label for="date">Tanggal:</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <input type="date" class="form-control" id="date" name="date"
                                             value="{{ $bill->date }}" required>
                                     </div>
@@ -61,6 +62,8 @@
                                     <div class="form-group">
                                         <label for="description">(Opsional) Deskripsi:</label>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                         <input type="date" class="form-control" id="date" name="date" value="{{ $bill->date }}" required>
                                     </div>
                                     <div class="form-group">
@@ -84,6 +87,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="description">Deskripsi:</label>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                         <textarea class="form-control" id="description" name="description" rows="3">{{ $bill->description }}</textarea>
                                     </div>

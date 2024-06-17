@@ -85,7 +85,11 @@ class Signals
      * Unregister the current signal handlers.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
+=======
+     * @return array<int, array<int, callable(int $signal): void>>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return array<int, array<int, callable(int $signal): void>>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -420,7 +420,11 @@ additional modifier:
 
 The returned object is nothing more than a placeholder so if, by some act of
 <<<<<<< HEAD
+<<<<<<< HEAD
 fate, it's erroneously used somewhere it shouldn't, it will likely not pass a
+=======
+fate, it's erroneously used somewhere it shouldn't it will likely not pass a
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 fate, it's erroneously used somewhere it shouldn't it will likely not pass a
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

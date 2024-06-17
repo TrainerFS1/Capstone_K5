@@ -74,7 +74,11 @@ final class TranslationPushCommand extends Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function configure(): void
+=======
+    protected function configure()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function configure()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -120,7 +124,11 @@ EOF
 
         if (!$this->enabledLocales) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new InvalidArgumentException(sprintf('You must define "framework.enabled_locales" or "framework.translator.providers.%s.locales" config key in order to work with translation providers.', parse_url($provider, \PHP_URL_SCHEME)));
+=======
+            throw new InvalidArgumentException(sprintf('You must define "framework.translator.enabled_locales" or "framework.translator.providers.%s.locales" config key in order to work with translation providers.', parse_url($provider, \PHP_URL_SCHEME)));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new InvalidArgumentException(sprintf('You must define "framework.translator.enabled_locales" or "framework.translator.providers.%s.locales" config key in order to work with translation providers.', parse_url($provider, \PHP_URL_SCHEME)));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

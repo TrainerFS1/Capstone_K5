@@ -31,7 +31,10 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
         Concerns\HasRelationships,
         Concerns\HasTimestamps,
 <<<<<<< HEAD
+<<<<<<< HEAD
         Concerns\HasUniqueIds,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Concerns\HidesAttributes,
@@ -110,7 +113,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Indicates if the model was inserted during the object's lifecycle.
+=======
+     * Indicates if the model was inserted during the current request lifecycle.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Indicates if the model was inserted during the current request lifecycle.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -754,7 +761,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      * @param  array|string  $relations
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|null  $function
+=======
+     * @param  string  $function
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $function
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -846,7 +857,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      * @param  array  $relations
      * @param  string  $column
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|null  $function
+=======
+     * @param  string  $function
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $function
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -967,13 +982,19 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
     protected function incrementOrDecrement($column, $amount, $extra, $method)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $this->exists) {
             return $this->newQueryWithoutRelationships()->{$method}($column, $amount, $extra);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $query = $this->newQueryWithoutRelationships();
 
         if (! $this->exists) {
             return $query->{$method}($column, $amount, $extra);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -988,7 +1009,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return tap($this->setKeysForSaveQuery($this->newQueryWithoutScopes())->{$method}($column, $amount, $extra), function () use ($column) {
+=======
+        return tap($this->setKeysForSaveQuery($query)->{$method}($column, $amount, $extra), function () use ($column) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return tap($this->setKeysForSaveQuery($query)->{$method}($column, $amount, $extra), function () use ($column) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1234,7 +1259,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
         // this model instance. This will allow developers to hook into these after
         // models are updated, giving them a chance to do any special processing.
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dirty = $this->getDirtyForUpdate();
+=======
+        $dirty = $this->getDirty();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $dirty = $this->getDirty();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1305,10 +1334,13 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
     protected function performInsert(Builder $query)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->usesUniqueIds()) {
             $this->setUniqueIds();
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->fireModelEvent('creating') === false) {
@@ -1757,7 +1789,10 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
             $this->getCreatedAtColumn(),
             $this->getUpdatedAtColumn(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             ...$this->uniqueIds(),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]));
@@ -1859,7 +1894,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      * Get the connection resolver instance.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Database\ConnectionResolverInterface|null
+=======
+     * @return \Illuminate\Database\ConnectionResolverInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \Illuminate\Database\ConnectionResolverInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -2359,17 +2398,23 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
     public function __call($method, $parameters)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (in_array($method, ['increment', 'decrement', 'incrementQuietly', 'decrementQuietly'])) {
             return $this->$method(...$parameters);
         }
 
         if ($resolver = $this->relationResolver(static::class, $method)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (in_array($method, ['increment', 'decrement'])) {
             return $this->$method(...$parameters);
         }
 
         if ($resolver = ($this->relationResolver(static::class, $method))) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $resolver($this);
         }

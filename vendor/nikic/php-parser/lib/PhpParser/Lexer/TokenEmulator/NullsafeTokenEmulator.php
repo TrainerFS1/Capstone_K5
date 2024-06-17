@@ -3,6 +3,7 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\PhpVersion;
 use PhpParser\Token;
 
@@ -24,6 +25,8 @@ final class NullsafeTokenEmulator extends TokenEmulator {
                 array_splice($tokens, $i, 2, [
                     new Token(\T_NULLSAFE_OBJECT_OPERATOR, '?->', $token->line, $token->pos),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Lexer\Emulative;
 
 final class NullsafeTokenEmulator extends TokenEmulator
@@ -47,6 +50,9 @@ final class NullsafeTokenEmulator extends TokenEmulator
             if ($tokens[$i] === '?' && isset($tokens[$i + 1]) && $tokens[$i + 1][0] === \T_OBJECT_OPERATOR) {
                 array_splice($tokens, $i, 2, [
                     [\T_NULLSAFE_OBJECT_OPERATOR, '?->', $line]
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ]);
                 $c--;
@@ -54,6 +60,7 @@ final class NullsafeTokenEmulator extends TokenEmulator
             }
 
             // Handle ?-> inside encapsed string.
+<<<<<<< HEAD
 <<<<<<< HEAD
             if ($token->id === \T_ENCAPSED_AND_WHITESPACE && isset($tokens[$i - 1])
                 && $tokens[$i - 1]->id === \T_VARIABLE
@@ -71,6 +78,8 @@ final class NullsafeTokenEmulator extends TokenEmulator
                         $token->line, $token->pos + $matchLen
                     );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($tokens[$i][0] === \T_ENCAPSED_AND_WHITESPACE && isset($tokens[$i - 1])
                 && $tokens[$i - 1][0] === \T_VARIABLE
                 && preg_match('/^\?->([a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*)/', $tokens[$i][1], $matches)
@@ -85,6 +94,9 @@ final class NullsafeTokenEmulator extends TokenEmulator
                         \substr($tokens[$i][1], \strlen($matches[0])),
                         $line
                     ];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
                 array_splice($tokens, $i, 1, $replacement);
@@ -92,11 +104,17 @@ final class NullsafeTokenEmulator extends TokenEmulator
                 continue;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (\is_array($tokens[$i])) {
                 $line += substr_count($tokens[$i][1], "\n");
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -104,7 +122,12 @@ final class NullsafeTokenEmulator extends TokenEmulator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reverseEmulate(string $code, array $tokens): array {
+=======
+    public function reverseEmulate(string $code, array $tokens): array
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function reverseEmulate(string $code, array $tokens): array
     {

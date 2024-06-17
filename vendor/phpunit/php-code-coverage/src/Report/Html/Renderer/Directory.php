@@ -13,10 +13,15 @@ use function count;
 use function sprintf;
 use function str_repeat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\AbstractNode as Node;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\Template\Exception;
+=======
+use SebastianBergmann\CodeCoverage\Node\AbstractNode as Node;
+use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use SebastianBergmann\CodeCoverage\Node\AbstractNode as Node;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
@@ -50,6 +55,7 @@ final class Directory extends Renderer
                 'id'    => $node->id(),
                 'items' => $items,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
         );
 
@@ -63,10 +69,15 @@ final class Directory extends Renderer
             );
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ]
         );
 
         $template->renderTo($file);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -106,7 +117,11 @@ final class Directory extends Renderer
                     '<a href="%s/index.html">%s</a>',
                     $node->name(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $node->name(),
+=======
+                    $node->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $node->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -119,7 +134,11 @@ final class Directory extends Renderer
                     $node->name(),
                     $node->name(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $node->name(),
+=======
+                    $node->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $node->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -129,7 +148,11 @@ final class Directory extends Renderer
                     '<a href="%s.html">%s</a>',
                     $node->name(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $node->name(),
+=======
+                    $node->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $node->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -142,7 +165,11 @@ final class Directory extends Renderer
         return $this->renderItemTemplate(
             new Template($templateName, '{{', '}}'),
 <<<<<<< HEAD
+<<<<<<< HEAD
             $data,
+=======
+            $data
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $data
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

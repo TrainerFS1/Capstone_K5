@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Nette\Schema;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 final class Context
 {
@@ -29,6 +30,8 @@ final class Context
 	/** @var array[] */
 	public array $dynamics = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Nette;
 
 
@@ -53,6 +56,9 @@ final class Context
 
 	/** @var array[] */
 	public $dynamics = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
@@ -68,6 +74,7 @@ final class Context
 		return $this->warnings[] = new Message($message, $code, $this->path, $variables);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 	/** @return \Closure(): bool */
@@ -76,6 +83,8 @@ final class Context
 		$count = count($this->errors);
 		return fn(): bool => $count === count($this->errors);
 	}
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

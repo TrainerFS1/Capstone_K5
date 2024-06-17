@@ -32,7 +32,11 @@ final class StringEqualsStringIgnoringLineEndings extends Constraint
         return sprintf(
             'is equal to "%s" ignoring line endings',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->string,
+=======
+            $this->string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +60,11 @@ final class StringEqualsStringIgnoringLineEndings extends Constraint
                 "\r\n" => "\n",
                 "\r"   => "\n",
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

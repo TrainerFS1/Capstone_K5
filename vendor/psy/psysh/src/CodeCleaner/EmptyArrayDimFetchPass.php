@@ -15,8 +15,11 @@ use PhpParser\Node;
 use PhpParser\Node\Expr\ArrayDimFetch;
 use PhpParser\Node\Expr\Assign;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\Expr\AssignRef;
 use PhpParser\Node\Stmt\Foreach_;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psy\Exception\FatalErrorException;
@@ -40,7 +43,11 @@ class EmptyArrayDimFetchPass extends CodeCleanerPass
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws FatalErrorException if the user used empty array dim fetch outside of assignment
+=======
+     * @throws FatalErrorException if the user used empty empty array dim fetch outside of assignment
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws FatalErrorException if the user used empty empty array dim fetch outside of assignment
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -54,6 +61,7 @@ class EmptyArrayDimFetchPass extends CodeCleanerPass
         if ($node instanceof Assign && $node->var instanceof ArrayDimFetch) {
             $this->theseOnesAreFine[] = $node->var;
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif ($node instanceof AssignRef && $node->expr instanceof ArrayDimFetch) {
             $this->theseOnesAreFine[] = $node->expr;
         } elseif ($node instanceof Foreach_ && $node->valueVar instanceof ArrayDimFetch) {
@@ -65,12 +73,18 @@ class EmptyArrayDimFetchPass extends CodeCleanerPass
             }
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if ($node instanceof ArrayDimFetch && $node->dim === null) {
             if (!\in_array($node, $this->theseOnesAreFine)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new FatalErrorException(self::EXCEPTION_MESSAGE, $node->getStartLine());
+=======
+                throw new FatalErrorException(self::EXCEPTION_MESSAGE, $node->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new FatalErrorException(self::EXCEPTION_MESSAGE, $node->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

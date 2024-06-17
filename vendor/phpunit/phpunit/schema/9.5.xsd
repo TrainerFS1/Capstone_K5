@@ -214,7 +214,11 @@
         <xs:attribute name="colors" type="xs:boolean" default="false"/>
         <xs:attribute name="columns" type="columnsType" default="80"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <xs:attribute name="convertDeprecationsToExceptions" type="xs:boolean" default="false"/>
+=======
+        <xs:attribute name="convertDeprecationsToExceptions" type="xs:boolean" default="true"/>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         <xs:attribute name="convertDeprecationsToExceptions" type="xs:boolean" default="true"/>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -284,10 +288,15 @@
     <xs:complexType name="testSuiteType">
         <xs:sequence>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:group ref="pathGroup"/>
                 <xs:element name="exclude" type="xs:string"/>
             </xs:choice>
+=======
+            <xs:group ref="pathGroup"/>
+            <xs:element name="exclude" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             <xs:group ref="pathGroup"/>
             <xs:element name="exclude" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>

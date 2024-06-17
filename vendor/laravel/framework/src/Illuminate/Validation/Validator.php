@@ -188,7 +188,10 @@ class Validator implements ValidatorContract
         'Between',
         'Dimensions',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Extensions',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'File',
@@ -218,10 +221,13 @@ class Validator implements ValidatorContract
         'MissingWithAll',
         'Present',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'PresentIf',
         'PresentUnless',
         'PresentWith',
         'PresentWithAll',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Required',
@@ -264,10 +270,13 @@ class Validator implements ValidatorContract
         'RequiredWithout',
         'RequiredWithoutAll',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'PresentIf',
         'PresentUnless',
         'PresentWith',
         'PresentWithAll',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Prohibited',
@@ -275,10 +284,13 @@ class Validator implements ValidatorContract
         'ProhibitedUnless',
         'Prohibits',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'MissingIf',
         'MissingUnless',
         'MissingWith',
         'MissingWithAll',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Same',
@@ -308,6 +320,7 @@ class Validator implements ValidatorContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The default numeric related validation rules.
      *
      * @var string[]
@@ -315,6 +328,8 @@ class Validator implements ValidatorContract
     protected $defaultNumericRules = ['Numeric', 'Integer', 'Decimal'];
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The current placeholder for dots in rule keys.
@@ -332,6 +347,7 @@ class Validator implements ValidatorContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The custom callback to determine if an exponent is within allowed range.
      *
      * @var callable|null
@@ -339,6 +355,8 @@ class Validator implements ValidatorContract
     protected $ensureExponentWithinAllowedRangeUsing;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new Validator instance.
@@ -429,7 +447,11 @@ class Validator implements ValidatorContract
      * Add an after validation callback.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  callable|array|string  $callback
+=======
+     * @param  callable|string  $callback
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  callable|string  $callback
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -437,6 +459,7 @@ class Validator implements ValidatorContract
      */
     public function after($callback)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (is_array($callback) && ! is_callable($callback)) {
             foreach ($callback as $rule) {
@@ -446,6 +469,8 @@ class Validator implements ValidatorContract
             return $this;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->after[] = fn () => $callback($this);
@@ -483,6 +508,11 @@ class Validator implements ValidatorContract
 
                 if ($this->shouldBeExcluded($attribute)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    $this->removeAttribute($attribute);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $this->removeAttribute($attribute);
 
@@ -497,12 +527,15 @@ class Validator implements ValidatorContract
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->rules as $attribute => $rules) {
             if ($this->shouldBeExcluded($attribute)) {
                 $this->removeAttribute($attribute);
             }
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Here we will spin through all of the "after" hooks on this validator and
@@ -618,6 +651,7 @@ class Validator implements ValidatorContract
 
         foreach ($this->getRules() as $key => $rules) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $value = data_get($this->getData(), $key, $missingValue);
 
             if ($this->excludeUnvalidatedArrayKeys &&
@@ -627,11 +661,20 @@ class Validator implements ValidatorContract
             if ($this->excludeUnvalidatedArrayKeys &&
                 in_array('array', $rules) &&
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            if ($this->excludeUnvalidatedArrayKeys &&
+                in_array('array', $rules) &&
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ! empty(preg_grep('/^'.preg_quote($key, '/').'\.+/', array_keys($this->getRules())))) {
                 continue;
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            $value = data_get($this->getData(), $key, $missingValue);
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $value = data_get($this->getData(), $key, $missingValue);
 
@@ -697,8 +740,11 @@ class Validator implements ValidatorContract
         $method = "validate{$rule}";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->numericRules = $this->defaultNumericRules;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($validatable && ! $this->$method($attribute, $value, $parameters, $this)) {
@@ -1170,7 +1216,11 @@ class Validator implements ValidatorContract
      * @return mixed
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getValue($attribute)
+=======
+    protected function getValue($attribute)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function getValue($attribute)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1179,6 +1229,7 @@ class Validator implements ValidatorContract
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Set the value of a given attribute.
      *
@@ -1192,6 +1243,8 @@ class Validator implements ValidatorContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the validation rules.
@@ -1559,6 +1612,7 @@ class Validator implements ValidatorContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the exception to throw upon failed validation.
      *
      * @return string
@@ -1569,6 +1623,8 @@ class Validator implements ValidatorContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the exception to throw upon failed validation.
@@ -1593,6 +1649,7 @@ class Validator implements ValidatorContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Ensure exponents are within range using the given callback.
      *
      * @param  callable(int $scale, string $attribute, mixed $value)  $callback
@@ -1606,6 +1663,8 @@ class Validator implements ValidatorContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the Translator implementation.

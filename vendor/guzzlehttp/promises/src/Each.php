@@ -1,8 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 namespace GuzzleHttp\Promise;
@@ -23,13 +26,19 @@ final class Each
      * side effects and choose to resolve or reject the aggregate if needed.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param mixed $iterable Iterator or array to iterate over.
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param mixed    $iterable    Iterator or array to iterate over.
      * @param callable $onFulfilled
      * @param callable $onRejected
      *
      * @return PromiseInterface
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function of(
@@ -37,15 +46,21 @@ final class Each
         callable $onFulfilled = null,
         callable $onRejected = null
 <<<<<<< HEAD
+<<<<<<< HEAD
     ): PromiseInterface {
         return (new EachPromise($iterable, [
             'fulfilled' => $onFulfilled,
             'rejected' => $onRejected,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         return (new EachPromise($iterable, [
             'fulfilled' => $onFulfilled,
             'rejected'  => $onRejected
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]))->promise();
     }
@@ -61,11 +76,17 @@ final class Each
      * @param mixed        $iterable
      * @param int|callable $concurrency
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param callable     $onFulfilled
      * @param callable     $onRejected
      *
      * @return PromiseInterface
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function ofLimit(
@@ -74,17 +95,23 @@ final class Each
         callable $onFulfilled = null,
         callable $onRejected = null
 <<<<<<< HEAD
+<<<<<<< HEAD
     ): PromiseInterface {
         return (new EachPromise($iterable, [
             'fulfilled' => $onFulfilled,
             'rejected' => $onRejected,
             'concurrency' => $concurrency,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         return (new EachPromise($iterable, [
             'fulfilled'   => $onFulfilled,
             'rejected'    => $onRejected,
             'concurrency' => $concurrency
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]))->promise();
     }
@@ -97,6 +124,12 @@ final class Each
      * @param mixed        $iterable
      * @param int|callable $concurrency
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param callable     $onFulfilled
+     *
+     * @return PromiseInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param callable     $onFulfilled
      *
@@ -108,6 +141,7 @@ final class Each
         $concurrency,
         callable $onFulfilled = null
 <<<<<<< HEAD
+<<<<<<< HEAD
     ): PromiseInterface {
         return self::ofLimit(
             $iterable,
@@ -115,12 +149,17 @@ final class Each
             $onFulfilled,
             function ($reason, $idx, PromiseInterface $aggregate): void {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         return each_limit(
             $iterable,
             $concurrency,
             $onFulfilled,
             function ($reason, $idx, PromiseInterface $aggregate) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $aggregate->reject($reason);
             }

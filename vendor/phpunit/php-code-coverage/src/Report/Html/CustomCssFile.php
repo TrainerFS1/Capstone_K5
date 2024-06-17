@@ -32,7 +32,11 @@ final class CustomCssFile
         if (!is_file($path)) {
             throw new InvalidArgumentException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 '$path does not exist',
+=======
+                '$path does not exist'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 '$path does not exist'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

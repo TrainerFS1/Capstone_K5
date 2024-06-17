@@ -12,12 +12,18 @@ class RFCValidation implements EmailValidation
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var EmailParser|null
      */
     private $parser;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var Warning[]
      */
@@ -31,15 +37,21 @@ class RFCValidation implements EmailValidation
     public function isValid(string $email, EmailLexer $emailLexer): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $parser = new EmailParser($emailLexer);
         try {
             $result = $parser->parse($email);
             $this->warnings = $parser->getWarnings();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->parser = new EmailParser($emailLexer);
         try {
             $result = $this->parser->parse($email);
             $this->warnings = $this->parser->getWarnings();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($result->isInvalid()) {
                 /** @psalm-suppress PropertyTypeCoercion */

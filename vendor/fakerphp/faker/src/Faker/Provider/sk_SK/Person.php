@@ -35,7 +35,11 @@ class Person extends \Faker\Provider\Person
         'Benjamín', 'Hugo', 'Richard', 'Izidor', 'Zoltán', 'Albert', 'Igor', 'Július', 'Aleš', 'Fedor', 'Rudolf', 'Valér', 'Marcel', 'Ervín',
         'Slavomír', 'Vojtech', 'Juraj', 'Marek', 'Jaroslav', 'Žigmund', 'Florián', 'Roland', 'Pankrác', 'Servác', 'Bonifác', 'Svetozár', 'Bernard',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Júlia', 'Urban', 'Dušan', 'Viliam', 'Ferdinand', 'Norbert', 'Róbert', 'Medard', 'Zlatko', 'Anton', 'Vasil', 'Vít', 'Vratislav',
+=======
+        'Júlia', 'Urban', 'Dušan', 'Viliam', 'Ferdinand', 'Norbert', 'Róbert', 'Medard', 'Zlatko', 'Anton', 'Vasil', 'Vít', 'Adolf', 'Vratislav',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'Júlia', 'Urban', 'Dušan', 'Viliam', 'Ferdinand', 'Norbert', 'Róbert', 'Medard', 'Zlatko', 'Anton', 'Vasil', 'Vít', 'Adolf', 'Vratislav',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

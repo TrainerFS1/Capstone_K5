@@ -18,7 +18,10 @@ use PhpParser\Node\Stmt\GroupUse;
 use PhpParser\Node\Stmt\Namespace_;
 use PhpParser\Node\Stmt\Use_;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\Stmt\UseItem;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Stmt\UseUse;
@@ -77,23 +80,30 @@ class UseStatementPass extends CodeCleanerPass
         // Store a reference to every "use" statement, because we'll need them in a bit.
         if ($node instanceof Use_) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             foreach ($node->uses as $useItem) {
                 $this->aliases[\strtolower($useItem->getAlias())] = $useItem->name;
             }
 
             // @todo Rename to Node_Visitor::REMOVE_NODE once we drop support for PHP-Parser 4.x
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($node->uses as $use) {
                 $alias = $use->alias ?: \end($use->name->parts);
                 $this->aliases[\strtolower($alias)] = $use->name;
             }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return NodeTraverser::REMOVE_NODE;
         }
 
         // Expand every "use" statement in the group into a full, standalone "use" and store 'em with the others.
         if ($node instanceof GroupUse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             foreach ($node->uses as $useItem) {
                 $this->aliases[\strtolower($useItem->getAlias())] = Name::concat($node->prefix, $useItem->name, [
@@ -104,6 +114,8 @@ class UseStatementPass extends CodeCleanerPass
 
             // @todo Rename to Node_Visitor::REMOVE_NODE once we drop support for PHP-Parser 4.x
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($node->uses as $use) {
                 $alias = $use->alias ?: \end($use->name->parts);
                 $this->aliases[\strtolower($alias)] = Name::concat($node->prefix, $use->name, [
@@ -112,6 +124,9 @@ class UseStatementPass extends CodeCleanerPass
                 ]);
             }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return NodeTraverser::REMOVE_NODE;
         }
@@ -126,9 +141,14 @@ class UseStatementPass extends CodeCleanerPass
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Do nothing with UseItem; this an entry in the list of uses in the use statement.
         // @todo Remove UseUse once we drop support for PHP-Parser 4.x
         if ($node instanceof UseUse || $node instanceof UseItem) {
+=======
+        // Do nothing with UseUse; this an entry in the list of uses in the use statement.
+        if ($node instanceof UseUse) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         // Do nothing with UseUse; this an entry in the list of uses in the use statement.
         if ($node instanceof UseUse) {

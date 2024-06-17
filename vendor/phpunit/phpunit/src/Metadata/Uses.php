@@ -11,6 +11,7 @@ namespace PHPUnit\Metadata;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @psalm-immutable
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -27,6 +28,8 @@ final class Uses extends Metadata
      * @psalm-param non-empty-string $target
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  *
  * @psalm-immutable
@@ -35,6 +38,9 @@ final class Uses extends Metadata
 {
     private readonly string $target;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function __construct(int $level, string $target)
     {
@@ -44,9 +50,12 @@ final class Uses extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-assert-if-true Uses $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isUses(): bool
@@ -55,9 +64,12 @@ final class Uses extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function target(): string

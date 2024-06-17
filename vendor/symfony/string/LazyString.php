@@ -31,9 +31,13 @@ class LazyString implements \Stringable, \JsonSerializable
 
         $lazyString = new static();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $lazyString->value = static function () use (&$callback, &$arguments): string {
             static $value;
 
+=======
+        $lazyString->value = static function () use (&$callback, &$arguments, &$value): string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $lazyString->value = static function () use (&$callback, &$arguments, &$value): string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -44,7 +48,11 @@ class LazyString implements \Stringable, \JsonSerializable
                 }
                 $value = $callback(...$arguments);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $callback = !\is_scalar($value) && !$value instanceof \Stringable ? self::getPrettyName($callback) : 'callable';
+=======
+                $callback = self::getPrettyName($callback);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $callback = self::getPrettyName($callback);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -138,7 +146,11 @@ class LazyString implements \Stringable, \JsonSerializable
             $r = new \ReflectionFunction($callback);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($r->isAnonymous() || !$class = $r->getClosureCalledClass()) {
+=======
+            if (str_contains($r->name, '{closure}') || !$class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (str_contains($r->name, '{closure}') || !$class = \PHP_VERSION_ID >= 80111 ? $r->getClosureCalledClass() : $r->getClosureScopeClass()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

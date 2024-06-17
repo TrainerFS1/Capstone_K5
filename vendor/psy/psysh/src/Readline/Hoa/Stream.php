@@ -111,7 +111,11 @@ abstract class Stream implements IStream, EventListenable
      * `$this->_open()` method. Please, see the `self::_getStream()` method.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $streamName, ?string $context = null, bool $wait = false)
+=======
+    public function __construct(string $streamName, string $context = null, bool $wait = false)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $streamName, string $context = null, bool $wait = false)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -155,7 +159,11 @@ abstract class Stream implements IStream, EventListenable
         string $streamName,
         self $handler,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?string $context = null
+=======
+        string $context = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $context = null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -204,7 +212,11 @@ abstract class Stream implements IStream, EventListenable
      * overloaded into a public context.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract protected function &_open(string $streamName, ?StreamContext $context = null);
+=======
+    abstract protected function &_open(string $streamName, StreamContext $context = null);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     abstract protected function &_open(string $streamName, StreamContext $context = null);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

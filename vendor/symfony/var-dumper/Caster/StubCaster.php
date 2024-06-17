@@ -23,9 +23,12 @@ use Symfony\Component\VarDumper\Cloner\Stub;
 class StubCaster
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castStub(Stub $c, array $a, Stub $stub, bool $isNested)
@@ -50,9 +53,12 @@ class StubCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castCutArray(CutArrayStub $c, array $a, Stub $stub, bool $isNested)
@@ -61,9 +67,12 @@ class StubCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function cutInternals($obj, array $a, Stub $stub, bool $isNested)
@@ -78,9 +87,12 @@ class StubCaster
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castEnum(EnumStub $c, array $a, Stub $stub, bool $isNested)
@@ -106,6 +118,7 @@ class StubCaster
         return $a;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @return array
@@ -117,6 +130,8 @@ class StubCaster
 
         return $a;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

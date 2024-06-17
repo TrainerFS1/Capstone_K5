@@ -3,8 +3,11 @@
 namespace PhpParser\Internal;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Token;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
@@ -13,25 +16,35 @@ use PhpParser\Token;
  * @internal
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class TokenStream {
     /** @var Token[] Tokens (in PhpToken::tokenize() format) */
     private array $tokens;
     /** @var int[] Map from position to indentation */
     private array $indentMap;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class TokenStream
 {
     /** @var array Tokens (in token_get_all format) */
     private $tokens;
     /** @var int[] Map from position to indentation */
     private $indentMap;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Create token stream instance.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Token[] $tokens Tokens in PhpToken::tokenize() format
+=======
+     * @param array $tokens Tokens in token_get_all() format
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array $tokens Tokens in token_get_all() format
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -46,15 +59,21 @@ class TokenStream
      *
      * @param int $startPos Start position
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $endPos End position
      */
     public function haveParens(int $startPos, int $endPos): bool {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $endPos   End position
      *
      * @return bool
      */
     public function haveParens(int $startPos, int $endPos) : bool {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->haveTokenImmediatelyBefore($startPos, '(')
             && $this->haveTokenImmediatelyAfter($endPos, ')');
@@ -65,15 +84,21 @@ class TokenStream
      *
      * @param int $startPos Start position
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $endPos End position
      */
     public function haveBraces(int $startPos, int $endPos): bool {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $endPos   End position
      *
      * @return bool
      */
     public function haveBraces(int $startPos, int $endPos) : bool {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return ($this->haveTokenImmediatelyBefore($startPos, '{')
                 || $this->haveTokenImmediatelyBefore($startPos, T_CURLY_OPEN))
@@ -86,7 +111,11 @@ class TokenStream
      * During this check whitespace and comments are skipped.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $pos Position before which the token should occur
+=======
+     * @param int        $pos               Position before which the token should occur
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param int        $pos               Position before which the token should occur
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,6 +123,7 @@ class TokenStream
      *
      * @return bool Whether the expected token was found
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function haveTokenImmediatelyBefore(int $pos, $expectedTokenType): bool {
         $tokens = $this->tokens;
@@ -105,6 +135,8 @@ class TokenStream
             }
             if (!$token->isIgnorable()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function haveTokenImmediatelyBefore(int $pos, $expectedTokenType) : bool {
         $tokens = $this->tokens;
         $pos--;
@@ -115,6 +147,9 @@ class TokenStream
             }
             if ($tokenType !== \T_WHITESPACE
                 && $tokenType !== \T_COMMENT && $tokenType !== \T_DOC_COMMENT) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 break;
             }
@@ -128,7 +163,11 @@ class TokenStream
      * During this check whitespace and comments are skipped.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $pos Position after which the token should occur
+=======
+     * @param int        $pos               Position after which the token should occur
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param int        $pos               Position after which the token should occur
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -136,6 +175,7 @@ class TokenStream
      *
      * @return bool Whether the expected token was found
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function haveTokenImmediatelyAfter(int $pos, $expectedTokenType): bool {
         $tokens = $this->tokens;
@@ -147,6 +187,8 @@ class TokenStream
             }
             if (!$token->isIgnorable()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function haveTokenImmediatelyAfter(int $pos, $expectedTokenType) : bool {
         $tokens = $this->tokens;
         $pos++;
@@ -157,6 +199,9 @@ class TokenStream
             }
             if ($tokenType !== \T_WHITESPACE
                 && $tokenType !== \T_COMMENT && $tokenType !== \T_DOC_COMMENT) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 break;
             }
@@ -165,8 +210,12 @@ class TokenStream
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param int|string|(int|string)[] $skipTokenType */
     public function skipLeft(int $pos, $skipTokenType): int {
+=======
+    public function skipLeft(int $pos, $skipTokenType) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function skipLeft(int $pos, $skipTokenType) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -178,7 +227,11 @@ class TokenStream
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$tokens[$pos]->is($skipTokenType)) {
+=======
+        if ($tokens[$pos][0] !== $skipTokenType) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($tokens[$pos][0] !== $skipTokenType) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -191,8 +244,12 @@ class TokenStream
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param int|string|(int|string)[] $skipTokenType */
     public function skipRight(int $pos, $skipTokenType): int {
+=======
+    public function skipRight(int $pos, $skipTokenType) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function skipRight(int $pos, $skipTokenType) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -204,7 +261,11 @@ class TokenStream
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$tokens[$pos]->is($skipTokenType)) {
+=======
+        if ($tokens[$pos][0] !== $skipTokenType) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($tokens[$pos][0] !== $skipTokenType) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -223,16 +284,22 @@ class TokenStream
      * @return int Non-whitespace token position
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function skipLeftWhitespace(int $pos): int {
         $tokens = $this->tokens;
         for (; $pos >= 0; $pos--) {
             if (!$tokens[$pos]->isIgnorable()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function skipLeftWhitespace(int $pos) {
         $tokens = $this->tokens;
         for (; $pos >= 0; $pos--) {
             $type = $tokens[$pos][0];
             if ($type !== \T_WHITESPACE && $type !== \T_COMMENT && $type !== \T_DOC_COMMENT) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 break;
             }
@@ -247,16 +314,22 @@ class TokenStream
      * @return int Non-whitespace token position
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function skipRightWhitespace(int $pos): int {
         $tokens = $this->tokens;
         for ($count = \count($tokens); $pos < $count; $pos++) {
             if (!$tokens[$pos]->isIgnorable()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function skipRightWhitespace(int $pos) {
         $tokens = $this->tokens;
         for ($count = \count($tokens); $pos < $count; $pos++) {
             $type = $tokens[$pos][0];
             if ($type !== \T_WHITESPACE && $type !== \T_COMMENT && $type !== \T_DOC_COMMENT) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 break;
             }
@@ -265,17 +338,23 @@ class TokenStream
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param int|string|(int|string)[] $findTokenType */
     public function findRight(int $pos, $findTokenType): int {
         $tokens = $this->tokens;
         for ($count = \count($tokens); $pos < $count; $pos++) {
             if ($tokens[$pos]->is($findTokenType)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function findRight(int $pos, $findTokenType) {
         $tokens = $this->tokens;
         for ($count = \count($tokens); $pos < $count; $pos++) {
             $type = $tokens[$pos][0];
             if ($type === $findTokenType) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $pos;
             }
@@ -292,15 +371,21 @@ class TokenStream
      * @return bool Whether the token occurs in the given range
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function haveTokenInRange(int $startPos, int $endPos, $tokenType): bool {
         $tokens = $this->tokens;
         for ($pos = $startPos; $pos < $endPos; $pos++) {
             if ($tokens[$pos]->is($tokenType)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function haveTokenInRange(int $startPos, int $endPos, $tokenType) {
         $tokens = $this->tokens;
         for ($pos = $startPos; $pos < $endPos; $pos++) {
             if ($tokens[$pos][0] === $tokenType) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return true;
             }
@@ -309,13 +394,19 @@ class TokenStream
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function haveBracesInRange(int $startPos, int $endPos) {
         return $this->haveTokenInRange($startPos, $endPos, '{')
             || $this->haveTokenInRange($startPos, $endPos, T_CURLY_OPEN)
             || $this->haveTokenInRange($startPos, $endPos, '}');
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function haveTagInRange(int $startPos, int $endPos): bool {
         return $this->haveTokenInRange($startPos, $endPos, \T_OPEN_TAG)
@@ -330,7 +421,11 @@ class TokenStream
      * @return int Indentation depth (in spaces)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getIndentationBefore(int $pos): int {
+=======
+    public function getIndentationBefore(int $pos) : int {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getIndentationBefore(int $pos) : int {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -341,8 +436,13 @@ class TokenStream
      * Get the code corresponding to a token offset range, optionally adjusted for indentation.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $from Token start position (inclusive)
      * @param int $to Token end position (exclusive)
+=======
+     * @param int $from   Token start position (inclusive)
+     * @param int $to     Token end position (exclusive)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param int $from   Token start position (inclusive)
      * @param int $to     Token end position (exclusive)
@@ -352,7 +452,11 @@ class TokenStream
      * @return string Code corresponding to token range, adjusted for indentation
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getTokenCode(int $from, int $to, int $indent): string {
+=======
+    public function getTokenCode(int $from, int $to, int $indent) : string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getTokenCode(int $from, int $to, int $indent) : string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -360,6 +464,7 @@ class TokenStream
         $result = '';
         for ($pos = $from; $pos < $to; $pos++) {
             $token = $tokens[$pos];
+<<<<<<< HEAD
 <<<<<<< HEAD
             $id = $token->id;
             $text = $token->text;
@@ -375,6 +480,8 @@ class TokenStream
                     $result .= $text;
                 }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (\is_array($token)) {
                 $type = $token[0];
                 $content = $token[1];
@@ -392,6 +499,9 @@ class TokenStream
                 }
             } else {
                 $result .= $token;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
@@ -403,6 +513,7 @@ class TokenStream
      *
      * @return int[] Token position to indentation map
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     private function calcIndentMap(): array {
         $indentMap = [];
@@ -420,6 +531,8 @@ class TokenStream
                     // Special case: Newline at the end of opening tag followed by whitespace.
                     $indent = \strlen($content);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function calcIndentMap() {
         $indentMap = [];
         $indent = 0;
@@ -431,6 +544,9 @@ class TokenStream
                 $newlinePos = \strrpos($content, "\n");
                 if (false !== $newlinePos) {
                     $indent = \strlen($content) - $newlinePos - 1;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }

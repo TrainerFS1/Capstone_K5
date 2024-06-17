@@ -34,7 +34,11 @@ final class ListTestSuitesCommand implements Command
             $buffer .= sprintf(
                 ' - %s' . PHP_EOL,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $suite->name(),
+=======
+                $suite->name()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $suite->name()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

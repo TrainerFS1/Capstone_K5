@@ -16,6 +16,7 @@ use PhpParser\ParserFactory as OriginalParserFactory;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Parser factory to abstract over PHP Parser library versions.
  */
 class ParserFactory
@@ -33,6 +34,8 @@ class ParserFactory
 
         return $factory->createForHostVersion();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * Parser factory to abstract over PHP parser library versions.
  */
 class ParserFactory
@@ -80,6 +83,9 @@ class ParserFactory
         $parser = $originalFactory->create(\constant(OriginalParserFactory::class.'::'.$kind));
 
         return $parser;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -14,8 +14,11 @@ namespace Symfony\Component\Console\Formatter;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Symfony\Component\String\b;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
@@ -87,9 +90,12 @@ class OutputFormatter implements WrappableOutputFormatterInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setDecorated(bool $decorated)
@@ -103,9 +109,12 @@ class OutputFormatter implements WrappableOutputFormatterInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setStyle(string $name, OutputFormatterStyleInterface $style)
@@ -133,9 +142,12 @@ class OutputFormatter implements WrappableOutputFormatterInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function formatAndWrap(?string $message, int $width)
@@ -256,7 +268,11 @@ class OutputFormatter implements WrappableOutputFormatterInterface
 
         preg_match('~(\\n)$~', $text, $matches);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $text = $prefix.$this->addLineBreaks($text, $width);
+=======
+        $text = $prefix.preg_replace('~([^\\n]{'.$width.'})\\ *~', "\$1\n", $text);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $text = $prefix.preg_replace('~([^\\n]{'.$width.'})\\ *~', "\$1\n", $text);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -284,6 +300,7 @@ class OutputFormatter implements WrappableOutputFormatterInterface
         return implode("\n", $lines);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private function addLineBreaks(string $text, int $width): string
     {
@@ -291,6 +308,8 @@ class OutputFormatter implements WrappableOutputFormatterInterface
 
         return b($text)->toCodePointString($encoding)->wordwrap($width, "\n", true)->toByteString($encoding);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

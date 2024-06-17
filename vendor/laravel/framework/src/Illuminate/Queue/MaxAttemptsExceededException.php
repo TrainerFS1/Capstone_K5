@@ -7,6 +7,7 @@ use RuntimeException;
 class MaxAttemptsExceededException extends RuntimeException
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * The job instance.
      *
@@ -26,6 +27,9 @@ class MaxAttemptsExceededException extends RuntimeException
             $e->job = $job;
         });
     }
+=======
+    //
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     //
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -32,7 +32,11 @@ class Vue extends Preset
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             '@vitejs/plugin-vue' => '^4.5.0',
+=======
+            '@vitejs/plugin-vue' => '^4.0.0',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             '@vitejs/plugin-vue' => '^4.0.0',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

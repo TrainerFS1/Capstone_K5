@@ -25,6 +25,7 @@ class ThrottleRequests
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Indicates if the rate limiter keys should be hashed.
      *
      * @var bool
@@ -32,6 +33,8 @@ class ThrottleRequests
     protected static $shouldHashKeys = true;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new request throttler.
@@ -45,6 +48,7 @@ class ThrottleRequests
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Specify the named rate limiter to use for the middleware.
      *
@@ -72,6 +76,8 @@ class ThrottleRequests
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an incoming request.
@@ -134,7 +140,11 @@ class ThrottleRequests
             collect(Arr::wrap($limiterResponse))->map(function ($limit) use ($limiterName) {
                 return (object) [
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'key' => self::$shouldHashKeys ? md5($limiterName.$limit->key) : $limiterName.':'.$limit->key,
+=======
+                    'key' => md5($limiterName.$limit->key),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'key' => md5($limiterName.$limit->key),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -211,9 +221,15 @@ class ThrottleRequests
     {
         if ($user = $request->user()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->formatIdentifier($user->getAuthIdentifier());
         } elseif ($route = $request->route()) {
             return $this->formatIdentifier($route->getDomain().'|'.$request->ip());
+=======
+            return sha1($user->getAuthIdentifier());
+        } elseif ($route = $request->route()) {
+            return sha1($route->getDomain().'|'.$request->ip());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return sha1($user->getAuthIdentifier());
         } elseif ($route = $request->route()) {
@@ -232,7 +248,11 @@ class ThrottleRequests
      * @param  int  $maxAttempts
      * @param  callable|null  $responseCallback
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Http\Exceptions\ThrottleRequestsException|\Illuminate\Http\Exceptions\HttpResponseException
+=======
+     * @return \Illuminate\Http\Exceptions\ThrottleRequestsException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \Illuminate\Http\Exceptions\ThrottleRequestsException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -327,6 +347,7 @@ class ThrottleRequests
         return is_null($retryAfter) ? $this->limiter->retriesLeft($key, $maxAttempts) : 0;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Format the given identifier based on the configured hashing settings.
@@ -349,6 +370,8 @@ class ThrottleRequests
     {
         self::$shouldHashKeys = $shouldHashKeys;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

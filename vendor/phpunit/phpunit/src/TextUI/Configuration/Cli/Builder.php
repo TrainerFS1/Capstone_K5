@@ -11,6 +11,7 @@ namespace PHPUnit\TextUI\CliArguments;
 
 use function array_map;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function basename;
 use function explode;
 use function getcwd;
@@ -21,10 +22,15 @@ use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Runner\TestSuiteSorter;
 use PHPUnit\Util\Filesystem;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function explode;
 use function is_numeric;
 use function sprintf;
 use PHPUnit\Runner\TestSuiteSorter;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\CliParser\Exception as CliParserException;
 use SebastianBergmann\CliParser\Parser as CliParser;
@@ -68,9 +74,12 @@ final class Builder
         'exclude-group=',
         'filter=',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'generate-baseline=',
         'use-baseline=',
         'ignore-baseline',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'generate-configuration',
@@ -106,6 +115,7 @@ final class Builder
         'static-backup',
         'stderr',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'fail-on-deprecation',
         'fail-on-empty-test-suite',
         'fail-on-incomplete',
@@ -123,6 +133,8 @@ final class Builder
         'stop-on-skipped',
         'stop-on-warning',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'stop-on-defect',
         'stop-on-error',
         'stop-on-failure',
@@ -135,6 +147,9 @@ final class Builder
         'fail-on-risky',
         'fail-on-skipped',
         'fail-on-warning',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'strict-coverage',
         'disable-coverage-ignore',
@@ -150,6 +165,7 @@ final class Builder
         'log-events-verbose-text=',
         'version',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'debug',
     ];
     private const SHORT_OPTIONS = 'd:c:h';
@@ -158,6 +174,11 @@ final class Builder
      * @psalm-var array<string, non-negative-int>
      */
     private array $processed = [];
+=======
+    ];
+
+    private const SHORT_OPTIONS = 'd:c:hv';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     ];
 
@@ -174,7 +195,11 @@ final class Builder
                 $parameters,
                 self::SHORT_OPTIONS,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 self::LONG_OPTIONS,
+=======
+                self::LONG_OPTIONS
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 self::LONG_OPTIONS
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -184,16 +209,22 @@ final class Builder
                 $e->getMessage(),
                 $e->getCode(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $e,
             );
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $e
             );
         }
 
         $argument                          = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $atLeastVersion                    = null;
         $backupGlobals                     = null;
@@ -234,6 +265,7 @@ final class Builder
         $executionOrder                    = null;
         $executionOrderDefects             = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $failOnDeprecation                 = null;
         $failOnEmptyTestSuite              = null;
         $failOnIncomplete                  = null;
@@ -255,12 +287,17 @@ final class Builder
         $useBaseline                       = null;
         $ignoreBaseline                    = false;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $failOnEmptyTestSuite              = null;
         $failOnIncomplete                  = null;
         $failOnRisky                       = null;
         $failOnSkipped                     = null;
         $failOnWarning                     = null;
         $filter                            = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $generateConfiguration             = false;
         $migrateConfiguration              = false;
@@ -289,7 +326,10 @@ final class Builder
         $stderr                            = null;
         $strictCoverage                    = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $stopOnDefect                      = null;
         $stopOnError                       = null;
         $stopOnFailure                     = null;
@@ -297,6 +337,9 @@ final class Builder
         $stopOnRisky                       = null;
         $stopOnSkipped                     = null;
         $stopOnWarning                     = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $teamcityLogfile                   = null;
         $testdoxHtmlFile                   = null;
@@ -311,18 +354,24 @@ final class Builder
         $printerTeamCity                   = null;
         $printerTestDox                    = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $debug                             = false;
 
         foreach ($options[0] as $option) {
             $optionAllowedMultipleTimes = false;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (isset($options[1][0])) {
             $argument = $options[1][0];
         }
 
         foreach ($options[0] as $option) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             switch ($option[0]) {
                 case '--colors':
@@ -438,8 +487,11 @@ final class Builder
                     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $optionAllowedMultipleTimes = true;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     break;
@@ -466,6 +518,7 @@ final class Builder
                     break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 case '--generate-baseline':
                     $generateBaseline = $option[1];
 
@@ -489,6 +542,8 @@ final class Builder
 
                     break;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 case '--generate-configuration':
@@ -611,8 +666,13 @@ final class Builder
                                     sprintf(
                                         'unrecognized --order-by option: %s',
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         $order,
                                     ),
+=======
+                                        $order
+                                    )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                                         $order
                                     )
@@ -634,9 +694,12 @@ final class Builder
                     break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 case '--fail-on-deprecation':
                     $failOnDeprecation = true;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 case '--stop-on-defect':
                     $stopOnDefect = true;
 
@@ -669,6 +732,9 @@ final class Builder
 
                 case '--stop-on-skipped':
                     $stopOnSkipped = true;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
@@ -684,11 +750,14 @@ final class Builder
                     break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 case '--fail-on-notice':
                     $failOnNotice = true;
 
                     break;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 case '--fail-on-risky':
@@ -706,6 +775,7 @@ final class Builder
 
                     break;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 case '--stop-on-defect':
                     $stopOnDefect = true;
@@ -752,6 +822,8 @@ final class Builder
 
                     break;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 case '--teamcity':
@@ -940,6 +1012,7 @@ final class Builder
 
                 case '--log-events-text':
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $logEventsText = Filesystem::resolveStreamOrFile($option[1]);
 
                     if ($logEventsText === false) {
@@ -953,10 +1026,14 @@ final class Builder
 =======
                     $logEventsText = $option[1];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                    $logEventsText = $option[1];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case '--log-events-verbose-text':
+<<<<<<< HEAD
 <<<<<<< HEAD
                     $logEventsVerboseText = Filesystem::resolveStreamOrFile($option[1]);
 
@@ -984,6 +1061,11 @@ final class Builder
 
                     break;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+                    $logEventsVerboseText = $option[1];
+
+                    break;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -997,7 +1079,11 @@ final class Builder
 
         return new Configuration(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $options[1],
+=======
+            $argument,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $argument,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1033,6 +1119,7 @@ final class Builder
             $executionOrder,
             $executionOrderDefects,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $failOnDeprecation,
             $failOnEmptyTestSuite,
             $failOnIncomplete,
@@ -1054,12 +1141,17 @@ final class Builder
             $useBaseline,
             $ignoreBaseline,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $failOnEmptyTestSuite,
             $failOnIncomplete,
             $failOnRisky,
             $failOnSkipped,
             $failOnWarning,
             $filter,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $generateConfiguration,
             $migrateConfiguration,
@@ -1088,7 +1180,10 @@ final class Builder
             $stderr,
             $strictCoverage,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $stopOnDefect,
             $stopOnError,
             $stopOnFailure,
@@ -1096,6 +1191,9 @@ final class Builder
             $stopOnRisky,
             $stopOnSkipped,
             $stopOnWarning,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $teamcityLogfile,
             $testdoxHtmlFile,
@@ -1115,6 +1213,7 @@ final class Builder
             $logEventsText,
             $logEventsVerboseText,
             $printerTeamCity,
+<<<<<<< HEAD
 <<<<<<< HEAD
             $printerTestDox,
             $debug,
@@ -1143,6 +1242,11 @@ final class Builder
             );
         }
     }
+=======
+            $printerTestDox
+        );
+    }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $printerTestDox
         );

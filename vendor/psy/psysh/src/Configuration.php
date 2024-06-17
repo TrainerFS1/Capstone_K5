@@ -68,7 +68,10 @@ class Configuration
         'runtimeDir',
         'startupMessage',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'strictTypes',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'theme',
@@ -104,7 +107,10 @@ class Configuration
     private $rawOutput = false;
     private $requireSemicolons = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private $strictTypes = false;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $useUnicode;
@@ -136,7 +142,10 @@ class Configuration
     private $autoCompleter;
     private $checker;
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @deprecated */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $prompt;
@@ -159,8 +168,11 @@ class Configuration
         } elseif (isset($_SERVER['PSYSH_CONFIG']) && $_SERVER['PSYSH_CONFIG']) {
             $this->configFile = $_SERVER['PSYSH_CONFIG'];
 <<<<<<< HEAD
+<<<<<<< HEAD
         } elseif (\PHP_SAPI === 'cli-server' && ($configFile = \getenv('PSYSH_CONFIG'))) {
             $this->configFile = $configFile;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -323,11 +335,14 @@ class Configuration
                 case '3':
                 case 'vv': // `-vvv`
 <<<<<<< HEAD
+<<<<<<< HEAD
                 case 'vvv':
                 case 'vvvv':
                 case 'vvvvv':
                 case 'vvvvvv':
                 case 'vvvvvvv':
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return self::VERBOSITY_DEBUG;
@@ -986,6 +1001,7 @@ class Configuration
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Enable or disable strict types enforcement.
      */
     public function setStrictTypes($strictTypes)
@@ -1002,6 +1018,8 @@ class Configuration
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Enable or disable Unicode in PsySH specific output.
@@ -1080,7 +1098,11 @@ class Configuration
     {
         if (!isset($this->cleaner)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->cleaner = new CodeCleaner(null, null, null, $this->yolo(), $this->strictTypes());
+=======
+            $this->cleaner = new CodeCleaner(null, null, null, $this->yolo());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->cleaner = new CodeCleaner(null, null, null, $this->yolo());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1125,8 +1147,11 @@ class Configuration
     public function setTabCompletion(bool $useTabCompletion)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @\trigger_error('`setTabCompletion` is deprecated; call `setUseTabCompletion` instead.', \E_USER_DEPRECATED);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->setUseTabCompletion($useTabCompletion);
@@ -1151,8 +1176,11 @@ class Configuration
     public function getTabCompletion(): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @\trigger_error('`getTabCompletion` is deprecated; call `useTabCompletion` instead.', \E_USER_DEPRECATED);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->useTabCompletion();
@@ -1287,6 +1315,7 @@ class Configuration
             } elseif ($less = $this->configPaths->which('less')) {
                 // check for the presence of less...
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 // n.b. The busybox less implementation is a bit broken, so
                 // let's not use it by default.
@@ -1297,6 +1326,8 @@ class Configuration
                     return false;
                 }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $this->pager = $less.' -R -F -X';
@@ -1334,8 +1365,11 @@ class Configuration
     public function getTabCompletionMatchers(): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @\trigger_error('`getTabCompletionMatchers` is no longer used.', \E_USER_DEPRECATED);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return [];
@@ -1379,8 +1413,11 @@ class Configuration
     public function addTabCompletionMatchers(array $matchers)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @\trigger_error('`addTabCompletionMatchers` is deprecated; call `addMatchers` instead.', \E_USER_DEPRECATED);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->addMatchers($matchers);
@@ -1710,6 +1747,7 @@ class Configuration
      * Set the prompt.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @deprecated The `prompt` configuration has been replaced by Themes and support will
      * eventually be removed. In the meantime, prompt is applied first by the Theme, then overridden
      * by any explicitly defined prompt.
@@ -1718,15 +1756,21 @@ class Configuration
 =======
      * @param string $prompt
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * @param string $prompt
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setPrompt(string $prompt)
     {
         $this->prompt = $prompt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (isset($this->theme)) {
             $this->theme->setPrompt($prompt);
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -1773,10 +1817,13 @@ class Configuration
         $this->theme = $theme;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($this->prompt)) {
             $this->theme->setPrompt($this->prompt);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($this->output)) {
@@ -1792,12 +1839,16 @@ class Configuration
     {
         if (!isset($this->theme)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // If a prompt is explicitly set, and a theme is not, base it on the `classic` theme.
             $this->theme = $this->prompt ? new Theme('classic') : new Theme();
         }
 
         if (isset($this->prompt)) {
             $this->theme->setPrompt($this->prompt);
+=======
+            $this->theme = new Theme();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->theme = new Theme();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

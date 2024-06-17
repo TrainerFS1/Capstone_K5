@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,12 +28,16 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
 use Mockery\Reflector;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use ReflectionMethod;
 use ReflectionParameter;
@@ -49,6 +56,8 @@ class Method
 
     public function __construct(ReflectionMethod $method)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class Method
 {
@@ -56,11 +65,15 @@ class Method
     private $method;
 
     public function __construct(\ReflectionMethod $method)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->method = $method;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @template TArgs
@@ -84,6 +97,8 @@ class Method
     {
         return array_map(static function (ReflectionParameter $parameter) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __call($method, $args)
     {
         return call_user_func_array(array($this->method, $method), $args);
@@ -95,6 +110,9 @@ class Method
     public function getParameters()
     {
         return array_map(function (\ReflectionParameter $parameter) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return new Parameter($parameter);
         }, $this->method->getParameters());
@@ -102,7 +120,11 @@ class Method
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return null|string
+=======
+     * @return string|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return string|null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

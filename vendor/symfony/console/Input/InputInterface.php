@@ -62,8 +62,11 @@ interface InputInterface
      * Binds the current Input instance with the given arguments and options.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws RuntimeException
@@ -74,8 +77,11 @@ interface InputInterface
      * Validates the input.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws RuntimeException When not enough arguments are given
@@ -102,8 +108,11 @@ interface InputInterface
      * Sets an argument value by name.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException When argument given doesn't exist
@@ -135,8 +144,11 @@ interface InputInterface
      * Sets an option value by name.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException When option given doesn't exist
@@ -156,8 +168,11 @@ interface InputInterface
     /**
      * Sets the input interactivity.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

@@ -15,6 +15,7 @@ namespace SebastianBergmann\LinesOfCode;
 final class LinesOfCode
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-var non-negative-int
      */
@@ -42,12 +43,17 @@ final class LinesOfCode
      * @psalm-param non-negative-int $logicalLinesOfCode
      *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $linesOfCode;
     private int $commentLinesOfCode;
     private int $nonCommentLinesOfCode;
     private int $logicalLinesOfCode;
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws IllogicalValuesException
      * @throws NegativeValueException
@@ -55,7 +61,10 @@ final class LinesOfCode
     public function __construct(int $linesOfCode, int $commentLinesOfCode, int $nonCommentLinesOfCode, int $logicalLinesOfCode)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($linesOfCode < 0) {
@@ -63,7 +72,10 @@ final class LinesOfCode
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($commentLinesOfCode < 0) {
@@ -71,7 +83,10 @@ final class LinesOfCode
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($nonCommentLinesOfCode < 0) {
@@ -79,7 +94,10 @@ final class LinesOfCode
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @psalm-suppress DocblockTypeContradiction */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($logicalLinesOfCode < 0) {
@@ -97,9 +115,12 @@ final class LinesOfCode
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function linesOfCode(): int
@@ -108,9 +129,12 @@ final class LinesOfCode
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function commentLinesOfCode(): int
@@ -119,9 +143,12 @@ final class LinesOfCode
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function nonCommentLinesOfCode(): int
@@ -130,9 +157,12 @@ final class LinesOfCode
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-negative-int
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function logicalLinesOfCode(): int

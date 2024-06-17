@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use function array_map;
 use function current;
@@ -38,11 +45,14 @@ use function reset;
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class CompositeExpectation implements ExpectationInterface
 {
     /**
      * Stores an array of all expectations for this composite
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @var array<ExpectationInterface>
      */
@@ -82,13 +92,22 @@ class CompositeExpectation implements ExpectationInterface
      */
     protected $_expectations = array();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * @var array
+     */
+    protected $_expectations = array();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Add an expectation to the composite
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param ExpectationInterface|HigherOrderMessage $expectation
      *
+=======
+     * @param \Mockery\Expectation|\Mockery\CompositeExpectation $expectation
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param \Mockery\Expectation|\Mockery\CompositeExpectation $expectation
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -112,13 +131,17 @@ class CompositeExpectation implements ExpectationInterface
      *
      * @param mixed ...$args
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return self
      */
     public function andReturns(...$args)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return $this->andReturn(...$args);
     }
@@ -134,6 +157,8 @@ class CompositeExpectation implements ExpectationInterface
         $first = current($this->_expectations);
         return $first->getMock();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return call_user_func_array([$this, 'andReturn'], $args);
     }
 
@@ -150,6 +175,9 @@ class CompositeExpectation implements ExpectationInterface
             call_user_func_array(array($expectation, $method), $args);
         }
         return $this;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -167,10 +195,13 @@ class CompositeExpectation implements ExpectationInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Mockery API alias to getMock
      *
      * @return LegacyMockInterface&MockInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return the parent mock of the first expectation
      *
      * @return \Mockery\MockInterface|\Mockery\LegacyMockInterface
@@ -186,6 +217,9 @@ class CompositeExpectation implements ExpectationInterface
      * Mockery API alias to getMock
      *
      * @return \Mockery\LegacyMockInterface|\Mockery\MockInterface
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function mock()
@@ -194,6 +228,7 @@ class CompositeExpectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Starts a new expectation addition on the first mock which is the primary target outside of a demeter chain
      *
@@ -215,11 +250,16 @@ class CompositeExpectation implements ExpectationInterface
      *
      * @return Expectation
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Starts a new expectation addition on the first mock which is the primary
      * target outside of a demeter chain
      *
      * @param mixed ...$args
      * @return \Mockery\Expectation
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function shouldReceive(...$args)
@@ -227,8 +267,11 @@ class CompositeExpectation implements ExpectationInterface
         reset($this->_expectations);
         $first = current($this->_expectations);
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $first->getMock()->shouldReceive(...$args);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return call_user_func_array(array($first->getMock(), 'shouldReceive'), $args);
     }
 
@@ -260,6 +303,9 @@ class CompositeExpectation implements ExpectationInterface
         }
         $return .= implode(', ', $parts) . ']';
         return $return;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

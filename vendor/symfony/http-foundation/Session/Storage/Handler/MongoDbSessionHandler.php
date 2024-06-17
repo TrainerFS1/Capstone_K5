@@ -15,6 +15,7 @@ use MongoDB\BSON\Binary;
 use MongoDB\BSON\UTCDateTime;
 use MongoDB\Client;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use MongoDB\Driver\BulkWrite;
 use MongoDB\Driver\Manager;
 use MongoDB\Driver\Query;
@@ -26,6 +27,8 @@ use MongoDB\Driver\Query;
  * @author Jérôme Tamarelle <jerome@tamarelle.net>
  *
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use MongoDB\Collection;
 
 /**
@@ -34,14 +37,22 @@ use MongoDB\Collection;
  * @author Markus Bachmann <markus.bachmann@bachi.biz>
  *
  * @see https://packagist.org/packages/mongodb/mongodb
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @see https://php.net/mongodb
  */
 class MongoDbSessionHandler extends AbstractSessionHandler
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Manager $manager;
     private string $namespace;
+=======
+    private Client $mongo;
+    private Collection $collection;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private Client $mongo;
     private Collection $collection;
@@ -81,7 +92,11 @@ class MongoDbSessionHandler extends AbstractSessionHandler
      * @throws \InvalidArgumentException When "database" or "collection" not provided
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(Client|Manager $mongo, array $options)
+=======
+    public function __construct(Client $mongo, array $options)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(Client $mongo, array $options)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,12 +106,16 @@ class MongoDbSessionHandler extends AbstractSessionHandler
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($mongo instanceof Client) {
             $mongo = $mongo->getManager();
         }
 
         $this->manager = $mongo;
         $this->namespace = $options['database'].'.'.$options['collection'];
+=======
+        $this->mongo = $mongo;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->mongo = $mongo;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -116,6 +135,7 @@ class MongoDbSessionHandler extends AbstractSessionHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function doDestroy(#[\SensitiveParameter] string $sessionId): bool
     {
         $write = new BulkWrite();
@@ -126,11 +146,16 @@ class MongoDbSessionHandler extends AbstractSessionHandler
 
         $this->manager->executeBulkWrite($this->namespace, $write);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function doDestroy(string $sessionId): bool
     {
         $this->getCollection()->deleteOne([
             $this->options['id_field'] => $sessionId,
         ]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return true;
@@ -138,6 +163,7 @@ class MongoDbSessionHandler extends AbstractSessionHandler
 
     public function gc(int $maxlifetime): int|false
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $write = new BulkWrite();
         $write->delete(
@@ -162,6 +188,8 @@ class MongoDbSessionHandler extends AbstractSessionHandler
         $write = new BulkWrite();
         $write->update(
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->getCollection()->deleteMany([
             $this->options['expiry_field'] => ['$lt' => new UTCDateTime()],
         ])->getDeletedCount();
@@ -179,12 +207,16 @@ class MongoDbSessionHandler extends AbstractSessionHandler
         ];
 
         $this->getCollection()->updateOne(
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             [$this->options['id_field'] => $sessionId],
             ['$set' => $fields],
             ['upsert' => true]
         );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->manager->executeBulkWrite($this->namespace, $write);
 
@@ -236,6 +268,8 @@ class MongoDbSessionHandler extends AbstractSessionHandler
     {
         return new UTCDateTime((time() + $additionalSeconds) * 1000);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return true;
     }
 
@@ -277,6 +311,9 @@ class MongoDbSessionHandler extends AbstractSessionHandler
     protected function getMongo(): Client
     {
         return $this->mongo;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

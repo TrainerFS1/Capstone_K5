@@ -1,5 +1,6 @@
 @extends('adminlte.layouts.auth')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @section('title', 'Login')
 @section('content')
@@ -95,6 +96,8 @@
 </body>
 @endsection
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 @section('title', 'Login')
 @section('content')
 
@@ -182,4 +185,7 @@
         </div>
         <!-- /.login-box -->
     @endsection
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

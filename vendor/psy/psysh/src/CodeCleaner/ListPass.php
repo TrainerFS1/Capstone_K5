@@ -13,9 +13,15 @@ namespace Psy\CodeCleaner;
 
 use PhpParser\Node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\Expr\Array_;
 use PhpParser\Node\Expr\ArrayDimFetch;
 // @todo Switch to PhpParser\Node\ArrayItem once we drop support for PHP-Parser 4.x
+=======
+use PhpParser\Node\Expr;
+use PhpParser\Node\Expr\Array_;
+use PhpParser\Node\Expr\ArrayDimFetch;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PhpParser\Node\Expr;
 use PhpParser\Node\Expr\Array_;
@@ -36,7 +42,10 @@ use Psy\Exception\ParseErrorException;
 class ListPass extends CodeCleanerPass
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $atLeastPhp71;
 
     public function __construct()
@@ -44,6 +53,9 @@ class ListPass extends CodeCleanerPass
         $this->atLeastPhp71 = \version_compare(\PHP_VERSION, '7.1', '>=');
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Validate use of list assignment.
@@ -65,19 +77,29 @@ class ListPass extends CodeCleanerPass
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$this->atLeastPhp71 && $node->var instanceof Array_) {
             $msg = "syntax error, unexpected '='";
             throw new ParseErrorException($msg, $node->expr->getLine());
         }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Polyfill for PHP-Parser 2.x
         $items = isset($node->var->items) ? $node->var->items : $node->var->vars;
 
         if ($items === [] || $items === [null]) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new ParseErrorException('Cannot use empty list', ['startLine' => $node->var->getStartLine(), 'endLine' => $node->var->getEndLine()]);
+=======
+            throw new ParseErrorException('Cannot use empty list', $node->var->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new ParseErrorException('Cannot use empty list', $node->var->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -92,10 +114,13 @@ class ListPass extends CodeCleanerPass
             $itemFound = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!self::isValidArrayItem($item)) {
                 $msg = 'Assignments can only happen to writable values';
                 throw new ParseErrorException($msg, ['startLine' => $item->getStartLine(), 'endLine' => $item->getEndLine()]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // List_->$vars in PHP-Parser 2.x is Variable instead of ArrayItem.
             if (!$this->atLeastPhp71 && $item instanceof ArrayItem && $item->key !== null) {
                 $msg = 'Syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting \',\' or \')\'';
@@ -105,6 +130,9 @@ class ListPass extends CodeCleanerPass
             if (!self::isValidArrayItem($item)) {
                 $msg = 'Assignments can only happen to writable values';
                 throw new ParseErrorException($msg, $item->getLine());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
@@ -118,9 +146,15 @@ class ListPass extends CodeCleanerPass
      * Validate whether a given item in an array is valid for short assignment.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Node $item
      */
     private static function isValidArrayItem(Node $item): bool
+=======
+     * @param Expr $item
+     */
+    private static function isValidArrayItem(Expr $item): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param Expr $item
      */

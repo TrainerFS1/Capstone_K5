@@ -26,7 +26,11 @@ interface StreamInterface
      * @return string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __toString(): string;
+=======
+    public function __toString();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __toString();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -37,7 +41,11 @@ interface StreamInterface
      * @return void
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function close(): void;
+=======
+    public function close();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function close();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,7 +65,11 @@ interface StreamInterface
      * @return int|null Returns the size in bytes if known, or null if unknown.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSize(): ?int;
+=======
+    public function getSize();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getSize();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +81,11 @@ interface StreamInterface
      * @throws \RuntimeException on error.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function tell(): int;
+=======
+    public function tell();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function tell();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -80,7 +96,11 @@ interface StreamInterface
      * @return bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function eof(): bool;
+=======
+    public function eof();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function eof();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,7 +111,11 @@ interface StreamInterface
      * @return bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isSeekable(): bool;
+=======
+    public function isSeekable();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isSeekable();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -109,7 +133,11 @@ interface StreamInterface
      * @throws \RuntimeException on failure.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function seek(int $offset, int $whence = SEEK_SET): void;
+=======
+    public function seek($offset, $whence = SEEK_SET);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function seek($offset, $whence = SEEK_SET);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -125,7 +153,11 @@ interface StreamInterface
      * @throws \RuntimeException on failure.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function rewind(): void;
+=======
+    public function rewind();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function rewind();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -136,7 +168,11 @@ interface StreamInterface
      * @return bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isWritable(): bool;
+=======
+    public function isWritable();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isWritable();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -149,7 +185,11 @@ interface StreamInterface
      * @throws \RuntimeException on failure.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function write(string $string): int;
+=======
+    public function write($string);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function write($string);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -160,7 +200,11 @@ interface StreamInterface
      * @return bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isReadable(): bool;
+=======
+    public function isReadable();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isReadable();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -176,7 +220,11 @@ interface StreamInterface
      * @throws \RuntimeException if an error occurs.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function read(int $length): string;
+=======
+    public function read($length);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function read($length);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -189,7 +237,11 @@ interface StreamInterface
      *     reading.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getContents(): string;
+=======
+    public function getContents();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getContents();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -202,7 +254,11 @@ interface StreamInterface
      *
      * @link http://php.net/manual/en/function.stream-get-meta-data.php
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|null $key Specific metadata to retrieve.
+=======
+     * @param string $key Specific metadata to retrieve.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $key Specific metadata to retrieve.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -211,7 +267,11 @@ interface StreamInterface
      *     value is found, or null if the key is not found.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getMetadata(?string $key = null);
+=======
+    public function getMetadata($key = null);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getMetadata($key = null);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

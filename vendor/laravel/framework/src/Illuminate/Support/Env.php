@@ -6,7 +6,10 @@ use Dotenv\Repository\Adapter\PutenvAdapter;
 use Dotenv\Repository\RepositoryBuilder;
 use PhpOption\Option;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use RuntimeException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -70,7 +73,11 @@ class Env
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the value of an environment variable.
+=======
+     * Gets the value of an environment variable.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Gets the value of an environment variable.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,6 +88,7 @@ class Env
      */
     public static function get($key, $default = null)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return self::getOption($key)->getOrCall(fn () => value($default));
     }
@@ -108,6 +116,8 @@ class Env
     {
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Option::fromValue(static::getRepository()->get($key))
             ->map(function ($value) {
                 switch (strtolower($value)) {
@@ -131,7 +141,12 @@ class Env
 
                 return $value;
 <<<<<<< HEAD
+<<<<<<< HEAD
             });
+=======
+            })
+            ->getOrCall(fn () => value($default));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             })
             ->getOrCall(fn () => value($default));

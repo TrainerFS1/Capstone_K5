@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\bill;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Notifications\BillReminderNotification;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Notification;
 use App\Models\expense;
+=======
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -57,9 +63,12 @@ class BillController extends Controller
         $months = $billData->keys()->toArray();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Panggil metode untuk mengirim notifikasi tagihan
         $this->sendBillReminders();
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return view('bill.index', compact('bills', 'totalBill', 'billData', 'sortField', 'sortDirection', 'months'));
@@ -85,15 +94,21 @@ class BillController extends Controller
             'amount' => 'required|numeric',
             'due_date' => 'required|date',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'status' => 'required|boolean',
             'description' => 'nullable|string',
         ]);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'status' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
         
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $user = Auth::user();
 
@@ -130,6 +145,7 @@ class BillController extends Controller
     {
         $bill = Bill::findOrFail($id);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!in_array($bill->status, [0, 1])) {
             $bill->status = 0; // Set default to 'Belum Lunas' if status is not valid
         }
@@ -137,6 +153,11 @@ class BillController extends Controller
     }
 
 
+=======
+        return view('bill.edit', compact('bill'));
+    }
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return view('bill.edit', compact('bill'));
     }
@@ -153,7 +174,11 @@ class BillController extends Controller
             'amount' => 'required|numeric',
             'due_date' => 'required|date',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'status' => 'required|boolean',
+=======
+            'status' => 'required|string|max:255',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'status' => 'required|string|max:255',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -162,17 +187,23 @@ class BillController extends Controller
 
         $bill = Bill::findOrFail($id);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $bill->date = $request->date;
         $bill->category = $request->category;
         $bill->amount = $request->amount;
         $bill->due_date = $request->due_date;
         $bill->status = $request->status;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $bill->date = $request->date;    
         $bill->category = $request->category;    
         $bill->amount = $request->amount;
         $bill->due_date = $request->due_date;    
         $bill->status = $request->status;    
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $bill->description = $request->description;
         $bill->save();
@@ -191,6 +222,7 @@ class BillController extends Controller
         alert()->success('Berhasil', 'Data Berhasil Dihapus');
         return redirect()->route('index.bill');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -245,6 +277,9 @@ class BillController extends Controller
         return redirect()->route('index.bill');
     }
 }
+=======
+}
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 }
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

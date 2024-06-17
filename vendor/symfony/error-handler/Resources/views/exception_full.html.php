@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title><?= $_message; ?></title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <link rel="icon" type="image/png" href="<?= $this->include('assets/images/favicon.png.base64'); ?>" />
+=======
+        <link rel="icon" type="image/png" href="<?= $this->include('assets/images/favicon.png.base64'); ?>">
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         <link rel="icon" type="image/png" href="<?= $this->include('assets/images/favicon.png.base64'); ?>">
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

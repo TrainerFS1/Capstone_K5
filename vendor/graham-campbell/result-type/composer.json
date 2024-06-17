@@ -13,15 +13,21 @@
     "require": {
         "php": "^7.2.5 || ^8.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "phpoption/phpoption": "^1.9.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5.34 || ^9.6.13 || ^10.4.2"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "phpoption/phpoption": "^1.9"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5.28 || ^9.5.21"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {

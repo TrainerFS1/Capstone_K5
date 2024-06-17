@@ -79,7 +79,11 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
      * If the handler was provided as a factory, this will trigger the handler's instantiation.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHandler(LogRecord|null $record = null): HandlerInterface
+=======
+    public function getHandler(LogRecord $record = null): HandlerInterface
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getHandler(LogRecord $record = null): HandlerInterface
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

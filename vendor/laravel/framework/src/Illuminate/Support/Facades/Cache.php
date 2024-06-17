@@ -14,7 +14,10 @@ namespace Illuminate\Support\Facades;
  * @method static void purge(string|null $name = null)
  * @method static \Illuminate\Cache\CacheManager extend(string $driver, \Closure $callback)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Cache\CacheManager setApplication(\Illuminate\Contracts\Foundation\Application $app)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static bool has(array|string $key)
@@ -58,7 +61,10 @@ namespace Illuminate\Support\Facades;
  *
  * @see \Illuminate\Cache\CacheManager
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @mixin \Illuminate\Cache\Repository

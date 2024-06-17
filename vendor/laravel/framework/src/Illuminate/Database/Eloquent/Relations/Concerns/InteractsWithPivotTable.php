@@ -3,7 +3,10 @@
 namespace Illuminate\Database\Eloquent\Relations\Concerns;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use BackedEnum;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Eloquent\Collection;
@@ -159,10 +162,13 @@ trait InteractsWithPivotTable
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($id instanceof BackedEnum) {
                 $id = $id->value;
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return [$id => $attributes];
@@ -408,7 +414,11 @@ trait InteractsWithPivotTable
             $pivotModel = new $this->using;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $fresh = $pivotModel->fromDateTime($fresh);
+=======
+            $fresh = $fresh->format($pivotModel->getDateFormat());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $fresh = $fresh->format($pivotModel->getDateFormat());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -526,8 +536,11 @@ trait InteractsWithPivotTable
     public function newPivot(array $attributes = [], $exists = false)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $attributes = array_merge(array_column($this->pivotValues, 'value', 'column'), $attributes);
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $pivot = $this->related->newPivot(

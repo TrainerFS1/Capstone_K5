@@ -28,15 +28,21 @@ class RedirectMiddleware
      */
     public static $defaultSettings = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'max' => 5,
         'protocols' => ['http', 'https'],
         'strict' => false,
         'referer' => false,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'max'             => 5,
         'protocols'       => ['http', 'https'],
         'strict'          => false,
         'referer'         => false,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'track_redirects' => false,
     ];
@@ -174,8 +180,13 @@ class RedirectMiddleware
         // would do.
         $statusCode = $response->getStatusCode();
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($statusCode == 303
             || ($statusCode <= 302 && !$options['allow_redirects']['strict'])
+=======
+        if ($statusCode == 303 ||
+            ($statusCode <= 302 && !$options['allow_redirects']['strict'])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($statusCode == 303 ||
             ($statusCode <= 302 && !$options['allow_redirects']['strict'])

@@ -9,6 +9,7 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Interface_ extends Declaration {
     protected string $name;
     /** @var list<Name> */
@@ -20,6 +21,8 @@ class Interface_ extends Declaration {
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Interface_ extends Declaration
 {
     protected $name;
@@ -29,6 +32,9 @@ class Interface_ extends Declaration
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -97,7 +103,11 @@ class Interface_ extends Declaration
      * @return Stmt\Interface_ The built interface node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): PhpParser\Node {
+=======
+    public function getNode() : PhpParser\Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNode() : PhpParser\Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

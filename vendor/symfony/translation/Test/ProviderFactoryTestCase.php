@@ -29,6 +29,11 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  *
  * @author Mathieu Santostefano <msantostefano@protonmail.com>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ *
+ * @internal
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  *
  * @internal
@@ -49,6 +54,7 @@ abstract class ProviderFactoryTestCase extends TestCase
      * @return iterable<array{0: bool, 1: string}>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract public static function supportsProvider(): iterable;
 
     /**
@@ -56,19 +62,28 @@ abstract class ProviderFactoryTestCase extends TestCase
      */
     abstract public static function createProvider(): iterable;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     abstract public function supportsProvider(): iterable;
 
     /**
      * @return iterable<array{0: string, 1: string, 2: TransportInterface}>
      */
     abstract public function createProvider(): iterable;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @return iterable<array{0: string, 1: string|null}>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function unsupportedSchemeProvider(): iterable
+=======
+    public function unsupportedSchemeProvider(): iterable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function unsupportedSchemeProvider(): iterable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -80,7 +95,11 @@ abstract class ProviderFactoryTestCase extends TestCase
      * @return iterable<array{0: string, 1: string|null}>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function incompleteDsnProvider(): iterable
+=======
+    public function incompleteDsnProvider(): iterable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function incompleteDsnProvider(): iterable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -113,7 +132,11 @@ abstract class ProviderFactoryTestCase extends TestCase
      * @dataProvider unsupportedSchemeProvider
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testUnsupportedSchemeException(string $dsn, ?string $message = null)
+=======
+    public function testUnsupportedSchemeException(string $dsn, string $message = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testUnsupportedSchemeException(string $dsn, string $message = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -134,7 +157,11 @@ abstract class ProviderFactoryTestCase extends TestCase
      * @dataProvider incompleteDsnProvider
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function testIncompleteDsnException(string $dsn, ?string $message = null)
+=======
+    public function testIncompleteDsnException(string $dsn, string $message = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function testIncompleteDsnException(string $dsn, string $message = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

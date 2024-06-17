@@ -17,12 +17,15 @@ use PHPUnit\TestRunner\TestResult\TestResult;
 final class ShellExitCodeCalculator
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private const SUCCESS_EXIT   = 0;
     private const FAILURE_EXIT   = 1;
     private const EXCEPTION_EXIT = 2;
 
     public function calculate(bool $failOnDeprecation, bool $failOnEmptyTestSuite, bool $failOnIncomplete, bool $failOnNotice, bool $failOnRisky, bool $failOnSkipped, bool $failOnWarning, TestResult $result): int
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private const SUCCESS_EXIT = 0;
 
     private const FAILURE_EXIT = 1;
@@ -30,6 +33,9 @@ final class ShellExitCodeCalculator
     private const EXCEPTION_EXIT = 2;
 
     public function calculate(bool $failOnEmptyTestSuite, bool $failOnRisky, bool $failOnWarning, bool $failOnIncomplete, bool $failOnSkipped, TestResult $result): int
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $returnCode = self::FAILURE_EXIT;
@@ -39,7 +45,11 @@ final class ShellExitCodeCalculator
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($failOnEmptyTestSuite && !$result->hasTests()) {
+=======
+        if ($failOnEmptyTestSuite && $result->numberOfTests() === 0) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($failOnEmptyTestSuite && $result->numberOfTests() === 0) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,6 +57,7 @@ final class ShellExitCodeCalculator
         }
 
         if ($result->wasSuccessfulIgnoringPhpunitWarnings()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             if ($failOnDeprecation && $result->hasDeprecations()) {
                 $returnCode = self::FAILURE_EXIT;
@@ -70,6 +81,8 @@ final class ShellExitCodeCalculator
 
             if ($failOnWarning && $result->hasWarnings()) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if ($failOnRisky && $result->hasTestConsideredRiskyEvents()) {
                 $returnCode = self::FAILURE_EXIT;
             }
@@ -83,13 +96,20 @@ final class ShellExitCodeCalculator
             }
 
             if ($failOnSkipped && $result->hasTestSkippedEvents()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $returnCode = self::FAILURE_EXIT;
             }
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($result->hasErrors()) {
+=======
+        if ($result->hasTestErroredEvents()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ($result->hasTestErroredEvents()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

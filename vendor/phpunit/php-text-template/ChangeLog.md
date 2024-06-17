@@ -3,12 +3,15 @@
 All notable changes are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## [3.0.1] - 2023-08-31
 
 ### Changed
 
 * Warnings from `file_put_contents()` are now suppressed
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## [3.0.0] - 2023-02-03
@@ -52,7 +55,10 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 * Removed support for PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, PHP 7.0, PHP 7.1, and PHP 7.2 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [3.0.1]: https://github.com/sebastianbergmann/php-text-template/compare/3.0.0...3.0.1
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 [3.0.0]: https://github.com/sebastianbergmann/php-text-template/compare/2.0.4...3.0.0

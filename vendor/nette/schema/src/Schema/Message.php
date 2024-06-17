@@ -15,6 +15,7 @@ use Nette;
 final class Message
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/** variables: {value: mixed, expected: string} */
 	public const TypeMismatch = 'schema.typeMismatch';
 
@@ -72,6 +73,8 @@ final class Message
 	/** @var string[] */
 	public array $variables;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	use Nette\SmartObject;
 
 	/** variables: {value: mixed, expected: string} */
@@ -109,6 +112,9 @@ final class Message
 
 	/** @var string[] */
 	public $variables;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
@@ -134,7 +140,11 @@ final class Message
 			[, $space, $key] = $m;
 			return $vars[$key] === null ? '' : $space . $vars[$key];
 <<<<<<< HEAD
+<<<<<<< HEAD
 		}, $this->message) ?? throw new Nette\InvalidStateException(preg_last_error_msg());
+=======
+		}, $this->message);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 		}, $this->message);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

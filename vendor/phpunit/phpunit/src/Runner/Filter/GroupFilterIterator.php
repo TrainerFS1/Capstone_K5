@@ -14,7 +14,10 @@ use function array_push;
 use function in_array;
 use function spl_object_id;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Framework\Test;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\TestSuite;
@@ -32,10 +35,13 @@ abstract class GroupFilterIterator extends RecursiveFilterIterator
     protected array $groupTests = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-param RecursiveIterator<int, Test> $iterator
      * @psalm-param list<non-empty-string> $groups
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(RecursiveIterator $iterator, array $groups, TestSuite $suite)
@@ -43,17 +49,23 @@ abstract class GroupFilterIterator extends RecursiveFilterIterator
         parent::__construct($iterator);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($suite->groupDetails() as $group => $tests) {
             if (in_array((string) $group, $groups, true)) {
                 $testHashes = array_map(
                     'spl_object_id',
                     $tests,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($suite->getGroupDetails() as $group => $tests) {
             if (in_array((string) $group, $groups, true)) {
                 $testHashes = array_map(
                     'spl_object_id',
                     $tests
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 

@@ -16,6 +16,12 @@ use Brick\Math\Internal\Calculator;
 class GmpCalculator extends Calculator
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -27,6 +33,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -38,6 +50,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -49,6 +67,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -60,6 +84,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -71,6 +101,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -87,6 +123,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -98,6 +140,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -115,6 +163,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -126,6 +180,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -137,6 +197,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -148,6 +214,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -159,6 +231,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -170,6 +248,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -181,6 +265,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritdoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritdoc}
@@ -192,6 +282,12 @@ class GmpCalculator extends Calculator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * {@inheritDoc}
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * {@inheritDoc}

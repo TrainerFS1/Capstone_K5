@@ -65,7 +65,11 @@ final class TestSuiteIterator implements RecursiveIterator
         if (!$this->hasChildren()) {
             throw new NoChildTestSuiteException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'The current item is not a TestSuite instance and therefore does not have any children.',
+=======
+                'The current item is not a TestSuite instance and therefore does not have any children.'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'The current item is not a TestSuite instance and therefore does not have any children.'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

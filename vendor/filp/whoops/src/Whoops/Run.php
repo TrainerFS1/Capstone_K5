@@ -10,6 +10,7 @@ use InvalidArgumentException;
 use Throwable;
 use Whoops\Exception\ErrorException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Whoops\Handler\CallbackHandler;
 use Whoops\Handler\Handler;
 use Whoops\Handler\HandlerInterface;
@@ -18,10 +19,15 @@ use Whoops\Inspector\InspectorFactory;
 use Whoops\Inspector\InspectorFactoryInterface;
 use Whoops\Inspector\InspectorInterface;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Whoops\Exception\Inspector;
 use Whoops\Handler\CallbackHandler;
 use Whoops\Handler\Handler;
 use Whoops\Handler\HandlerInterface;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Whoops\Util\Misc;
 use Whoops\Util\SystemFacade;
@@ -77,6 +83,7 @@ final class Run implements RunInterface
     private $canThrowExceptions = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * The inspector factory to create inspectors.
      *
@@ -93,6 +100,11 @@ final class Run implements RunInterface
     {
         $this->system = $system ?: new SystemFacade;
         $this->inspectorFactory = new InspectorFactory();
+=======
+    public function __construct(SystemFacade $system = null)
+    {
+        $this->system = $system ?: new SystemFacade;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(SystemFacade $system = null)
     {
@@ -195,6 +207,7 @@ final class Run implements RunInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getFrameFilters()
     {
         return $this->frameFilters;
@@ -206,6 +219,8 @@ final class Run implements RunInterface
         return $this;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -223,7 +238,10 @@ final class Run implements RunInterface
             class_exists("\\Whoops\\Exception\\Frame");
             class_exists("\\Whoops\\Exception\\Inspector");
 <<<<<<< HEAD
+<<<<<<< HEAD
             class_exists("\\Whoops\\Inspector\\InspectorFactory");
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -536,6 +554,7 @@ final class Run implements RunInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @param InspectorFactoryInterface $factory
@@ -569,6 +588,8 @@ final class Run implements RunInterface
     {
         return $this->inspectorFactory->create($exception);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @param Throwable $exception
      *
@@ -577,6 +598,9 @@ final class Run implements RunInterface
     private function getInspector($exception)
     {
         return new Inspector($exception);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

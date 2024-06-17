@@ -119,7 +119,11 @@ class DatabaseQueue extends Queue implements QueueContract, ClearableQueue
      * @param  mixed  $data
      * @param  string|null  $queue
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return mixed
+=======
+     * @return void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -273,8 +277,12 @@ class DatabaseQueue extends Queue implements QueueContract, ClearableQueue
         if (($databaseEngine === 'mysql' && version_compare($databaseVersion, '8.0.1', '>=')) ||
             ($databaseEngine === 'mariadb' && version_compare($databaseVersion, '10.6.0', '>=')) ||
 <<<<<<< HEAD
+<<<<<<< HEAD
             ($databaseEngine === 'pgsql' && version_compare($databaseVersion, '9.5', '>=')) ||
             ($databaseEngine === 'vitess' && version_compare($databaseVersion, '19.0', '>='))) {
+=======
+            ($databaseEngine === 'pgsql' && version_compare($databaseVersion, '9.5', '>='))) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ($databaseEngine === 'pgsql' && version_compare($databaseVersion, '9.5', '>='))) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

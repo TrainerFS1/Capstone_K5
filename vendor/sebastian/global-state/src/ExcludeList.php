@@ -11,7 +11,11 @@ namespace SebastianBergmann\GlobalState;
 
 use function in_array;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function str_starts_with;
+=======
+use function strpos;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function strpos;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -76,7 +80,11 @@ final class ExcludeList
 
         foreach ($this->classNamePrefixes as $prefix) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (str_starts_with($className, $prefix)) {
+=======
+            if (strpos($className, $prefix) === 0) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (strpos($className, $prefix) === 0) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

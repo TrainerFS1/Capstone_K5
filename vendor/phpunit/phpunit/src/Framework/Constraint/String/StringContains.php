@@ -11,7 +11,10 @@ namespace PHPUnit\Framework\Constraint;
 
 use function is_string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function mb_detect_encoding;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function mb_stripos;
@@ -19,9 +22,13 @@ use function mb_strtolower;
 use function sprintf;
 use function str_contains;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function strlen;
 use function strtr;
 use PHPUnit\Util\Exporter;
+=======
+use function strtr;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function strtr;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -31,6 +38,7 @@ use function strtr;
  */
 final class StringContains extends Constraint
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     private readonly string $needle;
     private readonly bool $ignoreCase;
@@ -44,6 +52,8 @@ final class StringContains extends Constraint
 
         $this->needle            = $needle;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $string;
     private readonly bool $ignoreCase;
     private readonly bool $ignoreLineEndings;
@@ -51,6 +61,9 @@ final class StringContains extends Constraint
     public function __construct(string $string, bool $ignoreCase = false, bool $ignoreLineEndings = false)
     {
         $this->string            = $string;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->ignoreCase        = $ignoreCase;
         $this->ignoreLineEndings = $ignoreLineEndings;
@@ -61,6 +74,7 @@ final class StringContains extends Constraint
      */
     public function toString(): string
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $needle = $this->needle;
 
@@ -95,6 +109,8 @@ final class StringContains extends Constraint
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $string = $this->string;
 
         if ($this->ignoreCase) {
@@ -111,6 +127,9 @@ final class StringContains extends Constraint
         );
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Evaluates the constraint for parameter $other. Returns true if the
@@ -118,6 +137,7 @@ final class StringContains extends Constraint
      */
     protected function matches(mixed $other): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $haystack = $other;
 
@@ -127,18 +147,27 @@ final class StringContains extends Constraint
 
         if (!is_string($haystack)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ('' === $this->string) {
             return true;
         }
 
         if (!is_string($other)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return false;
         }
 
         if ($this->ignoreLineEndings) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $haystack = $this->normalizeLineEndings($haystack);
+=======
+            $other = $this->normalizeLineEndings($other);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $other = $this->normalizeLineEndings($other);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -146,6 +175,7 @@ final class StringContains extends Constraint
 
         if ($this->ignoreCase) {
             /*
+<<<<<<< HEAD
 <<<<<<< HEAD
              * We must use the multibyte-safe version, so we can accurately compare non-latin uppercase characters with
              * their lowercase equivalents.
@@ -195,6 +225,8 @@ final class StringContains extends Constraint
 
         return strlen($haystack);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
              * We must use the multi byte safe version so we can accurately compare non latin upper characters with
              * their lowercase equivalents.
              */
@@ -210,6 +242,9 @@ final class StringContains extends Constraint
          * data.
          */
         return str_contains($other, $this->string);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -221,7 +256,11 @@ final class StringContains extends Constraint
                 "\r\n" => "\n",
                 "\r"   => "\n",
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
+=======
+            ]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ]
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

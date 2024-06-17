@@ -41,8 +41,13 @@ composer require nette/utils
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Nette Utils 4.0 is compatible with PHP 8.0 to 8.3
 - Nette Utils 3.2 is compatible with PHP 7.2 to 8.3
+=======
+- Nette Utils 4.0 is compatible with PHP 8.0 to 8.2
+- Nette Utils 3.2 is compatible with PHP 7.2 to 8.2
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 - Nette Utils 4.0 is compatible with PHP 8.0 to 8.2
 - Nette Utils 3.2 is compatible with PHP 7.2 to 8.2

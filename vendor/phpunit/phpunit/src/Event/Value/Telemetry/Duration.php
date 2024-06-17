@@ -31,7 +31,11 @@ final class Duration
         return new self(
             $seconds,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $nanoseconds,
+=======
+            $nanoseconds
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $nanoseconds
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -70,8 +74,13 @@ final class Duration
     {
         $seconds = $this->seconds();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $minutes = 0;
         $hours   = 0;
+=======
+        $minutes = 00;
+        $hours   = 00;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $minutes = 00;
         $hours   = 00;
@@ -93,7 +102,11 @@ final class Duration
             $minutes,
             $seconds,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->nanoseconds(),
+=======
+            $this->nanoseconds()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->nanoseconds()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -142,8 +155,13 @@ final class Duration
                 sprintf(
                     'Value for %s must not be negative.',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $type,
                 ),
+=======
+                    $type
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $type
                 )
@@ -160,7 +178,11 @@ final class Duration
         if ($nanoseconds > 999999999) {
             throw new InvalidArgumentException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Value for nanoseconds must not be greater than 999999999.',
+=======
+                'Value for nanoseconds must not be greater than 999999999.'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'Value for nanoseconds must not be greater than 999999999.'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

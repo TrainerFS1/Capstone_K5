@@ -1,7 +1,11 @@
 @extends('adminlte.layouts.app')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @section('title', 'Uangku | Tambah Tagihan')
+=======
+@section('title', 'Uangku | Form Tagihan')
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 @section('title', 'Uangku | Form Tagihan')
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -25,17 +29,23 @@
                         <div class="card">
                             <div class="card-body">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <form method="POST" action="{{ route('store.bill') }}">
                                     @csrf
                                     <div class="form-group">
                                         <label for="date">Tanggal:</label>
                                         <input type="date" class="form-control" id="date" name="date" required>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 <form  method="POST" action="{{ route('store.bill') }}">
                                     @csrf
                                     <div class="form-group">
                                         <label for="date">Tanggal:</label>
                                         <input type="date" id="date" name="date" class="form-control" required>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                     </div>
                                     <div class="form-group">
@@ -44,6 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="amount">Jumlah:</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                                         <input type="text" class="form-control" id="amount" name="amount" required>
                                     </div>
@@ -68,6 +79,8 @@
                                         <label for="description">(Opsional) Deskripsi:</label>
                                         <textarea class="form-control" id="description" name="description" rows="3"></textarea>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                         <input type="number" id="amount" name="amount" class="form-control" required>
                                     </div>
                                     <div class="form-group">
@@ -84,6 +97,9 @@
                                     <div class="form-group">
                                         <label for="description">Deskripsi:</label>
                                         <textarea id="description" name="description" class="form-control" rows="3"></textarea>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                     </div>
                                     <button type="submit" class="btn btn-primary">Simpan</button>

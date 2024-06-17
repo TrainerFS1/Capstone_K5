@@ -23,7 +23,10 @@ final class Dependencies
     /**
      * @psalm-param class-string $className
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
@@ -39,6 +42,7 @@ final class Dependencies
 
                 $dependencies[] = ExecutionOrderDependency::forClass($metadata);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 continue;
             }
@@ -53,6 +57,8 @@ final class Dependencies
 
             $dependencies[] = ExecutionOrderDependency::forMethod($metadata);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             if ($metadata->isDependsOnMethod()) {
@@ -64,6 +70,9 @@ final class Dependencies
                     $dependencies[] = ExecutionOrderDependency::forMethod($metadata);
                 }
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

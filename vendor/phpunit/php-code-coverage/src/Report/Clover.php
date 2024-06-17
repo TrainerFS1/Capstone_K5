@@ -17,7 +17,10 @@ use function ksort;
 use function max;
 use function range;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function str_contains;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function time;
@@ -83,7 +86,11 @@ final class Clover
 
                     $classMethods++;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $classStatements        += $method['executableLines'];
+=======
+                    $classStatements += $method['executableLines'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $classStatements += $method['executableLines'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,7 +104,11 @@ final class Clover
 
                     foreach (range($method['startLine'], $method['endLine']) as $line) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         if (isset($coverageData[$line])) {
+=======
+                        if (isset($coverageData[$line]) && ($coverageData[$line] !== null)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         if (isset($coverageData[$line]) && ($coverageData[$line] !== null)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -127,7 +138,11 @@ final class Clover
                     $xmlClass->setAttribute(
                         'fullPackage',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $class['package']['fullPackage'],
+=======
+                        $class['package']['fullPackage']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $class['package']['fullPackage']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -138,7 +153,11 @@ final class Clover
                     $xmlClass->setAttribute(
                         'category',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $class['package']['category'],
+=======
+                        $class['package']['category']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $class['package']['category']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -149,7 +168,11 @@ final class Clover
                     $xmlClass->setAttribute(
                         'package',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $class['package']['package'],
+=======
+                        $class['package']['package']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $class['package']['package']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -160,7 +183,11 @@ final class Clover
                     $xmlClass->setAttribute(
                         'subpackage',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $class['package']['subpackage'],
+=======
+                        $class['package']['subpackage']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $class['package']['subpackage']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -241,7 +268,11 @@ final class Clover
                 if (!isset($packages[$namespace])) {
                     $packages[$namespace] = $xmlDocument->createElement(
 <<<<<<< HEAD
+<<<<<<< HEAD
                         'package',
+=======
+                        'package'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         'package'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -276,9 +307,13 @@ final class Clover
 
         if ($target !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!str_contains($target, '://')) {
                 Filesystem::createDirectory(dirname($target));
             }
+=======
+            Filesystem::createDirectory(dirname($target));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             Filesystem::createDirectory(dirname($target));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

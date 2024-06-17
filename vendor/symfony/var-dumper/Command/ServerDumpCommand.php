@@ -55,7 +55,11 @@ class ServerDumpCommand extends Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function configure(): void
+=======
+    protected function configure()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function configure()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

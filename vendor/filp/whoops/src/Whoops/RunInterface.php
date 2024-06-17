@@ -51,6 +51,7 @@ interface RunInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<callable>
      */
     public function getFrameFilters();
@@ -61,6 +62,8 @@ interface RunInterface
     public function clearFrameFilters();
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Registers this instance as an error handler.
@@ -151,6 +154,7 @@ interface RunInterface
      */
     public function handleShutdown();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Registers a filter callback in the frame filters stack.
@@ -159,6 +163,8 @@ interface RunInterface
      * @return \Whoops\Run
      */
     public function addFrameFilter($filterCallback);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

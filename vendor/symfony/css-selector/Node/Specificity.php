@@ -30,12 +30,15 @@ class Specificity
     public const C_FACTOR = 1;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private int $a,
         private int $b,
         private int $c,
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $a;
     private int $b;
     private int $c;
@@ -45,6 +48,9 @@ class Specificity
         $this->a = $a;
         $this->b = $b;
         $this->c = $c;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

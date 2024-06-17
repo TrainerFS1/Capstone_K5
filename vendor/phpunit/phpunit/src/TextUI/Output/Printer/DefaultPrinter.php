@@ -18,6 +18,7 @@ use function fopen;
 use function fsockopen;
 use function fwrite;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function str_replace;
 use function str_starts_with;
 use PHPUnit\Runner\DirectoryDoesNotExistException;
@@ -25,12 +26,17 @@ use PHPUnit\TextUI\CannotOpenSocketException;
 use PHPUnit\TextUI\InvalidSocketException;
 use PHPUnit\Util\Filesystem;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function sprintf;
 use function str_replace;
 use function str_starts_with;
 use PHPUnit\Util\DirectoryDoesNotExistException;
 use PHPUnit\Util\Filesystem;
 use PHPUnit\Util\InvalidSocketException;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
@@ -47,7 +53,10 @@ final class DefaultPrinter implements Printer
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CannotOpenSocketException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws DirectoryDoesNotExistException
@@ -60,7 +69,10 @@ final class DefaultPrinter implements Printer
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CannotOpenSocketException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws DirectoryDoesNotExistException
@@ -73,7 +85,10 @@ final class DefaultPrinter implements Printer
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CannotOpenSocketException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws DirectoryDoesNotExistException
@@ -86,7 +101,10 @@ final class DefaultPrinter implements Printer
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CannotOpenSocketException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws DirectoryDoesNotExistException
@@ -95,14 +113,18 @@ final class DefaultPrinter implements Printer
     private function __construct(string $out)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->isPhpStream = str_starts_with($out, 'php://');
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (str_starts_with($out, 'socket://')) {
             $tmp = explode(':', str_replace('socket://', '', $out));
 
             if (count($tmp) !== 2) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 throw new InvalidSocketException($out);
             }
@@ -115,6 +137,8 @@ final class DefaultPrinter implements Printer
 
             $this->stream = $stream;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 throw new InvalidSocketException(
                     sprintf(
                         '"%s" does not match "socket://hostname:port" format',
@@ -124,6 +148,9 @@ final class DefaultPrinter implements Printer
             }
 
             $this->stream = fsockopen($tmp[0], (int) $tmp[1]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->isOpen = true;
 
@@ -131,6 +158,11 @@ final class DefaultPrinter implements Printer
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $this->isPhpStream = str_starts_with($out, 'php://');
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->isPhpStream = str_starts_with($out, 'php://');
 

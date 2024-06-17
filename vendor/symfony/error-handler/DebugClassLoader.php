@@ -135,7 +135,11 @@ class DebugClassLoader
         $this->classLoader = $classLoader;
         $this->isFinder = \is_array($classLoader) && method_exists($classLoader[0], 'findFile');
 <<<<<<< HEAD
+<<<<<<< HEAD
         parse_str($_ENV['SYMFONY_PATCH_TYPE_DECLARATIONS'] ?? $_SERVER['SYMFONY_PATCH_TYPE_DECLARATIONS'] ?? getenv('SYMFONY_PATCH_TYPE_DECLARATIONS') ?: '', $this->patchTypes);
+=======
+        parse_str(getenv('SYMFONY_PATCH_TYPE_DECLARATIONS') ?: '', $this->patchTypes);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         parse_str(getenv('SYMFONY_PATCH_TYPE_DECLARATIONS') ?: '', $this->patchTypes);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -312,7 +316,11 @@ class DebugClassLoader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function checkClass(string $class, ?string $file = null): void
+=======
+    private function checkClass(string $class, string $file = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function checkClass(string $class, string $file = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -393,7 +401,11 @@ class DebugClassLoader
         // Detect annotations on the class
         if ($doc = $this->parsePhpDoc($refl)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $classIsTemplate = isset($doc['template']) || isset($doc['template-covariant']);
+=======
+            $classIsTemplate = isset($doc['template']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $classIsTemplate = isset($doc['template']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -544,7 +556,11 @@ class DebugClassLoader
             $doc = $this->parsePhpDoc($method);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (($classIsTemplate || isset($doc['template']) || isset($doc['template-covariant'])) && $method->hasReturnType()) {
+=======
+            if (($classIsTemplate || isset($doc['template'])) && $method->hasReturnType()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (($classIsTemplate || isset($doc['template'])) && $method->hasReturnType()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -775,7 +791,11 @@ class DebugClassLoader
                     $dirFiles[$f] = $f;
                     if ($f === $file) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $kFile = $file;
+=======
+                        $kFile = $k = $file;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         $kFile = $k = $file;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -815,7 +835,11 @@ class DebugClassLoader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function setReturnType(string $types, string $class, string $method, string $filename, ?string $parent, ?\ReflectionType $returnType = null): void
+=======
+    private function setReturnType(string $types, string $class, string $method, string $filename, ?string $parent, \ReflectionType $returnType = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function setReturnType(string $types, string $class, string $method, string $filename, ?string $parent, \ReflectionType $returnType = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -955,7 +979,11 @@ class DebugClassLoader
      * Utility method to add #[ReturnTypeWillChange] where php triggers deprecations.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function patchReturnTypeWillChange(\ReflectionMethod $method): void
+=======
+    private function patchReturnTypeWillChange(\ReflectionMethod $method)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function patchReturnTypeWillChange(\ReflectionMethod $method)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -987,7 +1015,11 @@ class DebugClassLoader
      * Utility method to add @return annotations to the Symfony code-base where it triggers self-deprecations.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function patchMethod(\ReflectionMethod $method, string $returnType, string $declaringFile, string $normalizedType): void
+=======
+    private function patchMethod(\ReflectionMethod $method, string $returnType, string $declaringFile, string $normalizedType)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function patchMethod(\ReflectionMethod $method, string $returnType, string $declaringFile, string $normalizedType)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1130,7 +1162,11 @@ EOTXT;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function fixReturnStatements(\ReflectionMethod $method, string $returnType): void
+=======
+    private function fixReturnStatements(\ReflectionMethod $method, string $returnType)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function fixReturnStatements(\ReflectionMethod $method, string $returnType)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1166,6 +1202,7 @@ EOTXT;
 
         $end = $method->isGenerator() ? $i : $method->getEndLine();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $inClosure = false;
         $braces = 0;
         for (; $i < $end; ++$i) {
@@ -1180,6 +1217,9 @@ EOTXT;
                 continue;
             }
 
+=======
+        for (; $i < $end; ++$i) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         for (; $i < $end; ++$i) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

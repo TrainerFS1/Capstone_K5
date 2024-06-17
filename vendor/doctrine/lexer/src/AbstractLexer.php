@@ -50,7 +50,12 @@ abstract class AbstractLexer
      * The next token in the input.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var Token<T, V>|null
+=======
+     * @var mixed[]|null
+     * @psalm-var Token<T, V>|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var mixed[]|null
      * @psalm-var Token<T, V>|null
@@ -62,7 +67,12 @@ abstract class AbstractLexer
      * The last matched/seen token.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var Token<T, V>|null
+=======
+     * @var mixed[]|null
+     * @psalm-var Token<T, V>|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var mixed[]|null
      * @psalm-var Token<T, V>|null
@@ -73,8 +83,11 @@ abstract class AbstractLexer
     /**
      * Composed regex for input parsing.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @var non-empty-string|null
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -217,7 +230,12 @@ abstract class AbstractLexer
      * Moves the lookahead token forward.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return Token<T, V>|null The next token or NULL if there are no more tokens ahead.
+=======
+     * @return mixed[]|null The next token or NULL if there are no more tokens ahead.
+     * @psalm-return Token<T, V>|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return mixed[]|null The next token or NULL if there are no more tokens ahead.
      * @psalm-return Token<T, V>|null
@@ -236,7 +254,12 @@ abstract class AbstractLexer
      * Peeks at the next token, returns it and immediately resets the peek.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return Token<T, V>|null The next token or NULL if there are no more tokens ahead.
+=======
+     * @return mixed[]|null The next token or NULL if there are no more tokens ahead.
+     * @psalm-return Token<T, V>|null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return mixed[]|null The next token or NULL if there are no more tokens ahead.
      * @psalm-return Token<T, V>|null

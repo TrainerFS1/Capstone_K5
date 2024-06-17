@@ -5,13 +5,17 @@ namespace PhpParser\Builder;
 use PhpParser;
 use PhpParser\BuilderHelpers;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Modifiers;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class Class_ extends Declaration {
     protected string $name;
@@ -30,6 +34,8 @@ class Class_ extends Declaration {
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Class_ extends Declaration
 {
     protected $name;
@@ -45,6 +51,9 @@ class Class_ extends Declaration
 
     /** @var Node\AttributeGroup[] */
     protected $attributeGroups = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -91,7 +100,11 @@ class Class_ extends Declaration
      */
     public function makeAbstract() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Modifiers::ABSTRACT);
+=======
+        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -106,7 +119,11 @@ class Class_ extends Declaration
      */
     public function makeFinal() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Modifiers::FINAL);
+=======
+        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -115,6 +132,7 @@ class Class_ extends Declaration
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Makes the class readonly.
      *
@@ -122,6 +140,10 @@ class Class_ extends Declaration
      */
     public function makeReadonly() {
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Modifiers::READONLY);
+=======
+    public function makeReadonly() {
+        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_READONLY);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function makeReadonly() {
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_READONLY);
@@ -141,6 +163,7 @@ class Class_ extends Declaration
         $stmt = BuilderHelpers::normalizeNode($stmt);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($stmt instanceof Stmt\Property) {
             $this->properties[] = $stmt;
         } elseif ($stmt instanceof Stmt\ClassMethod) {
@@ -154,6 +177,8 @@ class Class_ extends Declaration
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $targets = [
             Stmt\TraitUse::class    => &$this->uses,
             Stmt\ClassConst::class  => &$this->constants,
@@ -168,6 +193,9 @@ class Class_ extends Declaration
 
         $targets[$class][] = $stmt;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
@@ -191,7 +219,11 @@ class Class_ extends Declaration
      * @return Stmt\Class_ The built class node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): PhpParser\Node {
+=======
+    public function getNode() : PhpParser\Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNode() : PhpParser\Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

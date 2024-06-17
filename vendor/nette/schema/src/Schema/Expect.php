@@ -33,6 +33,11 @@ use Nette\Schema\Elements\Type;
 final class Expect
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	use Nette\SmartObject;
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	use Nette\SmartObject;
 
@@ -55,12 +60,18 @@ final class Expect
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function anyOf(mixed ...$set): AnyOf
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	/**
 	 * @param  mixed|Schema  ...$set
 	 */
 	public static function anyOf(...$set): AnyOf
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return new AnyOf(...$set);
@@ -77,6 +88,7 @@ final class Expect
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function from(object $object, array $items = []): Structure
 	{
 		$ro = new \ReflectionObject($object);
@@ -92,6 +104,8 @@ final class Expect
 				if ($prop instanceof \ReflectionProperty ? $prop->isInitialized($object) : $prop->isOptional()) {
 					$def = ($prop instanceof \ReflectionProperty ? $prop->getValue($object) : $prop->getDefaultValue());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	/**
 	 * @param  object  $object
 	 */
@@ -107,6 +121,9 @@ final class Expect
 					$item->required();
 				} else {
 					$def = $prop->getValue($object);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 					if (is_object($def)) {
 						$item = static::from($def);
@@ -116,8 +133,11 @@ final class Expect
 						$item->default($def);
 					}
 <<<<<<< HEAD
+<<<<<<< HEAD
 				} else {
 					$item->required();
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				}
@@ -129,13 +149,19 @@ final class Expect
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function arrayOf(string|Schema $valueType, string|Schema $keyType = null): Type
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	/**
 	 * @param  string|Schema  $valueType
 	 * @param  string|Schema|null  $keyType
 	 */
 	public static function arrayOf($valueType, $keyType = null): Type
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return (new Type('array'))->items($valueType, $keyType);
@@ -143,12 +169,18 @@ final class Expect
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function listOf(string|Schema $type): Type
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	/**
 	 * @param  string|Schema  $type
 	 */
 	public static function listOf($type): Type
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return (new Type('list'))->items($type);

@@ -26,7 +26,11 @@ class ContainerControllerResolver extends ControllerResolver
     protected $container;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(ContainerInterface $container, ?LoggerInterface $logger = null)
+=======
+    public function __construct(ContainerInterface $container, LoggerInterface $logger = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(ContainerInterface $container, LoggerInterface $logger = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -59,7 +63,11 @@ class ContainerControllerResolver extends ControllerResolver
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function throwExceptionIfControllerWasRemoved(string $controller, \Throwable $previous): void
+=======
+    private function throwExceptionIfControllerWasRemoved(string $controller, \Throwable $previous)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function throwExceptionIfControllerWasRemoved(string $controller, \Throwable $previous)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

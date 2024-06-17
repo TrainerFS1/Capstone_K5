@@ -10,10 +10,14 @@ use SebastianBergmann\CodeCoverage\Node\File;
 use SebastianBergmann\Environment\Runtime;
 use Symfony\Component\Console\Output\OutputInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use function Termwind\render;
 use function Termwind\renderUsing;
 use function Termwind\terminal;
+=======
+use Symfony\Component\Console\Terminal;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\Console\Terminal;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,7 +55,11 @@ final class Coverage
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (self::usingXdebug()) {
+=======
+        if (static::usingXdebug()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (static::usingXdebug()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -100,11 +108,17 @@ final class Coverage
         $totalCoverage = $codeCoverage->getReport()->percentageOfExecutedLines();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $totalWidth = (new Terminal())->getWidth();
 
         $dottedLineLength = $totalWidth;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         /** @var Directory<File|Directory> $report */
         $report = $codeCoverage->getReport();
@@ -121,7 +135,10 @@ final class Coverage
                 $basename,
             ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $rawName = $dirname === '.' ? $basename : implode(DIRECTORY_SEPARATOR, [
                 $dirname,
                 $basename,
@@ -133,12 +150,16 @@ final class Coverage
                 $linesExecutedTakenSize = strlen($uncoveredLines = trim(implode(', ', self::getMissingCoverage($file)))) + 1;
                 $name .= sprintf(' <fg=red>%s</>', $uncoveredLines);
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $percentage = $file->numberOfExecutableLines() === 0
                 ? '100.0'
                 : number_format($file->percentageOfExecutedLines()->asFloat(), 1, '.', '');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             $uncoveredLines = '';
 
@@ -177,6 +198,8 @@ final class Coverage
             </div>
         HTML);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $takenSize = strlen($rawName.$percentage) + 8 + $linesExecutedTakenSize; // adding 3 space and percent sign
 
             $percentage = sprintf(
@@ -206,6 +229,9 @@ final class Coverage
             str_repeat('.', max($dottedLineLength - $takenSize, 1)),
             number_format($totalCoverage->asFloat(), 1, '.', '')
         ));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $totalCoverage->asFloat();
@@ -227,7 +253,11 @@ final class Coverage
 
         $eachLine = function (array $array, array $tests, int $line) use (&$shouldBeNewLine): array {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($tests !== []) {
+=======
+            if (count($tests) > 0) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (count($tests) > 0) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -246,8 +276,13 @@ final class Coverage
             $lastKey = count($array) - 1;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (array_key_exists($lastKey, $array) && str_contains((string) $array[$lastKey], '..')) {
                 [$from] = explode('..', (string) $array[$lastKey]);
+=======
+            if (array_key_exists($lastKey, $array) && str_contains($array[$lastKey], '..')) {
+                [$from] = explode('..', $array[$lastKey]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (array_key_exists($lastKey, $array) && str_contains($array[$lastKey], '..')) {
                 [$from] = explode('..', $array[$lastKey]);

@@ -12,6 +12,7 @@
 namespace Symfony\Component\HttpKernel\Debug;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\ErrorHandler\ErrorRenderer\FileLinkFormatter as ErrorHandlerFileLinkFormatter;
 
 trigger_deprecation('symfony/http-kernel', '6.4', 'The "%s" class is deprecated, use "%s" instead.', FileLinkFormatter::class, ErrorHandlerFileLinkFormatter::class);
@@ -29,6 +30,8 @@ if (false) {
     class FileLinkFormatter extends ErrorHandlerFileLinkFormatter
     {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -122,6 +125,9 @@ class FileLinkFormatter
         }
 
         return false;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

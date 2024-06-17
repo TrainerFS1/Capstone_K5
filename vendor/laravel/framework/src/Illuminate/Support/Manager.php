@@ -99,6 +99,7 @@ abstract class Manager
         if (isset($this->customCreators[$driver])) {
             return $this->callCustomCreator($driver);
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
         $method = 'create'.Str::studly($driver).'Driver';
@@ -106,12 +107,17 @@ abstract class Manager
         if (method_exists($this, $method)) {
             return $this->$method();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             $method = 'create'.Str::studly($driver).'Driver';
 
             if (method_exists($this, $method)) {
                 return $this->$method();
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

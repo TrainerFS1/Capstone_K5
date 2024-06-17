@@ -23,7 +23,11 @@
         "illuminate/support": "^10.0",
         "symfony/finder": "^6.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "symfony/http-foundation": "^6.4"
+=======
+        "symfony/http-foundation": "^6.2"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "symfony/http-foundation": "^6.2"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

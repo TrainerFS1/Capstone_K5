@@ -10,7 +10,11 @@ class SoftDeletingScope implements Scope
      * @var string[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $extensions = ['Restore', 'RestoreOrCreate', 'CreateOrRestore', 'WithTrashed', 'WithoutTrashed', 'OnlyTrashed'];
+=======
+    protected $extensions = ['Restore', 'RestoreOrCreate', 'WithTrashed', 'WithoutTrashed', 'OnlyTrashed'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected $extensions = ['Restore', 'RestoreOrCreate', 'WithTrashed', 'WithoutTrashed', 'OnlyTrashed'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -97,6 +101,7 @@ class SoftDeletingScope implements Scope
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Add the create-or-restore extension to the builder.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $builder
@@ -114,6 +119,8 @@ class SoftDeletingScope implements Scope
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add the with-trashed extension to the builder.

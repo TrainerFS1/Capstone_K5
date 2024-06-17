@@ -4,6 +4,7 @@ namespace Illuminate\Validation\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Traits\Conditionable;
@@ -14,10 +15,15 @@ class Enum implements Rule, ValidatorAwareRule
     use Conditionable;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use TypeError;
 
 class Enum implements Rule
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The type of the enum.
@@ -27,6 +33,7 @@ class Enum implements Rule
     protected $type;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * The current validator instance.
      *
@@ -51,6 +58,8 @@ class Enum implements Rule
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new rule instance.
      *
      * @param  string  $type
@@ -72,24 +81,34 @@ class Enum implements Rule
     {
         if ($value instanceof $this->type) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $this->isDesirable($value);
         }
 
         if (is_null($value) || ! enum_exists($this->type) || ! method_exists($this->type, 'tryFrom')) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return true;
         }
 
         if (is_null($value) || ! function_exists('enum_exists') || ! enum_exists($this->type) || ! method_exists($this->type, 'tryFrom')) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return false;
         }
 
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $value = $this->type::tryFrom($value);
 
             return ! is_null($value) && $this->isDesirable($value);
+=======
+            return ! is_null($this->type::tryFrom($value));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return ! is_null($this->type::tryFrom($value));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -99,6 +118,7 @@ class Enum implements Rule
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Specify the cases that should be considered valid.
      *
@@ -143,6 +163,8 @@ class Enum implements Rule
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the validation error message.
      *
      * @return array
@@ -150,7 +172,11 @@ class Enum implements Rule
     public function message()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $message = $this->validator->getTranslator()->get('validation.enum');
+=======
+        $message = trans('validation.enum');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $message = trans('validation.enum');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -159,6 +185,7 @@ class Enum implements Rule
             ? ['The selected :attribute is invalid.']
             : $message;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -173,6 +200,8 @@ class Enum implements Rule
 
         return $this;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

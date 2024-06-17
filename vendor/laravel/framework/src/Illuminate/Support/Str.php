@@ -16,7 +16,10 @@ use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactory;
 use Symfony\Component\Uid\Ulid;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Throwable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Traversable;
@@ -56,6 +59,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The callback that should be used to generate ULIDs.
      *
      * @var callable|null
@@ -63,6 +67,8 @@ class Str
     protected static $ulidFactory;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The callback that should be used to generate random strings.
@@ -232,6 +238,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the character at the specified index.
      *
      * @param  string  $subject
@@ -250,6 +257,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if a given string contains a given substring.
@@ -303,6 +312,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Convert the case of a string.
      *
      * @param  string  $string
@@ -316,6 +326,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if a given string ends with a given substring.
@@ -353,7 +365,11 @@ class Str
         $omission = $options['omission'] ?? '...';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         preg_match('/^(.*?)('.preg_quote((string) $phrase, '/').')(.*)$/iu', (string) $text, $matches);
+=======
+        preg_match('/^(.*?)('.preg_quote((string) $phrase).')(.*)$/iu', (string) $text, $matches);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         preg_match('/^(.*?)('.preg_quote((string) $phrase).')(.*)$/iu', (string) $text, $matches);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -408,6 +424,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Unwrap the string with the given strings.
      *
      * @param  string  $value
@@ -429,6 +446,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if a given string matches a given pattern.
@@ -483,9 +502,15 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if a given value is valid JSON.
      *
      * @param  mixed  $value
+=======
+     * Determine if a given string is valid JSON.
+     *
+     * @param  string  $value
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Determine if a given string is valid JSON.
      *
@@ -500,10 +525,13 @@ class Str
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (function_exists('json_validate')) {
             return json_validate($value, 512);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
@@ -516,6 +544,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Determine if a given value is a valid URL.
      *
@@ -568,6 +597,11 @@ class Str
      *
      * @param  string  $value
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+     * Determine if a given string is a valid UUID.
+     *
+     * @param  string  $value
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
      */
     public static function isUuid($value)
@@ -577,6 +611,7 @@ class Str
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return preg_match('/^[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}$/D', $value) > 0;
     }
 
@@ -585,6 +620,8 @@ class Str
      *
      * @param  mixed  $value
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return preg_match('/^[\da-f]{8}-[\da-f]{4}-[\da-f]{4}-[\da-f]{4}-[\da-f]{12}$/iD', $value) > 0;
     }
 
@@ -592,6 +629,9 @@ class Str
      * Determine if a given string is a valid ULID.
      *
      * @param  string  $value
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
      */
@@ -763,6 +803,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Determine if a given string matches a given pattern.
      *
      * @param  string|iterable<string>  $pattern
@@ -789,6 +830,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the string matching the given pattern.
@@ -819,10 +862,13 @@ class Str
     public static function padBoth($value, $length, $pad = ' ')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (function_exists('mb_str_pad')) {
             return mb_str_pad($value, $length, $pad, STR_PAD_BOTH);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $short = max(0, $length - mb_strlen($value));
@@ -845,10 +891,13 @@ class Str
     public static function padLeft($value, $length, $pad = ' ')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (function_exists('mb_str_pad')) {
             return mb_str_pad($value, $length, $pad, STR_PAD_LEFT);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $short = max(0, $length - mb_strlen($value));
@@ -867,10 +916,13 @@ class Str
     public static function padRight($value, $length, $pad = ' ')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (function_exists('mb_str_pad')) {
             return mb_str_pad($value, $length, $pad, STR_PAD_RIGHT);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $short = max(0, $length - mb_strlen($value));
@@ -888,6 +940,7 @@ class Str
     public static function parseCallback($callback, $default = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (static::contains($callback, "@anonymous\0")) {
             if (static::substrCount($callback, '@') > 1) {
                 return [
@@ -899,6 +952,8 @@ class Str
             return [$callback, $default];
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return static::contains($callback, '@') ? explode('@', $callback, 2) : [$callback, $default];
@@ -945,6 +1000,7 @@ class Str
     public static function password($length = 32, $letters = true, $numbers = true, $symbols = true, $spaces = false)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $password = new Collection();
 
         $options = (new Collection([
@@ -987,6 +1043,8 @@ class Str
     {
         return mb_strpos($haystack, (string) $needle, $offset, $encoding);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return (new Collection)
                 ->when($letters, fn ($c) => $c->merge([
                     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
@@ -1006,6 +1064,9 @@ class Str
                 ->when($spaces, fn ($c) => $c->merge([' ']))
                 ->pipe(fn ($c) => Collection::times($length, fn () => $c[random_int(0, $c->count() - 1)]))
                 ->implode('');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1024,7 +1085,11 @@ class Str
                 $size = $length - $len;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $bytesSize = (int) ceil($size / 3) * 3;
+=======
+                $bytesSize = (int) ceil(($size) / 3) * 3;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $bytesSize = (int) ceil(($size) / 3) * 3;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1125,7 +1190,11 @@ class Str
 
         foreach ($segments as $segment) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $result .= self::toStringOr(array_shift($replace) ?? $search, $search).$segment;
+=======
+            $result .= (array_shift($replace) ?? $search).$segment;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $result .= (array_shift($replace) ?? $search).$segment;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1135,6 +1204,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Convert the given value to a string or return the given fallback on failure.
      *
@@ -1154,16 +1224,24 @@ class Str
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Replace the given value in the given string.
      *
      * @param  string|iterable<string>  $search
      * @param  string|iterable<string>  $replace
      * @param  string|iterable<string>  $subject
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  bool  $caseSensitive
      * @return string|string[]
      */
     public static function replace($search, $replace, $subject, $caseSensitive = true)
+=======
+     * @return string
+     */
+    public static function replace($search, $replace, $subject)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return string
      */
@@ -1183,9 +1261,13 @@ class Str
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $caseSensitive
                 ? str_replace($search, $replace, $subject)
                 : str_ireplace($search, $replace, $subject);
+=======
+        return str_replace($search, $replace, $subject);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return str_replace($search, $replace, $subject);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1218,6 +1300,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Replace the first occurrence of the given value if it appears at the start of the string.
      *
      * @param  string  $search
@@ -1243,6 +1326,8 @@ class Str
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Replace the last occurrence of a given value in the string.
      *
      * @param  string  $search
@@ -1253,8 +1338,11 @@ class Str
     public static function replaceLast($search, $replace, $subject)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $search = (string) $search;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($search === '') {
@@ -1271,6 +1359,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Replace the last occurrence of a given value if it appears at the end of the string.
      *
@@ -1318,10 +1407,15 @@ class Str
      * @param  string|iterable<string>  $search
      * @param  string|iterable<string>  $subject
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Remove any occurrence of the given string in the subject.
      *
      * @param  string|iterable<string>  $search
      * @param  string  $subject
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  bool  $caseSensitive
      * @return string
@@ -1333,15 +1427,21 @@ class Str
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $caseSensitive
                     ? str_replace($search, '', $subject)
                     : str_ireplace($search, '', $subject);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $subject = $caseSensitive
                     ? str_replace($search, '', $subject)
                     : str_ireplace($search, '', $subject);
 
         return $subject;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -1383,7 +1483,11 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Convert the given string to proper case.
+=======
+     * Convert the given string to title case.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Convert the given string to title case.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1398,7 +1502,11 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Convert the given string to proper case for each word.
+=======
+     * Convert the given string to title case for each word.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Convert the given string to title case for each word.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1420,6 +1528,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Convert the given string to APA-style title case.
      *
@@ -1472,6 +1581,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the singular form of an English word.
@@ -1551,7 +1662,11 @@ class Str
     public static function squish($value)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return preg_replace('~(\s|\x{3164}|\x{1160})+~u', ' ', preg_replace('~^[\s\x{FEFF}]+|[\s\x{FEFF}]+$~u', '', $value));
+=======
+        return preg_replace('~(\s|\x{3164})+~u', ' ', preg_replace('~^[\s\x{FEFF}]+|[\s\x{FEFF}]+$~u', '', $value));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return preg_replace('~(\s|\x{3164})+~u', ' ', preg_replace('~^[\s\x{FEFF}]+|[\s\x{FEFF}]+$~u', '', $value));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1664,6 +1779,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Take the first or last {$limit} characters of a string.
      *
      * @param  string  $string
@@ -1703,6 +1819,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Make a string's first character lowercase.
@@ -1751,6 +1869,7 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Wrap a string to a given number of characters.
      *
      * @param  string  $string
@@ -1767,6 +1886,8 @@ class Str
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Generate a UUID (version 4).
      *
      * @return \Ramsey\Uuid\UuidInterface
@@ -1780,7 +1901,11 @@ class Str
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Generate a time-ordered UUID.
+=======
+     * Generate a time-ordered UUID (version 4).
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Generate a time-ordered UUID (version 4).
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1894,10 +2019,13 @@ class Str
     public static function ulid($time = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (static::$ulidFactory) {
             return call_user_func(static::$ulidFactory);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($time === null) {
@@ -1908,6 +2036,7 @@ class Str
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Indicate that ULIDs should be created normally and not using a custom factory.
      *
@@ -1987,6 +2116,8 @@ class Str
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Remove all strings from the casing caches.

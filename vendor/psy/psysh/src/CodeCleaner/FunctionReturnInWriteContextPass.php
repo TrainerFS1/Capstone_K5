@@ -54,7 +54,11 @@ class FunctionReturnInWriteContextPass extends CodeCleanerPass
 
                 if ($item && $item->byRef && $this->isCallNode($item->value)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getStartLine());
+=======
+                    throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,15 +72,21 @@ class FunctionReturnInWriteContextPass extends CodeCleanerPass
 
                 $msg = $node instanceof Isset_ ? self::ISSET_MESSAGE : self::EXCEPTION_MESSAGE;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getStartLine());
             }
         } elseif ($node instanceof Assign && $this->isCallNode($node->var)) {
             throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getStartLine());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 throw new FatalErrorException($msg, 0, \E_ERROR, null, $node->getLine());
             }
         } elseif ($node instanceof Assign && $this->isCallNode($node->var)) {
             throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }

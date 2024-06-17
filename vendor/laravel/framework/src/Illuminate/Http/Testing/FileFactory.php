@@ -3,8 +3,11 @@
 namespace Illuminate\Http\Testing;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use LogicException;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class FileFactory
@@ -55,8 +58,11 @@ class FileFactory
      * @param  int  $height
      * @return \Illuminate\Http\Testing\File
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws \LogicException
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -75,6 +81,7 @@ class FileFactory
      * @param  string  $extension
      * @return resource
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @throws \LogicException
      */
@@ -84,6 +91,11 @@ class FileFactory
             throw new LogicException('GD extension is not installed.');
         }
 
+=======
+     */
+    protected function generateImage($width, $height, $extension)
+    {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      */
     protected function generateImage($width, $height, $extension)
@@ -99,6 +111,7 @@ class FileFactory
             $image = imagecreatetruecolor($width, $height);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (! function_exists($functionName = "image{$extension}")) {
                 ob_get_clean();
 
@@ -106,6 +119,9 @@ class FileFactory
             }
 
             call_user_func($functionName, $image);
+=======
+            call_user_func("image{$extension}", $image);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             call_user_func("image{$extension}", $image);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

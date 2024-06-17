@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,15 +28,22 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\CountValidator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Mockery\Expectation;
 
 abstract class CountValidatorAbstract implements CountValidatorInterface
+=======
+abstract class CountValidatorAbstract
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 abstract class CountValidatorAbstract
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -42,7 +52,11 @@ abstract class CountValidatorAbstract
      * Expectation for which this validator is assigned
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var Expectation
+=======
+     * @var \Mockery\Expectation
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var \Mockery\Expectation
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,14 +74,20 @@ abstract class CountValidatorAbstract
      * Set Expectation object and upper call limit
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $limit
      */
     public function __construct(Expectation $expectation, $limit)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param \Mockery\Expectation $expectation
      * @param int $limit
      */
     public function __construct(\Mockery\Expectation $expectation, $limit)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->_expectation = $expectation;
@@ -79,7 +99,10 @@ abstract class CountValidatorAbstract
      *
      * @param int $n
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
@@ -87,7 +110,11 @@ abstract class CountValidatorAbstract
     public function isEligible($n)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $n < $this->_limit;
+=======
+        return ($n < $this->_limit);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return ($n < $this->_limit);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +125,10 @@ abstract class CountValidatorAbstract
      *
      * @param int $n
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool

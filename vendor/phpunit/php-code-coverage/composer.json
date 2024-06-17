@@ -18,8 +18,12 @@
     ],
     "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
         "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy"
+=======
+        "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -38,7 +42,11 @@
         "ext-libxml": "*",
         "ext-xmlwriter": "*",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "nikic/php-parser": "^4.18 || ^5.0",
+=======
+        "nikic/php-parser": "^4.14",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "nikic/php-parser": "^4.14",
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -53,17 +61,23 @@
     },
     "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "phpunit/phpunit": "^10.1"
     },
     "suggest": {
         "ext-pcov": "PHP extension that provides line coverage",
         "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "phpunit/phpunit": "^10.0"
     },
     "suggest": {
         "ext-pcov": "*",
         "ext-xdebug": "*"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {
@@ -80,7 +94,11 @@
     "extra": {
         "branch-alias": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "dev-main": "10.1-dev"
+=======
+            "dev-main": "10.0-dev"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "dev-main": "10.0-dev"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

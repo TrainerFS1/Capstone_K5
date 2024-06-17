@@ -34,7 +34,11 @@ abstract class ObjectLoader extends Loader
      * Calls the object method that will load the routes.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function load(mixed $resource, ?string $type = null): RouteCollection
+=======
+    public function load(mixed $resource, string $type = null): RouteCollection
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function load(mixed $resource, string $type = null): RouteCollection
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -71,7 +75,11 @@ abstract class ObjectLoader extends Loader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addClassResource(\ReflectionClass $class, RouteCollection $collection): void
+=======
+    private function addClassResource(\ReflectionClass $class, RouteCollection $collection)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addClassResource(\ReflectionClass $class, RouteCollection $collection)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

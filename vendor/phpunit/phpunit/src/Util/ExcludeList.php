@@ -10,6 +10,10 @@
 namespace PHPUnit\Util;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use const DIRECTORY_SEPARATOR;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use const DIRECTORY_SEPARATOR;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -42,7 +46,10 @@ use SebastianBergmann\Invoker\Invoker;
 use SebastianBergmann\LinesOfCode\Counter;
 use SebastianBergmann\ObjectEnumerator\Enumerator;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use SebastianBergmann\ObjectReflector\ObjectReflector;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\RecursionContext\Context;
@@ -128,9 +135,12 @@ final class ExcludeList
         Enumerator::class => 1,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // sebastian/object-reflector
         ObjectReflector::class => 1,
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // sebastian/recursion-context
@@ -152,7 +162,10 @@ final class ExcludeList
     private static array $directories = [];
     private static bool $initialized  = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly bool $enabled;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -171,6 +184,7 @@ final class ExcludeList
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?bool $enabled = null)
     {
         if ($enabled === null) {
@@ -180,6 +194,8 @@ final class ExcludeList
         $this->enabled = $enabled;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -195,7 +211,11 @@ final class ExcludeList
     public function isExcluded(string $file): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$this->enabled) {
+=======
+        if (defined('PHPUNIT_TESTSUITE')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (defined('PHPUNIT_TESTSUITE')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -234,6 +254,7 @@ final class ExcludeList
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /**
          * Hide process isolation workaround on Windows:
          * tempnam() prefix is limited to first 3 characters.
@@ -245,11 +266,16 @@ final class ExcludeList
             self::$directories[] = sys_get_temp_dir() . '\\PHP';
             // @codeCoverageIgnoreEnd
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Hide process isolation workaround on Windows.
         if (DIRECTORY_SEPARATOR === '\\') {
             // tempnam() prefix is limited to first 3 chars.
             // @see https://php.net/manual/en/function.tempnam.php
             self::$directories[] = sys_get_temp_dir() . '\\PHP';
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

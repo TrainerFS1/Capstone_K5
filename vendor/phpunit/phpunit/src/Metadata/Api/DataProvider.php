@@ -11,6 +11,10 @@ namespace PHPUnit\Metadata\Api;
 
 use function array_key_exists;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function array_merge;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function array_merge;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -37,7 +41,11 @@ use PHPUnit\Framework\InvalidDataProviderException;
 use PHPUnit\Metadata\DataProvider as DataProviderMetadata;
 use PHPUnit\Metadata\MetadataCollection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
+=======
+use PHPUnit\Metadata\Parser\Registry;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Metadata\Parser\Registry;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,6 +55,10 @@ use ReflectionClass;
 use ReflectionMethod;
 use Throwable;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Traversable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Traversable;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,8 +77,13 @@ final class DataProvider
     public function providedData(string $className, string $methodName): ?array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dataProvider = MetadataRegistry::parser()->forMethod($className, $methodName)->isDataProvider();
         $testWith     = MetadataRegistry::parser()->forMethod($className, $methodName)->isTestWith();
+=======
+        $dataProvider = Registry::parser()->forMethod($className, $methodName)->isDataProvider();
+        $testWith     = Registry::parser()->forMethod($className, $methodName)->isTestWith();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $dataProvider = Registry::parser()->forMethod($className, $methodName)->isDataProvider();
         $testWith     = Registry::parser()->forMethod($className, $methodName)->isTestWith();
@@ -85,7 +102,11 @@ final class DataProvider
         if ($data === []) {
             throw new InvalidDataProviderException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Empty data set provided by data provider',
+=======
+                'Empty data set provided by data provider'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'Empty data set provided by data provider'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,8 +119,13 @@ final class DataProvider
                     sprintf(
                         'Data set %s is invalid',
 <<<<<<< HEAD
+<<<<<<< HEAD
                         is_int($key) ? '#' . $key : '"' . $key . '"',
                     ),
+=======
+                        is_int($key) ? '#' . $key : '"' . $key . '"'
+                    )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         is_int($key) ? '#' . $key : '"' . $key . '"'
                     )
@@ -120,9 +146,13 @@ final class DataProvider
     private function dataProvidedByMethods(string $className, string $methodName, MetadataCollection $dataProvider): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $testMethod    = new Event\Code\ClassMethod($className, $methodName);
         $methodsCalled = [];
         $result        = [];
+=======
+        $result = [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $result = [];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -130,6 +160,7 @@ final class DataProvider
         foreach ($dataProvider as $_dataProvider) {
             assert($_dataProvider instanceof DataProviderMetadata);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             $dataProviderMethod = new Event\Code\ClassMethod($_dataProvider->className(), $_dataProvider->methodName());
 
@@ -140,6 +171,8 @@ final class DataProvider
 
             $methodsCalled[] = $dataProviderMethod;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             try {
@@ -157,8 +190,13 @@ final class DataProvider
                             'Data Provider method %s::%s() is not public',
                             $_dataProvider->className(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $_dataProvider->methodName(),
                         ),
+=======
+                            $_dataProvider->methodName()
+                        )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $_dataProvider->methodName()
                         )
@@ -176,8 +214,13 @@ final class DataProvider
                             'Data Provider method %s::%s() is not static',
                             $_dataProvider->className(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $_dataProvider->methodName(),
                         ),
+=======
+                            $_dataProvider->methodName()
+                        )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $_dataProvider->methodName()
                         )
@@ -199,8 +242,13 @@ final class DataProvider
                             'Data Provider method %s::%s() expects an argument',
                             $_dataProvider->className(),
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $_dataProvider->methodName(),
                         ),
+=======
+                            $_dataProvider->methodName()
+                        )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                             $_dataProvider->methodName()
                         )
@@ -210,6 +258,7 @@ final class DataProvider
                     $data = $method->invoke($object, $_dataProvider->methodName());
                 }
             } catch (Throwable $e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Event\Facade::emitter()->dataProviderMethodFinished(
                     $testMethod,
@@ -249,6 +298,8 @@ final class DataProvider
             ...$methodsCalled,
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 throw new InvalidDataProviderException(
                     $e->getMessage(),
                     $e->getCode(),
@@ -280,6 +331,9 @@ final class DataProvider
                 $result = array_merge($result, $data);
             }
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $result;
@@ -308,7 +362,11 @@ final class DataProvider
         $docComment = (new ReflectionMethod($className, $methodName))->getDocComment();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($docComment === false) {
+=======
+        if (!$docComment) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!$docComment) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -317,7 +375,11 @@ final class DataProvider
 
         $docComment = str_replace("\r\n", "\n", $docComment);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $docComment = preg_replace('/\n\s*\*\s?/', "\n", $docComment);
+=======
+        $docComment = preg_replace('/' . '\n' . '\s*' . '\*' . '\s?' . '/', "\n", $docComment);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $docComment = preg_replace('/' . '\n' . '\s*' . '\*' . '\s?' . '/', "\n", $docComment);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -329,7 +391,11 @@ final class DataProvider
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $offset            = strlen($matches[0][0]) + (int) $matches[0][1];
+=======
+        $offset            = strlen($matches[0][0]) + $matches[0][1];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $offset            = strlen($matches[0][0]) + $matches[0][1];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -340,7 +406,11 @@ final class DataProvider
             $candidateRow = trim($candidateRow);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($candidateRow === '' || $candidateRow[0] !== '[') {
+=======
+            if ($candidateRow[0] !== '[') {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($candidateRow[0] !== '[') {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -352,7 +422,11 @@ final class DataProvider
             if (json_last_error() !== JSON_ERROR_NONE) {
                 throw new InvalidDataProviderException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'The data set for the @testWith annotation cannot be parsed: ' . json_last_error_msg(),
+=======
+                    'The data set for the @testWith annotation cannot be parsed: ' . json_last_error_msg()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     'The data set for the @testWith annotation cannot be parsed: ' . json_last_error_msg()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -365,7 +439,11 @@ final class DataProvider
         if (!$data) {
             throw new InvalidDataProviderException(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'The data set for the @testWith annotation cannot be parsed.',
+=======
+                'The data set for the @testWith annotation cannot be parsed.'
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'The data set for the @testWith annotation cannot be parsed.'
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -391,6 +469,7 @@ final class DataProvider
             $location['file'],
             $location['line'],
 <<<<<<< HEAD
+<<<<<<< HEAD
             Event\Code\TestDoxBuilder::fromClassNameAndMethodName(
                 $className,
                 $methodName,
@@ -401,6 +480,8 @@ final class DataProvider
             ),
             TestDataCollection::fromArray([]),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Event\Code\TestDox::fromClassNameAndMethodName(
                 $className,
                 $methodName
@@ -410,6 +491,9 @@ final class DataProvider
                 $methodName
             ),
             TestDataCollection::fromArray([])
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }

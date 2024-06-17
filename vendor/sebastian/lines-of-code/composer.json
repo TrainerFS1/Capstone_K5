@@ -13,8 +13,12 @@
     ],
     "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "issues": "https://github.com/sebastianbergmann/lines-of-code/issues",
         "security": "https://github.com/sebastianbergmann/lines-of-code/security/policy"
+=======
+        "issues": "https://github.com/sebastianbergmann/lines-of-code/issues"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "issues": "https://github.com/sebastianbergmann/lines-of-code/issues"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -23,7 +27,11 @@
     "require": {
         "php": ">=8.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "nikic/php-parser": "^4.18 || ^5.0"
+=======
+        "nikic/php-parser": "^4.10"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "nikic/php-parser": "^4.10"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

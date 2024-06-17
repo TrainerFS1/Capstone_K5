@@ -29,7 +29,11 @@ class Person extends \Faker\Provider\Person
         'Adam', 'Aleš', 'Alois', 'Antonín', 'Bohumil', 'Bohuslav', 'Dagmar',
         'Dalibor', 'Daniel', 'David', 'Dominik', 'Dušan', 'Eduard', 'Emil',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Filip', 'František', 'Igor', 'Ivan', 'Ivo', 'Jakub', 'Jan', 'Ján',
+=======
+        'Filip', 'František', 'Ilona', 'Ivan', 'Ivo', 'Jakub', 'Jan', 'Ján',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         'Filip', 'František', 'Ilona', 'Ivan', 'Ivo', 'Jakub', 'Jan', 'Ján',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -443,8 +447,13 @@ class Person extends \Faker\Provider\Person
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $startTimestamp = strtotime(sprintf('-%d year', $maxAge));
         $endTimestamp = strtotime(sprintf('-%d year', $minAge));
+=======
+        $startTimestamp = strtotime("-${maxAge} year");
+        $endTimestamp = strtotime("-${minAge} year");
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $startTimestamp = strtotime("-${maxAge} year");
         $endTimestamp = strtotime("-${minAge} year");
@@ -461,7 +470,10 @@ class Person extends \Faker\Provider\Person
             $month += 50;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // from year 2004 everyone has +20 to month when birth numbers in one day are exhausted

@@ -23,7 +23,10 @@ use League\CommonMark\Node\StringContainerHelper;
 use League\CommonMark\Normalizer\TextNormalizerInterface;
 use League\Config\ConfigurationInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\Config\Exception\InvalidConfigurationException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -35,7 +38,10 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
     public const INSERT_BEFORE = 'before';
     public const INSERT_AFTER  = 'after';
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const INSERT_NONE   = 'none';
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -54,6 +60,7 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
     public function __invoke(DocumentParsedEvent $e): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $min            = (int) $this->config->get('heading_permalink/min_heading_level');
         $max            = (int) $this->config->get('heading_permalink/max_heading_level');
         $applyToHeading = (bool) $this->config->get('heading_permalink/apply_id_to_heading');
@@ -69,6 +76,8 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
             if ($node instanceof Heading && $node->getLevel() >= $min && $node->getLevel() <= $max) {
                 $this->addHeadingLink($node, $slugLength, $idPrefix, $applyToHeading, $headingClass);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $min = (int) $this->config->get('heading_permalink/min_heading_level');
         $max = (int) $this->config->get('heading_permalink/max_heading_level');
 
@@ -77,13 +86,20 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
         foreach ($e->getDocument()->iterator(NodeIterator::FLAG_BLOCKS_ONLY) as $node) {
             if ($node instanceof Heading && $node->getLevel() >= $min && $node->getLevel() <= $max) {
                 $this->addHeadingLink($node, $slugLength);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addHeadingLink(Heading $heading, int $slugLength, string $idPrefix, bool $applyToHeading, string $headingClass): void
+=======
+    private function addHeadingLink(Heading $heading, int $slugLength): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addHeadingLink(Heading $heading, int $slugLength): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -95,6 +111,7 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
         ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($applyToHeading) {
             $heading->data->set('attributes/id', $idPrefix . $slug);
         }
@@ -103,6 +120,8 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
             $heading->data->append('attributes/class', $headingClass);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $headingLinkAnchor = new HeadingPermalink($slug);
@@ -117,10 +136,15 @@ final class HeadingPermalinkProcessor implements EnvironmentAwareInterface
 
                 return;
 <<<<<<< HEAD
+<<<<<<< HEAD
             case self::INSERT_NONE:
                 return;
             default:
                 throw new InvalidConfigurationException("Invalid configuration value for heading_permalink/insert; expected 'before', 'after', or 'none'");
+=======
+            default:
+                throw new \RuntimeException("Invalid configuration value for heading_permalink/insert; expected 'before' or 'after'");
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             default:
                 throw new \RuntimeException("Invalid configuration value for heading_permalink/insert; expected 'before' or 'after'");

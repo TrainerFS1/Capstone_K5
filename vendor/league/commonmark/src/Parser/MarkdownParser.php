@@ -23,7 +23,10 @@ use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
 use League\CommonMark\Event\DocumentPreParsedEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use League\CommonMark\Exception\CommonMarkException;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Input\MarkdownInput;
@@ -86,7 +89,11 @@ final class MarkdownParser implements MarkdownParserInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws CommonMarkException
+=======
+     * @throws \RuntimeException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \RuntimeException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -302,9 +309,12 @@ final class MarkdownParser implements MarkdownParserInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @throws ParserLogicException
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function deactivateBlockParser(): BlockContinueParserInterface
@@ -312,7 +322,11 @@ final class MarkdownParser implements MarkdownParserInterface
         $popped = \array_pop($this->activeBlockParsers);
         if ($popped === null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new ParserLogicException('The last block parser should not be deactivated');
+=======
+            throw new \RuntimeException('The last block parser should not be deactivated');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new \RuntimeException('The last block parser should not be deactivated');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -346,9 +360,12 @@ final class MarkdownParser implements MarkdownParserInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @throws ParserLogicException
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getActiveBlockParser(): BlockContinueParserInterface
@@ -356,7 +373,11 @@ final class MarkdownParser implements MarkdownParserInterface
         $active = \end($this->activeBlockParsers);
         if ($active === false) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new ParserLogicException('No active block parsers are available');
+=======
+            throw new \RuntimeException('No active block parsers are available');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             throw new \RuntimeException('No active block parsers are available');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

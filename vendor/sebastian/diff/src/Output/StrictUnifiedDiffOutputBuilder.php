@@ -83,7 +83,11 @@ final class StrictUnifiedDiffOutputBuilder implements DiffOutputBuilderInterface
             null === $options['fromFileDate'] ? '' : "\t" . $options['fromFileDate'],
             $options['toFile'],
 <<<<<<< HEAD
+<<<<<<< HEAD
             null === $options['toFileDate'] ? '' : "\t" . $options['toFileDate'],
+=======
+            null === $options['toFileDate'] ? '' : "\t" . $options['toFileDate']
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             null === $options['toFileDate'] ? '' : "\t" . $options['toFileDate']
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -206,17 +210,23 @@ final class StrictUnifiedDiffOutputBuilder implements DiffOutputBuilderInterface
                         $toStart - $contextStartOffset,
                         $toRange - $cutOff + $contextStartOffset + $this->contextLines,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $output,
                     );
 
                     $fromStart += $fromRange;
                     $toStart   += $toRange;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $output
                     );
 
                     $fromStart += $fromRange;
                     $toStart += $toRange;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     $hunkCapture = false;
@@ -264,7 +274,11 @@ final class StrictUnifiedDiffOutputBuilder implements DiffOutputBuilderInterface
 
         $fromRange -= $sameCount;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $toRange   -= $sameCount;
+=======
+        $toRange -= $sameCount;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $toRange -= $sameCount;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -278,7 +292,11 @@ final class StrictUnifiedDiffOutputBuilder implements DiffOutputBuilderInterface
             $toStart - $contextStartOffset,
             $toRange + $contextStartOffset + $contextEndOffset,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $output,
+=======
+            $output
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $output
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -323,17 +341,23 @@ final class StrictUnifiedDiffOutputBuilder implements DiffOutputBuilderInterface
                 fwrite($output, $diff[$i][0]);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             // } elseif ($diff[$i][1] === Differ::DIFF_LINE_END_WARNING) { // custom comment inserted by PHPUnit/diff package
             //  skip
             // } else {
             //  unknown/invalid
             // }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             //} elseif ($diff[$i][1] === Differ::DIFF_LINE_END_WARNING) { // custom comment inserted by PHPUnit/diff package
             //  skip
             //} else {
             //  unknown/invalid
             //}
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }

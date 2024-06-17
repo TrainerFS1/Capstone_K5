@@ -38,7 +38,10 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Routing\Route substituteBindings(\Illuminate\Routing\Route $route)
  * @method static void substituteImplicitBindings(\Illuminate\Routing\Route $route)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Routing\Router substituteImplicitBindingsUsing(callable $callback)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void matched(string|callable $callback)
@@ -95,7 +98,10 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Routing\RouteRegistrar domain(string $value)
  * @method static \Illuminate\Routing\RouteRegistrar middleware(array|string|null $middleware)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Routing\RouteRegistrar missing(\Closure $missing)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Routing\RouteRegistrar name(string $value)

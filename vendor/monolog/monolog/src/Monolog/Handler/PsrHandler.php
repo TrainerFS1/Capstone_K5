@@ -34,7 +34,10 @@ class PsrHandler extends AbstractHandler implements FormattableHandlerInterface
 
     protected FormatterInterface|null $formatter = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool $includeExtra;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -42,7 +45,11 @@ class PsrHandler extends AbstractHandler implements FormattableHandlerInterface
      * @param LoggerInterface $logger The underlying PSR-3 compliant logger to which messages will be proxied
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(LoggerInterface $logger, int|string|Level $level = Level::Debug, bool $bubble = true, bool $includeExtra = false)
+=======
+    public function __construct(LoggerInterface $logger, int|string|Level $level = Level::Debug, bool $bubble = true)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(LoggerInterface $logger, int|string|Level $level = Level::Debug, bool $bubble = true)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,7 +58,10 @@ class PsrHandler extends AbstractHandler implements FormattableHandlerInterface
 
         $this->logger = $logger;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->includeExtra = $includeExtra;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -66,6 +76,7 @@ class PsrHandler extends AbstractHandler implements FormattableHandlerInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $message = $this->formatter !== null
             ? (string) $this->formatter->format($record)
             : $record->message;
@@ -76,12 +87,17 @@ class PsrHandler extends AbstractHandler implements FormattableHandlerInterface
 
         $this->logger->log($record->level->toPsrLogLevel(), $message, $context);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->formatter !== null) {
             $formatted = $this->formatter->format($record);
             $this->logger->log($record->level->toPsrLogLevel(), (string) $formatted, $record->context);
         } else {
             $this->logger->log($record->level->toPsrLogLevel(), $record->message, $record->context);
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return false === $this->bubble;

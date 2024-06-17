@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Mockery;
 use Mockery\Exception\NoMatchingExpectationException;
@@ -49,6 +56,8 @@ class ExpectationDirector
      */
     protected $_defaults = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class ExpectationDirector
 {
     /**
@@ -64,15 +73,24 @@ class ExpectationDirector
      * @var \Mockery\MockInterface|\Mockery\LegacyMockInterface
      */
     protected $_mock = null;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Stores an array of all expectations for this mock
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var list<ExpectationInterface>
      */
     protected $_expectations = [];
+=======
+     * @var array
+     */
+    protected $_expectations = array();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var array
      */
@@ -88,6 +106,7 @@ class ExpectationDirector
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Mock object the director is attached to
      *
      * @var LegacyMockInterface|MockInterface
@@ -101,11 +120,16 @@ class ExpectationDirector
      */
     protected $_name = null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Stores an array of all default expectations for this mock
      *
      * @var array
      */
     protected $_defaults = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -113,8 +137,14 @@ class ExpectationDirector
      *
      * @param string $name
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function __construct($name, LegacyMockInterface $mock)
+=======
+     * @param \Mockery\LegacyMockInterface $mock
+     */
+    public function __construct($name, \Mockery\LegacyMockInterface $mock)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param \Mockery\LegacyMockInterface $mock
      */
@@ -128,13 +158,19 @@ class ExpectationDirector
     /**
      * Add a new expectation to the director
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function addExpectation(Expectation $expectation)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param \Mockery\Expectation $expectation
      */
     public function addExpectation(\Mockery\Expectation $expectation)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->_expectations[] = $expectation;
@@ -144,6 +180,10 @@ class ExpectationDirector
      * Handle a method call being directed by this instance
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param array $args
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array $args
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -152,6 +192,7 @@ class ExpectationDirector
     public function call(array $args)
     {
         $expectation = $this->findExpectation($args);
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($expectation !== null) {
             return $expectation->verifyCall($args);
@@ -173,6 +214,8 @@ class ExpectationDirector
 
         throw $exception;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (is_null($expectation)) {
             $exception = new \Mockery\Exception\NoMatchingExpectationException(
                 'No matching handler found for '
@@ -208,6 +251,9 @@ class ExpectationDirector
                 $exp->verify();
             }
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -215,6 +261,10 @@ class ExpectationDirector
      * Attempt to locate an expectation matching the provided args
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param array $args
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array $args
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -225,6 +275,7 @@ class ExpectationDirector
         $expectation = null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->_expectations !== []) {
             $expectation = $this->_findExpectationIn($this->_expectations, $args);
         }
@@ -232,12 +283,17 @@ class ExpectationDirector
         if ($expectation === null && $this->_defaults !== []) {
             return $this->_findExpectationIn($this->_defaults, $args);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!empty($this->_expectations)) {
             $expectation = $this->_findExpectationIn($this->_expectations, $args);
         }
 
         if ($expectation === null && !empty($this->_defaults)) {
             $expectation = $this->_findExpectationIn($this->_defaults, $args);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -246,10 +302,13 @@ class ExpectationDirector
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Return all expectations assigned to this director
      *
      * @return array<ExpectationInterface>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Make the given expectation a default for all others assuming it was
      * correctly created last
      *
@@ -303,6 +362,9 @@ class ExpectationDirector
      * Return all expectations assigned to this director
      *
      * @return array
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function getDefaultExpectations()
@@ -318,6 +380,7 @@ class ExpectationDirector
     public function getExpectationCount()
     {
         $count = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         $expectations = $this->getExpectations();
@@ -417,6 +480,8 @@ class ExpectationDirector
         return null;
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         /** @var Expectation $expectations */
         $expectations = $this->getExpectations() ?: $this->getDefaultExpectations();
         foreach ($expectations as $expectation) {
@@ -426,5 +491,8 @@ class ExpectationDirector
         }
         return $count;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -34,17 +34,23 @@ class HeaderUtils
      * Example:
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      *     HeaderUtils::split('da, en-gb;q=0.8', ',;')
      *     // => ['da'], ['en-gb', 'q=0.8']]
      *
      * @param string $separators List of characters to split on, ordered by
      *                           precedence, e.g. ',', ';=', or ',;='
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *     HeaderUtils::split("da, en-gb;q=0.8", ",;")
      *     // => ['da'], ['en-gb', 'q=0.8']]
      *
      * @param string $separators List of characters to split on, ordered by
      *                           precedence, e.g. ",", ";=", or ",;="
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array Nested array with as many levels as there are characters in
@@ -53,10 +59,13 @@ class HeaderUtils
     public static function split(string $header, string $separators): array
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ('' === $separators) {
             throw new \InvalidArgumentException('At least one separator must be specified.');
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $quotedSeparators = preg_quote($separators, '/');
@@ -93,8 +102,13 @@ class HeaderUtils
      * Example:
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      *     HeaderUtils::combine([['foo', 'abc'], ['bar']])
      *     // => ['foo' => 'abc', 'bar' => true]
+=======
+     *     HeaderUtils::combine([["foo", "abc"], ["bar"]])
+     *     // => ["foo" => "abc", "bar" => true]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *     HeaderUtils::combine([["foo", "abc"], ["bar"]])
      *     // => ["foo" => "abc", "bar" => true]
@@ -116,7 +130,11 @@ class HeaderUtils
      * Joins an associative array into a string for use in an HTTP header.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * The key and value of each entry are joined with '=', and all entries
+=======
+     * The key and value of each entry are joined with "=", and all entries
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * The key and value of each entry are joined with "=", and all entries
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -126,7 +144,11 @@ class HeaderUtils
      * Example:
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      *     HeaderUtils::toString(['foo' => 'abc', 'bar' => true, 'baz' => 'a b c'], ',')
+=======
+     *     HeaderUtils::toString(["foo" => "abc", "bar" => true, "baz" => "a b c"], ",")
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *     HeaderUtils::toString(["foo" => "abc", "bar" => true, "baz" => "a b c"], ",")
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -167,7 +189,11 @@ class HeaderUtils
      *
      * If passed an unquoted string that matches the "token" construct (as
 <<<<<<< HEAD
+<<<<<<< HEAD
      * defined in the HTTP specification), it is passed through verbatim.
+=======
+     * defined in the HTTP specification), it is passed through verbatimly.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * defined in the HTTP specification), it is passed through verbatimly.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -285,6 +311,7 @@ class HeaderUtils
     {
         $separator = $separators[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
         $separators = substr($separators, 1) ?: '';
         $i = 0;
 
@@ -311,6 +338,8 @@ class HeaderUtils
                 ++$i;
             } else {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $partSeparators = substr($separators, 1);
 
         $i = 0;
@@ -325,11 +354,15 @@ class HeaderUtils
                 ++$i;
             } else {
                 $previousMatchWasSeparator = false;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $partMatches[$i][] = $match;
             }
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         foreach ($partMatches as $matches) {
             if ('' === $separators && '' !== $unquoted = self::unquote($matches[0][0])) {
@@ -337,6 +370,8 @@ class HeaderUtils
             } elseif ($groupedParts = self::groupParts($matches, $separators, false)) {
                 $parts[] = $groupedParts;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $parts = [];
         if ($partSeparators) {
             foreach ($partMatches as $matches) {
@@ -352,6 +387,9 @@ class HeaderUtils
                     $parts[0],
                     implode($separator, \array_slice($parts, 1)),
                 ];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }

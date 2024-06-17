@@ -64,6 +64,7 @@ abstract class DataCollector implements DataCollectorInterface
             '*' => function ($v, array $a, Stub $s, $isNested) {
                 if (!$v instanceof Stub) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $b = $a;
                     foreach ($a as $k => $v) {
                         if (!\is_object($v) || $v instanceof \DateTimeInterface || $v instanceof Stub) {
@@ -79,6 +80,11 @@ abstract class DataCollector implements DataCollectorInterface
                             }
                         } catch (\TypeError $e) {
                             // we've hit a typed reference
+=======
+                    foreach ($a as $k => $v) {
+                        if (\is_object($v) && !$v instanceof \DateTimeInterface && !$v instanceof Stub) {
+                            $a[$k] = new CutStub($v);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     foreach ($a as $k => $v) {
                         if (\is_object($v) && !$v instanceof \DateTimeInterface && !$v instanceof Stub) {
@@ -101,9 +107,12 @@ abstract class DataCollector implements DataCollectorInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __wakeup()
@@ -114,7 +123,11 @@ abstract class DataCollector implements DataCollectorInterface
      * @internal to prevent implementing \Serializable
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     final protected function serialize(): void
+=======
+    final protected function serialize()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final protected function serialize()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -124,6 +137,7 @@ abstract class DataCollector implements DataCollectorInterface
     /**
      * @internal to prevent implementing \Serializable
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     final protected function unserialize(string $data): void
     {
@@ -136,6 +150,11 @@ abstract class DataCollector implements DataCollectorInterface
     {
         $this->data = [];
     }
+=======
+    final protected function unserialize(string $data)
+    {
+    }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final protected function unserialize(string $data)
     {

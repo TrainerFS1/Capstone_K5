@@ -96,6 +96,7 @@ class Sudo
     {
         $prop = self::getProperty(new \ReflectionClass($class), $property);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $refl = $prop->getDeclaringClass();
 
         if (\method_exists($refl, 'setStaticPropertyValue')) {
@@ -103,6 +104,9 @@ class Sudo
         } else {
             $prop->setValue($value);
         }
+=======
+        $prop->setValue($value);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $prop->setValue($value);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -141,11 +145,14 @@ class Sudo
         $refl = new \ReflectionClass($class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Special case the ::class magic constant, because `getConstant` does the wrong thing here.
         if ($const === 'class') {
             return $refl->getName();
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         do {

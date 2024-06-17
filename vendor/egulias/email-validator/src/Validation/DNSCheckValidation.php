@@ -14,11 +14,17 @@ use Egulias\EmailValidator\Warning\Warning;
 class DNSCheckValidation implements EmailValidation
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var int
      */
     protected const DNS_RECORD_TYPES_TO_CHECK = DNS_MX + DNS_A + DNS_AAAA;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -153,7 +159,11 @@ class DNSCheckValidation implements EmailValidation
     private function validateDnsRecords($host): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dnsRecordsResult = $this->dnsGetRecord->getRecords($host, DNS_A + DNS_MX);
+=======
+        $dnsRecordsResult = $this->dnsGetRecord->getRecords($host, static::DNS_RECORD_TYPES_TO_CHECK);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $dnsRecordsResult = $this->dnsGetRecord->getRecords($host, static::DNS_RECORD_TYPES_TO_CHECK);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -166,6 +176,7 @@ class DNSCheckValidation implements EmailValidation
         $dnsRecords = $dnsRecordsResult->getRecords();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Combined check for A+MX+AAAA can fail with SERVFAIL, even in the presence of valid A/MX records
         $aaaaRecordsResult = $this->dnsGetRecord->getRecords($host, DNS_AAAA);
 
@@ -173,6 +184,8 @@ class DNSCheckValidation implements EmailValidation
             $dnsRecords = array_merge($dnsRecords, $aaaaRecordsResult->getRecords());
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // No MX, A or AAAA DNS records

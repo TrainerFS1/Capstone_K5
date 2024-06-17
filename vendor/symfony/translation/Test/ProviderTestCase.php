@@ -26,6 +26,11 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  *
  * @author Mathieu Santostefano <msantostefano@protonmail.com>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ *
+ * @internal
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  *
  * @internal
@@ -41,6 +46,7 @@ abstract class ProviderTestCase extends TestCase
     protected TranslatorBagInterface|MockObject $translatorBag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract public static function createProvider(HttpClientInterface $client, LoaderInterface $loader, LoggerInterface $logger, string $defaultLocale, string $endpoint): ProviderInterface;
 
     /**
@@ -48,12 +54,17 @@ abstract class ProviderTestCase extends TestCase
      */
     abstract public static function toStringProvider(): iterable;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     abstract public function createProvider(HttpClientInterface $client, LoaderInterface $loader, LoggerInterface $logger, string $defaultLocale, string $endpoint): ProviderInterface;
 
     /**
      * @return iterable<array{0: string, 1: ProviderInterface}>
      */
     abstract public function toStringProvider(): iterable;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**

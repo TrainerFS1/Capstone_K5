@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package   Mockery
  * @copyright Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license   http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Adapter\Phpunit;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use LogicException;
 use Mockery;
@@ -44,11 +51,16 @@ use function dirname;
 use function method_exists;
 use function sprintf;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\Test;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Util\Blacklist;
 use PHPUnit\Runner\BaseTestRunner;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class TestListenerTrait
@@ -63,7 +75,11 @@ class TestListenerTrait
     public function endTest(Test $test, $time)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $test instanceof TestCase) {
+=======
+        if (!$test instanceof TestCase) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!$test instanceof TestCase) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,8 +100,13 @@ class TestListenerTrait
             // The self() call is used as a sentinel. Anything that throws if
             // the container is closed already will do.
 <<<<<<< HEAD
+<<<<<<< HEAD
             Mockery::self();
         } catch (LogicException $logicException) {
+=======
+            \Mockery::self();
+        } catch (\LogicException $_) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             \Mockery::self();
         } catch (\LogicException $_) {
@@ -95,7 +116,11 @@ class TestListenerTrait
 
         $e = new ExpectationFailedException(
 <<<<<<< HEAD
+<<<<<<< HEAD
             sprintf(
+=======
+            \sprintf(
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             \sprintf(
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -117,15 +142,21 @@ class TestListenerTrait
     {
         if (method_exists(Blacklist::class, 'addDirectory')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             (new Blacklist())->getBlacklistedDirectories();
             Blacklist::addDirectory(dirname((new ReflectionClass(Mockery::class))->getFileName()));
         } else {
             Blacklist::$blacklistedClassNames[Mockery::class] = 1;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             (new BlackList())->getBlacklistedDirectories();
             Blacklist::addDirectory(\dirname((new \ReflectionClass(\Mockery::class))->getFileName()));
         } else {
             Blacklist::$blacklistedClassNames[\Mockery::class] = 1;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }

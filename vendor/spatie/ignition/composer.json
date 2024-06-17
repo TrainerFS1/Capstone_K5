@@ -1,8 +1,14 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "name" : "spatie/ignition",
     "description" : "A beautiful error page for PHP applications.",
     "keywords" : [
+=======
+    "name": "spatie/ignition",
+    "description": "A beautiful error page for PHP applications.",
+    "keywords": [
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     "name": "spatie/ignition",
     "description": "A beautiful error page for PHP applications.",
@@ -14,17 +20,23 @@
         "flare"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "authors" : [
         {
             "name" : "Spatie",
             "email" : "info@spatie.be",
             "role" : "Developer"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "authors": [
         {
             "name": "Spatie",
             "email": "info@spatie.be",
             "role": "Developer"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     ],
@@ -34,6 +46,7 @@
         "php": "^8.0",
         "ext-json": "*",
         "ext-mbstring": "*",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "spatie/flare-client-php": "^1.7",
         "symfony/console": "^5.4|^6.0|^7.0",
@@ -93,6 +106,8 @@
         "branch-alias" : {
             "dev-main" : "1.5.x-dev"
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "spatie/flare-client-php": "^1.1",
         "symfony/console": "^5.4|^6.0",
         "symfony/var-dumper": "^5.4|^6.0"
@@ -139,6 +154,9 @@
     "extra": {
         "branch-alias": {
             "dev-main": "1.2.x-dev"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }

@@ -5,6 +5,7 @@ namespace PhpParser\Node;
 use PhpParser\NodeAbstract;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Name extends NodeAbstract {
     /** @var string Name as string */
     public string $name;
@@ -12,12 +13,17 @@ class Name extends NodeAbstract {
     /** @var array<string, bool> */
     private static array $specialClassNames = [
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Name extends NodeAbstract
 {
     /** @var string[] Parts of the name */
     public $parts;
 
     private static $specialClassNames = [
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'self'   => true,
         'parent' => true,
@@ -27,6 +33,7 @@ class Name extends NodeAbstract
     /**
      * Constructs a name node.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param string|string[]|self $name Name as string, part array or Name instance (copy ctor)
      * @param array<string, mixed> $attributes Additional attributes
@@ -48,6 +55,8 @@ class Name extends NodeAbstract
     public function getParts(): array {
         return \explode('\\', $this->name);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string|string[]|self $name       Name as string, part array or Name instance (copy ctor)
      * @param array                $attributes Additional attributes
      */
@@ -58,6 +67,9 @@ class Name extends NodeAbstract
 
     public function getSubNodeNames() : array {
         return ['parts'];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -67,11 +79,16 @@ class Name extends NodeAbstract
      * @return string First part of the name
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getFirst(): string {
         if (false !== $pos = \strpos($this->name, '\\')) {
             return \substr($this->name, 0, $pos);
         }
         return $this->name;
+=======
+    public function getFirst() : string {
+        return $this->parts[0];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getFirst() : string {
         return $this->parts[0];
@@ -84,11 +101,16 @@ class Name extends NodeAbstract
      * @return string Last part of the name
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getLast(): string {
         if (false !== $pos = \strrpos($this->name, '\\')) {
             return \substr($this->name, $pos + 1);
         }
         return $this->name;
+=======
+    public function getLast() : string {
+        return $this->parts[count($this->parts) - 1];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getLast() : string {
         return $this->parts[count($this->parts) - 1];
@@ -101,8 +123,13 @@ class Name extends NodeAbstract
      * @return bool Whether the name is unqualified
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isUnqualified(): bool {
         return false === \strpos($this->name, '\\');
+=======
+    public function isUnqualified() : bool {
+        return 1 === count($this->parts);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isUnqualified() : bool {
         return 1 === count($this->parts);
@@ -115,8 +142,13 @@ class Name extends NodeAbstract
      * @return bool Whether the name is qualified
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isQualified(): bool {
         return false !== \strpos($this->name, '\\');
+=======
+    public function isQualified() : bool {
+        return 1 < count($this->parts);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isQualified() : bool {
         return 1 < count($this->parts);
@@ -129,7 +161,11 @@ class Name extends NodeAbstract
      * @return bool Whether the name is fully qualified
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isFullyQualified(): bool {
+=======
+    public function isFullyQualified() : bool {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isFullyQualified() : bool {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -142,7 +178,11 @@ class Name extends NodeAbstract
      * @return bool Whether the name is relative
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isRelative(): bool {
+=======
+    public function isRelative() : bool {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isRelative() : bool {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -156,8 +196,13 @@ class Name extends NodeAbstract
      * @return string String representation
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toString(): string {
         return $this->name;
+=======
+    public function toString() : string {
+        return implode('\\', $this->parts);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toString() : string {
         return implode('\\', $this->parts);
@@ -171,7 +216,11 @@ class Name extends NodeAbstract
      * @return string String representation
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toCodeString(): string {
+=======
+    public function toCodeString() : string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toCodeString() : string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -185,8 +234,13 @@ class Name extends NodeAbstract
      * @return string Lowercased string representation
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toLowerString(): string {
         return strtolower($this->name);
+=======
+    public function toLowerString() : string {
+        return strtolower(implode('\\', $this->parts));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toLowerString() : string {
         return strtolower(implode('\\', $this->parts));
@@ -199,8 +253,14 @@ class Name extends NodeAbstract
      * @return bool Whether identifier is a special class name
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function isSpecialClassName(): bool {
         return isset(self::$specialClassNames[strtolower($this->name)]);
+=======
+    public function isSpecialClassName() : bool {
+        return count($this->parts) === 1
+            && isset(self::$specialClassNames[strtolower($this->parts[0])]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function isSpecialClassName() : bool {
         return count($this->parts) === 1
@@ -215,8 +275,13 @@ class Name extends NodeAbstract
      * @return string String representation
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __toString(): string {
         return $this->name;
+=======
+    public function __toString() : string {
+        return implode('\\', $this->parts);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __toString() : string {
         return implode('\\', $this->parts);
@@ -235,7 +300,11 @@ class Name extends NodeAbstract
      * Offset and length have the same meaning as in array_slice().
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $offset Offset to start the slice at (may be negative)
+=======
+     * @param int      $offset Offset to start the slice at (may be negative)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param int      $offset Offset to start the slice at (may be negative)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -243,6 +312,7 @@ class Name extends NodeAbstract
      *
      * @return static|null Sliced name
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function slice(int $offset, ?int $length = null) {
         if ($offset === 1 && $length === null) {
@@ -255,6 +325,10 @@ class Name extends NodeAbstract
 
         $parts = \explode('\\', $this->name);
         $numParts = \count($parts);
+=======
+    public function slice(int $offset, int $length = null) {
+        $numParts = count($this->parts);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function slice(int $offset, int $length = null) {
         $numParts = count($this->parts);
@@ -280,7 +354,11 @@ class Name extends NodeAbstract
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new static(array_slice($parts, $realOffset, $realLength), $this->attributes);
+=======
+        return new static(array_slice($this->parts, $realOffset, $realLength), $this->attributes);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return new static(array_slice($this->parts, $realOffset, $realLength), $this->attributes);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -298,9 +376,15 @@ class Name extends NodeAbstract
      * where $namespace is a Name node or null will work as expected.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string|string[]|self|null $name1 The first name
      * @param string|string[]|self|null $name2 The second name
      * @param array<string, mixed> $attributes Attributes to assign to concatenated name
+=======
+     * @param string|string[]|self|null $name1      The first name
+     * @param string|string[]|self|null $name2      The second name
+     * @param array                     $attributes Attributes to assign to concatenated name
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string|string[]|self|null $name1      The first name
      * @param string|string[]|self|null $name2      The second name
@@ -313,6 +397,7 @@ class Name extends NodeAbstract
         if (null === $name1 && null === $name2) {
             return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         if (null === $name1) {
             return new static($name2, $attributes);
@@ -323,6 +408,8 @@ class Name extends NodeAbstract
             return new static(
                 self::prepareName($name1) . '\\' . self::prepareName($name2), $attributes
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif (null === $name1) {
             return new static(self::prepareName($name2), $attributes);
         } elseif (null === $name2) {
@@ -330,6 +417,9 @@ class Name extends NodeAbstract
         } else {
             return new static(
                 array_merge(self::prepareName($name1), self::prepareName($name2)), $attributes
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -337,6 +427,7 @@ class Name extends NodeAbstract
 
     /**
      * Prepares a (string, array or Name node) name for use in name changing methods by converting
+<<<<<<< HEAD
 <<<<<<< HEAD
      * it to a string.
      *
@@ -346,6 +437,8 @@ class Name extends NodeAbstract
      */
     private static function prepareName($name): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * it to an array.
      *
      * @param string|string[]|self $name Name to prepare
@@ -353,6 +446,9 @@ class Name extends NodeAbstract
      * @return string[] Prepared name
      */
     private static function prepareName($name) : array {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (\is_string($name)) {
             if ('' === $name) {
@@ -360,9 +456,14 @@ class Name extends NodeAbstract
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $name;
         }
         if (\is_array($name)) {
+=======
+            return explode('\\', $name);
+        } elseif (\is_array($name)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return explode('\\', $name);
         } elseif (\is_array($name)) {
@@ -372,10 +473,16 @@ class Name extends NodeAbstract
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return implode('\\', $name);
         }
         if ($name instanceof self) {
             return $name->name;
+=======
+            return $name;
+        } elseif ($name instanceof self) {
+            return $name->parts;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $name;
         } elseif ($name instanceof self) {
@@ -389,7 +496,11 @@ class Name extends NodeAbstract
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getType(): string {
+=======
+    public function getType() : string {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getType() : string {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

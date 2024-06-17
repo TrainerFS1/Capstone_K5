@@ -35,7 +35,11 @@ class RouterDataCollector extends DataCollector
      * @final
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
+=======
+    public function collect(Request $request, Response $response, \Throwable $exception = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function collect(Request $request, Response $response, \Throwable $exception = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -53,9 +57,12 @@ class RouterDataCollector extends DataCollector
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset()
@@ -70,9 +77,12 @@ class RouterDataCollector extends DataCollector
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function guessRoute(Request $request, string|object|array $controller)
@@ -83,8 +93,11 @@ class RouterDataCollector extends DataCollector
     /**
      * Remembers the controller associated to each request.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

@@ -32,10 +32,14 @@ class LineFormatter extends NormalizerFormatter
     protected bool $ignoreEmptyContextAndExtra;
     protected bool $includeStacktraces;
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected ?int $maxLevelNameLength = null;
     protected string $indentStacktraces = '';
     protected Closure|null $stacktracesParser = null;
     protected string $basePath = '';
+=======
+    protected Closure|null $stacktracesParser = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected Closure|null $stacktracesParser = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,6 +61,7 @@ class LineFormatter extends NormalizerFormatter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Setting a base path will hide the base path from exception and stack trace file names to shorten them
      * @return $this
@@ -77,6 +82,8 @@ class LineFormatter extends NormalizerFormatter
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function includeStacktraces(bool $include = true, ?Closure $parser = null): self
     {
         $this->includeStacktraces = $include;
@@ -88,6 +95,7 @@ class LineFormatter extends NormalizerFormatter
         return $this;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * Indent stack traces to separate them a bit from the main log record messages
@@ -107,6 +115,8 @@ class LineFormatter extends NormalizerFormatter
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function allowInlineLineBreaks(bool $allow = true): self
     {
         $this->allowInlineLineBreaks = $allow;
@@ -115,9 +125,12 @@ class LineFormatter extends NormalizerFormatter
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function ignoreEmptyContextAndExtra(bool $ignore = true): self
@@ -128,6 +141,7 @@ class LineFormatter extends NormalizerFormatter
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Allows cutting the level name to get fixed-length levels like INF for INFO, ERR for ERROR if you set this to 3 for example
      *
@@ -144,6 +158,8 @@ class LineFormatter extends NormalizerFormatter
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @inheritDoc
      */
     public function format(LogRecord $record): string
@@ -151,10 +167,13 @@ class LineFormatter extends NormalizerFormatter
         $vars = parent::format($record);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->maxLevelNameLength !== null) {
             $vars['level_name'] = substr($vars['level_name'], 0, $this->maxLevelNameLength);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $output = $this->format;
@@ -230,7 +249,11 @@ class LineFormatter extends NormalizerFormatter
                 $depth++;
                 if ($depth > $this->maxNormalizeDepth) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $str .= "\n[previous exception] Over " . $this->maxNormalizeDepth . ' levels deep, aborting normalization';
+=======
+                    $str .= '\n[previous exception] Over ' . $this->maxNormalizeDepth . ' levels deep, aborting normalization';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $str .= '\n[previous exception] Over ' . $this->maxNormalizeDepth . ' levels deep, aborting normalization';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -264,7 +287,11 @@ class LineFormatter extends NormalizerFormatter
     {
         if ($this->allowInlineLineBreaks) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (0 === strpos($str, '{') || 0 === strpos($str, '[')) {
+=======
+            if (0 === strpos($str, '{')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (0 === strpos($str, '{')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -302,6 +329,7 @@ class LineFormatter extends NormalizerFormatter
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $file = $e->getFile();
         if ($this->basePath !== '') {
@@ -309,6 +337,9 @@ class LineFormatter extends NormalizerFormatter
         }
 
         $str .= '): ' . $e->getMessage() . ' at ' . $file . ':' . $e->getLine() . ')';
+=======
+        $str .= '): ' . $e->getMessage() . ' at ' . $e->getFile() . ':' . $e->getLine() . ')';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $str .= '): ' . $e->getMessage() . ' at ' . $e->getFile() . ':' . $e->getLine() . ')';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -325,10 +356,13 @@ class LineFormatter extends NormalizerFormatter
         $trace = $e->getTraceAsString();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->basePath !== '') {
             $trace = preg_replace('{^(#\d+ )' . preg_quote($this->basePath) . '}m', '$1', $trace) ?? $trace;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->stacktracesParser !== null) {
@@ -336,11 +370,15 @@ class LineFormatter extends NormalizerFormatter
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->indentStacktraces !== '') {
             $trace = str_replace("\n", "\n{$this->indentStacktraces}", $trace);
         }
 
         return "\n{$this->indentStacktraces}[stacktrace]\n{$this->indentStacktraces}" . $trace . "\n";
+=======
+        return "\n[stacktrace]\n" . $trace . "\n";
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return "\n[stacktrace]\n" . $trace . "\n";
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

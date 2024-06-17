@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Closure;
 use Exception as PHPException;
@@ -80,6 +87,8 @@ class Container
 {
     public const BLOCKS = Mockery::BLOCKS;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Generator\Generator;
 use Mockery\Generator\MockConfigurationBuilder;
 use Mockery\Loader\Loader as LoaderInterface;
@@ -94,6 +103,9 @@ class Container
      * @var array
      */
     protected $_mocks = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -112,7 +124,10 @@ class Container
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Ordered groups
      *
      * @var array
@@ -120,12 +135,16 @@ class Container
     protected $_groups = array();
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var Generator
      */
     protected $_generator;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Ordered groups
      *
@@ -136,11 +155,14 @@ class Container
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var LoaderInterface
      */
     protected $_loader;
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Store of mock objects
      *
@@ -255,6 +277,8 @@ class Container
             }
         ) === [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var array
      */
     protected $_namedMocks = array();
@@ -263,6 +287,9 @@ class Container
     {
         $this->_generator = $generator ?: \Mockery::getDefaultGenerator();
         $this->_loader = $loader ?: \Mockery::getDefaultLoader();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -274,6 +301,7 @@ class Container
      * names or partials - just so long as it's something that can be mocked.
      * I'll refactor it one day so it's easier to follow.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @template TMock of object
      *
@@ -323,6 +351,8 @@ class Container
             $arg = array_shift($args);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array ...$args
      *
      * @return Mock
@@ -359,12 +389,16 @@ class Container
 
         while (count($args) > 0) {
             $arg = array_shift($args);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // check for multiple interfaces
             if (is_string($arg)) {
                 foreach (explode('|', $arg) as $type) {
                     if ($arg === 'null') {
                         // skip PHP 8 'null's
+<<<<<<< HEAD
 <<<<<<< HEAD
                         continue;
                     }
@@ -456,6 +490,8 @@ class Container
             if (is_array($arg)) {
                 if ([] !== $arg && array_keys($arg) !== range(0, count($arg) - 1)) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     } elseif (strpos($type, ',') && !strpos($type, ']')) {
                         $interfaces = explode(',', str_replace(' ', '', $type));
                         $builder->addTargets($interfaces);
@@ -501,11 +537,15 @@ class Container
                 $builder->addTarget($arg);
             } elseif (is_array($arg)) {
                 if (!empty($arg) && array_keys($arg) !== range(0, count($arg) - 1)) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     // if associative array
                     if (array_key_exists(self::BLOCKS, $arg)) {
                         $blocks = $arg[self::BLOCKS];
                     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     unset($arg[self::BLOCKS]);
@@ -524,6 +564,8 @@ class Container
                 'Unable to parse arguments sent to %s::mock()', get_class($this)
             ));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     unset($arg[self::BLOCKS]);
                     $quickdefs = $arg;
                 } else {
@@ -535,14 +577,22 @@ class Container
                     . get_class($this) . '::mock()'
                 );
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $builder->addBlackListedMethods($blocks);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($constructorArgs !== null) {
             $builder->addBlackListedMethod('__construct'); // we need to pass through
+=======
+        if (!is_null($constructorArgs)) {
+            $builder->addBlackListedMethod("__construct"); // we need to pass through
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!is_null($constructorArgs)) {
             $builder->addBlackListedMethod("__construct"); // we need to pass through
@@ -552,8 +602,13 @@ class Container
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($partialMethods !== null && $constructorArgs === null) {
             $constructorArgs = [];
+=======
+        if (!empty($partialMethods) && $constructorArgs === null) {
+            $constructorArgs = array();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!empty($partialMethods) && $constructorArgs === null) {
             $constructorArgs = array();
@@ -567,22 +622,29 @@ class Container
         $def = $this->getGenerator()->generate($config);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $className = $def->getClassName();
         if (class_exists($className, $attemptAutoload = false)) {
             $rfc = new ReflectionClass($className);
             if (! $rfc->implementsInterface(LegacyMockInterface::class)) {
                 throw new RuntimeException(sprintf('Could not load mock %s, class already exists', $className));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (class_exists($def->getClassName(), $attemptAutoload = false)) {
             $rfc = new \ReflectionClass($def->getClassName());
             if (!$rfc->implementsInterface("Mockery\LegacyMockInterface")) {
                 throw new \Mockery\Exception\RuntimeException("Could not load mock {$def->getClassName()}, class already exists");
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
         $this->getLoader()->load($def);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $mock = $this->_getInstance($className, $constructorArgs);
         $mock->mockery_init($this, $config->getTargetObject(), $config->isInstanceMock());
@@ -613,6 +675,8 @@ class Container
     {
         return ++$this->_allocatedOrder;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $mock = $this->_getInstance($def->getClassName(), $constructorArgs);
         $mock->mockery_init($this, $config->getTargetObject(), $config->isInstanceMock());
 
@@ -712,6 +776,9 @@ class Container
         }
 
         return $e;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -726,9 +793,12 @@ class Container
             $mock->mockery_teardown();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $this->_mocks = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->_mocks = array();
     }
 
@@ -774,6 +844,9 @@ class Container
     {
         $this->_currentOrder = $order;
         return $this->_currentOrder;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -789,7 +862,10 @@ class Container
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Validate the current mock's ordering
      *
      * @param string $method
@@ -814,6 +890,9 @@ class Container
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets the count of expectations on the mocks
      *
@@ -826,13 +905,17 @@ class Container
             $count += $mock->mockery_getExpectationCount();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $count;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Fetch array of ordered groups
      *
@@ -975,6 +1058,8 @@ class Container
      *
      * @return LegacyMockInterface|MockInterface
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Store a mock and set its container reference
      *
      * @param \Mockery\Mock $mock
@@ -1001,6 +1086,9 @@ class Container
      * be used during the programming of the same mock.
      *
      * @return \Mockery\Mock
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function self()
@@ -1011,6 +1099,7 @@ class Container
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @template TMock of object
      * @template TMixed
@@ -1039,6 +1128,8 @@ class Container
                     $mockName
                 ));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return a specific remembered mock according to the array index it
      * was stored to in this container instance
      *
@@ -1068,6 +1159,9 @@ class Container
                 eval("class $internalMockName extends $mockName {" .
                         'public function __construct() {}' .
                     '}');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
@@ -1082,7 +1176,11 @@ class Container
         $name = $config->getName();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($name === null) {
+=======
+        if (!$name) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!$name) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1092,24 +1190,33 @@ class Container
         $hash = $config->getHash();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (array_key_exists($name, $this->_namedMocks) && $hash !== $this->_namedMocks[$name]) {
             throw new Exception(
                 sprintf("The mock named '%s' has been already defined with a different mock configuration", $name)
             );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($this->_namedMocks[$name])) {
             if ($hash !== $this->_namedMocks[$name]) {
                 throw new \Mockery\Exception(
                     "The mock named '$name' has been already defined with a different mock configuration"
                 );
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $this->_namedMocks[$name] = $hash;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * see http://php.net/manual/en/language.oop5.basic.php
@@ -1128,5 +1235,8 @@ class Container
         });
         return empty($invalidNames);
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

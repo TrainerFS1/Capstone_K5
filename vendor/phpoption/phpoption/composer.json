@@ -20,8 +20,13 @@
     },
     "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "bamarni/composer-bin-plugin": "^1.8.2",
         "phpunit/phpunit": "^8.5.34 || ^9.6.13 || ^10.4.2"
+=======
+        "bamarni/composer-bin-plugin": "^1.8",
+        "phpunit/phpunit": "^8.5.28 || ^9.5.21"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "bamarni/composer-bin-plugin": "^1.8",
         "phpunit/phpunit": "^8.5.28 || ^9.5.21"

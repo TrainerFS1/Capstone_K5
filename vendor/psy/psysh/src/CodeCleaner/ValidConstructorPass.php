@@ -13,7 +13,11 @@ namespace Psy\CodeCleaner;
 
 use PhpParser\Node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node\Name;
+=======
+use PhpParser\Node\Identifier;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PhpParser\Node\Identifier;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -61,7 +65,11 @@ class ValidConstructorPass extends CodeCleanerPass
     {
         if ($node instanceof Namespace_) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->namespace = isset($node->name) ? $this->getParts($node->name) : [];
+=======
+            $this->namespace = isset($node->name) ? $node->name->parts : [];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->namespace = isset($node->name) ? $node->name->parts : [];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -100,6 +108,7 @@ class ValidConstructorPass extends CodeCleanerPass
     {
         if ($constructor->isStatic()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $msg = \sprintf(
                 'Constructor %s::%s() cannot be static',
                 \implode('\\', \array_merge($this->namespace, (array) $classNode->name->toString())),
@@ -128,6 +137,8 @@ class ValidConstructorPass extends CodeCleanerPass
         return \method_exists($name, 'getParts') ? $name->getParts() : $name->parts;
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             // For PHP Parser 4.x
             $className = $classNode->name instanceof Identifier ? $classNode->name->toString() : $classNode->name;
 
@@ -151,5 +162,8 @@ class ValidConstructorPass extends CodeCleanerPass
             throw new FatalErrorException($msg, 0, \E_ERROR, null, $classNode->getLine());
         }
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

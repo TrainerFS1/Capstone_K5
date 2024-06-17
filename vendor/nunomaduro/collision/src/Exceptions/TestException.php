@@ -26,11 +26,14 @@ final class TestException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getThrowable(): Throwable
     {
         return $this->throwable;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -50,6 +53,7 @@ final class TestException
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $regexes = [
             'To contain' => '/Failed asserting that \'(.*)\' contains "(.*)"\./s',
             'Not to contain' => '/Failed asserting that \'(.*)\' does not contain "(.*)"\./s',
@@ -64,6 +68,8 @@ final class TestException
                 break;
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Contains...
         $re = '/Failed asserting that \'(.*)\' contains "(.*)"\./s';
 
@@ -108,6 +114,9 @@ final class TestException
                 '  To contain: '.ltrim($expectedAsString, PHP_EOL.'  '),
                 '',
             ]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -127,6 +136,7 @@ final class TestException
         return $message;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     private function shortenMessage(array $matches, string $key): string
     {
@@ -170,6 +180,8 @@ final class TestException
         ]);
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getCode(): int

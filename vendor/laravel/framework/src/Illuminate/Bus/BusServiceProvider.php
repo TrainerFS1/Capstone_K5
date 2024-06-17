@@ -3,7 +3,10 @@
 namespace Illuminate\Bus;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\DynamoDb\DynamoDbClient;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Bus\Dispatcher as DispatcherContract;
@@ -11,7 +14,10 @@ use Illuminate\Contracts\Bus\QueueingDispatcher as QueueingDispatcherContract;
 use Illuminate\Contracts\Queue\Factory as QueueFactoryContract;
 use Illuminate\Contracts\Support\DeferrableProvider;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\ServiceProvider;
@@ -50,6 +56,7 @@ class BusServiceProvider extends ServiceProvider implements DeferrableProvider
     protected function registerBatchServices()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->app->singleton(BatchRepository::class, function ($app) {
             $driver = $app->config->get('queue.batching.driver', 'database');
 
@@ -57,6 +64,9 @@ class BusServiceProvider extends ServiceProvider implements DeferrableProvider
                 ? $app->make(DynamoBatchRepository::class)
                 : $app->make(DatabaseBatchRepository::class);
         });
+=======
+        $this->app->singleton(BatchRepository::class, DatabaseBatchRepository::class);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->app->singleton(BatchRepository::class, DatabaseBatchRepository::class);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,6 +78,7 @@ class BusServiceProvider extends ServiceProvider implements DeferrableProvider
                 $app->config->get('queue.batching.table', 'job_batches')
             );
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         $this->app->singleton(DynamoBatchRepository::class, function ($app) {
@@ -95,6 +106,8 @@ class BusServiceProvider extends ServiceProvider implements DeferrableProvider
                 ttlAttribute: $app->config->get('queue.batching.ttl_attribute', 'ttl'),
             );
         });
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }

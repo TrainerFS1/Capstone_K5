@@ -7,6 +7,7 @@
 
 _sf_{{ COMMAND_NAME }}() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     # Use the default completion for shell redirect operators.
     for w in '>' '>>' '&>' '<'; do
@@ -17,6 +18,8 @@ _sf_{{ COMMAND_NAME }}() {
         fi
     done
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     # Use newline as only separator to allow space in completion values

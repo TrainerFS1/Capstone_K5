@@ -40,8 +40,11 @@ class MigrateMakeCommand extends BaseCommand implements PromptsForMissingInput
      *
      * @var \Illuminate\Support\Composer
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @deprecated Will be removed in a future Laravel version.
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -99,6 +102,11 @@ class MigrateMakeCommand extends BaseCommand implements PromptsForMissingInput
         // make sure that the migrations are registered by the class loaders.
         $this->writeMigration($name, $table, $create);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        $this->composer->dumpAutoloads();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
         $this->composer->dumpAutoloads();
@@ -112,7 +120,11 @@ class MigrateMakeCommand extends BaseCommand implements PromptsForMissingInput
      * @param  string  $table
      * @param  bool  $create
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
+=======
+     * @return string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -151,7 +163,11 @@ class MigrateMakeCommand extends BaseCommand implements PromptsForMissingInput
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'name' => ['What should the migration be named?', 'E.g. create_flights_table'],
+=======
+            'name' => 'What should the migration be named?',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'name' => 'What should the migration be named?',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

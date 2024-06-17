@@ -13,13 +13,19 @@ class DomainComment implements CommentStrategy
     public function exitCondition(EmailLexer $lexer, int $openedParenthesis): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return !($openedParenthesis === 0 && $lexer->isNextToken(EmailLexer::S_DOT));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (($openedParenthesis === 0 && $lexer->isNextToken(EmailLexer::S_DOT))) { // || !$internalLexer->moveNext()) {
             return false;
         }
 
         return true;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

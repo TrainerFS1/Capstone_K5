@@ -21,7 +21,11 @@ final class Helpers
 	use Nette\StaticClass;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public const PreventMerging = '_prevent_merging';
+=======
+	public const PREVENT_MERGING = '_prevent_merging';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 	public const PREVENT_MERGING = '_prevent_merging';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -30,18 +34,24 @@ final class Helpers
 	/**
 	 * Merges dataset. Left has higher priority than right one.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 */
 	public static function merge(mixed $value, mixed $base): mixed
 	{
 		if (is_array($value) && isset($value[self::PreventMerging])) {
 			unset($value[self::PreventMerging]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @return array|string
 	 */
 	public static function merge($value, $base)
 	{
 		if (is_array($value) && isset($value[self::PREVENT_MERGING])) {
 			unset($value[self::PREVENT_MERGING]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			return $value;
 		}
@@ -69,6 +79,7 @@ final class Helpers
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static function getPropertyType(\ReflectionProperty|\ReflectionParameter $prop): ?string
 	{
 		if ($type = Nette\Utils\Type::fromReflection($prop)) {
@@ -80,6 +91,8 @@ final class Helpers
 			$class = Reflection::getPropertyDeclaringClass($prop);
 			return preg_replace_callback('#[\w\\\\]+#', fn($m) => Reflection::expandClassName($m[0], $class), $type);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	public static function getPropertyType(\ReflectionProperty $prop): ?string
 	{
 		if (!class_exists(Nette\Utils\Type::class)) {
@@ -91,6 +104,9 @@ final class Helpers
 			return preg_replace_callback('#[\w\\\\]+#', function ($m) use ($class) {
 				return Reflection::expandClassName($m[0], $class);
 			}, $type);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
@@ -117,6 +133,7 @@ final class Helpers
 	}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public static function formatValue(mixed $value): string
 	{
@@ -207,6 +224,8 @@ final class Helpers
 		} else {
 			return static fn($value) => Nette\Utils\Arrays::toObject((array) $value, new $type);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	/**
 	 * @param  mixed  $value
 	 */
@@ -220,6 +239,9 @@ final class Helpers
 			return var_export($value, true);
 		} else {
 			return strtolower(gettype($value));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 	}

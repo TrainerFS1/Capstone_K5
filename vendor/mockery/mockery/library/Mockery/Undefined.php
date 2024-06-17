@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,14 +28,20 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function spl_object_hash;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Undefined
@@ -42,8 +51,12 @@ class Undefined
      *
      * @param string $method
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param array  $args
      *
+=======
+     * @param array $args
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array $args
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +69,11 @@ class Undefined
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Return a string, avoiding E_RECOVERABLE_ERROR.
+=======
+     * Return a string, avoiding E_RECOVERABLE_ERROR
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Return a string, avoiding E_RECOVERABLE_ERROR
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,7 +83,11 @@ class Undefined
     public function __toString()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return self::class . ':' . spl_object_hash($this);
+=======
+        return __CLASS__ . ":" . spl_object_hash($this);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return __CLASS__ . ":" . spl_object_hash($this);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

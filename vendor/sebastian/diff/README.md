@@ -203,7 +203,10 @@ The code above yields the output below:
             )
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 Note: If the chunk size is 0 lines, i.e., `getStartRange()` or `getEndRange()` return 0, the number of line returned by `getStart()` or `getEnd()` is one lower than one would expect. It is the line number after which the chunk should be inserted or deleted; in all other cases, it gives the first line number of the replaced range of lines.
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

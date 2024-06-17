@@ -10,10 +10,15 @@
 namespace SebastianBergmann\Comparator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_keys;
 use function assert;
 use function str_starts_with;
 use PHPUnit\Framework\MockObject\Stub;
+=======
+use function assert;
+use PHPUnit\Framework\MockObject\MockObject;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function assert;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -25,10 +30,13 @@ use PHPUnit\Framework\MockObject\MockObject;
 final class MockObjectComparator extends ObjectComparator
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function accepts(mixed $expected, mixed $actual): bool
     {
         return $expected instanceof Stub && $actual instanceof Stub;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Returns whether the comparator can compare two values.
      *
@@ -38,11 +46,15 @@ final class MockObjectComparator extends ObjectComparator
     public function accepts(mixed $expected, mixed $actual): bool
     {
         return $expected instanceof MockObject && $actual instanceof MockObject;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     protected function toArray(object $object): array
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         assert($object instanceof Stub);
 
@@ -56,11 +68,16 @@ final class MockObjectComparator extends ObjectComparator
             unset($array[$key]);
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         assert($object instanceof MockObject);
 
         $array = parent::toArray($object);
 
         unset($array['__phpunit_invocationMocker']);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $array;

@@ -13,7 +13,10 @@ use Illuminate\Mail\Transport\SesTransport;
 use Illuminate\Mail\Transport\SesV2Transport;
 use Illuminate\Support\Arr;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\ConfigurationUrlParser;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
@@ -25,7 +28,10 @@ use Symfony\Component\Mailer\Bridge\Postmark\Transport\PostmarkTransportFactory;
 use Symfony\Component\Mailer\Transport\Dsn;
 use Symfony\Component\Mailer\Transport\FailoverTransport;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Mailer\Transport\RoundRobinTransport;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\Transport\SendmailTransport;
@@ -384,6 +390,7 @@ class MailManager implements FactoryContract
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Create an instance of the Symfony Roundrobin Transport driver.
      *
      * @param  array  $config
@@ -412,6 +419,8 @@ class MailManager implements FactoryContract
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create an instance of the Log Transport driver.
@@ -486,6 +495,7 @@ class MailManager implements FactoryContract
         // the entire mail configuration file as the "driver" config in order to
         // provide "BC" for any Laravel <= 6.x style mail configuration files.
 <<<<<<< HEAD
+<<<<<<< HEAD
         $config = $this->app['config']['mail.driver']
             ? $this->app['config']['mail']
             : $this->app['config']["mail.mailers.{$name}"];
@@ -497,6 +507,11 @@ class MailManager implements FactoryContract
         }
 
         return $config;
+=======
+        return $this->app['config']['mail.driver']
+            ? $this->app['config']['mail']
+            : $this->app['config']["mail.mailers.{$name}"];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $this->app['config']['mail.driver']
             ? $this->app['config']['mail']

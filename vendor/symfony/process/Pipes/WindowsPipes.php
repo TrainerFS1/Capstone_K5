@@ -27,6 +27,7 @@ use Symfony\Component\Process\Process;
 class WindowsPipes extends AbstractPipes
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $files = [];
     private array $fileHandles = [];
     private array $lockHandles = [];
@@ -36,6 +37,8 @@ class WindowsPipes extends AbstractPipes
     ];
     private bool $haveReadSupport;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $files = [];
     private $fileHandles = [];
     private $lockHandles = [];
@@ -44,6 +47,9 @@ class WindowsPipes extends AbstractPipes
         Process::STDERR => 0,
     ];
     private $haveReadSupport;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(mixed $input, bool $haveReadSupport)
@@ -105,7 +111,11 @@ class WindowsPipes extends AbstractPipes
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __wakeup(): void
+=======
+    public function __wakeup()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __wakeup()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -156,7 +166,11 @@ class WindowsPipes extends AbstractPipes
                 @stream_select($r, $w, $e, 0, Process::TIMEOUT_PRECISION * 1E6);
             } elseif ($this->fileHandles) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 usleep((int) (Process::TIMEOUT_PRECISION * 1E6));
+=======
+                usleep(Process::TIMEOUT_PRECISION * 1E6);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 usleep(Process::TIMEOUT_PRECISION * 1E6);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -192,7 +206,11 @@ class WindowsPipes extends AbstractPipes
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function close(): void
+=======
+    public function close()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function close()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

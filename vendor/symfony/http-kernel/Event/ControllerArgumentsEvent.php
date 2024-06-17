@@ -53,7 +53,11 @@ final class ControllerArgumentsEvent extends KernelEvent
      * @param array<class-string, list<object>>|null $attributes
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setController(callable $controller, ?array $attributes = null): void
+=======
+    public function setController(callable $controller, array $attributes = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setController(callable $controller, array $attributes = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -68,7 +72,11 @@ final class ControllerArgumentsEvent extends KernelEvent
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setArguments(array $arguments): void
+=======
+    public function setArguments(array $arguments)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setArguments(array $arguments)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,6 +111,7 @@ final class ControllerArgumentsEvent extends KernelEvent
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template T of class-string|null
      *
      * @param T $className
@@ -115,11 +124,16 @@ final class ControllerArgumentsEvent extends KernelEvent
     {
         return $this->controllerEvent->getAttributes($className);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array<class-string, list<object>>
      */
     public function getAttributes(): array
     {
         return $this->controllerEvent->getAttributes();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

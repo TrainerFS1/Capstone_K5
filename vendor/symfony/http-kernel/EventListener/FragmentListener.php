@@ -14,15 +14,21 @@ namespace Symfony\Component\HttpKernel\EventListener;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Request;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\UriSigner;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\KernelEvents;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\UriSigner;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
@@ -58,7 +64,11 @@ class FragmentListener implements EventSubscriberInterface
      * @throws AccessDeniedHttpException if the request does not come from a trusted IP
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function onKernelRequest(RequestEvent $event): void
+=======
+    public function onKernelRequest(RequestEvent $event)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function onKernelRequest(RequestEvent $event)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -82,7 +92,10 @@ class FragmentListener implements EventSubscriberInterface
 
         parse_str($request->query->get('_path', ''), $attributes);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $attributes['_check_controller_is_allowed'] = -1; // @deprecated, switch to true in Symfony 7
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $request->attributes->add($attributes);
@@ -91,7 +104,11 @@ class FragmentListener implements EventSubscriberInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function validateRequest(Request $request): void
+=======
+    protected function validateRequest(Request $request)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function validateRequest(Request $request)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

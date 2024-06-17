@@ -78,7 +78,11 @@ final class HtmlElement implements \Stringable
      * @param string|string[]|bool $value
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setAttribute(string $key, $value = true): self
+=======
+    public function setAttribute(string $key, $value): self
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setAttribute(string $key, $value): self
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

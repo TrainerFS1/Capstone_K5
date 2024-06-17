@@ -27,11 +27,14 @@ final class TransMethodVisitor extends AbstractVisitor implements NodeVisitor
     public function enterNode(Node $node): ?Node
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return null;
     }
 
     public function leaveNode(Node $node): ?Node
     {
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$node instanceof Node\Expr\MethodCall && !$node instanceof Node\Expr\FuncCall) {
@@ -43,7 +46,11 @@ final class TransMethodVisitor extends AbstractVisitor implements NodeVisitor
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $name = $node->name instanceof Node\Name ? $node->name->getLast() : (string) $node->name;
+=======
+        $name = (string) $node->name;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $name = (string) $node->name;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -66,12 +73,18 @@ final class TransMethodVisitor extends AbstractVisitor implements NodeVisitor
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function leaveNode(Node $node): ?Node
     {
         return null;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function afterTraverse(array $nodes): ?Node
     {

@@ -33,7 +33,10 @@ return [
     ],
     'boolean' => 'The :attribute field must be true or false.',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'can' => 'The :attribute field contains an unauthorized value.',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'confirmed' => 'The :attribute field confirmation does not match.',
@@ -56,7 +59,10 @@ return [
     'enum' => 'The selected :attribute is invalid.',
     'exists' => 'The selected :attribute is invalid.',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'extensions' => 'The :attribute field must have one of the following extensions: :values.',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'file' => 'The :attribute field must be a file.',
@@ -74,7 +80,10 @@ return [
         'string' => 'The :attribute field must be greater than or equal to :value characters.',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'hex_color' => 'The :attribute field must be a valid hexadecimal color.',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'image' => 'The :attribute field must be an image.',
@@ -133,10 +142,13 @@ return [
     ],
     'present' => 'The :attribute field must be present.',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'present_if' => 'The :attribute field must be present when :other is :value.',
     'present_unless' => 'The :attribute field must be present unless :other is :value.',
     'present_with' => 'The :attribute field must be present when :values is present.',
     'present_with_all' => 'The :attribute field must be present when :values are present.',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'prohibited' => 'The :attribute field is prohibited.',

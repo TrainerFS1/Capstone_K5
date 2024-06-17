@@ -194,7 +194,11 @@ class Request implements ArrayAccess
     {
         if (! $this->data) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->data = json_decode($this->body(), true) ?? [];
+=======
+            $this->data = json_decode($this->body(), true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->data = json_decode($this->body(), true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

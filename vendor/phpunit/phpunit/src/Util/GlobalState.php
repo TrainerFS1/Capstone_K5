@@ -10,8 +10,11 @@
 namespace PHPUnit\Util;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use const PHP_MAJOR_VERSION;
 use const PHP_MINOR_VERSION;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function array_keys;
@@ -53,6 +56,7 @@ final class GlobalState
     ];
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-var array<string, array<string, true>>
      */
@@ -129,6 +133,8 @@ final class GlobalState
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws Exception
      */
     public static function getIncludedFilesAsString(): string
@@ -188,6 +194,7 @@ final class GlobalState
 
         foreach (ini_get_all(null, false) as $key => $value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (self::isIniSettingDeprecated($key)) {
                 continue;
             }
@@ -197,10 +204,15 @@ final class GlobalState
                 self::exportVariable($key),
                 self::exportVariable((string) $value),
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $result .= sprintf(
                 '@ini_set(%s, %s);' . "\n",
                 self::exportVariable($key),
                 self::exportVariable((string) $value)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
@@ -220,7 +232,11 @@ final class GlobalState
                     $name,
                     $name,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     self::exportVariable($value),
+=======
+                    self::exportVariable($value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     self::exportVariable($value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -247,7 +263,11 @@ final class GlobalState
                         $superGlobalArray,
                         $key,
 <<<<<<< HEAD
+<<<<<<< HEAD
                         self::exportVariable($GLOBALS[$superGlobalArray][$key]),
+=======
+                        self::exportVariable($GLOBALS[$superGlobalArray][$key])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         self::exportVariable($GLOBALS[$superGlobalArray][$key])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -265,7 +285,11 @@ final class GlobalState
                     '$GLOBALS[\'%s\'] = %s;' . "\n",
                     $key,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     self::exportVariable($GLOBALS[$key]),
+=======
+                    self::exportVariable($GLOBALS[$key])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     self::exportVariable($GLOBALS[$key])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -305,11 +329,14 @@ final class GlobalState
         return $result;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private static function isIniSettingDeprecated(string $iniSetting): bool
     {
         return isset(self::DEPRECATED_INI_SETTINGS[PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION][$iniSetting]);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

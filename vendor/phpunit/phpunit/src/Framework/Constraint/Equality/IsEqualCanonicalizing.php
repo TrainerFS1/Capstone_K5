@@ -15,7 +15,10 @@ use function str_contains;
 use function trim;
 use PHPUnit\Framework\ExpectationFailedException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\Comparator\ComparisonFailure;
@@ -60,7 +63,11 @@ final class IsEqualCanonicalizing extends Constraint
             $comparator = $comparatorFactory->getComparatorFor(
                 $this->value,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $other,
+=======
+                $other
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $other
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -72,6 +79,10 @@ final class IsEqualCanonicalizing extends Constraint
                 0.0,
                 true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                false
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 false
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -84,7 +95,11 @@ final class IsEqualCanonicalizing extends Constraint
             throw new ExpectationFailedException(
                 trim($description . "\n" . $f->getMessage()),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $f,
+=======
+                $f
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $f
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -98,7 +113,11 @@ final class IsEqualCanonicalizing extends Constraint
      * Returns a string representation of the constraint.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toString(bool $exportObjects = false): string
+=======
+    public function toString(): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function toString(): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,7 +130,11 @@ final class IsEqualCanonicalizing extends Constraint
             return sprintf(
                 "is equal to '%s'",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $this->value,
+=======
+                $this->value
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $this->value
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -121,7 +144,11 @@ final class IsEqualCanonicalizing extends Constraint
         return sprintf(
             'is equal to %s',
 <<<<<<< HEAD
+<<<<<<< HEAD
             Exporter::export($this->value, $exportObjects),
+=======
+            $this->exporter()->export($this->value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->exporter()->export($this->value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -193,8 +193,11 @@ class SlackHandler extends SocketHandler
     /**
      * Channel used by the bot when posting
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -208,8 +211,11 @@ class SlackHandler extends SocketHandler
     /**
      * Username used by the bot when posting
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -221,9 +227,12 @@ class SlackHandler extends SocketHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useAttachment(bool $useAttachment): self
@@ -234,9 +243,12 @@ class SlackHandler extends SocketHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setIconEmoji(string $iconEmoji): self
@@ -247,9 +259,12 @@ class SlackHandler extends SocketHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useShortAttachment(bool $useShortAttachment): self
@@ -260,9 +275,12 @@ class SlackHandler extends SocketHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function includeContextAndExtra(bool $includeContextAndExtra): self
@@ -275,7 +293,10 @@ class SlackHandler extends SocketHandler
     /**
      * @param string[] $excludeFields
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

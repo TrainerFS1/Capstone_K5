@@ -55,6 +55,10 @@
                     <li><a href="{{ '/fitur' }}">Fitur</a></li>
                     <li><a class="active" href="{{ '/about' }}">About</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    <li><a href="{{ '/contact' }}">Contact Us</a></li>
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     <li><a href="{{ '/contact' }}">Contact Us</a></li>
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

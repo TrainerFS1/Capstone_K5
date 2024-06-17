@@ -87,7 +87,11 @@ class SlackRecord
         bool $includeContextAndExtra = false,
         array $excludeFields = [],
 <<<<<<< HEAD
+<<<<<<< HEAD
         FormatterInterface|null $formatter = null
+=======
+        FormatterInterface $formatter = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         FormatterInterface $formatter = null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -226,7 +230,12 @@ class SlackRecord
      *
      * @param ?string $channel
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+     *
+     * @return static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return static
@@ -244,7 +253,12 @@ class SlackRecord
      *
      * @param ?string $username
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+     *
+     * @return static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      *
      * @return static
@@ -258,9 +272,12 @@ class SlackRecord
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useAttachment(bool $useAttachment = true): self
@@ -271,9 +288,12 @@ class SlackRecord
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setUserIcon(?string $userIcon = null): self
@@ -288,9 +308,12 @@ class SlackRecord
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useShortAttachment(bool $useShortAttachment = false): self
@@ -301,9 +324,12 @@ class SlackRecord
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function includeContextAndExtra(bool $includeContextAndExtra = false): self
@@ -320,7 +346,10 @@ class SlackRecord
     /**
      * @param string[] $excludeFields
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -332,9 +361,12 @@ class SlackRecord
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setFormatter(?FormatterInterface $formatter = null): self

@@ -12,6 +12,7 @@
 namespace Symfony\Component\Routing\Loader;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 trigger_deprecation('symfony/routing', '6.4', 'The "%s" class is deprecated, use "%s" instead.', AnnotationClassLoader::class, AttributeClassLoader::class);
 
 class_exists(AttributeClassLoader::class);
@@ -24,6 +25,8 @@ if (false) {
     {
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
@@ -382,5 +385,8 @@ abstract class AnnotationClassLoader implements LoaderInterface
             }
         }
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

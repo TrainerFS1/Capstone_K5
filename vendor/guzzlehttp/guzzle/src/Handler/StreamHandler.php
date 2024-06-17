@@ -68,7 +68,11 @@ class StreamHandler
                 || false !== \strpos($message, 'Connection refused')
                 || false !== \strpos($message, "couldn't connect to host") // error on HHVM
 <<<<<<< HEAD
+<<<<<<< HEAD
                 || false !== \strpos($message, 'connection attempt failed')
+=======
+                || false !== \strpos($message, "connection attempt failed")
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 || false !== \strpos($message, "connection attempt failed")
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -236,10 +240,16 @@ class StreamHandler
             $errors[] = [
                 'message' => $msg,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'file' => $file,
                 'line' => $line,
             ];
 
+=======
+                'file'    => $file,
+                'line'    => $line
+            ];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 'file'    => $file,
                 'line'    => $line
@@ -259,7 +269,11 @@ class StreamHandler
             foreach ($errors as $err) {
                 foreach ($err as $key => $value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $message .= "[$key] $value".\PHP_EOL;
+=======
+                    $message .= "[$key] $value" . \PHP_EOL;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $message .= "[$key] $value" . \PHP_EOL;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -366,7 +380,10 @@ class StreamHandler
                     throw new ConnectException(\sprintf("Could not resolve IPv4 address for host '%s'", $uri->getHost()), $request);
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $uri->withHost($records[0]['ip']);
@@ -377,8 +394,12 @@ class StreamHandler
                     throw new ConnectException(\sprintf("Could not resolve IPv6 address for host '%s'", $uri->getHost()), $request);
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 return $uri->withHost('['.$records[0]['ipv6'].']');
+=======
+                return $uri->withHost('[' . $records[0]['ipv6'] . ']');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return $uri->withHost('[' . $records[0]['ipv6'] . ']');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -400,17 +421,23 @@ class StreamHandler
         $context = [
             'http' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'method' => $request->getMethod(),
                 'header' => $headers,
                 'protocol_version' => $request->getProtocolVersion(),
                 'ignore_errors' => true,
                 'follow_location' => 0,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 'method'           => $request->getMethod(),
                 'header'           => $headers,
                 'protocol_version' => $request->getProtocolVersion(),
                 'ignore_errors'    => true,
                 'follow_location'  => 0,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ],
             'ssl' => [
@@ -421,7 +448,11 @@ class StreamHandler
         $body = (string) $request->getBody();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ('' !== $body) {
+=======
+        if (!empty($body)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!empty($body)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -512,6 +543,7 @@ class StreamHandler
      * @param mixed $value as passed via Request transfer options.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function add_crypto_method(RequestInterface $request, array &$options, $value, array &$params): void
     {
         if (
@@ -531,6 +563,8 @@ class StreamHandler
     /**
      * @param mixed $value as passed via Request transfer options.
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function add_verify(RequestInterface $request, array &$options, $value, array &$params): void
@@ -601,6 +635,7 @@ class StreamHandler
 
         static $map = [
 <<<<<<< HEAD
+<<<<<<< HEAD
             \STREAM_NOTIFY_CONNECT => 'CONNECT',
             \STREAM_NOTIFY_AUTH_REQUIRED => 'AUTH_REQUIRED',
             \STREAM_NOTIFY_AUTH_RESULT => 'AUTH_RESULT',
@@ -612,6 +647,8 @@ class StreamHandler
             \STREAM_NOTIFY_COMPLETED => 'COMPLETED',
             \STREAM_NOTIFY_RESOLVE => 'RESOLVE',
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             \STREAM_NOTIFY_CONNECT       => 'CONNECT',
             \STREAM_NOTIFY_AUTH_REQUIRED => 'AUTH_REQUIRED',
             \STREAM_NOTIFY_AUTH_RESULT   => 'AUTH_RESULT',
@@ -622,13 +659,20 @@ class StreamHandler
             \STREAM_NOTIFY_FAILURE       => 'FAILURE',
             \STREAM_NOTIFY_COMPLETED     => 'COMPLETED',
             \STREAM_NOTIFY_RESOLVE       => 'RESOLVE',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
         static $args = ['severity', 'message', 'message_code', 'bytes_transferred', 'bytes_max'];
 
         $value = Utils::debugResource($value);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $ident = $request->getMethod().' '.$request->getUri()->withFragment('');
+=======
+        $ident = $request->getMethod() . ' ' . $request->getUri()->withFragment('');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $ident = $request->getMethod() . ' ' . $request->getUri()->withFragment('');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -638,7 +682,11 @@ class StreamHandler
                 \fprintf($value, '<%s> [%s] ', $ident, $map[$code]);
                 foreach (\array_filter($passed) as $i => $v) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     \fwrite($value, $args[$i].': "'.$v.'" ');
+=======
+                    \fwrite($value, $args[$i] . ': "' . $v . '" ');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     \fwrite($value, $args[$i] . ': "' . $v . '" ');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -657,7 +705,11 @@ class StreamHandler
             $params['notification'] = self::callArray([
                 $params['notification'],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $notify,
+=======
+                $notify
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $notify
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

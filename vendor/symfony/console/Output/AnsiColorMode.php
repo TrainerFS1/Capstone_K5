@@ -27,7 +27,11 @@ enum AnsiColorMode
 
     /*
 <<<<<<< HEAD
+<<<<<<< HEAD
      * 8-bit Ansi colors (240 different colors + 16 duplicate color codes, ensuring backward compatibility).
+=======
+     * 8-bit Ansi colors (240 differents colors + 16 duplicate color codes, ensuring backward compatibility).
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * 8-bit Ansi colors (240 differents colors + 16 duplicate color codes, ensuring backward compatibility).
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -83,8 +87,11 @@ enum AnsiColorMode
     private function degradeHexColorToAnsi4(int $r, int $g, int $b): int
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return round($b / 255) << 2 | (round($g / 255) << 1) | round($r / 255);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (0 === round($this->getSaturation($r, $g, $b) / 50)) {
             return 0;
         }
@@ -104,6 +111,9 @@ enum AnsiColorMode
         }
 
         return (int) ((int) $diff * 100 / $v);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

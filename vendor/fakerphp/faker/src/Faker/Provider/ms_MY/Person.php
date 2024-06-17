@@ -793,7 +793,10 @@ class Person extends \Faker\Provider\Person
         // gender digit. Odd = MALE, Even = FEMALE
         $g = self::numberBetween(0, 9);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         //Credit: https://gist.github.com/mauris/3629548

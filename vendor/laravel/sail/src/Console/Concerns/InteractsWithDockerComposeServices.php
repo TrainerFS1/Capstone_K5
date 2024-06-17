@@ -20,7 +20,10 @@ trait InteractsWithDockerComposeServices
         'memcached',
         'meilisearch',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'typesense',
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'minio',
@@ -38,6 +41,7 @@ trait InteractsWithDockerComposeServices
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Gather the desired Sail services using an interactive prompt.
      *
      * @return array
@@ -53,12 +57,17 @@ trait InteractsWithDockerComposeServices
         }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gather the desired Sail services using a Symfony menu.
      *
      * @return array
      */
     protected function gatherServicesWithSymfonyMenu()
     {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->choice('Which services would you like to install?', $this->services, 0, null, true);
     }
@@ -78,11 +87,14 @@ trait InteractsWithDockerComposeServices
             : Yaml::parse(file_get_contents(__DIR__ . '/../../../stubs/docker-compose.stub'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Prepare the installation of the "mariadb-client" package if the MariaDB service is used...
         if (in_array('mariadb', $services)) {
             $compose['services']['laravel.test']['build']['args']['MYSQL_CLIENT'] = 'mariadb-client';
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Adds the new services as dependencies of the laravel.test service...
@@ -108,7 +120,11 @@ trait InteractsWithDockerComposeServices
         collect($services)
             ->filter(function ($service) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return in_array($service, ['mysql', 'pgsql', 'mariadb', 'redis', 'meilisearch', 'typesense', 'minio']);
+=======
+                return in_array($service, ['mysql', 'pgsql', 'mariadb', 'redis', 'meilisearch', 'minio']);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return in_array($service, ['mysql', 'pgsql', 'mariadb', 'redis', 'meilisearch', 'minio']);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -142,6 +158,7 @@ trait InteractsWithDockerComposeServices
         $environment = file_get_contents($this->laravel->basePath('.env'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (in_array('mysql', $services) ||
             in_array('mariadb', $services) ||
             in_array('pgsql', $services)) {
@@ -172,6 +189,8 @@ trait InteractsWithDockerComposeServices
 
             $environment = str_replace('DB_HOST=127.0.0.1', "DB_HOST=mariadb", $environment);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (in_array('pgsql', $services)) {
             $environment = str_replace('DB_CONNECTION=mysql', "DB_CONNECTION=pgsql", $environment);
             $environment = str_replace('DB_HOST=127.0.0.1', "DB_HOST=pgsql", $environment);
@@ -180,6 +199,9 @@ trait InteractsWithDockerComposeServices
             $environment = str_replace('DB_HOST=127.0.0.1', "DB_HOST=mariadb", $environment);
         } else {
             $environment = str_replace('DB_HOST=127.0.0.1', "DB_HOST=mysql", $environment);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -198,6 +220,7 @@ trait InteractsWithDockerComposeServices
             $environment .= "\nSCOUT_DRIVER=meilisearch";
             $environment .= "\nMEILISEARCH_HOST=http://meilisearch:7700\n";
 <<<<<<< HEAD
+<<<<<<< HEAD
             $environment .= "\nMEILISEARCH_NO_ANALYTICS=false\n";
         }
 
@@ -207,6 +230,8 @@ trait InteractsWithDockerComposeServices
             $environment .= "\nTYPESENSE_PORT=8108";
             $environment .= "\nTYPESENSE_PROTOCOL=http";
             $environment .= "\nTYPESENSE_API_KEY=xyz\n";
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -224,9 +249,13 @@ trait InteractsWithDockerComposeServices
 
         if (in_array('mailpit', $services)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $environment = preg_replace("/^MAIL_MAILER=(.*)/m", "MAIL_MAILER=smtp", $environment);
             $environment = preg_replace("/^MAIL_HOST=(.*)/m", "MAIL_HOST=mailpit", $environment);
             $environment = preg_replace("/^MAIL_PORT=(.*)/m", "MAIL_PORT=1025", $environment);
+=======
+            $environment = preg_replace("/^MAIL_HOST=(.*)/m", "MAIL_HOST=mailpit", $environment);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $environment = preg_replace("/^MAIL_HOST=(.*)/m", "MAIL_HOST=mailpit", $environment);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -245,10 +274,13 @@ trait InteractsWithDockerComposeServices
         if (! file_exists($path = $this->laravel->basePath('phpunit.xml'))) {
             $path = $this->laravel->basePath('phpunit.xml.dist');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             if (! file_exists($path)) {
                 return;
             }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
@@ -300,6 +332,7 @@ trait InteractsWithDockerComposeServices
 
         if (count($services) > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->runCommands([
                 './vendor/bin/sail pull '.implode(' ', $services),
             ]);
@@ -309,6 +342,8 @@ trait InteractsWithDockerComposeServices
             './vendor/bin/sail build',
         ]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $status = $this->runCommands([
                 './vendor/bin/sail pull '.implode(' ', $services),
             ]);
@@ -325,6 +360,9 @@ trait InteractsWithDockerComposeServices
         if ($status === 0) {
             $this->info('Sail build successful.');
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

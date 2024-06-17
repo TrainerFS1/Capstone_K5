@@ -23,8 +23,13 @@ final class UnsupportedPhptSectionException extends RuntimeException implements 
             sprintf(
                 'PHPUnit does not support PHPT %s sections',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $section,
             ),
+=======
+                $section
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $section
             )

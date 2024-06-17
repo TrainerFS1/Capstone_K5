@@ -44,11 +44,14 @@ class SyntaxErrorException extends ParseException
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function notAtTheStartOfASelector(string $pseudoElement): self
     {
         return new self(sprintf('Got immediate child pseudo-element ":%s" not at the start of a selector', $pseudoElement));
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function stringAsFunctionArgument(): self

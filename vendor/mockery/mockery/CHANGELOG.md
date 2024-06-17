@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -375,6 +376,8 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 - BC BREAK - Fix Mockery not trying default expectations if there is any concrete expectation
 - BC BREAK - Mockery's PHPUnit integration will mark a test as risky if it
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 # Change Log
 
 ## 1.3.6 (2022-09-07)
@@ -548,11 +551,15 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 * Fix Mockery not setting properties on overloaded instance mocks
 * BC BREAK - Fix Mockery not trying default expectations if there is any concrete expectation
 * BC BREAK - Mockery's PHPUnit integration will mark a test as risky if it
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
   thinks one it's exceptions has been swallowed in PHPUnit > 5.7.6. Use `$e->dismiss()` to dismiss.
 
 ## 0.9.4 (XXXX-XX-XX)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 - `shouldIgnoreMissing` will respect global `allowMockingNonExistentMethods`
   config
@@ -568,6 +575,8 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 - Added a basic spy implementation
 - Added `Mockery\Adapter\Phpunit\MockeryTestCase` for more reliable PHPUnit
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 * `shouldIgnoreMissing` will respect global `allowMockingNonExistentMethods`
   config
 * Some support for variadic parameters
@@ -581,15 +590,24 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 
 * Added a basic spy implementation
 * Added `Mockery\Adapter\Phpunit\MockeryTestCase` for more reliable PHPUnit
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
   integration
 
 ## 0.9.2 (2014-09-03)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Some workarounds for the serialisation problems created by changes to PHP in 5.5.13, 5.4.29,
   5.6.
 - Demeter chains attempt to reuse doubles as they see fit, so for foo->bar and
+=======
+* Some workarounds for the serialisation problems created by changes to PHP in 5.5.13, 5.4.29,
+  5.6.
+* Demeter chains attempt to reuse doubles as they see fit, so for foo->bar and
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 * Some workarounds for the serialisation problems created by changes to PHP in 5.5.13, 5.4.29,
   5.6.
@@ -600,6 +618,7 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 ## 0.9.1 (2014-05-02)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Allow specifying consecutive exceptions to be thrown with `andThrowExceptions`
 - Allow specifying methods which can be mocked when using
   `Mockery\Configuration::allowMockingNonExistentMethods(false)` with
@@ -607,17 +626,23 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 - Added andReturnSelf method: `$mock->shouldReceive("foo")->andReturnSelf()`
 - `shouldIgnoreMissing` now takes an optional value that will be return instead
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 * Allow specifying consecutive exceptions to be thrown with `andThrowExceptions`
 * Allow specifying methods which can be mocked when using
   `Mockery\Configuration::allowMockingNonExistentMethods(false)` with
   `Mockery\MockInterface::shouldAllowMockingMethod($methodName)`
 * Added andReturnSelf method: `$mock->shouldReceive("foo")->andReturnSelf()`
 * `shouldIgnoreMissing` now takes an optional value that will be return instead
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
   of null, e.g. `$mock->shouldIgnoreMissing($mock)`
 
 ## 0.9.0 (2014-02-05)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Allow mocking classes with final __wakeup() method
 - Quick definitions are now always `byDefault`
@@ -626,10 +651,15 @@ constraint, see [#1266](https://github.com/mockery/mockery/issues/1266)
 - Generator completely rewritten
 - Easily create named mocks with namedMock
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 * Allow mocking classes with final __wakeup() method
 * Quick definitions are now always `byDefault`
 * Allow mocking of protected methods with `shouldAllowMockingProtectedMethods`
 * Support official Hamcrest package
 * Generator completely rewritten
 * Easily create named mocks with namedMock
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

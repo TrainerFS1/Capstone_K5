@@ -4,7 +4,10 @@ namespace Illuminate\Database\Query\Grammars;
 
 use Illuminate\Database\Query\Builder;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Query\JoinLateralClause;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Arr;
@@ -272,7 +275,10 @@ class SqlServerGrammar extends Grammar
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Move the order bindings to be after the "select" statement to account for an order by subquery.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -305,6 +311,9 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a delete statement without joins into SQL.
      *
@@ -485,6 +494,7 @@ class SqlServerGrammar extends Grammar
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Compile a "lateral join" clause.
      *
      * @param  \Illuminate\Database\Query\JoinLateralClause  $join
@@ -499,6 +509,8 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the SQL statement to define a savepoint.

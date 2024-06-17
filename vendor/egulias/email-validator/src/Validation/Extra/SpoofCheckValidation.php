@@ -38,6 +38,12 @@ class SpoofCheckValidation implements EmailValidation
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @return InvalidEmail
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @return InvalidEmail

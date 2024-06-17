@@ -168,7 +168,10 @@ class PostgresConnector extends Connector implements ConnectorInterface
         // typically the case if using "pgbouncer" type software when pooling.
         $database = $connect_via_database ?? $database;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $port = $connect_via_port ?? $port ?? null;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -178,7 +181,11 @@ class PostgresConnector extends Connector implements ConnectorInterface
         // format. Once we have done that we are ready to return this connection
         // string back out for usage, as this has been fully constructed here.
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_null($port)) {
+=======
+        if (isset($config['port'])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (isset($config['port'])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

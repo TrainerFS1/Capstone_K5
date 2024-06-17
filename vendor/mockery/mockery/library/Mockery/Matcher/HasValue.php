@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Matcher;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use ArrayAccess;
 
@@ -40,6 +47,8 @@ class HasValue extends MatcherAbstract
 {
     /**
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class HasValue extends MatcherAbstract
 {
     /**
@@ -54,6 +63,9 @@ class HasValue extends MatcherAbstract
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return a string representation of this Matcher
      *
@@ -61,6 +73,7 @@ class HasValue extends MatcherAbstract
      */
     public function __toString()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return '<HasValue[' . (string) $this->_expected . ']>';
     }
@@ -81,6 +94,10 @@ class HasValue extends MatcherAbstract
         }
 
         return in_array($this->_expected, (array) $actual, true);
+=======
+        $return = '<HasValue[' . (string) $this->_expected . ']>';
+        return $return;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $return = '<HasValue[' . (string) $this->_expected . ']>';
         return $return;

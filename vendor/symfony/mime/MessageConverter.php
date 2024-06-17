@@ -81,9 +81,15 @@ final class MessageConverter
         $parts = $part->getParts();
         if (
 <<<<<<< HEAD
+<<<<<<< HEAD
             2 === \count($parts)
             && $parts[0] instanceof TextPart && 'text' === $parts[0]->getMediaType() && 'plain' === $parts[0]->getMediaSubtype()
             && $parts[1] instanceof TextPart && 'text' === $parts[1]->getMediaType() && 'html' === $parts[1]->getMediaSubtype()
+=======
+            2 === \count($parts) &&
+            $parts[0] instanceof TextPart && 'text' === $parts[0]->getMediaType() && 'plain' === $parts[0]->getMediaSubtype() &&
+            $parts[1] instanceof TextPart && 'text' === $parts[1]->getMediaType() && 'html' === $parts[1]->getMediaSubtype()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             2 === \count($parts) &&
             $parts[0] instanceof TextPart && 'text' === $parts[0]->getMediaType() && 'plain' === $parts[0]->getMediaSubtype() &&

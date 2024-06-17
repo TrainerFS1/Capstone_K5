@@ -84,7 +84,11 @@ class IcuResFileDumper extends FileDumper
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getPosition(string $data): float|int
+=======
+    private function getPosition(string $data)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getPosition(string $data)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -23,7 +23,11 @@ class ContainerLoader extends ObjectLoader
     private ContainerInterface $container;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(ContainerInterface $container, ?string $env = null)
+=======
+    public function __construct(ContainerInterface $container, string $env = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(ContainerInterface $container, string $env = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -33,7 +37,11 @@ class ContainerLoader extends ObjectLoader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function supports(mixed $resource, ?string $type = null): bool
+=======
+    public function supports(mixed $resource, string $type = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function supports(mixed $resource, string $type = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -32,7 +32,10 @@
             <pre class="code-block line-numbers"
               data-line="<?php echo $line ?>"
 <<<<<<< HEAD
+<<<<<<< HEAD
               data-line-offset="<?php echo $start ?>"
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
               data-start="<?php echo $start ?>"

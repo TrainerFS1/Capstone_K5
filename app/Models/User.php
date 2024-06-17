@@ -43,11 +43,14 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function notifications()
     {
         return $this->hasMany(Notification::class);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

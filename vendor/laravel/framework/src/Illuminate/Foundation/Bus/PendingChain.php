@@ -6,7 +6,10 @@ use Closure;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Queue\CallQueuedClosure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Traits\Conditionable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\SerializableClosure\SerializableClosure;
@@ -14,8 +17,11 @@ use Laravel\SerializableClosure\SerializableClosure;
 class PendingChain
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     use Conditionable;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
@@ -139,7 +145,11 @@ class PendingChain
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Dispatch the job chain.
+=======
+     * Dispatch the job with the given arguments.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Dispatch the job with the given arguments.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -176,6 +186,7 @@ class PendingChain
         return app(Dispatcher::class)->dispatch($firstJob);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Dispatch the job chain if the given truth test passes.
@@ -198,6 +209,8 @@ class PendingChain
     {
         return ! value($boolean) ? $this->dispatch() : null;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

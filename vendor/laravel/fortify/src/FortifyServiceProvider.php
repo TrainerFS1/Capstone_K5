@@ -8,7 +8,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Laravel\Fortify\Contracts\EmailVerificationNotificationSentResponse as EmailVerificationNotificationSentResponseContract;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\Fortify\Contracts\FailedPasswordConfirmationResponse as FailedPasswordConfirmationResponseContract;
@@ -32,7 +35,10 @@ use Laravel\Fortify\Contracts\TwoFactorEnabledResponse as TwoFactorEnabledRespon
 use Laravel\Fortify\Contracts\TwoFactorLoginResponse as TwoFactorLoginResponseContract;
 use Laravel\Fortify\Contracts\VerifyEmailResponse as VerifyEmailResponseContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Laravel\Fortify\Http\Responses\EmailVerificationNotificationSentResponse;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\Fortify\Http\Responses\FailedPasswordConfirmationResponse;
@@ -102,7 +108,10 @@ class FortifyServiceProvider extends ServiceProvider
         $this->app->singleton(RecoveryCodesGeneratedResponseContract::class, RecoveryCodesGeneratedResponse::class);
         $this->app->singleton(RegisterResponseContract::class, RegisterResponse::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->app->singleton(EmailVerificationNotificationSentResponseContract::class, EmailVerificationNotificationSentResponse::class);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->app->singleton(SuccessfulPasswordResetLinkRequestResponseContract::class, SuccessfulPasswordResetLinkRequestResponse::class);
@@ -123,7 +132,10 @@ class FortifyServiceProvider extends ServiceProvider
         $this->configurePublishing();
         $this->configureRoutes();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->registerCommands();
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -150,9 +162,13 @@ class FortifyServiceProvider extends ServiceProvider
             ], 'fortify-support');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $method = method_exists($this, 'publishesMigrations') ? 'publishesMigrations' : 'publishes';
 
             $this->{$method}([
+=======
+            $this->publishes([
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->publishes([
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -179,6 +195,7 @@ class FortifyServiceProvider extends ServiceProvider
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Register the package's commands.
@@ -191,6 +208,8 @@ class FortifyServiceProvider extends ServiceProvider
             ]);
         }
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

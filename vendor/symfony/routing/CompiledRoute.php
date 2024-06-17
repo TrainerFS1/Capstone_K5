@@ -38,7 +38,11 @@ class CompiledRoute implements \Serializable
      * @param array       $variables     An array of variables (variables defined in the path and in the host patterns)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $staticPrefix, string $regex, array $tokens, array $pathVariables, ?string $hostRegex = null, array $hostTokens = [], array $hostVariables = [], array $variables = [])
+=======
+    public function __construct(string $staticPrefix, string $regex, array $tokens, array $pathVariables, string $hostRegex = null, array $hostTokens = [], array $hostVariables = [], array $variables = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $staticPrefix, string $regex, array $tokens, array $pathVariables, string $hostRegex = null, array $hostTokens = [], array $hostVariables = [], array $variables = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,7 +95,11 @@ class CompiledRoute implements \Serializable
      * @internal
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     final public function unserialize(string $serialized): void
+=======
+    final public function unserialize(string $serialized)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final public function unserialize(string $serialized)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

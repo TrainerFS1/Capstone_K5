@@ -14,7 +14,10 @@ use Illuminate\Foundation\MaintenanceModeManager;
 use Illuminate\Foundation\Precognition;
 use Illuminate\Foundation\Vite;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Http\Client\Factory as HttpFactory;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Http\Request;
@@ -46,7 +49,10 @@ class FoundationServiceProvider extends AggregateServiceProvider
      */
     public $singletons = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         HttpFactory::class => HttpFactory::class,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Vite::class => Vite::class,
@@ -84,7 +90,11 @@ class FoundationServiceProvider extends AggregateServiceProvider
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Register a var dumper (with source) to debug variables.
+=======
+     * Register an var dumper (with source) to debug variables.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * Register an var dumper (with source) to debug variables.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -94,17 +104,23 @@ class FoundationServiceProvider extends AggregateServiceProvider
     public function registerDumper()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         AbstractCloner::$defaultCasters[ConnectionInterface::class] ??= [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Container::class] ??= [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Dispatcher::class] ??= [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Factory::class] ??= [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Grammar::class] ??= [StubCaster::class, 'cutInternals'];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         AbstractCloner::$defaultCasters[ConnectionInterface::class] = [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Container::class] = [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Dispatcher::class] = [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Factory::class] = [StubCaster::class, 'cutInternals'];
         AbstractCloner::$defaultCasters[Grammar::class] = [StubCaster::class, 'cutInternals'];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $basePath = $this->app->basePath();

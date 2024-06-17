@@ -87,7 +87,11 @@ class Response implements ResponseInterface
     /**
      * @param int                                  $status  Status code
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param (string|string[])[]                  $headers Response headers
+=======
+     * @param array<string, string|string[]>       $headers Response headers
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param array<string, string|string[]>       $headers Response headers
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -143,7 +147,10 @@ class Response implements ResponseInterface
         }
         $new->reasonPhrase = (string) $reasonPhrase;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $new;

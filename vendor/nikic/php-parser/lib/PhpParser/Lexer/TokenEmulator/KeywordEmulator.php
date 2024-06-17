@@ -3,6 +3,7 @@
 namespace PhpParser\Lexer\TokenEmulator;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Token;
 
 abstract class KeywordEmulator extends TokenEmulator {
@@ -26,6 +27,8 @@ abstract class KeywordEmulator extends TokenEmulator {
                     && $this->isKeywordContext($tokens, $i)) {
                 $token->id = $this->getKeywordToken();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 abstract class KeywordEmulator extends TokenEmulator
 {
     abstract function getKeywordString(): string;
@@ -49,6 +52,9 @@ abstract class KeywordEmulator extends TokenEmulator
             if ($token[0] === T_STRING && strtolower($token[1]) === $keywordString
                     && $this->isKeywordContext($tokens, $i)) {
                 $tokens[$i][0] = $this->getKeywordToken();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
@@ -57,11 +63,14 @@ abstract class KeywordEmulator extends TokenEmulator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @param Token[] $tokens */
     private function getPreviousNonSpaceToken(array $tokens, int $start): ?Token {
         for ($i = $start - 1; $i >= 0; --$i) {
             if ($tokens[$i]->id === T_WHITESPACE) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @param mixed[] $tokens
      * @return array|string|null
@@ -70,6 +79,9 @@ abstract class KeywordEmulator extends TokenEmulator
     {
         for ($i = $start - 1; $i >= 0; --$i) {
             if ($tokens[$i][0] === T_WHITESPACE) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 continue;
             }
@@ -81,18 +93,24 @@ abstract class KeywordEmulator extends TokenEmulator
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function reverseEmulate(string $code, array $tokens): array {
         $keywordToken = $this->getKeywordToken();
         foreach ($tokens as $token) {
             if ($token->id === $keywordToken) {
                 $token->id = \T_STRING;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reverseEmulate(string $code, array $tokens): array
     {
         $keywordToken = $this->getKeywordToken();
         foreach ($tokens as $i => $token) {
             if ($token[0] === $keywordToken) {
                 $tokens[$i][0] = \T_STRING;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }

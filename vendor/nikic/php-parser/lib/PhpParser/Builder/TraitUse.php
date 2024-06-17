@@ -8,16 +8,22 @@ use PhpParser\Node;
 use PhpParser\Node\Stmt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class TraitUse implements Builder {
     /** @var Node\Name[] */
     protected array $traits = [];
     /** @var Stmt\TraitUseAdaptation[] */
     protected array $adaptations = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class TraitUse implements Builder
 {
     protected $traits = [];
     protected $adaptations = [];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -67,7 +73,11 @@ class TraitUse implements Builder
      * @return Node The built node
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNode(): Node {
+=======
+    public function getNode() : Node {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNode() : Node {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

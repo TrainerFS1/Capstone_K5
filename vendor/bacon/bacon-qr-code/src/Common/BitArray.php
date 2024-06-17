@@ -17,8 +17,11 @@ final class BitArray
      * @var SplFixedArray<int>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SplFixedArray $bits;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $bits;
 
     /**
@@ -27,14 +30,23 @@ final class BitArray
      * @var int
      */
     private $size;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Creates a new bit array with a given size.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(private int $size = 0)
     {
+=======
+    public function __construct(int $size = 0)
+    {
+        $this->size = $size;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(int $size = 0)
     {
@@ -117,7 +129,11 @@ final class BitArray
 
         $result = ($bitsOffset << 5) + BitUtils::numberOfTrailingZeros($currentBits);
 <<<<<<< HEAD
+<<<<<<< HEAD
         return min($result, $this->size);
+=======
+        return $result > $this->size ? $this->size : $result;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $result > $this->size ? $this->size : $result;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -147,7 +163,11 @@ final class BitArray
 
         $result = ($bitsOffset << 5) + BitUtils::numberOfTrailingZeros($currentBits);
 <<<<<<< HEAD
+<<<<<<< HEAD
         return min($result, $this->size);
+=======
+        return $result > $this->size ? $this->size : $result;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return $result > $this->size ? $this->size : $result;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

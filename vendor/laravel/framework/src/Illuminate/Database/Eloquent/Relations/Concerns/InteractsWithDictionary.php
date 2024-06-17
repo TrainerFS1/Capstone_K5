@@ -4,7 +4,11 @@ namespace Illuminate\Database\Eloquent\Relations\Concerns;
 
 use BackedEnum;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use InvalidArgumentException;
+=======
+use Doctrine\Instantiator\Exception\InvalidArgumentException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -19,7 +23,11 @@ trait InteractsWithDictionary
      * @return mixed
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @throws \InvalidArgumentException
+=======
+     * @throws \Doctrine\Instantiator\Exception\InvalidArgumentException
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @throws \Doctrine\Instantiator\Exception\InvalidArgumentException
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -32,7 +40,12 @@ trait InteractsWithDictionary
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($attribute instanceof UnitEnum) {
+=======
+            if (function_exists('enum_exists') &&
+                $attribute instanceof UnitEnum) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (function_exists('enum_exists') &&
                 $attribute instanceof UnitEnum) {

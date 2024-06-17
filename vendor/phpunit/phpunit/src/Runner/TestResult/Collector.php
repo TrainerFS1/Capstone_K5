@@ -10,9 +10,13 @@
 namespace PHPUnit\TestRunner\TestResult;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function array_values;
 use function assert;
 use function implode;
+=======
+use function assert;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use function assert;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -38,6 +42,10 @@ use PHPUnit\Event\Test\PhpWarningTriggered;
 use PHPUnit\Event\Test\Skipped as TestSkipped;
 use PHPUnit\Event\Test\WarningTriggered;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -51,9 +59,12 @@ use PHPUnit\Event\TestSuite\TestSuiteForTestClass;
 use PHPUnit\Event\TestSuite\TestSuiteForTestMethodWithDataProvider;
 use PHPUnit\Event\UnknownSubscriberTypeException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\TestRunner\TestResult\Issues\Issue;
 use PHPUnit\TextUI\Configuration\Source;
 use PHPUnit\TextUI\Configuration\SourceFilter;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -63,7 +74,10 @@ use PHPUnit\TextUI\Configuration\SourceFilter;
 final class Collector
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly Source $source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $numberOfTests                       = 0;
@@ -74,11 +88,14 @@ final class Collector
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-var non-negative-int
      */
     private int $numberOfIssuesIgnoredByBaseline = 0;
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-var list<BeforeFirstTestMethodErrored|Errored>
@@ -112,7 +129,10 @@ final class Collector
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-var array<string,list<DeprecationTriggered>>
      */
     private array $testTriggeredDeprecationEvents = [];
@@ -123,6 +143,9 @@ final class Collector
     private array $testTriggeredPhpDeprecationEvents = [];
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-var array<string,list<PhpunitDeprecationTriggered>>
      */
@@ -130,7 +153,10 @@ final class Collector
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-var array<string,list<ErrorTriggered>>
      */
     private array $testTriggeredErrorEvents = [];
@@ -156,6 +182,9 @@ final class Collector
     private array $testTriggeredPhpWarningEvents = [];
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-var array<string,list<PhpunitErrorTriggered>>
      */
@@ -177,6 +206,7 @@ final class Collector
     private array $testRunnerTriggeredDeprecationEvents = [];
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @psalm-var array<non-empty-string, Issue>
      */
@@ -220,12 +250,17 @@ final class Collector
     {
         $facade->registerSubscribers(
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
     public function __construct()
     {
         Facade::registerSubscribers(
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             new ExecutionStartedSubscriber($this),
             new TestSuiteSkippedSubscriber($this),
@@ -253,8 +288,11 @@ final class Collector
             new TestRunnerTriggeredWarningSubscriber($this),
         );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $this->source = $source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
@@ -272,8 +310,11 @@ final class Collector
             $this->testSkippedEvents,
             $this->testMarkedIncompleteEvents,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->testTriggeredPhpunitDeprecationEvents,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->testTriggeredDeprecationEvents,
             $this->testTriggeredPhpDeprecationEvents,
             $this->testTriggeredPhpunitDeprecationEvents,
@@ -282,11 +323,15 @@ final class Collector
             $this->testTriggeredPhpNoticeEvents,
             $this->testTriggeredWarningEvents,
             $this->testTriggeredPhpWarningEvents,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->testTriggeredPhpunitErrorEvents,
             $this->testTriggeredPhpunitWarningEvents,
             $this->testRunnerTriggeredDeprecationEvents,
             $this->testRunnerTriggeredWarningEvents,
+<<<<<<< HEAD
 <<<<<<< HEAD
             array_values($this->errors),
             array_values($this->deprecations),
@@ -300,6 +345,8 @@ final class Collector
     }
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -341,6 +388,9 @@ final class Collector
         return $this->testRunnerTriggeredWarningEvents;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function executionStarted(ExecutionStarted $event): void
     {
@@ -370,6 +420,12 @@ final class Collector
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    /**
+     * @throws NoDataSetFromDataProviderException
+     */
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     /**
      * @throws NoDataSetFromDataProviderException
@@ -476,6 +532,7 @@ final class Collector
     public function testTriggeredDeprecation(DeprecationTriggered $event): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($event->ignoredByTest()) {
             return;
         }
@@ -509,16 +566,22 @@ final class Collector
 
         $this->deprecations[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredDeprecationEvents[$event->test()->id()])) {
             $this->testTriggeredDeprecationEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredDeprecationEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function testTriggeredPhpDeprecation(PhpDeprecationTriggered $event): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($event->ignoredByTest()) {
             return;
@@ -553,11 +616,16 @@ final class Collector
 
         $this->phpDeprecations[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredPhpDeprecationEvents[$event->test()->id()])) {
             $this->testTriggeredPhpDeprecationEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredPhpDeprecationEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -572,6 +640,7 @@ final class Collector
 
     public function testTriggeredError(ErrorTriggered $event): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (!$this->source->ignoreSuppressionOfErrors() && $event->wasSuppressed()) {
             return;
@@ -592,16 +661,22 @@ final class Collector
 
         $this->errors[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredErrorEvents[$event->test()->id()])) {
             $this->testTriggeredErrorEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredErrorEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function testTriggeredNotice(NoticeTriggered $event): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($event->ignoredByBaseline()) {
             $this->numberOfIssuesIgnoredByBaseline++;
@@ -632,16 +707,22 @@ final class Collector
 
         $this->notices[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredNoticeEvents[$event->test()->id()])) {
             $this->testTriggeredNoticeEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredNoticeEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function testTriggeredPhpNotice(PhpNoticeTriggered $event): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($event->ignoredByBaseline()) {
             $this->numberOfIssuesIgnoredByBaseline++;
@@ -672,16 +753,22 @@ final class Collector
 
         $this->phpNotices[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredPhpNoticeEvents[$event->test()->id()])) {
             $this->testTriggeredPhpNoticeEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredPhpNoticeEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function testTriggeredWarning(WarningTriggered $event): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($event->ignoredByBaseline()) {
             $this->numberOfIssuesIgnoredByBaseline++;
@@ -712,16 +799,22 @@ final class Collector
 
         $this->warnings[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredWarningEvents[$event->test()->id()])) {
             $this->testTriggeredWarningEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredWarningEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function testTriggeredPhpWarning(PhpWarningTriggered $event): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($event->ignoredByBaseline()) {
             $this->numberOfIssuesIgnoredByBaseline++;
@@ -752,11 +845,16 @@ final class Collector
 
         $this->phpWarnings[$id]->triggeredBy($event->test());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->testTriggeredPhpWarningEvents[$event->test()->id()])) {
             $this->testTriggeredPhpWarningEvents[$event->test()->id()] = [];
         }
 
         $this->testTriggeredPhpWarningEvents[$event->test()->id()][] = $event;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -788,6 +886,7 @@ final class Collector
         $this->testRunnerTriggeredWarningEvents[] = $event;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function hasErroredTests(): bool
     {
@@ -844,6 +943,8 @@ final class Collector
         return implode(':', [$event->file(), $event->line(), $event->message()]);
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function hasWarningEvents(): bool
     {
         return !empty($this->testTriggeredWarningEvents) ||
@@ -851,5 +952,8 @@ final class Collector
                !empty($this->testTriggeredPhpunitWarningEvents) ||
                !empty($this->testRunnerTriggeredWarningEvents);
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

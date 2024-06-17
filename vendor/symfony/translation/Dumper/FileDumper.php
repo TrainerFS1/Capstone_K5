@@ -36,7 +36,11 @@ abstract class FileDumper implements DumperInterface
      * Sets the template for the relative paths to files.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
+=======
+     * @param string $relativePathTemplate A template for the relative paths to files
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param string $relativePathTemplate A template for the relative paths to files
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -47,9 +51,12 @@ abstract class FileDumper implements DumperInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function dump(MessageCatalogue $messages, array $options = [])

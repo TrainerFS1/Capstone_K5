@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Matcher;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * @deprecated Implement \Mockery\Matcher\MatcherInterface instead of extending this class
@@ -39,14 +46,21 @@ abstract class MatcherAbstract implements MatcherInterface
 =======
 abstract class MatcherAbstract
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+abstract class MatcherAbstract
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * The expected value (or part thereof)
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TExpected
      *
      * @var TExpected
+=======
+     * @var mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,9 +71,13 @@ abstract class MatcherAbstract
      * Set the expected value
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @template TExpected
      *
      * @param TExpected $expected
+=======
+     * @param mixed $expected
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param mixed $expected
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +87,10 @@ abstract class MatcherAbstract
         $this->_expected = $expected;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Check if the actual value matches the expected.
@@ -87,5 +108,8 @@ abstract class MatcherAbstract
      * @return string
      */
     abstract public function __toString();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -32,7 +32,11 @@ class DebtController extends Controller
 
         // Menghitung total hutang
 <<<<<<< HEAD
+<<<<<<< HEAD
         $totalDebt = Debt::where('user_id', $user->id)->sum('amount');
+=======
+        $totalDebt= Debt::where('user_id', $user->id)->sum('amount');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $totalDebt= Debt::where('user_id', $user->id)->sum('amount');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -73,7 +77,11 @@ class DebtController extends Controller
             'date' => 'required|date',
             'amount' => 'required|numeric',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'due_date' => 'required|date',
+=======
+            'due_date' => 'required|date',            
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'due_date' => 'required|date',            
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -86,15 +94,21 @@ class DebtController extends Controller
         $debt = new Debt();
         $debt->user_id = auth()->id();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $debt->debt_type = $request->input('debt_type');
         $debt->date = $request->input('date');
         $debt->amount = $request->input('amount');
         $debt->due_date = $request->input('due_date');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $debt->debt_type = $request->input('debt_type');        
         $debt->date = $request->input('date');      
         $debt->amount = $request->input('amount');  
         $debt->due_date = $request->input('due_date');              
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $debt->description = $request->input('description');
 
@@ -132,7 +146,11 @@ class DebtController extends Controller
             'date' => 'required|date',
             'amount' => 'required|numeric',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'due_date' => 'required|date',
+=======
+            'due_date' => 'required|date',            
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'due_date' => 'required|date',            
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -142,9 +160,15 @@ class DebtController extends Controller
         $debt = Debt::findOrFail($id);
         $debt->debt_type = $request->debt_type;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $debt->date = $request->date;
         $debt->amount = $request->amount;
         $debt->due_date = $request->due_date;
+=======
+        $debt->date = $request->date;    
+        $debt->amount = $request->amount;
+        $debt->due_date = $request->due_date;    
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $debt->date = $request->date;    
         $debt->amount = $request->amount;
@@ -167,6 +191,7 @@ class DebtController extends Controller
         alert()->success('Berhasil', 'Data Berhasil Dihapus');
         return redirect()->route('index.debt');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function sendDebtReminders()
@@ -197,6 +222,8 @@ class DebtController extends Controller
 
         return response()->json($debts);
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

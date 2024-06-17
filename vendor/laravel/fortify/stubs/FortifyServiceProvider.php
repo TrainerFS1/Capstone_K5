@@ -11,7 +11,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Str;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\Fortify\Fortify;
@@ -38,9 +41,15 @@ class FortifyServiceProvider extends ServiceProvider
 
         RateLimiter::for('login', function (Request $request) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
 
             return Limit::perMinute(5)->by($throttleKey);
+=======
+            $email = (string) $request->email;
+
+            return Limit::perMinute(5)->by($email.$request->ip());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $email = (string) $request->email;
 

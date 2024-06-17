@@ -30,15 +30,21 @@ trait LockableTrait
      * Locks a command.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function lock(?string $name = null, bool $blocking = false): bool
     {
         if (!class_exists(SemaphoreStore::class)) {
             throw new LogicException('To enable the locking feature you must install the symfony/lock component. Try running "composer require symfony/lock".');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function lock(string $name = null, bool $blocking = false): bool
     {
         if (!class_exists(SemaphoreStore::class)) {
             throw new LogicException('To enable the locking feature you must install the symfony/lock component.');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -66,7 +72,11 @@ trait LockableTrait
      * Releases the command lock if there is one.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function release(): void
+=======
+    private function release()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function release()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -42,12 +42,16 @@ final class FencedCodeRenderer implements NodeRendererInterface, XmlNodeRenderer
         $infoWords = $node->getInfoWords();
         if (\count($infoWords) !== 0 && $infoWords[0] !== '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $class = $infoWords[0];
             if (! \str_starts_with($class, 'language-')) {
                 $class = 'language-' . $class;
             }
 
             $attrs->append('class', $class);
+=======
+            $attrs->append('class', 'language-' . $infoWords[0]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $attrs->append('class', 'language-' . $infoWords[0]);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

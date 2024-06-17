@@ -16,7 +16,10 @@ use function htmlspecialchars;
 use function is_string;
 use function round;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function str_contains;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use DOMDocument;
@@ -77,7 +80,11 @@ final class Crap4j
                     $crapLoad = $this->crapLoad((float) $method['crap'], $method['ccn'], $method['coverage']);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $fullCrap     += $method['crap'];
+=======
+                    $fullCrap += $method['crap'];
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     $fullCrap += $method['crap'];
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -130,9 +137,13 @@ final class Crap4j
 
         if ($target !== null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!str_contains($target, '://')) {
                 Filesystem::createDirectory(dirname($target));
             }
+=======
+            Filesystem::createDirectory(dirname($target));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             Filesystem::createDirectory(dirname($target));
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

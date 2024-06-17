@@ -16,11 +16,17 @@ use function dirname;
 use function str_ends_with;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\CodeCoverage\Report\Thresholds;
 use SebastianBergmann\CodeCoverage\Util\Filesystem;
 use SebastianBergmann\Template\Exception;
+=======
+use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
+use SebastianBergmann\CodeCoverage\Report\Thresholds;
+use SebastianBergmann\CodeCoverage\Util\Filesystem;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\CodeCoverage\Report\Thresholds;
@@ -57,7 +63,11 @@ final class Facade
             $date,
             $this->thresholds,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $coverage->collectsBranchAndPathCoverage(),
+=======
+            $coverage->collectsBranchAndPathCoverage()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $coverage->collectsBranchAndPathCoverage()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -69,7 +79,11 @@ final class Facade
             $date,
             $this->thresholds,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $coverage->collectsBranchAndPathCoverage(),
+=======
+            $coverage->collectsBranchAndPathCoverage()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $coverage->collectsBranchAndPathCoverage()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,7 +95,11 @@ final class Facade
             $date,
             $this->thresholds,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $coverage->collectsBranchAndPathCoverage(),
+=======
+            $coverage->collectsBranchAndPathCoverage()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $coverage->collectsBranchAndPathCoverage()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -145,6 +163,7 @@ final class Facade
                 'warning'        => $this->colors->warning(),
                 'danger'         => $this->colors->danger(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             ],
         );
 
@@ -158,10 +177,15 @@ final class Facade
             );
         }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ]
         );
 
         $template->renderTo($this->directory($target . '_css') . 'style.css');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

@@ -3,6 +3,7 @@
 namespace PhpParser\Node\Expr;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PhpParser\Node;
 use PhpParser\Node\Expr;
 use PhpParser\Node\Identifier;
@@ -13,6 +14,8 @@ class NullsafePropertyFetch extends Expr {
     /** @var Identifier|Expr Property name */
     public Node $name;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Expr;
 use PhpParser\Node\Identifier;
 
@@ -22,15 +25,24 @@ class NullsafePropertyFetch extends Expr
     public $var;
     /** @var Identifier|Expr Property name */
     public $name;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs a nullsafe property fetch node.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param Expr $var Variable holding object
      * @param string|Identifier|Expr $name Property name
      * @param array<string, mixed> $attributes Additional attributes
+=======
+     * @param Expr                   $var        Variable holding object
+     * @param string|Identifier|Expr $name       Property name
+     * @param array                  $attributes Additional attributes
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param Expr                   $var        Variable holding object
      * @param string|Identifier|Expr $name       Property name
@@ -44,17 +56,23 @@ class NullsafePropertyFetch extends Expr
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['var', 'name'];
     }
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getSubNodeNames() : array {
         return ['var', 'name'];
     }
     
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Expr_NullsafePropertyFetch';
     }

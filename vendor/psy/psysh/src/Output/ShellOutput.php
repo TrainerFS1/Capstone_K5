@@ -39,7 +39,11 @@ class ShellOutput extends ConsoleOutput
      * @param string|OutputPager|null       $pager     (default: null)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct($verbosity = self::VERBOSITY_NORMAL, $decorated = null, ?OutputFormatterInterface $formatter = null, $pager = null, $theme = null)
+=======
+    public function __construct($verbosity = self::VERBOSITY_NORMAL, $decorated = null, OutputFormatterInterface $formatter = null, $pager = null, $theme = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct($verbosity = self::VERBOSITY_NORMAL, $decorated = null, OutputFormatterInterface $formatter = null, $pager = null, $theme = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -124,7 +128,11 @@ class ShellOutput extends ConsoleOutput
      * @param int          $type     The type of output
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function write($messages, $newline = false, $type = 0): void
+=======
+    public function write($messages, $newline = false, $type = 0)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function write($messages, $newline = false, $type = 0)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -163,7 +171,11 @@ class ShellOutput extends ConsoleOutput
      * @param bool   $newline Whether to add a newline or not
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function doWrite($message, $newline): void
+=======
+    public function doWrite($message, $newline)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function doWrite($message, $newline)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

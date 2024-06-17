@@ -33,7 +33,11 @@ class PhpProcess extends Process
      * @param array|null  $php     Path to the PHP binary to use with any additional arguments
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $script, ?string $cwd = null, ?array $env = null, int $timeout = 60, ?array $php = null)
+=======
+    public function __construct(string $script, string $cwd = null, array $env = null, int $timeout = 60, array $php = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $script, string $cwd = null, array $env = null, int $timeout = 60, array $php = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -55,7 +59,11 @@ class PhpProcess extends Process
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function fromShellCommandline(string $command, ?string $cwd = null, ?array $env = null, mixed $input = null, ?float $timeout = 60): static
+=======
+    public static function fromShellCommandline(string $command, string $cwd = null, array $env = null, mixed $input = null, ?float $timeout = 60): static
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public static function fromShellCommandline(string $command, string $cwd = null, array $env = null, mixed $input = null, ?float $timeout = 60): static
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -64,10 +72,14 @@ class PhpProcess extends Process
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function start(?callable $callback = null, array $env = [])
+=======
+    public function start(callable $callback = null, array $env = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function start(callable $callback = null, array $env = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

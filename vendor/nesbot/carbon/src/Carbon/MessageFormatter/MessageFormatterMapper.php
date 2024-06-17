@@ -16,7 +16,10 @@ use Symfony\Component\Translation\Formatter\MessageFormatter;
 use Symfony\Component\Translation\Formatter\MessageFormatterInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @codeCoverageIgnoreStart
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 $transMethod = new ReflectionMethod(MessageFormatterInterface::class, 'format');
@@ -25,7 +28,10 @@ require $transMethod->getParameters()[0]->hasType()
     ? __DIR__.'/../../../lazy/Carbon/MessageFormatter/MessageFormatterMapperStrongType.php'
     : __DIR__.'/../../../lazy/Carbon/MessageFormatter/MessageFormatterMapperWeakType.php';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // @codeCoverageIgnoreEnd
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 

@@ -19,7 +19,10 @@ use Symfony\Component\Finder\SplFileInfo;
  *
  * @author Victor Berchet <victor@suumit.com>
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @extends \RecursiveDirectoryIterator<string, SplFileInfo>
@@ -28,7 +31,11 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
 {
     private bool $ignoreUnreadableDirs;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool $ignoreFirstRewind = true;
+=======
+    private ?bool $rewindable = null;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private ?bool $rewindable = null;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -110,6 +117,10 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
 
                 // performance optimization to avoid redoing the same work in all children
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                $children->rewindable = &$this->rewindable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $children->rewindable = &$this->rewindable;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -122,6 +133,7 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function next(): void
     {
@@ -138,12 +150,17 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
             $this->ignoreFirstRewind = false;
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Do nothing for non rewindable stream.
      */
     public function rewind(): void
     {
         if (false === $this->isRewindable()) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
@@ -151,7 +168,10 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
         parent::rewind();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Checks if the stream is rewindable.
@@ -173,5 +193,8 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
 
         return $this->rewindable = false;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

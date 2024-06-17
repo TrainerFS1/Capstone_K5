@@ -20,6 +20,7 @@ namespace Symfony\Component\Process;
 class ExecutableFinder
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $suffixes = ['.exe', '.bat', '.cmd', '.com'];
 
     /**
@@ -27,10 +28,15 @@ class ExecutableFinder
      *
      * @return void
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $suffixes = ['.exe', '.bat', '.cmd', '.com'];
 
     /**
      * Replaces default suffixes of executable.
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setSuffixes(array $suffixes)
@@ -41,8 +47,11 @@ class ExecutableFinder
     /**
      * Adds new possible suffix to check for executable.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -59,6 +68,7 @@ class ExecutableFinder
      * @param array       $extraDirs Additional dirs to check into
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function find(string $name, ?string $default = null, array $extraDirs = []): ?string
     {
         $dirs = array_merge(
@@ -66,6 +76,8 @@ class ExecutableFinder
             $extraDirs
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function find(string $name, string $default = null, array $extraDirs = []): ?string
     {
         if (\ini_get('open_basedir')) {
@@ -87,6 +99,9 @@ class ExecutableFinder
                 $extraDirs
             );
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $suffixes = [''];
@@ -100,6 +115,7 @@ class ExecutableFinder
                     return $file;
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 if (!@is_dir($dir) && basename($dir) === $name.$suffix && @is_executable($dir)) {
                     return $dir;
@@ -112,6 +128,11 @@ class ExecutableFinder
             return $executablePath;
         }
 
+=======
+            }
+        }
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             }
         }

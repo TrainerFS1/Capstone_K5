@@ -5,7 +5,10 @@ namespace Illuminate\Support\Facades;
 /**
  * @method static \Illuminate\Database\Connection connection(string|null $name = null)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Database\ConnectionInterface connectUsing(string $name, array $config, bool $force = false)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void registerDoctrineType(string $class, string $name, string $type)
@@ -32,7 +35,11 @@ namespace Illuminate\Support\Facades;
  * @method static void useDefaultPostProcessor()
  * @method static \Illuminate\Database\Schema\Builder getSchemaBuilder()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Query\Builder table(\Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string $table, string|null $as = null)
+=======
+ * @method static \Illuminate\Database\Query\Builder table(\Closure|\Illuminate\Database\Query\Builder|string $table, string|null $as = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static \Illuminate\Database\Query\Builder table(\Closure|\Illuminate\Database\Query\Builder|string $table, string|null $as = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -42,7 +49,10 @@ namespace Illuminate\Support\Facades;
  * @method static array selectFromWriteConnection(string $query, array $bindings = [])
  * @method static array select(string $query, array $bindings = [], bool $useReadPdo = true)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static array selectResultSets(string $query, array $bindings = [], bool $useReadPdo = true)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Generator cursor(string $query, array $bindings = [], bool $useReadPdo = true)
@@ -54,7 +64,10 @@ namespace Illuminate\Support\Facades;
  * @method static bool unprepared(string $query)
  * @method static array pretend(\Closure $callback)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static mixed withoutPretending(\Closure $callback)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void bindValues(\PDOStatement $statement, array $bindings)
@@ -66,11 +79,17 @@ namespace Illuminate\Support\Facades;
  * @method static void resetTotalQueryDuration()
  * @method static void reconnectIfMissingConnection()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Connection beforeStartingTransaction(\Closure $callback)
  * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
  * @method static void listen(\Closure $callback)
  * @method static \Illuminate\Contracts\Database\Query\Expression raw(mixed $value)
  * @method static string escape(string|float|int|bool|null $value, bool $binary = false)
+=======
+ * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
+ * @method static void listen(\Closure $callback)
+ * @method static \Illuminate\Contracts\Database\Query\Expression raw(mixed $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
  * @method static void listen(\Closure $callback)
@@ -110,7 +129,10 @@ namespace Illuminate\Support\Facades;
  * @method static bool pretending()
  * @method static array getQueryLog()
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static array getRawQueryLog()
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void flushQueryLog()

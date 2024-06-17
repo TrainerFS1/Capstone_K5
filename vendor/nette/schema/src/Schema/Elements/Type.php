@@ -10,6 +10,10 @@ declare(strict_types=1);
 namespace Nette\Schema\Elements;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Nette;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Nette;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -23,6 +27,7 @@ final class Type implements Schema
 {
 	use Base;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	private string $type;
 	private ?Schema $itemsValue = null;
@@ -33,6 +38,8 @@ final class Type implements Schema
 	private ?string $pattern = null;
 	private bool $merge = true;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	use Nette\SmartObject;
 
 	/** @var string */
@@ -52,6 +59,9 @@ final class Type implements Schema
 
 	/** @var bool */
 	private $merge = true;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
@@ -100,15 +110,21 @@ final class Type implements Schema
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * @internal  use arrayOf() or listOf()
 	 */
 	public function items(string|Schema $valueType = 'mixed', string|Schema $keyType = null): self
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @param  string|Schema  $valueType
 	 * @param  string|Schema|null  $keyType
 	 * @internal  use arrayOf() or listOf()
 	 */
 	public function items($valueType = 'mixed', $keyType = null): self
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->itemsValue = $valueType instanceof Schema
@@ -132,15 +148,21 @@ final class Type implements Schema
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function normalize(mixed $value, Context $context): mixed
 	{
 		if ($prevent = (is_array($value) && isset($value[Helpers::PreventMerging]))) {
 			unset($value[Helpers::PreventMerging]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	public function normalize($value, Context $context)
 	{
 		if ($prevent = (is_array($value) && isset($value[Helpers::PREVENT_MERGING]))) {
 			unset($value[Helpers::PREVENT_MERGING]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
@@ -163,7 +185,11 @@ final class Type implements Schema
 
 		if ($prevent && is_array($value)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			$value[Helpers::PreventMerging] = true;
+=======
+			$value[Helpers::PREVENT_MERGING] = true;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 			$value[Helpers::PREVENT_MERGING] = true;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -174,15 +200,21 @@ final class Type implements Schema
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function merge(mixed $value, mixed $base): mixed
 	{
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	public function merge($value, $base)
 	{
 		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
 			unset($value[Helpers::PREVENT_MERGING]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			return $value;
 		}
@@ -208,17 +240,23 @@ final class Type implements Schema
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public function complete(mixed $value, Context $context): mixed
 	{
 		$merge = $this->merge;
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	public function complete($value, Context $context)
 	{
 		$merge = $this->merge;
 		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
 			unset($value[Helpers::PREVENT_MERGING]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			$merge = false;
 		}
@@ -230,6 +268,7 @@ final class Type implements Schema
 		$this->doDeprecation($context);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$isOk = $context->createChecker();
 		Helpers::validateType($value, $this->type, $context);
 		$isOk() && Helpers::validateRange($value, $this->range, $context, $this->type);
@@ -240,6 +279,8 @@ final class Type implements Schema
 		if (!$isOk()) {
 			return null;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		if (!$this->doValidate($value, $this->type, $context)
 			|| !$this->doValidateRange($value, $this->range, $context, $this->type)
 		) {
@@ -253,11 +294,15 @@ final class Type implements Schema
 				['value' => $value, 'pattern' => $this->pattern]
 			);
 			return;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
 		if ($value instanceof DynamicParameter) {
 			$expected = $this->type . ($this->range === [null, null] ? '' : ':' . implode('..', $this->range));
+<<<<<<< HEAD
 <<<<<<< HEAD
 			$context->dynamics[] = [$value, str_replace(DynamicParameter::class . '|', '', $expected), $context->path];
 		}
@@ -282,6 +327,8 @@ final class Type implements Schema
 		}
 		$value = $res;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			$context->dynamics[] = [$value, str_replace(DynamicParameter::class . '|', '', $expected)];
 		}
 
@@ -309,6 +356,9 @@ final class Type implements Schema
 		}
 
 		return $this->doFinalize($value, $context);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 }

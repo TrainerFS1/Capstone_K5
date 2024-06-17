@@ -97,7 +97,11 @@ final class Template
     public function renderTo(string $target): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!@file_put_contents($target, $this->render())) {
+=======
+        if (!file_put_contents($target, $this->render())) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!file_put_contents($target, $this->render())) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

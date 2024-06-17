@@ -5,6 +5,7 @@ All notable changes to `uri-template` will be documented in this file.
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## v1.0.2 - 2023-08-27
 
 ### Changed
@@ -13,6 +14,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Fixed
 - Fixed using `0` as an expanded value
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## v1.0.1 - 2021-10-07

@@ -254,7 +254,11 @@ class Collection extends BaseCollection implements QueueableCollection
      *
      * @param  string  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<array-key, (callable(\Illuminate\Database\Eloquent\Builder): mixed)|string>  $relations
+=======
+     * @param  array<array-key, (callable(\Illuminate\Database\Eloquent\Builder): mixed)|string> $relations
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array<array-key, (callable(\Illuminate\Database\Eloquent\Builder): mixed)|string> $relations
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -275,7 +279,11 @@ class Collection extends BaseCollection implements QueueableCollection
      *
      * @param  string  $relation
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<array-key, (callable(\Illuminate\Database\Eloquent\Builder): mixed)|string>  $relations
+=======
+     * @param  array<array-key, (callable(\Illuminate\Database\Eloquent\Builder): mixed)|string> $relations
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  array<array-key, (callable(\Illuminate\Database\Eloquent\Builder): mixed)|string> $relations
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -484,10 +492,13 @@ class Collection extends BaseCollection implements QueueableCollection
     public function except($keys)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (is_null($keys)) {
             return new static($this->items);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $dictionary = Arr::except($this->getDictionary(), array_map($this->getDictionaryKey(...), (array) $keys));

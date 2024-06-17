@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Mockery (https://docs.mockery.io/)
  *
@@ -23,6 +24,8 @@ if (! \function_exists('mock')) {
      * @return LegacyMockInterface&MockInterface&TMock
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery\Matcher\AndAnyOtherArgs;
 use Mockery\Matcher\AnyArgs;
 
@@ -46,6 +49,9 @@ use Mockery\Matcher\AnyArgs;
  */
 
 if (!function_exists("mock")) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     function mock(...$args)
     {
@@ -53,6 +59,7 @@ if (!function_exists("mock")) {
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (! \function_exists('spy')) {
     /**
@@ -65,12 +72,16 @@ if (! \function_exists('spy')) {
 =======
 if (!function_exists("spy")) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+if (!function_exists("spy")) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     function spy(...$args)
     {
         return Mockery::spy(...$args);
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (! \function_exists('namedMock')) {
     /**
@@ -83,6 +94,9 @@ if (! \function_exists('namedMock')) {
 =======
 if (!function_exists("namedMock")) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+if (!function_exists("namedMock")) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     function namedMock(...$args)
     {
         return Mockery::namedMock(...$args);
@@ -90,8 +104,13 @@ if (!function_exists("namedMock")) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! \function_exists('anyArgs')) {
     function anyArgs(): AnyArgs
+=======
+if (!function_exists("anyArgs")) {
+    function anyArgs()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 if (!function_exists("anyArgs")) {
     function anyArgs()
@@ -102,8 +121,13 @@ if (!function_exists("anyArgs")) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! \function_exists('andAnyOtherArgs')) {
     function andAnyOtherArgs(): AndAnyOtherArgs
+=======
+if (!function_exists("andAnyOtherArgs")) {
+    function andAnyOtherArgs()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 if (!function_exists("andAnyOtherArgs")) {
     function andAnyOtherArgs()
@@ -114,8 +138,13 @@ if (!function_exists("andAnyOtherArgs")) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! \function_exists('andAnyOthers')) {
     function andAnyOthers(): AndAnyOtherArgs
+=======
+if (!function_exists("andAnyOthers")) {
+    function andAnyOthers()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 if (!function_exists("andAnyOthers")) {
     function andAnyOthers()

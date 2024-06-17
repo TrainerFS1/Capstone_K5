@@ -22,7 +22,10 @@ use Symfony\Component\VarDumper\Cloner\Data;
 class HtmlDumper extends CliDumper
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var callable|resource|string|null */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static $defaultOutput = 'php://output';
@@ -79,7 +82,11 @@ class HtmlDumper extends CliDumper
     private array $extraDisplayOptions = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct($output = null, ?string $charset = null, int $flags = 0)
+=======
+    public function __construct($output = null, string $charset = null, int $flags = 0)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct($output = null, string $charset = null, int $flags = 0)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -91,9 +98,12 @@ class HtmlDumper extends CliDumper
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setStyles(array $styles)
@@ -103,9 +113,12 @@ class HtmlDumper extends CliDumper
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setTheme(string $themeName)
@@ -122,8 +135,11 @@ class HtmlDumper extends CliDumper
      *
      * @param array $displayOptions A map of display options to customize the behavior
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -136,8 +152,11 @@ class HtmlDumper extends CliDumper
     /**
      * Sets an HTML header that will be dumped once in the output stream.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -149,8 +168,11 @@ class HtmlDumper extends CliDumper
     /**
      * Sets an HTML prefix and suffix that will encapse every single dump.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -172,8 +194,11 @@ class HtmlDumper extends CliDumper
     /**
      * Dumps the HTML header.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -190,9 +215,14 @@ class HtmlDumper extends CliDumper
 Sfdump = window.Sfdump || (function (doc) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 doc.documentElement.classList.add('sf-js-enabled');
 
 var rxEsc = /([.*+?^${}()|\[\]\/\\])/g,
+=======
+var refStyle = doc.createElement('style'),
+    rxEsc = /([.*+?^${}()|\[\]\/\\])/g,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 var refStyle = doc.createElement('style'),
     rxEsc = /([.*+?^${}()|\[\]\/\\])/g,
@@ -204,12 +234,18 @@ var refStyle = doc.createElement('style'),
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 refStyle.innerHTML = 'pre.sf-dump .sf-dump-compact, .sf-dump-str-collapse .sf-dump-str-collapse, .sf-dump-str-expand .sf-dump-str-expand { display: none; }';
 doc.head.appendChild(refStyle);
 refStyle = doc.createElement('style');
 doc.head.appendChild(refStyle);
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!doc.addEventListener) {
     addEventListener = function (element, eventName, callback) {
@@ -391,10 +427,13 @@ return function (root, x) {
         return "contains(concat(' ', normalize-space(@class), ' '), ' " + className +" ')";
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     a('mouseover', function (a, e, c) {
         if (c) {
             e.target.style.cursor = "pointer";
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     addEventListener(root, 'mouseover', function (e) {
         if ('' != refStyle.innerHTML) {
             refStyle.innerHTML = '';
@@ -408,6 +447,9 @@ return function (root, x) {
                 refStyle.innerHTML = 'pre.sf-dump .'+a[0]+'{background-color: #B729D9; color: #FFF !important; border-radius: 2px}';
             } catch (e) {
             }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     });
@@ -478,7 +520,10 @@ return function (root, x) {
         } else if (/\bsf-dump-ref\b/.test(elt.className) && (a = elt.getAttribute('href'))) {
             a = a.slice(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
             elt.className += ' sf-dump-hover';
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             elt.className += ' '+a;
@@ -698,6 +743,7 @@ return function (root, x) {
 })(document);
 </script><style>
 <<<<<<< HEAD
+<<<<<<< HEAD
 .sf-js-enabled pre.sf-dump .sf-dump-compact,
 .sf-js-enabled .sf-dump-str-collapse .sf-dump-str-collapse,
 .sf-js-enabled .sf-dump-str-expand .sf-dump-str-expand {
@@ -708,6 +754,8 @@ return function (root, x) {
     color: #FFF !important;
     border-radius: 2px;
 }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 pre.sf-dump {
@@ -725,7 +773,11 @@ pre.sf-dump:after {
 }
 pre.sf-dump span {
 <<<<<<< HEAD
+<<<<<<< HEAD
     display: inline-flex;
+=======
+    display: inline;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     display: inline;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -850,9 +902,12 @@ EOHTML
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function dumpString(Cursor $cursor, string $str, bool $bin, int $cut)
@@ -871,9 +926,12 @@ EOHTML
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function enterHash(Cursor $cursor, int $type, string|int|null $class, bool $hasChild)
@@ -905,9 +963,12 @@ EOHTML
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function leaveHash(Cursor $cursor, int $type, string|int|null $class, bool $hasChild, int $cut)
@@ -922,7 +983,11 @@ EOHTML
     protected function style(string $style, string $value, array $attr = []): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ('' === $value && ('label' !== $style || !isset($attr['file']) && !isset($attr['href']))) {
+=======
+        if ('' === $value) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if ('' === $value) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -961,6 +1026,10 @@ EOHTML
             $style .= sprintf(' title="Private property defined in class:&#10;`%s`"', esc($this->utf8Encode($attr['class'])));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $map = static::$controlCharsMap;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $map = static::$controlCharsMap;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -983,7 +1052,10 @@ EOHTML
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $map = static::$controlCharsMap;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $v = "<span class=sf-dump-{$style}>".preg_replace_callback(static::$controlCharsRx, function ($c) use ($map) {
@@ -1009,6 +1081,7 @@ EOHTML
         }, $v).'</span>';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!($attr['binary'] ?? false)) {
             $v = preg_replace_callback(static::$unicodeCharsRx, function ($c) {
                 return '<span class=sf-dump-default>\u{'.strtoupper(dechex(mb_ord($c[0]))).'}</span>';
@@ -1017,14 +1090,19 @@ EOHTML
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($attr['file']) && $href = $this->getSourceLink($attr['file'], $attr['line'] ?? 0)) {
             $attr['href'] = $href;
         }
         if (isset($attr['href'])) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ('label' === $style) {
                 $v .= '^';
             }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $target = isset($attr['file']) ? '' : ' target="_blank"';
@@ -1034,9 +1112,12 @@ EOHTML
             $v = sprintf('<code class="%s">%s</code>', esc($attr['lang']), $v);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ('label' === $style) {
             $v .= ' ';
         }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -1044,9 +1125,12 @@ EOHTML
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function dumpLine(int $depth, bool $endOfValue = false)
@@ -1077,7 +1161,11 @@ EOHTML
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getSourceLink(string $file, int $line): string|false
+=======
+    private function getSourceLink(string $file, int $line)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getSourceLink(string $file, int $line)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -1093,7 +1181,11 @@ EOHTML
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function esc(string $str): string
+=======
+function esc(string $str)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 function esc(string $str)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

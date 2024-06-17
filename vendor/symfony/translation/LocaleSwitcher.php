@@ -35,6 +35,7 @@ class LocaleSwitcher implements LocaleAwareInterface
     public function setLocale(string $locale): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Silently ignore if the intl extension is not loaded
         try {
             if (class_exists(\Locale::class, false)) {
@@ -44,6 +45,9 @@ class LocaleSwitcher implements LocaleAwareInterface
         }
 
         $this->locale = $locale;
+=======
+        \Locale::setDefault($this->locale = $locale);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         \Locale::setDefault($this->locale = $locale);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,7 +69,11 @@ class LocaleSwitcher implements LocaleAwareInterface
      * @template T
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param callable(string $locale):T $callback
+=======
+     * @param callable():T $callback
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param callable():T $callback
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -79,7 +87,11 @@ class LocaleSwitcher implements LocaleAwareInterface
 
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return $callback($locale);
+=======
+            return $callback();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return $callback();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

@@ -19,7 +19,11 @@ class FatalError extends \Error
      * @param array $error An array as returned by error_get_last()
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(string $message, int $code, array $error, ?int $traceOffset = null, bool $traceArgs = true, ?array $trace = null)
+=======
+    public function __construct(string $message, int $code, array $error, int $traceOffset = null, bool $traceArgs = true, array $trace = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $message, int $code, array $error, int $traceOffset = null, bool $traceArgs = true, array $trace = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -36,7 +40,11 @@ class FatalError extends \Error
             }
         } elseif (null !== $traceOffset) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (\function_exists('xdebug_get_function_stack') && \in_array(\ini_get('xdebug.mode'), ['develop', false], true) && $trace = @xdebug_get_function_stack()) {
+=======
+            if (\function_exists('xdebug_get_function_stack') && $trace = @xdebug_get_function_stack()) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (\function_exists('xdebug_get_function_stack') && $trace = @xdebug_get_function_stack()) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

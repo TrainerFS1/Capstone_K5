@@ -184,6 +184,7 @@ class Connection implements ConnectionInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * All of the callbacks that should be invoked before a transaction is started.
      *
      * @var \Closure[]
@@ -191,6 +192,8 @@ class Connection implements ConnectionInterface
     protected $beforeStartingTransaction = [];
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * All of the callbacks that should be invoked before a query is executed.
@@ -268,9 +271,13 @@ class Connection implements ConnectionInterface
     protected function getDefaultQueryGrammar()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         ($grammar = new QueryGrammar)->setConnection($this);
 
         return $grammar;
+=======
+        return new QueryGrammar;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return new QueryGrammar;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -334,7 +341,11 @@ class Connection implements ConnectionInterface
      * Begin a fluent query against a database table.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $table
+=======
+     * @param  \Closure|\Illuminate\Database\Query\Builder|string  $table
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  \Closure|\Illuminate\Database\Query\Builder|string  $table
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -444,6 +455,7 @@ class Connection implements ConnectionInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Run a select statement against the database and returns all of the result sets.
      *
      * @param  string  $query
@@ -477,6 +489,8 @@ class Connection implements ConnectionInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Run a select statement against the database and returns a generator.
@@ -678,6 +692,7 @@ class Connection implements ConnectionInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Execute the given callback without "pretending".
      *
      * @param  \Closure  $callback
@@ -699,6 +714,8 @@ class Connection implements ConnectionInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Execute the given callback in "dry run" mode.
@@ -838,12 +855,15 @@ class Connection implements ConnectionInterface
         // lot more helpful to the developer instead of just the database's errors.
         catch (Exception $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($this->isUniqueConstraintError($e)) {
                 throw new UniqueConstraintViolationException(
                     $this->getName(), $query, $this->prepareBindings($bindings), $e
                 );
             }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new QueryException(
@@ -853,6 +873,7 @@ class Connection implements ConnectionInterface
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Determine if the given database exception was caused by a unique constraint violation.
      *
@@ -865,6 +886,8 @@ class Connection implements ConnectionInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Log a query in the connection's query log.
@@ -881,10 +904,13 @@ class Connection implements ConnectionInterface
         $this->event(new QueryExecuted($query, $bindings, $time, $this));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $query = $this->pretending === true
             ? $this->queryGrammar?->substituteBindingsIntoRawSql($query, $bindings) ?? $query
             : $query;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->loggingQueries) {
@@ -1056,6 +1082,7 @@ class Connection implements ConnectionInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Register a hook to be run just before a database transaction is started.
      *
      * @param  \Closure  $callback
@@ -1069,6 +1096,8 @@ class Connection implements ConnectionInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Register a hook to be run just before a database query is executed.
@@ -1135,6 +1164,7 @@ class Connection implements ConnectionInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Escape a value for safe SQL embedding.
      *
      * @param  string|float|int|bool|null  $value
@@ -1200,6 +1230,8 @@ class Connection implements ConnectionInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the database connection has modified any database records.
@@ -1646,6 +1678,7 @@ class Connection implements ConnectionInterface
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Get the connection query log with embedded bindings.
      *
      * @return array
@@ -1662,6 +1695,8 @@ class Connection implements ConnectionInterface
     }
 
     /**
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Clear the query log.

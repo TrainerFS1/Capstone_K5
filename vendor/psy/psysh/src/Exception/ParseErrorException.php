@@ -20,6 +20,7 @@ class ParseErrorException extends \PhpParser\Error implements Exception
      * Constructor!
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string    $message    (default: '')
      * @param array|int $attributes Attributes of node/token where error occurred
      *                              (or start line of error -- deprecated)
@@ -34,6 +35,8 @@ class ParseErrorException extends \PhpParser\Error implements Exception
 
         parent::__construct($message, $attributes);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string $message (default: "")
      * @param int    $line    (default: -1)
      */
@@ -41,6 +44,9 @@ class ParseErrorException extends \PhpParser\Error implements Exception
     {
         $message = \sprintf('PHP Parse error: %s', $message);
         parent::__construct($message, $line);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -52,7 +58,11 @@ class ParseErrorException extends \PhpParser\Error implements Exception
     public static function fromParseError(\PhpParser\Error $e): self
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new self($e->getRawMessage(), $e->getAttributes());
+=======
+        return new self($e->getRawMessage(), $e->getStartLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         return new self($e->getRawMessage(), $e->getStartLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

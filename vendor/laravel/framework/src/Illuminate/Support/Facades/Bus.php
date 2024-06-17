@@ -21,7 +21,11 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static \Illuminate\Bus\Dispatcher pipeThrough(array $pipes)
  * @method static \Illuminate\Bus\Dispatcher map(array $map)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\BusFake except(array|string $jobsToDispatch)
+=======
+ * @method static void except(array|string $jobsToDispatch)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @method static void except(array|string $jobsToDispatch)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -38,7 +42,10 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static void assertChained(array $expectedChain)
  * @method static void assertDispatchedWithoutChain(string|\Closure $command, callable|null $callback = null)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\ChainedBatchTruthTest chainedBatch(\Closure $callback)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void assertBatched(callable $callback)
@@ -54,7 +61,10 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static \Illuminate\Bus\Batch dispatchFakeBatch(string $name = '')
  * @method static \Illuminate\Bus\Batch recordPendingBatch(\Illuminate\Bus\PendingBatch $pendingBatch)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\BusFake serializeAndRestore(bool $serializeAndRestore = true)
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
@@ -73,6 +83,7 @@ class Bus extends Facade
     public static function fake($jobsToFake = [], BatchRepository $batchRepository = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $actualDispatcher = static::isFake()
                 ? static::getFacadeRoot()->dispatcher
                 : static::getFacadeRoot();
@@ -80,6 +91,11 @@ class Bus extends Facade
         return tap(new BusFake($actualDispatcher, $jobsToFake, $batchRepository), function ($fake) {
             static::swap($fake);
         });
+=======
+        static::swap($fake = new BusFake(static::getFacadeRoot(), $jobsToFake, $batchRepository));
+
+        return $fake;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         static::swap($fake = new BusFake(static::getFacadeRoot(), $jobsToFake, $batchRepository));
 

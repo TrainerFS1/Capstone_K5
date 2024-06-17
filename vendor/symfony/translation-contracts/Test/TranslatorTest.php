@@ -31,7 +31,11 @@ use Symfony\Contracts\Translation\TranslatorTrait;
 class TranslatorTest extends TestCase
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private string $defaultLocale;
+=======
+    private $defaultLocale;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private $defaultLocale;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -119,7 +123,11 @@ class TranslatorTest extends TestCase
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getTransTests()
+=======
+    public function getTransTests()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getTransTests()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,7 +139,11 @@ class TranslatorTest extends TestCase
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getTransChoiceTests()
+=======
+    public function getTransChoiceTests()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getTransChoiceTests()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -150,7 +162,11 @@ class TranslatorTest extends TestCase
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @dataProvider getInterval
+=======
+     * @dataProvider getInternal
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @dataProvider getInternal
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -163,7 +179,11 @@ class TranslatorTest extends TestCase
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getInterval()
+=======
+    public function getInternal()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getInternal()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -204,9 +224,14 @@ class TranslatorTest extends TestCase
     public function testThrowExceptionIfMatchingMessageCannotBeFound($id, $number)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $translator = $this->getTranslator();
 
         $this->expectException(\InvalidArgumentException::class);
+=======
+        $this->expectException(\InvalidArgumentException::class);
+        $translator = $this->getTranslator();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $this->expectException(\InvalidArgumentException::class);
         $translator = $this->getTranslator();
@@ -216,7 +241,11 @@ class TranslatorTest extends TestCase
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getNonMatchingMessages()
+=======
+    public function getNonMatchingMessages()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getNonMatchingMessages()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -230,7 +259,11 @@ class TranslatorTest extends TestCase
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getChooseTests()
+=======
+    public function getChooseTests()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getChooseTests()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -290,7 +323,11 @@ class TranslatorTest extends TestCase
             new-line in it. Selector = 1.|[1,Inf]This is a text with a
             new-line in it. Selector > 1.', 5],
 <<<<<<< HEAD
+<<<<<<< HEAD
             // with double-quotes and id split across lines
+=======
+            // with double-quotes and id split accros lines
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             // with double-quotes and id split accros lines
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -300,7 +337,11 @@ class TranslatorTest extends TestCase
             new-line in it. Selector = 1.|[1,Inf]This is a text with a
             new-line in it. Selector > 1.', 1],
 <<<<<<< HEAD
+<<<<<<< HEAD
             // with single-quotes and id split across lines
+=======
+            // with single-quotes and id split accros lines
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             // with single-quotes and id split accros lines
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -312,7 +353,11 @@ class TranslatorTest extends TestCase
             // with single-quotes and \n in text
             ['This is a text with a\nnew-line in it. Selector = 0.', '{0}This is a text with a\nnew-line in it. Selector = 0.|{1}This is a text with a\nnew-line in it. Selector = 1.|[1,Inf]This is a text with a\nnew-line in it. Selector > 1.', 0],
 <<<<<<< HEAD
+<<<<<<< HEAD
             // with double-quotes and id split across lines
+=======
+            // with double-quotes and id split accros lines
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             // with double-quotes and id split accros lines
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -362,7 +407,11 @@ class TranslatorTest extends TestCase
      * As it is impossible to have this ever complete we should try as hard as possible to have it almost complete.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function successLangcodes(): array
+=======
+    public function successLangcodes(): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function successLangcodes(): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -385,7 +434,11 @@ class TranslatorTest extends TestCase
      * @return array with nplural together with langcodes
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function failingLangcodes(): array
+=======
+    public function failingLangcodes(): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function failingLangcodes(): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

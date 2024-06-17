@@ -30,6 +30,7 @@ interface ProfilerStorageInterface
      * Finds profiler tokens for the given criteria.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int|null      $limit      The maximum number of tokens to return
      * @param int|null      $start      The start date to search from
      * @param int|null      $end        The end date to search to
@@ -38,11 +39,16 @@ interface ProfilerStorageInterface
      */
     public function find(?string $ip, ?string $url, ?int $limit, ?string $method, ?int $start = null, ?int $end = null/* , string $statusCode = null, \Closure $filter = null */): array;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int|null $limit The maximum number of tokens to return
      * @param int|null $start The start date to search from
      * @param int|null $end   The end date to search to
      */
     public function find(?string $ip, ?string $url, ?int $limit, ?string $method, int $start = null, int $end = null): array;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -60,8 +66,11 @@ interface ProfilerStorageInterface
     /**
      * Purges all data from the database.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

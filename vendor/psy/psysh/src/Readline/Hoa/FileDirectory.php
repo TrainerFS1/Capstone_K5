@@ -67,7 +67,11 @@ class FileDirectory extends FileGeneric
         string $streamName,
         string $mode = self::MODE_READ,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?string $context = null,
+=======
+        string $context = null,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $context = null,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -83,7 +87,11 @@ class FileDirectory extends FileGeneric
      * Open the stream and return the associated resource.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function &_open(string $streamName, ?StreamContext $context = null)
+=======
+    protected function &_open(string $streamName, StreamContext $context = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function &_open(string $streamName, StreamContext $context = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,7 +202,11 @@ class FileDirectory extends FileGeneric
         string $name,
         string $mode = self::MODE_CREATE_RECURSIVE,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?string $context = null
+=======
+        string $context = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $context = null
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

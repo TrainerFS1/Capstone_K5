@@ -74,9 +74,15 @@ class TestCase extends \PHPUnit\Framework\TestCase
         $formatter->expects(self::any())
             ->method('format')
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->willReturnCallback(function ($record) {
                 return $record->message;
             });
+=======
+            ->will(self::returnCallback(function ($record) {
+                return $record->message;
+            }));
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             ->will(self::returnCallback(function ($record) {
                 return $record->message;

@@ -22,8 +22,13 @@ final class MatchBuilderNotFoundException extends \PHPUnit\Framework\Exception i
             sprintf(
                 'No builder found for match builder identification <%s>',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $id,
             ),
+=======
+                $id
+            )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $id
             )

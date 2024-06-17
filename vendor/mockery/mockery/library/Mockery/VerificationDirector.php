@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,6 +28,9 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -32,6 +38,7 @@ namespace Mockery;
 
 class VerificationDirector
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @var VerificationExpectation
@@ -46,6 +53,10 @@ class VerificationDirector
     private $receivedMethodCalls;
     private $expectation;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    private $receivedMethodCalls;
+    private $expectation;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(ReceivedMethodCalls $receivedMethodCalls, VerificationExpectation $expectation)
     {
@@ -53,6 +64,7 @@ class VerificationDirector
         $this->expectation = $expectation;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @return self
@@ -191,6 +203,8 @@ class VerificationDirector
 
         return $verificationDirector;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function verify()
     {
         return $this->receivedMethodCalls->verify($this->expectation);
@@ -263,6 +277,9 @@ class VerificationDirector
         $director = new VerificationDirector($this->receivedMethodCalls, $expectation);
         $director->verify();
         return $director;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

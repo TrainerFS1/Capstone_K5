@@ -33,7 +33,11 @@ class ProcessHelper extends Helper
      *                                output available on STDOUT or STDERR
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function run(OutputInterface $output, array|Process $cmd, ?string $error = null, ?callable $callback = null, int $verbosity = OutputInterface::VERBOSITY_VERY_VERBOSE): Process
+=======
+    public function run(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null, int $verbosity = OutputInterface::VERBOSITY_VERY_VERBOSE): Process
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function run(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null, int $verbosity = OutputInterface::VERBOSITY_VERY_VERBOSE): Process
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -99,7 +103,11 @@ class ProcessHelper extends Helper
      * @see run()
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function mustRun(OutputInterface $output, array|Process $cmd, ?string $error = null, ?callable $callback = null): Process
+=======
+    public function mustRun(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null): Process
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function mustRun(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null): Process
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -117,7 +125,11 @@ class ProcessHelper extends Helper
      * Wraps a Process callback to add debugging output.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function wrapCallback(OutputInterface $output, Process $process, ?callable $callback = null): callable
+=======
+    public function wrapCallback(OutputInterface $output, Process $process, callable $callback = null): callable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function wrapCallback(OutputInterface $output, Process $process, callable $callback = null): callable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

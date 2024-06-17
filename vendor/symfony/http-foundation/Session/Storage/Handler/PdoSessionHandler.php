@@ -12,9 +12,12 @@
 namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Types\Types;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
@@ -94,7 +97,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * Username when lazy-connect.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?string $username = null;
+=======
+    private string $username = '';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private string $username = '';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +110,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * Password when lazy-connect.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?string $password = null;
+=======
+    private string $password = '';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private string $password = '';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -163,7 +174,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * @throws \InvalidArgumentException When PDO error mode is not PDO::ERRMODE_EXCEPTION
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(#[\SensitiveParameter] \PDO|string|null $pdoOrDsn = null, #[\SensitiveParameter] array $options = [])
+=======
+    public function __construct(\PDO|string $pdoOrDsn = null, array $options = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(\PDO|string $pdoOrDsn = null, array $options = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -194,6 +209,7 @@ class PdoSessionHandler extends AbstractSessionHandler
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Adds the Table to the Schema if it doesn't exist.
      */
@@ -247,6 +263,8 @@ class PdoSessionHandler extends AbstractSessionHandler
     /**
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Creates the table to store sessions which can be called once for setup.
      *
      * Session ID is saved in a column of maximum length 128 because that is enough even
@@ -255,8 +273,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * if one was sure the data fits into it.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \PDOException    When the table already exists
@@ -284,7 +305,11 @@ class PdoSessionHandler extends AbstractSessionHandler
         try {
             $this->pdo->exec($sql);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->pdo->exec("CREATE INDEX {$this->lifetimeCol}_idx ON $this->table ($this->lifetimeCol)");
+=======
+            $this->pdo->exec("CREATE INDEX expiry ON $this->table ($this->lifetimeCol)");
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->pdo->exec("CREATE INDEX expiry ON $this->table ($this->lifetimeCol)");
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -317,7 +342,11 @@ class PdoSessionHandler extends AbstractSessionHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function read(#[\SensitiveParameter] string $sessionId): string
+=======
+    public function read(string $sessionId): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function read(string $sessionId): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -341,7 +370,11 @@ class PdoSessionHandler extends AbstractSessionHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function doDestroy(#[\SensitiveParameter] string $sessionId): bool
+=======
+    protected function doDestroy(string $sessionId): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function doDestroy(string $sessionId): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -363,7 +396,11 @@ class PdoSessionHandler extends AbstractSessionHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function doWrite(#[\SensitiveParameter] string $sessionId, string $data): bool
+=======
+    protected function doWrite(string $sessionId, string $data): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function doWrite(string $sessionId, string $data): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -410,7 +447,11 @@ class PdoSessionHandler extends AbstractSessionHandler
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function updateTimestamp(#[\SensitiveParameter] string $sessionId, string $data): bool
+=======
+    public function updateTimestamp(string $sessionId, string $data): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function updateTimestamp(string $sessionId, string $data): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -422,8 +463,13 @@ class PdoSessionHandler extends AbstractSessionHandler
                 "UPDATE $this->table SET $this->lifetimeCol = :expiry, $this->timeCol = :time WHERE $this->idCol = :id"
             );
 <<<<<<< HEAD
+<<<<<<< HEAD
             $updateStmt->bindValue(':id', $sessionId, \PDO::PARAM_STR);
             $updateStmt->bindValue(':expiry', $expiry, \PDO::PARAM_INT);
+=======
+            $updateStmt->bindParam(':id', $sessionId, \PDO::PARAM_STR);
+            $updateStmt->bindParam(':expiry', $expiry, \PDO::PARAM_INT);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $updateStmt->bindParam(':id', $sessionId, \PDO::PARAM_STR);
             $updateStmt->bindParam(':expiry', $expiry, \PDO::PARAM_INT);
@@ -468,7 +514,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * Lazy-connects to the database.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function connect(#[\SensitiveParameter] string $dsn): void
+=======
+    private function connect(string $dsn): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function connect(string $dsn): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -484,7 +534,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * @todo implement missing support for oci DSN (which look totally different from other PDO ones)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function buildDsnFromUrl(#[\SensitiveParameter] string $dsnOrUrl): string
+=======
+    private function buildDsnFromUrl(string $dsnOrUrl): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function buildDsnFromUrl(string $dsnOrUrl): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -551,8 +605,13 @@ class PdoSessionHandler extends AbstractSessionHandler
                     }
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // If "unix_socket" is not in the query, we continue with the same process as pgsql
                 // no break
+=======
+            // If "unix_socket" is not in the query, we continue with the same process as pgsql
+            // no break
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             // If "unix_socket" is not in the query, we continue with the same process as pgsql
             // no break
@@ -676,7 +735,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * to the session.gc_maxlifetime setting because gc() is called after read() and only sometimes.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function doRead(#[\SensitiveParameter] string $sessionId): string
+=======
+    protected function doRead(string $sessionId): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function doRead(string $sessionId): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -751,7 +814,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      *       - for sqlsrv using sp_getapplock with LockOwner = Session
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function doAdvisoryLock(#[\SensitiveParameter] string $sessionId): \PDOStatement
+=======
+    private function doAdvisoryLock(string $sessionId): \PDOStatement
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function doAdvisoryLock(string $sessionId): \PDOStatement
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -854,7 +921,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * Returns an insert statement supported by the database for writing session data.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getInsertStatement(#[\SensitiveParameter] string $sessionId, string $sessionData, int $maxlifetime): \PDOStatement
+=======
+    private function getInsertStatement(string $sessionId, string $sessionData, int $maxlifetime): \PDOStatement
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getInsertStatement(string $sessionId, string $sessionData, int $maxlifetime): \PDOStatement
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -885,7 +956,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * Returns an update statement supported by the database for writing session data.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getUpdateStatement(#[\SensitiveParameter] string $sessionId, string $sessionData, int $maxlifetime): \PDOStatement
+=======
+    private function getUpdateStatement(string $sessionId, string $sessionData, int $maxlifetime): \PDOStatement
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getUpdateStatement(string $sessionId, string $sessionData, int $maxlifetime): \PDOStatement
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -916,7 +991,11 @@ class PdoSessionHandler extends AbstractSessionHandler
      * Returns a merge/upsert (i.e. insert or update) statement when supported by the database for writing session data.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getMergeStatement(#[\SensitiveParameter] string $sessionId, string $data, int $maxlifetime): ?\PDOStatement
+=======
+    private function getMergeStatement(string $sessionId, string $data, int $maxlifetime): ?\PDOStatement
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function getMergeStatement(string $sessionId, string $data, int $maxlifetime): ?\PDOStatement
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

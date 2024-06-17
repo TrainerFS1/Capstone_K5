@@ -44,7 +44,11 @@ class ArgvInput extends Input
     private array $parsed;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?array $argv = null, ?InputDefinition $definition = null)
+=======
+    public function __construct(array $argv = null, InputDefinition $definition = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(array $argv = null, InputDefinition $definition = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -60,9 +64,12 @@ class ArgvInput extends Input
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function setTokens(array $tokens)
@@ -71,9 +78,12 @@ class ArgvInput extends Input
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function parse()
@@ -106,7 +116,11 @@ class ArgvInput extends Input
      * Parses a short option.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseShortOption(string $token): void
+=======
+    private function parseShortOption(string $token)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseShortOption(string $token)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -131,7 +145,11 @@ class ArgvInput extends Input
      * @throws RuntimeException When option given doesn't exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseShortOptionSet(string $name): void
+=======
+    private function parseShortOptionSet(string $name)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseShortOptionSet(string $name)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -158,7 +176,11 @@ class ArgvInput extends Input
      * Parses a long option.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseLongOption(string $token): void
+=======
+    private function parseLongOption(string $token)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseLongOption(string $token)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -181,7 +203,11 @@ class ArgvInput extends Input
      * @throws RuntimeException When too many arguments are given
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function parseArgument(string $token): void
+=======
+    private function parseArgument(string $token)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function parseArgument(string $token)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -229,7 +255,11 @@ class ArgvInput extends Input
      * @throws RuntimeException When option given doesn't exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addShortOption(string $shortcut, mixed $value): void
+=======
+    private function addShortOption(string $shortcut, mixed $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addShortOption(string $shortcut, mixed $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -247,7 +277,11 @@ class ArgvInput extends Input
      * @throws RuntimeException When option given doesn't exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addLongOption(string $name, mixed $value): void
+=======
+    private function addLongOption(string $name, mixed $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addLongOption(string $name, mixed $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

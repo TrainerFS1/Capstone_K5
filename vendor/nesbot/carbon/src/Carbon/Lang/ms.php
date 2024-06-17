@@ -49,7 +49,11 @@ return [
     'from_now' => ':time dari sekarang',
     'after' => ':time kemudian',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'before' => ':time sebelum',
+=======
+    'before' => ':time lepas',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'before' => ':time lepas',
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

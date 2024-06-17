@@ -12,6 +12,11 @@
 namespace Symfony\Polyfill\Intl\Idn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Exception;
+use Normalizer;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Exception;
 use Normalizer;
@@ -171,7 +176,11 @@ final class Idn
                 try {
                     $label = 'xn--'.self::punycodeEncode($label);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 } catch (\Exception $e) {
+=======
+                } catch (Exception $e) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 } catch (Exception $e) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -343,8 +352,13 @@ final class Idn
 
         // Step 2. Normalize the domain name string to Unicode Normalization Form C.
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!\Normalizer::isNormalized($domain, \Normalizer::FORM_C)) {
             $domain = \Normalizer::normalize($domain, \Normalizer::FORM_C);
+=======
+        if (!Normalizer::isNormalized($domain, Normalizer::FORM_C)) {
+            $domain = Normalizer::normalize($domain, Normalizer::FORM_C);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!Normalizer::isNormalized($domain, Normalizer::FORM_C)) {
             $domain = Normalizer::normalize($domain, Normalizer::FORM_C);
@@ -363,7 +377,11 @@ final class Idn
                 try {
                     $label = self::punycodeDecode(substr($label, 4));
 <<<<<<< HEAD
+<<<<<<< HEAD
                 } catch (\Exception $e) {
+=======
+                } catch (Exception $e) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 } catch (Exception $e) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -513,7 +531,11 @@ final class Idn
 
         // Step 1. The label must be in Unicode Normalization Form C.
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!\Normalizer::isNormalized($label, \Normalizer::FORM_C)) {
+=======
+        if (!Normalizer::isNormalized($label, Normalizer::FORM_C)) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         if (!Normalizer::isNormalized($label, Normalizer::FORM_C)) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -604,7 +626,11 @@ final class Idn
         for ($j = 0; $j < $b; ++$j) {
             if ($bytes[$j] > 0x7F) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new \Exception('Invalid input');
+=======
+                throw new Exception('Invalid input');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new Exception('Invalid input');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -624,7 +650,11 @@ final class Idn
             for ($k = self::BASE; /* no condition */; $k += self::BASE) {
                 if ($in >= $inputLength) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new \Exception('Invalid input');
+=======
+                    throw new Exception('Invalid input');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new Exception('Invalid input');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -634,17 +664,23 @@ final class Idn
 
                 if ($digit < 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new \Exception('Invalid input');
                 }
 
                 if ($digit > intdiv(self::MAX_INT - $i, $w)) {
                     throw new \Exception('Integer overflow');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     throw new Exception('Invalid input');
                 }
 
                 if ($digit > intdiv(self::MAX_INT - $i, $w)) {
                     throw new Exception('Integer overflow');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
 
@@ -666,7 +702,11 @@ final class Idn
 
                 if ($w > intdiv(self::MAX_INT, $baseMinusT)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new \Exception('Integer overflow');
+=======
+                    throw new Exception('Integer overflow');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new Exception('Integer overflow');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -680,7 +720,11 @@ final class Idn
 
             if (intdiv($i, $outPlusOne) > self::MAX_INT - $n) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new \Exception('Integer overflow');
+=======
+                throw new Exception('Integer overflow');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new Exception('Integer overflow');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -739,7 +783,11 @@ final class Idn
 
             if ($m - $n > intdiv(self::MAX_INT - $delta, $h + 1)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new \Exception('Integer overflow');
+=======
+                throw new Exception('Integer overflow');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new Exception('Integer overflow');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -751,7 +799,11 @@ final class Idn
             foreach ($iter as $codePoint) {
                 if ($codePoint < $n && 0 === ++$delta) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     throw new \Exception('Integer overflow');
+=======
+                    throw new Exception('Integer overflow');
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     throw new Exception('Integer overflow');
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

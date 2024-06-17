@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,6 +28,9 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
@@ -32,9 +38,12 @@ namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function strrpos;
 use function substr;
 use const PHP_VERSION_ID;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -44,6 +53,7 @@ use const PHP_VERSION_ID;
  * implements Serializable, we need to replace the standard unserialize method
  * definition with a dummy
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 class RemoveUnserializeForInternalSerializableClassesPass implements Pass
 {
@@ -56,16 +66,22 @@ class RemoveUnserializeForInternalSerializableClassesPass implements Pass
      * @return string
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class RemoveUnserializeForInternalSerializableClassesPass
 {
     const DUMMY_METHOD_DEFINITION_LEGACY = 'public function unserialize($string) {} ';
     const DUMMY_METHOD_DEFINITION = 'public function unserialize(string $data): void {} ';
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function apply($code, MockConfiguration $config)
     {
         $target = $config->getTargetClass();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (! $target) {
             return $code;
@@ -80,6 +96,8 @@ class RemoveUnserializeForInternalSerializableClassesPass
             PHP_VERSION_ID < 80100 ? self::DUMMY_METHOD_DEFINITION_LEGACY : self::DUMMY_METHOD_DEFINITION
         );
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$target) {
             return $code;
         }
@@ -91,14 +109,23 @@ class RemoveUnserializeForInternalSerializableClassesPass
         $code = $this->appendToClass($code, \PHP_VERSION_ID < 80100 ? self::DUMMY_METHOD_DEFINITION_LEGACY : self::DUMMY_METHOD_DEFINITION);
 
         return $code;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     protected function appendToClass($class, $code)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $lastBrace = strrpos($class, '}');
         return substr($class, 0, $lastBrace) . $code . "\n    }\n";
+=======
+        $lastBrace = strrpos($class, "}");
+        $class = substr($class, 0, $lastBrace) . $code . "\n    }\n";
+        return $class;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $lastBrace = strrpos($class, "}");
         $class = substr($class, 0, $lastBrace) . $code . "\n    }\n";

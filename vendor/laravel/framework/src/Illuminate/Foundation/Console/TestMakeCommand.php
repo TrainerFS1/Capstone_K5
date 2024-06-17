@@ -10,8 +10,11 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Laravel\Prompts\select;
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'make:test')]
@@ -131,6 +134,7 @@ class TestMakeCommand extends GeneratorCommand
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $type = select('Which type of test would you like?', [
             'feature' => 'Feature (PHPUnit)',
             'unit' => 'Unit (PHPUnit)',
@@ -138,20 +142,30 @@ class TestMakeCommand extends GeneratorCommand
             'pest-unit' => 'Unit (Pest)',
         ]);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $type = $this->components->choice('Which type of test would you like', [
             'feature',
             'unit',
             'pest feature',
             'pest unit',
         ], default: 0);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         match ($type) {
             'feature' => null,
             'unit' => $input->setOption('unit', true),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'pest-feature' => $input->setOption('pest', true),
             'pest-unit' => tap($input)->setOption('pest', true)->setOption('unit', true),
+=======
+            'pest feature' => $input->setOption('pest', true),
+            'pest unit' => tap($input)->setOption('pest', true)->setOption('unit', true),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             'pest feature' => $input->setOption('pest', true),
             'pest unit' => tap($input)->setOption('pest', true)->setOption('unit', true),

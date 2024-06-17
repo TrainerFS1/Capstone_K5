@@ -21,10 +21,13 @@ use SebastianBergmann\CodeCoverage\Driver\Driver;
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @psalm-import-type XdebugFunctionCoverageType from \SebastianBergmann\CodeCoverage\Driver\XdebugDriver
  *
  * @psalm-type TestIdType = string
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
@@ -34,8 +37,11 @@ final class ProcessedCodeCoverageData
      * Line coverage data.
      * An array of filenames, each having an array of linenumbers, each executable line having an array of testcase ids.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-var array<string, array<int, null|list<TestIdType>>>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -45,6 +51,7 @@ final class ProcessedCodeCoverageData
      * Function coverage data.
      * Maintains base format of raw data (@see https://xdebug.org/docs/code_coverage), but each 'hit' entry is an array
      * of testcase ids.
+<<<<<<< HEAD
 <<<<<<< HEAD
      *
      * @psalm-var array<string, array<string, array{
@@ -63,6 +70,8 @@ final class ProcessedCodeCoverageData
      *     }>,
      *     hit: list<TestIdType>
      * }>>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -174,8 +183,13 @@ final class ProcessedCodeCoverageData
                 array_merge(
                     array_keys($this->lineCoverage[$file]),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     array_keys($newData->lineCoverage[$file]),
                 ),
+=======
+                    array_keys($newData->lineCoverage[$file])
+                )
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                     array_keys($newData->lineCoverage[$file])
                 )
@@ -191,7 +205,11 @@ final class ProcessedCodeCoverageData
                 } elseif ($thatPriority === $thisPriority && is_array($this->lineCoverage[$file][$line])) {
                     $this->lineCoverage[$file][$line] = array_unique(
 <<<<<<< HEAD
+<<<<<<< HEAD
                         array_merge($this->lineCoverage[$file][$line], $newData->lineCoverage[$file][$line]),
+=======
+                        array_merge($this->lineCoverage[$file][$line], $newData->lineCoverage[$file][$line])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         array_merge($this->lineCoverage[$file][$line], $newData->lineCoverage[$file][$line])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -255,8 +273,11 @@ final class ProcessedCodeCoverageData
     /**
      * For a function we have never seen before, copy all data over and simply init the 'hit' array.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-param XdebugFunctionCoverageType $functionData
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -278,8 +299,11 @@ final class ProcessedCodeCoverageData
      * Techniques such as mocking and where the contents of a file are different vary during tests (e.g. compiling
      * containers) mean that the functions inside a file cannot be relied upon to be static.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @psalm-param XdebugFunctionCoverageType $functionData
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

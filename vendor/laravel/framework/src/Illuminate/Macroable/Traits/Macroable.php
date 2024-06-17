@@ -46,6 +46,10 @@ trait Macroable
         foreach ($methods as $method) {
             if ($replace || ! static::hasMacro($method->name)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                $method->setAccessible(true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $method->setAccessible(true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -111,7 +115,11 @@ trait Macroable
      * @throws \BadMethodCallException
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __call($method, $parameters)
+=======
+    public function __call($method, array $parameters)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __call($method, array $parameters)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

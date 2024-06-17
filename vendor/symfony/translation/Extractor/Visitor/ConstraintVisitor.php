@@ -22,6 +22,11 @@ use PhpParser\NodeVisitor;
 final class ConstraintVisitor extends AbstractVisitor implements NodeVisitor
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private const CONSTRAINT_VALIDATION_MESSAGE_PATTERN = '/[a-zA-Z]*message/i';
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private const CONSTRAINT_VALIDATION_MESSAGE_PATTERN = '/[a-zA-Z]*message/i';
 
@@ -39,11 +44,14 @@ final class ConstraintVisitor extends AbstractVisitor implements NodeVisitor
     public function enterNode(Node $node): ?Node
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return null;
     }
 
     public function leaveNode(Node $node): ?Node
     {
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$node instanceof Node\Expr\New_ && !$node instanceof Node\Attribute) {
@@ -56,7 +64,11 @@ final class ConstraintVisitor extends AbstractVisitor implements NodeVisitor
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $parts = $className->getParts();
+=======
+        $parts = $className->parts;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         $parts = $className->parts;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -81,7 +93,11 @@ final class ConstraintVisitor extends AbstractVisitor implements NodeVisitor
 
         if ($this->hasNodeNamedArguments($node)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $messages = $this->getStringArguments($node, '/message/i', true);
+=======
+            $messages = $this->getStringArguments($node, self::CONSTRAINT_VALIDATION_MESSAGE_PATTERN, true);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $messages = $this->getStringArguments($node, self::CONSTRAINT_VALIDATION_MESSAGE_PATTERN, true);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -101,7 +117,11 @@ final class ConstraintVisitor extends AbstractVisitor implements NodeVisitor
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (false === stripos($item->key->value ?? '', 'message')) {
+=======
+                if (!preg_match(self::CONSTRAINT_VALIDATION_MESSAGE_PATTERN, $item->key->value ?? '')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 if (!preg_match(self::CONSTRAINT_VALIDATION_MESSAGE_PATTERN, $item->key->value ?? '')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -126,12 +146,18 @@ final class ConstraintVisitor extends AbstractVisitor implements NodeVisitor
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function leaveNode(Node $node): ?Node
     {
         return null;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function afterTraverse(array $nodes): ?Node
     {

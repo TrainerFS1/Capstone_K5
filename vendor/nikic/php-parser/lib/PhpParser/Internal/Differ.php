@@ -9,16 +9,22 @@ namespace PhpParser\Internal;
  * Algorithmica 1.1 (1986): 251-266.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @template T
  * @internal
  */
 class Differ {
     /** @var callable(T, T): bool */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @internal
  */
 class Differ
 {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $isEqual;
 
@@ -26,7 +32,11 @@ class Differ
      * Create differ over the given equality relation.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param callable(T, T): bool $isEqual Equality relation
+=======
+     * @param callable $isEqual Equality relation with signature function($a, $b) : bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param callable $isEqual Equality relation with signature function($a, $b) : bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -39,6 +49,7 @@ class Differ
      * Calculate diff (edit script) from $old to $new.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param T[] $old Original array
      * @param T[] $new New array
      *
@@ -48,12 +59,17 @@ class Differ
         $old = \array_values($old);
         $new = \array_values($new);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $old Original array
      * @param array $new New array
      *
      * @return DiffElem[] Diff (edit script)
      */
     public function diff(array $old, array $new) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         list($trace, $x, $y) = $this->calculateTrace($old, $new);
         return $this->extractDiff($trace, $x, $y, $old, $new);
@@ -65,6 +81,7 @@ class Differ
      * If a sequence of remove operations is followed by the same number of add operations, these
      * will be coalesced into replace operations.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param T[] $old Original array
      * @param T[] $new New array
@@ -84,6 +101,8 @@ class Differ
         $n = \count($old);
         $m = \count($new);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $old Original array
      * @param array $new New array
      *
@@ -96,6 +115,9 @@ class Differ
     private function calculateTrace(array $a, array $b) {
         $n = \count($a);
         $m = \count($b);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $max = $n + $m;
         $v = [1 => 0];
@@ -103,6 +125,7 @@ class Differ
         for ($d = 0; $d <= $max; $d++) {
             $trace[] = $v;
             for ($k = -$d; $k <= $d; $k += 2) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 if ($k === -$d || ($k !== $d && $v[$k - 1] < $v[$k + 1])) {
                     $x = $v[$k + 1];
@@ -113,6 +136,8 @@ class Differ
                 $y = $x - $k;
                 while ($x < $n && $y < $m && ($this->isEqual)($old[$x], $new[$y])) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($k === -$d || ($k !== $d && $v[$k-1] < $v[$k+1])) {
                     $x = $v[$k+1];
                 } else {
@@ -121,6 +146,9 @@ class Differ
 
                 $y = $x - $k;
                 while ($x < $n && $y < $m && ($this->isEqual)($a[$x], $b[$y])) {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $x++;
                     $y++;
@@ -136,6 +164,7 @@ class Differ
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param array<int, array<int, int>> $trace
      * @param T[] $old
@@ -146,13 +175,20 @@ class Differ
 =======
     private function extractDiff(array $trace, int $x, int $y, array $a, array $b) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    private function extractDiff(array $trace, int $x, int $y, array $a, array $b) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $result = [];
         for ($d = \count($trace) - 1; $d >= 0; $d--) {
             $v = $trace[$d];
             $k = $x - $y;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($k === -$d || ($k !== $d && $v[$k - 1] < $v[$k + 1])) {
+=======
+            if ($k === -$d || ($k !== $d && $v[$k-1] < $v[$k+1])) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if ($k === -$d || ($k !== $d && $v[$k-1] < $v[$k+1])) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -166,7 +202,11 @@ class Differ
 
             while ($x > $prevX && $y > $prevY) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $result[] = new DiffElem(DiffElem::TYPE_KEEP, $old[$x - 1], $new[$y - 1]);
+=======
+                $result[] = new DiffElem(DiffElem::TYPE_KEEP, $a[$x-1], $b[$y-1]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $result[] = new DiffElem(DiffElem::TYPE_KEEP, $a[$x-1], $b[$y-1]);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -180,7 +220,11 @@ class Differ
 
             while ($x > $prevX) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $result[] = new DiffElem(DiffElem::TYPE_REMOVE, $old[$x - 1], null);
+=======
+                $result[] = new DiffElem(DiffElem::TYPE_REMOVE, $a[$x-1], null);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $result[] = new DiffElem(DiffElem::TYPE_REMOVE, $a[$x-1], null);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -189,7 +233,11 @@ class Differ
 
             while ($y > $prevY) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $result[] = new DiffElem(DiffElem::TYPE_ADD, null, $new[$y - 1]);
+=======
+                $result[] = new DiffElem(DiffElem::TYPE_ADD, null, $b[$y-1]);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 $result[] = new DiffElem(DiffElem::TYPE_ADD, null, $b[$y-1]);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -206,7 +254,11 @@ class Differ
      * @return DiffElem[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function coalesceReplacements(array $diff): array {
+=======
+    private function coalesceReplacements(array $diff) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function coalesceReplacements(array $diff) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

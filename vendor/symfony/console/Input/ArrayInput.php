@@ -28,7 +28,11 @@ class ArrayInput extends Input
     private array $parameters;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(array $parameters, ?InputDefinition $definition = null)
+=======
+    public function __construct(array $parameters, InputDefinition $definition = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(array $parameters, InputDefinition $definition = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -118,9 +122,12 @@ class ArrayInput extends Input
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function parse()
@@ -145,7 +152,11 @@ class ArrayInput extends Input
      * @throws InvalidOptionException When option given doesn't exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addShortOption(string $shortcut, mixed $value): void
+=======
+    private function addShortOption(string $shortcut, mixed $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addShortOption(string $shortcut, mixed $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -164,7 +175,11 @@ class ArrayInput extends Input
      * @throws InvalidOptionException When a required value is missing
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addLongOption(string $name, mixed $value): void
+=======
+    private function addLongOption(string $name, mixed $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addLongOption(string $name, mixed $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -201,7 +216,11 @@ class ArrayInput extends Input
      * @throws InvalidArgumentException When argument given doesn't exist
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function addArgument(string|int $name, mixed $value): void
+=======
+    private function addArgument(string|int $name, mixed $value)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function addArgument(string|int $name, mixed $value)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

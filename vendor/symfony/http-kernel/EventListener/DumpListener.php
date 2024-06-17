@@ -30,7 +30,11 @@ class DumpListener implements EventSubscriberInterface
     private ?Connection $connection;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(ClonerInterface $cloner, DataDumperInterface $dumper, ?Connection $connection = null)
+=======
+    public function __construct(ClonerInterface $cloner, DataDumperInterface $dumper, Connection $connection = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(ClonerInterface $cloner, DataDumperInterface $dumper, Connection $connection = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,9 +45,12 @@ class DumpListener implements EventSubscriberInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function configure()
@@ -53,11 +60,16 @@ class DumpListener implements EventSubscriberInterface
         $connection = $this->connection;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         VarDumper::setHandler(static function ($var, ?string $label = null) use ($cloner, $dumper, $connection) {
             $data = $cloner->cloneVar($var);
             if (null !== $label) {
                 $data = $data->withContext(['label' => $label]);
             }
+=======
+        VarDumper::setHandler(static function ($var) use ($cloner, $dumper, $connection) {
+            $data = $cloner->cloneVar($var);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         VarDumper::setHandler(static function ($var) use ($cloner, $dumper, $connection) {
             $data = $cloner->cloneVar($var);

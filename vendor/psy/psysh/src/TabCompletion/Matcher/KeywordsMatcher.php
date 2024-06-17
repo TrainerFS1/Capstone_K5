@@ -74,7 +74,11 @@ class KeywordsMatcher extends AbstractMatcher
 //            case is_string($token) && $token === '$':
             case self::hasToken([self::T_OPEN_TAG, self::T_VARIABLE], $prevToken) &&
 <<<<<<< HEAD
+<<<<<<< HEAD
             self::tokenIs($token, self::T_STRING):
+=======
+                self::tokenIs($token, self::T_STRING):
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 self::tokenIs($token, self::T_STRING):
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

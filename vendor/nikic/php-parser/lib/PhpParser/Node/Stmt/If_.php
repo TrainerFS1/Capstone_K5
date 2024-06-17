@@ -5,6 +5,7 @@ namespace PhpParser\Node\Stmt;
 use PhpParser\Node;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class If_ extends Node\Stmt {
     /** @var Node\Expr Condition expression */
     public Node\Expr $cond;
@@ -15,6 +16,8 @@ class If_ extends Node\Stmt {
     /** @var null|Else_ Else clause */
     public ?Else_ $else;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class If_ extends Node\Stmt
 {
     /** @var Node\Expr Condition expression */
@@ -25,11 +28,15 @@ class If_ extends Node\Stmt
     public $elseifs;
     /** @var null|Else_ Else clause */
     public $else;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs an if node.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param Node\Expr $cond Condition
      * @param array{
@@ -42,12 +49,17 @@ class If_ extends Node\Stmt
      *             'else'    => null   : Else clause
      * @param array<string, mixed> $attributes Additional attributes
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param Node\Expr $cond       Condition
      * @param array     $subNodes   Array of the following optional subnodes:
      *                              'stmts'   => array(): Statements
      *                              'elseifs' => array(): Elseif clauses
      *                              'else'    => null   : Else clause
      * @param array     $attributes Additional attributes
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(Node\Expr $cond, array $subNodes = [], array $attributes = []) {
@@ -59,17 +71,23 @@ class If_ extends Node\Stmt
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['cond', 'stmts', 'elseifs', 'else'];
     }
 
     public function getType(): string {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getSubNodeNames() : array {
         return ['cond', 'stmts', 'elseifs', 'else'];
     }
     
     public function getType() : string {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Stmt_If';
     }

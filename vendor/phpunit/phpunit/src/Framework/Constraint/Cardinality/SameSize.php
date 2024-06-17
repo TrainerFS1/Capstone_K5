@@ -10,7 +10,10 @@
 namespace PHPUnit\Framework\Constraint;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Countable;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\Exception;
@@ -22,7 +25,11 @@ final class SameSize extends Count
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param Countable|iterable $expected
+=======
+     * @psalm-param \Countable|iterable $expected
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param \Countable|iterable $expected
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

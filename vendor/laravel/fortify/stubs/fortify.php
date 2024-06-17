@@ -1,6 +1,10 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use App\Providers\RouteServiceProvider;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use App\Providers\RouteServiceProvider;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,6 +60,7 @@ return [
     /*
     |--------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
     | Lowercase Usernames
     |--------------------------------------------------------------------------
     |
@@ -71,6 +76,8 @@ return [
     |--------------------------------------------------------------------------
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     | Home Path
     |--------------------------------------------------------------------------
     |
@@ -81,7 +88,11 @@ return [
     */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     'home' => '/home',
+=======
+    'home' => RouteServiceProvider::HOME,
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     'home' => RouteServiceProvider::HOME,
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

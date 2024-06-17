@@ -5,12 +5,15 @@ namespace PhpParser\Node;
 use PhpParser\Node;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface FunctionLike extends Node {
     /**
      * Whether to return by reference
      */
     public function returnsByRef(): bool;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 interface FunctionLike extends Node
 {
     /**
@@ -19,6 +22,9 @@ interface FunctionLike extends Node
      * @return bool
      */
     public function returnsByRef() : bool;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -27,7 +33,11 @@ interface FunctionLike extends Node
      * @return Param[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getParams(): array;
+=======
+    public function getParams() : array;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getParams() : array;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -45,7 +55,11 @@ interface FunctionLike extends Node
      * @return Stmt[]|null
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getStmts(): ?array;
+=======
+    public function getStmts();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getStmts();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -56,7 +70,11 @@ interface FunctionLike extends Node
      * @return AttributeGroup[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getAttrGroups(): array;
+=======
+    public function getAttrGroups() : array;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getAttrGroups() : array;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

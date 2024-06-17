@@ -51,22 +51,34 @@ final class Version
     /**
      * Version number of this version.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     private int $versionNumber;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @var int
      */
     private $versionNumber;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Alignment pattern centers.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var SplFixedArray|array
      */
     private SplFixedArray|array $alignmentPatternCenters;
+=======
+     * @var SplFixedArray
+     */
+    private $alignmentPatternCenters;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @var SplFixedArray
      */
@@ -79,6 +91,7 @@ final class Version
      * @var EcBlocks[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private array $ecBlocks;
 
     /**
@@ -86,6 +99,8 @@ final class Version
      */
     private null|int|float $totalCodewords;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $ecBlocks;
 
     /**
@@ -94,6 +109,9 @@ final class Version
      * @var int
      */
     private $totalCodewords;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -102,7 +120,11 @@ final class Version
      * @var array<int, self>|null
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static ?array $versions = null;
+=======
+    private static $versions;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private static $versions;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -325,7 +347,11 @@ final class Version
                 new EcBlocks(20, new EcBlock(1, 80)),
                 new EcBlocks(18, new EcBlock(2, 32)),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new EcBlocks(26, new EcBlock(2, 24)),
+=======
+                new EcBlocks(26, new EcBlock(3, 24)),
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 new EcBlocks(26, new EcBlock(3, 24)),
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

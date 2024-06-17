@@ -10,7 +10,10 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\VarDumper\Caster\ScalarStub;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\VarDumper\VarDumper;
@@ -18,6 +21,7 @@ use Symfony\Component\VarDumper\VarDumper;
 if (!function_exists('dump')) {
     /**
      * @author Nicolas Grekas <p@tchwork.com>
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @author Alexandre Daubois <alex.daubois@gmail.com>
      */
@@ -44,6 +48,8 @@ if (!function_exists('dump')) {
 
         return $vars[$k];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     function dump(mixed $var, mixed ...$moreVars): mixed
     {
@@ -58,11 +64,15 @@ if (!function_exists('dump')) {
         }
 
         return $var;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }
 
 if (!function_exists('dd')) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     function dd(mixed ...$vars): never
     {
@@ -77,6 +87,8 @@ if (!function_exists('dd')) {
                 VarDumper::dump($v, is_int($k) ? 1 + $k : $k);
             }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @return never
      */
@@ -88,6 +100,9 @@ if (!function_exists('dd')) {
 
         foreach ($vars as $v) {
             VarDumper::dump($v);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 

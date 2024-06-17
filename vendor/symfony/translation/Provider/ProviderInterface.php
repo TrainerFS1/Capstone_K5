@@ -15,13 +15,19 @@ use Symfony\Component\Translation\TranslatorBag;
 use Symfony\Component\Translation\TranslatorBagInterface;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ProviderInterface extends \Stringable
 {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 interface ProviderInterface
 {
     public function __toString(): string;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Translations available in the TranslatorBag only must be created.

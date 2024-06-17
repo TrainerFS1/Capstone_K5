@@ -43,7 +43,11 @@ class IssetPass extends CodeCleanerPass
         foreach ($node->vars as $var) {
             if (!$var instanceof Variable && !$var instanceof ArrayDimFetch && !$var instanceof PropertyFetch && !$var instanceof NullsafePropertyFetch) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new FatalErrorException(self::EXCEPTION_MSG, 0, \E_ERROR, null, $node->getStartLine());
+=======
+                throw new FatalErrorException(self::EXCEPTION_MSG, 0, \E_ERROR, null, $node->getLine());
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 throw new FatalErrorException(self::EXCEPTION_MSG, 0, \E_ERROR, null, $node->getLine());
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

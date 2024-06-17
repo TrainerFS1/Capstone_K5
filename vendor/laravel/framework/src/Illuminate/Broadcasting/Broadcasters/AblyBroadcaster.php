@@ -207,7 +207,11 @@ class AblyBroadcaster extends Broadcaster
      * Get the public token value from the Ably key.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return string
+=======
+     * @return mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,7 +225,11 @@ class AblyBroadcaster extends Broadcaster
      * Get the private token value from the Ably key.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return string
+=======
+     * @return mixed
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return mixed
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -241,6 +249,7 @@ class AblyBroadcaster extends Broadcaster
         return $this->ably;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * Set the underlying Ably SDK instance.
@@ -252,6 +261,8 @@ class AblyBroadcaster extends Broadcaster
     {
         $this->ably = $ably;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

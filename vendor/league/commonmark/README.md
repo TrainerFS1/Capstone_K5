@@ -4,7 +4,11 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/league/commonmark.svg?style=flat-square)](https://packagist.org/packages/league/commonmark)
 [![Software License](https://img.shields.io/badge/License-BSD--3-brightgreen.svg?style=flat-square)](LICENSE)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Build Status](https://img.shields.io/github/actions/workflow/status/thephpleague/commonmark/tests.yml?branch=main&style=flat-square)](https://github.com/thephpleague/commonmark/actions?query=workflow%3ATests+branch%3Amain)
+=======
+[![Build Status](https://img.shields.io/github/workflow/status/thephpleague/commonmark/Tests/main.svg?style=flat-square)](https://github.com/thephpleague/commonmark/actions?query=workflow%3ATests+branch%3Amain)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 [![Build Status](https://img.shields.io/github/workflow/status/thephpleague/commonmark/Tests/main.svg?style=flat-square)](https://github.com/thephpleague/commonmark/actions?query=workflow%3ATests+branch%3Amain)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -103,7 +107,11 @@ See [our extension documentation](https://commonmark.thephpleague.com/extensions
 Custom parsers/renderers can be bundled into extensions which extend CommonMark.  Here are some that you may find interesting:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  - [Emoji extension](https://github.com/ElGigi/CommonMarkEmoji) - UTF-8 emoji extension with Github tag.
+=======
+ - [Alt Three Emoji](https://github.com/AltThree/Emoji) An emoji parser for CommonMark.
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  - [Alt Three Emoji](https://github.com/AltThree/Emoji) An emoji parser for CommonMark.
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

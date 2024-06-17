@@ -34,7 +34,11 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
      * @param string|null $background The style background color name
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?string $foreground = null, ?string $background = null, array $options = [])
+=======
+    public function __construct(string $foreground = null, string $background = null, array $options = [])
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(string $foreground = null, string $background = null, array $options = [])
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -43,10 +47,14 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function setForeground(?string $color = null)
+=======
+    public function setForeground(string $color = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setForeground(string $color = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -58,10 +66,14 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
     public function setBackground(?string $color = null)
+=======
+    public function setBackground(string $color = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function setBackground(string $color = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -78,9 +90,12 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setOption(string $option)
@@ -90,9 +105,12 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function unsetOption(string $option)
@@ -106,9 +124,12 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setOptions(array $options)
@@ -120,8 +141,12 @@ class OutputFormatterStyle implements OutputFormatterStyleInterface
     {
         $this->handlesHrefGracefully ??= 'JetBrains-JediTerm' !== getenv('TERMINAL_EMULATOR')
 <<<<<<< HEAD
+<<<<<<< HEAD
             && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100)
             && !isset($_SERVER['IDEA_INITIAL_DIRECTORY']);
+=======
+            && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100);
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             && (!getenv('KONSOLE_VERSION') || (int) getenv('KONSOLE_VERSION') > 201100);
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

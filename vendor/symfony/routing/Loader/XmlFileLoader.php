@@ -39,7 +39,11 @@ class XmlFileLoader extends FileLoader
      *                                   parsed because it does not validate against the scheme
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function load(mixed $file, ?string $type = null): RouteCollection
+=======
+    public function load(mixed $file, string $type = null): RouteCollection
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function load(mixed $file, string $type = null): RouteCollection
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -67,8 +71,11 @@ class XmlFileLoader extends FileLoader
      * Parses a node from a loaded XML file.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException When the XML is invalid
@@ -102,7 +109,11 @@ class XmlFileLoader extends FileLoader
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function supports(mixed $resource, ?string $type = null): bool
+=======
+    public function supports(mixed $resource, string $type = null): bool
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function supports(mixed $resource, string $type = null): bool
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -114,8 +125,11 @@ class XmlFileLoader extends FileLoader
      * Parses a route and adds it to the RouteCollection.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException When the XML is invalid
@@ -166,8 +180,11 @@ class XmlFileLoader extends FileLoader
      * Parses an import and adds the routes in the resource to the RouteCollection.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException When the XML is invalid

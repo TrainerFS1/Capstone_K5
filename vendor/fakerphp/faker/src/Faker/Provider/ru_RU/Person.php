@@ -6,8 +6,13 @@ class Person extends \Faker\Provider\Person
 {
     protected static $maleNameFormats = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         '{{firstNameMale}} {{middleNameMale}} {{lastNameMale}}',
         '{{lastNameMale}} {{firstNameMale}} {{middleNameMale}}',
+=======
+        '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
+        '{{lastName}} {{firstNameMale}} {{middleNameMale}}',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
         '{{lastName}} {{firstNameMale}} {{middleNameMale}}',
@@ -20,8 +25,13 @@ class Person extends \Faker\Provider\Person
      */
     protected static $femaleNameFormats = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         '{{firstNameFemale}} {{middleNameFemale}} {{lastNameFemale}}',
         '{{lastNameFemale}} {{firstNameFemale}} {{middleNameFemale}}',
+=======
+        '{{firstNameFemale}} {{middleNameFemale}} {{lastName}}а',
+        '{{lastName}}а {{firstNameFemale}} {{middleNameFemale}}',
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         '{{firstNameFemale}} {{middleNameFemale}} {{lastName}}а',
         '{{lastName}}а {{firstNameFemale}} {{middleNameFemale}}',
@@ -176,6 +186,7 @@ class Person extends \Faker\Provider\Person
     public function lastName($gender = null)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (static::GENDER_FEMALE === $gender) {
             return $this->lastNameFemale();
         }
@@ -196,6 +207,8 @@ class Person extends \Faker\Provider\Person
     {
         return static::randomElement(static::$lastName) . 'а';
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $lastName = static::randomElement(static::$lastName);
 
         if (static::GENDER_FEMALE === $gender) {
@@ -207,6 +220,9 @@ class Person extends \Faker\Provider\Person
         }
 
         return $lastName . static::randomElement(static::$lastNameSuffix);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

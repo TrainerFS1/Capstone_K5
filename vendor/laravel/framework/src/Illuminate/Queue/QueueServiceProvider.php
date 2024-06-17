@@ -15,7 +15,10 @@ use Illuminate\Queue\Failed\DatabaseFailedJobProvider;
 use Illuminate\Queue\Failed\DatabaseUuidFailedJobProvider;
 use Illuminate\Queue\Failed\DynamoDbFailedJobProvider;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Queue\Failed\FileFailedJobProvider;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Queue\Failed\NullFailedJobProvider;
@@ -202,9 +205,13 @@ class QueueServiceProvider extends ServiceProvider implements DeferrableProvider
 
             $resetScope = function () use ($app) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $app['log']->flushSharedContext();
 
                 if (method_exists($app['log'], 'withoutContext')) {
+=======
+                if (method_exists($app['log']->driver(), 'withoutContext')) {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 if (method_exists($app['log']->driver(), 'withoutContext')) {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -221,7 +228,11 @@ class QueueServiceProvider extends ServiceProvider implements DeferrableProvider
                 $app->forgetScopedInstances();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Facade::clearResolvedInstances();
+=======
+                return Facade::clearResolvedInstances();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 return Facade::clearResolvedInstances();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -265,6 +276,7 @@ class QueueServiceProvider extends ServiceProvider implements DeferrableProvider
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (isset($config['driver']) && $config['driver'] === 'file') {
                 return new FileFailedJobProvider(
                     $config['path'] ?? $this->app->storagePath('framework/cache/failed-jobs.json'),
@@ -272,6 +284,9 @@ class QueueServiceProvider extends ServiceProvider implements DeferrableProvider
                     fn () => $app['cache']->store('file'),
                 );
             } elseif (isset($config['driver']) && $config['driver'] === 'dynamodb') {
+=======
+            if (isset($config['driver']) && $config['driver'] === 'dynamodb') {
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             if (isset($config['driver']) && $config['driver'] === 'dynamodb') {
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

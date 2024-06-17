@@ -12,9 +12,13 @@
 namespace Symfony\Component\HttpKernel\Controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\ValueResolver;
+=======
+use Symfony\Component\HttpFoundation\Request;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Symfony\Component\HttpFoundation\Request;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -27,8 +31,11 @@ use Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolv
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactoryInterface;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Exception\ResolverNotFoundException;
 use Symfony\Contracts\Service\ServiceProviderInterface;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -42,13 +49,17 @@ final class ArgumentResolver implements ArgumentResolverInterface
     private ArgumentMetadataFactoryInterface $argumentMetadataFactory;
     private iterable $argumentValueResolvers;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?ContainerInterface $namedResolvers;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param iterable<mixed, ArgumentValueResolverInterface|ValueResolverInterface> $argumentValueResolvers
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function __construct(?ArgumentMetadataFactoryInterface $argumentMetadataFactory = null, iterable $argumentValueResolvers = [], ?ContainerInterface $namedResolvers = null)
     {
@@ -59,6 +70,8 @@ final class ArgumentResolver implements ArgumentResolverInterface
 
     public function getArguments(Request $request, callable $controller, ?\ReflectionFunctionAbstract $reflector = null): array
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(ArgumentMetadataFactoryInterface $argumentMetadataFactory = null, iterable $argumentValueResolvers = [])
     {
         $this->argumentMetadataFactory = $argumentMetadataFactory ?? new ArgumentMetadataFactory();
@@ -66,11 +79,15 @@ final class ArgumentResolver implements ArgumentResolverInterface
     }
 
     public function getArguments(Request $request, callable $controller, \ReflectionFunctionAbstract $reflector = null): array
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $arguments = [];
 
         foreach ($this->argumentMetadataFactory->createArgumentMetadata($controller, $reflector) as $metadata) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             $argumentValueResolvers = $this->argumentValueResolvers;
             $disabledResolvers = [];
@@ -108,10 +125,15 @@ final class ArgumentResolver implements ArgumentResolverInterface
                     continue;
                 }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($this->argumentValueResolvers as $resolver) {
                 if ((!$resolver instanceof ValueResolverInterface || $resolver instanceof TraceableValueResolver) && !$resolver->supports($request, $metadata)) {
                     continue;
                 }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 $count = 0;
@@ -135,8 +157,11 @@ final class ArgumentResolver implements ArgumentResolverInterface
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new \RuntimeException(sprintf('Controller "%s" requires that you provide a value for the "$%s" argument. Either the argument is nullable and no null value has been provided, no default value has been provided or there is a non-optional argument after this one.', $this->getPrettyName($controller), $metadata->getName()));
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $representative = $controller;
 
             if (\is_array($representative)) {
@@ -146,6 +171,9 @@ final class ArgumentResolver implements ArgumentResolverInterface
             }
 
             throw new \RuntimeException(sprintf('Controller "%s" requires that you provide a value for the "$%s" argument. Either the argument is nullable and no null value has been provided, no default value has been provided or because there is a non optional argument after this one.', $representative, $metadata->getName()));
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
@@ -166,6 +194,7 @@ final class ArgumentResolver implements ArgumentResolverInterface
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private function getPrettyName($controller): string
     {
@@ -183,6 +212,8 @@ final class ArgumentResolver implements ArgumentResolverInterface
 
         return $controller;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -17,7 +17,10 @@
         "doctrine/collections": "^1.6.8",
         "doctrine/common": "^2.13.3 || ^3.2.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "phpspec/prophecy": "^1.10",
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
@@ -25,7 +28,11 @@
     "conflict": {
         "doctrine/collections": "<1.6.8",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "doctrine/common": "<2.13.3 || >=3 <3.2.2"
+=======
+        "doctrine/common": "<2.13.3 || >=3,<3.2.2"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         "doctrine/common": "<2.13.3 || >=3,<3.2.2"
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -41,8 +48,13 @@
     "autoload-dev": {
         "psr-4": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "DeepCopyTest\\": "tests/DeepCopyTest/",
             "DeepCopy\\": "fixtures/"
+=======
+            "DeepCopy\\": "fixtures/",
+            "DeepCopyTest\\": "tests/DeepCopyTest/"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             "DeepCopy\\": "fixtures/",
             "DeepCopyTest\\": "tests/DeepCopyTest/"

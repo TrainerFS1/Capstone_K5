@@ -52,9 +52,12 @@ class MetadataBag implements SessionBagInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return void
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function initialize(array &$array)
@@ -85,6 +88,7 @@ class MetadataBag implements SessionBagInterface
      * Stamps a new session's metadata.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                           will leave the system settings unchanged, 0 sets the cookie
      *                           to expire with browser session. Time is in seconds, and is
@@ -94,12 +98,17 @@ class MetadataBag implements SessionBagInterface
      */
     public function stampNew(?int $lifetime = null)
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                      will leave the system settings unchanged, 0 sets the cookie
      *                      to expire with browser session. Time is in seconds, and is
      *                      not a Unix timestamp.
      */
     public function stampNew(int $lifetime = null)
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->stampCreated($lifetime);
@@ -144,8 +153,11 @@ class MetadataBag implements SessionBagInterface
     /**
      * Sets name.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -155,7 +167,11 @@ class MetadataBag implements SessionBagInterface
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function stampCreated(?int $lifetime = null): void
+=======
+    private function stampCreated(int $lifetime = null): void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     private function stampCreated(int $lifetime = null): void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

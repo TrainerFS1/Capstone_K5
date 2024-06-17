@@ -5,12 +5,15 @@ namespace Spatie\Ignition;
 use ArrayObject;
 use ErrorException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\HasSolutionsForThrowable;
 use Spatie\ErrorSolutions\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
 use Spatie\ErrorSolutions\SolutionProviderRepository;
 use Spatie\ErrorSolutions\SolutionProviders\BadMethodCallSolutionProvider;
 use Spatie\ErrorSolutions\SolutionProviders\MergeConflictSolutionProvider;
 use Spatie\ErrorSolutions\SolutionProviders\UndefinedPropertySolutionProvider;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\FlareClient\Context\BaseContextProviderDetector;
@@ -23,9 +26,12 @@ use Spatie\FlareClient\FlareMiddleware\FlareMiddleware;
 use Spatie\FlareClient\Report;
 use Spatie\Ignition\Config\IgnitionConfig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\Ignition\ErrorPage\ErrorPageViewModel;
 use Spatie\Ignition\ErrorPage\Renderer;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\Ignition\Contracts\HasSolutionsForThrowable;
 use Spatie\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
 use Spatie\Ignition\ErrorPage\ErrorPageViewModel;
@@ -34,6 +40,9 @@ use Spatie\Ignition\Solutions\SolutionProviders\BadMethodCallSolutionProvider;
 use Spatie\Ignition\Solutions\SolutionProviders\MergeConflictSolutionProvider;
 use Spatie\Ignition\Solutions\SolutionProviders\SolutionProviderRepository;
 use Spatie\Ignition\Solutions\SolutionProviders\UndefinedPropertySolutionProvider;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
 
@@ -73,10 +82,16 @@ class Ignition
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         ?Flare $flare = null,
     ) {
         $this->flare = $flare ?? Flare::make();
+=======
+    public function __construct()
+    {
+        $this->flare = Flare::make();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct()
     {
@@ -259,6 +274,7 @@ class Ignition
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function register(?int $errorLevels = null): self
     {
         error_reporting($errorLevels ?? -1);
@@ -268,6 +284,8 @@ class Ignition
             : set_error_handler([$this, 'renderError']);
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function register(): self
     {
         error_reporting(-1);
@@ -276,6 +294,9 @@ class Ignition
         set_error_handler([$this, 'renderError']);
 
         /** @phpstan-ignore-next-line  */
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         set_exception_handler([$this, 'handleException']);
 
@@ -300,12 +321,15 @@ class Ignition
         array $context = []
     ): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(error_reporting() === (E_ERROR | E_CORE_ERROR | E_COMPILE_ERROR | E_USER_ERROR | E_RECOVERABLE_ERROR | E_PARSE)) {
             // This happens when PHP version is >=8 and we caught an error that was suppressed with the "@" operator
             // See the first warning box in https://www.php.net/manual/en/language.operators.errorcontrol.php
             return;
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         throw new ErrorException($message, 0, $level, $file, $line);
@@ -350,6 +374,7 @@ class Ignition
             $this->solutionTransformerClass,
             $this->customHtmlHead,
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->customHtmlBody,
         );
 
@@ -360,10 +385,15 @@ class Ignition
     {
         return __DIR__ . "/../resources/views/{$viewName}.php";
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->customHtmlBody
         );
 
         (new Renderer())->render(['viewModel' => $viewModel]);
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 

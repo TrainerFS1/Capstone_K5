@@ -121,7 +121,10 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
     {
         $options[RequestOptions::SYNCHRONOUS] = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->sendAsync($request, $options)->wait();
@@ -131,7 +134,11 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
      * The HttpClient PSR (PSR-18) specify this method.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * {@inheritDoc}
+=======
+     * @inheritDoc
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @inheritDoc
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -193,7 +200,10 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
     {
         $options[RequestOptions::SYNCHRONOUS] = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->requestAsync($method, $uri, $options)->wait();
@@ -213,7 +223,11 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
      * @deprecated Client::getConfig will be removed in guzzlehttp/guzzle:8.0.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getConfig(string $option = null)
+=======
+    public function getConfig(?string $option = null)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function getConfig(?string $option = null)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -245,17 +259,23 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
         $defaults = [
             'allow_redirects' => RedirectMiddleware::$defaultSettings,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'http_errors' => true,
             'decode_content' => true,
             'verify' => true,
             'cookies' => false,
             'idn_conversion' => false,
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'http_errors'     => true,
             'decode_content'  => true,
             'verify'          => true,
             'cookies'         => false,
             'idn_conversion'  => false,
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
 
@@ -379,15 +399,21 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
             if (isset($options['multipart'])) {
                 throw new InvalidArgumentException('You cannot use '
 <<<<<<< HEAD
+<<<<<<< HEAD
                     .'form_params and multipart at the same time. Use the '
                     .'form_params option if you want to send application/'
                     .'x-www-form-urlencoded requests, and the multipart '
                     .'option to send multipart/form-data requests.');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     . 'form_params and multipart at the same time. Use the '
                     . 'form_params option if you want to send application/'
                     . 'x-www-form-urlencoded requests, and the multipart '
                     . 'option to send multipart/form-data requests.');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
             $options['body'] = \http_build_query($options['form_params'], '', '&');
@@ -435,7 +461,11 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
                     $modify['set_headers'] = Psr7\Utils::caselessRemove(['Authorization'], $modify['set_headers']);
                     $modify['set_headers']['Authorization'] = 'Basic '
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .\base64_encode("$value[0]:$value[1]");
+=======
+                        . \base64_encode("$value[0]:$value[1]");
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                         . \base64_encode("$value[0]:$value[1]");
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -473,10 +503,13 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($options['version'])) {
             $modify['version'] = $options['version'];
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $request = Psr7\Utils::modifyRequest($request, $modify);
@@ -486,7 +519,11 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
             $options['_conditional'] = Psr7\Utils::caselessRemove(['Content-Type'], $options['_conditional']);
             $options['_conditional']['Content-Type'] = 'multipart/form-data; boundary='
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .$request->getBody()->getBoundary();
+=======
+                . $request->getBody()->getBoundary();
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
                 . $request->getBody()->getBoundary();
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -516,15 +553,21 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
     {
         return new InvalidArgumentException('Passing in the "body" request '
 <<<<<<< HEAD
+<<<<<<< HEAD
             .'option as an array to send a request is not supported. '
             .'Please use the "form_params" request option to send a '
             .'application/x-www-form-urlencoded request, or the "multipart" '
             .'request option to send a multipart/form-data request.');
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             . 'option as an array to send a request is not supported. '
             . 'Please use the "form_params" request option to send a '
             . 'application/x-www-form-urlencoded request, or the "multipart" '
             . 'request option to send a multipart/form-data request.');
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

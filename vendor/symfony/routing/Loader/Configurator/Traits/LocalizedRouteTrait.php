@@ -28,7 +28,11 @@ trait LocalizedRouteTrait
      * @param string|array $path the path, or the localized paths of the route
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     final protected function createLocalizedRoute(RouteCollection $collection, string $name, string|array $path, string $namePrefix = '', ?array $prefixes = null): RouteCollection
+=======
+    final protected function createLocalizedRoute(RouteCollection $collection, string $name, string|array $path, string $namePrefix = '', array $prefixes = null): RouteCollection
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     final protected function createLocalizedRoute(RouteCollection $collection, string $name, string|array $path, string $namePrefix = '', array $prefixes = null): RouteCollection
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

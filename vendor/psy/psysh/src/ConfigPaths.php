@@ -32,16 +32,22 @@ class ConfigPaths
      * @param EnvInterface $env
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(array $overrides = [], ?EnvInterface $env = null)
     {
         $this->overrideDirs($overrides);
 
         $this->env = $env ?: (\PHP_SAPI === 'cli-server' ? new SystemEnv() : new SuperglobalsEnv());
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(array $overrides = [], EnvInterface $env = null)
     {
         $this->overrideDirs($overrides);
         $this->env = $env ?: new SuperglobalsEnv();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -129,7 +135,10 @@ class ConfigPaths
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated
      */
     public static function getConfigDirs(): array
@@ -156,6 +165,9 @@ class ConfigPaths
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the current home config directory.
      *
@@ -185,7 +197,10 @@ class ConfigPaths
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated
      */
     public static function getCurrentConfigDir(): string
@@ -194,6 +209,9 @@ class ConfigPaths
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Find real config files in config directories.
      *
@@ -208,7 +226,10 @@ class ConfigPaths
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated
      */
     public static function getConfigFiles(array $names, $configDir = null): array
@@ -217,6 +238,9 @@ class ConfigPaths
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get potential data directory paths.
      *
@@ -243,7 +267,10 @@ class ConfigPaths
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated
      */
     public static function getDataDirs(): array
@@ -252,6 +279,9 @@ class ConfigPaths
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Find real data files in config directories.
      *
@@ -266,7 +296,10 @@ class ConfigPaths
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated
      */
     public static function getDataFiles(array $names, $dataDir = null): array
@@ -275,6 +308,9 @@ class ConfigPaths
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a runtime directory.
      *
@@ -294,7 +330,10 @@ class ConfigPaths
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @deprecated
      */
     public static function getRuntimeDir(): string
@@ -303,6 +342,9 @@ class ConfigPaths
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a list of directories in PATH.
      *

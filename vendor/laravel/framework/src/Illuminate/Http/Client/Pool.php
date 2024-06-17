@@ -40,14 +40,20 @@ class Pool
     {
         $this->factory = $factory ?: new Factory();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->handler = Utils::chooseHandler();
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (method_exists(Utils::class, 'chooseHandler')) {
             $this->handler = Utils::chooseHandler();
         } else {
             $this->handler = \GuzzleHttp\choose_handler();
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -88,7 +94,11 @@ class Pool
      * @param  string  $method
      * @param  array  $parameters
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Http\Client\PendingRequest|\GuzzleHttp\Promise\Promise
+=======
+     * @return \Illuminate\Http\Client\PendingRequest
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return \Illuminate\Http\Client\PendingRequest
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

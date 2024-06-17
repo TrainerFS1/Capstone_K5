@@ -38,17 +38,23 @@ final class Generator
     </testsuites>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <source restrictDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
             <directory>{src_directory}</directory>
         </include>
     </source>
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <coverage>
         <include>
             <directory suffix=".php">{src_directory}</directory>
         </include>
     </coverage>
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 </phpunit>
 
@@ -72,7 +78,11 @@ EOT;
                 $cacheDirectory,
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             self::TEMPLATE,
+=======
+            self::TEMPLATE
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             self::TEMPLATE
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

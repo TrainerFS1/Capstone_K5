@@ -40,6 +40,7 @@ final class TypeMap
     public function addMapping(string $subscriberInterface, string $eventClass): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->ensureSubscriberInterfaceExists($subscriberInterface);
         $this->ensureSubscriberInterfaceExtendsInterface($subscriberInterface);
         $this->ensureEventClassExists($eventClass);
@@ -47,6 +48,8 @@ final class TypeMap
         $this->ensureSubscriberWasNotAlreadyRegistered($subscriberInterface);
         $this->ensureEventWasNotAlreadyAssigned($eventClass);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!interface_exists($subscriberInterface)) {
             throw new UnknownSubscriberException(
                 sprintf(
@@ -100,6 +103,9 @@ final class TypeMap
                 )
             );
         }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->mapping[$subscriberInterface] = $eventClass;
@@ -137,6 +143,7 @@ final class TypeMap
         throw new MapError(
             sprintf(
                 'Subscriber "%s" does not implement a known interface',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $subscriber::class,
             ),
@@ -245,9 +252,14 @@ final class TypeMap
         }
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $subscriber::class
             )
         );
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

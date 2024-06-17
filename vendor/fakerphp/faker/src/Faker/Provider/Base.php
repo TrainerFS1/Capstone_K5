@@ -180,6 +180,7 @@ class Base
      * Returns randomly ordered subsequence of $count elements from a provided array
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @todo update default $count to `null` (BC) for next major version
      *
      * @param array|class-string|\Traversable $array           Array to take elements from. Defaults to a-c
@@ -189,17 +190,23 @@ class Base
      * @throws \InvalidArgumentException
      * @throws \LengthException          When requesting more elements than provided
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $array           Array to take elements from. Defaults to a-c
      * @param int   $count           Number of elements to take.
      * @param bool  $allowDuplicates Allow elements to be picked several times. Defaults to false
      *
      * @throws \LengthException When requesting more elements than provided
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array New array with $count elements from $array
      */
     public static function randomElements($array = ['a', 'b', 'c'], $count = 1, $allowDuplicates = false)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $elements = $array;
 
@@ -261,6 +268,8 @@ class Base
 
         return $randomElements;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $traversables = [];
 
         if ($array instanceof \Traversable) {
@@ -297,12 +306,16 @@ class Base
         }
 
         return $elements;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Returns a random element from a passed array
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param array|class-string|\Traversable $array
      *
@@ -337,6 +350,8 @@ class Base
 
         return $randomElements[0];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array $array
      */
     public static function randomElement($array = ['a', 'b', 'c'])
@@ -347,6 +362,9 @@ class Base
         $elements = static::randomElements($array, 1);
 
         return $elements[0];
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -552,7 +570,11 @@ class Base
     {
         $string = self::replaceWildcard($string, '*', static function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
             return mt_rand(0, 1) === 1 ? '#' : '?';
+=======
+            return mt_rand(0, 1) ? '#' : '?';
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             return mt_rand(0, 1) ? '#' : '?';
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -641,7 +663,10 @@ class Base
             $match = preg_replace('/\\\(?!\\\)/', '', $matches[1]);
             $randomElement = Base::randomElement(str_split($match));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             //[.] should not be a random character, but a literal .

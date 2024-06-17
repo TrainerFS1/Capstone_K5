@@ -6,6 +6,7 @@ namespace BaconQrCode\Renderer\Path;
 final class Curve implements OperationInterface
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(
         private readonly float $x1,
         private readonly float $y1,
@@ -15,6 +16,8 @@ final class Curve implements OperationInterface
         private readonly float $y3
     ) {
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @var float
      */
@@ -53,6 +56,9 @@ final class Curve implements OperationInterface
         $this->y2 = $y2;
         $this->x3 = $x3;
         $this->y3 = $y3;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -101,6 +107,7 @@ final class Curve implements OperationInterface
         );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @return self
@@ -125,6 +132,8 @@ final class Curve implements OperationInterface
             $y3r
         );
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

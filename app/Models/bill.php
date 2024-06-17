@@ -22,16 +22,20 @@ class bill extends Model
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $casts = [
         'status' => 'boolean',
     ];
 
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public function getStatusAttribute($value)
@@ -43,6 +47,8 @@ class bill extends Model
     protected $dates = [
         'due_date',
     ];
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

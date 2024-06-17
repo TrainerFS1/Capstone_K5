@@ -11,9 +11,15 @@ namespace PHPUnit\Metadata;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @psalm-immutable
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+=======
+ * @internal This class is not covered by the backward compatibility promise for PHPUnit
+ *
+ * @psalm-immutable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  *
@@ -27,10 +33,13 @@ final class DependsOnMethod extends Metadata
      */
     private readonly string $className;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $methodName;
@@ -39,9 +48,13 @@ final class DependsOnMethod extends Metadata
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @psalm-param 0|1 $level
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
+=======
+     * @psalm-param class-string $className
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @psalm-param class-string $className
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -57,9 +70,12 @@ final class DependsOnMethod extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-assert-if-true DependsOnMethod $this
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isDependsOnMethod(): bool
@@ -76,9 +92,12 @@ final class DependsOnMethod extends Metadata
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function methodName(): string

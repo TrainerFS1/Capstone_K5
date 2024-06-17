@@ -16,7 +16,12 @@ use Psy\Formatter\SignatureFormatter;
 use Psy\Input\CodeArgument;
 use Psy\Output\ShellOutput;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Psy\Reflection\ReflectionConstant;
+=======
+use Psy\Reflection\ReflectionClassConstant;
+use Psy\Reflection\ReflectionConstant_;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Psy\Reflection\ReflectionClassConstant;
 use Psy\Reflection\ReflectionConstant_;
@@ -68,7 +73,11 @@ HELP
      * @return int 0 if everything went fine, or an exit code
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
+=======
+    protected function execute(InputInterface $input, OutputInterface $output)
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function execute(InputInterface $input, OutputInterface $output)
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -155,6 +164,10 @@ HELP
 
             case \ReflectionClassConstant::class:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            case ReflectionClassConstant::class:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             case ReflectionClassConstant::class:
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -165,7 +178,11 @@ HELP
                 break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             case ReflectionConstant::class:
+=======
+            case ReflectionConstant_::class:
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             case ReflectionConstant_::class:
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

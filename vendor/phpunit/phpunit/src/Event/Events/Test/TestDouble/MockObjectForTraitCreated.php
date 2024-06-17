@@ -54,7 +54,11 @@ final class MockObjectForTraitCreated implements Event
         return sprintf(
             'Mock Object Created (%s)',
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->traitName,
+=======
+            $this->traitName
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
             $this->traitName
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

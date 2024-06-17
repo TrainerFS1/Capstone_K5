@@ -63,8 +63,13 @@ class AutocompleterPath implements Autocompleter
      */
     public function __construct(
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?string $root = null,
         ?\Closure $iteratorFactory = null
+=======
+        string $root = null,
+        \Closure $iteratorFactory = null
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         string $root = null,
         \Closure $iteratorFactory = null

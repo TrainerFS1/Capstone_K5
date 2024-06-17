@@ -41,8 +41,11 @@ interface SessionStorageInterface
     /**
      * Sets the session ID.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -56,8 +59,11 @@ interface SessionStorageInterface
     /**
      * Sets the session name.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -83,6 +89,7 @@ interface SessionStorageInterface
      * new ID. One result could be that you get logged out after just logging in.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param bool     $destroy  Destroy session when regenerating?
      * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                           will leave the system settings unchanged, 0 sets the cookie
@@ -93,6 +100,8 @@ interface SessionStorageInterface
      */
     public function regenerate(bool $destroy = false, ?int $lifetime = null): bool;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param bool $destroy  Destroy session when regenerating?
      * @param int  $lifetime Sets the cookie lifetime for the session cookie. A null value
      *                       will leave the system settings unchanged, 0 sets the cookie
@@ -102,6 +111,9 @@ interface SessionStorageInterface
      * @throws \RuntimeException If an error occurs while regenerating this storage
      */
     public function regenerate(bool $destroy = false, int $lifetime = null): bool;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
@@ -113,8 +125,11 @@ interface SessionStorageInterface
      * it should actually persist the session data if required.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return void
      *
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \RuntimeException if the session is saved without being started, or if the session
@@ -125,8 +140,11 @@ interface SessionStorageInterface
     /**
      * Clear all session data in memory.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
@@ -142,8 +160,11 @@ interface SessionStorageInterface
     /**
      * Registers a SessionBagInterface for use.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @return void
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */

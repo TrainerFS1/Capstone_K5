@@ -4,9 +4,13 @@ namespace Laravel\Sail\Console;
 
 use Illuminate\Console\Command;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'sail:publish')]
+=======
+
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -35,7 +39,10 @@ class PublishCommand extends Command
     {
         $this->call('vendor:publish', ['--tag' => 'sail-docker']);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->call('vendor:publish', ['--tag' => 'sail-database']);
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
@@ -43,6 +50,7 @@ class PublishCommand extends Command
             $this->laravel->basePath('docker-compose.yml'),
             str_replace(
                 [
+<<<<<<< HEAD
 <<<<<<< HEAD
                     './vendor/laravel/sail/runtimes/8.3',
                     './vendor/laravel/sail/runtimes/8.2',
@@ -59,6 +67,8 @@ class PublishCommand extends Command
                     './docker/mysql',
                     './docker/pgsql'
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     './vendor/laravel/sail/runtimes/8.2',
                     './vendor/laravel/sail/runtimes/8.1',
                     './vendor/laravel/sail/runtimes/8.0',
@@ -69,6 +79,9 @@ class PublishCommand extends Command
                     './docker/8.1',
                     './docker/8.0',
                     './docker/7.4',
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ],
                 file_get_contents($this->laravel->basePath('docker-compose.yml'))

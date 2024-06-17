@@ -11,12 +11,15 @@
                         <h1 class="m-0">Laporan Keuangan</h1>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ '/ ' }}">Home</a></li>
                             <li class="breadcrumb-item active">Laporan</li>
                         </ol>
                     </div>
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 </div>
@@ -29,6 +32,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 <table class="table table-bordered">
                                     <thead class="thead-dark">
@@ -70,6 +74,8 @@
                 </div>
 
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             <table class="table table-bordered">
                                 <thead class="thead-dark">
                                     <tr>
@@ -108,6 +114,9 @@
                     </div>
                 </div>
                 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             </div>
     </div>
@@ -116,11 +125,17 @@
 @endsection
 @push('scripts')
 <<<<<<< HEAD
+<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 @endpush
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 @endpush
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

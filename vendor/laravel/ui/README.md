@@ -21,8 +21,13 @@ Only the latest major version of Laravel UI receives bug fixes. The table below 
 | [1.x](https://github.com/laravel/ui/tree/1.x) | 5.8, 6.x |
 | [2.x](https://github.com/laravel/ui/tree/2.x) | 7.x |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | [3.x](https://github.com/laravel/ui/tree/3.x) | 8.x, 9.x |
 | [4.x](https://github.com/laravel/ui/tree/4.x) | 9.x, 10.x, 11.x |
+=======
+| [3.x](https://github.com/laravel/ui/tree/3.x) | 8.x |
+| [4.x](https://github.com/laravel/ui/tree/4.x) | 9.x, 10.x |
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 | [3.x](https://github.com/laravel/ui/tree/3.x) | 8.x |
 | [4.x](https://github.com/laravel/ui/tree/4.x) | 9.x, 10.x |

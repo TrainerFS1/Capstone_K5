@@ -31,11 +31,14 @@ use SebastianBergmann\Diff\Output\DiffOutputBuilderInterface;
 final class Differ
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public const OLD                     = 0;
     public const ADDED                   = 1;
     public const REMOVED                 = 2;
     public const DIFF_LINE_END_WARNING   = 3;
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const OLD = 0;
 
     public const ADDED = 1;
@@ -44,6 +47,9 @@ final class Differ
 
     public const DIFF_LINE_END_WARNING = 3;
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const NO_LINE_END_EOF_WARNING = 4;
     private DiffOutputBuilderInterface $outputBuilder;
@@ -54,7 +60,11 @@ final class Differ
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function diff(array|string $from, array|string $to, ?LongestCommonSubsequenceCalculator $lcs = null): string
+=======
+    public function diff(array|string $from, array|string $to, LongestCommonSubsequenceCalculator $lcs = null): string
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function diff(array|string $from, array|string $to, LongestCommonSubsequenceCalculator $lcs = null): string
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -65,7 +75,11 @@ final class Differ
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function diffToArray(array|string $from, array|string $to, ?LongestCommonSubsequenceCalculator $lcs = null): array
+=======
+    public function diffToArray(array|string $from, array|string $to, LongestCommonSubsequenceCalculator $lcs = null): array
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function diffToArray(array|string $from, array|string $to, LongestCommonSubsequenceCalculator $lcs = null): array
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

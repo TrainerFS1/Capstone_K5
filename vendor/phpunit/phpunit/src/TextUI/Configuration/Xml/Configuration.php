@@ -12,7 +12,10 @@ namespace PHPUnit\TextUI\XmlConfiguration;
 use PHPUnit\TextUI\Configuration\ExtensionBootstrapCollection;
 use PHPUnit\TextUI\Configuration\Php;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use PHPUnit\TextUI\Configuration\Source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\Configuration\TestSuiteCollection;
@@ -28,7 +31,10 @@ abstract class Configuration
 {
     private readonly ExtensionBootstrapCollection $extensions;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly Source $source;
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly CodeCoverage $codeCoverage;
@@ -39,10 +45,16 @@ abstract class Configuration
     private readonly TestSuiteCollection $testSuite;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(ExtensionBootstrapCollection $extensions, Source $source, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
     {
         $this->extensions   = $extensions;
         $this->source       = $source;
+=======
+    public function __construct(ExtensionBootstrapCollection $extensions, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
+    {
+        $this->extensions   = $extensions;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     public function __construct(ExtensionBootstrapCollection $extensions, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
     {
@@ -62,11 +74,14 @@ abstract class Configuration
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function source(): Source
     {
         return $this->source;
     }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function codeCoverage(): CodeCoverage

@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /**
  * Mockery (https://docs.mockery.io/)
@@ -8,6 +9,8 @@
  * @license https://github.com/mockery/mockery/blob/HEAD/LICENSE BSD 3-Clause License
  * @link https://github.com/mockery/mockery for the canonical source repository
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Mockery
  *
@@ -25,11 +28,15 @@
  * @package    Mockery
  * @copyright  Copyright (c) 2010 Pádraic Brady (http://blog.astrumfutura.com)
  * @license    http://github.com/padraic/mockery/blob/master/LICENSE New BSD License
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 
 namespace Mockery\Generator;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use function array_diff;
 
@@ -40,10 +47,15 @@ class MockConfigurationBuilder
      */
     protected $blackListedMethods = [
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class MockConfigurationBuilder
 {
     protected $name;
     protected $blackListedMethods = array(
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         '__call',
         '__callStatic',
@@ -57,6 +69,7 @@ class MockConfigurationBuilder
         '__debugInfo', ## mocking this makes it difficult to debug with xdebug
 
         // below are reserved words in PHP
+<<<<<<< HEAD
 <<<<<<< HEAD
         '__halt_compiler', 'abstract', 'and', 'array', 'as',
         'break', 'callable', 'case', 'catch', 'class',
@@ -121,6 +134,8 @@ class MockConfigurationBuilder
      */
     protected $whiteListedMethods = [];
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "__halt_compiler", "abstract", "and", "array", "as",
         "break", "callable", "case", "catch", "class",
         "clone", "const", "continue", "declare", "default",
@@ -154,6 +169,9 @@ class MockConfigurationBuilder
     protected $targets = array();
 
     protected $constantsMap = array();
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct()
@@ -161,6 +179,7 @@ class MockConfigurationBuilder
         $this->blackListedMethods = array_diff($this->blackListedMethods, $this->php7SemiReservedKeywords);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     /**
      * @param  string $blackListedMethod
@@ -191,6 +210,8 @@ class MockConfigurationBuilder
      */
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addTarget($target)
     {
         $this->targets[] = $target;
@@ -199,10 +220,13 @@ class MockConfigurationBuilder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param  list<class-string> $targets
      * @return self
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addTargets($targets)
@@ -215,10 +239,13 @@ class MockConfigurationBuilder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return self
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName($name)
     {
         $this->name = $name;
@@ -245,6 +272,9 @@ class MockConfigurationBuilder
         return $this;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addWhiteListedMethod($whiteListedMethod)
     {
@@ -253,9 +283,12 @@ class MockConfigurationBuilder
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @return self
      */
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addWhiteListedMethods(array $whiteListedMethods)
@@ -263,6 +296,7 @@ class MockConfigurationBuilder
         foreach ($whiteListedMethods as $method) {
             $this->addWhiteListedMethod($method);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return $this;
@@ -272,6 +306,8 @@ class MockConfigurationBuilder
      * @return MockConfiguration
      */
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
@@ -302,6 +338,9 @@ class MockConfigurationBuilder
         $this->constantsMap = $map;
     }
 
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getMockConfiguration()
     {
@@ -316,6 +355,7 @@ class MockConfigurationBuilder
             $this->constantsMap
         );
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     /**
@@ -384,6 +424,8 @@ class MockConfigurationBuilder
         $this->whiteListedMethods = $whiteListedMethods;
         return $this;
     }
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

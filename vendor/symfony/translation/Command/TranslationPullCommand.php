@@ -83,7 +83,11 @@ final class TranslationPullCommand extends Command
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function configure(): void
+=======
+    protected function configure()
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
     protected function configure()
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -100,7 +104,10 @@ final class TranslationPullCommand extends Command
                 new InputOption('locales', null, InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY, 'Specify the locales to pull.'),
                 new InputOption('format', null, InputOption::VALUE_OPTIONAL, 'Override the default output format.', 'xlf12'),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 new InputOption('as-tree', null, InputOption::VALUE_OPTIONAL, 'Write messages as a tree-like structure. Needs --format=yaml. The given value defines the level where to switch to inline YAML'),
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ])
@@ -135,7 +142,10 @@ EOF
         $domains = $input->getOption('domains');
         $format = $input->getOption('format');
 <<<<<<< HEAD
+<<<<<<< HEAD
         $asTree = (int) $input->getOption('as-tree');
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $xliffVersion = '1.2';
@@ -155,8 +165,11 @@ EOF
             'xliff_version' => $xliffVersion,
             'default_locale' => $this->defaultLocale,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'as_tree' => (bool) $asTree,
             'inline' => $asTree,
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];

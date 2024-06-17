@@ -10,7 +10,13 @@
 namespace PHPUnit\Framework;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function sprintf;
+=======
+use const PHP_EOL;
+use function sprintf;
+use Stringable;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use const PHP_EOL;
 use function sprintf;
@@ -21,7 +27,11 @@ use Stringable;
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 final class ComparisonMethodDoesNotExistException extends Exception
+=======
+final class ComparisonMethodDoesNotExistException extends Exception implements Stringable
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 final class ComparisonMethodDoesNotExistException extends Exception implements Stringable
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -33,11 +43,14 @@ final class ComparisonMethodDoesNotExistException extends Exception implements S
                 'Comparison method %s::%s() does not exist.',
                 $className,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $methodName,
             ),
         );
     }
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $methodName
             )
         );
@@ -47,5 +60,8 @@ final class ComparisonMethodDoesNotExistException extends Exception implements S
     {
         return $this->getMessage() . PHP_EOL;
     }
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

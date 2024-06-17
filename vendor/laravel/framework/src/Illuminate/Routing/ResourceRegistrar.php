@@ -3,6 +3,10 @@
 namespace Illuminate\Routing;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Arr;
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 use Illuminate\Support\Arr;
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -153,12 +157,15 @@ class ResourceRegistrar
         $defaults = $this->singletonResourceDefaults;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isset($options['creatable'])) {
             $defaults = array_merge($defaults, ['create', 'store', 'destroy']);
         } elseif (isset($options['destroyable'])) {
             $defaults = array_merge($defaults, ['destroy']);
         }
 
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $collection = new RouteCollection;
@@ -187,7 +194,11 @@ class ResourceRegistrar
      * @param  string  $controller
      * @param  array  $options
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Routing\Router
+=======
+     * @return void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -213,7 +224,11 @@ class ResourceRegistrar
      * @param  string  $controller
      * @param  array  $options
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return \Illuminate\Routing\Router
+=======
+     * @return void
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @return void
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -270,8 +285,11 @@ class ResourceRegistrar
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return array_values($methods);
 =======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($options['creatable'])) {
             $methods = isset($options['apiSingleton'])
                             ? array_merge(['store', 'destroy'], $methods)
@@ -291,6 +309,9 @@ class ResourceRegistrar
         }
 
         return $methods;
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
@@ -515,6 +536,10 @@ class ResourceRegistrar
      *
      * @param  string  $name
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     * @param  string  $base
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
      * @param  string  $base
 >>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
@@ -749,9 +774,15 @@ class ResourceRegistrar
         if (empty($verbs)) {
             return static::$verbs;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
 
         static::$verbs = array_merge(static::$verbs, $verbs);
+=======
+        } else {
+            static::$verbs = array_merge(static::$verbs, $verbs);
+        }
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 =======
         } else {
             static::$verbs = array_merge(static::$verbs, $verbs);
