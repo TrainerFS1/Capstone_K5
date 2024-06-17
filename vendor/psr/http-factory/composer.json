@@ -1,0 +1,61 @@
+{
+    "name": "psr/http-factory",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
+=======
+    "description": "Common interfaces for PSR-7 HTTP message factories",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+    "description": "Common interfaces for PSR-7 HTTP message factories",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    "keywords": [
+        "psr",
+        "psr-7",
+        "psr-17",
+        "http",
+        "factory",
+        "message",
+        "request",
+        "response"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHP-FIG",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "homepage": "https://www.php-fig.org/"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/php-fig/http-factory"
+    },
+    "require": {
+        "php": ">=7.1",
+        "psr/http-message": "^1.0 || ^2.0"
+=======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+            "homepage": "http://www.php-fig.org/"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "psr/http-message": "^1.0"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    },
+    "autoload": {
+        "psr-4": {
+            "Psr\\Http\\Message\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

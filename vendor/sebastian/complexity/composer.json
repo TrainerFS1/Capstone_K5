@@ -1,0 +1,67 @@
+{
+    "name": "sebastian/complexity",
+    "description": "Library for calculating the complexity of PHP code units",
+    "type": "library",
+    "homepage": "https://github.com/sebastianbergmann/complexity",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Sebastian Bergmann",
+            "email": "sebastian@phpunit.de",
+            "role": "lead"
+        }
+    ],
+    "support": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "issues": "https://github.com/sebastianbergmann/complexity/issues",
+        "security": "https://github.com/sebastianbergmann/complexity/security/policy"
+=======
+        "issues": "https://github.com/sebastianbergmann/complexity/issues"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        "issues": "https://github.com/sebastianbergmann/complexity/issues"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    },
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.1",
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "nikic/php-parser": "^4.18 || ^5.0"
+=======
+        "nikic/php-parser": "^4.10"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        "nikic/php-parser": "^4.10"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "dev-main": "3.2-dev"
+=======
+            "dev-main": "3.0-dev"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+            "dev-main": "3.0-dev"
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+        }
+    }
+}

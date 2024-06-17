@@ -1,0 +1,100 @@
+{
+    "name": "guzzlehttp/promises",
+    "description": "Guzzle promises library",
+    "keywords": ["promise"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Graham Campbell",
+            "email": "hello@gjcampbell.co.uk",
+            "homepage": "https://github.com/GrahamCampbell"
+        },
+        {
+            "name": "Michael Dowling",
+            "email": "mtdowling@gmail.com",
+            "homepage": "https://github.com/mtdowling"
+        },
+        {
+            "name": "Tobias Nyholm",
+            "email": "tobias.nyholm@gmail.com",
+            "homepage": "https://github.com/Nyholm"
+        },
+        {
+            "name": "Tobias Schultze",
+            "email": "webmaster@tubo-world.de",
+            "homepage": "https://github.com/Tobion"
+        }
+    ],
+    "require": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "php": "^7.2.5 || ^8.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8.2",
+        "phpunit/phpunit": "^8.5.36 || ^9.6.15"
+=======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.4 || ^5.1"
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    },
+    "autoload": {
+        "psr-4": {
+            "GuzzleHttp\\Promise\\": "src/"
+<<<<<<< HEAD
+<<<<<<< HEAD
+        }
+=======
+        },
+        "files": ["src/functions_include.php"]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        },
+        "files": ["src/functions_include.php"]
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GuzzleHttp\\Promise\\Tests\\": "tests/"
+        }
+    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": false
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        },
+=======
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+    "scripts": {
+        "test": "vendor/bin/simple-phpunit",
+        "test-ci": "vendor/bin/simple-phpunit --coverage-text"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.5-dev"
+        }
+    },
+    "config": {
+<<<<<<< HEAD
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

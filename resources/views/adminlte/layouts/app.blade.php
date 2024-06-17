@@ -259,9 +259,10 @@
                                     .addClass('dropdown-item notification-item')
                                     .attr('href', '/bill')
                                     .html(
-                                    `<i class="notification-icon fas fa-file-invoice"></i>
+                                        `<i class="notification-icon fas fa-file-invoice"></i>
                                            <div class="notification-text">Tagihan anda hari ini: ${bill.category}</div>
-                                           <span class="notification-time">${formattedDate}</span>`); // Gunakan tanggal yang sudah diformat
+                                           <span class="notification-time">${formattedDate}</span>`
+                                        ); // Gunakan tanggal yang sudah diformat
 
                                 $('#notificationList').prepend(notificationItem);
                             });
@@ -285,9 +286,10 @@
                                     .addClass('dropdown-item notification-item')
                                     .attr('href', '/debt')
                                     .html(
-                                    `<i class="notification-icon fas fa-credit-card"></i>
+                                        `<i class="notification-icon fas fa-credit-card"></i>
                                            <div class="notification-text">Hutang anda hari ini: ${debt.debt_type}</div>
-                                           <span class="notification-time">${formattedDate}</span>`); // Gunakan tanggal yang sudah diformat
+                                           <span class="notification-time">${formattedDate}</span>`
+                                        ); // Gunakan tanggal yang sudah diformat
 
                                 $('#notificationList').prepend(notificationItem);
                             });

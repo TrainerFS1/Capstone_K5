@@ -146,7 +146,8 @@
                         <p><a href="#">Baca Lebih Lanjut</a></p>
                     </div>
                     <div class="col-md-6" data-aos="fade-left">
-                        <img src="assetsLanding/img/undraw_online_banking_re_kwqh.svg" alt="Image" class="img-fluid" />
+                        <img src="assetsLanding/img/undraw_online_banking_re_kwqh.svg" alt="Image"
+                            class="img-fluid" />
                     </div>
                 </div>
             </div>
@@ -165,7 +166,8 @@
                         <p><a href="#">Baca Lebih Lanjut</a></p>
                     </div>
                     <div class="col-md-6" data-aos="fade-right">
-                        <img src="assetsLanding/img/undraw_transfer_money_re_6o1h.svg" alt="Image" class="img-fluid" />
+                        <img src="assetsLanding/img/undraw_transfer_money_re_6o1h.svg" alt="Image"
+                            class="img-fluid" />
                     </div>
                 </div>
             </div>

@@ -1,0 +1,64 @@
+{
+    "name": "illuminate/validation",
+    "description": "The Illuminate Validation package.",
+    "license": "MIT",
+    "homepage": "https://laravel.com",
+    "support": {
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
+    },
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-filter": "*",
+        "ext-mbstring": "*",
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "brick/math": "^0.9.3|^0.10.2|^0.11|^0.12",
+=======
+        "brick/math": "^0.9.3|^0.10.2|^0.11",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        "brick/math": "^0.9.3|^0.10.2|^0.11",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+        "egulias/email-validator": "^3.2.5|^4.0",
+        "illuminate/collections": "^10.0",
+        "illuminate/container": "^10.0",
+        "illuminate/contracts": "^10.0",
+        "illuminate/macroable": "^10.0",
+        "illuminate/support": "^10.0",
+        "illuminate/translation": "^10.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "symfony/http-foundation": "^6.4",
+=======
+        "symfony/http-foundation": "^6.2",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+=======
+        "symfony/http-foundation": "^6.2",
+>>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
+        "symfony/mime": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Validation\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "10.x-dev"
+        }
+    },
+    "suggest": {
+        "illuminate/database": "Required to use the database presence verifier (^10.0)."
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
