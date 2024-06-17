@@ -30,23 +30,11 @@ class BladeCompiler extends Compiler implements CompilerInterface
         Concerns\CompilesLayouts,
         Concerns\CompilesLoops,
         Concerns\CompilesRawPhp,
-<<<<<<< HEAD
-<<<<<<< HEAD
         Concerns\CompilesSessions,
         Concerns\CompilesStacks,
         Concerns\CompilesStyles,
         Concerns\CompilesTranslations,
         Concerns\CompilesUseStatements,
-=======
-        Concerns\CompilesStacks,
-        Concerns\CompilesStyles,
-        Concerns\CompilesTranslations,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        Concerns\CompilesStacks,
-        Concerns\CompilesStyles,
-        Concerns\CompilesTranslations,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ReflectsClosures;
 
     /**
@@ -71,8 +59,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
     protected $conditions = [];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The registered string preparation callbacks.
      *
      * @var array
@@ -80,10 +66,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
     protected $prepareStringsForCompilationUsing = [];
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * All of the registered precompilers.
      *
      * @var array
@@ -276,31 +258,17 @@ class BladeCompiler extends Compiler implements CompilerInterface
     {
         [$this->footer, $result] = [[], ''];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($this->prepareStringsForCompilationUsing as $callback) {
             $value = $callback($value);
         }
 
         $value = $this->storeUncompiledBlocks($value);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // First we will compile the Blade component tags. This is a precompile style
         // step which compiles the component Blade tags into @component directives
         // that may be used by Blade. Then we should call any other precompilers.
         $value = $this->compileComponentTags(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->compileComments($value)
-=======
-            $this->compileComments($this->storeUncompiledBlocks($value))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->compileComments($this->storeUncompiledBlocks($value))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         foreach ($this->precompilers as $precompiler) {
@@ -366,15 +334,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
 
         return tap($view->render(), function () use ($view, $deleteCachedView) {
             if ($deleteCachedView) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 @unlink($view->getPath());
-=======
-                unlink($view->getPath());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                unlink($view->getPath());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         });
     }
@@ -1003,8 +963,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicate that the following callable should be used to prepare strings for compilation.
      *
      * @param  callable  $callback
@@ -1018,10 +976,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Register a new precompiler.
      *
      * @param  callable  $precompiler

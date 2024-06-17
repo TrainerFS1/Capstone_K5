@@ -9,14 +9,8 @@
  */
 namespace PHPUnit\TextUI\Configuration;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function assert;
 use function count;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function is_dir;
 use function is_file;
 use function realpath;
@@ -44,8 +38,6 @@ final class TestSuiteBuilder
      */
     public function build(Configuration $configuration): TestSuite
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($configuration->hasCliArguments()) {
             $arguments = [];
 
@@ -86,42 +78,11 @@ final class TestSuiteBuilder
         }
 
         EventFacade::emitter()->testSuiteLoaded(\PHPUnit\Event\TestSuite\TestSuiteBuilder::from($testSuite));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($configuration->hasCliArgument()) {
-            $argument = realpath($configuration->cliArgument());
-
-            if (!$argument) {
-                throw new TestFileNotFoundException($configuration->cliArgument());
-            }
-
-            $testSuite = $this->testSuiteFromPath(
-                $argument,
-                $configuration->testSuffixes()
-            );
-        }
-
-        if (!isset($testSuite)) {
-            $testSuite = (new TestSuiteMapper)->map(
-                $configuration->testSuite(),
-                $configuration->includeTestSuite(),
-                $configuration->excludeTestSuite()
-            );
-        }
-
-        EventFacade::emitter()->testSuiteLoaded(\PHPUnit\Event\TestSuite\TestSuite::fromTestSuite($testSuite));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $testSuite;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $path
      * @psalm-param list<non-empty-string> $suffixes
      * @psalm-param ?TestSuite $suite
@@ -133,45 +94,15 @@ final class TestSuiteBuilder
         if (str_ends_with($path, '.phpt') && is_file($path)) {
             $suite = $suite ?: TestSuite::empty($path);
             $suite->addTestFile($path);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @psalm-param list<string> $suffixes
-     *
-     * @throws \PHPUnit\Framework\Exception
-     */
-    private function testSuiteFromPath(string $path, array $suffixes): TestSuite
-    {
-        if (is_dir($path)) {
-            $files = (new FileIteratorFacade)->getFilesAsArray($path, $suffixes);
-
-            $suite = TestSuite::empty($path);
-            $suite->addTestFiles($files);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return $suite;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (is_dir($path)) {
             $files = (new FileIteratorFacade)->getFilesAsArray($path, $suffixes);
 
             $suite = $suite ?: TestSuite::empty('CLI Arguments');
             $suite->addTestFiles($files);
-=======
-        if (is_file($path) && str_ends_with($path, '.phpt')) {
-            $suite = TestSuite::empty();
-            $suite->addTestFile($path);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (is_file($path) && str_ends_with($path, '.phpt')) {
-            $suite = TestSuite::empty();
-            $suite->addTestFile($path);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return $suite;
         }
@@ -184,8 +115,6 @@ final class TestSuiteBuilder
             exit(1);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!$suite) {
             return TestSuite::fromClassReflector($testClass);
         }
@@ -210,11 +139,5 @@ final class TestSuiteBuilder
         }
 
         return $suite;
-=======
-        return TestSuite::fromClassReflector($testClass);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return TestSuite::fromClassReflector($testClass);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -22,15 +22,7 @@ use Symfony\Component\Routing\Route as SymfonyRoute;
 
 class Route
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use CreatesRegularExpressionRouteConstraints, FiltersControllerMiddleware, Macroable, ResolvesRouteDependencies;
-=======
-    use CreatesRegularExpressionRouteConstraints, Macroable, RouteDependencyResolverTrait;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    use CreatesRegularExpressionRouteConstraints, Macroable, RouteDependencyResolverTrait;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The URI pattern the route responds to.
@@ -276,16 +268,10 @@ class Route
      */
     public function getController()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! $this->isControllerAction()) {
             return null;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! $this->controller) {
             $class = $this->getControllerClass();
 
@@ -298,25 +284,11 @@ class Route
     /**
      * Get the controller class used for the route.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return string|null
      */
     public function getControllerClass()
     {
         return $this->isControllerAction() ? $this->parseControllerCallback()[0] : null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return string
-     */
-    public function getControllerClass()
-    {
-        return $this->parseControllerCallback()[0];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -605,29 +577,13 @@ class Route
      * Get the parent parameter of the given parameter.
      *
      * @param  string  $parameter
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return string|null
-=======
-     * @return string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function parentOfParameter($parameter)
     {
         $key = array_search($parameter, array_keys($this->parameters));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($key === 0 || $key === false) {
-=======
-        if ($key === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($key === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
 
@@ -1162,15 +1118,7 @@ class Route
     protected function staticallyProvidedControllerMiddleware(string $class, string $method)
     {
         return collect($class::middleware())->reject(function ($middleware) use ($method) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return static::methodExcludedByOptions(
-=======
-            return $this->controllerDispatcher()::methodExcludedByOptions(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return $this->controllerDispatcher()::methodExcludedByOptions(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $method, ['only' => $middleware->only, 'except' => $middleware->except]
             );
         })->map->middleware->values()->all();
@@ -1192,15 +1140,7 @@ class Route
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the middleware that should be removed from the route.
-=======
-     * Get the middleware should be removed from the route.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Get the middleware should be removed from the route.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array
      */

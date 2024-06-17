@@ -10,14 +10,8 @@ use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function Laravel\Prompts\select;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'db:table')]
 class TableCommand extends DatabaseInspectionCommand
 {
@@ -55,15 +49,7 @@ class TableCommand extends DatabaseInspectionCommand
 
         $this->registerTypeMappings($connection->getDoctrineConnection()->getDatabasePlatform());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $table = $this->argument('table') ?: select(
-=======
-        $table = $this->argument('table') ?: $this->components->choice(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $table = $this->argument('table') ?: $this->components->choice(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'Which table would you like to inspect?',
             collect($schema->listTables())->flatMap(fn (Table $table) => [$table->getName()])->toArray()
         );
@@ -226,15 +212,7 @@ class TableCommand extends DatabaseInspectionCommand
             $columns->each(function ($column) {
                 $this->components->twoColumnDetail(
                     $column['column'].' <fg=gray>'.$column['attributes']->implode(', ').'</>',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     (! is_null($column['default']) ? '<fg=gray>'.$column['default'].'</> ' : '').''.$column['type'].''
-=======
-                    ($column['default'] ? '<fg=gray>'.$column['default'].'</> ' : '').''.$column['type'].''
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    ($column['default'] ? '<fg=gray>'.$column['default'].'</> ' : '').''.$column['type'].''
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             });
 

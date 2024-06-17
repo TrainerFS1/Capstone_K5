@@ -36,8 +36,6 @@ class ThrowUpException extends \Exception implements Exception
     /**
      * Create a ThrowUpException from a Throwable.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @deprecated PsySH no longer wraps Throwables
      *
      * @param \Throwable $throwable
@@ -45,27 +43,5 @@ class ThrowUpException extends \Exception implements Exception
     public static function fromThrowable($throwable)
     {
         @\trigger_error('PsySH no longer wraps Throwables', \E_USER_DEPRECATED);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated psySH no longer wraps Throwables
-     *
-     * @param \Throwable $throwable
-     */
-    public static function fromThrowable($throwable): self
-    {
-        if ($throwable instanceof \Error) {
-            $throwable = ErrorException::fromError($throwable);
-        }
-
-        if (!$throwable instanceof \Exception) {
-            throw new \InvalidArgumentException('throw-up can only throw Exceptions and Errors');
-        }
-
-        return new self($throwable);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

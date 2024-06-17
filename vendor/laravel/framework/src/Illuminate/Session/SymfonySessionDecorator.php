@@ -46,14 +46,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setId(string $id)
     {
@@ -70,14 +64,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setName(string $name)
     {
@@ -106,14 +94,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function save()
     {
@@ -138,14 +120,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function set(string $name, mixed $value)
     {
@@ -162,14 +138,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function replace(array $attributes)
     {
@@ -186,14 +156,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function clear()
     {
@@ -210,14 +174,8 @@ class SymfonySessionDecorator implements SessionInterface
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function registerBag(SessionBagInterface $bag)
     {

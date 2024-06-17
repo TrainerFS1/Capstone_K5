@@ -4,17 +4,9 @@ namespace Laravel\Sail\Console;
 
 use Illuminate\Console\Command;
 use Laravel\Sail\Console\Concerns\InteractsWithDockerComposeServices;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'sail:add')]
-=======
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class AddCommand extends Command
 {
     use InteractsWithDockerComposeServices;
@@ -47,25 +39,11 @@ class AddCommand extends Command
         } elseif ($this->option('no-interaction')) {
             $services = $this->defaultServices;
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $services = $this->gatherServicesInteractively();
         }
 
         if ($invalidServices = array_diff($services, $this->services)) {
             $this->components->error('Invalid services ['.implode(',', $invalidServices).'].');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $services = $this->gatherServicesWithSymfonyMenu();
-        }
-
-        if ($invalidServices = array_diff($services, $this->services)) {
-            $this->error('Invalid services ['.implode(',', $invalidServices).'].');
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return 1;
         }
@@ -74,21 +52,9 @@ class AddCommand extends Command
         $this->replaceEnvVariables($services);
         $this->configurePhpUnit();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->prepareInstallation($services);
 
         $this->output->writeln('');
         $this->components->info('Additional Sail services installed successfully.');
-=======
-        $this->info('Additional Sail services installed successfully.');
-
-        $this->prepareInstallation($services);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->info('Additional Sail services installed successfully.');
-
-        $this->prepareInstallation($services);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -2,13 +2,7 @@
 
 namespace Illuminate\Mail\Transport;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Str;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Mailer\Envelope;
 use Symfony\Component\Mailer\SentMessage;
@@ -40,8 +34,6 @@ class LogTransport implements TransportInterface
      */
     public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $string = Str::of($message->toString());
 
         if ($string->contains('Content-Type: multipart/')) {
@@ -60,27 +52,11 @@ class LogTransport implements TransportInterface
         }
 
         $this->logger->debug((string) $string);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $string = $message->toString();
-
-        if (str_contains($string, 'Content-Transfer-Encoding: quoted-printable')) {
-            $string = quoted_printable_decode($string);
-        }
-
-        $this->logger->debug($string);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return new SentMessage($message, $envelope ?? Envelope::create($message));
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Decode the given quoted printable content.
      *
      * @param  string  $part
@@ -101,10 +77,6 @@ class LogTransport implements TransportInterface
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the logger for the LogTransport instance.
      *
      * @return \Psr\Log\LoggerInterface

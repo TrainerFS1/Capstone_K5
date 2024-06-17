@@ -46,27 +46,10 @@ class MessageSent
     {
         $hasAttachments = collect($this->message->getAttachments())->isNotEmpty();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return [
             'sent' => $this->sent,
             'data' => $hasAttachments ? base64_encode(serialize($this->data)) : $this->data,
             'hasAttachments' => $hasAttachments,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        return $hasAttachments ? [
-            'sent' => base64_encode(serialize($this->sent)),
-            'data' => base64_encode(serialize($this->data)),
-            'hasAttachments' => true,
-        ] : [
-            'sent' => $this->sent,
-            'data' => $this->data,
-            'hasAttachments' => false,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 
@@ -78,27 +61,11 @@ class MessageSent
      */
     public function __unserialize(array $data)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->sent = $data['sent'];
 
         $this->data = (($data['hasAttachments'] ?? false) === true)
             ? unserialize(base64_decode($data['data']))
             : $data['data'];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (isset($data['hasAttachments']) && $data['hasAttachments'] === true) {
-            $this->sent = unserialize(base64_decode($data['sent']));
-            $this->data = unserialize(base64_decode($data['data']));
-        } else {
-            $this->sent = $data['sent'];
-            $this->data = $data['data'];
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

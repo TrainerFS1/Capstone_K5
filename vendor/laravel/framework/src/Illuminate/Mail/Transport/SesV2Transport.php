@@ -4,15 +4,7 @@ namespace Illuminate\Mail\Transport;
 
 use Aws\Exception\AwsException;
 use Aws\SesV2\SesV2Client;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Mailer\Exception\TransportException;
-=======
-use Exception;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Exception;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\Header\MetadataHeader;
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
@@ -59,15 +51,7 @@ class SesV2Transport extends AbstractTransport
         if ($message->getOriginalMessage() instanceof Message) {
             foreach ($message->getOriginalMessage()->getHeaders()->all() as $header) {
                 if ($header instanceof MetadataHeader) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $options['EmailTags'][] = ['Name' => $header->getKey(), 'Value' => $header->getValue()];
-=======
-                    $options['Tags'][] = ['Name' => $header->getKey(), 'Value' => $header->getValue()];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $options['Tags'][] = ['Name' => $header->getKey(), 'Value' => $header->getValue()];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
         }
@@ -76,15 +60,7 @@ class SesV2Transport extends AbstractTransport
             $result = $this->ses->sendEmail(
                 array_merge(
                     $options, [
-<<<<<<< HEAD
-<<<<<<< HEAD
                         'Source' => $message->getEnvelope()->getSender()->toString(),
-=======
-                        'ReplyToAddresses' => [$message->getEnvelope()->getSender()->toString()],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        'ReplyToAddresses' => [$message->getEnvelope()->getSender()->toString()],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         'Destination' => [
                             'ToAddresses' => collect($message->getEnvelope()->getRecipients())
                                     ->map
@@ -103,15 +79,7 @@ class SesV2Transport extends AbstractTransport
         } catch (AwsException $e) {
             $reason = $e->getAwsErrorMessage() ?? $e->getMessage();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             throw new TransportException(
-=======
-            throw new Exception(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            throw new Exception(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 sprintf('Request to AWS SES V2 API failed. Reason: %s.', $reason),
                 is_int($e->getCode()) ? $e->getCode() : 0,
                 $e

@@ -26,15 +26,7 @@ class RoutingConfigurator
     private string $file;
     private ?string $env;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(RouteCollection $collection, PhpFileLoader $loader, string $path, string $file, ?string $env = null)
-=======
-    public function __construct(RouteCollection $collection, PhpFileLoader $loader, string $path, string $file, string $env = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(RouteCollection $collection, PhpFileLoader $loader, string $path, string $file, string $env = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->collection = $collection;
         $this->loader = $loader;
@@ -46,15 +38,7 @@ class RoutingConfigurator
     /**
      * @param string|string[]|null $exclude Glob patterns to exclude from the import
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     final public function import(string|array $resource, ?string $type = null, bool $ignoreErrors = false, string|array|null $exclude = null): ImportConfigurator
-=======
-    final public function import(string|array $resource, string $type = null, bool $ignoreErrors = false, string|array $exclude = null): ImportConfigurator
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    final public function import(string|array $resource, string $type = null, bool $ignoreErrors = false, string|array $exclude = null): ImportConfigurator
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->loader->setCurrentDir(\dirname($this->path));
 

@@ -92,8 +92,6 @@ class TrustProxies
      */
     protected function getTrustedHeaderNames()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (is_int($this->headers)) {
             return $this->headers;
         }
@@ -106,21 +104,6 @@ class TrustProxies
             'HEADER_X_FORWARDED_PORT' => Request::HEADER_X_FORWARDED_PORT,
             'HEADER_X_FORWARDED_PROTO' => Request::HEADER_X_FORWARDED_PROTO,
             'HEADER_X_FORWARDED_PREFIX' => Request::HEADER_X_FORWARDED_PREFIX,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        return match ($this->headers) {
-            'HEADER_X_FORWARDED_AWS_ELB', Request::HEADER_X_FORWARDED_AWS_ELB => Request::HEADER_X_FORWARDED_AWS_ELB,
-            'HEADER_FORWARDED', Request::HEADER_FORWARDED => Request::HEADER_FORWARDED,
-            'HEADER_X_FORWARDED_FOR', Request::HEADER_X_FORWARDED_FOR => Request::HEADER_X_FORWARDED_FOR,
-            'HEADER_X_FORWARDED_HOST', Request::HEADER_X_FORWARDED_HOST => Request::HEADER_X_FORWARDED_HOST,
-            'HEADER_X_FORWARDED_PORT', Request::HEADER_X_FORWARDED_PORT => Request::HEADER_X_FORWARDED_PORT,
-            'HEADER_X_FORWARDED_PROTO', Request::HEADER_X_FORWARDED_PROTO => Request::HEADER_X_FORWARDED_PROTO,
-            'HEADER_X_FORWARDED_PREFIX', Request::HEADER_X_FORWARDED_PREFIX => Request::HEADER_X_FORWARDED_PREFIX,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             default => Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_HOST | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO | Request::HEADER_X_FORWARDED_PREFIX | Request::HEADER_X_FORWARDED_AWS_ELB,
         };
     }

@@ -5,26 +5,14 @@ namespace Illuminate\Database\Schema;
 use Closure;
 use Illuminate\Container\Container;
 use Illuminate\Database\Connection;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Traits\Macroable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use InvalidArgumentException;
 use LogicException;
 
 class Builder
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use Macroable;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The database connection instance.
      *
@@ -174,8 +162,6 @@ class Builder
     {
         $table = $this->connection->getTablePrefix().$table;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($this->getTables(false) as $value) {
             if (strtolower($table) === strtolower($value['name'])) {
                 return true;
@@ -260,16 +246,6 @@ class Builder
     public function getAllTables()
     {
         throw new LogicException('This database driver does not support getting all tables.');
-=======
-        return count($this->connection->selectFromWriteConnection(
-            $this->grammar->compileTableExists(), [$table]
-        )) > 0;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return count($this->connection->selectFromWriteConnection(
-            $this->grammar->compileTableExists(), [$table]
-        )) > 0;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -341,8 +317,6 @@ class Builder
      *
      * @param  string  $table
      * @param  string  $column
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  bool  $fullDefinition
      * @return string
      */
@@ -363,20 +337,6 @@ class Builder
         }
 
         throw new InvalidArgumentException("There is no column with name '$column' on table '$table'.");
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return string
-     */
-    public function getColumnType($table, $column)
-    {
-        $table = $this->connection->getTablePrefix().$table;
-
-        return $this->connection->getDoctrineColumn($table, $column)->getType()->getName();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -387,8 +347,6 @@ class Builder
      */
     public function getColumnListing($table)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return array_column($this->getColumns($table), 'name');
     }
 
@@ -472,18 +430,6 @@ class Builder
         return $this->connection->getPostProcessor()->processForeignKeys(
             $this->connection->selectFromWriteConnection($this->grammar->compileForeignKeys($table))
         );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $results = $this->connection->selectFromWriteConnection($this->grammar->compileColumnListing(
-            $this->connection->getTablePrefix().$table
-        ));
-
-        return $this->connection->getPostProcessor()->processColumnListing($results);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -591,27 +537,6 @@ class Builder
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get all of the table names for the database.
-     *
-     * @return array
-     *
-     * @throws \LogicException
-     */
-    public function getAllTables()
-    {
-        throw new LogicException('This database driver does not support getting all tables.');
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Rename a table on the schema.
      *
      * @param  string  $from
@@ -659,25 +584,11 @@ class Builder
     {
         $this->disableForeignKeyConstraints();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             return $callback();
         } finally {
             $this->enableForeignKeyConstraints();
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $result = $callback();
-
-        $this->enableForeignKeyConstraints();
-
-        return $result;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

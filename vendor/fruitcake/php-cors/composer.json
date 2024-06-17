@@ -17,15 +17,7 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "symfony/http-foundation": "^4.4|^5.4|^6|^7"
-=======
-        "symfony/http-foundation": "^4.4|^5.4|^6"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "symfony/http-foundation": "^4.4|^5.4|^6"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "require-dev": {
         "phpunit/phpunit": "^9",
@@ -51,15 +43,7 @@
     },
     "extra": {
         "branch-alias": {
-<<<<<<< HEAD
-<<<<<<< HEAD
             "dev-master": "1.2-dev"
-=======
-            "dev-main": "1.1-dev"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "dev-main": "1.1-dev"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 }

@@ -20,39 +20,16 @@ final class Helpers
 {
 	use Nette\StaticClass;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public const PreventMerging = '_prevent_merging';
-=======
-	public const PREVENT_MERGING = '_prevent_merging';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public const PREVENT_MERGING = '_prevent_merging';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
 	/**
 	 * Merges dataset. Left has higher priority than right one.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 */
 	public static function merge(mixed $value, mixed $base): mixed
 	{
 		if (is_array($value) && isset($value[self::PreventMerging])) {
 			unset($value[self::PreventMerging]);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	 * @return array|string
-	 */
-	public static function merge($value, $base)
-	{
-		if (is_array($value) && isset($value[self::PREVENT_MERGING])) {
-			unset($value[self::PREVENT_MERGING]);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			return $value;
 		}
 
@@ -78,8 +55,6 @@ final class Helpers
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public static function getPropertyType(\ReflectionProperty|\ReflectionParameter $prop): ?string
 	{
 		if ($type = Nette\Utils\Type::fromReflection($prop)) {
@@ -90,24 +65,6 @@ final class Helpers
 		) {
 			$class = Reflection::getPropertyDeclaringClass($prop);
 			return preg_replace_callback('#[\w\\\\]+#', fn($m) => Reflection::expandClassName($m[0], $class), $type);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	public static function getPropertyType(\ReflectionProperty $prop): ?string
-	{
-		if (!class_exists(Nette\Utils\Type::class)) {
-			throw new Nette\NotSupportedException('Expect::from() requires nette/utils 3.x');
-		} elseif ($type = Nette\Utils\Type::fromReflection($prop)) {
-			return (string) $type;
-		} elseif ($type = preg_replace('#\s.*#', '', (string) self::parseAnnotation($prop, 'var'))) {
-			$class = Reflection::getPropertyDeclaringClass($prop);
-			return preg_replace_callback('#[\w\\\\]+#', function ($m) use ($class) {
-				return Reflection::expandClassName($m[0], $class);
-			}, $type);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
 		return null;
@@ -133,8 +90,6 @@ final class Helpers
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public static function formatValue(mixed $value): string
 	{
 		if ($value instanceof DynamicParameter) {
@@ -223,26 +178,6 @@ final class Helpers
 				: new $type($value);
 		} else {
 			return static fn($value) => Nette\Utils\Arrays::toObject((array) $value, new $type);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	/**
-	 * @param  mixed  $value
-	 */
-	public static function formatValue($value): string
-	{
-		if (is_object($value)) {
-			return 'object ' . get_class($value);
-		} elseif (is_string($value)) {
-			return "'" . Nette\Utils\Strings::truncate($value, 15, '...') . "'";
-		} elseif (is_scalar($value)) {
-			return var_export($value, true);
-		} else {
-			return strtolower(gettype($value));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 	}
 }

@@ -17,17 +17,9 @@ trait InteractsWithSignals
     /**
      * Define a callback to be run when the given signal(s) occurs.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template TSignals of iterable<array-key, int>|int
      *
      * @param  (\Closure():(TSignals))|TSignals  $signals
-=======
-     * @param  iterable<array-key, int>|int  $signals
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  iterable<array-key, int>|int  $signals
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  callable(int $signal): void  $callback
      * @return void
      */
@@ -38,15 +30,7 @@ trait InteractsWithSignals
                 $this->getApplication()->getSignalRegistry(),
             );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             collect(Arr::wrap(value($signals)))
-=======
-            collect(Arr::wrap($signals))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            collect(Arr::wrap($signals))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ->each(fn ($signal) => $this->signals->register($signal, $callback));
         });
     }

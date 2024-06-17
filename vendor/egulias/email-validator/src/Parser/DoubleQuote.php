@@ -17,17 +17,9 @@ class DoubleQuote extends PartParser
     {
 
         $validQuotedString = $this->checkDQUOTE();
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($validQuotedString->isInvalid()) {
             return $validQuotedString;
         }
-=======
-        if ($validQuotedString->isInvalid()) return $validQuotedString;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($validQuotedString->isInvalid()) return $validQuotedString;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $special = [
             EmailLexer::S_CR => true,
@@ -66,17 +58,9 @@ class DoubleQuote extends PartParser
 
         if ($prev->isA(EmailLexer::S_BACKSLASH)) {
             $validQuotedString = $this->checkDQUOTE();
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($validQuotedString->isInvalid()) {
                 return $validQuotedString;
             }
-=======
-            if ($validQuotedString->isInvalid()) return $validQuotedString;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($validQuotedString->isInvalid()) return $validQuotedString;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (!$this->lexer->isNextToken(EmailLexer::S_AT) && !$prev->isA(EmailLexer::S_BACKSLASH)) {

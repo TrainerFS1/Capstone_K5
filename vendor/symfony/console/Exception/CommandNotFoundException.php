@@ -26,15 +26,7 @@ class CommandNotFoundException extends \InvalidArgumentException implements Exce
      * @param int             $code         Exception code
      * @param \Throwable|null $previous     Previous exception used for the exception chaining
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $message, array $alternatives = [], int $code = 0, ?\Throwable $previous = null)
-=======
-    public function __construct(string $message, array $alternatives = [], int $code = 0, \Throwable $previous = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $message, array $alternatives = [], int $code = 0, \Throwable $previous = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         parent::__construct($message, $code, $previous);
 

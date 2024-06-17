@@ -9,8 +9,6 @@ namespace Brick\Math\Exception;
  */
 class NumberFormatException extends MathException
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function invalidFormat(string $value) : self
     {
         return new self(\sprintf(
@@ -22,18 +20,6 @@ class NumberFormatException extends MathException
     /**
      * @param string $char The failing character.
      *
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * @param string $char The failing character.
-     *
-     * @return NumberFormatException
-     *
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-pure
      */
     public static function charNotInAlphabet(string $char) : self
@@ -50,14 +36,6 @@ class NumberFormatException extends MathException
             $char = '"' . $char . '"';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return new self(\sprintf('Char %s is not a valid character in the given alphabet.', $char));
-=======
-        return new self(sprintf('Char %s is not a valid character in the given alphabet.', $char));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new self(sprintf('Char %s is not a valid character in the given alphabet.', $char));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

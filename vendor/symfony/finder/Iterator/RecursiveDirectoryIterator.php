@@ -18,27 +18,13 @@ use Symfony\Component\Finder\SplFileInfo;
  * Extends the \RecursiveDirectoryIterator to support relative paths.
  *
  * @author Victor Berchet <victor@suumit.com>
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @extends \RecursiveDirectoryIterator<string, SplFileInfo>
  */
 class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
 {
     private bool $ignoreUnreadableDirs;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private bool $ignoreFirstRewind = true;
-=======
-    private ?bool $rewindable = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private ?bool $rewindable = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     // these 3 properties take part of the performance optimization to avoid redoing the same work in all iterations
     private string $rootPath;
@@ -116,14 +102,6 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
                 $children->ignoreUnreadableDirs = $this->ignoreUnreadableDirs;
 
                 // performance optimization to avoid redoing the same work in all children
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                $children->rewindable = &$this->rewindable;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $children->rewindable = &$this->rewindable;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $children->rootPath = $this->rootPath;
             }
 
@@ -133,8 +111,6 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function next(): void
     {
         $this->ignoreFirstRewind = false;
@@ -149,52 +125,9 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
         if ($this->ignoreFirstRewind) {
             $this->ignoreFirstRewind = false;
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * Do nothing for non rewindable stream.
-     */
-    public function rewind(): void
-    {
-        if (false === $this->isRewindable()) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
 
         parent::rewind();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Checks if the stream is rewindable.
-     */
-    public function isRewindable(): bool
-    {
-        if (null !== $this->rewindable) {
-            return $this->rewindable;
-        }
-
-        if (false !== $stream = @opendir($this->getPath())) {
-            $infos = stream_get_meta_data($stream);
-            closedir($stream);
-
-            if ($infos['seekable']) {
-                return $this->rewindable = true;
-            }
-        }
-
-        return $this->rewindable = false;
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

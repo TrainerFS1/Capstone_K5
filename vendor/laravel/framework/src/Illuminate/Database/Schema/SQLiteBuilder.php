@@ -2,13 +2,7 @@
 
 namespace Illuminate\Database\Schema;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\QueryException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Facades\File;
 
 class SQLiteBuilder extends Builder
@@ -38,8 +32,6 @@ class SQLiteBuilder extends Builder
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the tables for the database.
      *
      * @param  bool  $withSize
@@ -89,10 +81,6 @@ class SQLiteBuilder extends Builder
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Drop all tables from the database.
      *
      * @return void
@@ -129,39 +117,6 @@ class SQLiteBuilder extends Builder
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get all of the table names for the database.
-     *
-     * @return array
-     */
-    public function getAllTables()
-    {
-        return $this->connection->select(
-            $this->grammar->compileGetAllTables()
-        );
-    }
-
-    /**
-     * Get all of the view names for the database.
-     *
-     * @return array
-     */
-    public function getAllViews()
-    {
-        return $this->connection->select(
-            $this->grammar->compileGetAllViews()
-        );
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Empty the database file.
      *
      * @return void

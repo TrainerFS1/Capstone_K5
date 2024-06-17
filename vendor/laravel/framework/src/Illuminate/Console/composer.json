@@ -19,13 +19,7 @@
         "illuminate/collections": "^10.0",
         "illuminate/contracts": "^10.0",
         "illuminate/macroable": "^10.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "laravel/prompts": "^0.1.9",
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "illuminate/support": "^10.0",
         "illuminate/view": "^10.0",
         "nunomaduro/termwind": "^1.13",

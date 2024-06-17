@@ -27,14 +27,8 @@ interface TranslationWriterInterface
      * @param string $format  The format to use to dump the messages
      * @param array  $options Options that are passed to the dumper
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException
      */
     public function write(MessageCatalogue $catalogue, string $format, array $options = []);

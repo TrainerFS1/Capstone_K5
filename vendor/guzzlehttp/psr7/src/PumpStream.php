@@ -18,15 +18,7 @@ use Psr\Http\Message\StreamInterface;
  */
 final class PumpStream implements StreamInterface
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @var callable(int): (string|false|null)|null */
-=======
-    /** @var callable|null */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    /** @var callable|null */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private $source;
 
     /** @var int|null */
@@ -42,15 +34,7 @@ final class PumpStream implements StreamInterface
     private $buffer;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param callable(int): (string|false|null)  $source  Source of the stream data. The callable MAY
-=======
-     * @param callable(int): (string|null|false)  $source  Source of the stream data. The callable MAY
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param callable(int): (string|null|false)  $source  Source of the stream data. The callable MAY
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *                                                     accept an integer argument used to control the
      *                                                     amount of data to return. The callable MUST
      *                                                     return a string when called, or false|null on error
@@ -76,13 +60,7 @@ final class PumpStream implements StreamInterface
                 throw $e;
             }
             trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return '';
         }
     }
@@ -172,16 +150,6 @@ final class PumpStream implements StreamInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function getMetadata($key = null)
@@ -195,26 +163,12 @@ final class PumpStream implements StreamInterface
 
     private function pump(int $length): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($this->source !== null) {
             do {
                 $data = ($this->source)($length);
                 if ($data === false || $data === null) {
                     $this->source = null;
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($this->source) {
-            do {
-                $data = call_user_func($this->source, $length);
-                if ($data === false || $data === null) {
-                    $this->source = null;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return;
                 }
                 $this->buffer->write($data);

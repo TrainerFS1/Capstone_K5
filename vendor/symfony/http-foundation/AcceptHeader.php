@@ -46,24 +46,10 @@ class AcceptHeader
      */
     public static function fromString(?string $headerValue): self
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $parts = HeaderUtils::split($headerValue ?? '', ',;=');
 
         return new self(array_map(function ($subParts) {
             static $index = 0;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $index = 0;
-
-        $parts = HeaderUtils::split($headerValue ?? '', ',;=');
-
-        return new self(array_map(function ($subParts) use (&$index) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $part = array_shift($subParts);
             $attributes = HeaderUtils::combine($subParts);
 
@@ -128,19 +114,7 @@ class AcceptHeader
      */
     public function filter(string $pattern): self
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return new self(array_filter($this->items, fn (AcceptHeaderItem $item) => preg_match($pattern, $item->getValue())));
-=======
-        return new self(array_filter($this->items, function (AcceptHeaderItem $item) use ($pattern) {
-            return preg_match($pattern, $item->getValue());
-        }));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new self(array_filter($this->items, function (AcceptHeaderItem $item) use ($pattern) {
-            return preg_match($pattern, $item->getValue());
-        }));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

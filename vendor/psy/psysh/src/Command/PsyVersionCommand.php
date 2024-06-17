@@ -34,15 +34,7 @@ class PsyVersionCommand extends Command
     /**
      * {@inheritdoc}
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $output->writeln($this->getApplication()->getVersion());
 

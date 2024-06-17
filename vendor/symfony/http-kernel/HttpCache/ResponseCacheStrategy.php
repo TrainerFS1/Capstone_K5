@@ -54,15 +54,9 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         'expires' => null,
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function add(Response $response)
     {
         ++$this->embeddedResponses;
@@ -104,15 +98,9 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function update(Response $response)
     {
         // if we have no embedded Response, do nothing
@@ -166,15 +154,7 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
 
         if (is_numeric($this->ageDirectives['expires'])) {
             $date = clone $response->getDate();
-<<<<<<< HEAD
-<<<<<<< HEAD
             $date = $date->modify('+'.($this->ageDirectives['expires'] + $this->age).' seconds');
-=======
-            $date->modify('+'.($this->ageDirectives['expires'] + $this->age).' seconds');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $date->modify('+'.($this->ageDirectives['expires'] + $this->age).' seconds');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $response->setExpires($date);
         }
     }
@@ -235,15 +215,7 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
      * as cacheable in a public (shared) cache, but did not provide an explicit lifetime that would serve
      * as an upper bound. In this case, we can proceed and possibly keep the directive on the final response.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function storeRelativeAgeDirective(string $directive, ?int $value, int $age, bool $isHeuristicallyCacheable): void
-=======
-    private function storeRelativeAgeDirective(string $directive, ?int $value, int $age, bool $isHeuristicallyCacheable)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function storeRelativeAgeDirective(string $directive, ?int $value, int $age, bool $isHeuristicallyCacheable)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $value) {
             if ($isHeuristicallyCacheable) {

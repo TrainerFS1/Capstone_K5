@@ -19,13 +19,7 @@ use Ramsey\Uuid\Fields\FieldsInterface;
 use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
 use Serializable;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Stringable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * A UUID is a universally unique identifier adhering to an agreed-upon
@@ -36,16 +30,8 @@ use Stringable;
 interface UuidInterface extends
     DeprecatedUuidInterface,
     JsonSerializable,
-<<<<<<< HEAD
-<<<<<<< HEAD
     Serializable,
     Stringable
-=======
-    Serializable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    Serializable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * Returns -1, 0, or 1 if the UUID is less than, equal to, or greater than
@@ -60,15 +46,7 @@ interface UuidInterface extends
      *
      * @param UuidInterface $other The UUID to compare
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return int<-1,1> -1, 0, or 1 if the UUID is less than, equal to, or greater than $other
-=======
-     * @return int -1, 0, or 1 if the UUID is less than, equal to, or greater than $other
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return int -1, 0, or 1 if the UUID is less than, equal to, or greater than $other
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function compareTo(UuidInterface $other): int;
 

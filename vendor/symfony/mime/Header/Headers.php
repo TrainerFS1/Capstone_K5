@@ -61,15 +61,7 @@ final class Headers
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setMaxLineLength(int $lineLength): void
-=======
-    public function setMaxLineLength(int $lineLength)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setMaxLineLength(int $lineLength)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->lineLength = $lineLength;
         foreach ($this->all() as $header) {
@@ -155,14 +147,8 @@ final class Headers
             $method = 'addTextHeader';
         } elseif ('addIdentificationHeader' === $method) {
             $method = 'addIdHeader';
-<<<<<<< HEAD
-<<<<<<< HEAD
         } elseif ('addMailboxListHeader' === $method && !\is_array($argument)) {
             $argument = [$argument];
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this->$method($name, $argument, $more);
@@ -204,15 +190,7 @@ final class Headers
         return array_shift($values);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function all(?string $name = null): iterable
-=======
-    public function all(string $name = null): iterable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function all(string $name = null): iterable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $name) {
             foreach ($this->headers as $name => $collection) {
@@ -288,15 +266,7 @@ final class Headers
         return $arr;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getHeaderBody(string $name): mixed
-=======
-    public function getHeaderBody(string $name)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getHeaderBody(string $name)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->has($name) ? $this->get($name)->getBody() : null;
     }

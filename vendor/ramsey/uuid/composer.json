@@ -11,15 +11,7 @@
     "require": {
         "php": "^8.0",
         "ext-json": "*",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12",
-=======
-        "brick/math": "^0.8.8 || ^0.9 || ^0.10",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "brick/math": "^0.8.8 || ^0.9 || ^0.10",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "ramsey/collection": "^1.2 || ^2.0"
     },
     "require-dev": {

@@ -6,15 +6,7 @@ use DateTimeInterface;
 use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Support\Facades\Date;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class DatabaseUuidFailedJobProvider implements CountableFailedJobProvider, FailedJobProviderInterface, PrunableFailedJobProvider
-=======
-class DatabaseUuidFailedJobProvider implements FailedJobProviderInterface, PrunableFailedJobProvider
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class DatabaseUuidFailedJobProvider implements FailedJobProviderInterface, PrunableFailedJobProvider
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * The connection resolver implementation.
@@ -76,8 +68,6 @@ class DatabaseUuidFailedJobProvider implements FailedJobProviderInterface, Pruna
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the IDs of all of the failed jobs.
      *
      * @param  string|null  $queue
@@ -93,10 +83,6 @@ class DatabaseUuidFailedJobProvider implements FailedJobProviderInterface, Pruna
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a list of all of the failed jobs.
      *
      * @return array
@@ -173,8 +159,6 @@ class DatabaseUuidFailedJobProvider implements FailedJobProviderInterface, Pruna
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Count the failed jobs.
      *
      * @param  string|null  $connection
@@ -190,10 +174,6 @@ class DatabaseUuidFailedJobProvider implements FailedJobProviderInterface, Pruna
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a new query builder instance for the table.
      *
      * @return \Illuminate\Database\Query\Builder

@@ -16,29 +16,17 @@ namespace PHPUnit\TextUI\Configuration;
  */
 final class TestSuite
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-var non-empty-string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $name;
     private readonly TestDirectoryCollection $directories;
     private readonly TestFileCollection $files;
     private readonly FileCollection $exclude;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $name
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(string $name, TestDirectoryCollection $directories, TestFileCollection $files, FileCollection $exclude)
     {
         $this->name        = $name;
@@ -47,15 +35,9 @@ final class TestSuite
         $this->exclude     = $exclude;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function name(): string
     {
         return $this->name;

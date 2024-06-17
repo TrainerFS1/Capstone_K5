@@ -10,13 +10,7 @@ declare(strict_types=1);
 namespace Nette\Utils;
 
 use Nette;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Random\Randomizer;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
 /**
@@ -44,14 +38,8 @@ final class Random
 			throw new Nette\InvalidArgumentException('Length must be greater than zero.');
 		} elseif ($chLen < 2) {
 			throw new Nette\InvalidArgumentException('Character list must contain at least two chars.');
-<<<<<<< HEAD
-<<<<<<< HEAD
 		} elseif (PHP_VERSION_ID >= 80300) {
 			return (new Randomizer)->getBytesFromString($charlist, $length);
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
 		$res = '';

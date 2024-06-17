@@ -18,30 +18,12 @@ namespace Symfony\Component\Yaml\Exception;
  */
 class ParseException extends RuntimeException
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @param string      $rawMessage The error message
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private ?string $parsedFile;
-    private int $parsedLine;
-    private ?string $snippet;
-    private string $rawMessage;
-
-    /**
-     * @param string      $message    The error message
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param int         $parsedLine The line where the error occurred
      * @param string|null $snippet    The snippet of code near the problem
      * @param string|null $parsedFile The file name where the error occurred
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(
         private string $rawMessage,
         private int $parsedLine = -1,
@@ -49,20 +31,6 @@ class ParseException extends RuntimeException
         private ?string $parsedFile = null,
         ?\Throwable $previous = null,
     ) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct(string $message, int $parsedLine = -1, string $snippet = null, string $parsedFile = null, \Throwable $previous = null)
-    {
-        $this->parsedFile = $parsedFile;
-        $this->parsedLine = $parsedLine;
-        $this->snippet = $snippet;
-        $this->rawMessage = $message;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->updateRepr();
 
         parent::__construct($this->message, 0, $previous);
@@ -79,15 +47,7 @@ class ParseException extends RuntimeException
     /**
      * Sets the snippet of code near the error.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setSnippet(string $snippet): void
-=======
-    public function setSnippet(string $snippet)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setSnippet(string $snippet)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->snippet = $snippet;
 
@@ -107,15 +67,7 @@ class ParseException extends RuntimeException
     /**
      * Sets the filename where the error occurred.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setParsedFile(string $parsedFile): void
-=======
-    public function setParsedFile(string $parsedFile)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setParsedFile(string $parsedFile)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->parsedFile = $parsedFile;
 
@@ -133,30 +85,14 @@ class ParseException extends RuntimeException
     /**
      * Sets the line where the error occurred.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setParsedLine(int $parsedLine): void
-=======
-    public function setParsedLine(int $parsedLine)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setParsedLine(int $parsedLine)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->parsedLine = $parsedLine;
 
         $this->updateRepr();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function updateRepr(): void
-=======
-    private function updateRepr()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function updateRepr()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->message = $this->rawMessage;
 

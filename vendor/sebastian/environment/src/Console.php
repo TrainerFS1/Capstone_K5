@@ -97,15 +97,7 @@ final class Console
     /**
      * Returns if the file descriptor is an interactive terminal or not.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Normally, we want to use a resource as a parameter, yet sadly it's not always available,
-=======
-     * Normally, we want to use a resource as a parameter, yet sadly it's not always awailable,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Normally, we want to use a resource as a parameter, yet sadly it's not always awailable,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * eg when running code in interactive console (`php -a`), STDIN/STDOUT/STDERR constants are not defined.
      *
      * @param int|resource $fileDescriptor
@@ -120,15 +112,7 @@ final class Console
             if (function_exists('fstat')) {
                 $stat = @fstat(STDOUT);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return $stat && 0o020000 === ($stat['mode'] & 0o170000);
-=======
-                return $stat && 0020000 === ($stat['mode'] & 0170000);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return $stat && 0020000 === ($stat['mode'] & 0170000);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             return false;
@@ -182,15 +166,7 @@ final class Console
                 $pipes,
                 null,
                 null,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ['suppress_errors' => true],
-=======
-                ['suppress_errors' => true]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ['suppress_errors' => true]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             if (is_resource($process)) {

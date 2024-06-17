@@ -54,15 +54,7 @@ class ServerDumpCommand extends Command
         parent::__construct();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function configure(): void
-=======
-    protected function configure()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function configure()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this
             ->addOption('format', null, InputOption::VALUE_REQUIRED, sprintf('The output format (%s)', implode(', ', $this->getAvailableFormats())), 'cli')

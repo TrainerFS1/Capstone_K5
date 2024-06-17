@@ -23,32 +23,14 @@ final class Filesystem
      */
     public static function createDirectory(string $directory): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $success = !(!is_dir($directory) && !@mkdir($directory, 0o777, true) && !is_dir($directory));
-=======
-        $success = !(!is_dir($directory) && !@mkdir($directory, 0777, true) && !is_dir($directory));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $success = !(!is_dir($directory) && !@mkdir($directory, 0777, true) && !is_dir($directory));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (!$success) {
             throw new DirectoryCouldNotBeCreatedException(
                 sprintf(
                     'Directory "%s" could not be created',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $directory,
                 ),
-=======
-                    $directory
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $directory
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
     }

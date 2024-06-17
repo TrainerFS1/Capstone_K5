@@ -87,38 +87,15 @@ foreach ($config['original_files'] as $originalFilePath) {
     $translationFilePaths = findTranslationFiles($originalFilePath, $config['locale_to_analyze']);
     $translationStatus = calculateTranslationStatus($originalFilePath, $translationFilePaths);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     $totalMissingTranslations += array_sum(array_map(fn ($translation) => count($translation['missingKeys']), array_values($translationStatus)));
     $totalTranslationMismatches += array_sum(array_map(fn ($translation) => count($translation['mismatches']), array_values($translationStatus)));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    $totalMissingTranslations += array_sum(array_map(function ($translation) {
-        return count($translation['missingKeys']);
-    }, array_values($translationStatus)));
-    $totalTranslationMismatches += array_sum(array_map(function ($translation) {
-        return count($translation['mismatches']);
-    }, array_values($translationStatus)));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     printTranslationStatus($originalFilePath, $translationStatus, $config['verbose_output'], $config['include_completed_languages']);
 }
 
 exit($totalTranslationMismatches > 0 ? 1 : 0);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function findTranslationFiles($originalFilePath, $localeToAnalyze): array
-=======
-function findTranslationFiles($originalFilePath, $localeToAnalyze)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-function findTranslationFiles($originalFilePath, $localeToAnalyze)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     $translations = [];
 
@@ -141,15 +118,7 @@ function findTranslationFiles($originalFilePath, $localeToAnalyze)
     return $translations;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function calculateTranslationStatus($originalFilePath, $translationFilePaths): array
-=======
-function calculateTranslationStatus($originalFilePath, $translationFilePaths)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-function calculateTranslationStatus($originalFilePath, $translationFilePaths)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     $translationStatus = [];
     $allTranslationKeys = extractTranslationKeys($originalFilePath);
@@ -190,8 +159,6 @@ function extractLocaleFromFilePath($filePath)
     return $parts[count($parts) - 2];
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function extractTranslationKeys($filePath): array
 {
     $translationKeys = [];
@@ -200,21 +167,6 @@ function extractTranslationKeys($filePath): array
     foreach ($contents->file->body->{'trans-unit'} as $translationKey) {
         $translationId = (string) $translationKey['id'];
         $translationKey = (string) ($translationKey['resname'] ?? $translationKey->source);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-function extractTranslationKeys($filePath)
-{
-    $translationKeys = [];
-    $contents = new \SimpleXMLElement(file_get_contents($filePath));
-
-    foreach ($contents->file->body->{'trans-unit'} as $translationKey) {
-        $translationId = (string) $translationKey['id'];
-        $translationKey = (string) $translationKey->source;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $translationKeys[$translationId] = $translationKey;
     }

@@ -2,13 +2,7 @@
 
 namespace Illuminate\Queue;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Queue\Attributes\WithoutRelations;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReflectionClass;
 use ReflectionProperty;
 
@@ -25,8 +19,6 @@ trait SerializesModels
     {
         $values = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $reflectionClass = new ReflectionClass($this);
 
         [$class, $properties, $classLevelWithoutRelations] = [
@@ -34,32 +26,12 @@ trait SerializesModels
             $reflectionClass->getProperties(),
             ! empty($reflectionClass->getAttributes(WithoutRelations::class)),
         ];
-=======
-        $properties = (new ReflectionClass($this))->getProperties();
-
-        $class = get_class($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $properties = (new ReflectionClass($this))->getProperties();
-
-        $class = get_class($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($properties as $property) {
             if ($property->isStatic()) {
                 continue;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (! $property->isInitialized($this)) {
                 continue;
             }
@@ -78,19 +50,11 @@ trait SerializesModels
                 $name = "\0*\0{$name}";
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $values[$name] = $this->getSerializedPropertyValue(
                 $value,
                 ! $classLevelWithoutRelations &&
                     empty($property->getAttributes(WithoutRelations::class))
             );
-=======
-            $values[$name] = $this->getSerializedPropertyValue($value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $values[$name] = $this->getSerializedPropertyValue($value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $values;
@@ -125,16 +89,6 @@ trait SerializesModels
                 continue;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $property->setValue(
                 $this, $this->getRestoredPropertyValue($values[$name])
             );
@@ -149,16 +103,6 @@ trait SerializesModels
      */
     protected function getPropertyValue(ReflectionProperty $property)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $property->getValue($this);
     }
 }

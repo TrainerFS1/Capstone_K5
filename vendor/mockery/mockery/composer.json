@@ -1,20 +1,8 @@
 {
     "name": "mockery/mockery",
     "description": "Mockery is a simple yet flexible PHP mock object framework",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "license": "BSD-3-Clause",
     "type": "library",
-=======
-    "scripts": {
-        "docs": "phpdoc -d library -t docs/api"
-    },
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    "scripts": {
-        "docs": "phpdoc -d library -t docs/api"
-    },
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "keywords": [
         "bdd",
         "library",
@@ -27,36 +15,16 @@
         "test double",
         "testing"
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "homepage": "https://github.com/mockery/mockery",
-    "license": "BSD-3-Clause",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    "homepage": "https://github.com/mockery/mockery",
-    "license": "BSD-3-Clause",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "authors": [
         {
             "name": "Pádraic Brady",
             "email": "padraic.brady@gmail.com",
-<<<<<<< HEAD
-<<<<<<< HEAD
             "homepage": "https://github.com/padraic",
             "role": "Author"
-=======
-            "homepage": "http://blog.astrumfutura.com"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "homepage": "http://blog.astrumfutura.com"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         },
         {
             "name": "Dave Marshall",
             "email": "dave.marshall@atstsolutions.co.uk",
-<<<<<<< HEAD
-<<<<<<< HEAD
             "homepage": "https://davedevelopment.co.uk",
             "role": "Developer"
         },
@@ -77,39 +45,17 @@
     },
     "require": {
         "php": ">=7.3",
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            "homepage": "http://davedevelopment.co.uk"
-        }
-    ],
-    "require": {
-        "php": "^7.3 || ^8.0",
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "lib-pcre": ">=7.0",
         "hamcrest/hamcrest-php": "^2.0.1"
     },
     "require-dev": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "phpunit/phpunit": "^8.5 || ^9.6.17",
         "symplify/easy-coding-standard": "^12.1.14"
-=======
-        "phpunit/phpunit": "^8.5 || ^9.3"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "phpunit/phpunit": "^8.5 || ^9.3"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "conflict": {
         "phpunit/phpunit": "<8.0"
     },
     "autoload": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "psr-4": {
             "Mockery\\": "library/Mockery"
         },
@@ -169,28 +115,5 @@
             "@psalm:security",
             "@psalm:dry-run"
         ]
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        "psr-0": {
-            "Mockery": "library/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "test\\": "tests/"
-        }
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.4.x-dev"
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

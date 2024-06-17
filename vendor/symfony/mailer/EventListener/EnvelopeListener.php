@@ -33,15 +33,7 @@ class EnvelopeListener implements EventSubscriberInterface
     /**
      * @param array<Address|string> $recipients
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(Address|string|null $sender = null, ?array $recipients = null)
-=======
-    public function __construct(Address|string $sender = null, array $recipients = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(Address|string $sender = null, array $recipients = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $sender) {
             $this->sender = Address::create($sender);

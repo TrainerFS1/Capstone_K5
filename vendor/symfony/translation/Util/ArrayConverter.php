@@ -36,15 +36,7 @@ class ArrayConverter
         $tree = [];
 
         foreach ($messages as $id => $value) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $referenceToElement = &self::getElementByPath($tree, self::getKeyParts($id));
-=======
-            $referenceToElement = &self::getElementByPath($tree, explode('.', $id));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $referenceToElement = &self::getElementByPath($tree, explode('.', $id));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $referenceToElement = $value;
 
@@ -54,15 +46,7 @@ class ArrayConverter
         return $tree;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static function &getElementByPath(array &$tree, array $parts): mixed
-=======
-    private static function &getElementByPath(array &$tree, array $parts)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private static function &getElementByPath(array &$tree, array $parts)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $elem = &$tree;
         $parentOfElem = null;
@@ -79,13 +63,7 @@ class ArrayConverter
                 $elem = &$elem[implode('.', \array_slice($parts, $i))];
                 break;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $parentOfElem = &$elem;
             $elem = &$elem[$part];
         }
@@ -105,15 +83,7 @@ class ArrayConverter
         return $elem;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static function cancelExpand(array &$tree, string $prefix, array $node): void
-=======
-    private static function cancelExpand(array &$tree, string $prefix, array $node)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private static function cancelExpand(array &$tree, string $prefix, array $node)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $prefix .= '.';
 
@@ -125,8 +95,6 @@ class ArrayConverter
             }
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @return string[]
@@ -171,8 +139,4 @@ class ArrayConverter
 
         return $result;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

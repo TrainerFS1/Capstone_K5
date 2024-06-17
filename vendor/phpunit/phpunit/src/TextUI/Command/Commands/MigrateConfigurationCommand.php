@@ -11,13 +11,7 @@ namespace PHPUnit\TextUI\Command;
 
 use function copy;
 use function file_put_contents;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function sprintf;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\XmlConfiguration\Migrator;
 use Throwable;
 
@@ -35,8 +29,6 @@ final class MigrateConfigurationCommand implements Command
 
     public function execute(): Result
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             $migrated = (new Migrator)->migrate($this->filename);
 
@@ -65,31 +57,5 @@ final class MigrateConfigurationCommand implements Command
                 Result::FAILURE,
             );
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        copy($this->filename, $this->filename . '.bak');
-
-        $buffer        = 'Created backup:         ' . $this->filename . '.bak' . PHP_EOL;
-        $shellExitCode = Result::SUCCESS;
-
-        try {
-            file_put_contents(
-                $this->filename,
-                (new Migrator)->migrate($this->filename)
-            );
-
-            $buffer .= 'Migrated configuration: ' . $this->filename . PHP_EOL;
-        } catch (Throwable $t) {
-            $buffer .= 'Migration failed: ' . $t->getMessage() . PHP_EOL;
-
-            $shellExitCode = Result::FAILURE;
-        }
-
-        return Result::from($buffer, $shellExitCode);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

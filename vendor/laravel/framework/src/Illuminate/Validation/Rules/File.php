@@ -7,30 +7,14 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Str;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
 
 class File implements Rule, DataAwareRule, ValidatorAwareRule
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use Conditionable, Macroable;
-=======
-    use Conditionable;
-    use Macroable;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    use Conditionable;
-    use Macroable;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The MIME types that the given file should match. This array may also contain file extensions.
@@ -40,8 +24,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     protected $allowedMimetypes = [];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The extensions that the given file should match.
      *
      * @var array
@@ -49,10 +31,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     protected $allowedExtensions = [];
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The minimum size in kilobytes that the file can be.
      *
      * @var null|int
@@ -158,8 +136,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Limit the uploaded file to the given file extensions.
      *
      * @param  string|array<int, string>  $extensions
@@ -182,22 +158,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     {
         $this->minimumFileSize = $this->toKilobytes($size);
         $this->maximumFileSize = $this->minimumFileSize;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Indicate that the uploaded file should be exactly a certain size in kilobytes.
-     *
-     * @param  int  $kilobytes
-     * @return $this
-     */
-    public function size($kilobytes)
-    {
-        $this->minimumFileSize = $kilobytes;
-        $this->maximumFileSize = $kilobytes;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -205,8 +165,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Indicate that the uploaded file should be between a minimum and maximum size in kilobytes.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|int  $minSize
      * @param  string|int  $maxSize
      * @return $this
@@ -215,21 +173,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     {
         $this->minimumFileSize = $this->toKilobytes($minSize);
         $this->maximumFileSize = $this->toKilobytes($maxSize);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  int  $minKilobytes
-     * @param  int  $maxKilobytes
-     * @return $this
-     */
-    public function between($minKilobytes, $maxKilobytes)
-    {
-        $this->minimumFileSize = $minKilobytes;
-        $this->maximumFileSize = $maxKilobytes;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -237,27 +180,12 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Indicate that the uploaded file should be no less than the given number of kilobytes.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|int  $size
      * @return $this
      */
     public function min($size)
     {
         $this->minimumFileSize = $this->toKilobytes($size);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  int  $kilobytes
-     * @return $this
-     */
-    public function min($kilobytes)
-    {
-        $this->minimumFileSize = $kilobytes;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -265,34 +193,17 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Indicate that the uploaded file should be no more than the given number of kilobytes.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|int  $size
      * @return $this
      */
     public function max($size)
     {
         $this->maximumFileSize = $this->toKilobytes($size);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  int  $kilobytes
-     * @return $this
-     */
-    public function max($kilobytes)
-    {
-        $this->maximumFileSize = $kilobytes;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert a potentially human-friendly file size to kilobytes.
      *
      * @param  string|int  $size
@@ -316,10 +227,6 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Specify additional validation rules that should be merged with the default rules during validation.
      *
      * @param  string|array  $rules
@@ -368,16 +275,10 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
 
         $rules = array_merge($rules, $this->buildMimetypes());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! empty($this->allowedExtensions)) {
             $rules[] = 'extensions:'.implode(',', array_map('strtolower', $this->allowedExtensions));
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $rules[] = match (true) {
             is_null($this->minimumFileSize) && is_null($this->maximumFileSize) => null,
             is_null($this->maximumFileSize) => "min:{$this->minimumFileSize}",

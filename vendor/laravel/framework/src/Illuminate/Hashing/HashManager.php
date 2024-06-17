@@ -89,8 +89,6 @@ class HashManager extends Manager implements Hasher
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determine if a given string is already hashed.
      *
      * @param  string  $value
@@ -102,10 +100,6 @@ class HashManager extends Manager implements Hasher
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the default driver name.
      *
      * @return string

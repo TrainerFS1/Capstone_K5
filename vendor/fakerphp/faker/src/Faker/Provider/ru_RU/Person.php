@@ -5,18 +5,8 @@ namespace Faker\Provider\ru_RU;
 class Person extends \Faker\Provider\Person
 {
     protected static $maleNameFormats = [
-<<<<<<< HEAD
-<<<<<<< HEAD
         '{{firstNameMale}} {{middleNameMale}} {{lastNameMale}}',
         '{{lastNameMale}} {{firstNameMale}} {{middleNameMale}}',
-=======
-        '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
-        '{{lastName}} {{firstNameMale}} {{middleNameMale}}',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
-        '{{lastName}} {{firstNameMale}} {{middleNameMale}}',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     /**
@@ -24,18 +14,8 @@ class Person extends \Faker\Provider\Person
      * That list of MALE last names could be safely extended to FEMALE list just by adding 'a' letter at the end
      */
     protected static $femaleNameFormats = [
-<<<<<<< HEAD
-<<<<<<< HEAD
         '{{firstNameFemale}} {{middleNameFemale}} {{lastNameFemale}}',
         '{{lastNameFemale}} {{firstNameFemale}} {{middleNameFemale}}',
-=======
-        '{{firstNameFemale}} {{middleNameFemale}} {{lastName}}а',
-        '{{lastName}}а {{firstNameFemale}} {{middleNameFemale}}',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        '{{firstNameFemale}} {{middleNameFemale}} {{lastName}}а',
-        '{{lastName}}а {{firstNameFemale}} {{middleNameFemale}}',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     /**
@@ -185,8 +165,6 @@ class Person extends \Faker\Provider\Person
      */
     public function lastName($gender = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (static::GENDER_FEMALE === $gender) {
             return $this->lastNameFemale();
         }
@@ -206,23 +184,5 @@ class Person extends \Faker\Provider\Person
     public function lastNameFemale(): string
     {
         return static::randomElement(static::$lastName) . 'а';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $lastName = static::randomElement(static::$lastName);
-
-        if (static::GENDER_FEMALE === $gender) {
-            return $lastName . 'а';
-        }
-
-        if (static::GENDER_MALE === $gender) {
-            return $lastName;
-        }
-
-        return $lastName . static::randomElement(static::$lastNameSuffix);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -22,8 +22,6 @@ use Symfony\Component\Process\Exception\RuntimeException;
  */
 class InputStream implements \IteratorAggregate
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private ?\Closure $onEmpty = null;
     private array $input = [];
     private bool $open = true;
@@ -36,24 +34,6 @@ class InputStream implements \IteratorAggregate
     public function onEmpty(?callable $onEmpty = null)
     {
         $this->onEmpty = null !== $onEmpty ? $onEmpty(...) : null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /** @var callable|null */
-    private $onEmpty = null;
-    private $input = [];
-    private $open = true;
-
-    /**
-     * Sets a callback that is called when the write buffer becomes empty.
-     */
-    public function onEmpty(callable $onEmpty = null)
-    {
-        $this->onEmpty = $onEmpty;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -61,14 +41,8 @@ class InputStream implements \IteratorAggregate
      *
      * @param resource|string|int|float|bool|\Traversable|null $input The input to append as scalar,
      *                                                                stream resource or \Traversable
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function write(mixed $input)
     {
@@ -83,14 +57,8 @@ class InputStream implements \IteratorAggregate
 
     /**
      * Closes the write buffer.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function close()
     {
@@ -99,14 +67,8 @@ class InputStream implements \IteratorAggregate
 
     /**
      * Tells whether the write buffer is closed or not.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return bool
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function isClosed()
     {

@@ -75,18 +75,8 @@ abstract class Driver
             throw new BranchAndPathCoverageNotSupportedException(
                 sprintf(
                     '%s does not support branch and path coverage',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->nameAndVersion(),
                 ),
-=======
-                    $this->nameAndVersion()
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->nameAndVersion()
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -117,18 +107,8 @@ abstract class Driver
             throw new DeadCodeDetectionNotSupportedException(
                 sprintf(
                     '%s does not support dead code detection',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->nameAndVersion(),
                 ),
-=======
-                    $this->nameAndVersion()
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->nameAndVersion()
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

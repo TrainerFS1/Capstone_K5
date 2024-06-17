@@ -18,8 +18,6 @@ final class QrCode
     public const NUM_MASK_PATTERNS = 8;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Mask pattern of the QR code.
      */
     private int $maskPattern = -1;
@@ -36,57 +34,6 @@ final class QrCode
         int                                   $maskPattern,
         ByteMatrix                            $matrix
     ) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Mode of the QR code.
-     *
-     * @var Mode
-     */
-    private $mode;
-
-    /**
-     * EC level of the QR code.
-     *
-     * @var ErrorCorrectionLevel
-     */
-    private $errorCorrectionLevel;
-
-    /**
-     * Version of the QR code.
-     *
-     * @var Version
-     */
-    private $version;
-
-    /**
-     * Mask pattern of the QR code.
-     *
-     * @var int
-     */
-    private $maskPattern = -1;
-
-    /**
-     * Matrix of the QR code.
-     *
-     * @var ByteMatrix
-     */
-    private $matrix;
-
-    public function __construct(
-        Mode $mode,
-        ErrorCorrectionLevel $errorCorrectionLevel,
-        Version $version,
-        int $maskPattern,
-        ByteMatrix $matrix
-    ) {
-        $this->mode = $mode;
-        $this->errorCorrectionLevel = $errorCorrectionLevel;
-        $this->version = $version;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->maskPattern = $maskPattern;
         $this->matrix = $matrix;
     }
@@ -123,22 +70,7 @@ final class QrCode
         return $this->maskPattern;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getMatrix(): ByteMatrix
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * Gets the matrix.
-     *
-     * @return ByteMatrix
-     */
-    public function getMatrix()
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->matrix;
     }

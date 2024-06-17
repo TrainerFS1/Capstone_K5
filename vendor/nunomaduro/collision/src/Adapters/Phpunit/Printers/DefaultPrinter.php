@@ -7,8 +7,6 @@ namespace NunoMaduro\Collision\Adapters\Phpunit\Printers;
 use NunoMaduro\Collision\Adapters\Phpunit\ConfigureIO;
 use NunoMaduro\Collision\Adapters\Phpunit\State;
 use NunoMaduro\Collision\Adapters\Phpunit\Style;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use NunoMaduro\Collision\Adapters\Phpunit\Support\ResultReflection;
 use NunoMaduro\Collision\Adapters\Phpunit\TestResult;
 use NunoMaduro\Collision\Exceptions\ShouldNotHappen;
@@ -16,18 +14,6 @@ use NunoMaduro\Collision\Exceptions\TestOutcome;
 use Pest\Result;
 use PHPUnit\Event\Code\TestMethod;
 use PHPUnit\Event\Code\ThrowableBuilder;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use NunoMaduro\Collision\Adapters\Phpunit\TestResult;
-use NunoMaduro\Collision\Exceptions\ShouldNotHappen;
-use Pest\Result;
-use PHPUnit\Event\Code\TestMethod;
-use PHPUnit\Event\Code\Throwable;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Test\BeforeFirstTestMethodErrored;
 use PHPUnit\Event\Test\ConsideredRisky;
 use PHPUnit\Event\Test\DeprecationTriggered;
@@ -35,8 +21,6 @@ use PHPUnit\Event\Test\Errored;
 use PHPUnit\Event\Test\Failed;
 use PHPUnit\Event\Test\Finished;
 use PHPUnit\Event\Test\MarkedIncomplete;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Event\Test\NoticeTriggered;
 use PHPUnit\Event\Test\Passed;
 use PHPUnit\Event\Test\PhpDeprecationTriggered;
@@ -61,28 +45,6 @@ use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Output\OutputInterface;
 use Throwable;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use PHPUnit\Event\Test\Passed;
-use PHPUnit\Event\Test\PhpunitWarningTriggered;
-use PHPUnit\Event\Test\PreparationStarted;
-use PHPUnit\Event\Test\Prepared;
-use PHPUnit\Event\Test\Skipped;
-use PHPUnit\Event\TestRunner\ExecutionFinished;
-use PHPUnit\Event\TestRunner\ExecutionStarted;
-use PHPUnit\Event\TestRunner\WarningTriggered;
-use PHPUnit\Framework\Exception;
-use PHPUnit\Framework\IncompleteTestError;
-use PHPUnit\Framework\SkippedWithMessageException;
-use PHPUnit\TestRunner\TestResult\Facade;
-use Symfony\Component\Console\Input\ArgvInput;
-use Symfony\Component\Console\Output\ConsoleOutput;
-use Symfony\Component\Console\Output\OutputInterface;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @internal
@@ -180,8 +142,6 @@ final class DefaultPrinter
     /**
      * Listen to the runner execution started event.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function testPrintedUnexpectedOutput(PrintedUnexpectedOutput $printedUnexpectedOutput): void
     {
         $this->output->write($printedUnexpectedOutput->output());
@@ -190,10 +150,6 @@ final class DefaultPrinter
     /**
      * Listen to the runner execution started event.
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testRunnerExecutionStarted(ExecutionStarted $executionStarted): void
     {
         // ..
@@ -289,22 +245,12 @@ final class DefaultPrinter
      */
     public function testConsideredRisky(ConsideredRisky $event): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $throwable = ThrowableBuilder::from(new IncompleteTestError($event->message()));
-=======
-        $throwable = Throwable::from(new IncompleteTestError($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $throwable = Throwable::from(new IncompleteTestError($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->state->add(TestResult::fromTestCase($event->test(), TestResult::RISKY, $throwable));
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Listen to the test runner deprecation triggered.
      */
     public function testRunnerDeprecationTriggered(TestRunnerDeprecationTriggered $event): void
@@ -316,16 +262,6 @@ final class DefaultPrinter
      * Listen to the test runner warning triggered.
      */
     public function testRunnerWarningTriggered(TestRunnerWarningTriggered $event): void
-=======
-     * Listen to the test runner warning triggered.
-     */
-    public function testRunnerWarningTriggered(WarningTriggered $event): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Listen to the test runner warning triggered.
-     */
-    public function testRunnerWarningTriggered(WarningTriggered $event): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (! str_starts_with($event->message(), 'No tests found in class')) {
             $this->style->writeWarning($event->message());
@@ -335,8 +271,6 @@ final class DefaultPrinter
     /**
      * Listen to the test runner warning triggered.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function testPhpDeprecationTriggered(PhpDeprecationTriggered $event): void
     {
         $throwable = ThrowableBuilder::from(new TestOutcome($event->message()));
@@ -370,16 +304,6 @@ final class DefaultPrinter
     public function testPhpunitWarningTriggered(PhpunitWarningTriggered $event): void
     {
         $throwable = ThrowableBuilder::from(new TestOutcome($event->message()));
-=======
-    public function testPhpunitWarningTriggered(PhpunitWarningTriggered $event): void
-    {
-        $throwable = Throwable::from(new Exception($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function testPhpunitWarningTriggered(PhpunitWarningTriggered $event): void
-    {
-        $throwable = Throwable::from(new Exception($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->state->add(TestResult::fromTestCase($event->test(), TestResult::WARN, $throwable));
     }
@@ -389,22 +313,12 @@ final class DefaultPrinter
      */
     public function testDeprecationTriggered(DeprecationTriggered $event): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $throwable = ThrowableBuilder::from(new TestOutcome($event->message()));
-=======
-        $throwable = Throwable::from(new Exception($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $throwable = Throwable::from(new Exception($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->state->add(TestResult::fromTestCase($event->test(), TestResult::DEPRECATED, $throwable));
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Listen to the test phpunit deprecation triggered event.
      */
     public function testPhpunitDeprecationTriggered(PhpunitDeprecationTriggered $event): void
@@ -445,10 +359,6 @@ final class DefaultPrinter
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Listen to the test skipped event.
      */
     public function testSkipped(Skipped $event): void
@@ -459,15 +369,7 @@ final class DefaultPrinter
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $throwable = ThrowableBuilder::from(new SkippedWithMessageException($event->message()));
-=======
-        $throwable = Throwable::from(new SkippedWithMessageException($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $throwable = Throwable::from(new SkippedWithMessageException($event->message()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->state->add(TestResult::fromTestCase($event->test(), TestResult::SKIPPED, $throwable));
     }
@@ -489,15 +391,7 @@ final class DefaultPrinter
     {
         $result = Facade::result();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (ResultReflection::numberOfTests(Facade::result()) === 0) {
-=======
-        if (Facade::result()->numberOfTests() === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (Facade::result()->numberOfTests() === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->output->writeln([
                 '',
                 '  <fg=white;options=bold;bg=blue> INFO </> No tests found.',
@@ -513,8 +407,6 @@ final class DefaultPrinter
             $this->output->writeln(['']);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (class_exists(Result::class)) {
             $failed = Result::failed(Registry::get(), Facade::result());
         } else {
@@ -522,20 +414,6 @@ final class DefaultPrinter
         }
 
         $this->style->writeErrorsSummary($this->state);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $failed = class_exists(Result::class) ?
-            Result::failed() : (! Facade::result()->wasSuccessful());
-
-        if ($failed) {
-            $onFailure = $result->numberOfTests() !== $result->numberOfTestsRun();
-            $this->style->writeErrorsSummary($this->state, $onFailure);
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->style->writeRecap($this->state, $event->telemetryInfo(), $result);
 
@@ -547,20 +425,8 @@ final class DefaultPrinter
     /**
      * Reports the given throwable.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function report(Throwable $throwable): void
     {
         $this->style->writeError(ThrowableBuilder::from($throwable));
-=======
-    public function report(\Throwable $throwable): void
-    {
-        $this->style->writeError(Throwable::from($throwable));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function report(\Throwable $throwable): void
-    {
-        $this->style->writeError(Throwable::from($throwable));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

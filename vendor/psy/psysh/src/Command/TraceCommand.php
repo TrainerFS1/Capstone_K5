@@ -71,15 +71,7 @@ HELP
      *
      * @return int 0 if everything went fine, or an exit code
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->filter->bind($input);
         $trace = $this->getBacktrace(new \Exception(), $input->getOption('num'), $input->getOption('include-psy'));
@@ -100,15 +92,7 @@ HELP
      *
      * @return array Formatted stacktrace lines
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function getBacktrace(\Throwable $e, ?int $count = null, bool $includePsy = true): array
-=======
-    protected function getBacktrace(\Throwable $e, int $count = null, bool $includePsy = true): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function getBacktrace(\Throwable $e, int $count = null, bool $includePsy = true): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return TraceFormatter::formatTrace($e, $this->filter, $count, $includePsy);
     }

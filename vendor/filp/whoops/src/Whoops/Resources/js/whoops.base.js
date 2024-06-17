@@ -25,15 +25,7 @@ Zepto(function($) {
    * highlight the current line
    */
   var renderCurrentCodeblock = function(id) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     Prism.highlightAllUnder(document.querySelector('.frame-code-container .frame-code.active'));
-=======
-    Prism.highlightAll();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    Prism.highlightAll();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     highlightCurrentLine();
   }
 
@@ -161,18 +153,6 @@ Zepto(function($) {
     }
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Render late enough for highlightCurrentLine to be ready
-  renderCurrentCodeblock();
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-  // Render late enough for highlightCurrentLine to be ready
-  renderCurrentCodeblock();
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
   // Avoid to quit the page with some protocol (e.g. IntelliJ Platform REST API)
   $ajaxEditors.on('click', function(e){
     e.preventDefault();
@@ -202,13 +182,7 @@ Zepto(function($) {
     e.preventDefault();
     setActiveFramesTab($(this));
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   // Render late enough for highlightCurrentLine to be ready
   renderCurrentCodeblock();
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 });

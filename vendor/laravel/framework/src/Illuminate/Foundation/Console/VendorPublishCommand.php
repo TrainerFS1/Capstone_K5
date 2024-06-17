@@ -15,15 +15,9 @@ use League\Flysystem\UnixVisibility\PortableVisibilityConverter;
 use League\Flysystem\Visibility;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function Laravel\Prompts\search;
 use function Laravel\Prompts\select;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'vendor:publish')]
 class VendorPublishCommand extends Command
 {
@@ -121,8 +115,6 @@ class VendorPublishCommand extends Command
      */
     protected function promptForProviderOrTag()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $choices = $this->publishableChoices();
 
         $choice = windows_os()
@@ -140,17 +132,6 @@ class VendorPublishCommand extends Command
                 )),
                 scroll: 15,
             );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $choice = $this->components->choice(
-            "Which provider or tag's files would you like to publish?",
-            $choices = $this->publishableChoices()
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($choice == $choices[0] || is_null($choice)) {
             return;
@@ -167,15 +148,7 @@ class VendorPublishCommand extends Command
     protected function publishableChoices()
     {
         return array_merge(
-<<<<<<< HEAD
-<<<<<<< HEAD
             ['All providers and tags'],
-=======
-            ['<comment>Publish files from all providers and tags listed below</comment>'],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            ['<comment>Publish files from all providers and tags listed below</comment>'],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             preg_filter('/^/', '<fg=gray>Provider:</> ', Arr::sort(ServiceProvider::publishableProviders())),
             preg_filter('/^/', '<fg=gray>Tag:</> ', Arr::sort(ServiceProvider::publishableGroups()))
         );
@@ -206,16 +179,6 @@ class VendorPublishCommand extends Command
      */
     protected function publishTag($tag)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        $published = false;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $published = false;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $pathsToPublish = $this->pathsToPublish($tag);
 
         if ($publishing = count($pathsToPublish) > 0) {

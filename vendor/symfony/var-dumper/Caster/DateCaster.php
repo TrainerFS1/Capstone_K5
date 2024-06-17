@@ -24,8 +24,6 @@ class DateCaster
 {
     private const PERIOD_LIMIT = 3;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
@@ -33,17 +31,6 @@ class DateCaster
     {
         $prefix = Caster::PREFIX_VIRTUAL;
         $location = $d->getTimezone() ? $d->getTimezone()->getLocation() : null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public static function castDateTime(\DateTimeInterface $d, array $a, Stub $stub, bool $isNested, int $filter)
-    {
-        $prefix = Caster::PREFIX_VIRTUAL;
-        $location = $d->getTimezone()->getLocation();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $fromNow = (new \DateTimeImmutable())->diff($d);
 
         $title = $d->format('l, F j, Y')
@@ -63,15 +50,9 @@ class DateCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castInterval(\DateInterval $interval, array $a, Stub $stub, bool $isNested, int $filter)
     {
         $now = new \DateTimeImmutable('@0', new \DateTimeZone('UTC'));
@@ -101,15 +82,9 @@ class DateCaster
         return $i->format(rtrim($format));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castTimeZone(\DateTimeZone $timeZone, array $a, Stub $stub, bool $isNested, int $filter)
     {
         $location = $timeZone->getLocation();
@@ -121,15 +96,9 @@ class DateCaster
         return $filter & Caster::EXCLUDE_VERBOSE ? $z : $z + $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castPeriod(\DatePeriod $p, array $a, Stub $stub, bool $isNested, int $filter)
     {
         $dates = [];

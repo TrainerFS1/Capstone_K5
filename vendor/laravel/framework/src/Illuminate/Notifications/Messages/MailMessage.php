@@ -130,8 +130,6 @@ class MailMessage extends SimpleMessage implements Renderable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the plain text view for the mail message.
      *
      * @param  string  $textView
@@ -147,10 +145,6 @@ class MailMessage extends SimpleMessage implements Renderable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the Markdown template for the notification.
      *
      * @param  string  $view
@@ -284,8 +278,6 @@ class MailMessage extends SimpleMessage implements Renderable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Attach multiple files to the message.
      *
      * @param  array<string|\Illuminate\Contracts\Mail\Attachable|\Illuminate\Mail\Attachment|array>  $files
@@ -305,10 +297,6 @@ class MailMessage extends SimpleMessage implements Renderable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Attach in-memory data as an attachment.
      *
      * @param  string  $data

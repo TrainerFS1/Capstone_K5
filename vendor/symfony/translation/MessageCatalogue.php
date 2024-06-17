@@ -55,15 +55,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         return array_values($domains);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function all(?string $domain = null): array
-=======
-    public function all(string $domain = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function all(string $domain = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $domain) {
             // skip messages merge if intl-icu requested explicitly
@@ -88,15 +80,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         return $allMessages;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $id, string $translation, string $domain = 'messages')
     {
         $this->add([$id => $translation], $domain);
@@ -137,15 +123,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         return $id;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $messages, string $domain = 'messages')
     {
         unset($this->messages[$domain], $this->messages[$domain.self::INTL_DOMAIN_SUFFIX]);
@@ -153,15 +133,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         $this->add($messages, $domain);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function add(array $messages, string $domain = 'messages')
     {
         $altDomain = str_ends_with($domain, self::INTL_DOMAIN_SUFFIX) ? substr($domain, 0, -\strlen(self::INTL_DOMAIN_SUFFIX)) : $domain.self::INTL_DOMAIN_SUFFIX;
@@ -175,15 +149,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addCatalogue(MessageCatalogueInterface $catalogue)
     {
         if ($catalogue->getLocale() !== $this->locale) {
@@ -213,15 +181,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addFallbackCatalogue(MessageCatalogueInterface $catalogue)
     {
         // detect circular references
@@ -261,15 +223,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         return array_values($this->resources);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addResource(ResourceInterface $resource)
     {
         $this->resources[$resource->__toString()] = $resource;
@@ -294,29 +250,17 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         return null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMetadata(string $key, mixed $value, string $domain = 'messages')
     {
         $this->metadata[$domain][$key] = $value;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function deleteMetadata(string $key = '', string $domain = 'messages')
     {
         if ('' == $domain) {
@@ -347,29 +291,17 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         return null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setCatalogueMetadata(string $key, mixed $value, string $domain = 'messages')
     {
         $this->catalogueMetadata[$domain][$key] = $value;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function deleteCatalogueMetadata(string $key = '', string $domain = 'messages')
     {
         if (!$domain) {
@@ -386,15 +318,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
      *
      * @param array $values Values to add
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function addMetadata(array $values): void
-=======
-    private function addMetadata(array $values)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function addMetadata(array $values)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         foreach ($values as $domain => $keys) {
             foreach ($keys as $key => $value) {
@@ -403,15 +327,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function addCatalogueMetadata(array $values): void
-=======
-    private function addCatalogueMetadata(array $values)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function addCatalogueMetadata(array $values)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         foreach ($values as $domain => $keys) {
             foreach ($keys as $key => $value) {

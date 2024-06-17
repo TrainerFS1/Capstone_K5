@@ -112,15 +112,7 @@ class BroadcastManager implements FactoryContract
      */
     public function channelRoutes(array $attributes = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->routes($attributes);
-=======
-        return $this->routes($attributes);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->routes($attributes);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -287,8 +279,6 @@ class BroadcastManager implements FactoryContract
      * @param  array  $config
      * @return \Illuminate\Contracts\Broadcasting\Broadcaster
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function createReverbDriver(array $config)
     {
         return $this->createPusherDriver($config);
@@ -300,10 +290,6 @@ class BroadcastManager implements FactoryContract
      * @param  array  $config
      * @return \Illuminate\Contracts\Broadcasting\Broadcaster
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function createPusherDriver(array $config)
     {
         return new PusherBroadcaster($this->pusher($config));

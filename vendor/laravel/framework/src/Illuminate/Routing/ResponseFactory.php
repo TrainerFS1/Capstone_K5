@@ -10,13 +10,7 @@ use Illuminate\Routing\Exceptions\StreamedResponseException;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\StreamedJsonResponse;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Throwable;
 
@@ -137,8 +131,6 @@ class ResponseFactory implements FactoryContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Create a new streamed response instance.
      *
      * @param  array  $data
@@ -153,10 +145,6 @@ class ResponseFactory implements FactoryContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new streamed response instance as a file download.
      *
      * @param  callable  $callback
@@ -262,15 +250,7 @@ class ResponseFactory implements FactoryContract
     /**
      * Create a new redirect response to a controller action.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  array|string  $action
-=======
-     * @param  string  $action
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $action
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  mixed  $parameters
      * @param  int  $status
      * @param  array  $headers

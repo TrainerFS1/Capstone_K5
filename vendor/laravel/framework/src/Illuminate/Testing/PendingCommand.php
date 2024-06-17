@@ -3,13 +3,7 @@
 namespace Illuminate\Testing;
 
 use Illuminate\Console\OutputStyle;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Console\PromptValidationException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Support\Arrayable;
@@ -307,14 +301,8 @@ class PendingCommand
             }
 
             throw $e;
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (PromptValidationException) {
             $exitCode = Command::FAILURE;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if ($this->expectedExitCode !== null) {

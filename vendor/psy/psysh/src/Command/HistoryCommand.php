@@ -93,15 +93,7 @@ HELP
      *
      * @return int 0 if everything went fine, or an exit code
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->validateOnlyOne($input, ['show', 'head', 'tail']);
         $this->validateOnlyOne($input, ['save', 'replay', 'clear']);

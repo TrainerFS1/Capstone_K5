@@ -23,20 +23,6 @@ class MultipleValidationWithAnd implements EmailValidation
     public const ALLOW_ALL_ERRORS = 1;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @var EmailValidation[]
-     */
-    private $validations = [];
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @var Warning[]
      */
     private $warnings = [];
@@ -47,44 +33,14 @@ class MultipleValidationWithAnd implements EmailValidation
     private $error;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param EmailValidation[] $validations The validations.
      * @param int               $mode        The validation mode (one of the constants).
      */
     public function __construct(private readonly array $validations, private readonly int $mode = self::ALLOW_ALL_ERRORS)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @var int
-     */
-    private $mode;
-
-    /**
-     * @param EmailValidation[] $validations The validations.
-     * @param int               $mode        The validation mode (one of the constants).
-     */
-    public function __construct(array $validations, $mode = self::ALLOW_ALL_ERRORS)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (count($validations) == 0) {
             throw new EmptyValidationList();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-        $this->validations = $validations;
-        $this->mode = $mode;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-        $this->validations = $validations;
-        $this->mode = $mode;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -97,15 +53,7 @@ class MultipleValidationWithAnd implements EmailValidation
             $emailLexer->reset();
             $validationResult = $validation->isValid($email, $emailLexer);
             $result = $result && $validationResult;
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->warnings = [...$this->warnings, ...$validation->getWarnings()];
-=======
-            $this->warnings = array_merge($this->warnings, $validation->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->warnings = array_merge($this->warnings, $validation->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (!$validationResult) {
                 $this->processError($validation);
             }

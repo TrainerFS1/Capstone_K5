@@ -8,24 +8,12 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Queue\Factory as QueueManager;
 use Illuminate\Database\DetectsLostConnections;
 use Illuminate\Queue\Events\JobExceptionOccurred;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Queue\Events\JobPopped;
 use Illuminate\Queue\Events\JobPopping;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Queue\Events\JobReleasedAfterException;
 use Illuminate\Queue\Events\JobTimedOut;
-=======
-use Illuminate\Queue\Events\JobProcessed;
-use Illuminate\Queue\Events\JobProcessing;
-use Illuminate\Queue\Events\JobReleasedAfterException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Queue\Events\JobProcessed;
-use Illuminate\Queue\Events\JobProcessing;
-use Illuminate\Queue\Events\JobReleasedAfterException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Queue\Events\Looping;
 use Illuminate\Queue\Events\WorkerStopping;
 use Illuminate\Support\Carbon;
@@ -226,15 +214,7 @@ class Worker
         pcntl_signal(SIGALRM, function () use ($job, $options) {
             if ($job) {
                 $this->markJobAsFailedIfWillExceedMaxAttempts(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $job->getConnectionName(), $job, (int) $options->maxTries, $e = $this->timeoutExceededException($job)
-=======
-                    $job->getConnectionName(), $job, (int) $options->maxTries, $e = $this->maxAttemptsExceededException($job)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $job->getConnectionName(), $job, (int) $options->maxTries, $e = $this->maxAttemptsExceededException($job)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 
                 $this->markJobAsFailedIfWillExceedMaxExceptions(
@@ -244,16 +224,10 @@ class Worker
                 $this->markJobAsFailedIfItShouldFailOnTimeout(
                     $job->getConnectionName(), $job, $e
                 );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 $this->events->dispatch(new JobTimedOut(
                     $job->getConnectionName(), $job
                 ));
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             $this->kill(static::EXIT_ERROR, $options);
@@ -375,8 +349,6 @@ class Worker
             return $connection->pop($queue);
         };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->raiseBeforeJobPopEvent($connection->getConnectionName());
 
         try {
@@ -385,28 +357,12 @@ class Worker
                     (static::$popCallbacks[$this->name])($popJobCallback, $queue),
                     fn ($job) => $this->raiseAfterJobPopEvent($connection->getConnectionName(), $job)
                 );
-=======
-        try {
-            if (isset(static::$popCallbacks[$this->name])) {
-                return (static::$popCallbacks[$this->name])($popJobCallback, $queue);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        try {
-            if (isset(static::$popCallbacks[$this->name])) {
-                return (static::$popCallbacks[$this->name])($popJobCallback, $queue);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             foreach (explode(',', $queue) as $queue) {
                 if (! is_null($job = $popJobCallback($queue))) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->raiseAfterJobPopEvent($connection->getConnectionName(), $job);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return $job;
                 }
             }
@@ -660,8 +616,6 @@ class Worker
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Raise the before job has been popped.
      *
      * @param  string  $connectionName
@@ -687,10 +641,6 @@ class Worker
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Raise the before queue job event.
      *
      * @param  string  $connectionName
@@ -832,8 +782,6 @@ class Worker
      */
     protected function maxAttemptsExceededException($job)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return MaxAttemptsExceededException::forJob($job);
     }
 
@@ -846,16 +794,6 @@ class Worker
     protected function timeoutExceededException($job)
     {
         return TimeoutExceededException::forJob($job);
-=======
-        return new MaxAttemptsExceededException(
-            $job->resolveName().' has been attempted too many times or run too long. The job may have previously timed out.'
-        );
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new MaxAttemptsExceededException(
-            $job->resolveName().' has been attempted too many times or run too long. The job may have previously timed out.'
-        );
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

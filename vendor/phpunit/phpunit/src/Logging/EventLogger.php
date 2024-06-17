@@ -12,21 +12,9 @@ namespace PHPUnit\Logging;
 use const FILE_APPEND;
 use const LOCK_EX;
 use const PHP_EOL;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function file_put_contents;
 use function implode;
 use function preg_split;
-=======
-use function explode;
-use function file_put_contents;
-use function implode;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use function explode;
-use function file_put_contents;
-use function implode;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function str_repeat;
 use function strlen;
 use PHPUnit\Event\Event;
@@ -50,8 +38,6 @@ final class EventLogger implements Tracer
     {
         $telemetryInfo = $this->telemetryInfo($event);
         $indentation   = PHP_EOL . str_repeat(' ', strlen($telemetryInfo));
-<<<<<<< HEAD
-<<<<<<< HEAD
         $lines         = preg_split('/\r\n|\r|\n/', $event->asString());
 
         $flags = FILE_APPEND;
@@ -60,25 +46,11 @@ final class EventLogger implements Tracer
             $this->path !== 'php://stdout') {
             $flags |= LOCK_EX;
         }
-=======
-        $lines         = explode(PHP_EOL, $event->asString());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $lines         = explode(PHP_EOL, $event->asString());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         file_put_contents(
             $this->path,
             $telemetryInfo . implode($indentation, $lines) . PHP_EOL,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $flags,
-=======
-            FILE_APPEND | LOCK_EX
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            FILE_APPEND | LOCK_EX
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

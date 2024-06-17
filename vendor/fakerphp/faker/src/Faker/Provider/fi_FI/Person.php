@@ -91,17 +91,7 @@ class Person extends \Faker\Provider\Person
      *
      * @see http://www.finlex.fi/fi/laki/ajantasa/2010/20100128
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param string $gender Person::GENDER_MALE || Person::GENDER_FEMALE
-=======
-     * @param \DateTime $birthdate
-     * @param string    $gender    Person::GENDER_MALE || Person::GENDER_FEMALE
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param \DateTime $birthdate
-     * @param string    $gender    Person::GENDER_MALE || Person::GENDER_FEMALE
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return string on format DDMMYYCZZZQ, where DDMMYY is the date of birth, C the century sign, ZZZ the individual number and Q the control character (checksum)
      */

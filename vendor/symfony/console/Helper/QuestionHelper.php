@@ -68,19 +68,7 @@ class QuestionHelper extends Helper
                 return $this->doAsk($output, $question);
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $interviewer = fn () => $this->doAsk($output, $question);
-=======
-            $interviewer = function () use ($output, $question) {
-                return $this->doAsk($output, $question);
-            };
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $interviewer = function () use ($output, $question) {
-                return $this->doAsk($output, $question);
-            };
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return $this->validateAttempts($interviewer, $output, $question);
         } catch (MissingInputException $exception) {
@@ -101,14 +89,8 @@ class QuestionHelper extends Helper
 
     /**
      * Prevents usage of stty.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function disableStty()
     {
@@ -141,8 +123,6 @@ class QuestionHelper extends Helper
             }
 
             if (false === $ret) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $isBlocked = stream_get_meta_data($inputStream)['blocked'] ?? true;
 
                 if (!$isBlocked) {
@@ -155,12 +135,6 @@ class QuestionHelper extends Helper
                     stream_set_blocking($inputStream, false);
                 }
 
-=======
-                $ret = $this->readInput($inputStream, $question);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $ret = $this->readInput($inputStream, $question);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if (false === $ret) {
                     throw new MissingInputException('Aborted.');
                 }
@@ -196,15 +170,7 @@ class QuestionHelper extends Helper
         }
 
         if ($validator = $question->getValidator()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return \call_user_func($validator, $default);
-=======
-            return \call_user_func($question->getValidator(), $default);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return \call_user_func($question->getValidator(), $default);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif ($question instanceof ChoiceQuestion) {
             $choices = $question->getChoices();
 
@@ -224,14 +190,8 @@ class QuestionHelper extends Helper
 
     /**
      * Outputs the question prompt.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function writePrompt(OutputInterface $output, Question $question)
     {
@@ -268,14 +228,8 @@ class QuestionHelper extends Helper
 
     /**
      * Outputs an error message.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function writeError(OutputInterface $output, \Exception $error)
     {
@@ -375,19 +329,7 @@ class QuestionHelper extends Helper
 
                         $matches = array_filter(
                             $autocomplete($ret),
-<<<<<<< HEAD
-<<<<<<< HEAD
                             fn ($match) => '' === $ret || str_starts_with($match, $ret)
-=======
-                            function ($match) use ($ret) {
-                                return '' === $ret || str_starts_with($match, $ret);
-                            }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                            function ($match) use ($ret) {
-                                return '' === $ret || str_starts_with($match, $ret);
-                            }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         );
                         $numMatches = \count($matches);
                         $ofs = -1;
@@ -559,31 +501,7 @@ class QuestionHelper extends Helper
             return self::$stdinIsInteractive;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return self::$stdinIsInteractive = @stream_isatty(fopen('php://stdin', 'r'));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (\function_exists('stream_isatty')) {
-            return self::$stdinIsInteractive = @stream_isatty(fopen('php://stdin', 'r'));
-        }
-
-        if (\function_exists('posix_isatty')) {
-            return self::$stdinIsInteractive = @posix_isatty(fopen('php://stdin', 'r'));
-        }
-
-        if (!\function_exists('exec')) {
-            return self::$stdinIsInteractive = true;
-        }
-
-        exec('stty 2> /dev/null', $output, $status);
-
-        return self::$stdinIsInteractive = 1 !== $status;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

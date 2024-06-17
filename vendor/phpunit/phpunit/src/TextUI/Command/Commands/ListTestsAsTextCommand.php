@@ -40,15 +40,7 @@ final class ListTestsAsTextCommand implements Command
                 $name = sprintf(
                     '%s::%s',
                     $test::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
                     str_replace(' with data set ', '', $test->nameWithDataSet()),
-=======
-                    str_replace(' with data set ', '', $test->nameWithDataSet())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    str_replace(' with data set ', '', $test->nameWithDataSet())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             } elseif ($test instanceof PhptTestCase) {
                 $name = $test->getName();
@@ -58,15 +50,7 @@ final class ListTestsAsTextCommand implements Command
 
             $buffer .= sprintf(
                 ' - %s' . PHP_EOL,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $name,
-=======
-                $name
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $name
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

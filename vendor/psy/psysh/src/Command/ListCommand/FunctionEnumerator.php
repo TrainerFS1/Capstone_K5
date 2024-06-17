@@ -22,15 +22,7 @@ class FunctionEnumerator extends Enumerator
     /**
      * {@inheritdoc}
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function listItems(InputInterface $input, ?\Reflector $reflector = null, $target = null): array
-=======
-    protected function listItems(InputInterface $input, \Reflector $reflector = null, $target = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function listItems(InputInterface $input, \Reflector $reflector = null, $target = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // if we have a reflector, ensure that it's a namespace reflector
         if (($target !== null || $reflector !== null) && !$reflector instanceof ReflectionNamespace) {
@@ -75,15 +67,7 @@ class FunctionEnumerator extends Enumerator
      *
      * @return array
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function getFunctions(?string $type = null): array
-=======
-    protected function getFunctions(string $type = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function getFunctions(string $type = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $funcs = \get_defined_functions();
 
@@ -102,15 +86,7 @@ class FunctionEnumerator extends Enumerator
      *
      * @return array
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function prepareFunctions(array $functions, ?string $prefix = null): array
-=======
-    protected function prepareFunctions(array $functions, string $prefix = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function prepareFunctions(array $functions, string $prefix = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         \natcasesort($functions);
 

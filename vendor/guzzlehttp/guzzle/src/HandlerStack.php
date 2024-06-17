@@ -44,15 +44,7 @@ class HandlerStack
      *                                                                            handler is provided, the best handler for your
      *                                                                            system will be utilized.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function create(callable $handler = null): self
-=======
-    public static function create(?callable $handler = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function create(?callable $handler = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $stack = new self($handler ?: Utils::chooseHandler());
         $stack->push(Middleware::httpErrors(), 'http_errors');
@@ -94,34 +86,14 @@ class HandlerStack
         $stack = [];
 
         if ($this->handler !== null) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $stack[] = '0) Handler: '.$this->debugCallable($this->handler);
-=======
-            $stack[] = "0) Handler: " . $this->debugCallable($this->handler);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $stack[] = "0) Handler: " . $this->debugCallable($this->handler);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $result = '';
         foreach (\array_reverse($this->stack) as $tuple) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             ++$depth;
             $str = "{$depth}) Name: '{$tuple[1]}', ";
             $str .= 'Function: '.$this->debugCallable($tuple[0]);
-=======
-            $depth++;
-            $str = "{$depth}) Name: '{$tuple[1]}', ";
-            $str .= "Function: " . $this->debugCallable($tuple[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $depth++;
-            $str = "{$depth}) Name: '{$tuple[1]}', ";
-            $str .= "Function: " . $this->debugCallable($tuple[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $result = "> {$str}\n{$result}";
             $stack[] = $str;
         }
@@ -150,15 +122,7 @@ class HandlerStack
      */
     public function hasHandler(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->handler !== null;
-=======
-        return $this->handler !== null ;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->handler !== null ;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -167,15 +131,7 @@ class HandlerStack
      * @param callable(callable): callable $middleware Middleware function
      * @param string                       $name       Name to register for this middleware.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function unshift(callable $middleware, string $name = null): void
-=======
-    public function unshift(callable $middleware, ?string $name = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function unshift(callable $middleware, ?string $name = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         \array_unshift($this->stack, [$middleware, $name]);
         $this->cached = null;
@@ -310,24 +266,10 @@ class HandlerStack
         if (\is_array($fn)) {
             return \is_string($fn[0])
                 ? "callable({$fn[0]}::{$fn[1]})"
-<<<<<<< HEAD
-<<<<<<< HEAD
                 : "callable(['".\get_class($fn[0])."', '{$fn[1]}'])";
         }
 
         /** @var object $fn */
         return 'callable('.\spl_object_hash($fn).')';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                : "callable(['" . \get_class($fn[0]) . "', '{$fn[1]}'])";
-        }
-
-        /** @var object $fn */
-        return 'callable(' . \spl_object_hash($fn) . ')';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

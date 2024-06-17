@@ -31,15 +31,7 @@ class MergeExtensionConfigurationPass extends BaseMergeExtensionConfigurationPas
         $this->extensions = $extensions;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function process(ContainerBuilder $container): void
-=======
-    public function process(ContainerBuilder $container)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function process(ContainerBuilder $container)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         foreach ($this->extensions as $extension) {
             if (!\count($container->getExtensionConfig($extension))) {

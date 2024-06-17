@@ -7,14 +7,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Mime\Part\DataPart;
 use Symfony\Component\Mime\Part\File;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @mixin \Symfony\Component\Mime\Email
@@ -352,32 +346,16 @@ class Message
                 function ($path) use ($file) {
                     $cid = $file->as ?? Str::random();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->message->addPart(
                         (new DataPart(new File($path), $cid, $file->mime))->asInline()
                     );
-=======
-                    $this->message->embedFromPath($path, $cid, $file->mime);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->message->embedFromPath($path, $cid, $file->mime);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     return "cid:{$cid}";
                 },
                 function ($data) use ($file) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->message->addPart(
                         (new DataPart($data(), $file->as, $file->mime))->asInline()
                     );
-=======
-                    $this->message->embed($data(), $file->as, $file->mime);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->message->embed($data(), $file->as, $file->mime);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     return "cid:{$file->as}";
                 }
@@ -386,17 +364,9 @@ class Message
 
         $cid = Str::random(10);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->message->addPart(
             (new DataPart(new File($file), $cid))->asInline()
         );
-=======
-        $this->message->embedFromPath($file, $cid);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->message->embedFromPath($file, $cid);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return "cid:$cid";
     }
@@ -411,17 +381,9 @@ class Message
      */
     public function embedData($data, $name, $contentType = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->message->addPart(
             (new DataPart($data, $name, $contentType))->asInline()
         );
-=======
-        $this->message->embed($data, $name, $contentType);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->message->embed($data, $name, $contentType);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return "cid:$name";
     }

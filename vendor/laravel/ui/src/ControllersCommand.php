@@ -5,20 +5,10 @@ namespace Laravel\Ui;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Finder\SplFileInfo;
 
 #[AsCommand(name: 'ui:controllers')]
-=======
-use Symfony\Component\Finder\SplFileInfo;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Finder\SplFileInfo;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class ControllersCommand extends Command
 {
     /**

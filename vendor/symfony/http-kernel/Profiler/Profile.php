@@ -33,13 +33,7 @@ class Profile
     private ?int $time = null;
     private ?int $statusCode = null;
     private ?self $parent = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private ?string $virtualType = null;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var Profile[]
@@ -51,15 +45,9 @@ class Profile
         $this->token = $token;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setToken(string $token)
     {
         $this->token = $token;
@@ -75,14 +63,8 @@ class Profile
 
     /**
      * Sets the parent token.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setParent(self $parent)
     {
@@ -113,15 +95,9 @@ class Profile
         return $this->ip;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setIp(?string $ip)
     {
         $this->ip = $ip;
@@ -135,15 +111,9 @@ class Profile
         return $this->method;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMethod(string $method)
     {
         $this->method = $method;
@@ -157,15 +127,9 @@ class Profile
         return $this->url;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setUrl(?string $url)
     {
         $this->url = $url;
@@ -176,29 +140,17 @@ class Profile
         return $this->time ?? 0;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setTime(int $time)
     {
         $this->time = $time;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setStatusCode(int $statusCode)
     {
         $this->statusCode = $statusCode;
@@ -210,8 +162,6 @@ class Profile
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @internal
      */
     public function setVirtualType(?string $virtualType): void
@@ -228,10 +178,6 @@ class Profile
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Finds children profilers.
      *
      * @return self[]
@@ -245,14 +191,8 @@ class Profile
      * Sets children profiler.
      *
      * @param Profile[] $children
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setChildren(array $children)
     {
@@ -264,14 +204,8 @@ class Profile
 
     /**
      * Adds the child token.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addChild(self $child)
     {
@@ -318,14 +252,8 @@ class Profile
      * Sets the Collectors associated with this profile.
      *
      * @param DataCollectorInterface[] $collectors
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setCollectors(array $collectors)
     {
@@ -337,14 +265,8 @@ class Profile
 
     /**
      * Adds a Collector.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addCollector(DataCollectorInterface $collector)
     {
@@ -358,14 +280,6 @@ class Profile
 
     public function __sleep(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ['token', 'parent', 'children', 'collectors', 'ip', 'method', 'url', 'time', 'statusCode', 'virtualType'];
-=======
-        return ['token', 'parent', 'children', 'collectors', 'ip', 'method', 'url', 'time', 'statusCode'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return ['token', 'parent', 'children', 'collectors', 'ip', 'method', 'url', 'time', 'statusCode'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -15,13 +15,7 @@ use function file_put_contents;
 use function htmlspecialchars;
 use function is_string;
 use function round;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function str_contains;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use DOMDocument;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
 use SebastianBergmann\CodeCoverage\Driver\WriteOperationFailedException;
@@ -79,15 +73,7 @@ final class Crap4j
                 foreach ($class['methods'] as $methodName => $method) {
                     $crapLoad = $this->crapLoad((float) $method['crap'], $method['ccn'], $method['coverage']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $fullCrap     += $method['crap'];
-=======
-                    $fullCrap += $method['crap'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $fullCrap += $method['crap'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $fullCrapLoad += $crapLoad;
                     $fullMethodCount++;
 
@@ -136,17 +122,9 @@ final class Crap4j
         $buffer = $document->saveXML();
 
         if ($target !== null) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (!str_contains($target, '://')) {
                 Filesystem::createDirectory(dirname($target));
             }
-=======
-            Filesystem::createDirectory(dirname($target));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            Filesystem::createDirectory(dirname($target));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (@file_put_contents($target, $buffer) === false) {
                 throw new WriteOperationFailedException($target);

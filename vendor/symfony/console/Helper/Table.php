@@ -66,14 +66,8 @@ class Table
 
     /**
      * Sets a style definition.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function setStyleDefinition(string $name, TableStyle $style)
     {
@@ -318,14 +312,8 @@ class Table
      *     | 9971-5-0210-0 | A Tale of Two Cities  | Charles Dickens  |
      *     | 960-425-059-0 | The Lord of the Rings | J. R. R. Tolkien |
      *     +---------------+-----------------------+------------------+
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function render()
     {
@@ -376,8 +364,6 @@ class Table
                 $maxRows = max(\count($headers), \count($row));
                 for ($i = 0; $i < $maxRows; ++$i) {
                     $cell = (string) ($row[$i] ?? '');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     $eol = str_contains($cell, "\r\n") ? "\r\n" : "\n";
                     $parts = explode($eol, $cell);
@@ -400,21 +386,6 @@ class Table
                         } elseif ('' !== $cell) {
                             $rows[] = [$part];
                         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                    if ($headers && !$containsColspan) {
-                        $rows[] = [sprintf(
-                            '<comment>%s</>: %s',
-                            str_pad($headers[$i] ?? '', $maxHeaderLength, ' ', \STR_PAD_LEFT),
-                            $cell
-                        )];
-                    } elseif ('' !== $cell) {
-                        $rows[] = [$cell];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     }
                 }
             }
@@ -454,15 +425,7 @@ class Table
 
                 if ($isHeader && !$isHeaderSeparatorRendered) {
                     $this->renderRowSeparator(
-<<<<<<< HEAD
-<<<<<<< HEAD
                         self::SEPARATOR_TOP,
-=======
-                        $isHeader ? self::SEPARATOR_TOP : self::SEPARATOR_TOP_BOTTOM,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $isHeader ? self::SEPARATOR_TOP : self::SEPARATOR_TOP_BOTTOM,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $hasTitle ? $this->headerTitle : null,
                         $hasTitle ? $this->style->getHeaderTitleFormat() : null
                     );
@@ -472,15 +435,7 @@ class Table
 
                 if ($isFirstRow) {
                     $this->renderRowSeparator(
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $horizontal ? self::SEPARATOR_TOP : self::SEPARATOR_TOP_BOTTOM,
-=======
-                        $isHeader ? self::SEPARATOR_TOP : self::SEPARATOR_TOP_BOTTOM,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $isHeader ? self::SEPARATOR_TOP : self::SEPARATOR_TOP_BOTTOM,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $hasTitle ? $this->headerTitle : null,
                         $hasTitle ? $this->style->getHeaderTitleFormat() : null
                     );
@@ -513,15 +468,7 @@ class Table
      *
      *     +-----+-----------+-------+
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function renderRowSeparator(int $type = self::SEPARATOR_MID, ?string $title = null, ?string $titleFormat = null): void
-=======
-    private function renderRowSeparator(int $type = self::SEPARATOR_MID, string $title = null, string $titleFormat = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function renderRowSeparator(int $type = self::SEPARATOR_MID, string $title = null, string $titleFormat = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$count = $this->numberOfColumns) {
             return;
@@ -586,15 +533,7 @@ class Table
      *
      *     | 9971-5-0210-0 | A Tale of Two Cities  | Charles Dickens  |
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function renderRow(array $row, string $cellFormat, ?string $firstCellFormat = null): void
-=======
-    private function renderRow(array $row, string $cellFormat, string $firstCellFormat = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function renderRow(array $row, string $cellFormat, string $firstCellFormat = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $rowContent = $this->renderColumnSeparator(self::BORDER_OUTSIDE);
         $columns = $this->getRowColumns($row);
@@ -667,15 +606,7 @@ class Table
     /**
      * Calculate number of columns for this table.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function calculateNumberOfColumns(array $rows): void
-=======
-    private function calculateNumberOfColumns(array $rows)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function calculateNumberOfColumns(array $rows)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $columns = [0];
         foreach ($rows as $row) {
@@ -707,22 +638,10 @@ class Table
                 if (!str_contains($cell ?? '', "\n")) {
                     continue;
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $eol = str_contains($cell ?? '', "\r\n") ? "\r\n" : "\n";
                 $escaped = implode($eol, array_map(OutputFormatter::escapeTrailingBackslash(...), explode($eol, $cell)));
                 $cell = $cell instanceof TableCell ? new TableCell($escaped, ['colspan' => $cell->getColspan()]) : $escaped;
                 $lines = explode($eol, str_replace($eol, '<fg=default;bg=default></>'.$eol, $cell));
-=======
-                $escaped = implode("\n", array_map(OutputFormatter::escapeTrailingBackslash(...), explode("\n", $cell)));
-                $cell = $cell instanceof TableCell ? new TableCell($escaped, ['colspan' => $cell->getColspan()]) : $escaped;
-                $lines = explode("\n", str_replace("\n", "<fg=default;bg=default></>\n", $cell));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $escaped = implode("\n", array_map(OutputFormatter::escapeTrailingBackslash(...), explode("\n", $cell)));
-                $cell = $cell instanceof TableCell ? new TableCell($escaped, ['colspan' => $cell->getColspan()]) : $escaped;
-                $lines = explode("\n", str_replace("\n", "<fg=default;bg=default></>\n", $cell));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 foreach ($lines as $lineKey => $line) {
                     if ($colspan > 1) {
                         $line = new TableCell($line, ['colspan' => $colspan]);
@@ -784,19 +703,9 @@ class Table
                 $nbLines = $cell->getRowspan() - 1;
                 $lines = [$cell];
                 if (str_contains($cell, "\n")) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $eol = str_contains($cell, "\r\n") ? "\r\n" : "\n";
                     $lines = explode($eol, str_replace($eol, '<fg=default;bg=default>'.$eol.'</>', $cell));
                     $nbLines = \count($lines) > $nbLines ? substr_count($cell, $eol) : $nbLines;
-=======
-                    $lines = explode("\n", str_replace("\n", "<fg=default;bg=default>\n</>", $cell));
-                    $nbLines = \count($lines) > $nbLines ? substr_count($cell, "\n") : $nbLines;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $lines = explode("\n", str_replace("\n", "<fg=default;bg=default>\n</>", $cell));
-                    $nbLines = \count($lines) > $nbLines ? substr_count($cell, "\n") : $nbLines;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     $rows[$line][$column] = new TableCell($lines[0], ['colspan' => $cell->getColspan(), 'style' => $cell->getStyle()]);
                     unset($lines[0]);
@@ -838,15 +747,7 @@ class Table
     /**
      * fill cells for a row that contains colspan > 1.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function fillCells(iterable $row): iterable
-=======
-    private function fillCells(iterable $row)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function fillCells(iterable $row)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $newRow = [];
 
@@ -908,15 +809,7 @@ class Table
     /**
      * Calculates columns widths.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function calculateColumnsWidth(iterable $groups): void
-=======
-    private function calculateColumnsWidth(iterable $groups)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function calculateColumnsWidth(iterable $groups)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         for ($column = 0; $column < $this->numberOfColumns; ++$column) {
             $lengths = [];
@@ -931,15 +824,7 @@ class Table
                             $textContent = Helper::removeDecoration($this->output->getFormatter(), $cell);
                             $textLength = Helper::width($textContent);
                             if ($textLength > 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 $contentColumns = mb_str_split($textContent, ceil($textLength / $cell->getColspan()));
-=======
-                                $contentColumns = str_split($textContent, ceil($textLength / $cell->getColspan()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                                $contentColumns = str_split($textContent, ceil($textLength / $cell->getColspan()));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 foreach ($contentColumns as $position => $content) {
                                     $row[$i + $position] = $content;
                                 }
@@ -978,15 +863,7 @@ class Table
     /**
      * Called after rendering to cleanup cache data.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function cleanup(): void
-=======
-    private function cleanup()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function cleanup()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->effectiveColumnWidths = [];
         unset($this->numberOfColumns);

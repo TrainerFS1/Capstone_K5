@@ -11,15 +11,7 @@
     <?php if ($trace['file']) { ?>
         <?php
         $lineNumber = $trace['line'] ?: 1;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $fileLink = $this->fileLinkFormat->format($trace['file'], $lineNumber);
-=======
-        $fileLink = $this->getFileLink($trace['file'], $lineNumber);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $fileLink = $this->getFileLink($trace['file'], $lineNumber);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $filePath = strtr(strip_tags($this->formatFile($trace['file'], $lineNumber)), [' at line '.$lineNumber => '']);
         $filePathParts = explode(\DIRECTORY_SEPARATOR, $filePath);
         ?>

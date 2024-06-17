@@ -226,15 +226,7 @@ class MorphTo extends BelongsTo
     /**
      * Associate the model instance to the given parent.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Model|null  $model
-=======
-     * @param  \Illuminate\Database\Eloquent\Model  $model
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Database\Eloquent\Model  $model
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function associate($model)
@@ -359,8 +351,6 @@ class MorphTo extends BelongsTo
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicate that soft deleted models should be included in the results.
      *
      * @return $this
@@ -412,10 +402,6 @@ class MorphTo extends BelongsTo
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Replay stored macro calls on the actual related instance.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query

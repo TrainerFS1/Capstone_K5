@@ -7,15 +7,7 @@ use Illuminate\Routing\Contracts\ControllerDispatcher as ControllerDispatcherCon
 
 class ControllerDispatcher implements ControllerDispatcherContract
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use FiltersControllerMiddleware, ResolvesRouteDependencies;
-=======
-    use RouteDependencyResolverTrait;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    use RouteDependencyResolverTrait;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The container instance.
@@ -86,26 +78,4 @@ class ControllerDispatcher implements ControllerDispatcherContract
             return static::methodExcludedByOptions($method, $data['options']);
         })->pluck('middleware')->all();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Determine if the given options exclude a particular method.
-     *
-     * @param  string  $method
-     * @param  array  $options
-     * @return bool
-     */
-    public static function methodExcludedByOptions($method, array $options)
-    {
-        return (isset($options['only']) && ! in_array($method, (array) $options['only'])) ||
-            (! empty($options['except']) && in_array($method, (array) $options['except']));
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

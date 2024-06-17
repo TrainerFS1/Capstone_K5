@@ -5,14 +5,8 @@ namespace Illuminate\Support;
 use Carbon\Carbon as BaseCarbon;
 use Carbon\CarbonImmutable as BaseCarbonImmutable;
 use Illuminate\Support\Traits\Conditionable;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\Uid\Ulid;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class Carbon extends BaseCarbon
 {
@@ -26,8 +20,6 @@ class Carbon extends BaseCarbon
         BaseCarbon::setTestNow($testNow);
         BaseCarbonImmutable::setTestNow($testNow);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Create a Carbon instance from a given ordered UUID or ULID.
@@ -66,8 +58,4 @@ class Carbon extends BaseCarbon
 
         return $this;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

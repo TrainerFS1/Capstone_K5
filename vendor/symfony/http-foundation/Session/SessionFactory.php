@@ -26,15 +26,7 @@ class SessionFactory implements SessionFactoryInterface
     private SessionStorageFactoryInterface $storageFactory;
     private ?\Closure $usageReporter;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(RequestStack $requestStack, SessionStorageFactoryInterface $storageFactory, ?callable $usageReporter = null)
-=======
-    public function __construct(RequestStack $requestStack, SessionStorageFactoryInterface $storageFactory, callable $usageReporter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(RequestStack $requestStack, SessionStorageFactoryInterface $storageFactory, callable $usageReporter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->requestStack = $requestStack;
         $this->storageFactory = $storageFactory;

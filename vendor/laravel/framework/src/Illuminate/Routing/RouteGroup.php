@@ -67,21 +67,9 @@ class RouteGroup
 
         if ($prependExistingPrefix) {
             return isset($new['prefix']) ? trim($old, '/').'/'.trim($new['prefix'], '/') : $old;
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
 
         return isset($new['prefix']) ? trim($new['prefix'], '/').'/'.trim($old, '/') : $old;
-=======
-        } else {
-            return isset($new['prefix']) ? trim($new['prefix'], '/').'/'.trim($old, '/') : $old;
-        }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        } else {
-            return isset($new['prefix']) ? trim($new['prefix'], '/').'/'.trim($old, '/') : $old;
-        }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

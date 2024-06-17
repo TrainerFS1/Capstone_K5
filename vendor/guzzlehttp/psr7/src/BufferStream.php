@@ -134,16 +134,6 @@ final class BufferStream implements StreamInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function getMetadata($key = null)

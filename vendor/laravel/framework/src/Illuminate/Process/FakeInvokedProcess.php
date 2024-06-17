@@ -3,14 +3,6 @@
 namespace Illuminate\Process;
 
 use Illuminate\Contracts\Process\InvokedProcess as InvokedProcessContract;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Symfony\Component\Process\Process;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Process\Process;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class FakeInvokedProcess implements InvokedProcessContract
 {
@@ -286,15 +278,7 @@ class FakeInvokedProcess implements InvokedProcessContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the ultimate process result that will be returned by this "process".
-=======
-     * Get the ultimate process result that wil be returned by this "process".
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Get the ultimate process result that wil be returned by this "process".
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return \Illuminate\Contracts\Process\ProcessResult
      */

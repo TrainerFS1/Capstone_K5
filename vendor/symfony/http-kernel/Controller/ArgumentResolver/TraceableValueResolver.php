@@ -42,15 +42,7 @@ final class TraceableValueResolver implements ArgumentValueResolverInterface, Va
             return true;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $method = $this->inner::class.'::'.__FUNCTION__;
-=======
-        $method = \get_class($this->inner).'::'.__FUNCTION__;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $method = \get_class($this->inner).'::'.__FUNCTION__;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->stopwatch->start($method, 'controller.argument_value_resolver');
 
         $return = $this->inner->supports($request, $argument);
@@ -62,15 +54,7 @@ final class TraceableValueResolver implements ArgumentValueResolverInterface, Va
 
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $method = $this->inner::class.'::'.__FUNCTION__;
-=======
-        $method = \get_class($this->inner).'::'.__FUNCTION__;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $method = \get_class($this->inner).'::'.__FUNCTION__;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->stopwatch->start($method, 'controller.argument_value_resolver');
 
         yield from $this->inner->resolve($request, $argument);

@@ -25,15 +25,7 @@ final class Report extends File
 
         $contextNode = $dom->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'file',
-=======
-            'file'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'file'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->item(0);
 
         parent::__construct($contextNode);
@@ -51,18 +43,8 @@ final class Report extends File
         $node = $this->contextNode()->appendChild(
             $this->dom()->createElementNS(
                 'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'function',
             ),
-=======
-                'function'
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'function'
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return new Method($node, $name);
@@ -82,33 +64,15 @@ final class Report extends File
     {
         $source = $this->contextNode()->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'source',
-=======
-            'source'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'source'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->item(0);
 
         if (!$source) {
             $source = $this->contextNode()->appendChild(
                 $this->dom()->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'source',
                 ),
-=======
-                    'source'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    'source'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -126,18 +90,8 @@ final class Report extends File
         $node = $this->contextNode()->appendChild(
             $this->dom()->createElementNS(
                 'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $tagName,
             ),
-=======
-                $tagName
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $tagName
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return new Unit($node, $name);

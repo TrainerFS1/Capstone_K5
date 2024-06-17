@@ -12,25 +12,13 @@ namespace SebastianBergmann\Complexity;
 use function assert;
 use function is_array;
 use PhpParser\Node;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Node\Expr\New_;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\Node\Stmt\Function_;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Node\Stmt\Interface_;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Stmt\Trait_;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitorAbstract;
@@ -55,8 +43,6 @@ final class ComplexityCalculatingVisitor extends NodeVisitorAbstract
         }
 
         if ($node instanceof ClassMethod) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($node->getAttribute('parent') instanceof Interface_) {
                 return null;
             }
@@ -65,10 +51,6 @@ final class ComplexityCalculatingVisitor extends NodeVisitorAbstract
                 return null;
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $name = $this->classMethodName($node);
         } else {
             $name = $this->functionName($node);
@@ -80,15 +62,7 @@ final class ComplexityCalculatingVisitor extends NodeVisitorAbstract
 
         $this->result[] = new Complexity(
             $name,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->cyclomaticComplexity($statements),
-=======
-            $this->cyclomaticComplexity($statements)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->cyclomaticComplexity($statements)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         if ($this->shortCircuitTraversal) {
@@ -105,14 +79,8 @@ final class ComplexityCalculatingVisitor extends NodeVisitorAbstract
 
     /**
      * @param Stmt[] $statements
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @psalm-return positive-int
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function cyclomaticComplexity(array $statements): int
     {
@@ -128,63 +96,37 @@ final class ComplexityCalculatingVisitor extends NodeVisitorAbstract
         return $cyclomaticComplexityCalculatingVisitor->cyclomaticComplexity();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function classMethodName(ClassMethod $node): string
     {
         $parent = $node->getAttribute('parent');
 
         assert($parent instanceof Class_ || $parent instanceof Trait_);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         if ($parent->getAttribute('parent') instanceof New_) {
             return 'anonymous class';
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         assert(isset($parent->namespacedName));
         assert($parent->namespacedName instanceof Name);
 
         return $parent->namespacedName->toString() . '::' . $node->name->toString();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function functionName(Function_ $node): string
     {
         assert(isset($node->namespacedName));
         assert($node->namespacedName instanceof Name);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $functionName = $node->namespacedName->toString();
 
         assert($functionName !== '');
 
         return $functionName;
-=======
-        return $node->namespacedName->toString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $node->namespacedName->toString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

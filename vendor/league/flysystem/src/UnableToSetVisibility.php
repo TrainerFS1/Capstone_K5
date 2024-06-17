@@ -27,15 +27,7 @@ final class UnableToSetVisibility extends RuntimeException implements Filesystem
         return $this->reason;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function atLocation(string $filename, string $extraMessage = '', ?Throwable $previous = null): self
-=======
-    public static function atLocation(string $filename, string $extraMessage = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function atLocation(string $filename, string $extraMessage = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $message = "Unable to set visibility for file {$filename}. $extraMessage";
         $e = new static(rtrim($message), 0, $previous);

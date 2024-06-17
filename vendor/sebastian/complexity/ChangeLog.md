@@ -2,8 +2,6 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## [3.2.0] - 2023-12-21
 
 ### Added
@@ -32,10 +30,6 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * [#7](https://github.com/sebastianbergmann/complexity/pull/7): `ComplexityCalculatingVisitor` tries to process interface methods
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## [3.0.0] - 2023-02-03
 
 ### Removed
@@ -64,15 +58,9 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * Initial release
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [3.2.0]: https://github.com/sebastianbergmann/complexity/compare/3.1.0...3.2.0
 [3.1.0]: https://github.com/sebastianbergmann/complexity/compare/3.0.1...3.1.0
 [3.0.1]: https://github.com/sebastianbergmann/complexity/compare/3.0.0...3.0.1
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 [3.0.0]: https://github.com/sebastianbergmann/complexity/compare/2.0.2...3.0.0
 [2.0.2]: https://github.com/sebastianbergmann/complexity/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/sebastianbergmann/complexity/compare/2.0.0...2.0.1

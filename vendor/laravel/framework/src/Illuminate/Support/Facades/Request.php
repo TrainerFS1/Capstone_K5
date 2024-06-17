@@ -32,23 +32,10 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Http\Request mergeIfMissing(array $input)
  * @method static \Illuminate\Http\Request replace(array $input)
  * @method static mixed get(string $key, mixed $default = null)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Symfony\Component\HttpFoundation\InputBag|mixed json(string|null $key = null, mixed $default = null)
  * @method static \Illuminate\Http\Request createFrom(\Illuminate\Http\Request $from, \Illuminate\Http\Request|null $to = null)
  * @method static \Illuminate\Http\Request createFromBase(\Symfony\Component\HttpFoundation\Request $request)
  * @method static \Illuminate\Http\Request duplicate(array|null $query = null, array|null $request = null, array|null $attributes = null, array|null $cookies = null, array|null $files = null, array|null $server = null)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @method static \Symfony\Component\HttpFoundation\ParameterBag|mixed json(string|null $key = null, mixed $default = null)
- * @method static \Illuminate\Http\Request createFrom(\Illuminate\Http\Request $from, \Illuminate\Http\Request|null $to = null)
- * @method static \Illuminate\Http\Request createFromBase(\Symfony\Component\HttpFoundation\Request $request)
- * @method static \Illuminate\Http\Request duplicate(array $query = null, array $request = null, array $attributes = null, array $cookies = null, array $files = null, array $server = null)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static bool hasSession(bool $skipIfUninitialized = false)
  * @method static \Symfony\Component\HttpFoundation\Session\SessionInterface getSession()
  * @method static \Illuminate\Contracts\Session\Session session()
@@ -58,33 +45,15 @@ namespace Illuminate\Support\Facades;
  * @method static mixed user(string|null $guard = null)
  * @method static \Illuminate\Routing\Route|object|string|null route(string|null $param = null, mixed $default = null)
  * @method static string fingerprint()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Http\Request setJson(\Symfony\Component\HttpFoundation\InputBag $json)
-=======
- * @method static \Illuminate\Http\Request setJson(\Symfony\Component\HttpFoundation\ParameterBag $json)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static \Illuminate\Http\Request setJson(\Symfony\Component\HttpFoundation\ParameterBag $json)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Closure getUserResolver()
  * @method static \Illuminate\Http\Request setUserResolver(\Closure $callback)
  * @method static \Closure getRouteResolver()
  * @method static \Illuminate\Http\Request setRouteResolver(\Closure $callback)
  * @method static array toArray()
  * @method static void initialize(array $query = [], array $request = [], array $attributes = [], array $cookies = [], array $files = [], array $server = [], string|resource|null $content = null)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Http\Request createFromGlobals()
  * @method static \Illuminate\Http\Request create(string $uri, string $method = 'GET', array $parameters = [], array $cookies = [], array $files = [], array $server = [], string|resource|null $content = null)
-=======
- * @method static \static createFromGlobals()
- * @method static \static create(string $uri, string $method = 'GET', array $parameters = [], array $cookies = [], array $files = [], array $server = [], string|resource|null $content = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static \static createFromGlobals()
- * @method static \static create(string $uri, string $method = 'GET', array $parameters = [], array $cookies = [], array $files = [], array $server = [], string|resource|null $content = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void setFactory(callable|null $callable)
  * @method static void overrideGlobals()
  * @method static void setTrustedProxies(array $proxies, int $trustedHeaderSet)
@@ -137,13 +106,7 @@ namespace Illuminate\Support\Facades;
  * @method static bool isMethodCacheable()
  * @method static string|null getProtocolVersion()
  * @method static string|resource getContent(bool $asResource = false)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Symfony\Component\HttpFoundation\InputBag getPayload()
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static array getETags()
  * @method static bool isNoCache()
  * @method static string|null getPreferredFormat(string|null $default = 'html')

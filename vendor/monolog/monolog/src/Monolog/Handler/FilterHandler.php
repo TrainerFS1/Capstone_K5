@@ -80,13 +80,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
     /**
      * @param int|string|Level|LogLevel::*|array<int|string|Level|LogLevel::*> $minLevelOrList A list of levels to accept or a minimum level or level name if maxLevel is provided
      * @param int|string|Level|LogLevel::*                                               $maxLevel       Maximum level or level name to accept, only used if $minLevelOrList is not an array
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @phpstan-param value-of<Level::VALUES>|value-of<Level::NAMES>|Level|LogLevel::*|array<value-of<Level::VALUES>|value-of<Level::NAMES>|Level|LogLevel::*> $minLevelOrList
      * @phpstan-param value-of<Level::VALUES>|value-of<Level::NAMES>|Level|LogLevel::* $maxLevel
@@ -156,15 +150,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
      *
      * If the handler was provided as a factory, this will trigger the handler's instantiation.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getHandler(LogRecord|null $record = null): HandlerInterface
-=======
-    public function getHandler(LogRecord $record = null): HandlerInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getHandler(LogRecord $record = null): HandlerInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$this->handler instanceof HandlerInterface) {
             $handler = ($this->handler)($record, $this);

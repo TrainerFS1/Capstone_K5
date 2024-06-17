@@ -27,13 +27,7 @@ use Psy\TabCompletion\Matcher;
 use Psy\VarDumper\PresenterAware;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command as BaseCommand;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Console\Exception\ExceptionInterface as SymfonyConsoleException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Formatter\OutputFormatter;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputArgument;
@@ -56,26 +50,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class Shell extends Application
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const VERSION = 'v0.12.4';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    const VERSION = 'v0.11.12';
-
-    /** @deprecated */
-    const PROMPT = '>>> ';
-    /** @deprecated */
-    const BUFF_PROMPT = '... ';
-    /** @deprecated */
-    const REPLAY = '--> ';
-    /** @deprecated */
-    const RETVAL = '=> ';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     private $config;
     private $cleaner;
@@ -104,15 +79,7 @@ class Shell extends Application
      *
      * @param Configuration|null $config (default: null)
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?Configuration $config = null)
-=======
-    public function __construct(Configuration $config = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(Configuration $config = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->config = $config ?: new Configuration();
         $this->cleaner = $this->config->getCodeCleaner();
@@ -175,14 +142,8 @@ class Shell extends Application
      */
     public static function debug(array $vars = [], $bindTo = null): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         @\trigger_error('`Psy\\Shell::debug` is deprecated; call `Psy\\debug` instead.', \E_USER_DEPRECATED);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return \Psy\debug($vars, $bindTo);
     }
 
@@ -288,23 +249,6 @@ class Shell extends Application
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated Nothing should use this anymore
-     */
-    protected function getTabCompletionMatchers()
-    {
-        @\trigger_error('getTabCompletionMatchers is no longer used', \E_USER_DEPRECATED);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Gets the default command loop listeners.
      *
      * @return array An array of Execution Loop Listener instances
@@ -345,14 +289,8 @@ class Shell extends Application
      */
     public function addTabCompletionMatchers(array $matchers)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         @\trigger_error('`addTabCompletionMatchers` is deprecated; call `addMatchers` instead.', \E_USER_DEPRECATED);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->addMatchers($matchers);
     }
 
@@ -375,15 +313,7 @@ class Shell extends Application
      *
      * @return int 0 if everything went fine, or an error code
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function run(?InputInterface $input = null, ?OutputInterface $output = null): int
-=======
-    public function run(InputInterface $input = null, OutputInterface $output = null): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function run(InputInterface $input = null, OutputInterface $output = null): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // We'll just ignore the input passed in, and set up our own!
         $input = new ArrayInput([]);
@@ -506,15 +436,7 @@ class Shell extends Application
     /**
      * Configures the input and output instances based on the user arguments and options.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function configureIO(InputInterface $input, OutputInterface $output): void
-=======
-    protected function configureIO(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function configureIO(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // @todo overrides via environment variables (or should these happen in config? ... probably config)
         $input->setInteractive($this->config->getInputInteractive());
@@ -692,15 +614,7 @@ class Shell extends Application
             $output = $output->getErrorOutput();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $output->writeln(\sprintf('<whisper>%s</whisper>', OutputFormatter::escape($code)), ConsoleOutput::VERBOSITY_DEBUG);
-=======
-        $output->writeln(\sprintf('<aside>%s</aside>', OutputFormatter::escape($code)), ConsoleOutput::VERBOSITY_DEBUG);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $output->writeln(\sprintf('<aside>%s</aside>', OutputFormatter::escape($code)), ConsoleOutput::VERBOSITY_DEBUG);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $code;
     }
@@ -740,15 +654,7 @@ class Shell extends Application
      *
      * @param bool $includeBoundObject Pass false to exclude 'this'. If you're
      *                                 passing the scope variables to `extract`
-<<<<<<< HEAD
-<<<<<<< HEAD
      *                                 you _must_ exclude 'this'
-=======
-     *                                 in PHP 7.1+, you _must_ exclude 'this'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     *                                 in PHP 7.1+, you _must_ exclude 'this'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array Associative array of scope variables
      */
@@ -768,15 +674,7 @@ class Shell extends Application
      *
      * @param bool $includeBoundObject Pass false to exclude 'this'. If you're
      *                                 passing the scope variables to `extract`
-<<<<<<< HEAD
-<<<<<<< HEAD
      *                                 you _must_ exclude 'this'
-=======
-     *                                 in PHP 7.1+, you _must_ exclude 'this'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     *                                 in PHP 7.1+, you _must_ exclude 'this'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array Associative array of magic scope variables
      */
@@ -1409,8 +1307,6 @@ class Shell extends Application
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($e instanceof PsyException || $e instanceof SymfonyConsoleException) {
             $exceptionShortName = (new \ReflectionClass($e))->getShortName();
             $typeParts = \preg_split('/(?=[A-Z])/', $exceptionShortName);
@@ -1426,17 +1322,6 @@ class Shell extends Application
                     }
                     break;
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($e instanceof PsyException) {
-            $exceptionShortName = (new \ReflectionClass($e))->getShortName();
-            $typeParts = \preg_split('/(?=[A-Z])/', $exceptionShortName);
-            \array_pop($typeParts); // Removes "Exception"
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return \trim(\strtoupper(\implode(' ', $typeParts)));
         }
@@ -1624,15 +1509,7 @@ class Shell extends Application
      */
     protected function getHeader(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return \sprintf('<whisper>%s by Justin Hileman</whisper>', self::getVersionHeader($this->config->useUnicode()));
-=======
-        return \sprintf('<whisper>%s by Justin Hileman</whisper>', $this->getVersion());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return \sprintf('<whisper>%s by Justin Hileman</whisper>', $this->getVersion());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1642,14 +1519,8 @@ class Shell extends Application
      */
     public function getVersion(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         @\trigger_error('`getVersion` is deprecated; call `self::getVersionHeader` instead.', \E_USER_DEPRECATED);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return self::getVersionHeader($this->config->useUnicode());
     }
 
@@ -1676,23 +1547,6 @@ class Shell extends Application
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated Tab completion is provided by the AutoCompleter service
-     */
-    protected function autocomplete($text)
-    {
-        @\trigger_error('Tab completion is provided by the AutoCompleter service', \E_USER_DEPRECATED);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Initialize tab completion matchers.
      *
      * If tab completion is enabled this adds tab completion matchers to the

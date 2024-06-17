@@ -69,14 +69,8 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the query to determine if a table exists.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
      */
     public function compileTableExists()
@@ -85,8 +79,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the query to determine the tables.
      *
      * @return string
@@ -142,14 +134,6 @@ class SqlServerGrammar extends Grammar
      *
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
-     * Compile the query to determine the list of columns.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Compile the query to determine the list of columns.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string  $table
      * @return string
      */
@@ -159,8 +143,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the query to determine the columns.
      *
      * @param  string  $table
@@ -238,10 +220,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a create table command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -632,35 +610,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Compile the SQL needed to retrieve all table names.
-     *
-     * @return string
-     */
-    public function compileGetAllTables()
-    {
-        return "select name, type from sys.tables where type = 'U'";
-    }
-
-    /**
-     * Compile the SQL needed to retrieve all view names.
-     *
-     * @return string
-     */
-    public function compileGetAllViews()
-    {
-        return "select name, type from sys.objects where type = 'V'";
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create the column definition for a char type.
      *
      * @param  \Illuminate\Support\Fluent  $column
@@ -1100,15 +1049,7 @@ class SqlServerGrammar extends Grammar
      */
     protected function typeComputed(Fluent $column)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return "as ({$this->getValue($column->expression)})";
-=======
-        return "as ({$column->expression})";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return "as ({$column->expression})";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

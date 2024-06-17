@@ -179,8 +179,6 @@ class Base
     /**
      * Returns randomly ordered subsequence of $count elements from a provided array
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @todo update default $count to `null` (BC) for next major version
      *
      * @param array|class-string|\Traversable $array           Array to take elements from. Defaults to a-c
@@ -189,25 +187,11 @@ class Base
      *
      * @throws \InvalidArgumentException
      * @throws \LengthException          When requesting more elements than provided
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param array $array           Array to take elements from. Defaults to a-c
-     * @param int   $count           Number of elements to take.
-     * @param bool  $allowDuplicates Allow elements to be picked several times. Defaults to false
-     *
-     * @throws \LengthException When requesting more elements than provided
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return array New array with $count elements from $array
      */
     public static function randomElements($array = ['a', 'b', 'c'], $count = 1, $allowDuplicates = false)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $elements = $array;
 
         if (is_string($array) && function_exists('enum_exists') && enum_exists($array)) {
@@ -267,56 +251,11 @@ class Base
         }
 
         return $randomElements;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $traversables = [];
-
-        if ($array instanceof \Traversable) {
-            foreach ($array as $element) {
-                $traversables[] = $element;
-            }
-        }
-
-        $arr = count($traversables) ? $traversables : $array;
-
-        $allKeys = array_keys($arr);
-        $numKeys = count($allKeys);
-
-        if (!$allowDuplicates && $numKeys < $count) {
-            throw new \LengthException(sprintf('Cannot get %d elements, only %d in array', $count, $numKeys));
-        }
-
-        $highKey = $numKeys - 1;
-        $keys = $elements = [];
-        $numElements = 0;
-
-        while ($numElements < $count) {
-            $num = mt_rand(0, $highKey);
-
-            if (!$allowDuplicates) {
-                if (isset($keys[$num])) {
-                    continue;
-                }
-                $keys[$num] = true;
-            }
-
-            $elements[] = $arr[$allKeys[$num]];
-            ++$numElements;
-        }
-
-        return $elements;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Returns a random element from a passed array
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param array|class-string|\Traversable $array
      *
      * @throws \InvalidArgumentException
@@ -349,23 +288,6 @@ class Base
         $randomElements = static::randomElements($elements, 1);
 
         return $randomElements[0];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param array $array
-     */
-    public static function randomElement($array = ['a', 'b', 'c'])
-    {
-        if (!$array || ($array instanceof \Traversable && !count($array))) {
-            return null;
-        }
-        $elements = static::randomElements($array, 1);
-
-        return $elements[0];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -569,15 +491,7 @@ class Base
     public static function bothify($string = '## ??')
     {
         $string = self::replaceWildcard($string, '*', static function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return mt_rand(0, 1) === 1 ? '#' : '?';
-=======
-            return mt_rand(0, 1) ? '#' : '?';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return mt_rand(0, 1) ? '#' : '?';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
 
         return static::lexify(static::numerify($string));
@@ -662,13 +576,7 @@ class Base
             // remove backslashes (that are not followed by another backslash) because they are escape characters
             $match = preg_replace('/\\\(?!\\\)/', '', $matches[1]);
             $randomElement = Base::randomElement(str_split($match));
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             //[.] should not be a random character, but a literal .
             return str_replace('.', '\.', $randomElement);
         }, $regex);

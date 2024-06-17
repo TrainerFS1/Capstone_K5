@@ -181,21 +181,9 @@ class FingersCrossedHandler extends Handler implements ProcessableHandlerInterfa
     private function flushBuffer(): void
     {
         if (null !== $this->passthruLevel) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $passthruLevel = $this->passthruLevel;
             $this->buffer = array_filter($this->buffer, static function ($record) use ($passthruLevel) {
                 return $passthruLevel->includes($record->level);
-=======
-            $level = $this->passthruLevel;
-            $this->buffer = array_filter($this->buffer, function ($record) use ($level) {
-                return $record->level >= $level;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $level = $this->passthruLevel;
-            $this->buffer = array_filter($this->buffer, function ($record) use ($level) {
-                return $record->level >= $level;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             });
             if (count($this->buffer) > 0) {
                 $this->getHandler(end($this->buffer))->handleBatch($this->buffer);
@@ -211,15 +199,7 @@ class FingersCrossedHandler extends Handler implements ProcessableHandlerInterfa
      *
      * If the handler was provided as a factory, this will trigger the handler's instantiation.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getHandler(LogRecord|null $record = null): HandlerInterface
-=======
-    public function getHandler(LogRecord $record = null): HandlerInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getHandler(LogRecord $record = null): HandlerInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$this->handler instanceof HandlerInterface) {
             $handler = ($this->handler)($record, $this);

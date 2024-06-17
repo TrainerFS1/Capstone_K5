@@ -21,15 +21,7 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class GlobFileLoader extends FileLoader
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function load(mixed $resource, ?string $type = null): mixed
-=======
-    public function load(mixed $resource, string $type = null): mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function load(mixed $resource, string $type = null): mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $collection = new RouteCollection();
 
@@ -42,15 +34,7 @@ class GlobFileLoader extends FileLoader
         return $collection;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function supports(mixed $resource, ?string $type = null): bool
-=======
-    public function supports(mixed $resource, string $type = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function supports(mixed $resource, string $type = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return 'glob' === $type;
     }

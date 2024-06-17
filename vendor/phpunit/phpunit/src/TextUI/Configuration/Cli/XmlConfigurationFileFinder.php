@@ -19,15 +19,7 @@ use function realpath;
  */
 final class XmlConfigurationFileFinder
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function find(Configuration $configuration): false|string
-=======
-    public function find(Configuration $configuration): string|false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function find(Configuration $configuration): string|false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $useDefaultConfiguration = $configuration->useDefaultConfiguration();
 
@@ -35,15 +27,7 @@ final class XmlConfigurationFileFinder
             if (is_dir($configuration->configurationFile())) {
                 $candidate = $this->configurationFileInDirectory($configuration->configurationFile());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if ($candidate !== false) {
-=======
-                if ($candidate) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                if ($candidate) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return $candidate;
                 }
 
@@ -56,15 +40,7 @@ final class XmlConfigurationFileFinder
         if ($useDefaultConfiguration) {
             $candidate = $this->configurationFileInDirectory(getcwd());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($candidate !== false) {
-=======
-            if ($candidate) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($candidate) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $candidate;
             }
         }
@@ -72,15 +48,7 @@ final class XmlConfigurationFileFinder
         return false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function configurationFileInDirectory(string $directory): false|string
-=======
-    private function configurationFileInDirectory(string $directory): string|false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function configurationFileInDirectory(string $directory): string|false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $candidates = [
             $directory . '/phpunit.xml',

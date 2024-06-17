@@ -37,15 +37,7 @@ class Count extends Constraint
     {
         return sprintf(
             'count matches %d',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->expectedCount,
-=======
-            $this->expectedCount
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->expectedCount
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -81,15 +73,7 @@ class Count extends Constraint
                     throw new Exception(
                         $e->getMessage(),
                         $e->getCode(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $e,
-=======
-                        $e
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $e
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -136,15 +120,7 @@ class Count extends Constraint
         return sprintf(
             'actual size %d matches expected size %d',
             (int) $this->getCountOf($other),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->expectedCount,
-=======
-            $this->expectedCount
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->expectedCount
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

@@ -62,33 +62,15 @@ final class BuildInformation
     {
         $node = $this->contextNode->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $name,
-=======
-            $name
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $name
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->item(0);
 
         if (!$node) {
             $node = $this->contextNode->appendChild(
                 $this->contextNode->ownerDocument->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $name,
                 ),
-=======
-                    $name
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $name
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

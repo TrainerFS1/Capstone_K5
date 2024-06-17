@@ -4,19 +4,11 @@ namespace PhpParser\Builder;
 
 use PhpParser;
 use PhpParser\BuilderHelpers;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Modifiers;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class Class_ extends Declaration {
     protected string $name;
     protected ?Name $extends = null;
@@ -33,28 +25,6 @@ class Class_ extends Declaration {
     protected array $methods = [];
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-class Class_ extends Declaration
-{
-    protected $name;
-
-    protected $extends = null;
-    protected $implements = [];
-    protected $flags = 0;
-
-    protected $uses = [];
-    protected $constants = [];
-    protected $properties = [];
-    protected $methods = [];
-
-    /** @var Node\AttributeGroup[] */
-    protected $attributeGroups = [];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Creates a class builder.
@@ -99,15 +69,7 @@ class Class_ extends Declaration
      * @return $this The builder instance (for fluid interface)
      */
     public function makeAbstract() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Modifiers::ABSTRACT);
-=======
-        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -118,21 +80,11 @@ class Class_ extends Declaration
      * @return $this The builder instance (for fluid interface)
      */
     public function makeFinal() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Modifiers::FINAL);
-=======
-        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * Makes the class readonly.
      *
@@ -140,14 +92,6 @@ class Class_ extends Declaration
      */
     public function makeReadonly() {
         $this->flags = BuilderHelpers::addClassModifier($this->flags, Modifiers::READONLY);
-=======
-    public function makeReadonly() {
-        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_READONLY);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function makeReadonly() {
-        $this->flags = BuilderHelpers::addClassModifier($this->flags, Stmt\Class_::MODIFIER_READONLY);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -162,8 +106,6 @@ class Class_ extends Declaration
     public function addStmt($stmt) {
         $stmt = BuilderHelpers::normalizeNode($stmt);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($stmt instanceof Stmt\Property) {
             $this->properties[] = $stmt;
         } elseif ($stmt instanceof Stmt\ClassMethod) {
@@ -176,27 +118,6 @@ class Class_ extends Declaration
             throw new \LogicException(sprintf('Unexpected node of type "%s"', $stmt->getType()));
         }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $targets = [
-            Stmt\TraitUse::class    => &$this->uses,
-            Stmt\ClassConst::class  => &$this->constants,
-            Stmt\Property::class    => &$this->properties,
-            Stmt\ClassMethod::class => &$this->methods,
-        ];
-
-        $class = \get_class($stmt);
-        if (!isset($targets[$class])) {
-            throw new \LogicException(sprintf('Unexpected node of type "%s"', $stmt->getType()));
-        }
-
-        $targets[$class][] = $stmt;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this;
     }
 
@@ -218,15 +139,7 @@ class Class_ extends Declaration
      *
      * @return Stmt\Class_ The built class node
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getNode(): PhpParser\Node {
-=======
-    public function getNode() : PhpParser\Node {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getNode() : PhpParser\Node {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new Stmt\Class_($this->name, [
             'flags' => $this->flags,
             'extends' => $this->extends,

@@ -28,15 +28,7 @@ class UuidV7 extends Uuid implements TimeBasedUidInterface
     private static array $seedParts;
     private static int $seedIndex = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $uuid = null)
-=======
-    public function __construct(string $uuid = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $uuid = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $uuid) {
             $this->uid = static::generate();
@@ -57,15 +49,7 @@ class UuidV7 extends Uuid implements TimeBasedUidInterface
         return \DateTimeImmutable::createFromFormat('U.v', substr_replace($time, '.', -3, 0));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function generate(?\DateTimeInterface $time = null): string
-=======
-    public static function generate(\DateTimeInterface $time = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function generate(\DateTimeInterface $time = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $mtime = $time) {
             $time = microtime(false);
@@ -80,8 +64,6 @@ class UuidV7 extends Uuid implements TimeBasedUidInterface
             self::$rand[1] &= 0x03FF;
             self::$time = $time;
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             // Within the same ms, we increment the rand part by a random 24-bit number.
             // Instead of getting this number from random_bytes(), which is slow, we get
             // it by sha512-hashing self::$seed. This produces 64 bytes of entropy,
@@ -93,10 +75,6 @@ class UuidV7 extends Uuid implements TimeBasedUidInterface
             // numbers for x86 portability. We increment this random part by the next
             // 24-bit number in the self::$seedParts list and decrement self::$seedIndex.
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (!self::$seedIndex) {
                 $s = unpack('l*', self::$seed = hash('sha512', self::$seed, true));
                 $s[] = ($s[1] >> 8 & 0xFF0000) | ($s[2] >> 16 & 0xFF00) | ($s[3] >> 24 & 0xFF);
@@ -108,15 +86,7 @@ class UuidV7 extends Uuid implements TimeBasedUidInterface
                 self::$seedIndex = 21;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             self::$rand[5] = 0xFFFF & $carry = self::$rand[5] + 1 + (self::$seedParts[self::$seedIndex--] & 0xFFFFFF);
-=======
-            self::$rand[5] = 0xFFFF & $carry = self::$rand[5] + (self::$seedParts[self::$seedIndex--] & 0xFFFFFF);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            self::$rand[5] = 0xFFFF & $carry = self::$rand[5] + (self::$seedParts[self::$seedIndex--] & 0xFFFFFF);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             self::$rand[4] = 0xFFFF & $carry = self::$rand[4] + ($carry >> 16);
             self::$rand[3] = 0xFFFF & $carry = self::$rand[3] + ($carry >> 16);
             self::$rand[2] = 0xFFFF & $carry = self::$rand[2] + ($carry >> 16);

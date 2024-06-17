@@ -19,8 +19,6 @@ use function class_exists;
 use function explode;
 use function gettype;
 use function implode;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function is_bool;
 use function is_float;
 use function is_int;
@@ -30,25 +28,6 @@ use function method_exists;
 use function preg_quote;
 use function preg_replace;
 use function rtrim;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use function in_array;
-use function is_bool;
-use function is_float;
-use function is_int;
-use function is_numeric;
-use function is_object;
-use function is_scalar;
-use function method_exists;
-use function ord;
-use function preg_quote;
-use function preg_replace;
-use function range;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function sprintf;
 use function str_contains;
 use function str_ends_with;
@@ -63,13 +42,7 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Metadata\Parser\Registry as MetadataRegistry;
 use PHPUnit\Metadata\TestDox;
 use PHPUnit\Util\Color;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use ReflectionEnum;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use ReflectionMethod;
 use ReflectionObject;
 use SebastianBergmann\Exporter\Exporter;
@@ -80,15 +53,7 @@ use SebastianBergmann\Exporter\Exporter;
 final class NamePrettifier
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-var array<string, int>
-=======
-     * @psalm-var list<string>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @psalm-var list<string>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private static array $strings = [];
 
@@ -142,8 +107,6 @@ final class NamePrettifier
         return $result;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     // NOTE: this method is on a hot path and very performance sensitive. change with care.
     public function prettifyTestMethodName(string $name): string
     {
@@ -157,27 +120,6 @@ final class NamePrettifier
             $name = $string;
         } elseif ($string === $name) {
             self::$strings[$string] = 1;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function prettifyTestMethodName(string $name): string
-    {
-        $buffer = '';
-
-        if ($name === '') {
-            return $buffer;
-        }
-
-        $string = (string) preg_replace('#\d+$#', '', $name, -1, $count);
-
-        if (in_array($string, self::$strings, true)) {
-            $name = $string;
-        } elseif ($count === 0) {
-            self::$strings[] = $string;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (str_starts_with($name, 'test_')) {
@@ -187,39 +129,19 @@ final class NamePrettifier
         }
 
         if ($name === '') {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return '';
-=======
-            return $buffer;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return $buffer;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $name[0] = strtoupper($name[0]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $noUnderscore = str_replace('_', ' ', $name);
 
         if ($noUnderscore !== $name) {
             return trim($noUnderscore);
-=======
-        if (str_contains($name, '_')) {
-            return trim(str_replace('_', ' ', $name));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (str_contains($name, '_')) {
-            return trim(str_replace('_', ' ', $name));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $wasNumeric = false;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $buffer = '';
 
         $len = strlen($name);
@@ -229,18 +151,6 @@ final class NamePrettifier
                 $buffer .= ' ' . strtolower($name[$i]);
             } else {
                 $isNumeric = $name[$i] >= '0' && $name[$i] <= '9';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        foreach (range(0, strlen($name) - 1) as $i) {
-            if ($i > 0 && ord($name[$i]) >= 65 && ord($name[$i]) <= 90) {
-                $buffer .= ' ' . strtolower($name[$i]);
-            } else {
-                $isNumeric = is_numeric($name[$i]);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 if (!$wasNumeric && $isNumeric) {
                     $buffer .= ' ';
@@ -277,21 +187,9 @@ final class NamePrettifier
                 $variables = array_map(
                     static fn (string $variable): string => sprintf(
                         '/%s(?=\b)/',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         preg_quote($variable, '/'),
                     ),
                     array_keys($providedData),
-=======
-                        preg_quote($variable, '/')
-                    ),
-                    array_keys($providedData)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        preg_quote($variable, '/')
-                    ),
-                    array_keys($providedData)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 
                 $result = trim(preg_replace($variables, $providedData, $annotation));
@@ -346,8 +244,6 @@ final class NamePrettifier
                 $reflector = new ReflectionObject($value);
 
                 if ($reflector->isEnum()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $enumReflector = new ReflectionEnum($value);
 
                     if ($enumReflector->isBacked()) {
@@ -355,12 +251,6 @@ final class NamePrettifier
                     } else {
                         $value = $value->name;
                     }
-=======
-                    $value = $value->value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $value = $value->value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 } elseif ($reflector->hasMethod('__toString')) {
                     $value = (string) $value;
                 } else {
@@ -370,16 +260,10 @@ final class NamePrettifier
 
             if (!is_scalar($value)) {
                 $value = gettype($value);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 if ($value === 'NULL') {
                     $value = 'null';
                 }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             if (is_bool($value) || is_int($value) || is_float($value)) {
@@ -398,18 +282,10 @@ final class NamePrettifier
         }
 
         if ($colorize) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $providedData = array_map(
                 static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)),
                 $providedData,
             );
-=======
-            $providedData = array_map(static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)), $providedData);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $providedData = array_map(static fn ($value) => Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true)), $providedData);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $providedData;

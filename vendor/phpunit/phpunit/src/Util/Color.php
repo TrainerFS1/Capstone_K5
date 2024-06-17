@@ -133,15 +133,7 @@ final class Color
             $path[$last] = preg_replace_callback(
                 '/([\-_.]+|phpt$)/',
                 static fn ($matches) => self::dim($matches[0]),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $path[$last],
-=======
-                $path[$last]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $path[$last]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -164,15 +156,7 @@ final class Color
         return preg_replace_callback(
             '/\s+/',
             static fn ($matches) => self::dim(strtr($matches[0], $replaceMap)),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $buffer,
-=======
-            $buffer
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $buffer
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -189,15 +173,7 @@ final class Color
                 "\e[$1;$2m",
                 '$2',
             ],
-<<<<<<< HEAD
-<<<<<<< HEAD
             $buffer,
-=======
-            $buffer
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $buffer
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

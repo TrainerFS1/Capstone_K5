@@ -38,31 +38,6 @@ if (version_compare('8.1.0', PHP_VERSION, '>')) {
     die(1);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-foreach (['dom', 'json', 'libxml', 'mbstring', 'tokenizer', 'xml', 'xmlwriter'] as $extension) {
-    if (extension_loaded($extension)) {
-        continue;
-    }
-
-    fwrite(
-        STDERR,
-        sprintf(
-            'PHPUnit requires the "%s" extension.' . PHP_EOL,
-            $extension
-        )
-    );
-
-    die(1);
-}
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 if (!ini_get('date.timezone')) {
     ini_set('date.timezone', 'UTC');
 }
@@ -96,8 +71,6 @@ if (!defined('PHPUNIT_COMPOSER_INSTALL')) {
 
 require PHPUNIT_COMPOSER_INSTALL;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 $requiredExtensions = ['dom', 'json', 'libxml', 'mbstring', 'tokenizer', 'xml', 'xmlwriter'];
 
 $unavailableExtensions = array_filter(
@@ -128,8 +101,4 @@ if ([] !== $unavailableExtensions) {
 
 unset($requiredExtensions, $unavailableExtensions);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 exit((new PHPUnit\TextUI\Application)->run($_SERVER['argv']));

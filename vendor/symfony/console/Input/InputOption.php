@@ -58,34 +58,14 @@ class InputOption
     private string $description;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param string|array|null                                                             $shortcut        The shortcuts, can be null, a string of shortcuts delimited by | or an array of shortcuts
      * @param int|null                                                                      $mode            The option mode: One of the VALUE_* constants
      * @param string|bool|int|float|array|null                                              $default         The default value (must be null for self::VALUE_NONE)
-=======
-     * @param string|array|null                $shortcut The shortcuts, can be null, a string of shortcuts delimited by | or an array of shortcuts
-     * @param int|null                         $mode     The option mode: One of the VALUE_* constants
-     * @param string|bool|int|float|array|null $default  The default value (must be null for self::VALUE_NONE)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param string|array|null                $shortcut The shortcuts, can be null, a string of shortcuts delimited by | or an array of shortcuts
-     * @param int|null                         $mode     The option mode: One of the VALUE_* constants
-     * @param string|bool|int|float|array|null $default  The default value (must be null for self::VALUE_NONE)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      *
      * @throws InvalidArgumentException If option mode is invalid or incompatible
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $name, string|array|null $shortcut = null, ?int $mode = null, string $description = '', string|bool|int|float|array|null $default = null, array|\Closure $suggestedValues = [])
-=======
-    public function __construct(string $name, string|array $shortcut = null, int $mode = null, string $description = '', string|bool|int|float|array $default = null, array|\Closure $suggestedValues = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $name, string|array $shortcut = null, int $mode = null, string $description = '', string|bool|int|float|array $default = null, array|\Closure $suggestedValues = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (str_starts_with($name, '--')) {
             $name = substr($name, 2);
@@ -95,15 +75,7 @@ class InputOption
             throw new InvalidArgumentException('An option name cannot be empty.');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ('' === $shortcut || [] === $shortcut || false === $shortcut) {
-=======
-        if (empty($shortcut)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (empty($shortcut)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $shortcut = null;
         }
 
@@ -112,23 +84,10 @@ class InputOption
                 $shortcut = implode('|', $shortcut);
             }
             $shortcuts = preg_split('{(\|)-?}', ltrim($shortcut, '-'));
-<<<<<<< HEAD
-<<<<<<< HEAD
             $shortcuts = array_filter($shortcuts, 'strlen');
             $shortcut = implode('|', $shortcuts);
 
             if ('' === $shortcut) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $shortcuts = array_filter($shortcuts);
-            $shortcut = implode('|', $shortcuts);
-
-            if (empty($shortcut)) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 throw new InvalidArgumentException('An option shortcut cannot be empty.');
             }
         }
@@ -219,18 +178,10 @@ class InputOption
         return self::VALUE_NEGATABLE === (self::VALUE_NEGATABLE & $this->mode);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
     public function setDefault(string|bool|int|float|array|null $default = null)
-=======
-    public function setDefault(string|bool|int|float|array $default = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setDefault(string|bool|int|float|array $default = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);

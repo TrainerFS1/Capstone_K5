@@ -62,15 +62,9 @@ class UrlMatcher implements UrlMatcherInterface, RequestMatcherInterface
         $this->context = $context;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setContext(RequestContext $context)
     {
         $this->context = $context;
@@ -107,15 +101,9 @@ class UrlMatcher implements UrlMatcherInterface, RequestMatcherInterface
         return $ret;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addExpressionLanguageProvider(ExpressionFunctionProviderInterface $provider)
     {
         $this->expressionLanguageProviders[] = $provider;
@@ -267,8 +255,6 @@ class UrlMatcher implements UrlMatcherInterface, RequestMatcherInterface
         return $defaults;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return ExpressionLanguage
      */
@@ -277,18 +263,6 @@ class UrlMatcher implements UrlMatcherInterface, RequestMatcherInterface
         if (!isset($this->expressionLanguage)) {
             if (!class_exists(ExpressionLanguage::class)) {
                 throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed. Try running "composer require symfony/expression-language".');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    protected function getExpressionLanguage()
-    {
-        if (null === $this->expressionLanguage) {
-            if (!class_exists(ExpressionLanguage::class)) {
-                throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
             $this->expressionLanguage = new ExpressionLanguage(null, $this->expressionLanguageProviders);
         }

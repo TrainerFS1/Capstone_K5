@@ -18,15 +18,7 @@ final class FnStream implements StreamInterface
     private const SLOTS = [
         '__toString', 'close', 'detach', 'rewind',
         'getSize', 'tell', 'eof', 'isSeekable', 'seek', 'isWritable', 'write',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'isReadable', 'read', 'getContents', 'getMetadata',
-=======
-        'isReadable', 'read', 'getContents', 'getMetadata'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        'isReadable', 'read', 'getContents', 'getMetadata'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     /** @var array<string, callable> */
@@ -41,15 +33,7 @@ final class FnStream implements StreamInterface
 
         // Create the functions on the class
         foreach ($methods as $name => $fn) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->{'_fn_'.$name} = $fn;
-=======
-            $this->{'_fn_' . $name} = $fn;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->{'_fn_' . $name} = $fn;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -61,15 +45,7 @@ final class FnStream implements StreamInterface
     public function __get(string $name): void
     {
         throw new \BadMethodCallException(str_replace('_fn_', '', $name)
-<<<<<<< HEAD
-<<<<<<< HEAD
             .'() is not implemented in the FnStream');
-=======
-            . '() is not implemented in the FnStream');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            . '() is not implemented in the FnStream');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -78,15 +54,7 @@ final class FnStream implements StreamInterface
     public function __destruct()
     {
         if (isset($this->_fn_close)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             ($this->_fn_close)();
-=======
-            call_user_func($this->_fn_close);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            call_user_func($this->_fn_close);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -125,221 +93,88 @@ final class FnStream implements StreamInterface
     public function __toString(): string
     {
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
             /** @var string */
             return ($this->_fn___toString)();
-=======
-            return call_user_func($this->_fn___toString);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return call_user_func($this->_fn___toString);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (\Throwable $e) {
             if (\PHP_VERSION_ID >= 70400) {
                 throw $e;
             }
             trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return '';
         }
     }
 
     public function close(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         ($this->_fn_close)();
-=======
-        call_user_func($this->_fn_close);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        call_user_func($this->_fn_close);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function detach()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_detach)();
-=======
-        return call_user_func($this->_fn_detach);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_detach);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getSize(): ?int
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_getSize)();
-=======
-        return call_user_func($this->_fn_getSize);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_getSize);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function tell(): int
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_tell)();
-=======
-        return call_user_func($this->_fn_tell);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_tell);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function eof(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_eof)();
-=======
-        return call_user_func($this->_fn_eof);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_eof);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function isSeekable(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_isSeekable)();
-=======
-        return call_user_func($this->_fn_isSeekable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_isSeekable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function rewind(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         ($this->_fn_rewind)();
-=======
-        call_user_func($this->_fn_rewind);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        call_user_func($this->_fn_rewind);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function seek($offset, $whence = SEEK_SET): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         ($this->_fn_seek)($offset, $whence);
-=======
-        call_user_func($this->_fn_seek, $offset, $whence);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        call_user_func($this->_fn_seek, $offset, $whence);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function isWritable(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_isWritable)();
-=======
-        return call_user_func($this->_fn_isWritable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_isWritable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function write($string): int
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_write)($string);
-=======
-        return call_user_func($this->_fn_write, $string);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_write, $string);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function isReadable(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_isReadable)();
-=======
-        return call_user_func($this->_fn_isReadable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_isReadable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function read($length): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_read)($length);
-=======
-        return call_user_func($this->_fn_read, $length);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_read, $length);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getContents(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_getContents)();
     }
 
     /**
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        return call_user_func($this->_fn_getContents);
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function getMetadata($key = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return ($this->_fn_getMetadata)($key);
-=======
-        return call_user_func($this->_fn_getMetadata, $key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func($this->_fn_getMetadata, $key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

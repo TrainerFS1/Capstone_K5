@@ -6,39 +6,19 @@
 
 namespace Whoops\Exception;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Whoops\Inspector\InspectorInterface;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Formatter
 {
     /**
      * Returns all basic information about the exception in a simple array
      * for further convertion to other languages
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  InspectorInterface $inspector
      * @param  bool               $shouldAddTrace
      * @param  array<callable>    $frameFilters
      * @return array
      */
     public static function formatExceptionAsDataArray(InspectorInterface $inspector, $shouldAddTrace, array $frameFilters = [])
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  Inspector $inspector
-     * @param  bool      $shouldAddTrace
-     * @return array
-     */
-    public static function formatExceptionAsDataArray(Inspector $inspector, $shouldAddTrace)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $exception = $inspector->getException();
         $response = [
@@ -50,15 +30,7 @@ class Formatter
         ];
 
         if ($shouldAddTrace) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $frames    = $inspector->getFrames($frameFilters);
-=======
-            $frames    = $inspector->getFrames();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $frames    = $inspector->getFrames();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $frameData = [];
 
             foreach ($frames as $frame) {
@@ -78,15 +50,7 @@ class Formatter
         return $response;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function formatExceptionPlain(InspectorInterface $inspector)
-=======
-    public static function formatExceptionPlain(Inspector $inspector)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function formatExceptionPlain(Inspector $inspector)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $message = $inspector->getException()->getMessage();
         $frames = $inspector->getFrames();

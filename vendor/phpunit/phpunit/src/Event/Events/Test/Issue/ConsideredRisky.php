@@ -24,8 +24,6 @@ final class ConsideredRisky implements Event
 {
     private readonly Telemetry\Info $telemetryInfo;
     private readonly Code\Test $test;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @psalm-var non-empty-string
@@ -35,14 +33,6 @@ final class ConsideredRisky implements Event
     /**
      * @psalm-param non-empty-string $message
      */
-=======
-    private readonly string $message;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private readonly string $message;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(Telemetry\Info $telemetryInfo, Code\Test $test, string $message)
     {
         $this->telemetryInfo = $telemetryInfo;
@@ -60,15 +50,9 @@ final class ConsideredRisky implements Event
         return $this->test;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function message(): string
     {
         return $this->message;

@@ -11,13 +11,7 @@ namespace PHPUnit\TextUI\XmlConfiguration;
 
 use PHPUnit\TextUI\Configuration\ExtensionBootstrapCollection;
 use PHPUnit\TextUI\Configuration\Php;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\TextUI\Configuration\Source;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\Configuration\TestSuiteCollection;
 use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\CodeCoverage;
 use PHPUnit\TextUI\XmlConfiguration\Logging\Logging;
@@ -30,13 +24,7 @@ use PHPUnit\TextUI\XmlConfiguration\Logging\Logging;
 abstract class Configuration
 {
     private readonly ExtensionBootstrapCollection $extensions;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private readonly Source $source;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly CodeCoverage $codeCoverage;
     private readonly Groups $groups;
     private readonly Logging $logging;
@@ -44,22 +32,10 @@ abstract class Configuration
     private readonly PHPUnit $phpunit;
     private readonly TestSuiteCollection $testSuite;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(ExtensionBootstrapCollection $extensions, Source $source, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
     {
         $this->extensions   = $extensions;
         $this->source       = $source;
-=======
-    public function __construct(ExtensionBootstrapCollection $extensions, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
-    {
-        $this->extensions   = $extensions;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(ExtensionBootstrapCollection $extensions, CodeCoverage $codeCoverage, Groups $groups, Logging $logging, Php $php, PHPUnit $phpunit, TestSuiteCollection $testSuite)
-    {
-        $this->extensions   = $extensions;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->codeCoverage = $codeCoverage;
         $this->groups       = $groups;
         $this->logging      = $logging;
@@ -73,17 +49,11 @@ abstract class Configuration
         return $this->extensions;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function source(): Source
     {
         return $this->source;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function codeCoverage(): CodeCoverage
     {
         return $this->codeCoverage;

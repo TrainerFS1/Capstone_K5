@@ -13,13 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class Command extends SymfonyCommand
 {
     use Concerns\CallsCommands,
-<<<<<<< HEAD
-<<<<<<< HEAD
         Concerns\ConfiguresPrompts,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Concerns\HasParameters,
         Concerns\InteractsWithIO,
         Concerns\InteractsWithSignals,
@@ -69,8 +63,6 @@ class Command extends SymfonyCommand
     protected $hidden = false;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicates whether only one instance of the command can run at any given time.
      *
      * @var bool
@@ -85,10 +77,6 @@ class Command extends SymfonyCommand
     protected $isolatedExitCode = self::SUCCESS;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The console command name aliases.
      *
      * @var array
@@ -167,15 +155,7 @@ class Command extends SymfonyCommand
             null,
             InputOption::VALUE_OPTIONAL,
             'Do not run the command if another instance of the command is already running',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->isolated
-=======
-            false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ));
     }
 
@@ -188,28 +168,14 @@ class Command extends SymfonyCommand
      */
     public function run(InputInterface $input, OutputInterface $output): int
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->output = $output instanceof OutputStyle ? $output : $this->laravel->make(
-=======
-        $this->output = $this->laravel->make(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->output = $this->laravel->make(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             OutputStyle::class, ['input' => $input, 'output' => $output]
         );
 
         $this->components = $this->laravel->make(Factory::class, ['output' => $this->output]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->configurePrompts($input);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
             return parent::run(
                 $this->input = $input, $this->output
@@ -236,15 +202,7 @@ class Command extends SymfonyCommand
 
             return (int) (is_numeric($this->option('isolated'))
                         ? $this->option('isolated')
-<<<<<<< HEAD
-<<<<<<< HEAD
                         : $this->isolatedExitCode);
-=======
-                        : self::SUCCESS);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        : self::SUCCESS);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $method = method_exists($this, 'handle') ? 'handle' : '__invoke';

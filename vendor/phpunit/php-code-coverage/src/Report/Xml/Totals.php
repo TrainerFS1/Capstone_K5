@@ -33,67 +33,27 @@ final class Totals
 
         $this->linesNode = $dom->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'lines',
-=======
-            'lines'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'lines'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->methodsNode = $dom->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'methods',
-=======
-            'methods'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'methods'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->functionsNode = $dom->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'functions',
-=======
-            'functions'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'functions'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->classesNode = $dom->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'classes',
-=======
-            'classes'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'classes'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->traitsNode = $dom->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'traits',
-=======
-            'traits'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'traits'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $container->appendChild($this->linesNode);
@@ -117,15 +77,7 @@ final class Totals
         $this->linesNode->setAttribute('executed', (string) $executed);
         $this->linesNode->setAttribute(
             'percent',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $executable === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($executed, $executable)->asFloat()),
-=======
-            $executable === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($executed, $executable)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $executable === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($executed, $executable)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -135,15 +87,7 @@ final class Totals
         $this->classesNode->setAttribute('tested', (string) $tested);
         $this->classesNode->setAttribute(
             'percent',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat()),
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -153,15 +97,7 @@ final class Totals
         $this->traitsNode->setAttribute('tested', (string) $tested);
         $this->traitsNode->setAttribute(
             'percent',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat()),
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -171,15 +107,7 @@ final class Totals
         $this->methodsNode->setAttribute('tested', (string) $tested);
         $this->methodsNode->setAttribute(
             'percent',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat()),
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -189,15 +117,7 @@ final class Totals
         $this->functionsNode->setAttribute('tested', (string) $tested);
         $this->functionsNode->setAttribute(
             'percent',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat()),
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $count === 0 ? '0' : sprintf('%01.2F', Percentage::fromFractionAndTotal($tested, $count)->asFloat())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

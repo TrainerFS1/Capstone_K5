@@ -45,19 +45,7 @@ class Unescaper
      */
     public function unescapeDoubleQuotedString(string $value): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $callback = fn ($match) => $this->unescapeCharacter($match[0]);
-=======
-        $callback = function ($match) {
-            return $this->unescapeCharacter($match[0]);
-        };
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $callback = function ($match) {
-            return $this->unescapeCharacter($match[0]);
-        };
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         // evaluate the string
         return preg_replace_callback('/'.self::REGEX_ESCAPED_CHARACTER.'/u', $callback, $value);

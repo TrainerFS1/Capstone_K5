@@ -37,15 +37,7 @@ class Profiler implements ResetInterface
     private bool $initiallyEnabled = true;
     private bool $enabled = true;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(ProfilerStorageInterface $storage, ?LoggerInterface $logger = null, bool $enable = true)
-=======
-    public function __construct(ProfilerStorageInterface $storage, LoggerInterface $logger = null, bool $enable = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(ProfilerStorageInterface $storage, LoggerInterface $logger = null, bool $enable = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->storage = $storage;
         $this->logger = $logger;
@@ -54,14 +46,8 @@ class Profiler implements ResetInterface
 
     /**
      * Disables the profiler.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function disable()
     {
@@ -70,14 +56,8 @@ class Profiler implements ResetInterface
 
     /**
      * Enables the profiler.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function enable()
     {
@@ -122,15 +102,7 @@ class Profiler implements ResetInterface
         }
 
         if (!($ret = $this->storage->write($profile)) && null !== $this->logger) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->logger->warning('Unable to store the profiler information.', ['configured_storage' => $this->storage::class]);
-=======
-            $this->logger->warning('Unable to store the profiler information.', ['configured_storage' => \get_class($this->storage)]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->logger->warning('Unable to store the profiler information.', ['configured_storage' => \get_class($this->storage)]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $ret;
@@ -138,14 +110,8 @@ class Profiler implements ResetInterface
 
     /**
      * Purges all data from the storage.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function purge()
     {
@@ -155,8 +121,6 @@ class Profiler implements ResetInterface
     /**
      * Finds profiler tokens for the given criteria.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param int|null      $limit  The maximum number of tokens to return
      * @param string|null   $start  The start date to search from
      * @param string|null   $end    The end date to search to
@@ -169,36 +133,12 @@ class Profiler implements ResetInterface
         $filter = 7 < \func_num_args() ? func_get_arg(7) : null;
 
         return $this->storage->find($ip, $url, $limit, $method, $this->getTimestamp($start), $this->getTimestamp($end), $statusCode, $filter);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param string|null $limit The maximum number of tokens to return
-     * @param string|null $start The start date to search from
-     * @param string|null $end   The end date to search to
-     *
-     * @see https://php.net/datetime.formats for the supported date/time formats
-     */
-    public function find(?string $ip, ?string $url, ?string $limit, ?string $method, ?string $start, ?string $end, string $statusCode = null): array
-    {
-        return $this->storage->find($ip, $url, $limit, $method, $this->getTimestamp($start), $this->getTimestamp($end), $statusCode);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Collects data for the given Response.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): ?Profile
-=======
-    public function collect(Request $request, Response $response, \Throwable $exception = null): ?Profile
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function collect(Request $request, Response $response, \Throwable $exception = null): ?Profile
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (false === $this->enabled) {
             return null;
@@ -215,16 +155,10 @@ class Profiler implements ResetInterface
             $profile->setIp('Unknown');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($request->attributes->has('_virtual_type')) {
             $profile->setVirtualType($request->attributes->get('_virtual_type'));
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($prevToken = $response->headers->get('X-Debug-Token')) {
             $response->headers->set('X-Previous-Debug-Token', $prevToken);
         }
@@ -241,15 +175,9 @@ class Profiler implements ResetInterface
         return $profile;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset()
     {
         foreach ($this->collectors as $collector) {
@@ -270,14 +198,8 @@ class Profiler implements ResetInterface
      * Sets the Collectors associated with this profiler.
      *
      * @param DataCollectorInterface[] $collectors An array of collectors
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function set(array $collectors = [])
     {
@@ -289,14 +211,8 @@ class Profiler implements ResetInterface
 
     /**
      * Adds a Collector.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function add(DataCollectorInterface $collector)
     {

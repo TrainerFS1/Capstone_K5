@@ -13,16 +13,8 @@ use Psr\Http\Message\ResponseInterface;
  * necessary. Subclasses are also responsible for storing and retrieving
  * cookies from a file, database, etc.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @see https://docs.python.org/2/library/cookielib.html Inspiration
  *
-=======
- * @link https://docs.python.org/2/library/cookielib.html Inspiration
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @link https://docs.python.org/2/library/cookielib.html Inspiration
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @extends \IteratorAggregate<SetCookie>
  */
 interface CookieJarInterface extends \Countable, \IteratorAggregate
@@ -70,15 +62,7 @@ interface CookieJarInterface extends \Countable, \IteratorAggregate
      * @param string|null $path   Clears cookies matching a domain and path
      * @param string|null $name   Clears cookies matching a domain, path, and name
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function clear(string $domain = null, string $path = null, string $name = null): void;
-=======
-    public function clear(?string $domain = null, ?string $path = null, ?string $name = null): void;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function clear(?string $domain = null, ?string $path = null, ?string $name = null): void;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Discard all sessions cookies.

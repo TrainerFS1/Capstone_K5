@@ -15,14 +15,6 @@ namespace Symfony\Component\HttpFoundation\Exception;
  * Raised when a user has performed an operation that should be considered
  * suspicious from a security perspective.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 class SuspiciousOperationException extends UnexpectedValueException implements RequestExceptionInterface
-=======
-class SuspiciousOperationException extends \UnexpectedValueException implements RequestExceptionInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class SuspiciousOperationException extends \UnexpectedValueException implements RequestExceptionInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
 }

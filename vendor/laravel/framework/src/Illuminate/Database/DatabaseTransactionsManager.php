@@ -2,8 +2,6 @@
 
 namespace Illuminate\Database;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Collection;
 
 class DatabaseTransactionsManager
@@ -28,28 +26,6 @@ class DatabaseTransactionsManager
      * @var array
      */
     protected $currentTransaction = [];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-class DatabaseTransactionsManager
-{
-    /**
-     * All of the recorded transactions.
-     *
-     * @var \Illuminate\Support\Collection
-     */
-    protected $transactions;
-
-    /**
-     * The database transaction that should be ignored by callbacks.
-     *
-     * @var \Illuminate\Database\DatabaseTransactionRecord
-     */
-    protected $callbacksShouldIgnore;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Create a new database transactions manager instance.
@@ -58,16 +34,8 @@ class DatabaseTransactionsManager
      */
     public function __construct()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->committedTransactions = new Collection;
         $this->pendingTransactions = new Collection;
-=======
-        $this->transactions = collect();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->transactions = collect();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -79,8 +47,6 @@ class DatabaseTransactionsManager
      */
     public function begin($connection, $level)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->pendingTransactions->push(
             $newTransaction = new DatabaseTransactionRecord(
                 $connection,
@@ -151,14 +117,6 @@ class DatabaseTransactionsManager
         $this->pendingTransactions = $this->pendingTransactions->reject(
             fn ($transaction) => $transaction->connection === $connection &&
                                  $transaction->level >= $levelBeingCommitted
-=======
-        $this->transactions->push(
-            new DatabaseTransactionRecord($connection, $level)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->transactions->push(
-            new DatabaseTransactionRecord($connection, $level)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -166,8 +124,6 @@ class DatabaseTransactionsManager
      * Rollback the active database transaction.
      *
      * @param  string  $connection
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int  $newTransactionLevel
      * @return void
      */
@@ -191,43 +147,15 @@ class DatabaseTransactionsManager
                     $this->currentTransaction[$connection]->level > $newTransactionLevel
                 );
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  int  $level
-     * @return void
-     */
-    public function rollback($connection, $level)
-    {
-        $this->transactions = $this->transactions->reject(
-            fn ($transaction) => $transaction->connection == $connection && $transaction->level > $level
-        )->values();
-
-        if ($this->transactions->isEmpty()) {
-            $this->callbacksShouldIgnore = null;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Remove all pending, completed, and current transactions for the given connection name.
-=======
-     * Commit the active database transaction.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Commit the active database transaction.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $connection
      * @return void
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function removeAllTransactionsForConnection($connection)
     {
         $this->currentTransaction[$connection] = null;
@@ -260,26 +188,6 @@ class DatabaseTransactionsManager
         $removedTransactions->each(
             fn ($transaction) => $this->removeCommittedTransactionsThatAreChildrenOf($transaction)
         );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function commit($connection)
-    {
-        [$forThisConnection, $forOtherConnections] = $this->transactions->partition(
-            fn ($transaction) => $transaction->connection == $connection
-        );
-
-        $this->transactions = $forOtherConnections->values();
-
-        $forThisConnection->map->executeCallbacks();
-
-        if ($this->transactions->isEmpty()) {
-            $this->callbacksShouldIgnore = null;
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -298,8 +206,6 @@ class DatabaseTransactionsManager
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the transactions that are applicable to callbacks.
      *
      * @return \Illuminate\Support\Collection<int, \Illuminate\Database\DatabaseTransactionRecord>
@@ -338,44 +244,5 @@ class DatabaseTransactionsManager
     public function getCommittedTransactions()
     {
         return $this->committedTransactions;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Specify that callbacks should ignore the given transaction when determining if they should be executed.
-     *
-     * @param  \Illuminate\Database\DatabaseTransactionRecord  $transaction
-     * @return $this
-     */
-    public function callbacksShouldIgnore(DatabaseTransactionRecord $transaction)
-    {
-        $this->callbacksShouldIgnore = $transaction;
-
-        return $this;
-    }
-
-    /**
-     * Get the transactions that are applicable to callbacks.
-     *
-     * @return \Illuminate\Support\Collection
-     */
-    public function callbackApplicableTransactions()
-    {
-        return $this->transactions->reject(function ($transaction) {
-            return $transaction === $this->callbacksShouldIgnore;
-        })->values();
-    }
-
-    /**
-     * Get all the transactions.
-     *
-     * @return \Illuminate\Support\Collection
-     */
-    public function getTransactions()
-    {
-        return $this->transactions;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

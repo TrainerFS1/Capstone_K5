@@ -95,15 +95,7 @@ class ArgonHasher extends AbstractHasher implements HasherContract
      */
     public function check($value, $hashedValue, array $options = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($this->verifyAlgorithm && ! $this->isUsingCorrectAlgorithm($hashedValue)) {
-=======
-        if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'argon2i') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'argon2i') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new RuntimeException('This password does not use the Argon2i algorithm.');
         }
 
@@ -127,8 +119,6 @@ class ArgonHasher extends AbstractHasher implements HasherContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Verifies that the configuration is less than or equal to what is configured.
      *
      * @internal
@@ -179,10 +169,6 @@ class ArgonHasher extends AbstractHasher implements HasherContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the default password memory factor.
      *
      * @param  int  $memory

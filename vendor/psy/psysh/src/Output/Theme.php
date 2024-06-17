@@ -57,8 +57,6 @@ class Theme
         'default'   => [null],
 
         // Types
-<<<<<<< HEAD
-<<<<<<< HEAD
         'number'       => ['magenta'],
         'integer'      => ['magenta'],
         'float'        => ['yellow'],
@@ -69,36 +67,12 @@ class Theme
         'code_comment' => ['gray'],
         'object'       => ['blue'],
         'resource'     => ['yellow'],
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        'number'   => ['magenta'],
-        'integer'  => ['magenta'],
-        'float'    => ['yellow'],
-        'string'   => ['green'],
-        'bool'     => ['cyan'],
-        'keyword'  => ['yellow'],
-        'comment'  => ['blue'],
-        'object'   => ['blue'],
-        'resource' => ['yellow'],
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         // Code-specific formatting
         'inline_html' => ['cyan'],
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     const ERROR_STYLES = ['info', 'warning', 'error', 'whisper', 'class'];
-=======
-    const ERROR_STYLES = ['info', 'warning', 'error', 'whisper'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    const ERROR_STYLES = ['info', 'warning', 'error', 'whisper'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     private $compact = false;
 
@@ -122,15 +96,7 @@ class Theme
                     $config = static::MODERN_THEME;
                     break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 case 'compact':
-=======
-                    case 'compact':
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    case 'compact':
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     $config = static::COMPACT_THEME;
                     break;
 
@@ -174,19 +140,6 @@ class Theme
                 case 'grayFallback':
                     $this->setGrayFallback($value);
                     break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-                case 'compact':
-                    $this->setCompact($value);
-                    break;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 

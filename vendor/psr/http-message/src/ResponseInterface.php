@@ -27,15 +27,7 @@ interface ResponseInterface extends MessageInterface
      *
      * @return int Status code.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getStatusCode(): int;
-=======
-    public function getStatusCode();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getStatusCode();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the specified status code and, optionally, reason phrase.
@@ -57,15 +49,7 @@ interface ResponseInterface extends MessageInterface
      * @return static
      * @throws \InvalidArgumentException For invalid status code arguments.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withStatus(int $code, string $reasonPhrase = ''): ResponseInterface;
-=======
-    public function withStatus($code, $reasonPhrase = '');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withStatus($code, $reasonPhrase = '');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Gets the response reason phrase associated with the status code.
@@ -80,13 +64,5 @@ interface ResponseInterface extends MessageInterface
      * @link http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
      * @return string Reason phrase; must return an empty string if none present.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getReasonPhrase(): string;
-=======
-    public function getReasonPhrase();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getReasonPhrase();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

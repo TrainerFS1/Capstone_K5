@@ -16,21 +16,9 @@ final class Container implements ContainerInterface
     /**
      * @var array<string, callable|object|string>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private array $definitions;
 
     private array $services = [];
-=======
-    private $definitions;
-
-    private $services = [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $definitions;
-
-    private $services = [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Create a container object with a set of definitions. The array value MUST
@@ -75,15 +63,7 @@ final class Container implements ContainerInterface
 
         $definition = $this->definitions[$id];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $service = $this->getService($id, $definition);
-=======
-        $service = $this->services[$id] = $this->getService($id, $definition);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $service = $this->services[$id] = $this->getService($id, $definition);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (!$service instanceof Extension) {
             throw new \RuntimeException(sprintf(
@@ -93,14 +73,8 @@ final class Container implements ContainerInterface
             ));
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->services[$id] = $service;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $service;
     }
 
@@ -109,15 +83,7 @@ final class Container implements ContainerInterface
      *
      * @param callable|object|string $definition
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function getService(string $id, $definition)
-=======
-    private function getService($id, $definition)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function getService($id, $definition)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (is_callable($definition)) {
             try {
@@ -170,21 +136,4 @@ final class Container implements ContainerInterface
 
         return array_key_exists($id, $this->definitions);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Get the bindings between Extension interfaces and implementations.
-     */
-    public function getDefinitions(): array
-    {
-        return $this->definitions;
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

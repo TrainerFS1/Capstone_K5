@@ -118,15 +118,7 @@ trait ResolvesDumpSource
      */
     protected function isCompiledViewFile($file)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return str_starts_with($file, $this->compiledViewPath) && str_ends_with($file, '.php');
-=======
-        return str_starts_with($file, $this->compiledViewPath);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return str_starts_with($file, $this->compiledViewPath);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

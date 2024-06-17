@@ -12,18 +12,10 @@
 namespace Symfony\Component\Console\Event;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Allows to do things before the command is executed, like skipping the command or executing code before the command is
  * going to be executed.
  *
  * Changing the input arguments will have no effect.
-=======
- * Allows to do things before the command is executed, like skipping the command or changing the input.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * Allows to do things before the command is executed, like skipping the command or changing the input.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

@@ -275,25 +275,11 @@ use Faker\Container\ContainerInterface;
  *
  * @property string $imageUrl
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method string imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false, string $format = 'png')
  *
  * @property string $image
  *
  * @method string image($dir = null, $width = 640, $height = 480, $category = null, $fullPath = true, $randomize = true, $word = null, $gray = false, string $format = 'png')
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @method string imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false)
- *
- * @property string $image
- *
- * @method string image($dir = null, $width = 640, $height = 480, $category = null, $fullPath = true, $randomize = true, $word = null, $gray = false)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @property string $email
  *
@@ -477,15 +463,7 @@ use Faker\Container\ContainerInterface;
  *
  * @property string $lastName
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method string lastName($gender = null)
-=======
- * @method string lastName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method string lastName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @property string $title
  *
@@ -589,15 +567,7 @@ class Generator
 
     public function __construct(ContainerInterface $container = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->container = $container ?: Container\ContainerBuilder::withDefaultExtensions()->build();
-=======
-        $this->container = $container ?: Container\ContainerBuilder::getDefault();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->container = $container ?: Container\ContainerBuilder::getDefault();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -717,8 +687,6 @@ class Generator
         if ($seed === null) {
             mt_srand();
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             mt_srand((int) $seed, self::mode());
         }
     }
@@ -735,17 +703,6 @@ class Generator
         return MT_RAND_MT19937;
     }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            mt_srand((int) $seed, MT_RAND_PHP);
-        }
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function format($format, $arguments = [])
     {
         return call_user_func_array($this->getFormatter($format), $arguments);

@@ -38,29 +38,11 @@ use ReflectionMethod;
  */
 final class DocBlock
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private const REGEX_REQUIRES_VERSION            = '/@requires\s+(?P<name>PHP(?:Unit)?)\s+(?P<operator>[<>=!]{0,2})\s*(?P<version>[\d\.-]+(dev|(RC|alpha|beta)[\d\.])?)[ \t]*\r?$/m';
     private const REGEX_REQUIRES_VERSION_CONSTRAINT = '/@requires\s+(?P<name>PHP(?:Unit)?)\s+(?P<constraint>[\d\t \-.|~^]+)[ \t]*\r?$/m';
     private const REGEX_REQUIRES_OS                 = '/@requires\s+(?P<name>OS(?:FAMILY)?)\s+(?P<value>.+?)[ \t]*\r?$/m';
     private const REGEX_REQUIRES_SETTING            = '/@requires\s+(?P<name>setting)\s+(?P<setting>([^ ]+?))\s*(?P<value>[\w\.-]+[\w\.]?)?[ \t]*\r?$/m';
     private const REGEX_REQUIRES                    = '/@requires\s+(?P<name>function|extension)\s+(?P<value>([^\s<>=!]+))\s*(?P<operator>[<>=!]{0,2})\s*(?P<version>[\d\.-]+[\d\.]?)?[ \t]*\r?$/m';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private const REGEX_REQUIRES_VERSION = '/@requires\s+(?P<name>PHP(?:Unit)?)\s+(?P<operator>[<>=!]{0,2})\s*(?P<version>[\d\.-]+(dev|(RC|alpha|beta)[\d\.])?)[ \t]*\r?$/m';
-
-    private const REGEX_REQUIRES_VERSION_CONSTRAINT = '/@requires\s+(?P<name>PHP(?:Unit)?)\s+(?P<constraint>[\d\t \-.|~^]+)[ \t]*\r?$/m';
-
-    private const REGEX_REQUIRES_OS = '/@requires\s+(?P<name>OS(?:FAMILY)?)\s+(?P<value>.+?)[ \t]*\r?$/m';
-
-    private const REGEX_REQUIRES_SETTING = '/@requires\s+(?P<name>setting)\s+(?P<setting>([^ ]+?))\s*(?P<value>[\w\.-]+[\w\.]?)?[ \t]*\r?$/m';
-
-    private const REGEX_REQUIRES = '/@requires\s+(?P<name>function|extension)\s+(?P<value>([^\s<>=!]+))\s*(?P<operator>[<>=!]{0,2})\s*(?P<version>[\d\.-]+[\d\.]?)?[ \t]*\r?$/m';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly string $docComment;
 
     /**
@@ -138,14 +120,8 @@ final class DocBlock
      *   string,
      *   string|array{version: string, operator: string}|array{constraint: string}|array<int|string, string>
      * >
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throws InvalidVersionRequirementException
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function requirements(): array
     {
@@ -199,15 +175,7 @@ final class DocBlock
                     throw new InvalidVersionRequirementException(
                         $e->getMessage(),
                         $e->getCode(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $e,
-=======
-                        $e
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $e
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -245,18 +213,8 @@ final class DocBlock
                 [
                     'setting'            => $recordedSettings,
                     'extension_versions' => $extensionVersions,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ],
             ),
-=======
-                ]
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ]
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -294,32 +252,14 @@ final class DocBlock
                 $annotations,
                 ...array_map(
                     static fn (ReflectionClass $trait): array => self::parseDocBlock((string) $trait->getDocComment()),
-<<<<<<< HEAD
-<<<<<<< HEAD
                     array_values($reflector->getTraits()),
                 ),
-=======
-                    array_values($reflector->getTraits())
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    array_values($reflector->getTraits())
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
         return array_merge(
             $annotations,
-<<<<<<< HEAD
-<<<<<<< HEAD
             self::parseDocBlock((string) $reflector->getDocComment()),
-=======
-            self::parseDocBlock((string) $reflector->getDocComment())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            self::parseDocBlock((string) $reflector->getDocComment())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

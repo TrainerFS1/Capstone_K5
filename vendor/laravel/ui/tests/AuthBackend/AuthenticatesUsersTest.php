@@ -3,25 +3,15 @@
 namespace Laravel\Ui\Tests\AuthBackend;
 
 use Illuminate\Auth\Events\Attempting;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-=======
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Http\Request;
 use Illuminate\Routing\Pipeline;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Testing\TestResponse;
 use Illuminate\Validation\ValidationException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Orchestra\Testbench\Attributes\WithMigration;
 use Orchestra\Testbench\Factories\UserFactory;
 use Orchestra\Testbench\TestCase;
@@ -31,19 +21,6 @@ use PHPUnit\Framework\Attributes\Test;
 class AuthenticatesUsersTest extends TestCase
 {
     use AuthenticatesUsers, RefreshDatabase;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use Orchestra\Testbench\Factories\UserFactory;
-use Orchestra\Testbench\TestCase;
-
-class AuthenticatesUsersTest extends TestCase
-{
-    use AuthenticatesUsers;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     protected function tearDown(): void
     {
@@ -52,27 +29,7 @@ class AuthenticatesUsersTest extends TestCase
         parent::tearDown();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Test]
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * Define database migrations.
-     *
-     * @return void
-     */
-    protected function defineDatabaseMigrations()
-    {
-        $this->loadLaravelMigrations();
-    }
-
-    /** @test */
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function it_can_authenticate_a_user()
     {
         Event::fake();
@@ -95,8 +52,6 @@ class AuthenticatesUsersTest extends TestCase
         });
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Test]
     public function it_can_deauthenticate_a_user()
     {
@@ -118,12 +73,6 @@ class AuthenticatesUsersTest extends TestCase
     }
 
     #[Test]
-=======
-    /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function it_can_authenticate_a_user_with_remember_as_false()
     {
         Event::fake();
@@ -147,19 +96,7 @@ class AuthenticatesUsersTest extends TestCase
         });
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Test]
-=======
-
-
-    /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-
-    /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function it_can_authenticate_a_user_with_remember_as_true()
     {
         Event::fake();
@@ -183,15 +120,7 @@ class AuthenticatesUsersTest extends TestCase
         });
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Test]
-=======
-    /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function it_cant_authenticate_a_user_with_invalid_password()
     {
         $user = UserFactory::new()->create();
@@ -215,15 +144,7 @@ class AuthenticatesUsersTest extends TestCase
         ], $response->exception->errors());
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Test]
-=======
-     /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     /** @test */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function it_cant_authenticate_unknown_credential()
     {
         $request = Request::create('/login', 'POST', [

@@ -51,23 +51,10 @@ class Dumper
         $dumpObjectAsInlineMap = true;
 
         if (Yaml::DUMP_OBJECT_AS_MAP & $flags && ($input instanceof \ArrayObject || $input instanceof \stdClass)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $dumpObjectAsInlineMap = !(array) $input;
         }
 
         if ($inline <= 0 || (!\is_array($input) && !$input instanceof TaggedValue && $dumpObjectAsInlineMap) || !$input) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $dumpObjectAsInlineMap = empty((array) $input);
-        }
-
-        if ($inline <= 0 || (!\is_array($input) && !$input instanceof TaggedValue && $dumpObjectAsInlineMap) || empty($input)) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $output .= $prefix.Inline::dump($input, $flags);
         } elseif ($input instanceof TaggedValue) {
             $output .= $this->dumpTaggedValue($input, $inline, $indent, $flags, $prefix);
@@ -79,25 +66,12 @@ class Dumper
                     $output .= "\n";
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if (\is_int($key) && Yaml::DUMP_NUMERIC_KEY_AS_STRING & $flags) {
                     $key = (string) $key;
                 }
 
                 if (Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK & $flags && \is_string($value) && str_contains($value, "\n") && !str_contains($value, "\r")) {
                     $blockIndentationIndicator = $this->getBlockIndentationIndicator($value);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                if (Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK & $flags && \is_string($value) && str_contains($value, "\n") && !str_contains($value, "\r")) {
-                    // If the first line starts with a space character, the spec requires a blockIndicationIndicator
-                    // http://www.yaml.org/spec/1.2/spec.html#id2793979
-                    $blockIndentationIndicator = str_starts_with($value, ' ') ? (string) $this->indentation : '';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     if (isset($value[-2]) && "\n" === $value[-2] && "\n" === $value[-1]) {
                         $blockChompingIndicator = '+';
@@ -124,19 +98,7 @@ class Dumper
                     $output .= sprintf('%s%s !%s', $prefix, $dumpAsMap ? Inline::dump($key, $flags).':' : '-', $value->getTag());
 
                     if (Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK & $flags && \is_string($value->getValue()) && str_contains($value->getValue(), "\n") && !str_contains($value->getValue(), "\r\n")) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $blockIndentationIndicator = $this->getBlockIndentationIndicator($value->getValue());
-=======
-                        // If the first line starts with a space character, the spec requires a blockIndicationIndicator
-                        // http://www.yaml.org/spec/1.2/spec.html#id2793979
-                        $blockIndentationIndicator = str_starts_with($value->getValue(), ' ') ? (string) $this->indentation : '';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        // If the first line starts with a space character, the spec requires a blockIndicationIndicator
-                        // http://www.yaml.org/spec/1.2/spec.html#id2793979
-                        $blockIndentationIndicator = str_starts_with($value->getValue(), ' ') ? (string) $this->indentation : '';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         $output .= sprintf(' |%s', $blockIndentationIndicator);
 
                         foreach (explode("\n", $value->getValue()) as $row) {
@@ -159,23 +121,10 @@ class Dumper
                 $dumpObjectAsInlineMap = true;
 
                 if (Yaml::DUMP_OBJECT_AS_MAP & $flags && ($value instanceof \ArrayObject || $value instanceof \stdClass)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $dumpObjectAsInlineMap = !(array) $value;
                 }
 
                 $willBeInlined = $inline - 1 <= 0 || !\is_array($value) && $dumpObjectAsInlineMap || !$value;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                    $dumpObjectAsInlineMap = empty((array) $value);
-                }
-
-                $willBeInlined = $inline - 1 <= 0 || !\is_array($value) && $dumpObjectAsInlineMap || empty($value);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 $output .= sprintf('%s%s%s%s',
                     $prefix,
@@ -193,21 +142,8 @@ class Dumper
     {
         $output = sprintf('%s!%s', $prefix ? $prefix.' ' : '', $value->getTag());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK & $flags && \is_string($value->getValue()) && str_contains($value->getValue(), "\n") && !str_contains($value->getValue(), "\r\n")) {
             $blockIndentationIndicator = $this->getBlockIndentationIndicator($value->getValue());
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK & $flags && \is_string($value->getValue()) && false !== strpos($value->getValue(), "\n") && false === strpos($value->getValue(), "\r\n")) {
-            // If the first line starts with a space character, the spec requires a blockIndicationIndicator
-            // http://www.yaml.org/spec/1.2/spec.html#id2793979
-            $blockIndentationIndicator = (' ' === substr($value->getValue(), 0, 1)) ? (string) $this->indentation : '';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $output .= sprintf(' |%s', $blockIndentationIndicator);
 
             foreach (explode("\n", $value->getValue()) as $row) {
@@ -223,8 +159,6 @@ class Dumper
 
         return $output."\n".$this->dump($value->getValue(), $inline - 1, $indent, $flags);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     private function getBlockIndentationIndicator(string $value): string
     {
@@ -241,8 +175,4 @@ class Dumper
 
         return '';
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

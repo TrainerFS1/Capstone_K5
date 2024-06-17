@@ -231,15 +231,7 @@ use ReflectionMethod;
  *                                                                                                                                                                                                     You should rather use the ->settings() method.
  *                                                                                                                                                                                                     Or you can use method variants: addYearsWithOverflow/addYearsNoOverflow, same variants
  *                                                                                                                                                                                                     are available for quarters, years, decade, centuries, millennia (singular and plural forms).
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method mixed                                              withTestNow($testNow, $callback)                                                                                             Temporarily sets a static date to be used within the callback.
-=======
- * @method mixed                                              withTestNow($testNow = null, $callback = null)                                                                               Temporarily sets a static date to be used within the callback.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method mixed                                              withTestNow($testNow = null, $callback = null)                                                                               Temporarily sets a static date to be used within the callback.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *                                                                                                                                                                                         Using setTestNow to set the date, executing the callback, then
  *                                                                                                                                                                                         clearing the test instance.
  *                                                                                                                                                                                         /!\ Use this method for unit tests only.

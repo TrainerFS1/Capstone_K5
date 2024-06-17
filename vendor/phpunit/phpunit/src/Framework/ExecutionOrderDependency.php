@@ -35,15 +35,7 @@ final class ExecutionOrderDependency implements Stringable
             '',
             '',
             false,
-<<<<<<< HEAD
-<<<<<<< HEAD
             false,
-=======
-            false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -53,15 +45,7 @@ final class ExecutionOrderDependency implements Stringable
             $metadata->className(),
             'class',
             $metadata->deepClone(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $metadata->shallowClone(),
-=======
-            $metadata->shallowClone()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $metadata->shallowClone()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -71,15 +55,7 @@ final class ExecutionOrderDependency implements Stringable
             $metadata->className(),
             $metadata->methodName(),
             $metadata->deepClone(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $metadata->shallowClone(),
-=======
-            $metadata->shallowClone()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $metadata->shallowClone()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -93,18 +69,8 @@ final class ExecutionOrderDependency implements Stringable
         return array_values(
             array_filter(
                 $dependencies,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 static fn (self $d) => $d->isValid(),
             ),
-=======
-                static fn (self $d) => $d->isValid()
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                static fn (self $d) => $d->isValid()
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -118,8 +84,6 @@ final class ExecutionOrderDependency implements Stringable
     {
         $existingTargets = array_map(
             static fn ($dependency) => $dependency->getTarget(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $existing,
         );
 
@@ -131,22 +95,6 @@ final class ExecutionOrderDependency implements Stringable
             }
 
             $existingTargets[] = $additionalTarget;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $existing
-        );
-
-        foreach ($additional as $dependency) {
-            if (in_array($dependency->getTarget(), $existingTargets, true)) {
-                continue;
-            }
-
-            $existingTargets[] = $dependency->getTarget();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $existing[]        = $dependency;
         }
 
@@ -172,15 +120,7 @@ final class ExecutionOrderDependency implements Stringable
         $diff         = [];
         $rightTargets = array_map(
             static fn ($dependency) => $dependency->getTarget(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $right,
-=======
-            $right
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $right
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         foreach ($left as $dependency) {
@@ -196,15 +136,9 @@ final class ExecutionOrderDependency implements Stringable
 
     public function __construct(string $classOrCallableName, ?string $methodName = null, bool $deepClone = false, bool $shallowClone = false)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->deepClone    = $deepClone;
         $this->shallowClone = $shallowClone;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($classOrCallableName === '') {
             return;
         }
@@ -215,18 +149,6 @@ final class ExecutionOrderDependency implements Stringable
             $this->className  = $classOrCallableName;
             $this->methodName = !empty($methodName) ? $methodName : 'class';
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-        $this->deepClone    = $deepClone;
-        $this->shallowClone = $shallowClone;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-        $this->deepClone    = $deepClone;
-        $this->shallowClone = $shallowClone;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function __toString(): string

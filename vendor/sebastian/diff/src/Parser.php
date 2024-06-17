@@ -10,13 +10,7 @@
 namespace SebastianBergmann\Diff;
 
 use function array_pop;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function assert;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function count;
 use function max;
 use function preg_match;
@@ -53,15 +47,9 @@ final class Parser
                     $collected = [];
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 assert(!empty($fromMatch['file']));
                 assert(!empty($toMatch['file']));
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $diff = new Diff($fromMatch['file'], $toMatch['file']);
 
                 $i++;
@@ -90,27 +78,12 @@ final class Parser
         $diffLines = [];
 
         foreach ($lines as $line) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (preg_match('/^@@\s+-(?P<start>\d+)(?:,\s*(?P<startrange>\d+))?\s+\+(?P<end>\d+)(?:,\s*(?P<endrange>\d+))?\s+@@/', $line, $match, PREG_UNMATCHED_AS_NULL)) {
                 $chunk = new Chunk(
                     (int) $match['start'],
                     isset($match['startrange']) ? max(0, (int) $match['startrange']) : 1,
                     (int) $match['end'],
                     isset($match['endrange']) ? max(0, (int) $match['endrange']) : 1,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if (preg_match('/^@@\s+-(?P<start>\d+)(?:,\s*(?P<startrange>\d+))?\s+\+(?P<end>\d+)(?:,\s*(?P<endrange>\d+))?\s+@@/', $line, $match)) {
-                $chunk = new Chunk(
-                    (int) $match['start'],
-                    isset($match['startrange']) ? max(1, (int) $match['startrange']) : 1,
-                    (int) $match['end'],
-                    isset($match['endrange']) ? max(1, (int) $match['endrange']) : 1
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 
                 $chunks[]  = $chunk;

@@ -88,15 +88,7 @@ class TableStyle
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setHorizontalBorderChars(string $outside, ?string $inside = null): static
-=======
-    public function setHorizontalBorderChars(string $outside, string $inside = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setHorizontalBorderChars(string $outside, string $inside = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->horizontalOutsideBorderChar = $outside;
         $this->horizontalInsideBorderChar = $inside ?? $outside;
@@ -121,15 +113,7 @@ class TableStyle
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setVerticalBorderChars(string $outside, ?string $inside = null): static
-=======
-    public function setVerticalBorderChars(string $outside, string $inside = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setVerticalBorderChars(string $outside, string $inside = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->verticalOutsideBorderChar = $outside;
         $this->verticalInsideBorderChar = $inside ?? $outside;
@@ -183,15 +167,7 @@ class TableStyle
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setCrossingChars(string $cross, string $topLeft, string $topMid, string $topRight, string $midRight, string $bottomRight, string $bottomMid, string $bottomLeft, string $midLeft, ?string $topLeftBottom = null, ?string $topMidBottom = null, ?string $topRightBottom = null): static
-=======
-    public function setCrossingChars(string $cross, string $topLeft, string $topMid, string $topRight, string $midRight, string $bottomRight, string $bottomMid, string $bottomLeft, string $midLeft, string $topLeftBottom = null, string $topMidBottom = null, string $topRightBottom = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setCrossingChars(string $cross, string $topLeft, string $topMid, string $topRight, string $midRight, string $bottomRight, string $bottomMid, string $bottomLeft, string $midLeft, string $topLeftBottom = null, string $topMidBottom = null, string $topRightBottom = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->crossingChar = $cross;
         $this->crossingTopLeftChar = $topLeft;

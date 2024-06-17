@@ -41,15 +41,7 @@ final class StreamWrapper
             $mode = 'w';
         } else {
             throw new \InvalidArgumentException('The stream must be readable, '
-<<<<<<< HEAD
-<<<<<<< HEAD
                 .'writable, or both.');
-=======
-                . 'writable, or both.');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                . 'writable, or both.');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return fopen('guzzle://stream', $mode, false, self::createStreamContext($stream));
@@ -63,15 +55,7 @@ final class StreamWrapper
     public static function createStreamContext(StreamInterface $stream)
     {
         return stream_context_create([
-<<<<<<< HEAD
-<<<<<<< HEAD
             'guzzle' => ['stream' => $stream],
-=======
-            'guzzle' => ['stream' => $stream]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'guzzle' => ['stream' => $stream]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]);
     }
 
@@ -131,23 +115,13 @@ final class StreamWrapper
      */
     public function stream_cast(int $cast_as)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $stream = clone $this->stream;
-=======
-        $stream = clone($this->stream);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $stream = clone($this->stream);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $resource = $stream->detach();
 
         return $resource ?? false;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return array{
      *   dev: int,
      *   ino: int,
@@ -163,18 +137,10 @@ final class StreamWrapper
      *   blksize: int,
      *   blocks: int
      * }
-=======
-     * @return array<int|string, int>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return array<int|string, int>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function stream_stat(): array
     {
         static $modeMap = [
-<<<<<<< HEAD
-<<<<<<< HEAD
             'r' => 33060,
             'rb' => 33060,
             'r+' => 33206,
@@ -196,40 +162,10 @@ final class StreamWrapper
             'ctime' => 0,
             'blksize' => 0,
             'blocks' => 0,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            'r'  => 33060,
-            'rb' => 33060,
-            'r+' => 33206,
-            'w'  => 33188,
-            'wb' => 33188
-        ];
-
-        return [
-            'dev'     => 0,
-            'ino'     => 0,
-            'mode'    => $modeMap[$this->mode],
-            'nlink'   => 0,
-            'uid'     => 0,
-            'gid'     => 0,
-            'rdev'    => 0,
-            'size'    => $this->stream->getSize() ?: 0,
-            'atime'   => 0,
-            'mtime'   => 0,
-            'ctime'   => 0,
-            'blksize' => 0,
-            'blocks'  => 0
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return array{
      *   dev: int,
      *   ino: int,
@@ -245,18 +181,10 @@ final class StreamWrapper
      *   blksize: int,
      *   blocks: int
      * }
-=======
-     * @return array<int|string, int>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return array<int|string, int>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function url_stat(string $path, int $flags): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
             'dev' => 0,
             'ino' => 0,
             'mode' => 0,
@@ -270,26 +198,6 @@ final class StreamWrapper
             'ctime' => 0,
             'blksize' => 0,
             'blocks' => 0,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            'dev'     => 0,
-            'ino'     => 0,
-            'mode'    => 0,
-            'nlink'   => 0,
-            'uid'     => 0,
-            'gid'     => 0,
-            'rdev'    => 0,
-            'size'    => 0,
-            'atime'   => 0,
-            'mtime'   => 0,
-            'ctime'   => 0,
-            'blksize' => 0,
-            'blocks'  => 0
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 }

@@ -55,14 +55,8 @@ class Store implements StoreInterface
 
     /**
      * Cleanups storage.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function cleanup()
     {
@@ -201,15 +195,7 @@ class Store implements StoreInterface
             if ($this->getPath($digest) !== $response->headers->get('X-Body-File')) {
                 throw new \RuntimeException('X-Body-File and X-Content-Digest do not match.');
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
         // Everything seems ok, omit writing content to disk
-=======
-            // Everything seems ok, omit writing content to disk
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            // Everything seems ok, omit writing content to disk
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             $digest = $this->generateContentDigest($response);
             $response->headers->set('X-Content-Digest', $digest);
@@ -263,14 +249,8 @@ class Store implements StoreInterface
     /**
      * Invalidates all cache entries that match the request.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \RuntimeException
      */
     public function invalidate(Request $request)
@@ -437,15 +417,9 @@ class Store implements StoreInterface
         return true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getPath(string $key)
     {
         return $this->root.\DIRECTORY_SEPARATOR.substr($key, 0, 2).\DIRECTORY_SEPARATOR.substr($key, 2, 2).\DIRECTORY_SEPARATOR.substr($key, 4, 2).\DIRECTORY_SEPARATOR.substr($key, 6);
@@ -500,8 +474,6 @@ class Store implements StoreInterface
     /**
      * Restores a Response from the HTTP headers and body.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function restoreResponse(array $headers, ?string $path = null): ?Response
     {
         $status = $headers['X-Status'][0];
@@ -522,22 +494,5 @@ class Store implements StoreInterface
         }
 
         return new Response($content, $status, $headers);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private function restoreResponse(array $headers, string $path = null): Response
-    {
-        $status = $headers['X-Status'][0];
-        unset($headers['X-Status']);
-
-        if (null !== $path) {
-            $headers['X-Body-File'] = [$path];
-        }
-
-        return new Response($path, $status, $headers);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

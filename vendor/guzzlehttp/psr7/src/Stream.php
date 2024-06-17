@@ -12,18 +12,8 @@ use Psr\Http\Message\StreamInterface;
 class Stream implements StreamInterface
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @see https://www.php.net/manual/en/function.fopen.php
      * @see https://www.php.net/manual/en/function.gzopen.php
-=======
-     * @see http://php.net/manual/function.fopen.php
-     * @see http://php.net/manual/en/function.gzopen.php
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @see http://php.net/manual/function.fopen.php
-     * @see http://php.net/manual/en/function.gzopen.php
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private const READABLE_MODES = '/r|a\+|ab\+|w\+|wb\+|x\+|xb\+|c\+|cb\+/';
     private const WRITABLE_MODES = '/a|w|r\+|rb\+|rw|x|c/';
@@ -71,18 +61,8 @@ class Stream implements StreamInterface
         $this->stream = $stream;
         $meta = stream_get_meta_data($this->stream);
         $this->seekable = $meta['seekable'];
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->readable = (bool) preg_match(self::READABLE_MODES, $meta['mode']);
         $this->writable = (bool) preg_match(self::WRITABLE_MODES, $meta['mode']);
-=======
-        $this->readable = (bool)preg_match(self::READABLE_MODES, $meta['mode']);
-        $this->writable = (bool)preg_match(self::WRITABLE_MODES, $meta['mode']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->readable = (bool)preg_match(self::READABLE_MODES, $meta['mode']);
-        $this->writable = (bool)preg_match(self::WRITABLE_MODES, $meta['mode']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->uri = $this->getMetadata('uri');
     }
 
@@ -100,26 +80,14 @@ class Stream implements StreamInterface
             if ($this->isSeekable()) {
                 $this->seek(0);
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->getContents();
         } catch (\Throwable $e) {
             if (\PHP_VERSION_ID >= 70400) {
                 throw $e;
             }
             trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return '';
         }
     }
@@ -179,13 +147,7 @@ class Stream implements StreamInterface
         $stats = fstat($this->stream);
         if (is_array($stats) && isset($stats['size'])) {
             $this->size = $stats['size'];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->size;
         }
 
@@ -248,15 +210,7 @@ class Stream implements StreamInterface
         }
         if (fseek($this->stream, $offset, $whence) === -1) {
             throw new \RuntimeException('Unable to seek to stream position '
-<<<<<<< HEAD
-<<<<<<< HEAD
                 .$offset.' with whence '.var_export($whence, true));
-=======
-                . $offset . ' with whence ' . var_export($whence, true));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                . $offset . ' with whence ' . var_export($whence, true));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -310,16 +264,6 @@ class Stream implements StreamInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function getMetadata($key = null)

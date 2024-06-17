@@ -20,15 +20,7 @@ final class EmailCount extends Constraint
     private ?string $transport;
     private bool $queued;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(int $expectedValue, ?string $transport = null, bool $queued = false)
-=======
-    public function __construct(int $expectedValue, string $transport = null, bool $queued = false)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(int $expectedValue, string $transport = null, bool $queued = false)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->expectedValue = $expectedValue;
         $this->transport = $transport;
@@ -62,17 +54,7 @@ final class EmailCount extends Constraint
         foreach ($events->getEvents($this->transport) as $event) {
             if (
                 ($this->queued && $event->isQueued())
-<<<<<<< HEAD
-<<<<<<< HEAD
                 || (!$this->queued && !$event->isQueued())
-=======
-                ||
-                (!$this->queued && !$event->isQueued())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ||
-                (!$this->queued && !$event->isQueued())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ) {
                 ++$count;
             }

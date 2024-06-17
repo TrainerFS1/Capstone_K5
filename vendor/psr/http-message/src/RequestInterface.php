@@ -39,15 +39,7 @@ interface RequestInterface extends MessageInterface
      *
      * @return string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getRequestTarget(): string;
-=======
-    public function getRequestTarget();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getRequestTarget();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the specific request-target.
@@ -63,39 +55,18 @@ interface RequestInterface extends MessageInterface
      *
      * @link http://tools.ietf.org/html/rfc7230#section-5.3 (for the various
      *     request-target forms allowed in request messages)
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param string $requestTarget
      * @return static
      */
     public function withRequestTarget(string $requestTarget): RequestInterface;
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param mixed $requestTarget
-     * @return static
-     */
-    public function withRequestTarget($requestTarget);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Retrieves the HTTP method of the request.
      *
      * @return string Returns the request method.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getMethod(): string;
-=======
-    public function getMethod();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getMethod();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the provided HTTP method.
@@ -112,15 +83,7 @@ interface RequestInterface extends MessageInterface
      * @return static
      * @throws \InvalidArgumentException for invalid HTTP methods.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withMethod(string $method): RequestInterface;
-=======
-    public function withMethod($method);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withMethod($method);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Retrieves the URI instance.
@@ -131,15 +94,7 @@ interface RequestInterface extends MessageInterface
      * @return UriInterface Returns a UriInterface instance
      *     representing the URI of the request.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getUri(): UriInterface;
-=======
-    public function getUri();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getUri();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Returns an instance with the provided URI.
@@ -171,13 +126,5 @@ interface RequestInterface extends MessageInterface
      * @param bool $preserveHost Preserve the original state of the Host header.
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withUri(UriInterface $uri, bool $preserveHost = false): RequestInterface;
-=======
-    public function withUri(UriInterface $uri, $preserveHost = false);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withUri(UriInterface $uri, $preserveHost = false);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

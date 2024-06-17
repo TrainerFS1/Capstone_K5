@@ -26,17 +26,11 @@ final class TranslatableMessageVisitor extends AbstractVisitor implements NodeVi
 
     public function enterNode(Node $node): ?Node
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return null;
     }
 
     public function leaveNode(Node $node): ?Node
     {
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$node instanceof Node\Expr\New_) {
             return null;
         }
@@ -45,15 +39,7 @@ final class TranslatableMessageVisitor extends AbstractVisitor implements NodeVi
             return null;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!\in_array('TranslatableMessage', $className->getParts(), true)) {
-=======
-        if (!\in_array('TranslatableMessage', $className->parts, true)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (!\in_array('TranslatableMessage', $className->parts, true)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return null;
         }
 
@@ -72,20 +58,6 @@ final class TranslatableMessageVisitor extends AbstractVisitor implements NodeVi
         return null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function leaveNode(Node $node): ?Node
-    {
-        return null;
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function afterTraverse(array $nodes): ?Node
     {
         return null;

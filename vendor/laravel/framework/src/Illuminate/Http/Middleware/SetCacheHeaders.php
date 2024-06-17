@@ -4,23 +4,13 @@ namespace Illuminate\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Carbon;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\StreamedResponse;
-=======
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class SetCacheHeaders
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Specify the options for the middleware.
      *
      * @param  array|string  $options
@@ -39,10 +29,6 @@ class SetCacheHeaders
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add cache related HTTP headers.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -56,15 +42,7 @@ class SetCacheHeaders
     {
         $response = $next($request);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! $request->isMethodCacheable() || (! $response->getContent() && ! $response instanceof BinaryFileResponse && ! $response instanceof StreamedResponse)) {
-=======
-        if (! $request->isMethodCacheable() || (! $response->getContent() && ! $response instanceof BinaryFileResponse)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (! $request->isMethodCacheable() || (! $response->getContent() && ! $response instanceof BinaryFileResponse)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $response;
         }
 

@@ -57,13 +57,5 @@ interface PipesInterface
     /**
      * Closes file handles and pipes.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function close(): void;
-=======
-    public function close();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function close();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

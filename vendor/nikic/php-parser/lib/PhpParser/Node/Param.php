@@ -2,8 +2,6 @@
 
 namespace PhpParser\Node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Modifiers;
 use PhpParser\Node;
 use PhpParser\NodeAbstract;
@@ -23,37 +21,10 @@ class Param extends NodeAbstract {
     public int $flags;
     /** @var AttributeGroup[] PHP attribute groups */
     public array $attrGroups;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use PhpParser\NodeAbstract;
-
-class Param extends NodeAbstract
-{
-    /** @var null|Identifier|Name|ComplexType Type declaration */
-    public $type;
-    /** @var bool Whether parameter is passed by reference */
-    public $byRef;
-    /** @var bool Whether this is a variadic argument */
-    public $variadic;
-    /** @var Expr\Variable|Expr\Error Parameter variable */
-    public $var;
-    /** @var null|Expr Default value */
-    public $default;
-    /** @var int */
-    public $flags;
-    /** @var AttributeGroup[] PHP attribute groups */
-    public $attrGroups;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs a parameter node.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param Expr\Variable|Expr\Error $var Parameter variable
      * @param null|Expr $default Default value
      * @param null|Identifier|Name|ComplexType $type Type declaration
@@ -65,39 +36,13 @@ class Param extends NodeAbstract
      */
     public function __construct(
         Expr $var, ?Expr $default = null, ?Node $type = null,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param Expr\Variable|Expr\Error                $var        Parameter variable
-     * @param null|Expr                               $default    Default value
-     * @param null|string|Identifier|Name|ComplexType $type       Type declaration
-     * @param bool                                    $byRef      Whether is passed by reference
-     * @param bool                                    $variadic   Whether this is a variadic argument
-     * @param array                                   $attributes Additional attributes
-     * @param int                                     $flags      Optional visibility flags
-     * @param AttributeGroup[]                        $attrGroups PHP attribute groups
-     */
-    public function __construct(
-        $var, Expr $default = null, $type = null,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         bool $byRef = false, bool $variadic = false,
         array $attributes = [],
         int $flags = 0,
         array $attrGroups = []
     ) {
         $this->attributes = $attributes;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->type = $type;
-=======
-        $this->type = \is_string($type) ? new Identifier($type) : $type;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->type = \is_string($type) ? new Identifier($type) : $type;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->byRef = $byRef;
         $this->variadic = $variadic;
         $this->var = $var;
@@ -106,8 +51,6 @@ class Param extends NodeAbstract
         $this->attrGroups = $attrGroups;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['attrGroups', 'flags', 'type', 'byRef', 'variadic', 'var', 'default'];
     }
@@ -138,18 +81,4 @@ class Param extends NodeAbstract
     public function isReadonly(): bool {
         return (bool) ($this->flags & Modifiers::READONLY);
     }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function getSubNodeNames() : array {
-        return ['attrGroups', 'flags', 'type', 'byRef', 'variadic', 'var', 'default'];
-    }
-
-    public function getType() : string {
-        return 'Param';
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

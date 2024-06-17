@@ -21,38 +21,17 @@ final class ConfigurationException extends InvalidArgumentException
         string $expected,
         $value,
         int $code = 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?Exception $previous = null
-=======
-        Exception $previous = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        Exception $previous = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         parent::__construct(
             sprintf(
                 'Option "%s" must be %s, got "%s".',
                 $option,
                 $expected,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 is_object($value) ? $value::class : (null === $value ? '<null>' : gettype($value) . '#' . $value),
             ),
             $code,
             $previous,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                is_object($value) ? $value::class : (null === $value ? '<null>' : gettype($value) . '#' . $value)
-            ),
-            $code,
-            $previous
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

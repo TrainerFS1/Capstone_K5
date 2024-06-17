@@ -36,21 +36,8 @@ interface MessageCatalogueInterface
      * Gets the messages within a given domain.
      *
      * If $domain is null, it returns all messages.
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
     public function all(?string $domain = null): array;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     *
-     * @param string $domain The domain name
-     */
-    public function all(string $domain = null): array;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Sets a message translation.
@@ -58,14 +45,8 @@ interface MessageCatalogueInterface
      * @param string $id          The message id
      * @param string $translation The messages translation
      * @param string $domain      The domain name
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function set(string $id, string $translation, string $domain = 'messages');
 
@@ -98,14 +79,8 @@ interface MessageCatalogueInterface
      *
      * @param array  $messages An array of translations
      * @param string $domain   The domain name
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function replace(array $messages, string $domain = 'messages');
 
@@ -114,14 +89,8 @@ interface MessageCatalogueInterface
      *
      * @param array  $messages An array of translations
      * @param string $domain   The domain name
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function add(array $messages, string $domain = 'messages');
 
@@ -129,14 +98,8 @@ interface MessageCatalogueInterface
      * Merges translations from the given Catalogue into the current one.
      *
      * The two catalogues must have the same locale.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addCatalogue(self $catalogue);
 
@@ -145,14 +108,8 @@ interface MessageCatalogueInterface
      * only when the translation does not exist.
      *
      * This is used to provide default translations when they do not exist for the current locale.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addFallbackCatalogue(self $catalogue);
 
@@ -170,14 +127,8 @@ interface MessageCatalogueInterface
 
     /**
      * Adds a resource for this collection.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addResource(ResourceInterface $resource);
 }

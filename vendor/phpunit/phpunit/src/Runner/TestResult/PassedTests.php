@@ -13,14 +13,6 @@ use function array_merge;
 use function assert;
 use function in_array;
 use PHPUnit\Event\Code\TestMethod;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Framework\TestSize\Known;
 use PHPUnit\Framework\TestSize\TestSize;
 use PHPUnit\Metadata\Api\Groups;
@@ -61,31 +53,11 @@ final class PassedTests
         $this->passedTestClasses[] = $className;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    /**
-     * @throws NoDataSetFromDataProviderException
-     */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    /**
-     * @throws NoDataSetFromDataProviderException
-     */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function testMethodPassed(TestMethod $test, mixed $returnValue): void
     {
         $size = (new Groups)->size(
             $test->className(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $test->methodName(),
-=======
-            $test->methodName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $test->methodName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->passedTestMethods[$test->className() . '::' . $test->methodName()] = [
@@ -98,28 +70,12 @@ final class PassedTests
     {
         $this->passedTestClasses = array_merge(
             $this->passedTestClasses,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $other->passedTestClasses,
-=======
-            $other->passedTestClasses
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $other->passedTestClasses
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->passedTestMethods = array_merge(
             $this->passedTestMethods,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $other->passedTestMethods,
-=======
-            $other->passedTestMethods
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $other->passedTestMethods
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

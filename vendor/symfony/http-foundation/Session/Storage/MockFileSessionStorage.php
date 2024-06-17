@@ -30,15 +30,7 @@ class MockFileSessionStorage extends MockArraySessionStorage
     /**
      * @param string|null $savePath Path of directory to save session files
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $savePath = null, string $name = 'MOCKSESSID', ?MetadataBag $metaBag = null)
-=======
-    public function __construct(string $savePath = null, string $name = 'MOCKSESSID', MetadataBag $metaBag = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $savePath = null, string $name = 'MOCKSESSID', MetadataBag $metaBag = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $savePath ??= sys_get_temp_dir();
 
@@ -68,15 +60,7 @@ class MockFileSessionStorage extends MockArraySessionStorage
         return true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function regenerate(bool $destroy = false, ?int $lifetime = null): bool
-=======
-    public function regenerate(bool $destroy = false, int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function regenerate(bool $destroy = false, int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$this->started) {
             $this->start();
@@ -89,15 +73,9 @@ class MockFileSessionStorage extends MockArraySessionStorage
         return parent::regenerate($destroy, $lifetime);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function save()
     {
         if (!$this->started) {

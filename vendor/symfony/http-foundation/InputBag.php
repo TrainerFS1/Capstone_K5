@@ -12,13 +12,7 @@
 namespace Symfony\Component\HttpFoundation;
 
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Exception\UnexpectedValueException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * InputBag is a container for user input values such as $_GET, $_POST, $_REQUEST, and $_COOKIE.
@@ -50,15 +44,7 @@ final class InputBag extends ParameterBag
     /**
      * Replaces the current input values by a new set.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function replace(array $inputs = []): void
-=======
-    public function replace(array $inputs = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function replace(array $inputs = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->parameters = [];
         $this->add($inputs);
@@ -67,15 +53,7 @@ final class InputBag extends ParameterBag
     /**
      * Adds input values.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function add(array $inputs = []): void
-=======
-    public function add(array $inputs = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function add(array $inputs = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         foreach ($inputs as $input => $value) {
             $this->set($input, $value);
@@ -87,15 +65,7 @@ final class InputBag extends ParameterBag
      *
      * @param string|int|float|bool|array|null $value
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function set(string $key, mixed $value): void
-=======
-    public function set(string $key, mixed $value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function set(string $key, mixed $value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $value && !\is_scalar($value) && !\is_array($value) && !$value instanceof \Stringable) {
             throw new \InvalidArgumentException(sprintf('Expected a scalar, or an array as a 2nd argument to "%s()", "%s" given.', __METHOD__, get_debug_type($value)));
@@ -104,8 +74,6 @@ final class InputBag extends ParameterBag
         $this->parameters[$key] = $value;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * Returns the parameter value converted to an enum.
      *
@@ -134,10 +102,6 @@ final class InputBag extends ParameterBag
         return (string) $this->get($key, $default);
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function filter(string $key, mixed $default = null, int $filter = \FILTER_DEFAULT, mixed $options = []): mixed
     {
         $value = $this->has($key) ? $this->all()[$key] : $default;
@@ -155,8 +119,6 @@ final class InputBag extends ParameterBag
             throw new \InvalidArgumentException(sprintf('A Closure must be passed to "%s()" when FILTER_CALLBACK is used, "%s" given.', __METHOD__, get_debug_type($options['options'] ?? null)));
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $options['flags'] ??= 0;
         $nullOnFailure = $options['flags'] & \FILTER_NULL_ON_FAILURE;
         $options['flags'] |= \FILTER_NULL_ON_FAILURE;
@@ -174,11 +136,5 @@ final class InputBag extends ParameterBag
         trigger_deprecation('symfony/http-foundation', '6.3', 'Ignoring invalid values when using "%s::%s(\'%s\')" is deprecated and will throw a "%s" in 7.0; '.$hint.' flag "FILTER_NULL_ON_FAILURE" to keep ignoring them.', $this::class, $method, $key, BadRequestException::class);
 
         return false;
-=======
-        return filter_var($value, $filter, $options);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return filter_var($value, $filter, $options);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

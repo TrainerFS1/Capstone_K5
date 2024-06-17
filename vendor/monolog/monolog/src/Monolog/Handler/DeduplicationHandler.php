@@ -43,17 +43,7 @@ class DeduplicationHandler extends BufferHandler
     protected Level $deduplicationLevel;
 
     protected int $time;
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected bool $gc = false;
-=======
-
-    private bool $gc = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-    private bool $gc = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param HandlerInterface                       $handler            Handler.
@@ -79,24 +69,16 @@ class DeduplicationHandler extends BufferHandler
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $store = null;
 
         if (file_exists($this->deduplicationStore)) {
             $store = file($this->deduplicationStore, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $passthru = null;
 
         foreach ($this->buffer as $record) {
             if ($record->level->value >= $this->deduplicationLevel->value) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $passthru = $passthru === true || !is_array($store) || !$this->isDuplicate($store, $record);
                 if ($passthru) {
                     $line = $this->buildDeduplicationStoreEntry($record);
@@ -105,16 +87,6 @@ class DeduplicationHandler extends BufferHandler
                         $store = [];
                     }
                     $store[] = $line;
-=======
-                $passthru = $passthru === true || !$this->isDuplicate($record);
-                if ($passthru) {
-                    $this->appendRecord($record);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $passthru = $passthru === true || !$this->isDuplicate($record);
-                if ($passthru) {
-                    $this->appendRecord($record);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
         }
@@ -131,8 +103,6 @@ class DeduplicationHandler extends BufferHandler
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * If there is a store entry older than e.g. a day, this method should set `$this->gc` to `true` to trigger garbage collection.
      * @param string[] $store The deduplication store
@@ -142,27 +112,6 @@ class DeduplicationHandler extends BufferHandler
         $timestampValidity = $record->datetime->getTimestamp() - $this->time;
         $expectedMessage = preg_replace('{[\r\n].*}', '', $record->message);
         $yesterday = time() - 86400;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private function isDuplicate(LogRecord $record): bool
-    {
-        if (!file_exists($this->deduplicationStore)) {
-            return false;
-        }
-
-        $store = file($this->deduplicationStore, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-        if (!is_array($store)) {
-            return false;
-        }
-
-        $yesterday = time() - 86400;
-        $timestampValidity = $record->datetime->getTimestamp() - $this->time;
-        $expectedMessage = preg_replace('{[\r\n].*}', '', $record->message);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         for ($i = count($store) - 1; $i >= 0; $i--) {
             list($timestamp, $level, $message) = explode(':', $store[$i], 3);
@@ -179,8 +128,6 @@ class DeduplicationHandler extends BufferHandler
         return false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return string The given record serialized as a single line of text
      */
@@ -189,10 +136,6 @@ class DeduplicationHandler extends BufferHandler
         return $record->datetime->getTimestamp() . ':' . $record->level->getName() . ':' . preg_replace('{[\r\n].*}', '', $record->message);
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function collectLogs(): void
     {
         if (!file_exists($this->deduplicationStore)) {
@@ -228,18 +171,4 @@ class DeduplicationHandler extends BufferHandler
 
         $this->gc = false;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    private function appendRecord(LogRecord $record): void
-    {
-        file_put_contents($this->deduplicationStore, $record->datetime->getTimestamp() . ':' . $record->level->getName() . ':' . preg_replace('{[\r\n].*}', '', $record->message) . "\n", FILE_APPEND);
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -8,8 +8,6 @@ use Illuminate\Support\Str;
 trait HasUuids
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Initialize the trait.
      *
      * @return void
@@ -27,26 +25,6 @@ trait HasUuids
     public function uniqueIds()
     {
         return [$this->getKeyName()];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Generate a primary UUID for the model.
-     *
-     * @return void
-     */
-    public static function bootHasUuids()
-    {
-        static::creating(function (self $model) {
-            foreach ($model->uniqueIds() as $column) {
-                if (empty($model->{$column})) {
-                    $model->{$column} = $model->newUniqueId();
-                }
-            }
-        });
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -60,25 +38,6 @@ trait HasUuids
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get the columns that should receive a unique identifier.
-     *
-     * @return array
-     */
-    public function uniqueIds()
-    {
-        return [$this->getKeyName()];
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Retrieve the model for a bound value.
      *
      * @param  \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Relations\Relation  $query

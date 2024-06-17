@@ -29,29 +29,11 @@ class Specificity
     public const B_FACTOR = 10;
     public const C_FACTOR = 1;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(
         private int $a,
         private int $b,
         private int $c,
     ) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private int $a;
-    private int $b;
-    private int $c;
-
-    public function __construct(int $a, int $b, int $c)
-    {
-        $this->a = $a;
-        $this->b = $b;
-        $this->c = $c;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function plus(self $specificity): self

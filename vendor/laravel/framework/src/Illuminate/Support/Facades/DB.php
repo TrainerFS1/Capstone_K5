@@ -4,13 +4,7 @@ namespace Illuminate\Support\Facades;
 
 /**
  * @method static \Illuminate\Database\Connection connection(string|null $name = null)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Database\ConnectionInterface connectUsing(string $name, array $config, bool $force = false)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void registerDoctrineType(string $class, string $name, string $type)
  * @method static void purge(string|null $name = null)
  * @method static void disconnect(string|null $name = null)
@@ -34,27 +28,13 @@ namespace Illuminate\Support\Facades;
  * @method static void useDefaultSchemaGrammar()
  * @method static void useDefaultPostProcessor()
  * @method static \Illuminate\Database\Schema\Builder getSchemaBuilder()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Database\Query\Builder table(\Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string $table, string|null $as = null)
-=======
- * @method static \Illuminate\Database\Query\Builder table(\Closure|\Illuminate\Database\Query\Builder|string $table, string|null $as = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static \Illuminate\Database\Query\Builder table(\Closure|\Illuminate\Database\Query\Builder|string $table, string|null $as = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Database\Query\Builder query()
  * @method static mixed selectOne(string $query, array $bindings = [], bool $useReadPdo = true)
  * @method static mixed scalar(string $query, array $bindings = [], bool $useReadPdo = true)
  * @method static array selectFromWriteConnection(string $query, array $bindings = [])
  * @method static array select(string $query, array $bindings = [], bool $useReadPdo = true)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static array selectResultSets(string $query, array $bindings = [], bool $useReadPdo = true)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Generator cursor(string $query, array $bindings = [], bool $useReadPdo = true)
  * @method static bool insert(string $query, array $bindings = [])
  * @method static int update(string $query, array $bindings = [])
@@ -63,13 +43,7 @@ namespace Illuminate\Support\Facades;
  * @method static int affectingStatement(string $query, array $bindings = [])
  * @method static bool unprepared(string $query)
  * @method static array pretend(\Closure $callback)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static mixed withoutPretending(\Closure $callback)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void bindValues(\PDOStatement $statement, array $bindings)
  * @method static array prepareBindings(array $bindings)
  * @method static void logQuery(string $query, array $bindings, float|null $time = null)
@@ -78,23 +52,11 @@ namespace Illuminate\Support\Facades;
  * @method static float totalQueryDuration()
  * @method static void resetTotalQueryDuration()
  * @method static void reconnectIfMissingConnection()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Database\Connection beforeStartingTransaction(\Closure $callback)
  * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
  * @method static void listen(\Closure $callback)
  * @method static \Illuminate\Contracts\Database\Query\Expression raw(mixed $value)
  * @method static string escape(string|float|int|bool|null $value, bool $binary = false)
-=======
- * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
- * @method static void listen(\Closure $callback)
- * @method static \Illuminate\Contracts\Database\Query\Expression raw(mixed $value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
- * @method static void listen(\Closure $callback)
- * @method static \Illuminate\Contracts\Database\Query\Expression raw(mixed $value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static bool hasModifiedRecords()
  * @method static void recordsHaveBeenModified(bool $value = true)
  * @method static \Illuminate\Database\Connection setRecordModificationState(bool $value)
@@ -128,13 +90,7 @@ namespace Illuminate\Support\Facades;
  * @method static void unsetTransactionManager()
  * @method static bool pretending()
  * @method static array getQueryLog()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static array getRawQueryLog()
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void flushQueryLog()
  * @method static void enableQueryLog()
  * @method static void disableQueryLog()

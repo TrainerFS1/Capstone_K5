@@ -25,16 +25,6 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  * A test case to ease testing a translation provider.
  *
  * @author Mathieu Santostefano <msantostefano@protonmail.com>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- *
- * @internal
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- *
- * @internal
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 abstract class ProviderTestCase extends TestCase
 {
@@ -45,27 +35,12 @@ abstract class ProviderTestCase extends TestCase
     protected XliffFileDumper|MockObject $xliffFileDumper;
     protected TranslatorBagInterface|MockObject $translatorBag;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     abstract public static function createProvider(HttpClientInterface $client, LoaderInterface $loader, LoggerInterface $logger, string $defaultLocale, string $endpoint): ProviderInterface;
 
     /**
      * @return iterable<array{0: ProviderInterface, 1: string}>
      */
     abstract public static function toStringProvider(): iterable;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    abstract public function createProvider(HttpClientInterface $client, LoaderInterface $loader, LoggerInterface $logger, string $defaultLocale, string $endpoint): ProviderInterface;
-
-    /**
-     * @return iterable<array{0: string, 1: ProviderInterface}>
-     */
-    abstract public function toStringProvider(): iterable;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @dataProvider toStringProvider

@@ -6,15 +6,7 @@
 
 namespace Whoops\Handler;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Whoops\Inspector\InspectorInterface;
-=======
-use Whoops\Exception\Inspector;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Whoops\Exception\Inspector;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Whoops\RunInterface;
 
 /**
@@ -44,15 +36,7 @@ abstract class Handler implements HandlerInterface
     private $run;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var InspectorInterface $inspector
-=======
-     * @var Inspector $inspector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @var Inspector $inspector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private $inspector;
 
@@ -78,35 +62,15 @@ abstract class Handler implements HandlerInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param InspectorInterface $inspector
      */
     public function setInspector(InspectorInterface $inspector)
-=======
-     * @param Inspector $inspector
-     */
-    public function setInspector(Inspector $inspector)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param Inspector $inspector
-     */
-    public function setInspector(Inspector $inspector)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->inspector = $inspector;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return InspectorInterface
-=======
-     * @return Inspector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return Inspector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function getInspector()
     {

@@ -4,8 +4,6 @@ namespace PhpParser\Builder;
 
 use PhpParser;
 use PhpParser\BuilderHelpers;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Modifiers;
 use PhpParser\Node;
 use PhpParser\Node\Stmt;
@@ -20,26 +18,6 @@ class Method extends FunctionLike {
 
     /** @var list<Node\AttributeGroup> */
     protected array $attributeGroups = [];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use PhpParser\Node;
-use PhpParser\Node\Stmt;
-
-class Method extends FunctionLike
-{
-    protected $name;
-    protected $flags = 0;
-
-    /** @var array|null */
-    protected $stmts = [];
-
-    /** @var Node\AttributeGroup[] */
-    protected $attributeGroups = [];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Creates a method builder.
@@ -56,15 +34,7 @@ class Method extends FunctionLike
      * @return $this The builder instance (for fluid interface)
      */
     public function makePublic() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PUBLIC);
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PUBLIC);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PUBLIC);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -75,15 +45,7 @@ class Method extends FunctionLike
      * @return $this The builder instance (for fluid interface)
      */
     public function makeProtected() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PROTECTED);
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PROTECTED);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PROTECTED);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -94,15 +56,7 @@ class Method extends FunctionLike
      * @return $this The builder instance (for fluid interface)
      */
     public function makePrivate() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::PRIVATE);
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PRIVATE);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_PRIVATE);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -113,15 +67,7 @@ class Method extends FunctionLike
      * @return $this The builder instance (for fluid interface)
      */
     public function makeStatic() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::STATIC);
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_STATIC);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_STATIC);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -136,15 +82,7 @@ class Method extends FunctionLike
             throw new \LogicException('Cannot make method with statements abstract');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::ABSTRACT);
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_ABSTRACT);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->stmts = null; // abstract methods don't have statements
 
         return $this;
@@ -156,15 +94,7 @@ class Method extends FunctionLike
      * @return $this The builder instance (for fluid interface)
      */
     public function makeFinal() {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->flags = BuilderHelpers::addModifier($this->flags, Modifiers::FINAL);
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->flags = BuilderHelpers::addModifier($this->flags, Stmt\Class_::MODIFIER_FINAL);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -204,15 +134,7 @@ class Method extends FunctionLike
      *
      * @return Stmt\ClassMethod The built method node
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getNode(): Node {
-=======
-    public function getNode() : Node {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getNode() : Node {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new Stmt\ClassMethod($this->name, [
             'flags'      => $this->flags,
             'byRef'      => $this->returnByRef,

@@ -36,18 +36,8 @@ final class InlineParserEngine implements InlineParserEngineInterface
 
     /**
      * @var array<int, InlineParserInterface|string|bool>
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-var list<array{0: InlineParserInterface, 1: non-empty-string, 2: bool}>
      * @phpstan-var array<int, array{0: InlineParserInterface, 1: non-empty-string, 2: bool}>
-=======
-     * @psalm-var list<array{0: InlineParserInterface, 1: string, 2: bool}>
-     * @phpstan-var array<int, array{0: InlineParserInterface, 1: string, 2: bool}>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @psalm-var list<array{0: InlineParserInterface, 1: string, 2: bool}>
-     * @phpstan-var array<int, array{0: InlineParserInterface, 1: string, 2: bool}>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private array $parsers = [];
 
@@ -144,15 +134,7 @@ final class InlineParserEngine implements InlineParserEngineInterface
     private function matchParsers(string $contents): array
     {
         $contents    = \trim($contents);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $isMultibyte = ! \mb_check_encoding($contents, 'ASCII');
-=======
-        $isMultibyte = \mb_strlen($contents, 'UTF-8') !== \strlen($contents);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $isMultibyte = \mb_strlen($contents, 'UTF-8') !== \strlen($contents);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $ret = [];
 

@@ -19,17 +19,11 @@ final class UnableToMoveFile extends RuntimeException implements FilesystemOpera
      */
     private $destination;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function sourceAndDestinationAreTheSame(string $source, string $destination): UnableToMoveFile
     {
         return UnableToMoveFile::because('Source and destination are the same', $source, $destination);
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function source(): string
     {
         return $this->source;
@@ -43,15 +37,7 @@ final class UnableToMoveFile extends RuntimeException implements FilesystemOpera
     public static function fromLocationTo(
         string $sourcePath,
         string $destinationPath,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?Throwable $previous = null
-=======
-        Throwable $previous = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        Throwable $previous = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ): UnableToMoveFile {
         $message = $previous?->getMessage() ?? "Unable to move file from $sourcePath to $destinationPath";
         $e = new static($message, 0, $previous);
@@ -61,8 +47,6 @@ final class UnableToMoveFile extends RuntimeException implements FilesystemOpera
         return $e;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function because(
         string $reason,
         string $sourcePath,
@@ -76,10 +60,6 @@ final class UnableToMoveFile extends RuntimeException implements FilesystemOpera
         return $e;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function operation(): string
     {
         return FilesystemOperationFailed::OPERATION_MOVE;

@@ -13,27 +13,12 @@
         }
     ],
     "require": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "php": "^8.0 || ^7.4",
         "ext-json": "*",
         "ext-tokenizer": "*",
         "nikic/php-parser": "^5.0 || ^4.0",
         "symfony/console": "^7.0 || ^6.0 || ^5.0 || ^4.0 || ^3.4",
         "symfony/var-dumper": "^7.0 || ^6.0 || ^5.0 || ^4.0 || ^3.4"
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        "php": "^8.0 || ^7.0.8",
-        "ext-json": "*",
-        "ext-tokenizer": "*",
-        "symfony/console": "^6.0 || ^5.0 || ^4.0 || ^3.4",
-        "symfony/var-dumper": "^6.0 || ^5.0 || ^4.0 || ^3.4",
-        "nikic/php-parser": "^4.0 || ^3.1"
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.2"
@@ -41,14 +26,6 @@
     "suggest": {
         "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
         "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "ext-pdo-sqlite": "The doc command requires SQLite to work."
     },
     "autoload": {
@@ -70,19 +47,11 @@
     },
     "extra": {
         "branch-alias": {
-<<<<<<< HEAD
-<<<<<<< HEAD
             "dev-main": "0.12.x-dev"
         },
         "bamarni-bin": {
             "bin-links": false,
             "forward-command": false
-=======
-            "dev-main": "0.11.x-dev"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "dev-main": "0.11.x-dev"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     },
     "conflict": {

@@ -75,17 +75,9 @@ trait ValidatesWhenResolvedTrait
      */
     protected function failedValidation(Validator $validator)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $exception = $validator->getException();
 
         throw new $exception($validator);
-=======
-        throw new ValidationException($validator);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        throw new ValidationException($validator);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

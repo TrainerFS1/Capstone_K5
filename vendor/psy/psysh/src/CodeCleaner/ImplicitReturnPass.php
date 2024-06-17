@@ -77,8 +77,6 @@ class ImplicitReturnPass extends CodeCleanerPass
         } elseif ($last instanceof Expr && !($last instanceof Exit_)) {
             // @codeCoverageIgnoreStart
             $nodes[\count($nodes) - 1] = new Return_($last, [
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'startLine' => $last->getStartLine(),
                 'endLine'   => $last->getEndLine(),
             ]);
@@ -87,22 +85,6 @@ class ImplicitReturnPass extends CodeCleanerPass
             $nodes[\count($nodes) - 1] = new Return_($last->expr, [
                 'startLine' => $last->getStartLine(),
                 'endLine'   => $last->getEndLine(),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                'startLine' => $last->getLine(),
-                'endLine'   => $last->getLine(),
-            ]);
-        // @codeCoverageIgnoreEnd
-        } elseif ($last instanceof Expression && !($last->expr instanceof Exit_)) {
-            // For PHP Parser 4.x
-            $nodes[\count($nodes) - 1] = new Return_($last->expr, [
-                'startLine' => $last->getLine(),
-                'endLine'   => $last->getLine(),
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ]);
         } elseif ($last instanceof Namespace_) {
             $last->stmts = $this->addImplicitReturn($last->stmts);

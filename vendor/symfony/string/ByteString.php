@@ -11,13 +11,7 @@
 
 namespace Symfony\Component\String;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Random\Randomizer;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\String\Exception\ExceptionInterface;
 use Symfony\Component\String\Exception\InvalidArgumentException;
 use Symfony\Component\String\Exception\RuntimeException;
@@ -49,15 +43,7 @@ class ByteString extends AbstractString
      * Copyright (c) 2004-2020, Facebook, Inc. (https://www.facebook.com/)
      */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function fromRandom(int $length = 16, ?string $alphabet = null): self
-=======
-    public static function fromRandom(int $length = 16, string $alphabet = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function fromRandom(int $length = 16, string $alphabet = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($length <= 0) {
             throw new InvalidArgumentException(sprintf('A strictly positive length is expected, "%d" given.', $length));
@@ -70,16 +56,10 @@ class ByteString extends AbstractString
             throw new InvalidArgumentException('The length of the alphabet must in the [2^1, 2^56] range.');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (\PHP_VERSION_ID >= 80300) {
             return new static((new Randomizer())->getBytesFromString($alphabet, $length));
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $ret = '';
         while ($length > 0) {
             $urandomLength = (int) ceil(2 * $length * $bits / 8.0);
@@ -230,15 +210,7 @@ class ByteString extends AbstractString
         return '' === $this->string || preg_match('//u', $this->string);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function join(array $strings, ?string $lastGlue = null): static
-=======
-    public function join(array $strings, string $lastGlue = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function join(array $strings, string $lastGlue = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $str = clone $this;
 
@@ -269,15 +241,7 @@ class ByteString extends AbstractString
             $regexp .= 'i';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         try {
             if (false === $match($regexp, $this->string, $matches, $flags | \PREG_UNMATCHED_AS_NULL, $offset)) {
@@ -341,15 +305,7 @@ class ByteString extends AbstractString
 
         $replace = \is_array($to) || $to instanceof \Closure ? 'preg_replace_callback' : 'preg_replace';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         try {
             if (null === $string = $replace($fromRegexp, $to, $this->string)) {
@@ -381,15 +337,7 @@ class ByteString extends AbstractString
         return $str;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function slice(int $start = 0, ?int $length = null): static
-=======
-    public function slice(int $start = 0, int $length = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function slice(int $start = 0, int $length = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $str = clone $this;
         $str->string = (string) substr($this->string, $start, $length ?? \PHP_INT_MAX);
@@ -405,15 +353,7 @@ class ByteString extends AbstractString
         return $str;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function splice(string $replacement, int $start = 0, ?int $length = null): static
-=======
-    public function splice(string $replacement, int $start = 0, int $length = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function splice(string $replacement, int $start = 0, int $length = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $str = clone $this;
         $str->string = substr_replace($this->string, $replacement, $start, $length ?? \PHP_INT_MAX);
@@ -421,15 +361,7 @@ class ByteString extends AbstractString
         return $str;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function split(string $delimiter, ?int $limit = null, ?int $flags = null): array
-=======
-    public function split(string $delimiter, int $limit = null, int $flags = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function split(string $delimiter, int $limit = null, int $flags = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > $limit ??= \PHP_INT_MAX) {
             throw new InvalidArgumentException('Split limit must be a positive integer.');
@@ -475,28 +407,12 @@ class ByteString extends AbstractString
         return $str;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function toUnicodeString(?string $fromEncoding = null): UnicodeString
-=======
-    public function toUnicodeString(string $fromEncoding = null): UnicodeString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function toUnicodeString(string $fromEncoding = null): UnicodeString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return new UnicodeString($this->toCodePointString($fromEncoding)->string);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function toCodePointString(?string $fromEncoding = null): CodePointString
-=======
-    public function toCodePointString(string $fromEncoding = null): CodePointString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function toCodePointString(string $fromEncoding = null): CodePointString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $u = new CodePointString();
 
@@ -506,15 +422,7 @@ class ByteString extends AbstractString
             return $u;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         try {
             try {

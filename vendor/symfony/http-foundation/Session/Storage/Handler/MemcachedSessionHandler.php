@@ -59,43 +59,19 @@ class MemcachedSessionHandler extends AbstractSessionHandler
         return $this->memcached->quit();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function doRead(#[\SensitiveParameter] string $sessionId): string
-=======
-    protected function doRead(string $sessionId): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function doRead(string $sessionId): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->memcached->get($this->prefix.$sessionId) ?: '';
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function updateTimestamp(#[\SensitiveParameter] string $sessionId, string $data): bool
-=======
-    public function updateTimestamp(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function updateTimestamp(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->memcached->touch($this->prefix.$sessionId, $this->getCompatibleTtl());
 
         return true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function doWrite(#[\SensitiveParameter] string $sessionId, string $data): bool
-=======
-    protected function doWrite(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function doWrite(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->memcached->set($this->prefix.$sessionId, $data, $this->getCompatibleTtl());
     }
@@ -113,15 +89,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
         return $ttl;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function doDestroy(#[\SensitiveParameter] string $sessionId): bool
-=======
-    protected function doDestroy(string $sessionId): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function doDestroy(string $sessionId): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $result = $this->memcached->delete($this->prefix.$sessionId);
 

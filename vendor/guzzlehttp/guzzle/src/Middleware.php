@@ -34,24 +34,12 @@ final class Middleware
                 }
                 $cookieJar = $options['cookies'];
                 $request = $cookieJar->withCookieHeader($request);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $handler($request, $options)
                     ->then(
                         static function (ResponseInterface $response) use ($cookieJar, $request): ResponseInterface {
                             $cookieJar->extractCookies($request, $response);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             return $response;
                         }
                     );
@@ -74,13 +62,7 @@ final class Middleware
                 if (empty($options['http_errors'])) {
                     return $handler($request, $options);
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $handler($request, $options)->then(
                     static function (ResponseInterface $response) use ($request, $bodySummarizer) {
                         $code = $response->getStatusCode();
@@ -114,50 +96,22 @@ final class Middleware
                 return $handler($request, $options)->then(
                     static function ($value) use ($request, &$container, $options) {
                         $container[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
                             'request' => $request,
                             'response' => $value,
                             'error' => null,
                             'options' => $options,
                         ];
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                            'request'  => $request,
-                            'response' => $value,
-                            'error'    => null,
-                            'options'  => $options
-                        ];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return $value;
                     },
                     static function ($reason) use ($request, &$container, $options) {
                         $container[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
                             'request' => $request,
                             'response' => null,
                             'error' => $reason,
                             'options' => $options,
                         ];
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                            'request'  => $request,
-                            'response' => null,
-                            'error'    => $reason,
-                            'options'  => $options
-                        ];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return P\Create::rejectionFor($reason);
                     }
                 );
@@ -189,13 +143,7 @@ final class Middleware
                 if ($after) {
                     $after($request, $options, $response);
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $response;
             };
         };
@@ -260,26 +208,14 @@ final class Middleware
                     static function ($response) use ($logger, $request, $formatter, $logLevel): ResponseInterface {
                         $message = $formatter->format($request, $response);
                         $logger->log($logLevel, $message);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return $response;
                     },
                     static function ($reason) use ($logger, $request, $formatter): PromiseInterface {
                         $response = $reason instanceof RequestException ? $reason->getResponse() : null;
                         $message = $formatter->format($request, $response, P\Create::exceptionFor($reason));
                         $logger->error($message);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return P\Create::rejectionFor($reason);
                     }
                 );

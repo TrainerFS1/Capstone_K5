@@ -22,15 +22,7 @@ final class IsList extends Constraint
      */
     public function toString(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return 'is a list';
-=======
-        return 'is list';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return 'is list';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -54,14 +46,6 @@ final class IsList extends Constraint
      */
     protected function failureDescription(mixed $other): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->valueToTypeStringFragment($other) . $this->toString(true);
-=======
-        return 'an array ' . $this->toString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return 'an array ' . $this->toString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

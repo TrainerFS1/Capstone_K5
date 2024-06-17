@@ -17,13 +17,7 @@ use Symfony\Component\Mailer\Envelope;
 use Symfony\Component\Mailer\Exception\LogicException;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Mailer\Exception\UnexpectedResponseException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
 use Symfony\Component\Mailer\Transport\Smtp\Stream\AbstractStream;
@@ -45,22 +39,9 @@ class SmtpTransport extends AbstractTransport
     private int $pingThreshold = 100;
     private float $lastMessageTime = 0;
     private AbstractStream $stream;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private string $domain = '[127.0.0.1]';
 
     public function __construct(?AbstractStream $stream = null, ?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private string $mtaResult = '';
-    private string $domain = '[127.0.0.1]';
-
-    public function __construct(AbstractStream $stream = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         parent::__construct($dispatcher, $logger);
 
@@ -150,15 +131,7 @@ class SmtpTransport extends AbstractTransport
         return $this->domain;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function send(RawMessage $message, ?Envelope $envelope = null): ?SentMessage
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         try {
             $message = parent::send($message, $envelope);
@@ -174,19 +147,6 @@ class SmtpTransport extends AbstractTransport
             throw $e;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($this->mtaResult && $messageId = $this->parseMessageId($this->mtaResult)) {
-            $message->setMessageId($messageId);
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->checkRestartThreshold();
 
         return $message;
@@ -270,8 +230,6 @@ class SmtpTransport extends AbstractTransport
                 $this->getLogger()->debug(sprintf('Email transport "%s" stopped', __CLASS__));
                 throw $e;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
             $mtaResult = $this->executeCommand("\r\n.\r\n", [250]);
             $message->appendDebug($this->stream->getDebug());
             $this->lastMessageTime = microtime(true);
@@ -279,16 +237,6 @@ class SmtpTransport extends AbstractTransport
             if ($mtaResult && $messageId = $this->parseMessageId($mtaResult)) {
                 $message->setMessageId($messageId);
             }
-=======
-            $this->mtaResult = $this->executeCommand("\r\n.\r\n", [250]);
-            $message->appendDebug($this->stream->getDebug());
-            $this->lastMessageTime = microtime(true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->mtaResult = $this->executeCommand("\r\n.\r\n", [250]);
-            $message->appendDebug($this->stream->getDebug());
-            $this->lastMessageTime = microtime(true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (TransportExceptionInterface $e) {
             $e->appendDebug($this->stream->getDebug());
             $this->lastMessageTime = 0;
@@ -298,13 +246,7 @@ class SmtpTransport extends AbstractTransport
 
     /**
      * @internal since version 6.1, to be made private in 7.0
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @final since version 6.1, to be made private in 7.0
      */
     protected function doHeloCommand(): void
@@ -393,15 +335,7 @@ class SmtpTransport extends AbstractTransport
             $codeStr = $code ? sprintf('code "%s"', $code) : 'empty code';
             $responseStr = $response ? sprintf(', with message "%s"', trim($response)) : '';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             throw new UnexpectedResponseException(sprintf('Expected response code "%s" but got ', implode('/', $codes)).$codeStr.$responseStr.'.', $code ?: 0);
-=======
-            throw new TransportException(sprintf('Expected response code "%s" but got ', implode('/', $codes)).$codeStr.$responseStr.'.', $code ?: 0);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            throw new TransportException(sprintf('Expected response code "%s" but got ', implode('/', $codes)).$codeStr.$responseStr.'.', $code ?: 0);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -443,15 +377,9 @@ class SmtpTransport extends AbstractTransport
         throw new \BadMethodCallException('Cannot serialize '.__CLASS__);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __wakeup()
     {
         throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);

@@ -61,15 +61,7 @@ final class MemoryEfficientLongestCommonSubsequenceCalculator implements Longest
 
         return array_merge(
             $this->calculate($fromStart, $toStart),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->calculate($fromEnd, $toEnd),
-=======
-            $this->calculate($fromEnd, $toEnd)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->calculate($fromEnd, $toEnd)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -86,8 +78,6 @@ final class MemoryEfficientLongestCommonSubsequenceCalculator implements Longest
                 if ($from[$i] === $to[$j]) {
                     $current[$j + 1] = $prev[$j] + 1;
                 } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     /**
                      * @noinspection PhpConditionCanBeReplacedWithMinMaxCallInspection
                      *
@@ -98,12 +88,6 @@ final class MemoryEfficientLongestCommonSubsequenceCalculator implements Longest
                     } else {
                         $current[$j + 1] = $prev[$j + 1];
                     }
-=======
-                    $current[$j + 1] = max($current[$j], $prev[$j + 1]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $current[$j + 1] = max($current[$j], $prev[$j + 1]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
         }

@@ -96,8 +96,6 @@ trait CanBeOneOfMany
 
             $subQuery = $this->newOneOfManySubQuery(
                 $this->getOneOfManySubQuerySelectColumns(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 array_merge([$column], $previous['columns'] ?? []),
                 $aggregate,
             );
@@ -108,18 +106,6 @@ trait CanBeOneOfMany
                     $previous['subQuery'],
                     $previous['columns'],
                 );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $column, $aggregate
-            );
-
-            if (isset($previous)) {
-                $this->addOneOfManyJoinSubQuery($subQuery, $previous['subQuery'], $previous['column']);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             if (isset($closure)) {
@@ -131,32 +117,16 @@ trait CanBeOneOfMany
             }
 
             if (array_key_last($columns) == $column) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->addOneOfManyJoinSubQuery(
                     $this->query,
                     $subQuery,
                     array_merge([$column], $previous['columns'] ?? []),
                 );
-=======
-                $this->addOneOfManyJoinSubQuery($this->query, $subQuery, $column);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->addOneOfManyJoinSubQuery($this->query, $subQuery, $column);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             $previous = [
                 'subQuery' => $subQuery,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'columns' => array_merge([$column], $previous['columns'] ?? []),
-=======
-                'column' => $column,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'column' => $column,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ];
         }
 
@@ -216,25 +186,11 @@ trait CanBeOneOfMany
      * Get a new query for the related model, grouping the query by the given column, often the foreign key of the relationship.
      *
      * @param  string|array  $groupBy
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  array<string>|null  $columns
      * @param  string|null  $aggregate
      * @return \Illuminate\Database\Eloquent\Builder
      */
     protected function newOneOfManySubQuery($groupBy, $columns = null, $aggregate = null)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  string|null  $column
-     * @param  string|null  $aggregate
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    protected function newOneOfManySubQuery($groupBy, $column = null, $aggregate = null)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $subQuery = $this->query->getModel()
             ->newQuery()
@@ -244,8 +200,6 @@ trait CanBeOneOfMany
             $subQuery->groupBy($this->qualifyRelatedColumn($group));
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! is_null($columns)) {
             foreach ($columns as $key => $column) {
                 $aggregatedColumn = $subQuery->getQuery()->grammar->wrap($subQuery->qualifyColumn($column));
@@ -261,18 +215,6 @@ trait CanBeOneOfMany
         }
 
         $this->addOneOfManySubQueryConstraints($subQuery, $groupBy, $columns, $aggregate);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (! is_null($column)) {
-            $subQuery->selectRaw($aggregate.'('.$subQuery->getQuery()->grammar->wrap($subQuery->qualifyColumn($column)).') as '.$subQuery->getQuery()->grammar->wrap($column.'_aggregate'));
-        }
-
-        $this->addOneOfManySubQueryConstraints($subQuery, $groupBy, $column, $aggregate);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $subQuery;
     }
@@ -282,15 +224,7 @@ trait CanBeOneOfMany
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $parent
      * @param  \Illuminate\Database\Eloquent\Builder  $subQuery
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  array<string>  $on
-=======
-     * @param  string  $on
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $on
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     protected function addOneOfManyJoinSubQuery(Builder $parent, Builder $subQuery, $on)
@@ -299,17 +233,9 @@ trait CanBeOneOfMany
             $subQuery->applyBeforeQueryCallbacks();
 
             $parent->joinSub($subQuery, $this->relationName, function ($join) use ($on) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 foreach ($on as $onColumn) {
                     $join->on($this->qualifySubSelectColumn($onColumn.'_aggregate'), '=', $this->qualifyRelatedColumn($onColumn));
                 }
-=======
-                $join->on($this->qualifySubSelectColumn($on.'_aggregate'), '=', $this->qualifyRelatedColumn($on));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $join->on($this->qualifySubSelectColumn($on.'_aggregate'), '=', $this->qualifyRelatedColumn($on));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 $this->addOneOfManyJoinSubQueryConstraints($join, $on);
             });

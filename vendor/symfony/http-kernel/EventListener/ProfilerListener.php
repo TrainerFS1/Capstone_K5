@@ -48,15 +48,7 @@ class ProfilerListener implements EventSubscriberInterface
      * @param bool $onlyException    True if the profiler only collects data when an exception occurs, false otherwise
      * @param bool $onlyMainRequests True if the profiler only collects data when the request is the main request, false otherwise
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(Profiler $profiler, RequestStack $requestStack, ?RequestMatcherInterface $matcher = null, bool $onlyException = false, bool $onlyMainRequests = false, ?string $collectParameter = null)
-=======
-    public function __construct(Profiler $profiler, RequestStack $requestStack, RequestMatcherInterface $matcher = null, bool $onlyException = false, bool $onlyMainRequests = false, string $collectParameter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(Profiler $profiler, RequestStack $requestStack, RequestMatcherInterface $matcher = null, bool $onlyException = false, bool $onlyMainRequests = false, string $collectParameter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->profiler = $profiler;
         $this->matcher = $matcher;
@@ -71,15 +63,7 @@ class ProfilerListener implements EventSubscriberInterface
     /**
      * Handles the onKernelException event.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelException(ExceptionEvent $event): void
-=======
-    public function onKernelException(ExceptionEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelException(ExceptionEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->onlyMainRequests && !$event->isMainRequest()) {
             return;
@@ -91,15 +75,7 @@ class ProfilerListener implements EventSubscriberInterface
     /**
      * Handles the onKernelResponse event.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelResponse(ResponseEvent $event): void
-=======
-    public function onKernelResponse(ResponseEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelResponse(ResponseEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->onlyMainRequests && !$event->isMainRequest()) {
             return;
@@ -143,15 +119,7 @@ class ProfilerListener implements EventSubscriberInterface
         $this->parents[$request] = $this->requestStack->getParentRequest();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelTerminate(TerminateEvent $event): void
-=======
-    public function onKernelTerminate(TerminateEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelTerminate(TerminateEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // attach children to parents
         foreach ($this->profiles as $request) {

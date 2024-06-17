@@ -47,15 +47,7 @@ class Inflectible
         yield new Transformation(new Pattern('(analy|diagno|^ba|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$'), '\1\2sis');
         yield new Transformation(new Pattern('(tax)a$'), '\1on');
         yield new Transformation(new Pattern('(c)riteria$'), '\1riterion');
-<<<<<<< HEAD
-<<<<<<< HEAD
         yield new Transformation(new Pattern('([ti])a(?<!regatta)$'), '\1um');
-=======
-        yield new Transformation(new Pattern('([ti])a$'), '\1um');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        yield new Transformation(new Pattern('([ti])a$'), '\1um');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Transformation(new Pattern('(p)eople$'), '\1\2erson');
         yield new Transformation(new Pattern('(m)en$'), '\1an');
         yield new Transformation(new Pattern('(c)hildren$'), '\1\2hild');
@@ -101,37 +93,19 @@ class Inflectible
     public static function getIrregular(): iterable
     {
         yield new Substitution(new Word('atlas'), new Word('atlases'));
-<<<<<<< HEAD
-<<<<<<< HEAD
         yield new Substitution(new Word('axis'), new Word('axes'));
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('axe'), new Word('axes'));
         yield new Substitution(new Word('beef'), new Word('beefs'));
         yield new Substitution(new Word('blouse'), new Word('blouses'));
         yield new Substitution(new Word('brother'), new Word('brothers'));
         yield new Substitution(new Word('cafe'), new Word('cafes'));
-<<<<<<< HEAD
-<<<<<<< HEAD
         yield new Substitution(new Word('cave'), new Word('caves'));
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('chateau'), new Word('chateaux'));
         yield new Substitution(new Word('niveau'), new Word('niveaux'));
         yield new Substitution(new Word('child'), new Word('children'));
         yield new Substitution(new Word('canvas'), new Word('canvases'));
         yield new Substitution(new Word('cookie'), new Word('cookies'));
-<<<<<<< HEAD
-<<<<<<< HEAD
         yield new Substitution(new Word('brownie'), new Word('brownies'));
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('corpus'), new Word('corpuses'));
         yield new Substitution(new Word('cow'), new Word('cows'));
         yield new Substitution(new Word('criterion'), new Word('criteria'));
@@ -139,13 +113,7 @@ class Inflectible
         yield new Substitution(new Word('demo'), new Word('demos'));
         yield new Substitution(new Word('domino'), new Word('dominoes'));
         yield new Substitution(new Word('echo'), new Word('echoes'));
-<<<<<<< HEAD
-<<<<<<< HEAD
         yield new Substitution(new Word('epoch'), new Word('epochs'));
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         yield new Substitution(new Word('foot'), new Word('feet'));
         yield new Substitution(new Word('fungus'), new Word('fungi'));
         yield new Substitution(new Word('ganglion'), new Word('ganglions'));

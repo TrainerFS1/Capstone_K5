@@ -2,13 +2,7 @@
 
 namespace Illuminate\Mail;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Closure;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Mail\Mailable as MailableContract;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
@@ -259,8 +253,6 @@ class Mailer implements MailerContract, MailQueueContract
 
         $data['message'] = $this->createMessage();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->replaceEmbeddedAttachments(
             $this->renderView($view ?: $plain, $data),
             $data['message']->getSymfonyMessage()->getAttachments()
@@ -293,12 +285,6 @@ class Mailer implements MailerContract, MailQueueContract
         }
 
         return $renderedView;
-=======
-        return $this->renderView($view ?: $plain, $data);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->renderView($view ?: $plain, $data);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -374,30 +360,14 @@ class Mailer implements MailerContract, MailQueueContract
     /**
      * Parse the given view name or array.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Closure|array|string  $view
-=======
-     * @param  string|array  $view
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string|array  $view
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array
      *
      * @throws \InvalidArgumentException
      */
     protected function parseView($view)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (is_string($view) || $view instanceof Closure) {
-=======
-        if (is_string($view)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (is_string($view)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return [$view, null, null];
         }
 
@@ -450,28 +420,14 @@ class Mailer implements MailerContract, MailQueueContract
     /**
      * Render the given view.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Closure|string  $view
-=======
-     * @param  string  $view
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $view
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $data
      * @return string
      */
     protected function renderView($view, $data)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $view = value($view, $data);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $view instanceof Htmlable
                         ? $view->toHtml()
                         : $this->views->make($view, $data)->render();

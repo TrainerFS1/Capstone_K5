@@ -26,15 +26,7 @@ class UuidFactory
     private ?Uuid $timeBasedNode;
     private ?Uuid $nameBasedNamespace;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string|int $defaultClass = UuidV6::class, string|int $timeBasedClass = UuidV6::class, string|int $nameBasedClass = UuidV5::class, string|int $randomBasedClass = UuidV4::class, Uuid|string|null $timeBasedNode = null, Uuid|string|null $nameBasedNamespace = null)
-=======
-    public function __construct(string|int $defaultClass = UuidV6::class, string|int $timeBasedClass = UuidV6::class, string|int $nameBasedClass = UuidV5::class, string|int $randomBasedClass = UuidV4::class, Uuid|string $timeBasedNode = null, Uuid|string $nameBasedNamespace = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string|int $defaultClass = UuidV6::class, string|int $timeBasedClass = UuidV6::class, string|int $nameBasedClass = UuidV5::class, string|int $randomBasedClass = UuidV4::class, Uuid|string $timeBasedNode = null, Uuid|string $nameBasedNamespace = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $timeBasedNode && !$timeBasedNode instanceof Uuid) {
             $timeBasedNode = Uuid::fromString($timeBasedNode);
@@ -64,15 +56,7 @@ class UuidFactory
         return new RandomBasedUuidFactory($this->randomBasedClass);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function timeBased(Uuid|string|null $node = null): TimeBasedUuidFactory
-=======
-    public function timeBased(Uuid|string $node = null): TimeBasedUuidFactory
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function timeBased(Uuid|string $node = null): TimeBasedUuidFactory
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $node ??= $this->timeBasedNode;
 
@@ -83,15 +67,7 @@ class UuidFactory
         return new TimeBasedUuidFactory($this->timeBasedClass, $node);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function nameBased(Uuid|string|null $namespace = null): NameBasedUuidFactory
-=======
-    public function nameBased(Uuid|string $namespace = null): NameBasedUuidFactory
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function nameBased(Uuid|string $namespace = null): NameBasedUuidFactory
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $namespace ??= $this->nameBasedNamespace;
 

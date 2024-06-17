@@ -71,14 +71,8 @@ abstract class AbstractProxy
     /**
      * Sets the session ID.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \LogicException
      */
     public function setId(string $id)
@@ -101,14 +95,8 @@ abstract class AbstractProxy
     /**
      * Sets the session name.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \LogicException
      */
     public function setName(string $name)

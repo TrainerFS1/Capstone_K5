@@ -2,25 +2,11 @@
 
 namespace Spatie\Ignition\ErrorPage;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\Solution;
 use Spatie\ErrorSolutions\Solutions\SolutionTransformer;
 use Spatie\FlareClient\Report;
 use Spatie\FlareClient\Truncation\ReportTrimmer;
 use Spatie\Ignition\Config\IgnitionConfig;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use Spatie\FlareClient\Report;
-use Spatie\FlareClient\Truncation\ReportTrimmer;
-use Spatie\Ignition\Config\IgnitionConfig;
-use Spatie\Ignition\Contracts\Solution;
-use Spatie\Ignition\Solutions\SolutionTransformer;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
 
 class ErrorPageViewModel
@@ -108,30 +94,14 @@ class ErrorPageViewModel
     {
         $jsonOptions = JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return (string) json_encode($data, $jsonOptions);
-=======
-        return (string)json_encode($data, $jsonOptions);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return (string)json_encode($data, $jsonOptions);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getAssetContents(string $asset): string
     {
         $assetPath = __DIR__."/../../resources/compiled/{$asset}";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return (string) file_get_contents($assetPath);
-=======
-        return (string)file_get_contents($assetPath);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return (string)file_get_contents($assetPath);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -145,15 +115,7 @@ class ErrorPageViewModel
     public function updateConfigEndpoint(): string
     {
         // TODO: Should be based on Ignition config
-<<<<<<< HEAD
-<<<<<<< HEAD
         return '/_ignition/update-config';
-=======
-        return  '/_ignition/update-config';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return  '/_ignition/update-config';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function customHtmlHead(): string

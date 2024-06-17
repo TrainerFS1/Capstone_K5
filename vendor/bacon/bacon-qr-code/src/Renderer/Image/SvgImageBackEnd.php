@@ -19,8 +19,6 @@ use XMLWriter;
 final class SvgImageBackEnd implements ImageBackEndInterface
 {
     private const PRECISION = 3;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private const SCALE_FORMAT = 'scale(%.' . self::PRECISION . 'F)';
     private const TRANSLATE_FORMAT = 'translate(%.' . self::PRECISION . 'F,%.' . self::PRECISION . 'F)';
 
@@ -31,33 +29,6 @@ final class SvgImageBackEnd implements ImageBackEndInterface
     private ?int $currentStack;
 
     private ?int $gradientCount;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * @var XMLWriter|null
-     */
-    private $xmlWriter;
-
-    /**
-     * @var int[]|null
-     */
-    private $stack;
-
-    /**
-     * @var int|null
-     */
-    private $currentStack;
-
-    /**
-     * @var int|null
-     */
-    private $gradientCount;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct()
     {
@@ -116,15 +87,7 @@ final class SvgImageBackEnd implements ImageBackEndInterface
         $this->xmlWriter->startElement('g');
         $this->xmlWriter->writeAttribute(
             'transform',
-<<<<<<< HEAD
-<<<<<<< HEAD
             sprintf(self::SCALE_FORMAT, round($size, self::PRECISION))
-=======
-            sprintf('scale(%s)', round($size, self::PRECISION))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            sprintf('scale(%s)', round($size, self::PRECISION))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
         ++$this->stack[$this->currentStack];
     }
@@ -138,15 +101,7 @@ final class SvgImageBackEnd implements ImageBackEndInterface
         $this->xmlWriter->startElement('g');
         $this->xmlWriter->writeAttribute(
             'transform',
-<<<<<<< HEAD
-<<<<<<< HEAD
             sprintf(self::TRANSLATE_FORMAT, round($x, self::PRECISION), round($y, self::PRECISION))
-=======
-            sprintf('translate(%s,%s)', round($x, self::PRECISION), round($y, self::PRECISION))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            sprintf('translate(%s,%s)', round($x, self::PRECISION), round($y, self::PRECISION))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
         ++$this->stack[$this->currentStack];
     }

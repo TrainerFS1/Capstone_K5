@@ -31,13 +31,7 @@ use Illuminate\Support\Testing\Fakes\QueueFake;
  * @method static \Illuminate\Contracts\Queue\Job|null pop(string|null $queue = null)
  * @method static string getConnectionName()
  * @method static \Illuminate\Contracts\Queue\Queue setConnectionName(string $name)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static mixed getJobTries(mixed $job)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static mixed getJobBackoff(mixed $job)
  * @method static mixed getJobExpiration(mixed $job)
  * @method static void createPayloadUsing(callable|null $callback)
@@ -51,25 +45,13 @@ use Illuminate\Support\Testing\Fakes\QueueFake;
  * @method static void assertClosurePushed(callable|int|null $callback = null)
  * @method static void assertClosureNotPushed(callable|null $callback = null)
  * @method static void assertNotPushed(string|\Closure $job, callable|null $callback = null)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static void assertCount(int $expectedCount)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static void assertNothingPushed()
  * @method static \Illuminate\Support\Collection pushed(string $job, callable|null $callback = null)
  * @method static bool hasPushed(string $job)
  * @method static bool shouldFakeJob(object $job)
  * @method static array pushedJobs()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Support\Testing\Fakes\QueueFake serializeAndRestore(bool $serializeAndRestore = true)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @see \Illuminate\Queue\QueueManager
  * @see \Illuminate\Queue\Queue
@@ -97,8 +79,6 @@ class Queue extends Facade
      */
     public static function fake($jobsToFake = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $actualQueueManager = static::isFake()
                 ? static::getFacadeRoot()->queue
                 : static::getFacadeRoot();
@@ -106,16 +86,6 @@ class Queue extends Facade
         return tap(new QueueFake(static::getFacadeApplication(), $jobsToFake, $actualQueueManager), function ($fake) {
             static::swap($fake);
         });
-=======
-        static::swap($fake = new QueueFake(static::getFacadeApplication(), $jobsToFake, static::getFacadeRoot()));
-
-        return $fake;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        static::swap($fake = new QueueFake(static::getFacadeApplication(), $jobsToFake, static::getFacadeRoot()));
-
-        return $fake;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

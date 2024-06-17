@@ -54,14 +54,6 @@ trait AssertsStatusCodes
     /**
      * Assert that the response has a 301 "Moved Permanently" status code.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @param  int  $status
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  int  $status
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function assertMovedPermanently()
@@ -72,14 +64,6 @@ trait AssertsStatusCodes
     /**
      * Assert that the response has a 302 "Found" status code.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @param  int  $status
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  int  $status
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function assertFound()
@@ -88,8 +72,6 @@ trait AssertsStatusCodes
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Assert that the response has a 304 "Not Modified" status code.
      *
      * @return $this
@@ -120,10 +102,6 @@ trait AssertsStatusCodes
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert that the response has a 400 "Bad Request" status code.
      *
      * @return $this
@@ -174,8 +152,6 @@ trait AssertsStatusCodes
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Assert that the response has a 405 "Method Not Allowed" status code.
      *
      * @return $this
@@ -196,10 +172,6 @@ trait AssertsStatusCodes
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert that the response has a 408 "Request Timeout" status code.
      *
      * @return $this
@@ -220,8 +192,6 @@ trait AssertsStatusCodes
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Assert that the response has a 410 "Gone" status code.
      *
      * @return $this
@@ -242,10 +212,6 @@ trait AssertsStatusCodes
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Assert that the response has a 422 "Unprocessable Entity" status code.
      *
      * @return $this
@@ -264,8 +230,6 @@ trait AssertsStatusCodes
     {
         return $this->assertStatus(429);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Assert that the response has a 500 "Internal Server Error" status code.
@@ -286,8 +250,4 @@ trait AssertsStatusCodes
     {
         return $this->assertStatus(503);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

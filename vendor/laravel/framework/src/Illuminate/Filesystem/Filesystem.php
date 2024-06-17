@@ -16,17 +16,7 @@ use Symfony\Component\Mime\MimeTypes;
 
 class Filesystem
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use Conditionable, Macroable;
-=======
-    use Conditionable;
-    use Macroable;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    use Conditionable;
-    use Macroable;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Determine if a file or directory exists.
@@ -69,8 +59,6 @@ class Filesystem
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the contents of a file as decoded JSON.
      *
      * @param  string  $path
@@ -86,10 +74,6 @@ class Filesystem
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get contents of a file with shared access.
      *
      * @param  string  $path
@@ -283,26 +267,12 @@ class Filesystem
      *
      * @param  string  $path
      * @param  string  $data
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  bool  $lock
      * @return int
      */
     public function append($path, $data, $lock = false)
     {
         return file_put_contents($path, $data, FILE_APPEND | ($lock ? LOCK_EX : 0));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return int
-     */
-    public function append($path, $data)
-    {
-        return file_put_contents($path, $data, FILE_APPEND);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -377,15 +347,7 @@ class Filesystem
      *
      * @param  string  $target
      * @param  string  $link
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return bool|null
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function link($target, $link)
     {
@@ -583,15 +545,7 @@ class Filesystem
     {
         $hash = @md5_file($firstFile);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $hash && hash_equals($hash, (string) @md5_file($secondFile));
-=======
-        return $hash && $hash === @md5_file($secondFile);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $hash && $hash === @md5_file($secondFile);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -795,14 +749,8 @@ class Filesystem
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         unset($items);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! $preserve) {
             @rmdir($directory);
         }

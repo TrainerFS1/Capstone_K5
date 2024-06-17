@@ -152,8 +152,6 @@ class Uuid extends AbstractUid
         return uuid_parse($this->uid);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * Returns the identifier as a RFC4122 case insensitive string.
      *
@@ -161,10 +159,6 @@ class Uuid extends AbstractUid
      *
      * @example 09748193-048a-4bfb-b825-8528cf74fdc1 (len=36)
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function toRfc4122(): string
     {
         return $this->uid;

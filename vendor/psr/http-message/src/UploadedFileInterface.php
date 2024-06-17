@@ -28,15 +28,7 @@ interface UploadedFileInterface
      * @throws \RuntimeException in cases when no stream is available or can be
      *     created.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getStream(): StreamInterface;
-=======
-    public function getStream();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getStream();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Move the uploaded file to a new location.
@@ -70,15 +62,7 @@ interface UploadedFileInterface
      * @throws \RuntimeException on any error during the move operation, or on
      *     the second or subsequent call to the method.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function moveTo(string $targetPath): void;
-=======
-    public function moveTo($targetPath);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function moveTo($targetPath);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     
     /**
      * Retrieve the file size.
@@ -89,15 +73,7 @@ interface UploadedFileInterface
      *
      * @return int|null The file size in bytes or null if unknown.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getSize(): ?int;
-=======
-    public function getSize();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getSize();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     
     /**
      * Retrieve the error associated with the uploaded file.
@@ -113,15 +89,7 @@ interface UploadedFileInterface
      * @see http://php.net/manual/en/features.file-upload.errors.php
      * @return int One of PHP's UPLOAD_ERR_XXX constants.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getError(): int;
-=======
-    public function getError();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getError();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     
     /**
      * Retrieve the filename sent by the client.
@@ -136,15 +104,7 @@ interface UploadedFileInterface
      * @return string|null The filename sent by the client or null if none
      *     was provided.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getClientFilename(): ?string;
-=======
-    public function getClientFilename();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getClientFilename();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     
     /**
      * Retrieve the media type sent by the client.
@@ -159,13 +119,5 @@ interface UploadedFileInterface
      * @return string|null The media type sent by the client or null if none
      *     was provided.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getClientMediaType(): ?string;
-=======
-    public function getClientMediaType();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getClientMediaType();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

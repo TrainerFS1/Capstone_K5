@@ -57,15 +57,7 @@ class GithubActionReporter
      *
      * @see https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-error-message
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function error(string $message, ?string $file = null, ?int $line = null, ?int $col = null): void
-=======
-    public function error(string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function error(string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->log('error', $message, $file, $line, $col);
     }
@@ -75,15 +67,7 @@ class GithubActionReporter
      *
      * @see https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function warning(string $message, ?string $file = null, ?int $line = null, ?int $col = null): void
-=======
-    public function warning(string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function warning(string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->log('warning', $message, $file, $line, $col);
     }
@@ -93,28 +77,12 @@ class GithubActionReporter
      *
      * @see https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-a-debug-message
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function debug(string $message, ?string $file = null, ?int $line = null, ?int $col = null): void
-=======
-    public function debug(string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function debug(string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->log('debug', $message, $file, $line, $col);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function log(string $type, string $message, ?string $file = null, ?int $line = null, ?int $col = null): void
-=======
-    private function log(string $type, string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function log(string $type, string $message, string $file = null, int $line = null, int $col = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // Some values must be encoded.
         $message = strtr($message, self::ESCAPED_DATA);

@@ -13,14 +13,6 @@
             </h2>
         </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     <div class="exception-message-wrapper">
         <div class="container">
             <h1 class="break-long-words exception-message<?= mb_strlen($exceptionMessage) > 180 ? ' long' : ''; ?>"><?= $this->formatFileFromText(nl2br($exceptionMessage)); ?></h1>

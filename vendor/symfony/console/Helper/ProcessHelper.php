@@ -32,15 +32,7 @@ class ProcessHelper extends Helper
      * @param callable|null $callback A PHP callback to run whenever there is some
      *                                output available on STDOUT or STDERR
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function run(OutputInterface $output, array|Process $cmd, ?string $error = null, ?callable $callback = null, int $verbosity = OutputInterface::VERBOSITY_VERY_VERBOSE): Process
-=======
-    public function run(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null, int $verbosity = OutputInterface::VERBOSITY_VERY_VERBOSE): Process
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function run(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null, int $verbosity = OutputInterface::VERBOSITY_VERY_VERBOSE): Process
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!class_exists(Process::class)) {
             throw new \LogicException('The ProcessHelper cannot be run as the Process component is not installed. Try running "compose require symfony/process".');
@@ -102,15 +94,7 @@ class ProcessHelper extends Helper
      *
      * @see run()
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function mustRun(OutputInterface $output, array|Process $cmd, ?string $error = null, ?callable $callback = null): Process
-=======
-    public function mustRun(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null): Process
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function mustRun(OutputInterface $output, array|Process $cmd, string $error = null, callable $callback = null): Process
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $process = $this->run($output, $cmd, $error, $callback);
 
@@ -124,15 +108,7 @@ class ProcessHelper extends Helper
     /**
      * Wraps a Process callback to add debugging output.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function wrapCallback(OutputInterface $output, Process $process, ?callable $callback = null): callable
-=======
-    public function wrapCallback(OutputInterface $output, Process $process, callable $callback = null): callable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function wrapCallback(OutputInterface $output, Process $process, callable $callback = null): callable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($output instanceof ConsoleOutputInterface) {
             $output = $output->getErrorOutput();

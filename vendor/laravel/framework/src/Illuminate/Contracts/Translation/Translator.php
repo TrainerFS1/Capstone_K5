@@ -18,15 +18,7 @@ interface Translator
      * Get a translation according to an integer value.
      *
      * @param  string  $key
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Countable|int|float|array  $number
-=======
-     * @param  \Countable|int|array  $number
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Countable|int|array  $number
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $replace
      * @param  string|null  $locale
      * @return string

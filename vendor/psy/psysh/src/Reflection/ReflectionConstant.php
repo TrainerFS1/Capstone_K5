@@ -12,8 +12,6 @@
 namespace Psy\Reflection;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Somehow the standard reflection library doesn't include constants.
  *
  * ReflectionConstant corrects that omission.
@@ -168,26 +166,5 @@ class ReflectionConstant implements \Reflector
     public function getEndLine()
     {
         return $this->getStartLine();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @deprecated ReflectionConstant is now ReflectionClassConstant. This class
- *             name will be reclaimed in the next stable release, to be used for
- *             ReflectionConstant_ :)
- */
-class ReflectionConstant extends ReflectionClassConstant
-{
-    /**
-     * {inheritDoc}.
-     */
-    public function __construct($class, $name)
-    {
-        @\trigger_error('ReflectionConstant is now ReflectionClassConstant', \E_USER_DEPRECATED);
-
-        parent::__construct($class, $name);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

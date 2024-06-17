@@ -4,13 +4,7 @@ namespace Illuminate\Validation;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Macroable;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Validation\Rules\Can;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Validation\Rules\Dimensions;
 use Illuminate\Validation\Rules\Enum;
 use Illuminate\Validation\Rules\ExcludeIf;
@@ -28,8 +22,6 @@ class Rule
     use Macroable;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get a can constraint builder instance.
      *
      * @param  string  $ability
@@ -47,18 +39,6 @@ class Rule
      * @param  callable|bool  $condition
      * @param  \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule|\Illuminate\Contracts\Validation\Rule|\Closure|array|string  $rules
      * @param  \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule|\Illuminate\Contracts\Validation\Rule|\Closure|array|string  $defaultRules
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Create a new conditional rule set.
-     *
-     * @param  callable|bool  $condition
-     * @param  array|string|\Closure  $rules
-     * @param  array|string|\Closure  $defaultRules
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Illuminate\Validation\ConditionalRules
      */
     public static function when($condition, $rules, $defaultRules = [])
@@ -67,8 +47,6 @@ class Rule
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Apply the given rules if the given condition is falsy.
      *
      * @param  callable|bool  $condition
@@ -82,10 +60,6 @@ class Rule
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new nested rule set.
      *
      * @param  callable  $callback

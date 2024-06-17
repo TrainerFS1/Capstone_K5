@@ -85,15 +85,7 @@ class FilterOptions
      * @param string $string
      * @param array  $matches
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function match(string $string, ?array &$matches = null): bool
-=======
-    public function match(string $string, array &$matches = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function match(string $string, array &$matches = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->filter === false || (\preg_match($this->pattern, $string, $matches) xor $this->invert);
     }

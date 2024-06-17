@@ -13,8 +13,6 @@ return [
     'home' => '/home',
     'prefix' => '',
     'domain' => null,
-<<<<<<< HEAD
-<<<<<<< HEAD
     'lowercase_usernames' => false,
     'limiters' => [
         'login' => null,
@@ -52,16 +50,6 @@ return [
             'recovery-codes' => null,
         ],
     ],
-=======
-    'limiters' => [
-        'login' => null,
-    ],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    'limiters' => [
-        'login' => null,
-    ],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'redirects' => [
         'login' => null,
         'logout' => null,

@@ -6,8 +6,6 @@ use PhpParser\Node;
 use PhpParser\Node\Expr;
 use PhpParser\Node\FunctionLike;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ArrowFunction extends Expr implements FunctionLike {
     /** @var bool Whether the closure is static */
     public bool $static;
@@ -44,64 +42,15 @@ class ArrowFunction extends Expr implements FunctionLike {
      * @param array<string, mixed> $attributes Additional attributes
      */
     public function __construct(array $subNodes, array $attributes = []) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-class ArrowFunction extends Expr implements FunctionLike
-{
-    /** @var bool */
-    public $static;
-
-    /** @var bool */
-    public $byRef;
-
-    /** @var Node\Param[] */
-    public $params = [];
-
-    /** @var null|Node\Identifier|Node\Name|Node\ComplexType */
-    public $returnType;
-
-    /** @var Expr */
-    public $expr;
-    /** @var Node\AttributeGroup[] */
-    public $attrGroups;
-
-    /**
-     * @param array $subNodes   Array of the following optional subnodes:
-     *                          'static'     => false   : Whether the closure is static
-     *                          'byRef'      => false   : Whether to return by reference
-     *                          'params'     => array() : Parameters
-     *                          'returnType' => null    : Return type
-     *                          'expr'       => Expr    : Expression body
-     *                          'attrGroups' => array() : PHP attribute groups
-     * @param array $attributes Additional attributes
-     */
-    public function __construct(array $subNodes = [], array $attributes = []) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->attributes = $attributes;
         $this->static = $subNodes['static'] ?? false;
         $this->byRef = $subNodes['byRef'] ?? false;
         $this->params = $subNodes['params'] ?? [];
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->returnType = $subNodes['returnType'] ?? null;
-=======
-        $returnType = $subNodes['returnType'] ?? null;
-        $this->returnType = \is_string($returnType) ? new Node\Identifier($returnType) : $returnType;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $returnType = $subNodes['returnType'] ?? null;
-        $this->returnType = \is_string($returnType) ? new Node\Identifier($returnType) : $returnType;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->expr = $subNodes['expr'];
         $this->attrGroups = $subNodes['attrGroups'] ?? [];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['attrGroups', 'static', 'byRef', 'params', 'returnType', 'expr'];
     }
@@ -111,22 +60,6 @@ class ArrowFunction extends Expr implements FunctionLike
     }
 
     public function getParams(): array {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function getSubNodeNames() : array {
-        return ['attrGroups', 'static', 'byRef', 'params', 'returnType', 'expr'];
-    }
-
-    public function returnsByRef() : bool {
-        return $this->byRef;
-    }
-
-    public function getParams() : array {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->params;
     }
 
@@ -134,40 +67,18 @@ class ArrowFunction extends Expr implements FunctionLike
         return $this->returnType;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getAttrGroups(): array {
-=======
-    public function getAttrGroups() : array {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getAttrGroups() : array {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->attrGroups;
     }
 
     /**
      * @return Node\Stmt\Return_[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getStmts(): array {
         return [new Node\Stmt\Return_($this->expr)];
     }
 
     public function getType(): string {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function getStmts() : array {
-        return [new Node\Stmt\Return_($this->expr)];
-    }
-
-    public function getType() : string {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Expr_ArrowFunction';
     }
 }

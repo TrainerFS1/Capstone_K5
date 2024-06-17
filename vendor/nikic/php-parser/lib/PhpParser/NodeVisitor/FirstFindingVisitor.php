@@ -3,41 +3,18 @@
 namespace PhpParser\NodeVisitor;
 
 use PhpParser\Node;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\NodeVisitor;
-=======
-use PhpParser\NodeTraverser;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PhpParser\NodeTraverser;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\NodeVisitorAbstract;
 
 /**
  * This visitor can be used to find the first node satisfying some criterion determined by
  * a filter callback.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 class FirstFindingVisitor extends NodeVisitorAbstract {
     /** @var callable Filter callback */
     protected $filterCallback;
     /** @var null|Node Found node */
     protected ?Node $foundNode;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-class FirstFindingVisitor extends NodeVisitorAbstract
-{
-    /** @var callable Filter callback */
-    protected $filterCallback;
-    /** @var null|Node Found node */
-    protected $foundNode;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(callable $filterCallback) {
         $this->filterCallback = $filterCallback;
@@ -50,25 +27,11 @@ class FirstFindingVisitor extends NodeVisitorAbstract
      *
      * @return null|Node Found node (or null if not found)
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getFoundNode(): ?Node {
         return $this->foundNode;
     }
 
     public function beforeTraverse(array $nodes): ?array {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function getFoundNode() {
-        return $this->foundNode;
-    }
-
-    public function beforeTraverse(array $nodes) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->foundNode = null;
 
         return null;
@@ -78,15 +41,7 @@ class FirstFindingVisitor extends NodeVisitorAbstract
         $filterCallback = $this->filterCallback;
         if ($filterCallback($node)) {
             $this->foundNode = $node;
-<<<<<<< HEAD
-<<<<<<< HEAD
             return NodeVisitor::STOP_TRAVERSAL;
-=======
-            return NodeTraverser::STOP_TRAVERSAL;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return NodeTraverser::STOP_TRAVERSAL;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return null;

@@ -31,15 +31,7 @@
     "require-dev": {
         "ext-json": "*",
         "cebe/markdown": "^1.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "commonmark/cmark": "0.30.3",
-=======
-        "commonmark/cmark": "0.30.0",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "commonmark/cmark": "0.30.0",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "commonmark/commonmark.js": "0.30.0",
         "composer/package-versions-deprecated": "^1.8",
         "embed/embed": "^4.4",
@@ -48,23 +40,10 @@
         "michelf/php-markdown": "^1.4 || ^2.0",
         "nyholm/psr7": "^1.5",
         "phpstan/phpstan": "^1.8.2",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "phpunit/phpunit": "^9.5.21 || ^10.5.9 || ^11.0.0",
         "scrutinizer/ocular": "^1.8.1",
         "symfony/finder": "^5.3 | ^6.0 || ^7.0",
         "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 || ^7.0",
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        "phpunit/phpunit": "^9.5.21",
-        "scrutinizer/ocular": "^1.8.1",
-        "symfony/finder": "^5.3 | ^6.0",
-        "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0",
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "unleashedtech/php-coding-standard": "^3.1.1",
         "vimeo/psalm": "^4.24.0 || ^5.0.0"
     },
@@ -88,21 +67,9 @@
             "type": "package",
             "package": {
                 "name": "commonmark/cmark",
-<<<<<<< HEAD
-<<<<<<< HEAD
                 "version": "0.30.3",
                 "dist": {
                     "url": "https://github.com/commonmark/cmark/archive/0.30.3.zip",
-=======
-                "version": "0.30.0",
-                "dist": {
-                    "url": "https://github.com/commonmark/cmark/archive/0.30.0.zip",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                "version": "0.30.0",
-                "dist": {
-                    "url": "https://github.com/commonmark/cmark/archive/0.30.0.zip",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     "type": "zip"
                 }
             }
@@ -113,15 +80,7 @@
                 "name": "github/gfm",
                 "version": "0.29.0",
                 "dist": {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     "url": "https://github.com/github/cmark-gfm/archive/0.29.0.gfm.13.zip",
-=======
-                    "url": "https://github.com/github/cmark-gfm/archive/0.29.0.gfm.0.zip",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    "url": "https://github.com/github/cmark-gfm/archive/0.29.0.gfm.0.zip",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     "type": "zip"
                 }
             }
@@ -153,15 +112,7 @@
     },
     "extra": {
         "branch-alias": {
-<<<<<<< HEAD
-<<<<<<< HEAD
             "dev-main": "2.5-dev"
-=======
-            "dev-main": "2.4-dev"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "dev-main": "2.4-dev"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     },
     "config": {

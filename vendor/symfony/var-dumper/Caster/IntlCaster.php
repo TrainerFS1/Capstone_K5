@@ -21,15 +21,9 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class IntlCaster
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castMessageFormatter(\MessageFormatter $c, array $a, Stub $stub, bool $isNested)
     {
         $a += [
@@ -40,15 +34,9 @@ class IntlCaster
         return self::castError($c, $a);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castNumberFormatter(\NumberFormatter $c, array $a, Stub $stub, bool $isNested, int $filter = 0)
     {
         $a += [
@@ -126,15 +114,9 @@ class IntlCaster
         return self::castError($c, $a);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castIntlTimeZone(\IntlTimeZone $c, array $a, Stub $stub, bool $isNested)
     {
         $a += [
@@ -152,15 +134,9 @@ class IntlCaster
         return self::castError($c, $a);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castIntlCalendar(\IntlCalendar $c, array $a, Stub $stub, bool $isNested, int $filter = 0)
     {
         $a += [
@@ -178,15 +154,9 @@ class IntlCaster
         return self::castError($c, $a);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castIntlDateFormatter(\IntlDateFormatter $c, array $a, Stub $stub, bool $isNested, int $filter = 0)
     {
         $a += [

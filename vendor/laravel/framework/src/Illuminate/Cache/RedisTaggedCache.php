@@ -14,8 +14,6 @@ class RedisTaggedCache extends TaggedCache
      */
     public function add($key, $value, $ttl = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $seconds = null;
 
         if ($ttl !== null) {
@@ -28,17 +26,6 @@ class RedisTaggedCache extends TaggedCache
                 );
             }
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->tags->addEntry(
-            $this->itemKey($key),
-            ! is_null($ttl) ? $this->getSeconds($ttl) : 0
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return parent::add($key, $value, $ttl);
     }
@@ -57,8 +44,6 @@ class RedisTaggedCache extends TaggedCache
             return $this->forever($key, $value);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $seconds = $this->getSeconds($ttl);
 
         if ($seconds > 0) {
@@ -67,17 +52,6 @@ class RedisTaggedCache extends TaggedCache
                 $seconds
             );
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->tags->addEntry(
-            $this->itemKey($key),
-            $this->getSeconds($ttl)
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return parent::put($key, $value, $ttl);
     }

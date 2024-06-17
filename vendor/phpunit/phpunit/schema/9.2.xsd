@@ -163,15 +163,7 @@
     </xs:group>
     <xs:complexType name="directoryFilterType">
         <xs:simpleContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <xs:extension base="xs:anyURI">
-=======
-            <xs:extension base="xs:string">
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            <xs:extension base="xs:string">
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 <xs:attribute type="xs:string" name="prefix" default=""/>
                 <xs:attribute type="xs:string" name="suffix" default="Test.php"/>
                 <xs:attributeGroup ref="phpVersionGroup"/>
@@ -256,15 +248,7 @@
         <xs:attribute name="convertWarningsToExceptions" type="xs:boolean" default="true"/>
         <xs:attribute name="disableCodeCoverageIgnore" type="xs:boolean" default="false"/>
         <xs:attribute name="forceCoversAnnotation" type="xs:boolean" default="false"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <xs:attribute name="printerClass" type="xs:string" default="PHPUnit\TextUI\DefaultResultPrinter"/>
-=======
-        <xs:attribute name="printerClass" type="xs:string" default="PHPUnit\TextUI\ResultPrinter"/>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        <xs:attribute name="printerClass" type="xs:string" default="PHPUnit\TextUI\ResultPrinter"/>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         <xs:attribute name="printerFile" type="xs:anyURI"/>
         <xs:attribute name="processIsolation" type="xs:boolean" default="false"/>
         <xs:attribute name="stopOnDefect" type="xs:boolean" default="false"/>
@@ -298,15 +282,7 @@
         <xs:attribute name="stderr" type="xs:boolean" default="false"/>
         <xs:attribute name="reverseDefectList" type="xs:boolean" default="false"/>
         <xs:attribute name="registerMockObjectsFromTestArgumentsRecursively" type="xs:boolean" default="false"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <xs:attribute name="extensionsDirectory" type="xs:string"/>
-=======
-        <xs:attribute name="extensionsDirectory" type="xs:anyURI"/>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        <xs:attribute name="extensionsDirectory" type="xs:anyURI"/>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         <xs:attribute name="executionOrder" type="executionOrderType" default="default"/>
         <xs:attribute name="resolveDependencies" type="xs:boolean" default="true"/>
         <xs:attribute name="noInteraction" type="xs:boolean" default="false"/>
@@ -334,15 +310,7 @@
     <xs:complexType name="testSuiteType">
         <xs:sequence>
             <xs:group ref="pathGroup"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <xs:element name="exclude" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-=======
-            <xs:element name="exclude" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            <xs:element name="exclude" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         </xs:sequence>
         <xs:attribute name="name" type="xs:string" use="required"/>
     </xs:complexType>

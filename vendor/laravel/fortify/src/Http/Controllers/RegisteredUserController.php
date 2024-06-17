@@ -6,23 +6,11 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Contracts\RegisterViewResponse;
 use Laravel\Fortify\Fortify;
-=======
-use Laravel\Fortify\Contracts\CreatesNewUsers;
-use Laravel\Fortify\Contracts\RegisterResponse;
-use Laravel\Fortify\Contracts\RegisterViewResponse;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Laravel\Fortify\Contracts\CreatesNewUsers;
-use Laravel\Fortify\Contracts\RegisterResponse;
-use Laravel\Fortify\Contracts\RegisterViewResponse;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class RegisteredUserController extends Controller
 {
@@ -65,18 +53,12 @@ class RegisteredUserController extends Controller
     public function store(Request $request,
                           CreatesNewUsers $creator): RegisterResponse
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (config('fortify.lowercase_usernames')) {
             $request->merge([
                 Fortify::username() => Str::lower($request->{Fortify::username()}),
             ]);
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         event(new Registered($user = $creator->create($request->all())));
 
         $this->guard->login($user);

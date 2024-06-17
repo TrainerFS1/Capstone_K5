@@ -24,67 +24,27 @@ final class UnableToRetrieveMetadata extends RuntimeException implements Filesys
      */
     private $reason;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function lastModified(string $location, string $reason = '', ?Throwable $previous = null): self
-=======
-    public static function lastModified(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function lastModified(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return static::create($location, FileAttributes::ATTRIBUTE_LAST_MODIFIED, $reason, $previous);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function visibility(string $location, string $reason = '', ?Throwable $previous = null): self
-=======
-    public static function visibility(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function visibility(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return static::create($location, FileAttributes::ATTRIBUTE_VISIBILITY, $reason, $previous);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function fileSize(string $location, string $reason = '', ?Throwable $previous = null): self
-=======
-    public static function fileSize(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function fileSize(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return static::create($location, FileAttributes::ATTRIBUTE_FILE_SIZE, $reason, $previous);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function mimeType(string $location, string $reason = '', ?Throwable $previous = null): self
-=======
-    public static function mimeType(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function mimeType(string $location, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return static::create($location, FileAttributes::ATTRIBUTE_MIME_TYPE, $reason, $previous);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function create(string $location, string $type, string $reason = '', ?Throwable $previous = null): self
-=======
-    public static function create(string $location, string $type, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function create(string $location, string $type, string $reason = '', Throwable $previous = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $e = new static("Unable to retrieve the $type for file at location: $location. {$reason}", 0, $previous);
         $e->reason = $reason;

@@ -6,17 +6,9 @@ use Closure;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Js;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Number;
 use Illuminate\Support\Str;
 use Illuminate\Support\Testing\Fakes\Fake;
-=======
-use Illuminate\Support\Str;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Support\Str;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Mockery;
 use Mockery\LegacyMockInterface;
 use RuntimeException;
@@ -26,15 +18,7 @@ abstract class Facade
     /**
      * The application instance being facaded.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var \Illuminate\Contracts\Foundation\Application|null
-=======
-     * @var \Illuminate\Contracts\Foundation\Application
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @var \Illuminate\Contracts\Foundation\Application
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected static $app;
 
@@ -63,25 +47,11 @@ abstract class Facade
         $accessor = static::getFacadeAccessor();
 
         if (static::$app->resolved($accessor) === true) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $callback(static::getFacadeRoot(), static::$app);
         }
 
         static::$app->afterResolving($accessor, function ($service, $app) use ($callback) {
             $callback($service, $app);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $callback(static::getFacadeRoot());
-        }
-
-        static::$app->afterResolving($accessor, function ($service) use ($callback) {
-            $callback($service);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
     }
 
@@ -216,8 +186,6 @@ abstract class Facade
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determines whether a "fake" has been set as the facade instance.
      *
      * @return bool
@@ -231,10 +199,6 @@ abstract class Facade
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the root object behind the facade.
      *
      * @return mixed
@@ -330,13 +294,7 @@ abstract class Facade
             'Log' => Log::class,
             'Mail' => Mail::class,
             'Notification' => Notification::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
             'Number' => Number::class,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'Password' => Password::class,
             'Process' => Process::class,
             'Queue' => Queue::class,
@@ -359,15 +317,7 @@ abstract class Facade
     /**
      * Get the application instance behind the facade.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Contracts\Foundation\Application|null
-=======
-     * @return \Illuminate\Contracts\Foundation\Application
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Contracts\Foundation\Application
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function getFacadeApplication()
     {
@@ -377,15 +327,7 @@ abstract class Facade
     /**
      * Set the application instance.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Foundation\Application|null  $app
-=======
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     public static function setFacadeApplication($app)

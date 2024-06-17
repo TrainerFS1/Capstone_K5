@@ -29,14 +29,8 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile the query to determine if a table exists.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
      */
     public function compileTableExists()
@@ -45,8 +39,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the query to determine if the dbstat table is available.
      *
      * @return string
@@ -112,14 +104,6 @@ class SQLiteGrammar extends Grammar
      *
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
-     * Compile the query to determine the list of columns.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Compile the query to determine the list of columns.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string  $table
      * @return string
      */
@@ -129,8 +113,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the query to determine the columns.
      *
      * @param  string  $table
@@ -182,10 +164,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a create table command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -405,35 +383,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Compile the SQL needed to retrieve all table names.
-     *
-     * @return string
-     */
-    public function compileGetAllTables()
-    {
-        return 'select type, name from sqlite_master where type = \'table\' and name not like \'sqlite_%\'';
-    }
-
-    /**
-     * Compile the SQL needed to retrieve all view names.
-     *
-     * @return string
-     */
-    public function compileGetAllViews()
-    {
-        return 'select type, name from sqlite_master where type = \'view\'';
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the SQL needed to rebuild the database.
      *
      * @return string
@@ -1067,15 +1016,7 @@ class SQLiteGrammar extends Grammar
         }
 
         if (! is_null($virtualAs = $column->virtualAs)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return " as ({$this->getValue($virtualAs)})";
-=======
-            return " as ({$virtualAs})";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return " as ({$virtualAs})";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -1097,15 +1038,7 @@ class SQLiteGrammar extends Grammar
         }
 
         if (! is_null($storedAs = $column->storedAs)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return " as ({$this->getValue($column->storedAs)}) stored";
-=======
-            return " as ({$column->storedAs}) stored";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return " as ({$column->storedAs}) stored";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 

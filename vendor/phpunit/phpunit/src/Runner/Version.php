@@ -34,15 +34,7 @@ final class Version
         }
 
         if (self::$version === '') {
-<<<<<<< HEAD
-<<<<<<< HEAD
             self::$version = (new VersionId('10.5.21', dirname(__DIR__, 2)))->asString();
-=======
-            self::$version = (new VersionId('10.0.11', dirname(__DIR__, 2)))->asString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            self::$version = (new VersionId('10.0.11', dirname(__DIR__, 2)))->asString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return self::$version;
@@ -59,17 +51,11 @@ final class Version
         return implode('.', array_slice(explode('.', $version), 0, 2));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function majorVersionNumber(): int
     {
         return (int) explode('.', self::series())[0];
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function getVersionString(): string
     {
         return 'PHPUnit ' . self::id() . ' by Sebastian Bergmann and contributors.';

@@ -10,8 +10,6 @@
 namespace PHPUnit\Metadata;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @psalm-immutable
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -27,21 +25,6 @@ final class RequiresFunction extends Metadata
      * @psalm-param 0|1 $level
      * @psalm-param non-empty-string $functionName
      */
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @internal This class is not covered by the backward compatibility promise for PHPUnit
- *
- * @psalm-immutable
- */
-final class RequiresFunction extends Metadata
-{
-    private readonly string $functionName;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function __construct(int $level, string $functionName)
     {
         parent::__construct($level);
@@ -49,29 +32,17 @@ final class RequiresFunction extends Metadata
         $this->functionName = $functionName;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-assert-if-true RequiresFunction $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isRequiresFunction(): bool
     {
         return true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-return non-empty-string
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function functionName(): string
     {
         return $this->functionName;

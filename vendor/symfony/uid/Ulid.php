@@ -26,15 +26,7 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
     private static string $time = '';
     private static array $rand = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $ulid = null)
-=======
-    public function __construct(string $ulid = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $ulid = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $ulid) {
             $this->uid = static::generate();
@@ -122,8 +114,6 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
         return hex2bin($ulid);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * Returns the identifier as a base32 case insensitive string.
      *
@@ -131,10 +121,6 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
      *
      * @example 09EJ0S614A9FXVG9C5537Q9ZE1 (len=26)
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function toBase32(): string
     {
         return $this->uid;
@@ -162,15 +148,7 @@ class Ulid extends AbstractUid implements TimeBasedUidInterface
         return \DateTimeImmutable::createFromFormat('U.u', substr_replace($time, '.', -3, 0));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function generate(?\DateTimeInterface $time = null): string
-=======
-    public static function generate(\DateTimeInterface $time = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function generate(\DateTimeInterface $time = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $mtime = $time) {
             $time = microtime(false);

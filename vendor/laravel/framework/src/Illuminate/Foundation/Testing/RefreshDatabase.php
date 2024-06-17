@@ -89,41 +89,16 @@ trait RefreshDatabase
     {
         $database = $this->app->make('db');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->app->instance('db.transactions', $transactionsManager = new DatabaseTransactionsManager);
 
         foreach ($this->connectionsToTransact() as $name) {
             $connection = $database->connection($name);
             $connection->setTransactionManager($transactionsManager);
-=======
-        foreach ($this->connectionsToTransact() as $name) {
-            $connection = $database->connection($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        foreach ($this->connectionsToTransact() as $name) {
-            $connection = $database->connection($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $dispatcher = $connection->getEventDispatcher();
 
             $connection->unsetEventDispatcher();
             $connection->beginTransaction();
             $connection->setEventDispatcher($dispatcher);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-            if ($this->app->resolved('db.transactions')) {
-                $this->app->make('db.transactions')->callbacksShouldIgnore(
-                    $this->app->make('db.transactions')->getTransactions()->first()
-                );
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $this->beforeApplicationDestroyed(function () use ($database) {

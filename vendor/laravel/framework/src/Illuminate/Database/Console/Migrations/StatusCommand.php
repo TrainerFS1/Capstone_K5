@@ -60,50 +60,24 @@ class StatusCommand extends BaseCommand
 
             $batches = $this->migrator->getRepository()->getMigrationBatches();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $migrations = $this->getStatusFor($ran, $batches)
                 ->when($this->option('pending'), fn ($collection) => $collection->filter(function ($migration) {
                     return str($migration[1])->contains('Pending');
                 }));
 
             if (count($migrations) > 0) {
-=======
-            if (count($migrations = $this->getStatusFor($ran, $batches)) > 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if (count($migrations = $this->getStatusFor($ran, $batches)) > 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $this->newLine();
 
                 $this->components->twoColumnDetail('<fg=gray>Migration name</>', '<fg=gray>Batch / Status</>');
 
                 $migrations
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    ->when($this->option('pending'), fn ($collection) => $collection->filter(function ($migration) {
-                        return str($migration[1])->contains('Pending');
-                    }))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    ->when($this->option('pending'), fn ($collection) => $collection->filter(function ($migration) {
-                        return str($migration[1])->contains('Pending');
-                    }))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ->each(
                         fn ($migration) => $this->components->twoColumnDetail($migration[0], $migration[1])
                     );
 
                 $this->newLine();
-<<<<<<< HEAD
-<<<<<<< HEAD
             } elseif ($this->option('pending')) {
                 $this->components->info('No pending migrations');
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } else {
                 $this->components->info('No migrations found');
             }

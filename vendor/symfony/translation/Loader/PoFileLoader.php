@@ -122,15 +122,7 @@ class PoFileLoader extends FileLoader
      * A .po file could contain by error missing plural indexes. We need to
      * fix these before saving them.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function addMessage(array &$messages, array $item): void
-=======
-    private function addMessage(array &$messages, array $item)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function addMessage(array &$messages, array $item)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!empty($item['ids']['singular'])) {
             $id = stripcslashes($item['ids']['singular']);

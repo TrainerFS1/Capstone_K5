@@ -14,8 +14,6 @@ namespace Carbon;
 class CarbonPeriodImmutable extends CarbonPeriod
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Default date class of iteration items.
      *
      * @var string
@@ -23,10 +21,6 @@ class CarbonPeriodImmutable extends CarbonPeriod
     protected const DEFAULT_DATE_CLASS = CarbonImmutable::class;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Date class of iteration items.
      *
      * @var string

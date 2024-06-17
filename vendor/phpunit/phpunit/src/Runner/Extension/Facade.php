@@ -20,33 +20,19 @@ use PHPUnit\Event\UnknownSubscriberTypeException;
  */
 final class Facade
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private bool $replacesOutput                 = false;
     private bool $replacesProgressOutput         = false;
     private bool $replacesResultOutput           = false;
     private bool $requiresCodeCoverageCollection = false;
     private bool $requiresExportOfObjects        = false;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
     public function registerSubscribers(Subscriber ...$subscribers): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         EventFacade::instance()->registerSubscribers(...$subscribers);
-=======
-        EventFacade::registerSubscribers(...$subscribers);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        EventFacade::registerSubscribers(...$subscribers);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -55,15 +41,7 @@ final class Facade
      */
     public function registerSubscriber(Subscriber $subscriber): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         EventFacade::instance()->registerSubscriber($subscriber);
-=======
-        EventFacade::registerSubscriber($subscriber);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        EventFacade::registerSubscriber($subscriber);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -71,8 +49,6 @@ final class Facade
      */
     public function registerTracer(Tracer $tracer): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         EventFacade::instance()->registerTracer($tracer);
     }
 
@@ -130,11 +106,5 @@ final class Facade
     public function requiresExportOfObjects(): bool
     {
         return $this->requiresExportOfObjects;
-=======
-        EventFacade::registerTracer($tracer);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        EventFacade::registerTracer($tracer);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

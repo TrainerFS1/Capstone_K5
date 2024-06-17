@@ -7,15 +7,7 @@ trait GuardsAttributes
     /**
      * The attributes that are mass assignable.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var array<int, string>
-=======
-     * @var array<string>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @var array<string>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected $fillable = [];
 
@@ -71,15 +63,7 @@ trait GuardsAttributes
      */
     public function mergeFillable(array $fillable)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->fillable = array_values(array_unique(array_merge($this->fillable, $fillable)));
-=======
-        $this->fillable = array_merge($this->fillable, $fillable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->fillable = array_merge($this->fillable, $fillable);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -117,15 +101,7 @@ trait GuardsAttributes
      */
     public function mergeGuarded(array $guarded)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->guarded = array_values(array_unique(array_merge($this->guarded, $guarded)));
-=======
-        $this->guarded = array_merge($this->guarded, $guarded);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->guarded = array_merge($this->guarded, $guarded);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }

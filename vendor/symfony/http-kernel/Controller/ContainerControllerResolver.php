@@ -25,15 +25,7 @@ class ContainerControllerResolver extends ControllerResolver
 {
     protected $container;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(ContainerInterface $container, ?LoggerInterface $logger = null)
-=======
-    public function __construct(ContainerInterface $container, LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(ContainerInterface $container, LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->container = $container;
 
@@ -62,15 +54,7 @@ class ContainerControllerResolver extends ControllerResolver
         throw new \InvalidArgumentException(sprintf('Controller "%s" does neither exist as service nor as class.', $class), 0, $e);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function throwExceptionIfControllerWasRemoved(string $controller, \Throwable $previous): void
-=======
-    private function throwExceptionIfControllerWasRemoved(string $controller, \Throwable $previous)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function throwExceptionIfControllerWasRemoved(string $controller, \Throwable $previous)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->container instanceof Container && isset($this->container->getRemovedIds()[$controller])) {
             throw new \InvalidArgumentException(sprintf('Controller "%s" cannot be fetched from the container because it is private. Did you forget to tag the service with "controller.service_arguments"?', $controller), 0, $previous);

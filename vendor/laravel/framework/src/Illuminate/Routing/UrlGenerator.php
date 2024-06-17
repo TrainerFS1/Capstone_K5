@@ -90,8 +90,6 @@ class UrlGenerator implements UrlGeneratorContract
     protected $keyResolver;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The missing named route resolver callable.
      *
      * @var callable
@@ -99,10 +97,6 @@ class UrlGenerator implements UrlGeneratorContract
     protected $missingNamedRouteResolver;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The callback to use to format hosts.
      *
      * @var \Closure
@@ -200,19 +194,7 @@ class UrlGenerator implements UrlGeneratorContract
      */
     protected function getPreviousUrlFromSession()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->getSession()?->previousUrl();
-=======
-        $session = $this->getSession();
-
-        return $session ? $session->previousUrl() : null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $session = $this->getSession();
-
-        return $session ? $session->previousUrl() : null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -487,17 +469,11 @@ class UrlGenerator implements UrlGeneratorContract
             return $this->toRoute($route, $parameters, $absolute);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! is_null($this->missingNamedRouteResolver) &&
             ! is_null($url = call_user_func($this->missingNamedRouteResolver, $name, $parameters, $absolute))) {
             return $url;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         throw new RouteNotFoundException("Route [{$name}] not defined.");
     }
 
@@ -518,19 +494,7 @@ class UrlGenerator implements UrlGeneratorContract
                     ? $value->{$route->bindingFieldFor($key)}
                     : $value;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             return $value instanceof BackedEnum ? $value->value : $value;
-=======
-            return function_exists('enum_exists') && $value instanceof BackedEnum
-                ? $value->value
-                : $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return function_exists('enum_exists') && $value instanceof BackedEnum
-                ? $value->value
-                : $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         })->all();
 
         return $this->routeUrl()->to(
@@ -571,21 +535,9 @@ class UrlGenerator implements UrlGeneratorContract
 
         if ($this->rootNamespace && ! str_starts_with($action, '\\')) {
             return $this->rootNamespace.'\\'.$action;
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
 
         return trim($action, '\\');
-=======
-        } else {
-            return trim($action, '\\');
-        }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        } else {
-            return trim($action, '\\');
-        }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -879,8 +831,6 @@ class UrlGenerator implements UrlGeneratorContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the callback that should be used to attempt to resolve missing named routes.
      *
      * @param  callable  $missingNamedRouteResolver
@@ -894,10 +844,6 @@ class UrlGenerator implements UrlGeneratorContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the root controller namespace.
      *
      * @return string

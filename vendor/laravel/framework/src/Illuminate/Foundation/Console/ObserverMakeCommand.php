@@ -9,14 +9,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function Laravel\Prompts\suggest;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'make:observer')]
 class ObserverMakeCommand extends GeneratorCommand
 {
@@ -163,28 +157,12 @@ class ObserverMakeCommand extends GeneratorCommand
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $model = suggest(
             'What model should this observer apply to? (Optional)',
             $this->possibleModels(),
         );
 
         if ($model) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $model = $this->components->askWithCompletion(
-            'What model should this observer apply to?',
-            $this->possibleModels(),
-            'none'
-        );
-
-        if ($model && $model !== 'none') {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $input->setOption('model', $model);
         }
     }

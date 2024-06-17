@@ -440,15 +440,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      *
      * @param  string  $script
      * @param  int  $numberOfKeys
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  mixed  ...$arguments
-=======
-     * @param  dynamic  ...$arguments
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  dynamic  ...$arguments
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function eval($script, $numberOfKeys, ...$arguments)
@@ -538,15 +530,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
         try {
             return parent::command($method, $parameters);
         } catch (RedisException $e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             foreach (['went away', 'socket', 'read error on connection', 'Connection lost'] as $errorMessage) {
-=======
-            foreach (['went away', 'socket', 'read error on connection'] as $errorMessage) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            foreach (['went away', 'socket', 'read error on connection'] as $errorMessage) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if (str_contains($e->getMessage(), $errorMessage)) {
                     $this->client = $this->connector ? call_user_func($this->connector) : $this->client;
 

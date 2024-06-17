@@ -26,21 +26,7 @@ echo $translator->trans('Hello World!'); // outputs « Bonjour ! »
 Sponsor
 -------
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Help Symfony by [sponsoring][1] its development!
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-The Translation component for Symfony 6.1 is [backed][1] by:
-
- * [Crowdin][2], a cloud-based localization management software helping teams to go global and stay agile.
-
-Help Symfony by [sponsoring][3] its development!
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 Resources
 ---------
@@ -51,16 +37,4 @@ Resources
    [send Pull Requests](https://github.com/symfony/symfony/pulls)
    in the [main Symfony repository](https://github.com/symfony/symfony)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [1]: https://symfony.com/sponsor
-=======
-[1]: https://symfony.com/backers
-[2]: https://crowdin.com
-[3]: https://symfony.com/sponsor
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-[1]: https://symfony.com/backers
-[2]: https://crowdin.com
-[3]: https://symfony.com/sponsor
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

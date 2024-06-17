@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### 3.6.0 (2024-04-12)
 
   * Added `LineFormatter->setBasePath(...)` that allows removing the project's path from the stack trace output (#1873)
@@ -32,10 +30,6 @@
   * Fixed `TestHandler` method docs (#1794)
   * Fixed handling of falsey `display_errors` string values (#1804)
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ### 3.3.1 (2023-02-06)
 
   * Fixed Logger not being serializable anymore (#1792)
@@ -122,8 +116,6 @@ New deprecations:
   value equal to what `Logger::WARNING` was giving you.
 - `Logger::getLevelName()` is now deprecated.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### 2.9.3 (2024-04-12)
 
   * Fixed PHP 8.4 deprecation warnings (#1874)
@@ -134,10 +126,6 @@ New deprecations:
   * Fixed bug where the previous error handler would not be restored in some cases where StreamHandler fails (#1815)
   * Fixed normalization error when normalizing incomplete classes (#1833)
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ### 2.9.1 (2023-02-06)
 
   * Fixed Logger not being serializable anymore (#1792)

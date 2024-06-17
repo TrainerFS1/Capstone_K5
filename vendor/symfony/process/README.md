@@ -3,26 +3,6 @@ Process Component
 
 The Process component executes commands in sub-processes.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-Sponsor
--------
-
-The Process component for Symfony 6.1 is [backed][1] by [SensioLabs][2].
-
-As the creator of Symfony, SensioLabs supports companies using Symfony, with an
-offering encompassing consultancy, expertise, services, training, and technical
-assistance to ensure the success of web application development projects.
-
-Help Symfony by [sponsoring][3] its development!
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 Resources
 ---------
 
@@ -31,16 +11,3 @@ Resources
  * [Report issues](https://github.com/symfony/symfony/issues) and
    [send Pull Requests](https://github.com/symfony/symfony/pulls)
    in the [main Symfony repository](https://github.com/symfony/symfony)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-[1]: https://symfony.com/backers
-[2]: https://sensiolabs.com
-[3]: https://symfony.com/sponsor
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

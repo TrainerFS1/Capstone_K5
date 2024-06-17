@@ -22,15 +22,7 @@ final class Header
         foreach ((array) $header as $value) {
             foreach (self::splitList($value) as $val) {
                 $part = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
                 foreach (preg_split('/;(?=([^"]*"[^"]*")*[^"]*$)/', $val) ?: [] as $kvp) {
-=======
-                foreach (preg_split('/;(?=([^"]*"[^"]*")*[^"]*$)/', $val) as $kvp) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                foreach (preg_split('/;(?=([^"]*"[^"]*")*[^"]*$)/', $val) as $kvp) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     if (preg_match_all('/<[^>]+>|[^=]+/', $kvp, $matches)) {
                         $m = $matches[0];
                         if (isset($m[1])) {
@@ -97,15 +89,7 @@ final class Header
             $v = '';
             $isQuoted = false;
             $isEscaped = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
             for ($i = 0, $max = \strlen($value); $i < $max; ++$i) {
-=======
-            for ($i = 0, $max = \strlen($value); $i < $max; $i++) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            for ($i = 0, $max = \strlen($value); $i < $max; $i++) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($isEscaped) {
                     $v .= $value[$i];
                     $isEscaped = false;

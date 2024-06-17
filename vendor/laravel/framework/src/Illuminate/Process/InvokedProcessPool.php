@@ -2,17 +2,9 @@
 
 namespace Illuminate\Process;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Countable;
 
 class InvokedProcessPool implements Countable
-=======
-class InvokedProcessPool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class InvokedProcessPool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * The array of invoked processes.
@@ -62,8 +54,6 @@ class InvokedProcessPool
     {
         return new ProcessPoolResults(collect($this->invokedProcesses)->map->wait()->all());
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Get the total number of processes.
@@ -74,8 +64,4 @@ class InvokedProcessPool
     {
         return count($this->invokedProcesses);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

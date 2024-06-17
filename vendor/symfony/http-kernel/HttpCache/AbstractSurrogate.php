@@ -24,16 +24,10 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 abstract class AbstractSurrogate implements SurrogateInterface
 {
     protected $contentTypes;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @deprecated since Symfony 6.3
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $phpEscapeMap = [
         ['<?', '<%', '<s', '<S'],
         ['<?php echo "<?"; ?>', '<?php echo "<%"; ?>', '<?php echo "<s"; ?>', '<?php echo "<S"; ?>'],
@@ -65,15 +59,9 @@ abstract class AbstractSurrogate implements SurrogateInterface
         return str_contains($value, sprintf('%s/1.0', strtoupper($this->getName())));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addSurrogateCapability(Request $request)
     {
         $current = $request->headers->get('Surrogate-Capability');
@@ -120,14 +108,8 @@ abstract class AbstractSurrogate implements SurrogateInterface
 
     /**
      * Remove the Surrogate from the Surrogate-Control header.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function removeFromControl(Response $response)
     {
@@ -146,8 +128,6 @@ abstract class AbstractSurrogate implements SurrogateInterface
             $response->headers->set('Surrogate-Control', preg_replace(sprintf('#content="%s/1.0",\s*#', $upperName), '', $value));
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     protected static function generateBodyEvalBoundary(): string
     {
@@ -159,8 +139,4 @@ abstract class AbstractSurrogate implements SurrogateInterface
 
         return $boundary;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

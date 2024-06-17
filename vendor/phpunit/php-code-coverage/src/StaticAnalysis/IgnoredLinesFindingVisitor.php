@@ -15,13 +15,7 @@ use PhpParser\Node;
 use PhpParser\Node\Attribute;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Node\Stmt\Enum_;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Stmt\Function_;
 use PhpParser\Node\Stmt\Interface_;
 use PhpParser\Node\Stmt\Trait_;
@@ -50,13 +44,7 @@ final class IgnoredLinesFindingVisitor extends NodeVisitorAbstract
         if (!$node instanceof Class_ &&
             !$node instanceof Trait_ &&
             !$node instanceof Interface_ &&
-<<<<<<< HEAD
-<<<<<<< HEAD
             !$node instanceof Enum_ &&
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             !$node instanceof ClassMethod &&
             !$node instanceof Function_ &&
             !$node instanceof Attribute) {

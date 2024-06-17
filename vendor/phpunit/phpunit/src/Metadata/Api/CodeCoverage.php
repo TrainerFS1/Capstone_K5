@@ -9,14 +9,8 @@
  */
 namespace PHPUnit\Metadata\Api;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function array_unique;
 use function array_values;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function assert;
 use function count;
 use function interface_exists;
@@ -24,42 +18,22 @@ use function sprintf;
 use function str_starts_with;
 use PHPUnit\Framework\CodeCoverageException;
 use PHPUnit\Framework\InvalidCoversTargetException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Framework\TestSuite;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Metadata\Covers;
 use PHPUnit\Metadata\CoversClass;
 use PHPUnit\Metadata\CoversDefaultClass;
 use PHPUnit\Metadata\CoversFunction;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Metadata\IgnoreClassForCodeCoverage;
 use PHPUnit\Metadata\IgnoreFunctionForCodeCoverage;
 use PHPUnit\Metadata\IgnoreMethodForCodeCoverage;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Metadata\Parser\Registry;
 use PHPUnit\Metadata\Uses;
 use PHPUnit\Metadata\UsesClass;
 use PHPUnit\Metadata\UsesDefaultClass;
 use PHPUnit\Metadata\UsesFunction;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use RecursiveIteratorIterator;
 use SebastianBergmann\CodeUnit\CodeUnitCollection;
 use SebastianBergmann\CodeUnit\Exception as CodeUnitException;
-=======
-use SebastianBergmann\CodeUnit\CodeUnitCollection;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use SebastianBergmann\CodeUnit\CodeUnitCollection;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\CodeUnit\InvalidCodeUnitException;
 use SebastianBergmann\CodeUnit\Mapper;
 
@@ -70,15 +44,9 @@ final class CodeCoverage
 {
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
      *
      * @psalm-return array<string,list<int>>|false
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws CodeCoverageException
      */
@@ -96,18 +64,8 @@ final class CodeCoverage
                 throw new CodeCoverageException(
                     sprintf(
                         'More than one @coversDefaultClass annotation for class or interface "%s"',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $className,
                     ),
-=======
-                        $className
-                    )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $className
-                    )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
 
@@ -122,8 +80,6 @@ final class CodeCoverage
         $mapper    = new Mapper;
 
         foreach (Registry::parser()->forClassAndMethod($className, $methodName) as $metadata) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (!$metadata->isCoversClass() && !$metadata->isCoversFunction() && !$metadata->isCovers()) {
                 continue;
             }
@@ -132,37 +88,6 @@ final class CodeCoverage
 
             if ($metadata->isCoversClass() || $metadata->isCoversFunction()) {
                 $codeUnits = $codeUnits->mergeWith($this->mapToCodeUnits($metadata));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if ($metadata->isCoversClass() || $metadata->isCoversFunction()) {
-                assert($metadata instanceof CoversClass || $metadata instanceof CoversFunction);
-
-                try {
-                    $codeUnits = $codeUnits->mergeWith(
-                        $mapper->stringToCodeUnits($metadata->asStringForCodeUnitMapper())
-                    );
-                } catch (InvalidCodeUnitException $e) {
-                    if ($metadata->isCoversClass()) {
-                        $type = 'Class';
-                    } else {
-                        $type = 'Function';
-                    }
-
-                    throw new InvalidCoversTargetException(
-                        sprintf(
-                            '%s "%s" is not a valid target for code coverage',
-                            $type,
-                            $metadata->asStringForCodeUnitMapper()
-                        ),
-                        $e->getCode(),
-                        $e
-                    );
-                }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } elseif ($metadata->isCovers()) {
                 assert($metadata instanceof Covers);
 
@@ -172,18 +97,8 @@ final class CodeCoverage
                     throw new InvalidCoversTargetException(
                         sprintf(
                             'Trying to @cover interface "%s".',
-<<<<<<< HEAD
-<<<<<<< HEAD
                             $target,
                         ),
-=======
-                            $target
-                        )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                            $target
-                        )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
 
@@ -197,23 +112,10 @@ final class CodeCoverage
                     throw new InvalidCoversTargetException(
                         sprintf(
                             '"@covers %s" is invalid',
-<<<<<<< HEAD
-<<<<<<< HEAD
                             $target,
                         ),
                         $e->getCode(),
                         $e,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                            $target
-                        ),
-                        $e->getCode(),
-                        $e
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -224,15 +126,9 @@ final class CodeCoverage
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
      *
      * @psalm-return array<string,list<int>>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws CodeCoverageException
      */
@@ -246,18 +142,8 @@ final class CodeCoverage
                 throw new CodeCoverageException(
                     sprintf(
                         'More than one @usesDefaultClass annotation for class or interface "%s"',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $className,
                     ),
-=======
-                        $className
-                    )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $className
-                    )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
 
@@ -272,8 +158,6 @@ final class CodeCoverage
         $mapper    = new Mapper;
 
         foreach (Registry::parser()->forClassAndMethod($className, $methodName) as $metadata) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (!$metadata->isUsesClass() && !$metadata->isUsesFunction() && !$metadata->isUses()) {
                 continue;
             }
@@ -282,37 +166,6 @@ final class CodeCoverage
 
             if ($metadata->isUsesClass() || $metadata->isUsesFunction()) {
                 $codeUnits = $codeUnits->mergeWith($this->mapToCodeUnits($metadata));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if ($metadata->isUsesClass() || $metadata->isUsesFunction()) {
-                assert($metadata instanceof UsesClass || $metadata instanceof UsesFunction);
-
-                try {
-                    $codeUnits = $codeUnits->mergeWith(
-                        $mapper->stringToCodeUnits($metadata->asStringForCodeUnitMapper())
-                    );
-                } catch (InvalidCodeUnitException $e) {
-                    if ($metadata->isUsesClass()) {
-                        $type = 'Class';
-                    } else {
-                        $type = 'Function';
-                    }
-
-                    throw new InvalidCoversTargetException(
-                        sprintf(
-                            '%s "%s" is not a valid target for code coverage',
-                            $type,
-                            $metadata->asStringForCodeUnitMapper()
-                        ),
-                        $e->getCode(),
-                        $e
-                    );
-                }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } elseif ($metadata->isUses()) {
                 assert($metadata instanceof Uses);
 
@@ -328,23 +181,10 @@ final class CodeCoverage
                     throw new InvalidCoversTargetException(
                         sprintf(
                             '"@uses %s" is invalid',
-<<<<<<< HEAD
-<<<<<<< HEAD
                             $target,
                         ),
                         $e->getCode(),
                         $e,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                            $target
-                        ),
-                        $e->getCode(),
-                        $e
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -354,8 +194,6 @@ final class CodeCoverage
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-return array<string,list<int>>
      */
     public function linesToBeIgnored(TestSuite $testSuite): array
@@ -375,12 +213,6 @@ final class CodeCoverage
     /**
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
-=======
-     * @psalm-param class-string $className
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @psalm-param class-string $className
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function shouldCodeCoverageBeCollectedFor(string $className, string $methodName): bool
     {
@@ -403,8 +235,6 @@ final class CodeCoverage
 
         return true;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @psalm-return list<class-string>
@@ -482,8 +312,4 @@ final class CodeCoverage
             );
         }
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

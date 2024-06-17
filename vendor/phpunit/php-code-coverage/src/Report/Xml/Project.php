@@ -31,33 +31,15 @@ final class Project extends Node
     {
         $buildNode = $this->dom()->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'build',
-=======
-            'build'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'build'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->item(0);
 
         if (!$buildNode) {
             $buildNode = $this->dom()->documentElement->appendChild(
                 $this->dom()->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'build',
                 ),
-=======
-                    'build'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    'build'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -68,33 +50,15 @@ final class Project extends Node
     {
         $testsNode = $this->contextNode()->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'tests',
-=======
-            'tests'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'tests'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->item(0);
 
         if (!$testsNode) {
             $testsNode = $this->contextNode()->appendChild(
                 $this->dom()->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'tests',
                 ),
-=======
-                    'tests'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    'tests'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -114,18 +78,8 @@ final class Project extends Node
         $this->setContextNode(
             $dom->getElementsByTagNameNS(
                 'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'project',
             )->item(0),
-=======
-                'project'
-            )->item(0)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'project'
-            )->item(0)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

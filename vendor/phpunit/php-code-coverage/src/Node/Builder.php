@@ -27,14 +27,8 @@ use SebastianBergmann\CodeCoverage\StaticAnalysis\FileAnalyser;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
  * @psalm-import-type TestType from \SebastianBergmann\CodeCoverage\CodeCoverage
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class Builder
 {
@@ -51,44 +45,20 @@ final class Builder
         $commonPath = $this->reducePaths($data);
         $root       = new Directory(
             $commonPath,
-<<<<<<< HEAD
-<<<<<<< HEAD
             null,
-=======
-            null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->addItems(
             $root,
             $this->buildDirectoryStructure($data),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $coverage->getTests(),
-=======
-            $coverage->getTests()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $coverage->getTests()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $root;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param array<string, TestType> $tests
-=======
-     * @psalm-param array<string, array{size: string, status: string}> $tests
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @psalm-param array<string, array{size: string, status: string}> $tests
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function addItems(Directory $root, array $items, array $tests): void
     {
@@ -110,18 +80,8 @@ final class Builder
                             $this->analyser->classesIn($filename),
                             $this->analyser->traitsIn($filename),
                             $this->analyser->functionsIn($filename),
-<<<<<<< HEAD
-<<<<<<< HEAD
                             $this->analyser->linesOfCodeFor($filename),
                         ),
-=======
-                            $this->analyser->linesOfCodeFor($filename)
-                        )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                            $this->analyser->linesOfCodeFor($filename)
-                        )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             } else {
@@ -171,14 +131,8 @@ final class Builder
      *         )
      * )
      * </code>
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @psalm-return array<string, array<string, array{lineCoverage: array<int, int>, functionCoverage: array<string, array<int, int>>}>>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function buildDirectoryStructure(ProcessedCodeCoverageData $data): array
     {

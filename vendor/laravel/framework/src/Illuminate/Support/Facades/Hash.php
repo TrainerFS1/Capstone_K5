@@ -10,13 +10,7 @@ namespace Illuminate\Support\Facades;
  * @method static string make(string $value, array $options = [])
  * @method static bool check(string $value, string $hashedValue, array $options = [])
  * @method static bool needsRehash(string $hashedValue, array $options = [])
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static bool isHashed(string $value)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static string getDefaultDriver()
  * @method static mixed driver(string|null $driver = null)
  * @method static \Illuminate\Hashing\HashManager extend(string $driver, \Closure $callback)

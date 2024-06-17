@@ -31,25 +31,11 @@ final class CompletionInput extends ArgvInput
     public const TYPE_OPTION_NAME = 'option_name';
     public const TYPE_NONE = 'none';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private array $tokens;
     private int $currentIndex;
     private string $completionType;
     private ?string $completionName = null;
     private string $completionValue = '';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private $tokens;
-    private $currentIndex;
-    private $completionType;
-    private $completionName = null;
-    private $completionValue = '';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Converts a terminal string into tokens.
@@ -155,17 +141,9 @@ final class CompletionInput extends ArgvInput
      * TYPE_OPTION_NAME    when completing the name of an input option
      * TYPE_NONE           when nothing should be completed
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * TYPE_OPTION_NAME and TYPE_NONE are already implemented by the Console component.
      *
      * @return self::TYPE_*
-=======
-     * @return string One of self::TYPE_* constants. TYPE_OPTION_NAME and TYPE_NONE are already implemented by the Console component
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return string One of self::TYPE_* constants. TYPE_OPTION_NAME and TYPE_NONE are already implemented by the Console component
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function getCompletionType(): string
     {

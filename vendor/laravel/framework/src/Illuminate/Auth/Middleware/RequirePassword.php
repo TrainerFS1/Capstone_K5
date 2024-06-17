@@ -45,8 +45,6 @@ class RequirePassword
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Specify the redirect route and timeout for the middleware.
      *
      * @param  string|null  $redirectToRoute
@@ -61,24 +59,12 @@ class RequirePassword
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
      * @param  string|null  $redirectToRoute
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|int|null  $passwordTimeoutSeconds
-=======
-     * @param  int|null  $passwordTimeoutSeconds
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  int|null  $passwordTimeoutSeconds
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function handle($request, Closure $next, $redirectToRoute = null, $passwordTimeoutSeconds = null)
@@ -91,15 +77,7 @@ class RequirePassword
             }
 
             return $this->responseFactory->redirectGuest(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->urlGenerator->route($redirectToRoute ?: 'password.confirm')
-=======
-                $this->urlGenerator->route($redirectToRoute ?? 'password.confirm')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->urlGenerator->route($redirectToRoute ?? 'password.confirm')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

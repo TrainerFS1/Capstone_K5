@@ -79,13 +79,7 @@ class NativeMailerHandler extends MailHandler
      * Add headers to the message
      *
      * @param string|string[] $headers Custom added headers
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addHeader($headers): self
     {
@@ -103,13 +97,7 @@ class NativeMailerHandler extends MailHandler
      * Add parameters to the message
      *
      * @param string|string[] $parameters Custom added parameters
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addParameter($parameters): self
     {
@@ -156,13 +144,7 @@ class NativeMailerHandler extends MailHandler
 
     /**
      * @param string $contentType The content type of the email - Defaults to text/plain. Use text/html for HTML messages.
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setContentType(string $contentType): self
     {
@@ -175,15 +157,9 @@ class NativeMailerHandler extends MailHandler
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setEncoding(string $encoding): self
     {
         if (strpos($encoding, "\n") !== false || strpos($encoding, "\r") !== false) {

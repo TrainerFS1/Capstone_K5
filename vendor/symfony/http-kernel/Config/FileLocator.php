@@ -30,15 +30,7 @@ class FileLocator extends BaseFileLocator
         parent::__construct();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function locate(string $file, ?string $currentPath = null, bool $first = true): string|array
-=======
-    public function locate(string $file, string $currentPath = null, bool $first = true): string|array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function locate(string $file, string $currentPath = null, bool $first = true): string|array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (isset($file[0]) && '@' === $file[0]) {
             $resource = $this->kernel->locateResource($file);

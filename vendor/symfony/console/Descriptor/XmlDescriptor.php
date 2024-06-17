@@ -79,15 +79,7 @@ class XmlDescriptor extends Descriptor
         return $dom;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getApplicationDocument(Application $application, ?string $namespace = null, bool $short = false): \DOMDocument
-=======
-    public function getApplicationDocument(Application $application, string $namespace = null, bool $short = false): \DOMDocument
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getApplicationDocument(Application $application, string $namespace = null, bool $short = false): \DOMDocument
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $dom = new \DOMDocument('1.0', 'UTF-8');
         $dom->appendChild($rootXml = $dom->createElement('symfony'));
@@ -128,67 +120,27 @@ class XmlDescriptor extends Descriptor
         return $dom;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeInputArgument(InputArgument $argument, array $options = []): void
-=======
-    protected function describeInputArgument(InputArgument $argument, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeInputArgument(InputArgument $argument, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->writeDocument($this->getInputArgumentDocument($argument));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeInputOption(InputOption $option, array $options = []): void
-=======
-    protected function describeInputOption(InputOption $option, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeInputOption(InputOption $option, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->writeDocument($this->getInputOptionDocument($option));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeInputDefinition(InputDefinition $definition, array $options = []): void
-=======
-    protected function describeInputDefinition(InputDefinition $definition, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeInputDefinition(InputDefinition $definition, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->writeDocument($this->getInputDefinitionDocument($definition));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeCommand(Command $command, array $options = []): void
-=======
-    protected function describeCommand(Command $command, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeCommand(Command $command, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->writeDocument($this->getCommandDocument($command, $options['short'] ?? false));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeApplication(Application $application, array $options = []): void
-=======
-    protected function describeApplication(Application $application, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeApplication(Application $application, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->writeDocument($this->getApplicationDocument($application, $options['namespace'] ?? null, $options['short'] ?? false));
     }
@@ -196,15 +148,7 @@ class XmlDescriptor extends Descriptor
     /**
      * Appends document children to parent node.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function appendDocument(\DOMNode $parentNode, \DOMNode $importedParent): void
-=======
-    private function appendDocument(\DOMNode $parentNode, \DOMNode $importedParent)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function appendDocument(\DOMNode $parentNode, \DOMNode $importedParent)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         foreach ($importedParent->childNodes as $childNode) {
             $parentNode->appendChild($parentNode->ownerDocument->importNode($childNode, true));
@@ -214,15 +158,7 @@ class XmlDescriptor extends Descriptor
     /**
      * Writes DOM document.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function writeDocument(\DOMDocument $dom): void
-=======
-    private function writeDocument(\DOMDocument $dom)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function writeDocument(\DOMDocument $dom)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $dom->formatOutput = true;
         $this->write($dom->saveXML());

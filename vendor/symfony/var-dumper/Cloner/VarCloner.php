@@ -16,14 +16,6 @@ namespace Symfony\Component\VarDumper\Cloner;
  */
 class VarCloner extends AbstractCloner
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    private static string $gid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private static string $gid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static array $arrayCache = [];
 
     protected function doClone(mixed $var): array
@@ -48,14 +40,6 @@ class VarCloner extends AbstractCloner
         $stub = null;                   // Stub capturing the main properties of an original item value
                                         // or null if the original value is used directly
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        $gid = self::$gid ??= md5(random_bytes(6)); // Unique string used to detect the special $GLOBALS variable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $gid = self::$gid ??= md5(random_bytes(6)); // Unique string used to detect the special $GLOBALS variable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $arrayStub = new Stub();
         $arrayStub->type = Stub::TYPE_ARRAY;
         $fromObjCast = false;

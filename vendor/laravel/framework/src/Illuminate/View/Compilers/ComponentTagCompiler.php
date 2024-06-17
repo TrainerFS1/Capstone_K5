@@ -128,15 +128,7 @@ class ComponentTagCompiler
                             )
                             |
                             (?:
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 [\w\-:.@%]+
-=======
-                                [\w\-:.@]+
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                                [\w\-:.@]+
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 (
                                     =
                                     (?:
@@ -201,15 +193,7 @@ class ComponentTagCompiler
                             )
                             |
                             (?:
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 [\w\-:.@%]+
-=======
-                                [\w\-:.@]+
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                                [\w\-:.@]+
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 (
                                     =
                                     (?:
@@ -521,16 +505,8 @@ class ComponentTagCompiler
                 \s*
                 x[\-\:]slot
                 (?:\:(?<inlineName>\w+(?:-\w+)*))?
-<<<<<<< HEAD
-<<<<<<< HEAD
                 (?:\s+name=(?<name>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+)))?
                 (?:\s+\:name=(?<boundName>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+)))?
-=======
-                (?:\s+(:?)name=(?<name>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+)))?
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                (?:\s+(:?)name=(?<name>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+)))?
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 (?<attributes>
                     (?:
                         \s+
@@ -569,30 +545,14 @@ class ComponentTagCompiler
         /x";
 
         $value = preg_replace_callback($pattern, function ($matches) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $name = $this->stripQuotes($matches['inlineName'] ?: $matches['name'] ?: $matches['boundName']);
-=======
-            $name = $this->stripQuotes($matches['inlineName'] ?: $matches['name']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $name = $this->stripQuotes($matches['inlineName'] ?: $matches['name']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (Str::contains($name, '-') && ! empty($matches['inlineName'])) {
                 $name = Str::camel($name);
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             // If the name was given as a simple string, we will wrap it in quotes as if it was bound for convenience...
             if (! empty($matches['inlineName']) || ! empty($matches['name'])) {
-=======
-            if ($matches[2] !== ':') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($matches[2] !== ':') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $name = "'{$name}'";
             }
 
@@ -600,8 +560,6 @@ class ComponentTagCompiler
 
             $attributes = $this->getAttributesFromAttributeString($matches['attributes']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             // If an inline name was provided and a name or bound name was *also* provided, we will assume the name should be an attribute...
             if (! empty($matches['inlineName']) && (! empty($matches['name']) || ! empty($matches['boundName']))) {
                 $attributes = ! empty($matches['name'])
@@ -609,10 +567,6 @@ class ComponentTagCompiler
                     : array_merge($attributes, $this->getAttributesFromAttributeString(':name='.$matches['boundName']));
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return " @slot({$name}, null, [".$this->attributesToString($attributes).']) ';
         }, $value);
 
@@ -634,15 +588,7 @@ class ComponentTagCompiler
         $attributeString = $this->parseBindAttributes($attributeString);
 
         $pattern = '/
-<<<<<<< HEAD
-<<<<<<< HEAD
             (?<attribute>[\w\-:.@%]+)
-=======
-            (?<attribute>[\w\-:.@]+)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            (?<attribute>[\w\-:.@]+)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             (
                 =
                 (?<value>
@@ -729,8 +675,6 @@ class ComponentTagCompiler
     protected function parseComponentTagClassStatements(string $attributeString)
     {
         return preg_replace_callback(
-<<<<<<< HEAD
-<<<<<<< HEAD
             '/@(class)(\( ( (?>[^()]+) | (?2) )* \))/x', function ($match) {
                 if ($match[1] === 'class') {
                     $match[2] = str_replace('"', "'", $match[2]);
@@ -740,22 +684,6 @@ class ComponentTagCompiler
 
                 return $match[0];
             }, $attributeString
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-             '/@(class)(\( ( (?>[^()]+) | (?2) )* \))/x', function ($match) {
-                 if ($match[1] === 'class') {
-                     $match[2] = str_replace('"', "'", $match[2]);
-
-                     return ":class=\"\Illuminate\Support\Arr::toCssClasses{$match[2]}\"";
-                 }
-
-                 return $match[0];
-             }, $attributeString
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -768,8 +696,6 @@ class ComponentTagCompiler
     protected function parseComponentTagStyleStatements(string $attributeString)
     {
         return preg_replace_callback(
-<<<<<<< HEAD
-<<<<<<< HEAD
             '/@(style)(\( ( (?>[^()]+) | (?2) )* \))/x', function ($match) {
                 if ($match[1] === 'style') {
                     $match[2] = str_replace('"', "'", $match[2]);
@@ -779,22 +705,6 @@ class ComponentTagCompiler
 
                 return $match[0];
             }, $attributeString
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-             '/@(style)(\( ( (?>[^()]+) | (?2) )* \))/x', function ($match) {
-                 if ($match[1] === 'style') {
-                     $match[2] = str_replace('"', "'", $match[2]);
-
-                     return ":style=\"\Illuminate\Support\Arr::toCssStyles{$match[2]}\"";
-                 }
-
-                 return $match[0];
-             }, $attributeString
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

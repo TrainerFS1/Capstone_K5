@@ -298,21 +298,9 @@ trait Difference
      */
     public function diffInWeekdays($date = null, $absolute = true)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->diffInDaysFiltered(static function (CarbonInterface $date) {
             return $date->isWeekday();
         }, $this->resolveCarbon($date)->avoidMutation()->modify($this->format('H:i:s.u')), $absolute);
-=======
-        return $this->diffInDaysFiltered(function (CarbonInterface $date) {
-            return $date->isWeekday();
-        }, $date, $absolute);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->diffInDaysFiltered(function (CarbonInterface $date) {
-            return $date->isWeekday();
-        }, $date, $absolute);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -325,21 +313,9 @@ trait Difference
      */
     public function diffInWeekendDays($date = null, $absolute = true)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->diffInDaysFiltered(static function (CarbonInterface $date) {
             return $date->isWeekend();
         }, $this->resolveCarbon($date)->avoidMutation()->modify($this->format('H:i:s.u')), $absolute);
-=======
-        return $this->diffInDaysFiltered(function (CarbonInterface $date) {
-            return $date->isWeekend();
-        }, $date, $absolute);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->diffInDaysFiltered(function (CarbonInterface $date) {
-            return $date->isWeekend();
-        }, $date, $absolute);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

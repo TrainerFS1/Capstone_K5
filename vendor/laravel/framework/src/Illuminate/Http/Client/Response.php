@@ -85,15 +85,7 @@ class Response implements ArrayAccess
     /**
      * Get the JSON decoded body of the response as an object.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return object|null
-=======
-     * @return object|array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return object|array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function object()
     {
@@ -346,20 +338,8 @@ class Response implements ArrayAccess
      */
     public function throwUnlessStatus($statusCode)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (is_callable($statusCode)) {
             return $statusCode($this->status(), $this) ? $this : $this->throw();
-=======
-        if (is_callable($statusCode) &&
-            ! $statusCode($this->status(), $this)) {
-            return $this->throw();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (is_callable($statusCode) &&
-            ! $statusCode($this->status(), $this)) {
-            return $this->throw();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this->status() === $statusCode ? $this : $this->throw();

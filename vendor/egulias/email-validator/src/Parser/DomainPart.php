@@ -137,15 +137,7 @@ class DomainPart extends PartParser
     {
         $commentParser = new Comment($this->lexer, new DomainComment());
         $result = $commentParser->parse();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->warnings = [...$this->warnings, ...$commentParser->getWarnings()];
-=======
-        $this->warnings = array_merge($this->warnings, $commentParser->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->warnings = array_merge($this->warnings, $commentParser->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $result;
     }
@@ -221,21 +213,9 @@ class DomainPart extends PartParser
         return new ValidEmail();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
      /**
      * @param Token<int, string> $token
      *
-=======
-     /** 
-     * @param Token<int, string> $token
-     * 
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     /** 
-     * @param Token<int, string> $token
-     * 
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return Result
      */
     private function checkNotAllowedChars(Token $token): Result
@@ -260,30 +240,14 @@ class DomainPart extends PartParser
 
         $domainLiteralParser = new DomainLiteralParser($this->lexer);
         $result = $domainLiteralParser->parse();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->warnings = [...$this->warnings, ...$domainLiteralParser->getWarnings()];
-=======
-        $this->warnings = array_merge($this->warnings, $domainLiteralParser->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->warnings = array_merge($this->warnings, $domainLiteralParser->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $result;
     }
 
     /**
      * @param Token<int, string> $prev
      * @param bool $hasComments
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * 
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return Result
      */
     protected function checkDomainPartExceptions(Token $prev, bool $hasComments): Result
@@ -359,12 +323,4 @@ class DomainPart extends PartParser
     {
         return $this->domainPart;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-}
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

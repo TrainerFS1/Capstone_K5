@@ -16,21 +16,13 @@ use PHPUnit\Runner\Version;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
  * @codeCoverageIgnore
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class VersionCheckCommand implements Command
 {
     public function execute(): Result
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $latestVersion           = file_get_contents('https://phar.phpunit.de/latest-version-of/phpunit');
         $latestCompatibleVersion = file_get_contents('https://phar.phpunit.de/latest-version-of/phpunit-' . Version::majorVersionNumber());
 
@@ -61,28 +53,5 @@ final class VersionCheckCommand implements Command
         }
 
         return Result::from($buffer);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $latestVersion = file_get_contents('https://phar.phpunit.de/latest-version-of/phpunit');
-        $isOutdated    = version_compare($latestVersion, Version::id(), '>');
-
-        if ($isOutdated) {
-            return Result::from(
-                sprintf(
-                    'You are not using the latest version of PHPUnit.' . PHP_EOL .
-                    'The latest version is PHPUnit %s.' . PHP_EOL,
-                    $latestVersion
-                )
-            );
-        }
-
-        return Result::from(
-            'You are using the latest version of PHPUnit.' . PHP_EOL
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

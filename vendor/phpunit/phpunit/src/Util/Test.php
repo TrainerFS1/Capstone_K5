@@ -30,15 +30,7 @@ final class Test
 
         $metadata = Registry::parser()->forMethod(
             $method->getDeclaringClass()->getName(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $method->getName(),
-=======
-            $method->getName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $method->getName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $metadata->isTest()->isNotEmpty();

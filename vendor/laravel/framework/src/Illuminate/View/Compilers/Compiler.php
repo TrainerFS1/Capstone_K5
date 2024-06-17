@@ -2,13 +2,7 @@
 
 namespace Illuminate\View\Compilers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use ErrorException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
@@ -96,14 +90,8 @@ abstract class Compiler
      *
      * @param  string  $path
      * @return bool
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throws \ErrorException
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function isExpired($path)
     {
@@ -120,8 +108,6 @@ abstract class Compiler
             return true;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             return $this->files->lastModified($path) >=
                 $this->files->lastModified($compiled);
@@ -132,14 +118,6 @@ abstract class Compiler
 
             throw $exception;
         }
-=======
-        return $this->files->lastModified($path) >=
-               $this->files->lastModified($compiled);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->files->lastModified($path) >=
-               $this->files->lastModified($compiled);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

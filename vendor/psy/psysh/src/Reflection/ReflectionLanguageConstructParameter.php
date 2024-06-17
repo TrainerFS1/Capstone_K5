@@ -31,26 +31,10 @@ class ReflectionLanguageConstructParameter extends \ReflectionParameter
 
     /**
      * No class here.
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
     public function getClass(): ?\ReflectionClass
     {
         return null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     *
-     * @todo remove \ReturnTypeWillChange attribute after dropping support for PHP 7.0 (when we can use nullable types)
-     */
-    #[\ReturnTypeWillChange]
-    public function getClass()
-    {
-        return;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

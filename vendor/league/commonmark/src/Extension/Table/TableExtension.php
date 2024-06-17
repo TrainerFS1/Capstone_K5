@@ -25,34 +25,22 @@ final class TableExtension implements ConfigurableExtensionInterface
 {
     public function configureSchema(ConfigurationBuilderInterface $builder): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $attributeArraySchema = Expect::arrayOf(
             Expect::type('string|string[]|bool'), // attribute value(s)
             'string' // attribute name
         )->mergeDefaults(false);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $builder->addSchema('table', Expect::structure([
             'wrap' => Expect::structure([
                 'enabled' => Expect::bool()->default(false),
                 'tag' => Expect::string()->default('div'),
                 'attributes' => Expect::arrayOf(Expect::string()),
             ]),
-<<<<<<< HEAD
-<<<<<<< HEAD
             'alignment_attributes' => Expect::structure([
                 'left' => (clone $attributeArraySchema)->default(['align' => 'left']),
                 'center' => (clone $attributeArraySchema)->default(['align' => 'center']),
                 'right' => (clone $attributeArraySchema)->default(['align' => 'right']),
             ]),
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]));
     }
 
@@ -69,14 +57,6 @@ final class TableExtension implements ConfigurableExtensionInterface
             ->addRenderer(Table::class, $tableRenderer)
             ->addRenderer(TableSection::class, new TableSectionRenderer())
             ->addRenderer(TableRow::class, new TableRowRenderer())
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->addRenderer(TableCell::class, new TableCellRenderer($environment->getConfiguration()->get('table/alignment_attributes')));
-=======
-            ->addRenderer(TableCell::class, new TableCellRenderer());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            ->addRenderer(TableCell::class, new TableCellRenderer());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

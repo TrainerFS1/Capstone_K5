@@ -53,15 +53,7 @@ class ResourceResponse implements Responsable
     /**
      * Wrap the given data if necessary.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Support\Collection|array  $data
-=======
-     * @param  array  $data
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  array  $data
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $with
      * @param  array  $additional
      * @return array

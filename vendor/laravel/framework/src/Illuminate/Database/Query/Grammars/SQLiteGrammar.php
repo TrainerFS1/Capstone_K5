@@ -147,8 +147,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile a "JSON contains" statement into SQL.
      *
      * @param  string  $column
@@ -174,10 +172,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a "JSON contains key" statement into SQL.
      *
      * @param  string  $column
@@ -219,8 +213,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile an insert ignore statement using a subquery into SQL.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -234,10 +226,6 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the columns for an update statement.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -399,15 +387,7 @@ class SQLiteGrammar extends Grammar
     public function compileTruncate(Builder $query)
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
             'delete from sqlite_sequence where name = ?' => [$this->getTablePrefix().$query->from],
-=======
-            'delete from sqlite_sequence where name = ?' => [$query->from],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'delete from sqlite_sequence where name = ?' => [$query->from],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'delete from '.$this->wrapTable($query->from) => [],
         ];
     }

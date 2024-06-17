@@ -49,15 +49,7 @@ abstract class NamespaceAwarePass extends CodeCleanerPass
     public function enterNode(Node $node)
     {
         if ($node instanceof Namespace_) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->namespace = isset($node->name) ? $this->getParts($node->name) : [];
-=======
-            $this->namespace = isset($node->name) ? $node->name->parts : [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->namespace = isset($node->name) ? $node->name->parts : [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -69,31 +61,17 @@ abstract class NamespaceAwarePass extends CodeCleanerPass
     protected function getFullyQualifiedName($name): string
     {
         if ($name instanceof FullyQualifiedName) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return \implode('\\', $this->getParts($name));
         }
 
         if ($name instanceof Name) {
             $name = $this->getParts($name);
-=======
-            return \implode('\\', $name->parts);
-        } elseif ($name instanceof Name) {
-            $name = $name->parts;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return \implode('\\', $name->parts);
-        } elseif ($name instanceof Name) {
-            $name = $name->parts;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif (!\is_array($name)) {
             $name = [$name];
         }
 
         return \implode('\\', \array_merge($this->namespace, $name));
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Backwards compatibility shim for PHP-Parser 4.x.
@@ -104,8 +82,4 @@ abstract class NamespaceAwarePass extends CodeCleanerPass
     {
         return \method_exists($name, 'getParts') ? $name->getParts() : $name->parts;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

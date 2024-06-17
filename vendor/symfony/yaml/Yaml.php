@@ -34,13 +34,7 @@ class Yaml
     public const PARSE_CUSTOM_TAGS = 512;
     public const DUMP_EMPTY_ARRAY_AS_SEQUENCE = 1024;
     public const DUMP_NULL_AS_TILDE = 2048;
-<<<<<<< HEAD
-<<<<<<< HEAD
     public const DUMP_NUMERIC_KEY_AS_STRING = 4096;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Parses a YAML file into a PHP value.

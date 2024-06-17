@@ -23,31 +23,12 @@ namespace Symfony\Component\CssSelector\XPath;
  */
 class XPathExpr
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(
         private string $path = '',
         private string $element = '*',
         private string $condition = '',
         bool $starPrefix = false,
     ) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private string $path;
-    private string $element;
-    private string $condition;
-
-    public function __construct(string $path = '', string $element = '*', string $condition = '', bool $starPrefix = false)
-    {
-        $this->path = $path;
-        $this->element = $element;
-        $this->condition = $condition;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($starPrefix) {
             $this->addStarPrefix();
         }
@@ -61,21 +42,9 @@ class XPathExpr
     /**
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function addCondition(string $condition, string $operator = 'and'): static
     {
         $this->condition = $this->condition ? sprintf('(%s) %s (%s)', $this->condition, $operator, $condition) : $condition;
-=======
-    public function addCondition(string $condition): static
-    {
-        $this->condition = $this->condition ? sprintf('(%s) and (%s)', $this->condition, $condition) : $condition;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function addCondition(string $condition): static
-    {
-        $this->condition = $this->condition ? sprintf('(%s) and (%s)', $this->condition, $condition) : $condition;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -131,15 +100,7 @@ class XPathExpr
     public function __toString(): string
     {
         $path = $this->path.$this->element;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $condition = '' === $this->condition ? '' : '['.$this->condition.']';
-=======
-        $condition = null === $this->condition || '' === $this->condition ? '' : '['.$this->condition.']';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $condition = null === $this->condition || '' === $this->condition ? '' : '['.$this->condition.']';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $path.$condition;
     }

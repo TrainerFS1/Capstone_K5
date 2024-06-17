@@ -2,13 +2,7 @@
 
 namespace Illuminate\Queue\Console;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Carbon\CarbonInterval;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Queue\Job;
@@ -21,13 +15,7 @@ use Illuminate\Queue\WorkerOptions;
 use Illuminate\Support\Carbon;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Terminal;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function Termwind\terminal;
 
 #[AsCommand(name: 'queue:work')]
@@ -229,15 +217,7 @@ class WorkCommand extends Command
             return $this->output->writeln(' <fg=yellow;options=bold>RUNNING</>');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $runTime = $this->formatRunTime($this->latestStartedAt);
-=======
-        $runTime = number_format((microtime(true) - $this->latestStartedAt) * 1000, 2).'ms';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $runTime = number_format((microtime(true) - $this->latestStartedAt) * 1000, 2).'ms';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $dots = max(terminal()->width() - mb_strlen($job->resolveName()) - (
             $this->output->isVerbose() ? (mb_strlen($job->getJobId()) + 1) : 0
@@ -271,8 +251,6 @@ class WorkCommand extends Command
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Given a start time, format the total run time for human readability.
      *
      * @param  float  $startTime
@@ -288,10 +266,6 @@ class WorkCommand extends Command
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Store a failed job event.
      *
      * @param  \Illuminate\Queue\Events\JobFailed  $event

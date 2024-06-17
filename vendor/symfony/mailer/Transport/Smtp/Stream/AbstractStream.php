@@ -24,8 +24,6 @@ use Symfony\Component\Mailer\Exception\TransportException;
  */
 abstract class AbstractStream
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @var resource|null */
     protected $stream;
     /** @var resource|null */
@@ -33,16 +31,6 @@ abstract class AbstractStream
     /** @var resource|null */
     protected $out;
     protected $err;
-=======
-    protected $stream;
-    protected $in;
-    protected $out;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $stream;
-    protected $in;
-    protected $out;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     private string $debug = '';
 
@@ -81,15 +69,7 @@ abstract class AbstractStream
 
     public function terminate(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->stream = $this->err = $this->out = $this->in = null;
-=======
-        $this->stream = $this->out = $this->in = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->stream = $this->out = $this->in = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function readLine(): string
@@ -98,15 +78,7 @@ abstract class AbstractStream
             return '';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $line = @fgets($this->out);
-=======
-        $line = fgets($this->out);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $line = fgets($this->out);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ('' === $line || false === $line) {
             $metas = stream_get_meta_data($this->out);
             if ($metas['timed_out']) {
@@ -115,15 +87,9 @@ abstract class AbstractStream
             if ($metas['eof']) {
                 throw new TransportException(sprintf('Connection to "%s" has been closed unexpectedly.', $this->getReadConnectionDescription()));
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (false === $line) {
                 throw new TransportException(sprintf('Unable to read from connection to "%s": ', $this->getReadConnectionDescription()).error_get_last()['message']);
             }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $this->debug .= sprintf('< %s', $line);

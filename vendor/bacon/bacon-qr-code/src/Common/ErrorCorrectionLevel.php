@@ -21,25 +21,8 @@ final class ErrorCorrectionLevel extends AbstractEnum
     protected const Q = [0x03];
     protected const H = [0x02];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function __construct(private readonly int $bits)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * @var int
-     */
-    private $bits;
-
-    protected function __construct(int $bits)
-    {
-        $this->bits = $bits;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

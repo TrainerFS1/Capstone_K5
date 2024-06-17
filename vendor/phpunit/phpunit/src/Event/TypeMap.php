@@ -39,74 +39,12 @@ final class TypeMap
      */
     public function addMapping(string $subscriberInterface, string $eventClass): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->ensureSubscriberInterfaceExists($subscriberInterface);
         $this->ensureSubscriberInterfaceExtendsInterface($subscriberInterface);
         $this->ensureEventClassExists($eventClass);
         $this->ensureEventClassImplementsEventInterface($eventClass);
         $this->ensureSubscriberWasNotAlreadyRegistered($subscriberInterface);
         $this->ensureEventWasNotAlreadyAssigned($eventClass);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (!interface_exists($subscriberInterface)) {
-            throw new UnknownSubscriberException(
-                sprintf(
-                    'Subscriber "%s" does not exist or is not an interface',
-                    $subscriberInterface
-                )
-            );
-        }
-
-        if (!class_exists($eventClass)) {
-            throw new UnknownEventException(
-                sprintf(
-                    'Event class "%s" does not exist',
-                    $eventClass
-                )
-            );
-        }
-
-        if (!in_array(Subscriber::class, class_implements($subscriberInterface), true)) {
-            throw new InvalidSubscriberException(
-                sprintf(
-                    'Subscriber "%s" does not implement Subscriber interface',
-                    $subscriberInterface
-                )
-            );
-        }
-
-        if (!in_array(Event::class, class_implements($eventClass), true)) {
-            throw new InvalidEventException(
-                sprintf(
-                    'Event "%s" does not implement Event interface',
-                    $eventClass
-                )
-            );
-        }
-
-        if (array_key_exists($subscriberInterface, $this->mapping)) {
-            throw new SubscriberTypeAlreadyRegisteredException(
-                sprintf(
-                    'Subscriber type "%s" already registered - cannot overwrite',
-                    $subscriberInterface
-                )
-            );
-        }
-
-        if (in_array($eventClass, $this->mapping, true)) {
-            throw new EventAlreadyAssignedException(
-                sprintf(
-                    'Event "%s" already assigned - cannot add multiple subscriber types for an event type',
-                    $eventClass
-                )
-            );
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->mapping[$subscriberInterface] = $eventClass;
     }
@@ -143,8 +81,6 @@ final class TypeMap
         throw new MapError(
             sprintf(
                 'Subscriber "%s" does not implement a known interface',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $subscriber::class,
             ),
         );
@@ -251,15 +187,4 @@ final class TypeMap
             );
         }
     }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $subscriber::class
-            )
-        );
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

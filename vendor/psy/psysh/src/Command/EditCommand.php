@@ -79,15 +79,7 @@ class EditCommand extends Command implements ContextAware
      * @throws \InvalidArgumentException when both exec and no-exec flags are given or if a given variable is not found in the current context
      * @throws \UnexpectedValueException if file_get_contents on the edited file returns false instead of a string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($input->getOption('exec') &&
             $input->getOption('no-exec')) {
@@ -123,15 +115,7 @@ class EditCommand extends Command implements ContextAware
      * @param bool        $noExecOption
      * @param string|null $filePath
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function shouldExecuteFile(bool $execOption, bool $noExecOption, ?string $filePath = null): bool
-=======
-    private function shouldExecuteFile(bool $execOption, bool $noExecOption, string $filePath = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function shouldExecuteFile(bool $execOption, bool $noExecOption, string $filePath = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($execOption) {
             return true;
@@ -152,15 +136,7 @@ class EditCommand extends Command implements ContextAware
      *
      * @throws \InvalidArgumentException If the variable is not found in the current context
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function extractFilePath(?string $fileArgument = null)
-=======
-    private function extractFilePath(string $fileArgument = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function extractFilePath(string $fileArgument = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // If the file argument was a variable, get it from the context
         if ($fileArgument !== null &&

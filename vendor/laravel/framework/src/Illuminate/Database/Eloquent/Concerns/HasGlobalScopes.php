@@ -3,29 +3,15 @@
 namespace Illuminate\Database\Eloquent\Concerns;
 
 use Closure;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use ReflectionClass;
-=======
-use Illuminate\Database\Eloquent\Scope;
-use Illuminate\Support\Arr;
-use InvalidArgumentException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Database\Eloquent\Scope;
-use Illuminate\Support\Arr;
-use InvalidArgumentException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 trait HasGlobalScopes
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Boot the has global scopes trait for a model.
      *
      * @return void
@@ -51,10 +37,6 @@ trait HasGlobalScopes
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Register a new global scope on the model.
      *
      * @param  \Illuminate\Database\Eloquent\Scope|\Closure|string  $scope
@@ -71,8 +53,6 @@ trait HasGlobalScopes
             return static::$globalScopes[static::class][spl_object_hash($scope)] = $scope;
         } elseif ($scope instanceof Scope) {
             return static::$globalScopes[static::class][get_class($scope)] = $scope;
-<<<<<<< HEAD
-<<<<<<< HEAD
         } elseif (is_string($scope) && class_exists($scope) && is_subclass_of($scope, Scope::class)) {
             return static::$globalScopes[static::class][$scope] = new $scope;
         }
@@ -95,16 +75,6 @@ trait HasGlobalScopes
                 static::addGlobalScope($scope);
             }
         }
-=======
-        }
-
-        throw new InvalidArgumentException('Global scope must be an instance of Closure or Scope.');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        }
-
-        throw new InvalidArgumentException('Global scope must be an instance of Closure or Scope.');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -136,8 +106,6 @@ trait HasGlobalScopes
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get all of the global scopes that are currently registered.
      *
      * @return array
@@ -159,10 +127,6 @@ trait HasGlobalScopes
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the global scopes for this class instance.
      *
      * @return array

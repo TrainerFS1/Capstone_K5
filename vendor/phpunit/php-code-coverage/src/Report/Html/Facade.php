@@ -15,23 +15,11 @@ use function date;
 use function dirname;
 use function str_ends_with;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\CodeCoverage\Report\Thresholds;
 use SebastianBergmann\CodeCoverage\Util\Filesystem;
 use SebastianBergmann\Template\Exception;
-=======
-use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
-use SebastianBergmann\CodeCoverage\Report\Thresholds;
-use SebastianBergmann\CodeCoverage\Util\Filesystem;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
-use SebastianBergmann\CodeCoverage\Report\Thresholds;
-use SebastianBergmann\CodeCoverage\Util\Filesystem;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\Template\Template;
 
 final class Facade
@@ -62,15 +50,7 @@ final class Facade
             $this->generator,
             $date,
             $this->thresholds,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $coverage->collectsBranchAndPathCoverage(),
-=======
-            $coverage->collectsBranchAndPathCoverage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $coverage->collectsBranchAndPathCoverage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $directory = new Directory(
@@ -78,15 +58,7 @@ final class Facade
             $this->generator,
             $date,
             $this->thresholds,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $coverage->collectsBranchAndPathCoverage(),
-=======
-            $coverage->collectsBranchAndPathCoverage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $coverage->collectsBranchAndPathCoverage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $file = new File(
@@ -94,15 +66,7 @@ final class Facade
             $this->generator,
             $date,
             $this->thresholds,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $coverage->collectsBranchAndPathCoverage(),
-=======
-            $coverage->collectsBranchAndPathCoverage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $coverage->collectsBranchAndPathCoverage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $directory->render($report, $target . 'index.html');
@@ -162,8 +126,6 @@ final class Facade
                 'success-high'   => $this->colors->successHigh(),
                 'warning'        => $this->colors->warning(),
                 'danger'         => $this->colors->danger(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             ],
         );
 
@@ -176,17 +138,6 @@ final class Facade
                 $e,
             );
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            ]
-        );
-
-        $template->renderTo($this->directory($target . '_css') . 'style.css');
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     private function directory(string $directory): string

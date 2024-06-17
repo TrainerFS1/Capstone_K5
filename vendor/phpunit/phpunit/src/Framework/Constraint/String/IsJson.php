@@ -9,13 +9,7 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function is_string;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function json_decode;
 use function json_last_error;
 use function sprintf;
@@ -39,15 +33,7 @@ final class IsJson extends Constraint
      */
     protected function matches(mixed $other): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!is_string($other) || $other === '') {
-=======
-        if ($other === '') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($other === '') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return false;
         }
 
@@ -68,22 +54,14 @@ final class IsJson extends Constraint
      */
     protected function failureDescription(mixed $other): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!is_string($other)) {
             return $this->valueToTypeStringFragment($other) . 'is valid JSON';
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($other === '') {
             return 'an empty string is valid JSON';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return sprintf(
             'a string is valid JSON (%s)',
             $this->determineJsonError($other),
@@ -104,23 +82,4 @@ final class IsJson extends Constraint
             default                   => 'Unknown error',
         };
     }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        json_decode($other);
-
-        $error = (string) JsonMatchesErrorMessageProvider::determineJsonError(
-            json_last_error()
-        );
-
-        return sprintf(
-            '%s is valid JSON (%s)',
-            $this->exporter()->shortenedExport($other),
-            $error
-        );
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

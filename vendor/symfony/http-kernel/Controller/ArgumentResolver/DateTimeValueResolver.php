@@ -11,13 +11,7 @@
 
 namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Psr\Clock\ClockInterface;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\MapDateTime;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
@@ -33,17 +27,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 final class DateTimeValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(
         private readonly ?ClockInterface $clock = null,
     ) {
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @deprecated since Symfony 6.2, use resolve() instead
      */
@@ -63,8 +51,6 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
         $value = $request->attributes->get($argument->getName());
         $class = \DateTimeInterface::class === $argument->getType() ? \DateTimeImmutable::class : $argument->getType();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!$value) {
             if ($argument->isNullable()) {
                 return [null];
@@ -75,27 +61,10 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
             $value = $this->clock->now();
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($value instanceof \DateTimeInterface) {
             return [$value instanceof $class ? $value : $class::createFromInterface($value)];
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($argument->isNullable() && !$value) {
-            return [null];
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $format = null;
 
         if ($attributes = $argument->getAttributes(MapDateTime::class, ArgumentMetadata::IS_INSTANCEOF)) {
@@ -104,15 +73,7 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
         }
 
         if (null !== $format) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $date = $class::createFromFormat($format, $value, $this->clock?->now()->getTimeZone());
-=======
-            $date = $class::createFromFormat($format, $value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $date = $class::createFromFormat($format, $value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (($class::getLastErrors() ?: ['warning_count' => 0])['warning_count']) {
                 $date = false;
@@ -122,15 +83,7 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
                 $value = '@'.$value;
             }
             try {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $date = new $class($value, $this->clock?->now()->getTimeZone());
-=======
-                $date = new $class($value ?? 'now');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $date = new $class($value ?? 'now');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } catch (\Exception) {
                 $date = false;
             }

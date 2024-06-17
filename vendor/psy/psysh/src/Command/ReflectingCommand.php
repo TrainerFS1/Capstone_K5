@@ -11,32 +11,16 @@
 
 namespace Psy\Command;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\NodeTraverser;
 use PhpParser\PrettyPrinter\Standard as Printer;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psy\CodeCleaner\NoReturnValue;
 use Psy\Context;
 use Psy\ContextAware;
 use Psy\Exception\ErrorException;
 use Psy\Exception\RuntimeException;
 use Psy\Exception\UnexpectedTargetException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Psy\Reflection\ReflectionConstant;
 use Psy\Sudo\SudoVisitor;
-=======
-use Psy\Reflection\ReflectionClassConstant;
-use Psy\Reflection\ReflectionConstant_;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Psy\Reflection\ReflectionClassConstant;
-use Psy\Reflection\ReflectionConstant_;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psy\Util\Mirror;
 
 /**
@@ -56,8 +40,6 @@ abstract class ReflectingCommand extends Command implements ContextAware
      */
     protected $context;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private $parser;
     private $traverser;
     private $printer;
@@ -78,10 +60,6 @@ abstract class ReflectingCommand extends Command implements ContextAware
         parent::__construct($name);
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * ContextAware interface.
      *
@@ -214,18 +192,10 @@ abstract class ReflectingCommand extends Command implements ContextAware
     protected function resolveCode(string $code)
     {
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
             // Add an implicit `sudo` to target resolution.
             $nodes = $this->traverser->traverse($this->parser->parse($code));
             $sudoCode = $this->printer->prettyPrint($nodes);
             $value = $this->getApplication()->execute($sudoCode, true);
-=======
-            $value = $this->getApplication()->execute($code, true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $value = $this->getApplication()->execute($code, true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (\Throwable $e) {
             // Swallow all exceptions?
         }
@@ -258,29 +228,6 @@ abstract class ReflectingCommand extends Command implements ContextAware
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated Use `resolveCode` instead
-     *
-     * @param string $name
-     *
-     * @return mixed Variable instance
-     */
-    protected function resolveInstance(string $name)
-    {
-        @\trigger_error('`resolveInstance` is deprecated; use `resolveCode` instead.', \E_USER_DEPRECATED);
-
-        return $this->resolveCode($name);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a variable from the current shell scope.
      *
      * @param string $name
@@ -353,14 +300,6 @@ abstract class ReflectingCommand extends Command implements ContextAware
 
             case \ReflectionProperty::class:
             case \ReflectionClassConstant::class:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            case ReflectionClassConstant::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            case ReflectionClassConstant::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $classReflector = $reflector->getDeclaringClass();
                 $vars['__class'] = $classReflector->name;
                 if ($classReflector->inNamespace()) {
@@ -373,15 +312,7 @@ abstract class ReflectingCommand extends Command implements ContextAware
                 }
                 break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             case ReflectionConstant::class:
-=======
-            case ReflectionConstant_::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            case ReflectionConstant_::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($reflector->inNamespace()) {
                     $vars['__namespace'] = $reflector->getNamespaceName();
                 }

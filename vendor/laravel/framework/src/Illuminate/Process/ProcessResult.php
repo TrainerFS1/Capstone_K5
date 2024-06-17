@@ -113,14 +113,8 @@ class ProcessResult implements ProcessResultContract
      *
      * @param  callable|null  $callback
      * @return $this
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throws \Illuminate\Process\Exceptions\ProcessFailedException
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function throw(callable $callback = null)
     {
@@ -143,14 +137,8 @@ class ProcessResult implements ProcessResultContract
      * @param  bool  $condition
      * @param  callable|null  $callback
      * @return $this
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throws \Throwable
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function throwIf(bool $condition, callable $callback = null)
     {

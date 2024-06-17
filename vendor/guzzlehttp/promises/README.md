@@ -29,8 +29,6 @@ for a general introduction to promises.
   `GuzzleHttp\Promise\Coroutine::of()`.
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Installation
 
 ```shell
@@ -46,10 +44,6 @@ composer require guzzlehttp/promises
 | 2.x     | Latest                 | >=7.2.5,<8.4 |
 
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## Quick Start
 
 A *promise* represents the eventual result of an asynchronous operation. The
@@ -451,16 +445,6 @@ $loop = React\EventLoop\Factory::create();
 $loop->addPeriodicTimer(0, [$queue, 'run']);
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-*TODO*: Perhaps adding a `futureTick()` on each tick would be faster?
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-*TODO*: Perhaps adding a `futureTick()` on each tick would be faster?
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 ## Implementation Notes
 
@@ -530,18 +514,8 @@ $promise->resolve('foo');
 
 A static API was first introduced in 1.4.0, in order to mitigate problems with
 functions conflicting between global and local copies of the package. The
-<<<<<<< HEAD
-<<<<<<< HEAD
 function API was removed in 2.0.0. A migration table has been provided here for
 your convenience:
-=======
-function API will be removed in 2.0.0. A migration table has been provided here
-for your convenience:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-function API will be removed in 2.0.0. A migration table has been provided here
-for your convenience:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 | Original Function | Replacement Method |
 |----------------|----------------|

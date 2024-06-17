@@ -31,24 +31,11 @@ class ConfigPaths
      * @param string[]     $overrides Directory overrides
      * @param EnvInterface $env
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(array $overrides = [], ?EnvInterface $env = null)
     {
         $this->overrideDirs($overrides);
 
         $this->env = $env ?: (\PHP_SAPI === 'cli-server' ? new SystemEnv() : new SuperglobalsEnv());
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct(array $overrides = [], EnvInterface $env = null)
-    {
-        $this->overrideDirs($overrides);
-        $this->env = $env ?: new SuperglobalsEnv();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -134,41 +121,6 @@ class ConfigPaths
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated
-     */
-    public static function getConfigDirs(): array
-    {
-        return (new self())->configDirs();
-    }
-
-    /**
-     * Get potential home config directory paths.
-     *
-     * Returns `~/.psysh`, `%APPDATA%/PsySH` (when on Windows), and the
-     * XDG Base Directory home config directory:
-     *
-     *     http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
-     *
-     * @deprecated
-     *
-     * @return string[]
-     */
-    public static function getHomeConfigDirs(): array
-    {
-        // Not quite the same, but this is deprecated anyway /shrug
-        return self::getConfigDirs();
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the current home config directory.
      *
      * Returns the highest precedence home config directory which actually
@@ -196,23 +148,6 @@ class ConfigPaths
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated
-     */
-    public static function getCurrentConfigDir(): string
-    {
-        return (new self())->currentConfigDir();
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Find real config files in config directories.
      *
      * @param string[] $names Config file names
@@ -225,23 +160,6 @@ class ConfigPaths
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated
-     */
-    public static function getConfigFiles(array $names, $configDir = null): array
-    {
-        return (new self(['configDir' => $configDir]))->configFiles($names);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get potential data directory paths.
      *
      * If a `dataDir` option was explicitly set, returns an array containing
@@ -266,23 +184,6 @@ class ConfigPaths
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated
-     */
-    public static function getDataDirs(): array
-    {
-        return (new self())->dataDirs();
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Find real data files in config directories.
      *
      * @param string[] $names Config file names
@@ -295,23 +196,6 @@ class ConfigPaths
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated
-     */
-    public static function getDataFiles(array $names, $dataDir = null): array
-    {
-        return (new self(['dataDir' => $dataDir]))->dataFiles($names);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a runtime directory.
      *
      * Defaults to `/psysh` inside the system's temp dir.
@@ -329,23 +213,6 @@ class ConfigPaths
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @deprecated
-     */
-    public static function getRuntimeDir(): string
-    {
-        return (new self())->runtimeDir();
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a list of directories in PATH.
      *
      * If $PATH is unset/empty it defaults to '/usr/sbin:/usr/bin:/sbin:/bin'.

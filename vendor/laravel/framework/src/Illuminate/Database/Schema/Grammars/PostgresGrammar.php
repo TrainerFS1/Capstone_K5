@@ -79,8 +79,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the query to determine the tables.
      *
      * @return string
@@ -152,14 +150,6 @@ class PostgresGrammar extends Grammar
      *
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
-     * Compile the query to determine the list of columns.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Compile the query to determine the list of columns.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
      */
     public function compileColumnListing()
@@ -168,8 +158,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the query to determine the columns.
      *
      * @param  string  $database
@@ -250,10 +238,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a create table command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
@@ -538,8 +522,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the SQL needed to drop all domains.
      *
      * @param  array  $domains
@@ -548,45 +530,13 @@ class PostgresGrammar extends Grammar
     public function compileDropAllDomains($domains)
     {
         return 'drop domain '.implode(',', $this->escapeNames($domains)).' cascade';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Compile the SQL needed to retrieve all table names.
-     *
-     * @param  string|array  $searchPath
-     * @return string
-     */
-    public function compileGetAllTables($searchPath)
-    {
-        return "select tablename, concat('\"', schemaname, '\".\"', tablename, '\"') as qualifiedname from pg_catalog.pg_tables where schemaname in ('".implode("','", (array) $searchPath)."')";
-    }
-
-    /**
-     * Compile the SQL needed to retrieve all view names.
-     *
-     * @param  string|array  $searchPath
-     * @return string
-     */
-    public function compileGetAllViews($searchPath)
-    {
-        return "select viewname, concat('\"', schemaname, '\".\"', viewname, '\"') as qualifiedname from pg_catalog.pg_views where schemaname in ('".implode("','", (array) $searchPath)."')";
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * Compile the SQL needed to retrieve all type names.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string
      */
     public function compileGetAllTypes()
@@ -617,15 +567,7 @@ class PostgresGrammar extends Grammar
      */
     public function compileDropPrimary(Blueprint $blueprint, Fluent $command)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $index = $this->wrap("{$blueprint->getPrefix()}{$blueprint->getTable()}_pkey");
-=======
-        $index = $this->wrap("{$blueprint->getTable()}_pkey");
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $index = $this->wrap("{$blueprint->getTable()}_pkey");
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return 'alter table '.$this->wrapTable($blueprint)." drop constraint {$index}";
     }
@@ -1355,15 +1297,7 @@ class PostgresGrammar extends Grammar
         }
 
         if (! is_null($column->virtualAs)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return " generated always as ({$this->getValue($column->virtualAs)})";
-=======
-            return " generated always as ({$column->virtualAs})";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return " generated always as ({$column->virtualAs})";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -1387,15 +1321,7 @@ class PostgresGrammar extends Grammar
         }
 
         if (! is_null($column->storedAs)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return " generated always as ({$this->getValue($column->storedAs)}) stored";
-=======
-            return " generated always as ({$column->storedAs}) stored";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return " generated always as ({$column->storedAs}) stored";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 

@@ -6,23 +6,11 @@
 
 namespace Whoops\Exception;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Whoops\Inspector\InspectorFactory;
 use Whoops\Inspector\InspectorInterface;
 use Whoops\Util\Misc;
 
 class Inspector implements InspectorInterface
-=======
-use Whoops\Util\Misc;
-
-class Inspector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Whoops\Util\Misc;
-
-class Inspector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * @var \Throwable
@@ -45,8 +33,6 @@ class Inspector
     private $previousExceptions;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var \Whoops\Inspector\InspectorFactoryInterface|null
      */
     protected $inspectorFactory;
@@ -59,18 +45,6 @@ class Inspector
     {
         $this->exception = $exception;
         $this->inspectorFactory = $factory ?: new InspectorFactory();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param \Throwable $exception The exception to inspect
-     */
-    public function __construct($exception)
-    {
-        $this->exception = $exception;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -172,15 +146,7 @@ class Inspector
             $previousException = $this->exception->getPrevious();
 
             if ($previousException) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->previousExceptionInspector = $this->inspectorFactory->create($previousException);
-=======
-                $this->previousExceptionInspector = new Inspector($previousException);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->previousExceptionInspector = new Inspector($previousException);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -210,24 +176,12 @@ class Inspector
     /**
      * Returns an iterator for the inspected exception's
      * frames.
-<<<<<<< HEAD
-<<<<<<< HEAD
      * 
      * @param array<callable> $frameFilters
      * 
      * @return \Whoops\Exception\FrameCollection
      */
     public function getFrames(array $frameFilters = [])
-=======
-     * @return \Whoops\Exception\FrameCollection
-     */
-    public function getFrames()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Whoops\Exception\FrameCollection
-     */
-    public function getFrames()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->frames === null) {
             $frames = $this->getTrace($this->exception);
@@ -283,8 +237,6 @@ class Inspector
                 $newFrames->prependFrames($outerFrames->topDiff($newFrames));
                 $this->frames = $newFrames;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             // Apply frame filters callbacks on the frames stack
             if (!empty($frameFilters)) {
@@ -292,10 +244,6 @@ class Inspector
                     $this->frames->filter($filterCallback);
                 }
             }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this->frames;
@@ -372,14 +320,6 @@ class Inspector
      * Determine if the frame can be used to fill in previous frame's missing info
      * happens for call_user_func and call_user_func_array usages (PHP Bug #44428)
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @param array $frame
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param array $frame
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return bool
      */
     protected function isValidNextFrame(array $frame)

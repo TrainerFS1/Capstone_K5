@@ -2,13 +2,7 @@
 
 namespace Illuminate\Validation\Rules;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use BackedEnum;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Model;
@@ -88,15 +82,7 @@ trait DatabaseRule
      * Set a "where" constraint on the query.
      *
      * @param  \Closure|string  $column
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|\Closure|array|string|int|bool|null  $value
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array|string|int|null  $value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array|string|int|null  $value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function where($column, $value = null)
@@ -113,16 +99,10 @@ trait DatabaseRule
             return $this->whereNull($column);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($value instanceof BackedEnum) {
             $value = $value->value;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->wheres[] = compact('column', 'value');
 
         return $this;
@@ -132,15 +112,7 @@ trait DatabaseRule
      * Set a "where not" constraint on the query.
      *
      * @param  string  $column
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array|string  $value
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array|string  $value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function whereNot($column, $value)
@@ -149,16 +121,10 @@ trait DatabaseRule
             return $this->whereNotIn($column, $value);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($value instanceof BackedEnum) {
             $value = $value->value;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->where($column, '!'.$value);
     }
 
@@ -188,15 +154,7 @@ trait DatabaseRule
      * Set a "where in" constraint on the query.
      *
      * @param  string  $column
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array  $values
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function whereIn($column, $values)
@@ -210,15 +168,7 @@ trait DatabaseRule
      * Set a "where not in" constraint on the query.
      *
      * @param  string  $column
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Support\Arrayable|\BackedEnum|array  $values
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function whereNotIn($column, $values)

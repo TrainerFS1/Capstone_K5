@@ -36,23 +36,8 @@ class ExpressionLanguageProvider implements ExpressionFunctionProviderInterface
         foreach ($this->functions->getProvidedServices() as $function => $type) {
             $functions[] = new ExpressionFunction(
                 $function,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 static fn (...$args) => sprintf('($context->getParameter(\'_functions\')->get(%s)(%s))', var_export($function, true), implode(', ', $args)),
                 fn ($values, ...$args) => $values['context']->getParameter('_functions')->get($function)(...$args)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                static function (...$args) use ($function) {
-                    return sprintf('($context->getParameter(\'_functions\')->get(%s)(%s))', var_export($function, true), implode(', ', $args));
-                },
-                function ($values, ...$args) use ($function) {
-                    return $values['context']->getParameter('_functions')->get($function)(...$args);
-                }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

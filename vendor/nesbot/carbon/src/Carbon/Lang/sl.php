@@ -51,15 +51,7 @@ return [
 
     'year_ago' => ':count letom|:count letoma|:count leti|:count leti',
     'y_ago' => ':count letom|:count letoma|:count leti|:count leti',
-<<<<<<< HEAD
-<<<<<<< HEAD
     'month_ago' => ':count mesecem|:count mesecema|:count meseci|:count meseci',
-=======
-    'month_ago' => ':count mesecem|:count meseci|:count meseci|:count meseci',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    'month_ago' => ':count mesecem|:count meseci|:count meseci|:count meseci',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'week_ago' => ':count tednom|:count tednoma|:count tedni|:count tedni',
     'day_ago' => ':count dnem|:count dnevoma|:count dnevi|:count dnevi',
     'd_ago' => ':count dnem|:count dnevoma|:count dnevi|:count dnevi',

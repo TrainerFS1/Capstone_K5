@@ -6,15 +6,9 @@ use Closure;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Cache\RateLimiter;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Cache\RateLimiting\Unlimited;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\View\Components\BulletList;
 use Illuminate\Console\View\Components\Error;
 use Illuminate\Contracts\Container\Container;
@@ -33,13 +27,7 @@ use Illuminate\Routing\Router;
 use Illuminate\Session\TokenMismatchException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Lottery;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Reflector;
 use Illuminate\Support\Traits\ReflectsClosures;
 use Illuminate\Support\ViewErrorBag;
@@ -58,13 +46,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use WeakMap;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class Handler implements ExceptionHandlerContract
 {
@@ -113,8 +95,6 @@ class Handler implements ExceptionHandlerContract
     protected $exceptionMap = [];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicates that throttled keys should be hashed.
      *
      * @var bool
@@ -122,10 +102,6 @@ class Handler implements ExceptionHandlerContract
     protected $hashThrottleKeys = true;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * A list of the internal exception types that should not be reported.
      *
      * @var array<int, class-string<\Throwable>>
@@ -156,8 +132,6 @@ class Handler implements ExceptionHandlerContract
     ];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicates that an exception instance should only be reported once.
      *
      * @var bool
@@ -172,10 +146,6 @@ class Handler implements ExceptionHandlerContract
     protected $reportedExceptionMap;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new exception handler instance.
      *
      * @param  \Illuminate\Contracts\Container\Container  $container
@@ -185,14 +155,8 @@ class Handler implements ExceptionHandlerContract
     {
         $this->container = $container;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->reportedExceptionMap = new WeakMap;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->register();
     }
 
@@ -311,8 +275,6 @@ class Handler implements ExceptionHandlerContract
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->reportThrowable($e);
     }
 
@@ -328,10 +290,6 @@ class Handler implements ExceptionHandlerContract
     {
         $this->reportedExceptionMap[$e] = true;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (Reflector::isCallable($reportCallable = [$e, 'report']) &&
             $this->container->call($reportCallable) !== false) {
             return;
@@ -344,18 +302,8 @@ class Handler implements ExceptionHandlerContract
         }
 
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $logger = $this->newLogger();
         } catch (Exception) {
-=======
-            $logger = $this->container->make(LoggerInterface::class);
-        } catch (Exception $ex) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $logger = $this->container->make(LoggerInterface::class);
-        } catch (Exception $ex) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw $e;
         }
 
@@ -389,8 +337,6 @@ class Handler implements ExceptionHandlerContract
      */
     protected function shouldntReport(Throwable $e)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($this->withoutDuplicates && ($this->reportedExceptionMap[$e] ?? false)) {
             return true;
         }
@@ -428,16 +374,6 @@ class Handler implements ExceptionHandlerContract
     protected function throttle(Throwable $e)
     {
         return Limit::none();
-=======
-        $dontReport = array_merge($this->dontReport, $this->internalDontReport);
-
-        return ! is_null(Arr::first($dontReport, fn ($type) => $e instanceof $type));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $dontReport = array_merge($this->dontReport, $this->internalDontReport);
-
-        return ! is_null(Arr::first($dontReport, fn ($type) => $e instanceof $type));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -498,15 +434,7 @@ class Handler implements ExceptionHandlerContract
             return array_filter([
                 'userId' => Auth::id(),
             ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Throwable) {
-=======
-        } catch (Throwable $e) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        } catch (Throwable $e) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return [];
         }
     }
@@ -522,14 +450,8 @@ class Handler implements ExceptionHandlerContract
      */
     public function render($request, Throwable $e)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $e = $this->mapException($e);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (method_exists($e, 'render') && $response = $e->render($request)) {
             return Router::toResponse($request, $response);
         }
@@ -538,15 +460,7 @@ class Handler implements ExceptionHandlerContract
             return $e->toResponse($request);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $e = $this->prepareException($e);
-=======
-        $e = $this->prepareException($this->mapException($e));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $e = $this->prepareException($this->mapException($e));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($response = $this->renderViaCallbacks($request, $e)) {
             return $response;
@@ -633,15 +547,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Throwable  $e
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Symfony\Component\HttpFoundation\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Symfony\Component\HttpFoundation\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function renderExceptionResponse($request, Throwable $e)
     {
@@ -655,15 +561,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Auth\AuthenticationException  $exception
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Symfony\Component\HttpFoundation\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Symfony\Component\HttpFoundation\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function unauthenticated($request, AuthenticationException $exception)
     {
@@ -695,15 +593,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Validation\ValidationException  $exception
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Illuminate\Http\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Http\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function invalid($request, ValidationException $exception)
     {
@@ -744,15 +634,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Throwable  $e
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Symfony\Component\HttpFoundation\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Symfony\Component\HttpFoundation\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function prepareResponse($request, Throwable $e)
     {
@@ -837,8 +719,6 @@ class Handler implements ExceptionHandlerContract
         $this->registerErrorViewPaths();
 
         if ($view = $this->getHttpExceptionView($e)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             try {
                 return response()->view($view, [
                     'errors' => new ViewErrorBag,
@@ -849,17 +729,6 @@ class Handler implements ExceptionHandlerContract
 
                 $this->report($t);
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            return response()->view($view, [
-                'errors' => new ViewErrorBag,
-                'exception' => $e,
-            ], $e->getStatusCode(), $e->getHeaders());
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this->convertExceptionToResponse($e);
@@ -903,15 +772,7 @@ class Handler implements ExceptionHandlerContract
      *
      * @param  \Symfony\Component\HttpFoundation\Response  $response
      * @param  \Throwable  $e
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
-=======
-     * @return \Illuminate\Http\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Http\Response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function toIlluminateResponse($response, Throwable $e)
     {
@@ -982,15 +843,7 @@ class Handler implements ExceptionHandlerContract
                 $message .= '. Did you mean one of these?';
 
                 with(new Error($output))->render($message);
-<<<<<<< HEAD
-<<<<<<< HEAD
                 with(new BulletList($output))->render($alternatives);
-=======
-                with(new BulletList($output))->render($e->getAlternatives());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                with(new BulletList($output))->render($e->getAlternatives());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 $output->writeln('');
             } else {
@@ -1004,8 +857,6 @@ class Handler implements ExceptionHandlerContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Do not report duplicate exceptions.
      *
      * @return $this
@@ -1018,10 +869,6 @@ class Handler implements ExceptionHandlerContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the given exception is an HTTP exception.
      *
      * @param  \Throwable  $e
@@ -1031,8 +878,6 @@ class Handler implements ExceptionHandlerContract
     {
         return $e instanceof HttpExceptionInterface;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Create a new logger instance.
@@ -1043,8 +888,4 @@ class Handler implements ExceptionHandlerContract
     {
         return $this->container->make(LoggerInterface::class);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

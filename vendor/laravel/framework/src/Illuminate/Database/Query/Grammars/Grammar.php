@@ -2,24 +2,12 @@
 
 namespace Illuminate\Database\Query\Grammars;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Contracts\Database\Query\Expression;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Concerns\CompilesJsonPaths;
 use Illuminate\Database\Grammar as BaseGrammar;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Query\JoinLateralClause;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Arr;
 use RuntimeException;
 
@@ -195,23 +183,15 @@ class Grammar extends BaseGrammar
 
             $tableAndNestedJoins = is_null($join->joins) ? $table : '('.$table.$nestedJoins.')';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($join instanceof JoinLateralClause) {
                 return $this->compileJoinLateral($join, $tableAndNestedJoins);
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return trim("{$join->type} join {$tableAndNestedJoins} {$this->compileWheres($join)}");
         })->implode(' ');
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile a "lateral join" clause.
      *
      * @param  \Illuminate\Database\Query\JoinLateralClause  $join
@@ -226,10 +206,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the "where" portions of the query.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -290,15 +266,7 @@ class Grammar extends BaseGrammar
      */
     protected function whereRaw(Builder $query, $where)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $where['sql'] instanceof Expression ? $where['sql']->getValue($this) : $where['sql'];
-=======
-        return $where['sql'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $where['sql'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -556,15 +524,7 @@ class Grammar extends BaseGrammar
         // Here we will calculate what portion of the string we need to remove. If this
         // is a join clause query, we need to remove the "on" portion of the SQL and
         // if it is a normal query we need to take the leading "where" of queries.
-<<<<<<< HEAD
-<<<<<<< HEAD
         $offset = $where['query'] instanceof JoinClause ? 3 : 6;
-=======
-        $offset = $query instanceof JoinClause ? 3 : 6;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $offset = $query instanceof JoinClause ? 3 : 6;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return '('.substr($this->compileWheres($where['query']), $offset).')';
     }
@@ -680,15 +640,7 @@ class Grammar extends BaseGrammar
      */
     public function prepareBindingForJsonContains($binding)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return json_encode($binding, JSON_UNESCAPED_UNICODE);
-=======
-        return json_encode($binding);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return json_encode($binding);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -775,8 +727,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile a clause based on an expression.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -789,10 +739,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the "group by" portions of the query.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -828,8 +774,6 @@ class Grammar extends BaseGrammar
         // If the having clause is "raw", we can just return the clause straight away
         // without doing any more processing on it. Otherwise, we will compile the
         // clause into SQL based on the components that make it up from builder.
-<<<<<<< HEAD
-<<<<<<< HEAD
         return match ($having['type']) {
             'Raw' => $having['sql'],
             'between' => $this->compileHavingBetween($having),
@@ -840,28 +784,6 @@ class Grammar extends BaseGrammar
             'Nested' => $this->compileNestedHavings($having),
             default => $this->compileBasicHaving($having),
         };
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($having['type'] === 'Raw') {
-            return $having['sql'];
-        } elseif ($having['type'] === 'between') {
-            return $this->compileHavingBetween($having);
-        } elseif ($having['type'] === 'Null') {
-            return $this->compileHavingNull($having);
-        } elseif ($having['type'] === 'NotNull') {
-            return $this->compileHavingNotNull($having);
-        } elseif ($having['type'] === 'bit') {
-            return $this->compileHavingBit($having);
-        } elseif ($having['type'] === 'Nested') {
-            return $this->compileNestedHavings($having);
-        }
-
-        return $this->compileBasicHaving($having);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -940,8 +862,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile a having clause involving an expression.
      *
      * @param  array  $having
@@ -953,10 +873,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile a nested having clause.
      *
      * @param  array  $having
@@ -1184,8 +1100,6 @@ class Grammar extends BaseGrammar
      */
     public function compileInsertUsing(Builder $query, array $columns, string $sql)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $table = $this->wrapTable($query->from);
 
         if (empty($columns) || $columns === ['*']) {
@@ -1208,12 +1122,6 @@ class Grammar extends BaseGrammar
     public function compileInsertOrIgnoreUsing(Builder $query, array $columns, string $sql)
     {
         throw new RuntimeException('This database engine does not support inserting while ignoring errors.');
-=======
-        return "insert into {$this->wrapTable($query->from)} ({$this->columnize($columns)}) $sql";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return "insert into {$this->wrapTable($query->from)} ({$this->columnize($columns)}) $sql";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1478,8 +1386,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Substitute the given bindings into the given raw SQL query.
      *
      * @param  string  $sql
@@ -1518,10 +1424,6 @@ class Grammar extends BaseGrammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the grammar specific operators.
      *
      * @return array

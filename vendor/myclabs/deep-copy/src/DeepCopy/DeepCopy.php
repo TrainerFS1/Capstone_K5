@@ -7,13 +7,7 @@ use DateInterval;
 use DateTimeInterface;
 use DateTimeZone;
 use DeepCopy\Exception\CloneException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use DeepCopy\Filter\ChainableFilter;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use DeepCopy\Filter\Filter;
 use DeepCopy\Matcher\Matcher;
 use DeepCopy\Reflection\ReflectionHelper;
@@ -230,17 +224,11 @@ class DeepCopy
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         // Ignore readonly properties
         if (method_exists($property, 'isReadOnly') && $property->isReadOnly()) {
             return;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Apply the filters
         foreach ($this->filters as $item) {
             /** @var Matcher $matcher */
@@ -257,16 +245,10 @@ class DeepCopy
                     }
                 );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if ($filter instanceof ChainableFilter) {
                     continue;
                 }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // If a filter matches, we stop processing this property
                 return;
             }

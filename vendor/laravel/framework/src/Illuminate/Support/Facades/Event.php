@@ -12,15 +12,7 @@ use Illuminate\Support\Testing\Fakes\EventFake;
  * @method static void push(string $event, object|array $payload = [])
  * @method static void flush(string $event)
  * @method static void subscribe(object|string $subscriber)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static mixed until(string|object $event, mixed $payload = [])
-=======
- * @method static array|null until(string|object $event, mixed $payload = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static array|null until(string|object $event, mixed $payload = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static array|null dispatch(string|object $event, mixed $payload = [], bool $halt = false)
  * @method static array getListeners(string $eventName)
  * @method static \Closure makeListener(\Closure|string|array $listener, bool $wildcard = false)
@@ -28,13 +20,7 @@ use Illuminate\Support\Testing\Fakes\EventFake;
  * @method static void forget(string $event)
  * @method static void forgetPushed()
  * @method static \Illuminate\Events\Dispatcher setQueueResolver(callable $resolver)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Events\Dispatcher setTransactionManagerResolver(callable $resolver)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static array getRawListeners()
  * @method static void macro(string $name, object|callable $macro)
  * @method static void mixin(object $mixin, bool $replace = true)
@@ -62,8 +48,6 @@ class Event extends Facade
      */
     public static function fake($eventsToFake = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $actualDispatcher = static::isFake()
                 ? static::getFacadeRoot()->dispatcher
                 : static::getFacadeRoot();
@@ -74,19 +58,6 @@ class Event extends Facade
             Model::setEventDispatcher($fake);
             Cache::refreshEventDispatcher();
         });
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        static::swap($fake = new EventFake(static::getFacadeRoot(), $eventsToFake));
-
-        Model::setEventDispatcher($fake);
-        Cache::refreshEventDispatcher();
-
-        return $fake;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

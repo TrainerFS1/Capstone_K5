@@ -10,14 +10,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function Laravel\Prompts\suggest;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'make:listener')]
 class ListenerMakeCommand extends GeneratorCommand
 {
@@ -52,15 +46,7 @@ class ListenerMakeCommand extends GeneratorCommand
      */
     protected function buildClass($name)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $event = $this->option('event') ?? '';
-=======
-        $event = $this->option('event');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $event = $this->option('event');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (! Str::startsWith($event, [
             $this->laravel->getNamespace(),
@@ -146,28 +132,12 @@ class ListenerMakeCommand extends GeneratorCommand
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $event = suggest(
             'What event should be listened for? (Optional)',
             $this->possibleEvents(),
         );
 
         if ($event) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $event = $this->components->askWithCompletion(
-            'What event should be listened for?',
-            $this->possibleEvents(),
-            'none'
-        );
-
-        if ($event && $event !== 'none') {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $input->setOption('event', $event);
         }
     }

@@ -6,8 +6,6 @@ namespace League\Flysystem;
 
 use DateTimeInterface;
 use Generator;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use League\Flysystem\UrlGeneration\PrefixPublicUrlGenerator;
 use League\Flysystem\UrlGeneration\PublicUrlGenerator;
 use League\Flysystem\UrlGeneration\ShardedPrefixPublicUrlGenerator;
@@ -15,19 +13,6 @@ use League\Flysystem\UrlGeneration\TemporaryUrlGenerator;
 use Throwable;
 
 use function array_key_exists;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use League\Flysystem\UrlGeneration\ShardedPrefixPublicUrlGenerator;
-use League\Flysystem\UrlGeneration\PrefixPublicUrlGenerator;
-use League\Flysystem\UrlGeneration\PublicUrlGenerator;
-use League\Flysystem\UrlGeneration\TemporaryUrlGenerator;
-use Throwable;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function is_array;
 
 class Filesystem implements FilesystemOperator
@@ -40,28 +25,12 @@ class Filesystem implements FilesystemOperator
     public function __construct(
         private FilesystemAdapter $adapter,
         array $config = [],
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?PathNormalizer $pathNormalizer = null,
-=======
-        PathNormalizer $pathNormalizer = null,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        PathNormalizer $pathNormalizer = null,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         private ?PublicUrlGenerator $publicUrlGenerator = null,
         private ?TemporaryUrlGenerator $temporaryUrlGenerator = null,
     ) {
         $this->config = new Config($config);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->pathNormalizer = $pathNormalizer ?? new WhitespacePathNormalizer();
-=======
-        $this->pathNormalizer = $pathNormalizer ?: new WhitespacePathNormalizer();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->pathNormalizer = $pathNormalizer ?: new WhitespacePathNormalizer();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function fileExists(string $location): bool
@@ -151,8 +120,6 @@ class Filesystem implements FilesystemOperator
 
     public function move(string $source, string $destination, array $config = []): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $config = $this->resolveConfigForMoveAndCopy($config);
         $from = $this->pathNormalizer->normalizePath($source);
         $to = $this->pathNormalizer->normalizePath($destination);
@@ -168,24 +135,10 @@ class Filesystem implements FilesystemOperator
         }
 
         $this->adapter->move($from, $to, $config);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->adapter->move(
-            $this->pathNormalizer->normalizePath($source),
-            $this->pathNormalizer->normalizePath($destination),
-            $this->config->extend($config)
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function copy(string $source, string $destination, array $config = []): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $config = $this->resolveConfigForMoveAndCopy($config);
         $from = $this->pathNormalizer->normalizePath($source);
         $to = $this->pathNormalizer->normalizePath($destination);
@@ -201,18 +154,6 @@ class Filesystem implements FilesystemOperator
         }
 
         $this->adapter->copy($from, $to, $config);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->adapter->copy(
-            $this->pathNormalizer->normalizePath($source),
-            $this->pathNormalizer->normalizePath($destination),
-            $this->config->extend($config)
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function lastModified(string $path): int
@@ -243,29 +184,14 @@ class Filesystem implements FilesystemOperator
     public function publicUrl(string $path, array $config = []): string
     {
         $this->publicUrlGenerator ??= $this->resolvePublicUrlGenerator()
-<<<<<<< HEAD
-<<<<<<< HEAD
             ?? throw UnableToGeneratePublicUrl::noGeneratorConfigured($path);
         $config = $this->config->extend($config);
 
         return $this->publicUrlGenerator->publicUrl($this->pathNormalizer->normalizePath($path), $config);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            ?: throw UnableToGeneratePublicUrl::noGeneratorConfigured($path);
-        $config = $this->config->extend($config);
-
-        return $this->publicUrlGenerator->publicUrl($path, $config);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function temporaryUrl(string $path, DateTimeInterface $expiresAt, array $config = []): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $generator = $this->temporaryUrlGenerator ?? $this->adapter;
 
         if ($generator instanceof TemporaryUrlGenerator) {
@@ -274,17 +200,6 @@ class Filesystem implements FilesystemOperator
                 $expiresAt,
                 $this->config->extend($config)
             );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $generator = $this->temporaryUrlGenerator ?: $this->adapter;
-
-        if ($generator instanceof TemporaryUrlGenerator) {
-            return $generator->temporaryUrl($path, $expiresAt, $this->config->extend($config));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         throw UnableToGenerateTemporaryUrl::noGeneratorConfigured($path);
@@ -346,8 +261,6 @@ class Filesystem implements FilesystemOperator
             rewind($resource);
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     private function resolveConfigForMoveAndCopy(array $config): Config
     {
@@ -365,8 +278,4 @@ class Filesystem implements FilesystemOperator
 
         return $fullConfig;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -2,27 +2,13 @@
 
 namespace Spatie\FlareClient;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Closure;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Closure;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Error;
 use ErrorException;
 use Exception;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Pipeline\Pipeline;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\Backtrace\Arguments\ArgumentReducers;
 use Spatie\Backtrace\Arguments\Reducers\ArgumentReducer;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\FlareClient\Concerns\HasContext;
 use Spatie\FlareClient\Context\BaseContextProviderDetector;
 use Spatie\FlareClient\Context\ContextProviderDetector;
@@ -35,13 +21,7 @@ use Spatie\FlareClient\FlareMiddleware\RemoveRequestIp;
 use Spatie\FlareClient\Glows\Glow;
 use Spatie\FlareClient\Glows\GlowRecorder;
 use Spatie\FlareClient\Http\Client;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\FlareClient\Support\PhpStackFrameArgumentsFixer;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
 
 class Flare
@@ -61,15 +41,7 @@ class Flare
 
     protected ContextProviderDetector $contextDetector;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected mixed $previousExceptionHandler = null;
-=======
-    protected ?Closure $previousExceptionHandler = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected ?Closure $previousExceptionHandler = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /** @var null|callable */
     protected $previousErrorHandler = null;
@@ -91,17 +63,11 @@ class Flare
 
     protected ?Container $container = null;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @var array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null */
     protected null|array|ArgumentReducers $argumentReducers = null;
 
     protected bool $withStackFrameArguments = true;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function make(
         string $apiKey = null,
         ContextProviderDetector $contextDetector = null
@@ -172,8 +138,6 @@ class Flare
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @param array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null $argumentReducers */
     public function argumentReducers(null|array|ArgumentReducers $argumentReducers): self
     {
@@ -195,10 +159,6 @@ class Flare
         return $this;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function version(): ?string
     {
         if (! $this->determineVersionCallable) {
@@ -216,15 +176,7 @@ class Flare
     public function __construct(
         Client $client,
         ContextProviderDetector $contextDetector = null,
-<<<<<<< HEAD
-<<<<<<< HEAD
         array $middleware = [],
-=======
-        array $middleware = []
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        array $middleware = []
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         $this->client = $client;
         $this->recorder = new GlowRecorder();
@@ -266,36 +218,16 @@ class Flare
 
     public function registerExceptionHandler(): self
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        /** @phpstan-ignore-next-line */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        /** @phpstan-ignore-next-line */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->previousExceptionHandler = set_exception_handler([$this, 'handleException']);
 
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function registerErrorHandler(?int $errorLevels = null): self
     {
         $this->previousErrorHandler = $errorLevels
             ? set_error_handler([$this, 'handleError'], $errorLevels)
             : set_error_handler([$this, 'handleError']);
-=======
-    public function registerErrorHandler(): self
-    {
-        $this->previousErrorHandler = set_error_handler([$this, 'handleError']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function registerErrorHandler(): self
-    {
-        $this->previousErrorHandler = set_error_handler([$this, 'handleError']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $this;
     }
@@ -309,15 +241,7 @@ class Flare
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware>|callable $middleware
-=======
-     * @param FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware> $middleware
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware> $middleware
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return $this
      */
@@ -361,15 +285,7 @@ class Flare
     {
         $this->report($throwable);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($this->previousExceptionHandler && is_callable($this->previousExceptionHandler)) {
-=======
-        if ($this->previousExceptionHandler) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($this->previousExceptionHandler) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             call_user_func($this->previousExceptionHandler, $throwable);
         }
     }
@@ -386,18 +302,8 @@ class Flare
         if ($this->previousErrorHandler) {
             return call_user_func(
                 $this->previousErrorHandler,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $code,
                 $message,
-=======
-                $message,
-                $code,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $message,
-                $code,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $file,
                 $line
             );
@@ -411,15 +317,7 @@ class Flare
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function report(Throwable $throwable, callable $callback = null, Report $report = null, ?bool $handled = null): ?Report
-=======
-    public function report(Throwable $throwable, callable $callback = null, Report $report = null): ?Report
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function report(Throwable $throwable, callable $callback = null, Report $report = null): ?Report
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (! $this->shouldSendReport($throwable)) {
             return null;
@@ -427,16 +325,10 @@ class Flare
 
         $report ??= $this->createReport($throwable);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($handled) {
             $report->handled();
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! is_null($callback)) {
             call_user_func($callback, $report);
         }
@@ -448,8 +340,6 @@ class Flare
         return $report;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function reportHandled(Throwable $throwable): ?Report
     {
         return $this->report($throwable, null, null, true);
@@ -467,25 +357,6 @@ class Flare
 
         if ($this->filterExceptionsCallable && $throwable instanceof Exception) {
             return (bool) (call_user_func($this->filterExceptionsCallable, $throwable));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    protected function shouldSendReport(Throwable $throwable): bool
-    {
-        if (isset($this->reportErrorLevels) && $throwable instanceof Error) {
-            return (bool)($this->reportErrorLevels & $throwable->getCode());
-        }
-
-        if (isset($this->reportErrorLevels) && $throwable instanceof ErrorException) {
-            return (bool)($this->reportErrorLevels & $throwable->getSeverity());
-        }
-
-        if ($this->filterExceptionsCallable && $throwable instanceof Exception) {
-            return (bool)(call_user_func($this->filterExceptionsCallable, $throwable));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return true;
@@ -564,17 +435,9 @@ class Flare
             $throwable,
             $this->contextDetector->detectCurrentContext(),
             $this->applicationPath,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->version(),
             $this->argumentReducers,
             $this->withStackFrameArguments
-=======
-            $this->version()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->version()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this->applyMiddlewareToReport($report);
@@ -586,17 +449,9 @@ class Flare
             $message,
             $logLevel,
             $this->contextDetector->detectCurrentContext(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->applicationPath,
             $this->argumentReducers,
             $this->withStackFrameArguments
-=======
-            $this->applicationPath
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->applicationPath
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this->applyMiddlewareToReport($report);
@@ -611,13 +466,7 @@ class Flare
                 : $singleMiddleware;
         }, $this->middleware);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $report = (new Pipeline())
             ->send($report)
             ->through($middleware)

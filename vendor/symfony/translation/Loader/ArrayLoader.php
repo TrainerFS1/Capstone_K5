@@ -43,23 +43,11 @@ class ArrayLoader implements LoaderInterface
         foreach ($messages as $key => $value) {
             if (\is_array($value)) {
                 foreach ($this->flatten($value) as $k => $v) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     if (null !== $v) {
                         $result[$key.'.'.$k] = $v;
                     }
                 }
             } elseif (null !== $value) {
-=======
-                    $result[$key.'.'.$k] = $v;
-                }
-            } else {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $result[$key.'.'.$k] = $v;
-                }
-            } else {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $result[$key] = $value;
             }
         }

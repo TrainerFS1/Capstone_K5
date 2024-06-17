@@ -22,8 +22,6 @@ abstract class AbstractPipes implements PipesInterface
 {
     public array $pipes = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private string $inputBuffer = '';
     /** @var resource|string|\Iterator */
     private $input;
@@ -37,41 +35,12 @@ abstract class AbstractPipes implements PipesInterface
     {
         if (\is_resource($input) || $input instanceof \Iterator) {
             $this->input = $input;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private $inputBuffer = '';
-    private $input;
-    private $blocked = true;
-    private $lastError;
-
-    /**
-     * @param resource|string|int|float|bool|\Iterator|null $input
-     */
-    public function __construct(mixed $input)
-    {
-        if (\is_resource($input) || $input instanceof \Iterator) {
-            $this->input = $input;
-        } elseif (\is_string($input)) {
-            $this->inputBuffer = $input;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             $this->inputBuffer = (string) $input;
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function close(): void
-=======
-    public function close()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function close()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         foreach ($this->pipes as $pipe) {
             if (\is_resource($pipe)) {
@@ -96,15 +65,7 @@ abstract class AbstractPipes implements PipesInterface
     /**
      * Unblocks streams.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function unblock(): void
-=======
-    protected function unblock()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function unblock()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$this->blocked) {
             return;
@@ -208,15 +169,7 @@ abstract class AbstractPipes implements PipesInterface
     /**
      * @internal
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function handleError(int $type, string $msg): void
-=======
-    public function handleError(int $type, string $msg)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function handleError(int $type, string $msg)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->lastError = $msg;
     }

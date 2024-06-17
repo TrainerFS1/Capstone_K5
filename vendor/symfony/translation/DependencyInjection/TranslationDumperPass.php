@@ -20,15 +20,9 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 class TranslationDumperPass implements CompilerPassInterface
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function process(ContainerBuilder $container)
     {
         if (!$container->hasDefinition('translation.writer')) {

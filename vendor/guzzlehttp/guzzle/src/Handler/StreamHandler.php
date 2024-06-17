@@ -67,15 +67,7 @@ class StreamHandler
             if (false !== \strpos($message, 'getaddrinfo') // DNS lookup failed
                 || false !== \strpos($message, 'Connection refused')
                 || false !== \strpos($message, "couldn't connect to host") // error on HHVM
-<<<<<<< HEAD
-<<<<<<< HEAD
                 || false !== \strpos($message, 'connection attempt failed')
-=======
-                || false !== \strpos($message, "connection attempt failed")
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                || false !== \strpos($message, "connection attempt failed")
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ) {
                 $e = new ConnectException($e->getMessage(), $request, $e);
             } else {
@@ -239,22 +231,10 @@ class StreamHandler
         \set_error_handler(static function ($_, $msg, $file, $line) use (&$errors): bool {
             $errors[] = [
                 'message' => $msg,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'file' => $file,
                 'line' => $line,
             ];
 
-=======
-                'file'    => $file,
-                'line'    => $line
-            ];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'file'    => $file,
-                'line'    => $line
-            ];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return true;
         });
 
@@ -268,15 +248,7 @@ class StreamHandler
             $message = 'Error creating resource: ';
             foreach ($errors as $err) {
                 foreach ($err as $key => $value) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $message .= "[$key] $value".\PHP_EOL;
-=======
-                    $message .= "[$key] $value" . \PHP_EOL;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $message .= "[$key] $value" . \PHP_EOL;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
             throw new \RuntimeException(\trim($message));
@@ -379,13 +351,7 @@ class StreamHandler
                 if (false === $records || !isset($records[0]['ip'])) {
                     throw new ConnectException(\sprintf("Could not resolve IPv4 address for host '%s'", $uri->getHost()), $request);
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $uri->withHost($records[0]['ip']);
             }
             if ('v6' === $options['force_ip_resolve']) {
@@ -393,16 +359,8 @@ class StreamHandler
                 if (false === $records || !isset($records[0]['ipv6'])) {
                     throw new ConnectException(\sprintf("Could not resolve IPv6 address for host '%s'", $uri->getHost()), $request);
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 return $uri->withHost('['.$records[0]['ipv6'].']');
-=======
-                return $uri->withHost('[' . $records[0]['ipv6'] . ']');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return $uri->withHost('[' . $records[0]['ipv6'] . ']');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -420,25 +378,11 @@ class StreamHandler
 
         $context = [
             'http' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'method' => $request->getMethod(),
                 'header' => $headers,
                 'protocol_version' => $request->getProtocolVersion(),
                 'ignore_errors' => true,
                 'follow_location' => 0,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                'method'           => $request->getMethod(),
-                'header'           => $headers,
-                'protocol_version' => $request->getProtocolVersion(),
-                'ignore_errors'    => true,
-                'follow_location'  => 0,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ],
             'ssl' => [
                 'peer_name' => $request->getUri()->getHost(),
@@ -447,15 +391,7 @@ class StreamHandler
 
         $body = (string) $request->getBody();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ('' !== $body) {
-=======
-        if (!empty($body)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (!empty($body)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $context['http']['content'] = $body;
             // Prevent the HTTP handler from adding a Content-Type header.
             if (!$request->hasHeader('Content-Type')) {
@@ -542,8 +478,6 @@ class StreamHandler
     /**
      * @param mixed $value as passed via Request transfer options.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function add_crypto_method(RequestInterface $request, array &$options, $value, array &$params): void
     {
         if (
@@ -563,10 +497,6 @@ class StreamHandler
     /**
      * @param mixed $value as passed via Request transfer options.
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function add_verify(RequestInterface $request, array &$options, $value, array &$params): void
     {
         if ($value === false) {
@@ -634,8 +564,6 @@ class StreamHandler
         }
 
         static $map = [
-<<<<<<< HEAD
-<<<<<<< HEAD
             \STREAM_NOTIFY_CONNECT => 'CONNECT',
             \STREAM_NOTIFY_AUTH_REQUIRED => 'AUTH_REQUIRED',
             \STREAM_NOTIFY_AUTH_RESULT => 'AUTH_RESULT',
@@ -646,50 +574,17 @@ class StreamHandler
             \STREAM_NOTIFY_FAILURE => 'FAILURE',
             \STREAM_NOTIFY_COMPLETED => 'COMPLETED',
             \STREAM_NOTIFY_RESOLVE => 'RESOLVE',
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            \STREAM_NOTIFY_CONNECT       => 'CONNECT',
-            \STREAM_NOTIFY_AUTH_REQUIRED => 'AUTH_REQUIRED',
-            \STREAM_NOTIFY_AUTH_RESULT   => 'AUTH_RESULT',
-            \STREAM_NOTIFY_MIME_TYPE_IS  => 'MIME_TYPE_IS',
-            \STREAM_NOTIFY_FILE_SIZE_IS  => 'FILE_SIZE_IS',
-            \STREAM_NOTIFY_REDIRECTED    => 'REDIRECTED',
-            \STREAM_NOTIFY_PROGRESS      => 'PROGRESS',
-            \STREAM_NOTIFY_FAILURE       => 'FAILURE',
-            \STREAM_NOTIFY_COMPLETED     => 'COMPLETED',
-            \STREAM_NOTIFY_RESOLVE       => 'RESOLVE',
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
         static $args = ['severity', 'message', 'message_code', 'bytes_transferred', 'bytes_max'];
 
         $value = Utils::debugResource($value);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $ident = $request->getMethod().' '.$request->getUri()->withFragment('');
-=======
-        $ident = $request->getMethod() . ' ' . $request->getUri()->withFragment('');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $ident = $request->getMethod() . ' ' . $request->getUri()->withFragment('');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         self::addNotification(
             $params,
             static function (int $code, ...$passed) use ($ident, $value, $map, $args): void {
                 \fprintf($value, '<%s> [%s] ', $ident, $map[$code]);
                 foreach (\array_filter($passed) as $i => $v) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     \fwrite($value, $args[$i].': "'.$v.'" ');
-=======
-                    \fwrite($value, $args[$i] . ': "' . $v . '" ');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    \fwrite($value, $args[$i] . ': "' . $v . '" ');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
                 \fwrite($value, "\n");
             }
@@ -704,15 +599,7 @@ class StreamHandler
         } else {
             $params['notification'] = self::callArray([
                 $params['notification'],
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $notify,
-=======
-                $notify
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $notify
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ]);
         }
     }

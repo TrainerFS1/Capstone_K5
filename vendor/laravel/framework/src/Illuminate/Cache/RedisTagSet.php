@@ -2,13 +2,7 @@
 
 namespace Illuminate\Cache;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Carbon;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\LazyCollection;
 
 class RedisTagSet extends TagSet
@@ -17,8 +11,6 @@ class RedisTagSet extends TagSet
      * Add a reference entry to the tag set's underlying sorted set.
      *
      * @param  string  $key
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int|null  $ttl
      * @param  string  $updateWhen
      * @return void
@@ -26,20 +18,6 @@ class RedisTagSet extends TagSet
     public function addEntry(string $key, int $ttl = null, $updateWhen = null)
     {
         $ttl = is_null($ttl) ? -1 : Carbon::now()->addSeconds($ttl)->getTimestamp();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  int  $ttl
-     * @param  string  $updateWhen
-     * @return void
-     */
-    public function addEntry(string $key, int $ttl = 0, $updateWhen = null)
-    {
-        $ttl = $ttl > 0 ? now()->addSeconds($ttl)->getTimestamp() : -1;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($this->tagIds() as $tagKey) {
             if ($updateWhen) {
@@ -95,15 +73,7 @@ class RedisTagSet extends TagSet
     {
         $this->store->connection()->pipeline(function ($pipe) {
             foreach ($this->tagIds() as $tagKey) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $pipe->zremrangebyscore($this->store->getPrefix().$tagKey, 0, Carbon::now()->getTimestamp());
-=======
-                $pipe->zremrangebyscore($this->store->getPrefix().$tagKey, 0, now()->getTimestamp());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $pipe->zremrangebyscore($this->store->getPrefix().$tagKey, 0, now()->getTimestamp());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         });
     }

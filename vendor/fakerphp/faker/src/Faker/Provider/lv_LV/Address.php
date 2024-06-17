@@ -12,15 +12,7 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $buildingNumber = ['%#'];
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected static $postcode = ['LV-####'];
-=======
-    protected static $postcode = ['LV ####'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected static $postcode = ['LV ####'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @see https://lv.wikipedia.org/wiki/Suver%C4%93no_valstu_uzskait%C4%ABjums

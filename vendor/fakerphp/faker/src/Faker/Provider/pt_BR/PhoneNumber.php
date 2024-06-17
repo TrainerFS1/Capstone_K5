@@ -83,15 +83,7 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
             ['landline', null],
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return call_user_func([static::class, $options[0]], $formatted, $options[1]);
-=======
-        return call_user_func("static::{$options[0]}", $formatted, $options[1]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func("static::{$options[0]}", $formatted, $options[1]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -143,15 +135,7 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     {
         $method = static::randomElement(['cellphoneNumber', 'landlineNumber']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return call_user_func([static::class, $method], true);
-=======
-        return call_user_func("static::$method", true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func("static::$method", true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -161,14 +145,6 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     {
         $method = static::randomElement(['cellphoneNumber', 'landlineNumber']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return call_user_func([static::class, $method], false);
-=======
-        return call_user_func("static::$method", false);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return call_user_func("static::$method", false);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

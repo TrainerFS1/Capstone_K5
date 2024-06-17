@@ -36,15 +36,7 @@ class Question
      * @param string                     $question The question to ask to the user
      * @param string|bool|int|float|null $default  The default answer to return if the user enters nothing
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $question, string|bool|int|float|null $default = null)
-=======
-    public function __construct(string $question, string|bool|int|float $default = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $question, string|bool|int|float $default = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->question = $question;
         $this->default = $default;
@@ -154,26 +146,11 @@ class Question
         if (\is_array($values)) {
             $values = $this->isAssoc($values) ? array_merge(array_keys($values), array_values($values)) : array_values($values);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $callback = static fn () => $values;
         } elseif ($values instanceof \Traversable) {
             $callback = static function () use ($values) {
                 static $valueCache;
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $callback = static function () use ($values) {
-                return $values;
-            };
-        } elseif ($values instanceof \Traversable) {
-            $valueCache = null;
-            $callback = static function () use ($values, &$valueCache) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $valueCache ??= iterator_to_array($values, false);
             };
         } else {
@@ -198,15 +175,7 @@ class Question
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setAutocompleterCallback(?callable $callback = null): static
-=======
-    public function setAutocompleterCallback(callable $callback = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setAutocompleterCallback(callable $callback = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -225,15 +194,7 @@ class Question
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setValidator(?callable $validator = null): static
-=======
-    public function setValidator(callable $validator = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setValidator(callable $validator = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -305,15 +266,9 @@ class Question
         return $this->normalizer;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return bool
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function isAssoc(array $array)
     {
         return (bool) \count(array_filter(array_keys($array), 'is_string'));

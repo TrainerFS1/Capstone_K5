@@ -19,14 +19,6 @@ final class TestTriggeredPhpunitWarningSubscriber extends Subscriber implements 
 {
     public function notify(PhpunitWarningTriggered $event): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->printer()->testTriggeredPhpunitWarning();
-=======
-        $this->printer()->testTriggeredWarning();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->printer()->testTriggeredWarning();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

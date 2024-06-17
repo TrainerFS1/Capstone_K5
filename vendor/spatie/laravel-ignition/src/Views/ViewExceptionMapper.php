@@ -2,14 +2,6 @@
 
 namespace Spatie\LaravelIgnition\Views;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Exception;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Exception;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\View\Engine;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Arr;
@@ -18,15 +10,7 @@ use Illuminate\View\Engines\PhpEngine;
 use Illuminate\View\ViewException;
 use ReflectionClass;
 use ReflectionProperty;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\ProvidesSolution;
-=======
-use Spatie\Ignition\Contracts\ProvidesSolution;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Spatie\Ignition\Contracts\ProvidesSolution;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\LaravelIgnition\Exceptions\ViewException as IgnitionViewException;
 use Spatie\LaravelIgnition\Exceptions\ViewExceptionWithSolution;
 use Throwable;
@@ -34,17 +18,9 @@ use Throwable;
 class ViewExceptionMapper
 {
     protected Engine $compilerEngine;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     protected BladeSourceMapCompiler $bladeSourceMapCompiler;
 
-=======
-    protected BladeSourceMapCompiler $bladeSourceMapCompiler;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected BladeSourceMapCompiler $bladeSourceMapCompiler;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected array $knownPaths;
 
     public function __construct(BladeSourceMapCompiler $bladeSourceMapCompiler)
@@ -105,8 +81,6 @@ class ViewExceptionMapper
 
     protected function modifyViewsInTrace(IgnitionViewException $exception): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $viewIndex = null;
 
         $trace = Collection::make($exception->getPrevious()->getTrace())
@@ -128,22 +102,6 @@ class ViewExceptionMapper
                 fn (Collection $trace) => $trace->slice($viewIndex + 1)  // Remove all traces before the view
             )
             ->toArray();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $trace = Collection::make($exception->getPrevious()->getTrace())
-            ->map(function ($trace) {
-                if ($originalPath = $this->findCompiledView(Arr::get($trace, 'file', ''))) {
-                    $trace['file'] = $originalPath;
-                    $trace['line'] = $this->getBladeLineNumber($trace['file'], $trace['line']);
-                }
-
-                return $trace;
-            })->toArray();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $traceProperty = new ReflectionProperty('Exception', 'trace');
         $traceProperty->setAccessible(true);

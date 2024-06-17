@@ -32,15 +32,7 @@ class PhpProcess extends Process
      * @param int         $timeout The timeout in seconds
      * @param array|null  $php     Path to the PHP binary to use with any additional arguments
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $script, ?string $cwd = null, ?array $env = null, int $timeout = 60, ?array $php = null)
-=======
-    public function __construct(string $script, string $cwd = null, array $env = null, int $timeout = 60, array $php = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $script, string $cwd = null, array $env = null, int $timeout = 60, array $php = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $php) {
             $executableFinder = new PhpExecutableFinder();
@@ -58,31 +50,15 @@ class PhpProcess extends Process
         parent::__construct($php, $cwd, $env, $script, $timeout);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function fromShellCommandline(string $command, ?string $cwd = null, ?array $env = null, mixed $input = null, ?float $timeout = 60): static
-=======
-    public static function fromShellCommandline(string $command, string $cwd = null, array $env = null, mixed $input = null, ?float $timeout = 60): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function fromShellCommandline(string $command, string $cwd = null, array $env = null, mixed $input = null, ?float $timeout = 60): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         throw new LogicException(sprintf('The "%s()" method cannot be called when using "%s".', __METHOD__, self::class));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
     public function start(?callable $callback = null, array $env = [])
-=======
-    public function start(callable $callback = null, array $env = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function start(callable $callback = null, array $env = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $this->getCommandLine()) {
             throw new RuntimeException('Unable to find the PHP executable.');

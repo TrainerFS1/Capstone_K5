@@ -54,15 +54,7 @@ final class TestStubForIntersectionOfInterfacesCreated implements Event
     {
         return sprintf(
             'Test Stub Created (%s)',
-<<<<<<< HEAD
-<<<<<<< HEAD
             implode('&', $this->interfaces),
-=======
-            implode('&', $this->interfaces)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            implode('&', $this->interfaces)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

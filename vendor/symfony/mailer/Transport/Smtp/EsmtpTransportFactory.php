@@ -29,8 +29,6 @@ final class EsmtpTransportFactory extends AbstractTransportFactory
 
         $transport = new EsmtpTransport($host, $port, $tls, $this->dispatcher, $this->logger);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         /** @var SocketStream $stream */
         $stream = $transport->getStream();
         $streamOptions = $stream->getStreamOptions();
@@ -46,24 +44,6 @@ final class EsmtpTransportFactory extends AbstractTransportFactory
 
         $stream->setStreamOptions($streamOptions);
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ('' !== $dsn->getOption('verify_peer') && !filter_var($dsn->getOption('verify_peer', true), \FILTER_VALIDATE_BOOL)) {
-            /** @var SocketStream $stream */
-            $stream = $transport->getStream();
-            $streamOptions = $stream->getStreamOptions();
-
-            $streamOptions['ssl']['verify_peer'] = false;
-            $streamOptions['ssl']['verify_peer_name'] = false;
-
-            $stream->setStreamOptions($streamOptions);
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($user = $dsn->getUser()) {
             $transport->setUsername($user);
         }

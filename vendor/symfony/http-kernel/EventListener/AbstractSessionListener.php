@@ -35,75 +35,37 @@ use Symfony\Contracts\Service\ResetInterface;
  *
  * @author Johannes M. Schmitt <schmittjoh@gmail.com>
  * @author Tobias Schultze <http://tobion.de>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- *
- * @internal
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- *
- * @internal
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 abstract class AbstractSessionListener implements EventSubscriberInterface, ResetInterface
 {
     public const NO_AUTO_CACHE_CONTROL_HEADER = 'Symfony-Session-NoAutoCacheControl';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @internal
      */
     protected ?ContainerInterface $container;
 
-=======
-    protected $container;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $container;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private bool $debug;
 
     /**
      * @var array<string, mixed>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private array $sessionOptions;
 
     /**
      * @internal
      */
     public function __construct(?ContainerInterface $container = null, bool $debug = false, array $sessionOptions = [])
-=======
-    private $sessionOptions;
-
-    public function __construct(ContainerInterface $container = null, bool $debug = false, array $sessionOptions = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $sessionOptions;
-
-    public function __construct(ContainerInterface $container = null, bool $debug = false, array $sessionOptions = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->container = $container;
         $this->debug = $debug;
         $this->sessionOptions = $sessionOptions;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @internal
      */
     public function onKernelRequest(RequestEvent $event): void
-=======
-    public function onKernelRequest(RequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelRequest(RequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$event->isMainRequest()) {
             return;
@@ -111,8 +73,6 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
 
         $request = $event->getRequest();
         if (!$request->hasSession()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $request->setSessionFactory(function () use ($request) {
                 // Prevent calling `$this->getSession()` twice in case the Request (and the below factory) is cloned
                 static $sess;
@@ -120,18 +80,6 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
                 if (!$sess) {
                     $sess = $this->getSession();
                     $request->setSession($sess);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            // This variable prevents calling `$this->getSession()` twice in case the Request (and the below factory) is cloned
-            $sess = null;
-            $request->setSessionFactory(function () use (&$sess, $request) {
-                if (!$sess) {
-                    $sess = $this->getSession();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     /*
                      * For supporting sessions in php runtime with runners like roadrunner or swoole, the session
@@ -150,18 +98,10 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @internal
      */
     public function onKernelResponse(ResponseEvent $event): void
-=======
-    public function onKernelResponse(ResponseEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelResponse(ResponseEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$event->isMainRequest() || (!$this->container->has('initialized_session') && !$event->getRequest()->hasSession())) {
             return;
@@ -289,15 +229,9 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @internal
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function onSessionUsage(): void
     {
         if (!$this->debug) {
@@ -333,15 +267,9 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         throw new UnexpectedSessionUsageException('Session was used while the request was declared stateless.');
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @internal
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function getSubscribedEvents(): array
     {
         return [
@@ -351,15 +279,9 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @internal
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function reset(): void
     {
         if (\PHP_SESSION_ACTIVE === session_status()) {
@@ -376,14 +298,8 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
 
     /**
      * Gets the session object.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @internal
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract protected function getSession(): ?SessionInterface;
 

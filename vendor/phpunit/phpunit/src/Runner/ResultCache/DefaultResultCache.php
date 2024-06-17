@@ -21,15 +21,7 @@ use function is_file;
 use function json_decode;
 use function json_encode;
 use PHPUnit\Framework\TestStatus\TestStatus;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Runner\DirectoryDoesNotExistException;
-=======
-use PHPUnit\Runner\DirectoryCannotBeCreatedException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PHPUnit\Runner\DirectoryCannotBeCreatedException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Runner\Exception;
 use PHPUnit\Util\Filesystem;
 
@@ -98,8 +90,6 @@ final class DefaultResultCache implements ResultCache
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $contents = file_get_contents($this->cacheFilename);
 
         if ($contents === false) {
@@ -109,16 +99,6 @@ final class DefaultResultCache implements ResultCache
         $data = json_decode(
             $contents,
             true,
-=======
-        $data = json_decode(
-            file_get_contents($this->cacheFilename),
-            true
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $data = json_decode(
-            file_get_contents($this->cacheFilename),
-            true
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         if ($data === null) {
@@ -150,15 +130,7 @@ final class DefaultResultCache implements ResultCache
     public function persist(): void
     {
         if (!Filesystem::createDirectory(dirname($this->cacheFilename))) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             throw new DirectoryDoesNotExistException(dirname($this->cacheFilename));
-=======
-            throw new DirectoryCannotBeCreatedException($this->cacheFilename);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            throw new DirectoryCannotBeCreatedException($this->cacheFilename);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $data = [
@@ -174,15 +146,7 @@ final class DefaultResultCache implements ResultCache
         file_put_contents(
             $this->cacheFilename,
             json_encode($data),
-<<<<<<< HEAD
-<<<<<<< HEAD
             LOCK_EX,
-=======
-            LOCK_EX
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            LOCK_EX
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

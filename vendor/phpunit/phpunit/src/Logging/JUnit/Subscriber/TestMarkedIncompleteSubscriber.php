@@ -12,14 +12,6 @@ namespace PHPUnit\Logging\JUnit;
 use PHPUnit\Event\InvalidArgumentException;
 use PHPUnit\Event\Test\MarkedIncomplete;
 use PHPUnit\Event\Test\MarkedIncompleteSubscriber;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PHPUnit\Event\TestData\NoDataSetFromDataProviderException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
@@ -28,14 +20,6 @@ final class TestMarkedIncompleteSubscriber extends Subscriber implements MarkedI
 {
     /**
      * @throws InvalidArgumentException
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @throws NoDataSetFromDataProviderException
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws NoDataSetFromDataProviderException
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function notify(MarkedIncomplete $event): void
     {

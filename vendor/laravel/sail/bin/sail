@@ -65,32 +65,20 @@ function display_help {
     echo "  ${GREEN}sail npx${NC}            Run a npx command"
     echo "  ${GREEN}sail npm run prod${NC}"
     echo
-<<<<<<< HEAD
-<<<<<<< HEAD
     echo "${YELLOW}PNPM Commands:${NC}"
     echo "  ${GREEN}sail pnpm ...${NC}        Run a pnpm command"
     echo "  ${GREEN}sail pnpx${NC}            Run a pnpx command"
     echo "  ${GREEN}sail pnpm run prod${NC}"
     echo
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     echo "${YELLOW}Yarn Commands:${NC}"
     echo "  ${GREEN}sail yarn ...${NC}        Run a Yarn command"
     echo "  ${GREEN}sail yarn run prod${NC}"
     echo
-<<<<<<< HEAD
-<<<<<<< HEAD
     echo "${YELLOW}Bun Commands:${NC}"
     echo "  ${GREEN}sail bun ...${NC}        Run a bun command"
     echo "  ${GREEN}sail bunx${NC}           Run a bunx command"
     echo "  ${GREEN}sail bun run prod${NC}"
     echo
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     echo "${YELLOW}Database Commands:${NC}"
     echo "  ${GREEN}sail mysql${NC}     Start a MySQL CLI session within the 'mysql' container"
     echo "  ${GREEN}sail mariadb${NC}   Start a MySQL CLI session within the 'mariadb' container"
@@ -140,19 +128,9 @@ else
 fi
 
 # Source the ".env" file so Laravel's environment variables are available...
-<<<<<<< HEAD
-<<<<<<< HEAD
 # shellcheck source=/dev/null
 if [ -n "$APP_ENV" ] && [ -f ./.env."$APP_ENV" ]; then
   source ./.env."$APP_ENV";
-=======
-if [ ! -z "$APP_ENV" ] && [ -f ./.env.$APP_ENV ]; then
-  source ./.env.$APP_ENV;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-if [ ! -z "$APP_ENV" ] && [ -f ./.env.$APP_ENV ]; then
-  source ./.env.$APP_ENV;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 elif [ -f ./.env ]; then
   source ./.env;
 fi
@@ -170,13 +148,7 @@ export SAIL_SHARE_SERVER_HOST=${SAIL_SHARE_SERVER_HOST:-"laravel-sail.site"}
 export SAIL_SHARE_SERVER_PORT=${SAIL_SHARE_SERVER_PORT:-8080}
 export SAIL_SHARE_SUBDOMAIN=${SAIL_SHARE_SUBDOMAIN:-""}
 export SAIL_SHARE_DOMAIN=${SAIL_SHARE_DOMAIN:-"$SAIL_SHARE_SERVER_HOST"}
-<<<<<<< HEAD
-<<<<<<< HEAD
 export SAIL_SHARE_SERVER=${SAIL_SHARE_SERVER:-""}
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 # Function that outputs Sail is not running...
 function sail_is_not_running {
@@ -188,17 +160,7 @@ function sail_is_not_running {
 }
 
 # Define Docker Compose command prefix...
-<<<<<<< HEAD
-<<<<<<< HEAD
 if docker compose &> /dev/null; then
-=======
-docker compose &> /dev/null
-if [ $? == 0 ]; then
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-docker compose &> /dev/null
-if [ $? == 0 ]; then
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     DOCKER_COMPOSE=(docker compose)
 else
     DOCKER_COMPOSE=(docker-compose)
@@ -292,15 +254,7 @@ elif [ "$1" == "composer" ]; then
     fi
 
 # Proxy Artisan commands to the "artisan" binary on the application container...
-<<<<<<< HEAD
-<<<<<<< HEAD
 elif [ "$1" == "artisan" ] || [ "$1" == "art" ] || [ "$1" == "a" ]; then
-=======
-elif [ "$1" == "artisan" ] || [ "$1" == "art" ]; then
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-elif [ "$1" == "artisan" ] || [ "$1" == "art" ]; then
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     shift 1
 
     if [ "$EXEC" == "yes" ]; then
@@ -316,15 +270,7 @@ elif [ "$1" == "debug" ]; then
     shift 1
 
     if [ "$EXEC" == "yes" ]; then
-<<<<<<< HEAD
-<<<<<<< HEAD
         ARGS+=(exec -u sail -e XDEBUG_TRIGGER=1)
-=======
-        ARGS+=(exec -u sail -e XDEBUG_SESSION=1)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ARGS+=(exec -u sail -e XDEBUG_SESSION=1)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         [ ! -t 0 ] && ARGS+=(-T)
         ARGS+=("$APP_SERVICE" php artisan "$@")
     else
@@ -455,8 +401,6 @@ elif [ "$1" == "npx" ]; then
         sail_is_not_running
     fi
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Proxy PNPM commands to the "pnpm" binary on the application container...
 elif [ "$1" == "pnpm" ]; then
     shift 1
@@ -482,12 +426,6 @@ elif [ "$1" == "pnpx" ]; then
     fi
 
 # Proxy Yarn commands to the "yarn" binary on the application container...
-=======
-# Proxy YARN commands to the "yarn" binary on the application container...
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-# Proxy YARN commands to the "yarn" binary on the application container...
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 elif [ "$1" == "yarn" ]; then
     shift 1
 
@@ -499,8 +437,6 @@ elif [ "$1" == "yarn" ]; then
         sail_is_not_running
     fi
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Proxy Bun commands to the "bun" binary on the application container...
 elif [ "$1" == "bun" ]; then
     shift 1
@@ -525,10 +461,6 @@ elif [ "$1" == "bunx" ]; then
         sail_is_not_running
     fi
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 # Initiate a MySQL CLI terminal session within the "mysql" container...
 elif [ "$1" == "mysql" ]; then
     shift 1
@@ -550,15 +482,7 @@ elif [ "$1" == "mariadb" ]; then
         ARGS+=(exec)
         [ ! -t 0 ] && ARGS+=(-T)
         ARGS+=(mariadb bash -c)
-<<<<<<< HEAD
-<<<<<<< HEAD
         ARGS+=("MYSQL_PWD=\${MYSQL_PASSWORD} mariadb -u \${MYSQL_USER} \${MYSQL_DATABASE}")
-=======
-        ARGS+=("MYSQL_PWD=\${MYSQL_PASSWORD} mysql -u \${MYSQL_USER} \${MYSQL_DATABASE}")
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ARGS+=("MYSQL_PWD=\${MYSQL_PASSWORD} mysql -u \${MYSQL_USER} \${MYSQL_DATABASE}")
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     else
         sail_is_not_running
     fi
@@ -593,15 +517,7 @@ elif [ "$1" == "root-shell" ] || [ "$1" == "root-bash" ]; then
     shift 1
 
     if [ "$EXEC" == "yes" ]; then
-<<<<<<< HEAD
-<<<<<<< HEAD
         ARGS+=(exec -u root)
-=======
-        ARGS+=(exec)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ARGS+=(exec)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         [ ! -t 0 ] && ARGS+=(-T)
         ARGS+=("$APP_SERVICE" bash "$@")
     else
@@ -629,13 +545,7 @@ elif [ "$1" == "share" ]; then
             --server-host="$SAIL_SHARE_SERVER_HOST" \
             --server-port="$SAIL_SHARE_SERVER_PORT" \
             --auth="$SAIL_SHARE_TOKEN" \
-<<<<<<< HEAD
-<<<<<<< HEAD
             --server="$SAIL_SHARE_SERVER" \
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             --subdomain="$SAIL_SHARE_SUBDOMAIN" \
             --domain="$SAIL_SHARE_DOMAIN" \
             "$@"
@@ -650,8 +560,6 @@ elif [ "$1" == "open" ]; then
     shift 1
 
     if [ "$EXEC" == "yes" ]; then
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         if [[ -n "$APP_PORT" && "$APP_PORT" != "80" ]]; then
             FULL_URL="${APP_URL}:${APP_PORT}"
@@ -660,12 +568,6 @@ elif [ "$1" == "open" ]; then
         fi
 
         open "$FULL_URL"
-=======
-        open $APP_URL
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        open $APP_URL
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         exit
     else

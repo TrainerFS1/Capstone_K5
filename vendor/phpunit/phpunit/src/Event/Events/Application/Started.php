@@ -44,15 +44,7 @@ final class Started implements Event
     {
         return sprintf(
             'PHPUnit Started (%s)',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->runtime->asString(),
-=======
-            $this->runtime->asString()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->runtime->asString()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

@@ -24,15 +24,7 @@ class UuidV6 extends Uuid implements TimeBasedUidInterface
 
     private static string $node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $uuid = null)
-=======
-    public function __construct(string $uuid = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $uuid = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $uuid) {
             $this->uid = static::generate();
@@ -51,15 +43,7 @@ class UuidV6 extends Uuid implements TimeBasedUidInterface
         return substr($this->uid, 24);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function generate(?\DateTimeInterface $time = null, ?Uuid $node = null): string
-=======
-    public static function generate(\DateTimeInterface $time = null, Uuid $node = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function generate(\DateTimeInterface $time = null, Uuid $node = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $uuidV1 = UuidV1::generate($time, $node);
         $uuid = substr($uuidV1, 15, 3).substr($uuidV1, 9, 4).$uuidV1[0].'-'.substr($uuidV1, 1, 4).'-6'.substr($uuidV1, 5, 3).substr($uuidV1, 18, 6);

@@ -26,8 +26,6 @@ class AuthenticateWithBasicAuth
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Specify the guard and field for the middleware.
      *
      * @param  string|null  $guard
@@ -42,10 +40,6 @@ class AuthenticateWithBasicAuth
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request

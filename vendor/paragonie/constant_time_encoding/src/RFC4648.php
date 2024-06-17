@@ -46,20 +46,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base64Encode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base64Encode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base64Encode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base64::encode($str);
     }
 
@@ -73,20 +63,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base64Decode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base64Decode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base64Decode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base64::decode($str, true);
     }
 
@@ -100,20 +80,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base64UrlSafeEncode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base64UrlSafeEncode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base64UrlSafeEncode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base64UrlSafe::encode($str);
     }
 
@@ -127,20 +97,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base64UrlSafeDecode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base64UrlSafeDecode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base64UrlSafeDecode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base64UrlSafe::decode($str, true);
     }
 
@@ -154,20 +114,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base32Encode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base32Encode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base32Encode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base32::encodeUpper($str);
     }
 
@@ -181,20 +131,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base32Decode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base32Decode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base32Decode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base32::decodeUpper($str, true);
     }
 
@@ -208,20 +148,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base32HexEncode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base32HexEncode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base32HexEncode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base32::encodeUpper($str);
     }
 
@@ -235,20 +165,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base32HexDecode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base32HexDecode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base32HexDecode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Base32::decodeUpper($str, true);
     }
 
@@ -262,20 +182,10 @@ abstract class RFC4648
      *
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base16Encode(
         #[\SensitiveParameter]
         string $str
     ): string {
-=======
-    public static function base16Encode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function base16Encode(string $str): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return Hex::encodeUpper($str);
     }
 
@@ -287,8 +197,6 @@ abstract class RFC4648
      * @param string $str
      * @return string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function base16Decode(
         #[\SensitiveParameter]
         string $str
@@ -296,16 +204,3 @@ abstract class RFC4648
         return Hex::decode($str, true);
     }
 }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public static function base16Decode(string $str): string
-    {
-        return Hex::decode($str, true);
-    }
-<<<<<<< HEAD
-}
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-}
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

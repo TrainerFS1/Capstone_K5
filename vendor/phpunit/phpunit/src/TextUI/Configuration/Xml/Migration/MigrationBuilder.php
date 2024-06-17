@@ -9,16 +9,6 @@
  */
 namespace PHPUnit\TextUI\XmlConfiguration;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use function array_key_exists;
-use function sprintf;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use function array_key_exists;
-use function sprintf;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function version_compare;
 
 /**
@@ -36,15 +26,7 @@ final class MigrationBuilder
             IntroduceCoverageElement::class,
             MoveAttributesFromRootToCoverage::class,
             MoveAttributesFromFilterWhitelistToCoverage::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
             MoveWhitelistIncludesToCoverage::class,
-=======
-            MoveWhitelistDirectoriesToCoverage::class,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            MoveWhitelistDirectoriesToCoverage::class,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             MoveWhitelistExcludesToCoverage::class,
             RemoveEmptyFilter::class,
             CoverageCloverToReport::class,
@@ -75,16 +57,10 @@ final class MigrationBuilder
             RemoveLoggingElements::class,
             RemoveTestDoxGroupsElement::class,
         ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         '10.0' => [
             MoveCoverageDirectoriesToSource::class,
         ],
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     /**
@@ -92,24 +68,6 @@ final class MigrationBuilder
      */
     public function build(string $fromVersion): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (!array_key_exists($fromVersion, self::AVAILABLE_MIGRATIONS)) {
-            throw new MigrationBuilderException(
-                sprintf(
-                    'Migration from schema version %s is not supported',
-                    $fromVersion
-                )
-            );
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $stack = [new UpdateSchemaLocation];
 
         foreach (self::AVAILABLE_MIGRATIONS as $version => $migrations) {

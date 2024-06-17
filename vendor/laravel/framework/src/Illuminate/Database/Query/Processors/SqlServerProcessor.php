@@ -58,14 +58,8 @@ class SqlServerProcessor extends Processor
     /**
      * Process the results of a column listing query.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $results
      * @return array
      */
@@ -75,8 +69,6 @@ class SqlServerProcessor extends Processor
             return ((object) $result)->name;
         }, $results);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Process the results of a columns query.
@@ -152,8 +144,4 @@ class SqlServerProcessor extends Processor
             ];
         }, $results);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

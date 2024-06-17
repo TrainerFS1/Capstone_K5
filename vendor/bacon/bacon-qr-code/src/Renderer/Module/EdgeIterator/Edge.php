@@ -6,32 +6,13 @@ namespace BaconQrCode\Renderer\Module\EdgeIterator;
 final class Edge
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var array<int[]>
      */
     private array $points = [];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @var bool
-     */
-    private $positive;
-
-    /**
-     * @var array<int[]>
-     */
-    private $points = [];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var array<int[]>|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private ?array $simplifiedPoints = null;
 
     private int $minX = PHP_INT_MAX;
@@ -44,38 +25,6 @@ final class Edge
 
     public function __construct(private readonly bool $positive)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private $simplifiedPoints;
-
-    /**
-     * @var int
-     */
-    private $minX = PHP_INT_MAX;
-
-    /**
-     * @var int
-     */
-    private $minY = PHP_INT_MAX;
-
-    /**
-     * @var int
-     */
-    private $maxX = -1;
-
-    /**
-     * @var int
-     */
-    private $maxY = -1;
-
-    public function __construct(bool $positive)
-    {
-        $this->positive = $positive;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function addPoint(int $x, int $y) : void

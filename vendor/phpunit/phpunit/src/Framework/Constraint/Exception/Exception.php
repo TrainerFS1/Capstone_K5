@@ -14,15 +14,7 @@ use PHPUnit\Util\Filter;
 use Throwable;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
-=======
- * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class Exception extends Constraint
 {
@@ -40,15 +32,7 @@ final class Exception extends Constraint
     {
         return sprintf(
             'exception of type "%s"',
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->className,
-=======
-            $this->className
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->className
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -71,8 +55,6 @@ final class Exception extends Constraint
      */
     protected function failureDescription(mixed $other): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($other === null) {
             return sprintf(
                 'exception of type "%s" is thrown',
@@ -92,32 +74,6 @@ final class Exception extends Constraint
             $other::class,
             $this->className,
             $message,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($other !== null) {
-            $message = '';
-
-            if ($other instanceof Throwable) {
-                $message = '. Message was: "' . $other->getMessage() . '" at'
-                    . "\n" . Filter::getFilteredStacktrace($other);
-            }
-
-            return sprintf(
-                'exception of type "%s" matches expected exception "%s"%s',
-                $other::class,
-                $this->className,
-                $message
-            );
-        }
-
-        return sprintf(
-            'exception of type "%s" is thrown',
-            $this->className
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

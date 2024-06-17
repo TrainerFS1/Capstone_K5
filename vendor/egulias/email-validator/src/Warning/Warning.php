@@ -48,14 +48,6 @@ abstract class Warning
      */
     public function __toString(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->message() . " rfc: " .  $this->rfcNumber . "internal code: " . static::CODE;
-=======
-        return $this->message() . " rfc: " .  $this->rfcNumber . "internal code: " . strval(static::CODE);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->message() . " rfc: " .  $this->rfcNumber . "internal code: " . strval(static::CODE);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

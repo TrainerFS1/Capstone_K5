@@ -29,15 +29,7 @@ final class MessageDataCollector extends DataCollector
         $this->events = $logger->getEvents();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
-=======
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->data['events'] = $this->events;
     }
@@ -55,15 +47,7 @@ final class MessageDataCollector extends DataCollector
         return base64_encode($data);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function reset(): void
-=======
-    public function reset()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function reset()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->data = [];
     }

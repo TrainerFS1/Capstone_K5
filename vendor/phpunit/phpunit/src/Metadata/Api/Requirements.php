@@ -39,13 +39,7 @@ final class Requirements
 {
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @psalm-return list<string>
      */
@@ -60,15 +54,7 @@ final class Requirements
                 if (!$metadata->versionRequirement()->isSatisfiedBy(PHP_VERSION)) {
                     $notSatisfied[] = sprintf(
                         'PHP %s is required.',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->versionRequirement()->asString(),
-=======
-                        $metadata->versionRequirement()->asString()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->versionRequirement()->asString()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -82,15 +68,7 @@ final class Requirements
                     $notSatisfied[] = sprintf(
                         'PHP extension %s%s is required.',
                         $metadata->extension(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->hasVersionRequirement() ? (' ' . $metadata->versionRequirement()->asString()) : '',
-=======
-                        $metadata->hasVersionRequirement() ? (' ' . $metadata->versionRequirement()->asString()) : ''
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->hasVersionRequirement() ? (' ' . $metadata->versionRequirement()->asString()) : ''
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -101,15 +79,7 @@ final class Requirements
                 if (!$metadata->versionRequirement()->isSatisfiedBy(Version::id())) {
                     $notSatisfied[] = sprintf(
                         'PHPUnit %s is required.',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->versionRequirement()->asString(),
-=======
-                        $metadata->versionRequirement()->asString()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->versionRequirement()->asString()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -120,15 +90,7 @@ final class Requirements
                 if ($metadata->operatingSystemFamily() !== PHP_OS_FAMILY) {
                     $notSatisfied[] = sprintf(
                         'Operating system %s is required.',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->operatingSystemFamily(),
-=======
-                        $metadata->operatingSystemFamily()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->operatingSystemFamily()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -138,29 +100,13 @@ final class Requirements
 
                 $pattern = sprintf(
                     '/%s/i',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     addcslashes($metadata->operatingSystem(), '/'),
-=======
-                    addcslashes($metadata->operatingSystem(), '/')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    addcslashes($metadata->operatingSystem(), '/')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 
                 if (!preg_match($pattern, PHP_OS)) {
                     $notSatisfied[] = sprintf(
                         'Operating system %s is required.',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->operatingSystem(),
-=======
-                        $metadata->operatingSystem()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->operatingSystem()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -171,15 +117,7 @@ final class Requirements
                 if (!function_exists($metadata->functionName())) {
                     $notSatisfied[] = sprintf(
                         'Function %s() is required.',
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->functionName(),
-=======
-                        $metadata->functionName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->functionName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -191,15 +129,7 @@ final class Requirements
                     $notSatisfied[] = sprintf(
                         'Method %s::%s() is required.',
                         $metadata->className(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->methodName(),
-=======
-                        $metadata->methodName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->methodName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }
@@ -211,15 +141,7 @@ final class Requirements
                     $notSatisfied[] = sprintf(
                         'Setting "%s" is required to be "%s".',
                         $metadata->setting(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $metadata->value(),
-=======
-                        $metadata->value()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $metadata->value()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
             }

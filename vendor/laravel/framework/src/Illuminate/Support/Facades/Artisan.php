@@ -17,15 +17,7 @@ use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
  * @method static string output()
  * @method static void bootstrap()
  * @method static void bootstrapWithoutBootingProviders()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static void setArtisan(\Illuminate\Console\Application|null $artisan)
-=======
- * @method static void setArtisan(\Illuminate\Console\Application $artisan)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static void setArtisan(\Illuminate\Console\Application $artisan)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @see \Illuminate\Foundation\Console\Kernel
  */

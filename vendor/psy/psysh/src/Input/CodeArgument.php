@@ -39,15 +39,7 @@ class CodeArgument extends InputArgument
      *
      * @throws \InvalidArgumentException When argument mode is not valid
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $name, ?int $mode = null, string $description = '', $default = null)
-=======
-    public function __construct(string $name, int $mode = null, string $description = '', $default = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $name, int $mode = null, string $description = '', $default = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($mode & InputArgument::IS_ARRAY) {
             throw new \InvalidArgumentException('Argument mode IS_ARRAY is not valid');

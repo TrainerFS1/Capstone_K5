@@ -31,8 +31,6 @@ class EnableTwoFactorAuthentication
      * Enable two factor authentication for the user.
      *
      * @param  mixed  $user
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  bool  $force
      * @return void
      */
@@ -48,24 +46,5 @@ class EnableTwoFactorAuthentication
 
             TwoFactorAuthenticationEnabled::dispatch($user);
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return void
-     */
-    public function __invoke($user)
-    {
-        $user->forceFill([
-            'two_factor_secret' => encrypt($this->provider->generateSecretKey()),
-            'two_factor_recovery_codes' => encrypt(json_encode(Collection::times(8, function () {
-                return RecoveryCode::generate();
-            })->all())),
-        ])->save();
-
-        TwoFactorAuthenticationEnabled::dispatch($user);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

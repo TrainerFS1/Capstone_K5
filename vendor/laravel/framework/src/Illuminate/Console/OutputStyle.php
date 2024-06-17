@@ -5,13 +5,7 @@ namespace Illuminate\Console;
 use Illuminate\Console\Contracts\NewLineAware;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Console\Question\Question;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 class OutputStyle extends SymfonyStyle implements NewLineAware
@@ -24,8 +18,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
     private $output;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The number of trailing new lines written by the last output.
      *
      * This is initialized as 1 to account for the new line written by the shell after executing a command.
@@ -40,16 +32,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
      * @var bool
      *
      * @deprecated use $newLinesWritten
-=======
-     * If the last output written wrote a new line.
-     *
-     * @var bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * If the last output written wrote a new line.
-     *
-     * @var bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected $newLineWritten = false;
 
@@ -70,8 +52,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
     /**
      * {@inheritdoc}
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function askQuestion(Question $question): mixed
     {
         try {
@@ -88,40 +68,18 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
     {
         $this->newLinesWritten = $this->trailingNewLineCount($messages) + (int) $newline;
         $this->newLineWritten = $this->newLinesWritten > 0;
-=======
-    public function write(string|iterable $messages, bool $newline = false, int $options = 0)
-    {
-        $this->newLineWritten = $newline;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function write(string|iterable $messages, bool $newline = false, int $options = 0)
-    {
-        $this->newLineWritten = $newline;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         parent::write($messages, $newline, $options);
     }
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
      */
     public function writeln(string|iterable $messages, int $type = self::OUTPUT_NORMAL)
     {
         $this->newLinesWritten = $this->trailingNewLineCount($messages) + 1;
-=======
-     */
-    public function writeln(string|iterable $messages, int $type = self::OUTPUT_NORMAL)
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     */
-    public function writeln(string|iterable $messages, int $type = self::OUTPUT_NORMAL)
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->newLineWritten = true;
 
         parent::writeln($messages, $type);
@@ -129,8 +87,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
      */
@@ -138,17 +94,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
     {
         $this->newLinesWritten += $count;
         $this->newLineWritten = $this->newLinesWritten > 0;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     */
-    public function newLine(int $count = 1)
-    {
-        $this->newLineWritten = $count > 0;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         parent::newLine($count);
     }
@@ -156,8 +101,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
     /**
      * {@inheritdoc}
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function newLinesWritten()
     {
         if ($this->output instanceof static) {
@@ -172,10 +115,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
      *
      * @deprecated use newLinesWritten
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function newLineWritten()
     {
         if ($this->output instanceof static && $this->output->newLineWritten()) {
@@ -185,8 +124,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
         return $this->newLineWritten;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /*
      * Count the number of trailing new lines in a string.
      *
@@ -208,10 +145,6 @@ class OutputStyle extends SymfonyStyle implements NewLineAware
         return strlen($string) - strlen(rtrim($string, PHP_EOL));
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Returns whether verbosity is quiet (-q).
      *

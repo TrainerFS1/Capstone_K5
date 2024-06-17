@@ -63,15 +63,7 @@ class ErrorHandler
      * @param  array<int, LogLevel::*>|false          $errorLevelMap     an array of E_* constant to LogLevel::* constant mapping, or false to disable error handling
      * @param  array<class-string, LogLevel::*>|false $exceptionLevelMap an array of class name to LogLevel::* constant mapping, or false to disable exception handling
      * @param  LogLevel::*|null|false                 $fatalLevel        a LogLevel::* constant, null to use the default LogLevel::ALERT or false to disable fatal error handling
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return static
-=======
-     * @return ErrorHandler
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return ErrorHandler
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function register(LoggerInterface $logger, $errorLevelMap = [], $exceptionLevelMap = [], $fatalLevel = null): self
     {
@@ -134,13 +126,7 @@ class ErrorHandler
     /**
      * @param LogLevel::*|null $level              a LogLevel::* constant, null to use the default LogLevel::ALERT
      * @param int              $reservedMemorySize Amount of KBs to reserve in memory so that it can be freed when handling fatal errors giving Monolog some room in memory to get its job done
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function registerFatalHandler($level = null, int $reservedMemorySize = 20): self
     {
@@ -208,15 +194,7 @@ class ErrorHandler
             ($this->previousExceptionHandler)($e);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!headers_sent() && in_array(strtolower((string) ini_get('display_errors')), ['0', '', 'false', 'off', 'none', 'no'], true)) {
-=======
-        if (!headers_sent() && !(bool) ini_get('display_errors')) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (!headers_sent() && !(bool) ini_get('display_errors')) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             http_response_code(500);
         }
 

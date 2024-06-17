@@ -2,19 +2,6 @@
 
 Component for reading [phar.io](https://phar.io/) manifest information from a [PHP Archive (PHAR)](http://php.net/phar).
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-[![Build Status](https://travis-ci.org/phar-io/manifest.svg?branch=master)](https://travis-ci.org/phar-io/manifest)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/phar-io/manifest/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/phar-io/manifest/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d8cc6035-69ad-477d-bd1a-ccc605480fd7/mini.png)](https://insight.sensiolabs.com/projects/d8cc6035-69ad-477d-bd1a-ccc605480fd7)
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## Installation
 
 You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):
@@ -25,19 +12,9 @@ If you only need this library during development, for instance to run your proje
 
     composer require --dev phar-io/manifest
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Usage Examples
 
 ### Read from `manifest.xml`
-=======
-## Usage
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-## Usage
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ```php
 use PharIo\Manifest\ManifestLoader;
 use PharIo\Manifest\ManifestSerializer;
@@ -48,8 +25,6 @@ var_dump($manifest);
 
 echo (new ManifestSerializer)->serializeToString($manifest);
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <details>
   <summary>Output</summary>
@@ -201,7 +176,3 @@ echo (new ManifestSerializer)->serializeToString($manifest);
     
 </details>
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

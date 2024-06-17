@@ -14,13 +14,7 @@ use function sprintf;
 use function str_contains;
 use function trim;
 use PHPUnit\Framework\ExpectationFailedException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Util\Exporter;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\Comparator\ComparisonFailure;
 use SebastianBergmann\Comparator\Factory as ComparatorFactory;
 
@@ -68,15 +62,7 @@ final class IsEqual extends Constraint
         try {
             $comparator = $comparatorFactory->getComparatorFor(
                 $this->value,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $other,
-=======
-                $other
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $other
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             $comparator->assertEquals(
@@ -84,15 +70,7 @@ final class IsEqual extends Constraint
                 $other,
                 $this->delta,
                 $this->canonicalize,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->ignoreCase,
-=======
-                $this->ignoreCase
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->ignoreCase
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         } catch (ComparisonFailure $f) {
             if ($returnResult) {
@@ -101,15 +79,7 @@ final class IsEqual extends Constraint
 
             throw new ExpectationFailedException(
                 trim($description . "\n" . $f->getMessage()),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $f,
-=======
-                $f
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $f
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -119,15 +89,7 @@ final class IsEqual extends Constraint
     /**
      * Returns a string representation of the constraint.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function toString(bool $exportObjects = false): string
-=======
-    public function toString(): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function toString(): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $delta = '';
 
@@ -138,47 +100,21 @@ final class IsEqual extends Constraint
 
             return sprintf(
                 "is equal to '%s'",
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->value,
-=======
-                $this->value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
         if ($this->delta != 0) {
             $delta = sprintf(
                 ' with delta <%F>',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->delta,
-=======
-                $this->delta
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->delta
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
         return sprintf(
             'is equal to %s%s',
-<<<<<<< HEAD
-<<<<<<< HEAD
             Exporter::export($this->value, $exportObjects),
             $delta,
-=======
-            $this->exporter()->export($this->value),
-            $delta
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->exporter()->export($this->value),
-            $delta
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

@@ -188,15 +188,7 @@ final class Reflection
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	/** @return array<string, class-string> of [alias => class] */
-=======
-	/** @return array of [alias => class] */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	/** @return array of [alias => class] */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	public static function getUseStatements(\ReflectionClass $class): array
 	{
 		if ($class->isAnonymous()) {
@@ -229,16 +221,8 @@ final class Reflection
 			$tokens = [];
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$namespace = $class = null;
 		$classLevel = $level = 0;
-=======
-		$namespace = $class = $classLevel = $level = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		$namespace = $class = $classLevel = $level = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		$res = $uses = [];
 
 		$nameTokens = [T_STRING, T_NS_SEPARATOR, T_NAME_QUALIFIED, T_NAME_FULLY_QUALIFIED];
@@ -307,15 +291,7 @@ final class Reflection
 
 				case ord('}'):
 					if ($level === $classLevel) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 						$class = $classLevel = 0;
-=======
-						$class = $classLevel = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-						$class = $classLevel = null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 					}
 
 					$level--;

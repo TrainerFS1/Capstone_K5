@@ -26,25 +26,11 @@ use function php_ini_loaded_file;
 use function php_ini_scanned_files;
 use function phpversion;
 use function sprintf;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function strrpos;
 
 final class Runtime
 {
     private static string $rawBinary;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use function strpos;
-
-final class Runtime
-{
-    private static string $binary;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static bool $initialized = false;
 
     /**
@@ -87,8 +73,6 @@ final class Runtime
             return false;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (ini_get('opcache.jit_buffer_size') === '0') {
             return false;
         }
@@ -100,12 +84,6 @@ final class Runtime
         }
 
         if (strrpos($jit, '0') === 3) {
-=======
-        if (strpos(ini_get('opcache.jit'), '0') === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (strpos(ini_get('opcache.jit'), '0') === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return false;
         }
 
@@ -113,8 +91,6 @@ final class Runtime
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Returns the raw path to the binary of the current runtime.
      */
     public function getRawBinary(): string
@@ -128,26 +104,6 @@ final class Runtime
             self::$initialized = true;
 
             return self::$rawBinary;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Returns the path to the binary of the current runtime.
-     */
-    public function getBinary(): string
-    {
-        if (self::$initialized) {
-            return self::$binary;
-        }
-
-        if (PHP_BINARY !== '') {
-            self::$binary      = escapeshellarg(PHP_BINARY);
-            self::$initialized = true;
-
-            return self::$binary;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         // @codeCoverageIgnoreStart
@@ -159,8 +115,6 @@ final class Runtime
 
         foreach ($possibleBinaryLocations as $binary) {
             if (is_readable($binary)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 self::$rawBinary   = $binary;
                 self::$initialized = true;
 
@@ -181,26 +135,6 @@ final class Runtime
     public function getBinary(): string
     {
         return escapeshellarg($this->getRawBinary());
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                self::$binary      = escapeshellarg($binary);
-                self::$initialized = true;
-
-                return self::$binary;
-            }
-        }
-
-        // @codeCoverageIgnoreStart
-        self::$binary      = 'php';
-        self::$initialized = true;
-        // @codeCoverageIgnoreEnd
-
-        return self::$binary;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getNameWithVersion(): string
@@ -214,15 +148,7 @@ final class Runtime
             return sprintf(
                 '%s with PCOV %s',
                 $this->getNameWithVersion(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 phpversion('pcov'),
-=======
-                phpversion('pcov')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                phpversion('pcov')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -230,15 +156,7 @@ final class Runtime
             return sprintf(
                 '%s with Xdebug %s',
                 $this->getNameWithVersion(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 phpversion('xdebug'),
-=======
-                phpversion('xdebug')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                phpversion('xdebug')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -333,18 +251,8 @@ final class Runtime
                 $files,
                 array_map(
                     'trim',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     explode(",\n", $scanned),
                 ),
-=======
-                    explode(",\n", $scanned)
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    explode(",\n", $scanned)
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

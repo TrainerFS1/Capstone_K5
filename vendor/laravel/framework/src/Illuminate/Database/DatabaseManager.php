@@ -101,29 +101,13 @@ class DatabaseManager implements ConnectionResolverInterface
                 $this->makeConnection($database), $type
             );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->dispatchConnectionEstablishedEvent($this->connections[$name]);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if ($this->app->bound('events')) {
-                $this->app['events']->dispatch(
-                    new ConnectionEstablished($this->connections[$name])
-                );
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this->connections[$name];
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get a database connection instance from the given configuration.
      *
      * @param  string  $name
@@ -151,10 +135,6 @@ class DatabaseManager implements ConnectionResolverInterface
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Parse the connection into an array of the name and read / write type.
      *
      * @param  string  $name
@@ -253,8 +233,6 @@ class DatabaseManager implements ConnectionResolverInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Dispatch the ConnectionEstablished event if the event dispatcher is available.
      *
      * @param  \Illuminate\Database\Connection  $connection
@@ -272,10 +250,6 @@ class DatabaseManager implements ConnectionResolverInterface
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Prepare the read / write mode for database connection instance.
      *
      * @param  \Illuminate\Database\Connection  $connection

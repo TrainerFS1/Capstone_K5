@@ -26,15 +26,7 @@ final class SMimeEncrypter extends SMime
      * @param string|string[] $certificate The path (or array of paths) of the file(s) containing the X.509 certificate(s)
      * @param int|null        $cipher      A set of algorithms used to encrypt the message. Must be one of these PHP constants: https://www.php.net/manual/en/openssl.ciphers.php
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string|array $certificate, ?int $cipher = null)
-=======
-    public function __construct(string|array $certificate, int $cipher = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string|array $certificate, int $cipher = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!\extension_loaded('openssl')) {
             throw new \LogicException('PHP extension "openssl" is required to use SMime.');

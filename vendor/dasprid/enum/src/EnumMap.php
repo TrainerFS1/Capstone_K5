@@ -88,8 +88,6 @@ final class EnumMap implements Serializable, IteratorAggregate
         $this->values = array_fill(0, count($this->keyUniverse), null);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __serialize(): array
     {
         $values = [];
@@ -115,10 +113,6 @@ final class EnumMap implements Serializable, IteratorAggregate
         $this->unserialize(serialize($data));
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Checks whether the map types match the supplied ones.
      *
@@ -292,32 +286,7 @@ final class EnumMap implements Serializable, IteratorAggregate
 
     public function serialize() : string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return serialize($this->__serialize());
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $values = [];
-
-        foreach ($this->values as $ordinal => $value) {
-            if (null === $value) {
-                continue;
-            }
-
-            $values[$ordinal] = $this->unmaskNull($value);
-        }
-
-        return serialize([
-            'keyType' => $this->keyType,
-            'valueType' => $this->valueType,
-            'allowNullValues' => $this->allowNullValues,
-            'values' => $values,
-        ]);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function unserialize($serialized) : void

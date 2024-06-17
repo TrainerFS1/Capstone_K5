@@ -28,15 +28,7 @@ final class Filter
     /**
      * @throws Exception
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function getFilteredStacktrace(Throwable $t, bool $unwrap = true): string
-=======
-    public static function getFilteredStacktrace(Throwable $t): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function getFilteredStacktrace(Throwable $t): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $filteredStacktrace = '';
 
@@ -49,15 +41,7 @@ final class Filter
             $eFile  = $t->getFile();
             $eLine  = $t->getLine();
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($unwrap && $t->getPrevious()) {
-=======
-            if ($t->getPrevious()) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($t->getPrevious()) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $t = $t->getPrevious();
             }
 
@@ -69,15 +53,7 @@ final class Filter
         if (!self::frameExists($eTrace, $eFile, $eLine)) {
             array_unshift(
                 $eTrace,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ['file' => $eFile, 'line' => $eLine],
-=======
-                ['file' => $eFile, 'line' => $eLine]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ['file' => $eFile, 'line' => $eLine]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -89,15 +65,7 @@ final class Filter
                 $filteredStacktrace .= sprintf(
                     "%s:%s\n",
                     $frame['file'],
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $frame['line'] ?? '?',
-=======
-                    $frame['line'] ?? '?'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $frame['line'] ?? '?'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
         }
@@ -105,15 +73,7 @@ final class Filter
         return $filteredStacktrace;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static function shouldPrintFrame(array $frame, false|string $prefix, ExcludeList $excludeList): bool
-=======
-    private static function shouldPrintFrame(array $frame, string|false $prefix, ExcludeList $excludeList): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private static function shouldPrintFrame(array $frame, string|false $prefix, ExcludeList $excludeList): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!isset($frame['file'])) {
             return false;
@@ -129,23 +89,10 @@ final class Filter
             $script = '';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $fileIsNotPrefixed &&
                $file !== $script &&
                self::fileIsExcluded($file, $excludeList) &&
                is_file($file);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        return is_file($file) &&
-               self::fileIsExcluded($file, $excludeList) &&
-               $fileIsNotPrefixed &&
-               $file !== $script;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     private static function fileIsExcluded(string $file, ExcludeList $excludeList): bool

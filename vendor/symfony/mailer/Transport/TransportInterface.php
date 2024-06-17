@@ -24,30 +24,10 @@ use Symfony\Component\Mime\RawMessage;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface TransportInterface extends \Stringable
-=======
-interface TransportInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-interface TransportInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * @throws TransportExceptionInterface
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function send(RawMessage $message, ?Envelope $envelope = null): ?SentMessage;
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage;
-
-    public function __toString(): string;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage;
-
-    public function __toString(): string;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

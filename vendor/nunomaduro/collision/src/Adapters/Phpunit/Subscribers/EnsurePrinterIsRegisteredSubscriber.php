@@ -13,14 +13,8 @@ use PHPUnit\Event\Test\BeforeFirstTestMethodErrored;
 use PHPUnit\Event\Test\BeforeFirstTestMethodErroredSubscriber;
 use PHPUnit\Event\Test\ConsideredRisky;
 use PHPUnit\Event\Test\ConsideredRiskySubscriber;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Event\Test\DeprecationTriggered;
 use PHPUnit\Event\Test\DeprecationTriggeredSubscriber;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Test\Errored;
 use PHPUnit\Event\Test\ErroredSubscriber;
 use PHPUnit\Event\Test\Failed;
@@ -29,8 +23,6 @@ use PHPUnit\Event\Test\Finished;
 use PHPUnit\Event\Test\FinishedSubscriber;
 use PHPUnit\Event\Test\MarkedIncomplete;
 use PHPUnit\Event\Test\MarkedIncompleteSubscriber;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Event\Test\NoticeTriggered;
 use PHPUnit\Event\Test\NoticeTriggeredSubscriber;
 use PHPUnit\Event\Test\Passed;
@@ -59,39 +51,12 @@ use PHPUnit\Event\TestRunner\Configured;
 use PHPUnit\Event\TestRunner\ConfiguredSubscriber;
 use PHPUnit\Event\TestRunner\DeprecationTriggered as TestRunnerDeprecationTriggered;
 use PHPUnit\Event\TestRunner\DeprecationTriggeredSubscriber as TestRunnerDeprecationTriggeredSubscriber;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use PHPUnit\Event\Test\Passed;
-use PHPUnit\Event\Test\PassedSubscriber;
-use PHPUnit\Event\Test\PhpunitWarningTriggered;
-use PHPUnit\Event\Test\PhpunitWarningTriggeredSubscriber;
-use PHPUnit\Event\Test\PreparationStarted;
-use PHPUnit\Event\Test\PreparationStartedSubscriber;
-use PHPUnit\Event\Test\Skipped;
-use PHPUnit\Event\Test\SkippedSubscriber;
-use PHPUnit\Event\TestRunner\Configured;
-use PHPUnit\Event\TestRunner\ConfiguredSubscriber;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\TestRunner\ExecutionFinished;
 use PHPUnit\Event\TestRunner\ExecutionFinishedSubscriber;
 use PHPUnit\Event\TestRunner\ExecutionStarted;
 use PHPUnit\Event\TestRunner\ExecutionStartedSubscriber;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Event\TestRunner\WarningTriggered as TestRunnerWarningTriggered;
 use PHPUnit\Event\TestRunner\WarningTriggeredSubscriber as TestRunnerWarningTriggeredSubscriber;
-=======
-use PHPUnit\Event\TestRunner\WarningTriggered;
-use PHPUnit\Event\TestRunner\WarningTriggeredSubscriber;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PHPUnit\Event\TestRunner\WarningTriggered;
-use PHPUnit\Event\TestRunner\WarningTriggeredSubscriber;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Runner\Version;
 
 if (class_exists(Version::class) && (int) Version::series() >= 10) {
@@ -120,15 +85,7 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                 DefaultPrinter::profile(true);
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $subscribers = [
-=======
-            Facade::registerSubscribers(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            Facade::registerSubscribers(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // Configured
                 new class($printer) extends Subscriber implements ConfiguredSubscriber
                 {
@@ -140,8 +97,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 // Test
                 new class($printer) extends Subscriber implements PrintedUnexpectedOutputSubscriber
                 {
@@ -151,10 +106,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // Test Runner
                 new class($printer) extends Subscriber implements ExecutionStartedSubscriber
                 {
@@ -210,8 +161,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 new class($printer) extends Subscriber implements DeprecationTriggeredSubscriber
                 {
                     public function notify(DeprecationTriggered $event): void
@@ -231,23 +180,11 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                 new class($printer) extends Subscriber implements TestRunnerWarningTriggeredSubscriber
                 {
                     public function notify(TestRunnerWarningTriggered $event): void
-=======
-                new class($printer) extends Subscriber implements WarningTriggeredSubscriber
-                {
-                    public function notify(WarningTriggered $event): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                new class($printer) extends Subscriber implements WarningTriggeredSubscriber
-                {
-                    public function notify(WarningTriggered $event): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     {
                         $this->printer()->testRunnerWarningTriggered($event);
                     }
                 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 new class($printer) extends Subscriber implements PhpDeprecationTriggeredSubscriber
                 {
                     public function notify(PhpDeprecationTriggered $event): void
@@ -280,10 +217,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 new class($printer) extends Subscriber implements PhpunitWarningTriggeredSubscriber
                 {
                     public function notify(PhpunitWarningTriggered $event): void
@@ -292,8 +225,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 new class($printer) extends Subscriber implements PhpunitErrorTriggeredSubscriber
                 {
                     public function notify(PhpunitErrorTriggered $event): void
@@ -302,10 +233,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // Test > Outcome ...
 
                 new class($printer) extends Subscriber implements ErroredSubscriber
@@ -329,8 +256,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                         $this->printer()->testMarkedIncomplete($event);
                     }
                 },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 new class($printer) extends Subscriber implements NoticeTriggeredSubscriber
                 {
@@ -340,10 +265,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                     }
                 },
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 new class($printer) extends Subscriber implements PassedSubscriber
                 {
                     public function notify(Passed $event): void
@@ -358,8 +279,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                         $this->printer()->testSkipped($event);
                     }
                 },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 new class($printer) extends Subscriber implements WarningTriggeredSubscriber
                 {
@@ -371,12 +290,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
             ];
 
             Facade::instance()->registerSubscribers(...$subscribers);
-=======
-            );
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            );
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         /**
@@ -390,15 +303,7 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
             if ($shouldRegister) {
                 self::$registered = true;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Facade::instance()->registerSubscriber(new self());
-=======
-                Facade::registerSubscriber(new self());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                Facade::registerSubscriber(new self());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
     }

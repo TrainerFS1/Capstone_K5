@@ -9,22 +9,12 @@
  */
 namespace PHPUnit\Util;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function basename;
 use function dirname;
 use function is_dir;
 use function mkdir;
 use function realpath;
 use function str_starts_with;
-=======
-use function is_dir;
-use function mkdir;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use function is_dir;
-use function mkdir;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
@@ -33,8 +23,6 @@ final class Filesystem
 {
     public static function createDirectory(string $directory): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return !(!is_dir($directory) && !@mkdir($directory, 0o777, true) && !is_dir($directory));
     }
 
@@ -56,11 +44,5 @@ final class Filesystem
         }
 
         return false;
-=======
-        return !(!is_dir($directory) && !@mkdir($directory, 0777, true) && !is_dir($directory));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return !(!is_dir($directory) && !@mkdir($directory, 0777, true) && !is_dir($directory));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -2,20 +2,12 @@
 
 namespace PhpParser\Node\Expr;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Node;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr;
 use PhpParser\Node\Identifier;
 use PhpParser\Node\VariadicPlaceholder;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class MethodCall extends CallLike {
     /** @var Expr Variable holding object */
     public Expr $var;
@@ -23,42 +15,14 @@ class MethodCall extends CallLike {
     public Node $name;
     /** @var array<Arg|VariadicPlaceholder> Arguments */
     public array $args;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-class MethodCall extends CallLike
-{
-    /** @var Expr Variable holding object */
-    public $var;
-    /** @var Identifier|Expr Method name */
-    public $name;
-    /** @var array<Arg|VariadicPlaceholder> Arguments */
-    public $args;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Constructs a function call node.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param Expr $var Variable holding object
      * @param string|Identifier|Expr $name Method name
      * @param array<Arg|VariadicPlaceholder> $args Arguments
      * @param array<string, mixed> $attributes Additional attributes
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param Expr                           $var        Variable holding object
-     * @param string|Identifier|Expr         $name       Method name
-     * @param array<Arg|VariadicPlaceholder> $args       Arguments
-     * @param array                          $attributes Additional attributes
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(Expr $var, $name, array $args = [], array $attributes = []) {
         $this->attributes = $attributes;
@@ -67,25 +31,11 @@ class MethodCall extends CallLike
         $this->args = $args;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getSubNodeNames(): array {
         return ['var', 'name', 'args'];
     }
 
     public function getType(): string {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function getSubNodeNames() : array {
-        return ['var', 'name', 'args'];
-    }
-    
-    public function getType() : string {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Expr_MethodCall';
     }
 

@@ -8,26 +8,14 @@ use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher as EventDispatcher;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Traits\Conditionable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Laravel\SerializableClosure\SerializableClosure;
 use Throwable;
 
 class PendingBatch
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use Conditionable;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The IoC container instance.
      *
@@ -87,8 +75,6 @@ class PendingBatch
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Add a callback to be executed when the batch is stored.
      *
      * @param  callable  $callback
@@ -139,10 +125,6 @@ class PendingBatch
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add a callback to be executed after all jobs in the batch have executed successfully.
      *
      * @param  callable  $callback
@@ -325,15 +307,7 @@ class PendingBatch
         $repository = $this->container->make(BatchRepository::class);
 
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $batch = $this->store($repository);
-=======
-            $batch = $repository->store($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $batch = $repository->store($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $batch = $batch->add($this->jobs);
         } catch (Throwable $e) {
@@ -360,15 +334,7 @@ class PendingBatch
     {
         $repository = $this->container->make(BatchRepository::class);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $batch = $this->store($repository);
-=======
-        $batch = $repository->store($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $batch = $repository->store($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($batch) {
             $this->container->terminating(function () use ($batch) {
@@ -403,8 +369,6 @@ class PendingBatch
             new BatchDispatched($batch)
         );
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Dispatch the batch if the given truth test passes.
@@ -450,8 +414,4 @@ class PendingBatch
 
         return $batch;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

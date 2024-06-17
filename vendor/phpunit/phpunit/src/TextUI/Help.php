@@ -11,13 +11,7 @@ namespace PHPUnit\TextUI;
 
 use const PHP_EOL;
 use function count;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function defined;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function explode;
 use function max;
 use function preg_replace_callback;
@@ -33,146 +27,7 @@ use SebastianBergmann\Environment\Console;
  */
 final class Help
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private const LEFT_MARGIN              = '  ';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private const LEFT_MARGIN = '  ';
-
-    private const HELP_TEXT = [
-        'Usage' => [
-            ['text' => 'phpunit [options] UnitTest.php'],
-            ['text' => 'phpunit [options] <directory>'],
-        ],
-
-        'Configuration' => [
-            ['arg' => '--bootstrap <file>', 'desc' => 'A PHP script that is included before the tests run'],
-            ['arg' => '-c|--configuration <file>', 'desc' => 'Read configuration from XML file'],
-            ['arg' => '--no-configuration', 'desc' => 'Ignore default configuration file (phpunit.xml)'],
-            ['arg' => '--no-extensions', 'desc' => 'Do not load PHPUnit extensions'],
-            ['arg' => '--include-path <path(s)>', 'desc' => 'Prepend PHP\'s include_path with given path(s)'],
-            ['arg' => '-d <key[=value]>', 'desc' => 'Sets a php.ini value'],
-            ['arg' => '--cache-directory <dir>', 'desc' => 'Specify cache directory'],
-            ['arg' => '--generate-configuration', 'desc' => 'Generate configuration file with suggested settings'],
-            ['arg' => '--migrate-configuration', 'desc' => 'Migrate configuration file to current format'],
-        ],
-
-        'Selection' => [
-            ['arg' => '--list-suites', 'desc' => 'List available test suites'],
-            ['arg' => '--testsuite <name>', 'desc' => 'Only run tests from the specified test suite(s)'],
-            ['arg' => '--exclude-testsuite <name>', 'desc' => 'Exclude tests from the specified test suite(s)'],
-            ['arg' => '--list-groups', 'desc' => 'List available test groups'],
-            ['arg' => '--group <name>', 'desc' => 'Only run tests from the specified group(s)'],
-            ['arg' => '--exclude-group <name>', 'desc' => 'Exclude tests from the specified group(s)'],
-            ['arg' => '--covers <name>', 'desc' => 'Only run tests that intend to cover <name>'],
-            ['arg' => '--uses <name>', 'desc' => 'Only run tests that intend to use <name>'],
-            ['arg' => '--list-tests', 'desc' => 'List available tests'],
-            ['arg' => '--list-tests-xml <file>', 'desc' => 'List available tests in XML format'],
-            ['arg' => '--filter <pattern>', 'desc' => 'Filter which tests to run'],
-            ['arg' => '--test-suffix <suffixes>', 'desc' => 'Only search for test in files with specified suffix(es). Default: Test.php,.phpt'],
-        ],
-
-        'Execution' => [
-            ['arg' => '--process-isolation', 'desc' => 'Run each test in a separate PHP process'],
-            ['arg'    => '--globals-backup', 'desc' => 'Backup and restore $GLOBALS for each test'],
-            ['arg'    => '--static-backup', 'desc' => 'Backup and restore static properties for each test'],
-            ['spacer' => ''],
-
-            ['arg'    => '--strict-coverage', 'desc' => 'Be strict about code coverage metadata'],
-            ['arg'    => '--strict-global-state', 'desc' => 'Be strict about changes to global state'],
-            ['arg'    => '--disallow-test-output', 'desc' => 'Be strict about output during tests'],
-            ['arg'    => '--enforce-time-limit', 'desc' => 'Enforce time limit based on test size'],
-            ['arg'    => '--default-time-limit <sec>', 'desc' => 'Timeout in seconds for tests that have no declared size'],
-            ['arg'    => '--dont-report-useless-tests', 'desc' => 'Do not report tests that do not test anything'],
-            ['spacer' => ''],
-
-            ['arg'    => '--stop-on-defect', 'desc' => 'Stop execution upon first not-passed test'],
-            ['arg'    => '--stop-on-error', 'desc' => 'Stop execution upon first error'],
-            ['arg'    => '--stop-on-failure', 'desc' => 'Stop execution upon first error or failure'],
-            ['arg'    => '--stop-on-warning', 'desc' => 'Stop execution upon first warning'],
-            ['arg'    => '--stop-on-risky', 'desc' => 'Stop execution upon first risky test'],
-            ['arg'    => '--stop-on-skipped', 'desc' => 'Stop execution upon first skipped test'],
-            ['arg'    => '--stop-on-incomplete', 'desc' => 'Stop execution upon first incomplete test'],
-            ['spacer' => ''],
-
-            ['arg'    => '--fail-on-incomplete', 'desc' => 'Treat incomplete tests as failures'],
-            ['arg'    => '--fail-on-risky', 'desc' => 'Treat risky tests as failures'],
-            ['arg'    => '--fail-on-skipped', 'desc' => 'Treat skipped tests as failures'],
-            ['arg'    => '--fail-on-warning', 'desc' => 'Treat tests with warnings as failures'],
-            ['spacer' => ''],
-
-            ['arg'    => '--cache-result', 'desc' => 'Write test results to cache file'],
-            ['arg'    => '--do-not-cache-result', 'desc' => 'Do not write test results to cache file'],
-            ['spacer' => ''],
-
-            ['arg' => '--order-by <order>', 'desc' => 'Run tests in order: default|defects|depends|duration|no-depends|random|reverse|size'],
-            ['arg' => '--random-order-seed <N>', 'desc' => 'Use the specified random seed when running tests in random order'],
-        ],
-
-        'Reporting' => [
-            ['arg' => '--colors <flag>', 'desc' => 'Use colors in output ("never", "auto" or "always")'],
-            ['arg'    => '--columns <n>', 'desc' => 'Number of columns to use for progress output'],
-            ['arg'    => '--columns max', 'desc' => 'Use maximum number of columns for progress output'],
-            ['arg'    => '--stderr', 'desc' => 'Write to STDERR instead of STDOUT'],
-            ['spacer' => ''],
-
-            ['arg'    => '--no-progress', 'desc' => 'Disable output of test execution progress'],
-            ['arg'    => '--no-results', 'desc' => 'Disable output of test results'],
-            ['arg'    => '--no-output', 'desc' => 'Disable all output'],
-            ['spacer' => ''],
-
-            ['arg'    => '--display-incomplete', 'desc' => 'Display details for incomplete tests'],
-            ['arg'    => '--display-skipped', 'desc' => 'Display details for skipped tests'],
-            ['arg'    => '--display-deprecations', 'desc' => 'Display details for deprecations triggered by tests'],
-            ['arg'    => '--display-errors', 'desc' => 'Display details for errors triggered by tests'],
-            ['arg'    => '--display-notices', 'desc' => 'Display details for notices triggered by tests'],
-            ['arg'    => '--display-warnings', 'desc' => 'Display details for warnings triggered by tests'],
-            ['arg'    => '--reverse-list', 'desc' => 'Print defects in reverse order'],
-            ['spacer' => ''],
-
-            ['arg' => '--teamcity', 'desc' => 'Replace default progress and result output with TeamCity format'],
-            ['arg' => '--testdox', 'desc' => 'Replace default result output with TestDox format'],
-        ],
-
-        'Logging' => [
-            ['arg' => '--log-junit <file>', 'desc' => 'Write test results in JUnit XML format to file'],
-            ['arg' => '--log-teamcity <file>', 'desc' => 'Write test results in TeamCity format to file'],
-            ['arg' => '--testdox-html <file>', 'desc' => 'Write test results in TestDox format (HTML) to file'],
-            ['arg' => '--testdox-text <file>', 'desc' => 'Write test results in TestDox format (plain text) to file'],
-            ['arg' => '--log-events-text <file>', 'desc' => 'Stream events as plain text to file'],
-            ['arg' => '--log-events-verbose-text <file>', 'desc' => 'Stream events as plain text (with telemetry information) to file'],
-            ['arg' => '--no-logging', 'desc' => 'Ignore logging configured in the XML configuration file'],
-        ],
-
-        'Code Coverage' => [
-            ['arg' => '--coverage-clover <file>', 'desc' => 'Write code coverage report in Clover XML format to file'],
-            ['arg' => '--coverage-cobertura <file>', 'desc' => 'Write code coverage report in Cobertura XML format to file'],
-            ['arg' => '--coverage-crap4j <file>', 'desc' => 'Write code coverage report in Crap4J XML format to file'],
-            ['arg' => '--coverage-html <dir>', 'desc' => 'Write code coverage report in HTML format to directory'],
-            ['arg' => '--coverage-php <file>', 'desc' => 'Write serialized code coverage data to file'],
-            ['arg' => '--coverage-text=<file>', 'desc' => 'Write code coverage report in text format to file [default: standard output]'],
-            ['arg' => '--coverage-xml <dir>', 'desc' => 'Write code coverage report in XML format to directory'],
-            ['arg' => '--warm-coverage-cache', 'desc' => 'Warm static analysis cache'],
-            ['arg' => '--coverage-filter <dir>', 'desc' => 'Include <dir> in code coverage reporting'],
-            ['arg' => '--path-coverage', 'desc' => 'Report path coverage in addition to line coverage'],
-            ['arg' => '--disable-coverage-ignore', 'desc' => 'Disable metadata for ignoring code coverage'],
-            ['arg' => '--no-coverage', 'desc' => 'Ignore code coverage reporting configured in the XML configuration file'],
-        ],
-
-        'Miscellaneous' => [
-            ['arg' => '-h|--help', 'desc' => 'Prints this usage information'],
-            ['arg' => '--version', 'desc' => 'Prints the version and exits'],
-            ['arg' => '--atleast-version <min>', 'desc' => 'Checks that version is greater than <min> and exits'],
-            ['arg' => '--check-version', 'desc' => 'Check whether PHPUnit is the latest version and exits'],
-        ],
-
-    ];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private int $lengthOfLongestOptionName = 0;
     private readonly int $columnsAvailableForDescription;
     private ?bool $hasColor;
@@ -189,23 +44,10 @@ final class Help
             $this->hasColor = $withColor;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($this->elements() as $options) {
             foreach ($options as $option) {
                 if (isset($option['arg'])) {
                     $this->lengthOfLongestOptionName = max($this->lengthOfLongestOptionName, strlen($option['arg']));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        foreach (self::HELP_TEXT as $options) {
-            foreach ($options as $option) {
-                if (isset($option['arg'])) {
-                    $this->lengthOfLongestOptionName = max($this->lengthOfLongestOptionName, isset($option['arg']) ? strlen($option['arg']) : 0);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
         }
@@ -226,15 +68,7 @@ final class Help
     {
         $buffer = '';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($this->elements() as $section => $options) {
-=======
-        foreach (self::HELP_TEXT as $section => $options) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        foreach (self::HELP_TEXT as $section => $options) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $buffer .= "{$section}:" . PHP_EOL;
 
             if ($section !== 'Usage') {
@@ -267,15 +101,7 @@ final class Help
     {
         $buffer = '';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($this->elements() as $section => $options) {
-=======
-        foreach (self::HELP_TEXT as $section => $options) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        foreach (self::HELP_TEXT as $section => $options) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $buffer .= Color::colorize('fg-yellow', "{$section}:") . PHP_EOL;
 
             if ($section !== 'Usage') {
@@ -296,15 +122,7 @@ final class Help
                     $arg = preg_replace_callback(
                         '/(<[^>]+>)/',
                         static fn ($matches) => Color::colorize('fg-cyan', $matches[0]),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $arg,
-=======
-                        $arg
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $arg
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
 
                     $desc = explode(PHP_EOL, wordwrap($option['desc'], $this->columnsAvailableForDescription, PHP_EOL));
@@ -322,8 +140,6 @@ final class Help
 
         return $buffer;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @psalm-return array<non-empty-string, non-empty-list<array{text: non-empty-string}|array{arg: non-empty-string, desc: non-empty-string}|array{spacer: ''}>>
@@ -478,8 +294,4 @@ final class Help
 
         return $elements;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

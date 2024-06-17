@@ -12,17 +12,7 @@
 namespace Psy\Util;
 
 use Psy\Exception\RuntimeException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Psy\Reflection\ReflectionConstant;
-=======
-use Psy\Reflection\ReflectionClassConstant;
-use Psy\Reflection\ReflectionConstant_;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Psy\Reflection\ReflectionClassConstant;
-use Psy\Reflection\ReflectionConstant_;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psy\Reflection\ReflectionNamespace;
 
 /**
@@ -52,31 +42,13 @@ class Mirror
      *
      * @return \Reflector
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function get($value, ?string $member = null, int $filter = 15): \Reflector
-=======
-    public static function get($value, string $member = null, int $filter = 15): \Reflector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function get($value, string $member = null, int $filter = 15): \Reflector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($member === null && \is_string($value)) {
             if (\function_exists($value)) {
                 return new \ReflectionFunction($value);
-<<<<<<< HEAD
-<<<<<<< HEAD
             } elseif (\defined($value) || ReflectionConstant::isMagicConstant($value)) {
                 return new ReflectionConstant($value);
-=======
-            } elseif (\defined($value) || ReflectionConstant_::isMagicConstant($value)) {
-                return new ReflectionConstant_($value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            } elseif (\defined($value) || ReflectionConstant_::isMagicConstant($value)) {
-                return new ReflectionConstant_($value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -85,15 +57,7 @@ class Mirror
         if ($member === null) {
             return $class;
         } elseif ($filter & self::CONSTANT && $class->hasConstant($member)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return new \ReflectionClassConstant($value, $member);
-=======
-            return ReflectionClassConstant::create($value, $member);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return ReflectionClassConstant::create($value, $member);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif ($filter & self::METHOD && $class->hasMethod($member)) {
             return $class->getMethod($member);
         } elseif ($filter & self::PROPERTY && $class->hasProperty($member)) {

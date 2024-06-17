@@ -31,14 +31,8 @@ interface CatalogueMetadataAwareInterface
 
     /**
      * Adds catalogue metadata to a message domain.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setCatalogueMetadata(string $key, mixed $value, string $domain = 'messages');
 
@@ -47,14 +41,8 @@ interface CatalogueMetadataAwareInterface
      *
      * Passing an empty domain will delete all catalogue metadata. Passing an empty key will
      * delete all metadata for the given domain.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function deleteCatalogueMetadata(string $key = '', string $domain = 'messages');
 }

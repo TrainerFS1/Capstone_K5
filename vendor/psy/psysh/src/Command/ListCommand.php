@@ -26,14 +26,6 @@ use Psy\Output\ShellOutput;
 use Psy\VarDumper\Presenter;
 use Psy\VarDumper\PresenterAware;
 use Symfony\Component\Console\Formatter\OutputFormatter;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Symfony\Component\Console\Helper\TableHelper;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Console\Helper\TableHelper;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -122,15 +114,7 @@ HELP
      *
      * @return int 0 if everything went fine, or an exit code
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->validateInput($input);
         $this->initEnumerators();
@@ -228,21 +212,7 @@ HELP
                 $table->addRow([$this->formatItemName($item), $item['value']]);
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $table->render();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if ($table instanceof TableHelper) {
-                $table->render($output);
-            } else {
-                $table->render();
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 

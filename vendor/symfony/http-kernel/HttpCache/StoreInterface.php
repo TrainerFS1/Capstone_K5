@@ -41,14 +41,8 @@ interface StoreInterface
 
     /**
      * Invalidates all cache entries that match the request.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function invalidate(Request $request);
 
@@ -82,14 +76,8 @@ interface StoreInterface
 
     /**
      * Cleanups storage.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function cleanup();
 }

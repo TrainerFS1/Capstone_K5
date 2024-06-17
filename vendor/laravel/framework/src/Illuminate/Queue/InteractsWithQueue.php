@@ -2,30 +2,16 @@
 
 namespace Illuminate\Queue;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use DateTimeInterface;
 use Illuminate\Contracts\Queue\Job as JobContract;
 use Illuminate\Support\InteractsWithTime;
-=======
-use Illuminate\Contracts\Queue\Job as JobContract;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Contracts\Queue\Job as JobContract;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use InvalidArgumentException;
 use Throwable;
 
 trait InteractsWithQueue
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use InteractsWithTime;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The underlying queue job instance.
      *
@@ -79,29 +65,15 @@ trait InteractsWithQueue
     /**
      * Release the job back into the queue after (n) seconds.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \DateTimeInterface|\DateInterval|int  $delay
-=======
-     * @param  int  $delay
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  int  $delay
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     public function release($delay = 0)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $delay = $delay instanceof DateTimeInterface
             ? $this->secondsUntil($delay)
             : $delay;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->job) {
             return $this->job->release($delay);
         }

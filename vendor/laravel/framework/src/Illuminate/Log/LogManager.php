@@ -16,14 +16,8 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogHandler;
 use Monolog\Handler\WhatFailureGroupHandler;
 use Monolog\Logger as Monolog;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Monolog\Processor\ProcessorInterface;
 use Monolog\Processor\PsrLogMessageProcessor;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psr\Log\LoggerInterface;
 use Throwable;
 
@@ -301,15 +295,7 @@ class LogManager implements LoggerInterface
                     $config['bubble'] ?? true, $config['permission'] ?? null, $config['locking'] ?? false
                 ), $config
             ),
-<<<<<<< HEAD
-<<<<<<< HEAD
         ], $config['replace_placeholders'] ?? false ? [new PsrLogMessageProcessor()] : []);
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -325,15 +311,7 @@ class LogManager implements LoggerInterface
                 $config['path'], $config['days'] ?? 7, $this->level($config),
                 $config['bubble'] ?? true, $config['permission'] ?? null, $config['locking'] ?? false
             ), $config),
-<<<<<<< HEAD
-<<<<<<< HEAD
         ], $config['replace_placeholders'] ?? false ? [new PsrLogMessageProcessor()] : []);
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -357,15 +335,7 @@ class LogManager implements LoggerInterface
                 $config['bubble'] ?? true,
                 $config['exclude_fields'] ?? []
             ), $config),
-<<<<<<< HEAD
-<<<<<<< HEAD
         ], $config['replace_placeholders'] ?? false ? [new PsrLogMessageProcessor()] : []);
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -381,15 +351,7 @@ class LogManager implements LoggerInterface
                 Str::snake($this->app['config']['app.name'], '-'),
                 $config['facility'] ?? LOG_USER, $this->level($config)
             ), $config),
-<<<<<<< HEAD
-<<<<<<< HEAD
         ], $config['replace_placeholders'] ?? false ? [new PsrLogMessageProcessor()] : []);
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -404,15 +366,7 @@ class LogManager implements LoggerInterface
             $this->prepareHandler(new ErrorLogHandler(
                 $config['type'] ?? ErrorLogHandler::OPERATING_SYSTEM, $this->level($config)
             )),
-<<<<<<< HEAD
-<<<<<<< HEAD
         ], $config['replace_placeholders'] ?? false ? [new PsrLogMessageProcessor()] : []);
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -432,8 +386,6 @@ class LogManager implements LoggerInterface
             );
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         collect($config['processors'] ?? [])->each(function ($processor) {
             $processor = $processor['processor'] ?? $processor;
 
@@ -444,18 +396,12 @@ class LogManager implements LoggerInterface
             }
         });
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $with = array_merge(
             ['level' => $this->level($config)],
             $config['with'] ?? [],
             $config['handler_with'] ?? []
         );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $handler = $this->prepareHandler(
             $this->app->make($config['handler'], $with), $config
         );
@@ -469,16 +415,6 @@ class LogManager implements LoggerInterface
             [$handler],
             $processors,
         );
-=======
-        return new Monolog($this->parseChannel($config), [$this->prepareHandler(
-            $this->app->make($config['handler'], $with), $config
-        )]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new Monolog($this->parseChannel($config), [$this->prepareHandler(
-            $this->app->make($config['handler'], $with), $config
-        )]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -535,19 +471,7 @@ class LogManager implements LoggerInterface
      */
     protected function formatter()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return new LineFormatter(null, $this->dateFormat, true, true, true);
-=======
-        return tap(new LineFormatter(null, $this->dateFormat, true, true), function ($formatter) {
-            $formatter->includeStacktraces();
-        });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return tap(new LineFormatter(null, $this->dateFormat, true, true), function ($formatter) {
-            $formatter->includeStacktraces();
-        });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -578,8 +502,6 @@ class LogManager implements LoggerInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Flush the log context on all currently resolved channels.
      *
      * @return $this
@@ -596,10 +518,6 @@ class LogManager implements LoggerInterface
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Flush the shared context.
      *
      * @return $this
@@ -712,15 +630,7 @@ class LogManager implements LoggerInterface
     /**
      * System is unusable.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -735,15 +645,7 @@ class LogManager implements LoggerInterface
      * Example: Entire website down, database unavailable, etc. This should
      * trigger the SMS alerts and wake you up.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -757,15 +659,7 @@ class LogManager implements LoggerInterface
      *
      * Example: Application component unavailable, unexpected exception.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -778,15 +672,7 @@ class LogManager implements LoggerInterface
      * Runtime errors that do not require immediate action but should typically
      * be logged and monitored.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -801,15 +687,7 @@ class LogManager implements LoggerInterface
      * Example: Use of deprecated APIs, poor use of an API, undesirable things
      * that are not necessarily wrong.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -821,15 +699,7 @@ class LogManager implements LoggerInterface
     /**
      * Normal but significant events.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -843,15 +713,7 @@ class LogManager implements LoggerInterface
      *
      * Example: User logs in, SQL logs.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -863,15 +725,7 @@ class LogManager implements LoggerInterface
     /**
      * Detailed debug information.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */
@@ -884,15 +738,7 @@ class LogManager implements LoggerInterface
      * Logs with an arbitrary level.
      *
      * @param  mixed  $level
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|\Stringable  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $context
      * @return void
      */

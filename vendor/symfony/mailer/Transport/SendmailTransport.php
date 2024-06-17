@@ -49,15 +49,7 @@ class SendmailTransport extends AbstractTransport
      *
      * -f<sender> flag will be appended automatically if one is not present.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $command = null, ?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null)
-=======
-    public function __construct(string $command = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $command = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         parent::__construct($dispatcher, $logger);
 
@@ -72,26 +64,12 @@ class SendmailTransport extends AbstractTransport
         $this->stream = new ProcessStream();
         if (str_contains($this->command, ' -bs')) {
             $this->stream->setCommand($this->command);
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->stream->setInteractive(true);
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->transport = new SmtpTransport($this->stream, $dispatcher, $logger);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function send(RawMessage $message, ?Envelope $envelope = null): ?SentMessage
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->transport) {
             return $this->transport->send($message, $envelope);

@@ -32,15 +32,7 @@ final class ListGroupsCommand implements Command
         $buffer = $this->warnAboutConflictingOptions();
         $buffer .= 'Available test group(s):' . PHP_EOL;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $groups = $this->suite->groups();
-=======
-        $groups = $this->suite->getGroups();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $groups = $this->suite->getGroups();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         sort($groups);
 
         foreach ($groups as $group) {
@@ -50,15 +42,7 @@ final class ListGroupsCommand implements Command
 
             $buffer .= sprintf(
                 ' - %s' . PHP_EOL,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $group,
-=======
-                $group
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $group
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

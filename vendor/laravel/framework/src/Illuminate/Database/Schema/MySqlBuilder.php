@@ -31,8 +31,6 @@ class MySqlBuilder extends Builder
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the tables for the database.
      *
      * @return array
@@ -90,48 +88,15 @@ class MySqlBuilder extends Builder
 
     /**
      * Get the columns for a given table.
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Determine if the given table exists.
-     *
-     * @param  string  $table
-     * @return bool
-     */
-    public function hasTable($table)
-    {
-        $table = $this->connection->getTablePrefix().$table;
-
-        return count($this->connection->selectFromWriteConnection(
-            $this->grammar->compileTableExists(), [$this->connection->getDatabaseName(), $table]
-        )) > 0;
-    }
-
-    /**
-     * Get the column listing for a given table.
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $table
      * @return array
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getColumns($table)
-=======
-    public function getColumnListing($table)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getColumnListing($table)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $table = $this->connection->getTablePrefix().$table;
 
         $results = $this->connection->selectFromWriteConnection(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->grammar->compileColumns($this->connection->getDatabaseName(), $table)
         );
 
@@ -170,17 +135,6 @@ class MySqlBuilder extends Builder
                 $this->grammar->compileForeignKeys($this->connection->getDatabaseName(), $table)
             )
         );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $this->grammar->compileColumnListing(), [$this->connection->getDatabaseName(), $table]
-        );
-
-        return $this->connection->getPostProcessor()->processColumnListing($results);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -190,23 +144,7 @@ class MySqlBuilder extends Builder
      */
     public function dropAllTables()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $tables = array_column($this->getTables(), 'name');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $tables = [];
-
-        foreach ($this->getAllTables() as $row) {
-            $row = (array) $row;
-
-            $tables[] = reset($row);
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (empty($tables)) {
             return;
@@ -228,23 +166,7 @@ class MySqlBuilder extends Builder
      */
     public function dropAllViews()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $views = array_column($this->getViews(), 'name');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $views = [];
-
-        foreach ($this->getAllViews() as $row) {
-            $row = (array) $row;
-
-            $views[] = reset($row);
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (empty($views)) {
             return;
@@ -254,37 +176,4 @@ class MySqlBuilder extends Builder
             $this->grammar->compileDropAllViews($views)
         );
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Get all of the table names for the database.
-     *
-     * @return array
-     */
-    public function getAllTables()
-    {
-        return $this->connection->select(
-            $this->grammar->compileGetAllTables()
-        );
-    }
-
-    /**
-     * Get all of the view names for the database.
-     *
-     * @return array
-     */
-    public function getAllViews()
-    {
-        return $this->connection->select(
-            $this->grammar->compileGetAllViews()
-        );
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

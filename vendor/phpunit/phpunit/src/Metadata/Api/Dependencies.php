@@ -22,13 +22,7 @@ final class Dependencies
 {
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @psalm-return list<ExecutionOrderDependency>
      */
@@ -41,8 +35,6 @@ final class Dependencies
                 assert($metadata instanceof DependsOnClass);
 
                 $dependencies[] = ExecutionOrderDependency::forClass($metadata);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 continue;
             }
@@ -56,24 +48,6 @@ final class Dependencies
             }
 
             $dependencies[] = ExecutionOrderDependency::forMethod($metadata);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            }
-
-            if ($metadata->isDependsOnMethod()) {
-                assert($metadata instanceof DependsOnMethod);
-
-                if (empty($metadata->methodName())) {
-                    $dependencies[] = ExecutionOrderDependency::invalid();
-                } else {
-                    $dependencies[] = ExecutionOrderDependency::forMethod($metadata);
-                }
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $dependencies;

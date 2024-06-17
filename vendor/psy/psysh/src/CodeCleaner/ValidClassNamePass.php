@@ -79,16 +79,6 @@ class ValidClassNamePass extends NamespaceAwarePass
     {
         if (self::isConditional($node)) {
             $this->conditionalScopes--;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-            return;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-            return;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -270,38 +260,6 @@ class ValidClassNamePass extends NamespaceAwarePass
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get a symbol type key for storing in the scope name cache.
-     *
-     * @deprecated No longer used. Scope type should be passed into ensureCanDefine directly.
-     * @codeCoverageIgnore
-     *
-     * @throws FatalErrorException
-     *
-     * @param Stmt $stmt
-     */
-    protected function getScopeType(Stmt $stmt): string
-    {
-        if ($stmt instanceof Class_) {
-            return self::CLASS_TYPE;
-        } elseif ($stmt instanceof Interface_) {
-            return self::INTERFACE_TYPE;
-        } elseif ($stmt instanceof Trait_) {
-            return self::TRAIT_TYPE;
-        }
-
-        throw $this->createError('Unsupported statement type', $stmt);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Check whether a class exists, or has been defined in the current code snippet.
      *
      * Gives `self`, `static` and `parent` a free pass.
@@ -363,14 +321,6 @@ class ValidClassNamePass extends NamespaceAwarePass
      */
     protected function createError(string $msg, Stmt $stmt): FatalErrorException
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return new FatalErrorException($msg, 0, \E_ERROR, null, $stmt->getStartLine());
-=======
-        return new FatalErrorException($msg, 0, \E_ERROR, null, $stmt->getLine());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new FatalErrorException($msg, 0, \E_ERROR, null, $stmt->getLine());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

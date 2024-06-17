@@ -15,14 +15,6 @@ use Psy\Shell;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Helper\Table;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Symfony\Component\Console\Helper\TableHelper;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Console\Helper\TableHelper;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Helper\TableStyle;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -38,29 +30,13 @@ abstract class Command extends BaseCommand
      *
      * @api
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setApplication(?Application $application = null): void
-=======
-    public function setApplication(Application $application = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setApplication(Application $application = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($application !== null && !$application instanceof Shell) {
             throw new \InvalidArgumentException('PsySH Commands require an instance of Psy\Shell');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         parent::setApplication($application);
-=======
-        return parent::setApplication($application);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return parent::setApplication($application);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -254,29 +230,10 @@ abstract class Command extends BaseCommand
     /**
      * Get a Table instance.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return Table
      */
     protected function getTable(OutputInterface $output)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Falls back to legacy TableHelper.
-     *
-     * @return Table|TableHelper
-     */
-    protected function getTable(OutputInterface $output)
-    {
-        if (!\class_exists(Table::class)) {
-            return $this->getTableHelper();
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $style = new TableStyle();
 
         // Symfony 4.1 deprecated single-argument style setters.
@@ -296,27 +253,4 @@ abstract class Command extends BaseCommand
             ->setRows([])
             ->setStyle($style);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Legacy fallback for getTable.
-     */
-    protected function getTableHelper(): TableHelper
-    {
-        $table = $this->getApplication()->getHelperSet()->get('table');
-
-        return $table
-            ->setRows([])
-            ->setLayout(TableHelper::LAYOUT_BORDERLESS)
-            ->setHorizontalBorderChar('')
-            ->setCrossingChar('');
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -2,8 +2,6 @@
 
 namespace Illuminate\Queue\Jobs;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Bus\Batchable;
 use Illuminate\Bus\BatchRepository;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -12,17 +10,6 @@ use Illuminate\Queue\ManuallyFailedException;
 use Illuminate\Queue\TimeoutExceededException;
 use Illuminate\Support\InteractsWithTime;
 use Throwable;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Queue\Events\JobFailed;
-use Illuminate\Queue\ManuallyFailedException;
-use Illuminate\Support\InteractsWithTime;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 abstract class Job
 {
@@ -200,8 +187,6 @@ abstract class Job
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $commandName = $this->payload()['data']['commandName'] ?? false;
 
         // If the exception is due to a job timing out, we need to rollback the current
@@ -221,10 +206,6 @@ abstract class Job
             }
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
             // If the job has failed, we will delete it, call the "failed" method and then call
             // an event indicating the job has failed so it can be logged if needed. This is

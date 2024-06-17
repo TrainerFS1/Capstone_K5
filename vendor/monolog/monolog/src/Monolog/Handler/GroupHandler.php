@@ -70,15 +70,7 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
         }
 
         foreach ($this->handlers as $handler) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $handler->handle(clone $record);
-=======
-            $handler->handle($record);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $handler->handle($record);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return false === $this->bubble;
@@ -98,15 +90,7 @@ class GroupHandler extends Handler implements ProcessableHandlerInterface, Reset
         }
 
         foreach ($this->handlers as $handler) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $handler->handleBatch(array_map(fn ($record) => clone $record, $records));
-=======
-            $handler->handleBatch($records);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $handler->handleBatch($records);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 

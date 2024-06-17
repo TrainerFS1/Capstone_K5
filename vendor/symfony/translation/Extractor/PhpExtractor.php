@@ -132,15 +132,9 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
         ],
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function extract(string|iterable $resource, MessageCatalogue $catalog)
     {
         $files = $this->extractFiles($resource);
@@ -151,15 +145,9 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setPrefix(string $prefix)
     {
         $this->prefix = $prefix;
@@ -180,15 +168,7 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
     /**
      * Seeks to a non-whitespace token.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function seekToNextRelevantToken(\Iterator $tokenIterator): void
-=======
-    private function seekToNextRelevantToken(\Iterator $tokenIterator)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function seekToNextRelevantToken(\Iterator $tokenIterator)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         for (; $tokenIterator->valid(); $tokenIterator->next()) {
             $t = $tokenIterator->current();
@@ -198,15 +178,7 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function skipMethodArgument(\Iterator $tokenIterator): void
-=======
-    private function skipMethodArgument(\Iterator $tokenIterator)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function skipMethodArgument(\Iterator $tokenIterator)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $openBraces = 0;
 
@@ -231,15 +203,7 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
      * Extracts the message from the iterator while the tokens
      * match allowed message tokens.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function getValue(\Iterator $tokenIterator): string
-=======
-    private function getValue(\Iterator $tokenIterator)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function getValue(\Iterator $tokenIterator)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $message = '';
         $docToken = '';
@@ -297,14 +261,8 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
 
     /**
      * Extracts trans message from PHP tokens.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function parseTokens(array $tokens, MessageCatalogue $catalog, string $filename)
     {

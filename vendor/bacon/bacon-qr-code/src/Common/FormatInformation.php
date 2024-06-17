@@ -68,30 +68,10 @@ class FormatInformation
 
     /**
      * Error correction level.
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
     private ErrorCorrectionLevel $ecLevel;
 
     private int $dataMask;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     *
-     * @var ErrorCorrectionLevel
-     */
-    private $ecLevel;
-
-    /**
-     * Data mask.
-     *
-     * @var int
-     */
-    private $dataMask;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     protected function __construct(int $formatInfo)
     {

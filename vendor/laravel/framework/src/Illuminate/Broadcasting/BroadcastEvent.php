@@ -43,8 +43,6 @@ class BroadcastEvent implements ShouldQueue
     public $backoff;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The maximum number of unhandled exceptions to allow before failing.
      *
      * @var int
@@ -52,10 +50,6 @@ class BroadcastEvent implements ShouldQueue
     public $maxExceptions;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new job handler instance.
      *
      * @param  mixed  $event
@@ -68,13 +62,7 @@ class BroadcastEvent implements ShouldQueue
         $this->timeout = property_exists($event, 'timeout') ? $event->timeout : null;
         $this->backoff = property_exists($event, 'backoff') ? $event->backoff : null;
         $this->afterCommit = property_exists($event, 'afterCommit') ? $event->afterCommit : null;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->maxExceptions = property_exists($event, 'maxExceptions') ? $event->maxExceptions : null;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

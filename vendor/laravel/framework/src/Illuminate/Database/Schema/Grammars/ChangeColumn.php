@@ -3,14 +3,6 @@
 namespace Illuminate\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Doctrine\DBAL\Schema\Comparator;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Doctrine\DBAL\Schema\Comparator;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Type;
 use Illuminate\Database\Connection;
@@ -67,15 +59,7 @@ class ChangeColumn
     {
         $current = $schema->introspectTable($grammar->getTablePrefix().$blueprint->getTable());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $schema->createComparator()->compareTables(
-=======
-        return (new Comparator)->compareTables(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return (new Comparator)->compareTables(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $current, static::getTableWithColumnChanges($blueprint, $current)
         );
     }
@@ -136,16 +120,10 @@ class ChangeColumn
     {
         $options = ['type' => static::getDoctrineColumnType($fluent['type'])];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! in_array($fluent['type'], ['smallint', 'integer', 'bigint'])) {
             $options['autoincrement'] = false;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (in_array($fluent['type'], ['tinyText', 'text', 'mediumText', 'longText'])) {
             $options['length'] = static::calculateDoctrineTextLength($fluent['type']);
         }

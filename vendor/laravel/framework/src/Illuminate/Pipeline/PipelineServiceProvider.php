@@ -16,21 +16,11 @@ class PipelineServiceProvider extends ServiceProvider implements DeferrableProvi
     public function register()
     {
         $this->app->singleton(
-<<<<<<< HEAD
-<<<<<<< HEAD
             PipelineHubContract::class,
             Hub::class
         );
 
         $this->app->bind('pipeline', fn ($app) => new Pipeline($app));
-=======
-            PipelineHubContract::class, Hub::class
-        );
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            PipelineHubContract::class, Hub::class
-        );
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -42,13 +32,7 @@ class PipelineServiceProvider extends ServiceProvider implements DeferrableProvi
     {
         return [
             PipelineHubContract::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
             'pipeline',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 }

@@ -44,41 +44,17 @@ class SessionHandlerProxy extends AbstractProxy implements \SessionHandlerInterf
         return $this->handler->close();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function read(#[\SensitiveParameter] string $sessionId): string|false
-=======
-    public function read(string $sessionId): string|false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function read(string $sessionId): string|false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->handler->read($sessionId);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function write(#[\SensitiveParameter] string $sessionId, string $data): bool
-=======
-    public function write(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function write(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->handler->write($sessionId, $data);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function destroy(#[\SensitiveParameter] string $sessionId): bool
-=======
-    public function destroy(string $sessionId): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function destroy(string $sessionId): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->handler->destroy($sessionId);
     }
@@ -88,28 +64,12 @@ class SessionHandlerProxy extends AbstractProxy implements \SessionHandlerInterf
         return $this->handler->gc($maxlifetime);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function validateId(#[\SensitiveParameter] string $sessionId): bool
-=======
-    public function validateId(string $sessionId): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function validateId(string $sessionId): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return !$this->handler instanceof \SessionUpdateTimestampHandlerInterface || $this->handler->validateId($sessionId);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function updateTimestamp(#[\SensitiveParameter] string $sessionId, string $data): bool
-=======
-    public function updateTimestamp(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function updateTimestamp(string $sessionId, string $data): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->handler instanceof \SessionUpdateTimestampHandlerInterface ? $this->handler->updateTimestamp($sessionId, $data) : $this->write($sessionId, $data);
     }

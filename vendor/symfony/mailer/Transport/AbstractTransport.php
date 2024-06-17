@@ -35,15 +35,7 @@ abstract class AbstractTransport implements TransportInterface
     private float $rate = 0;
     private float $lastSent = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null)
-=======
-    public function __construct(EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->dispatcher = $dispatcher;
         $this->logger = $logger ?? new NullLogger();
@@ -66,15 +58,7 @@ abstract class AbstractTransport implements TransportInterface
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function send(RawMessage $message, ?Envelope $envelope = null): ?SentMessage
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $message = clone $message;
         $envelope = null !== $envelope ? clone $envelope : Envelope::create($message);
@@ -89,16 +73,10 @@ abstract class AbstractTransport implements TransportInterface
 
             $event = new MessageEvent($message, $envelope, (string) $this);
             $this->dispatcher->dispatch($event);
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($event->isRejected()) {
                 return null;
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $envelope = $event->getEnvelope();
             $message = $event->getMessage();
 
@@ -134,19 +112,7 @@ abstract class AbstractTransport implements TransportInterface
      */
     protected function stringifyAddresses(array $addresses): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return array_map(fn (Address $a) => $a->toString(), $addresses);
-=======
-        return array_map(function (Address $a) {
-            return $a->toString();
-        }, $addresses);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return array_map(function (Address $a) {
-            return $a->toString();
-        }, $addresses);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     protected function getLogger(): LoggerInterface
@@ -154,15 +120,7 @@ abstract class AbstractTransport implements TransportInterface
         return $this->logger;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function checkThrottling(): void
-=======
-    private function checkThrottling()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function checkThrottling()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (0 == $this->rate) {
             return;
@@ -171,15 +129,7 @@ abstract class AbstractTransport implements TransportInterface
         $sleep = (1 / $this->rate) - (microtime(true) - $this->lastSent);
         if (0 < $sleep) {
             $this->logger->debug(sprintf('Email transport "%s" sleeps for %.2f seconds', __CLASS__, $sleep));
-<<<<<<< HEAD
-<<<<<<< HEAD
             usleep((int) ($sleep * 1000000));
-=======
-            usleep($sleep * 1000000);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            usleep($sleep * 1000000);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
         $this->lastSent = microtime(true);
     }

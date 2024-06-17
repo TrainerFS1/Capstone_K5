@@ -23,15 +23,7 @@ interface MessageInterface
      *
      * @return string HTTP protocol version.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getProtocolVersion(): string;
-=======
-    public function getProtocolVersion();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getProtocolVersion();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the specified HTTP protocol version.
@@ -46,15 +38,7 @@ interface MessageInterface
      * @param string $version HTTP protocol version
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withProtocolVersion(string $version): MessageInterface;
-=======
-    public function withProtocolVersion($version);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withProtocolVersion($version);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Retrieves all message header values.
@@ -81,15 +65,7 @@ interface MessageInterface
      *     key MUST be a header name, and each value MUST be an array of strings
      *     for that header.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getHeaders(): array;
-=======
-    public function getHeaders();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getHeaders();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Checks if a header exists by the given case-insensitive name.
@@ -99,15 +75,7 @@ interface MessageInterface
      *     name using a case-insensitive string comparison. Returns false if
      *     no matching header name is found in the message.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function hasHeader(string $name): bool;
-=======
-    public function hasHeader($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function hasHeader($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Retrieves a message header value by the given case-insensitive name.
@@ -123,15 +91,7 @@ interface MessageInterface
      *    header. If the header does not appear in the message, this method MUST
      *    return an empty array.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getHeader(string $name): array;
-=======
-    public function getHeader($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getHeader($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Retrieves a comma-separated string of the values for a single header.
@@ -152,15 +112,7 @@ interface MessageInterface
      *    concatenated together using a comma. If the header does not appear in
      *    the message, this method MUST return an empty string.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getHeaderLine(string $name): string;
-=======
-    public function getHeaderLine($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getHeaderLine($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the provided value replacing the specified header.
@@ -177,15 +129,7 @@ interface MessageInterface
      * @return static
      * @throws \InvalidArgumentException for invalid header names or values.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withHeader(string $name, $value): MessageInterface;
-=======
-    public function withHeader($name, $value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withHeader($name, $value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the specified header appended with the given value.
@@ -203,15 +147,7 @@ interface MessageInterface
      * @return static
      * @throws \InvalidArgumentException for invalid header names or values.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withAddedHeader(string $name, $value): MessageInterface;
-=======
-    public function withAddedHeader($name, $value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withAddedHeader($name, $value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance without the specified header.
@@ -225,30 +161,14 @@ interface MessageInterface
      * @param string $name Case-insensitive header field name to remove.
      * @return static
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withoutHeader(string $name): MessageInterface;
-=======
-    public function withoutHeader($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withoutHeader($name);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Gets the body of the message.
      *
      * @return StreamInterface Returns the body as a stream.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getBody(): StreamInterface;
-=======
-    public function getBody();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getBody();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Return an instance with the specified message body.
@@ -263,13 +183,5 @@ interface MessageInterface
      * @return static
      * @throws \InvalidArgumentException When the body is not valid.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function withBody(StreamInterface $body): MessageInterface;
-=======
-    public function withBody(StreamInterface $body);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function withBody(StreamInterface $body);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

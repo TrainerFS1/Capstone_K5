@@ -17,23 +17,9 @@ class Ean
      *
      * @see https://en.wikipedia.org/wiki/International_Article_Number
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return int
      */
     public static function checksum(string $digits)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param string $digits
-     *
-     * @return int
-     */
-    public static function checksum($digits)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $sequence = (strlen($digits) + 1) === 8 ? [3, 1] : [1, 3];
         $sums = 0;
@@ -53,15 +39,7 @@ class Ean
      *
      * @return bool
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function isValid(string $ean)
-=======
-    public static function isValid($ean)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function isValid($ean)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!preg_match(self::PATTERN, $ean)) {
             return false;

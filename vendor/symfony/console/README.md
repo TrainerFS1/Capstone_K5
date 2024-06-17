@@ -4,8 +4,6 @@ Console Component
 The Console component eases the creation of beautiful and testable command line
 interfaces.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Sponsor
 -------
 
@@ -18,10 +16,6 @@ They are a worker cooperative!
 
 Help Symfony by [sponsoring][3] its development!
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 Resources
 ---------
 
@@ -36,13 +30,7 @@ Credits
 
 `Resources/bin/hiddeninput.exe` is a third party binary provided within this
 component. Find sources and license at https://github.com/Seldaek/hidden-input.
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 [1]: https://symfony.com/backers
 [2]: https://les-tilleuls.coop
 [3]: https://symfony.com/sponsor
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485

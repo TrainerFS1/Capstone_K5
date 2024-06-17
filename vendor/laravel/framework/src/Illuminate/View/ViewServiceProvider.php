@@ -2,13 +2,7 @@
 
 namespace Illuminate\View;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Container\Container;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\View\Engines\CompilerEngine;
@@ -142,15 +136,7 @@ class ViewServiceProvider extends ServiceProvider
     public function registerFileEngine($resolver)
     {
         $resolver->register('file', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return new FileEngine(Container::getInstance()->make('files'));
-=======
-            return new FileEngine($this->app['files']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return new FileEngine($this->app['files']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
     }
 
@@ -163,15 +149,7 @@ class ViewServiceProvider extends ServiceProvider
     public function registerPhpEngine($resolver)
     {
         $resolver->register('php', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return new PhpEngine(Container::getInstance()->make('files'));
-=======
-            return new PhpEngine($this->app['files']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return new PhpEngine($this->app['files']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
     }
 
@@ -184,8 +162,6 @@ class ViewServiceProvider extends ServiceProvider
     public function registerBladeEngine($resolver)
     {
         $resolver->register('blade', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $app = Container::getInstance();
 
             $compiler = new CompilerEngine(
@@ -194,16 +170,6 @@ class ViewServiceProvider extends ServiceProvider
             );
 
             $app->terminating(static function () use ($compiler) {
-=======
-            $compiler = new CompilerEngine($this->app['blade.compiler'], $this->app['files']);
-
-            $this->app->terminating(static function () use ($compiler) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $compiler = new CompilerEngine($this->app['blade.compiler'], $this->app['files']);
-
-            $this->app->terminating(static function () use ($compiler) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $compiler->forgetCompiledOrNotExpired();
             });
 

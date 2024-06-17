@@ -9,8 +9,6 @@
  */
 namespace SebastianBergmann\Diff;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use ArrayIterator;
 use IteratorAggregate;
 use Traversable;
@@ -19,12 +17,6 @@ use Traversable;
  * @template-implements IteratorAggregate<int, Line>
  */
 final class Chunk implements IteratorAggregate
-=======
-final class Chunk
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-final class Chunk
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     private int $start;
     private int $startRange;
@@ -41,54 +33,22 @@ final class Chunk
         $this->lines      = $lines;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function start(): int
-=======
-    public function getStart(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getStart(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->start;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function startRange(): int
-=======
-    public function getStartRange(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getStartRange(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->startRange;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function end(): int
-=======
-    public function getEnd(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getEnd(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->end;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function endRange(): int
-=======
-    public function getEndRange(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getEndRange(): int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->endRange;
     }
@@ -96,15 +56,7 @@ final class Chunk
     /**
      * @psalm-return list<Line>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function lines(): array
-=======
-    public function getLines(): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getLines(): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->lines;
     }
@@ -122,8 +74,6 @@ final class Chunk
 
         $this->lines = $lines;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @deprecated Use start() instead
@@ -171,8 +121,4 @@ final class Chunk
     {
         return new ArrayIterator($this->lines);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

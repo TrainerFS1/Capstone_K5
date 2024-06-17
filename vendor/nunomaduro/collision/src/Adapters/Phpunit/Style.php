@@ -6,41 +6,23 @@ namespace NunoMaduro\Collision\Adapters\Phpunit;
 
 use Closure;
 use NunoMaduro\Collision\Adapters\Phpunit\Printers\DefaultPrinter;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use NunoMaduro\Collision\Adapters\Phpunit\Support\ResultReflection;
 use NunoMaduro\Collision\Exceptions\ShouldNotHappen;
 use NunoMaduro\Collision\Exceptions\TestException;
 use NunoMaduro\Collision\Exceptions\TestOutcome;
-=======
-use NunoMaduro\Collision\Exceptions\ShouldNotHappen;
-use NunoMaduro\Collision\Exceptions\TestException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use NunoMaduro\Collision\Exceptions\ShouldNotHappen;
-use NunoMaduro\Collision\Exceptions\TestException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use NunoMaduro\Collision\Writer;
 use Pest\Expectation;
 use PHPUnit\Event\Code\Throwable;
 use PHPUnit\Event\Telemetry\Info;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\IncompleteTestError;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Framework\SkippedWithMessageException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TestRunner\TestResult\TestResult as PHPUnitTestResult;
 use PHPUnit\TextUI\Configuration\Registry;
 use ReflectionClass;
 use ReflectionFunction;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Termwind\Terminal;
 use Whoops\Exception\Frame;
 use Whoops\Exception\Inspector;
@@ -48,19 +30,6 @@ use Whoops\Exception\Inspector;
 use function Termwind\render;
 use function Termwind\renderUsing;
 use function Termwind\terminal;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use function Termwind\render;
-use function Termwind\renderUsing;
-use Termwind\Terminal;
-use function Termwind\terminal;
-use Whoops\Exception\Frame;
-use Whoops\Exception\Inspector;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @internal
@@ -78,15 +47,7 @@ final class Style
     /**
      * @var string[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private const TYPES = [TestResult::DEPRECATED, TestResult::FAIL, TestResult::WARN, TestResult::RISKY, TestResult::INCOMPLETE, TestResult::NOTICE, TestResult::TODO, TestResult::SKIPPED, TestResult::PASS];
-=======
-    private const TYPES = [TestResult::DEPRECATED, TestResult::FAIL, TestResult::WARN, TestResult::RISKY, TestResult::INCOMPLETE, TestResult::TODO, TestResult::SKIPPED, TestResult::PASS];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private const TYPES = [TestResult::DEPRECATED, TestResult::FAIL, TestResult::WARN, TestResult::RISKY, TestResult::INCOMPLETE, TestResult::TODO, TestResult::SKIPPED, TestResult::PASS];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Style constructor.
@@ -171,23 +132,13 @@ final class Style
      *    ✓ basic test
      * ```
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function writeErrorsSummary(State $state): void
-=======
-    public function writeErrorsSummary(State $state, bool $onFailure): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function writeErrorsSummary(State $state, bool $onFailure): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $configuration = Registry::get();
         $failTypes = [
             TestResult::FAIL,
         ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($configuration->displayDetailsOnTestsThatTriggerNotices()) {
             $failTypes[] = TestResult::NOTICE;
         }
@@ -219,35 +170,6 @@ final class Style
             $failTypes,
             true
         )));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($configuration->failOnWarning()) {
-            $failTypes[] = TestResult::WARN;
-            $failTypes[] = TestResult::RISKY;
-        }
-
-        if ($configuration->failOnIncomplete()) {
-            $failTypes[] = TestResult::INCOMPLETE;
-        }
-
-        if ($configuration->failOnSkipped()) {
-            $failTypes[] = TestResult::SKIPPED;
-        }
-
-        $errors = array_filter($state->suiteTests, fn (TestResult $testResult) => in_array(
-            $testResult->type,
-            $failTypes,
-            true
-        ));
-
-        if (! $onFailure) {
-            $this->output->writeln(['']);
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         array_map(function (TestResult $testResult): void {
             if (! $testResult->throwable instanceof Throwable) {
@@ -271,14 +193,8 @@ final class Style
             $throwableClassName = ! in_array($throwableClassName, [
                 ExpectationFailedException::class,
                 IncompleteTestError::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 SkippedWithMessageException::class,
                 TestOutcome::class,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ], true) ? sprintf('<span class="px-1 bg-red font-bold">%s</span>', (new ReflectionClass($throwableClassName))->getShortName())
                 : '';
 
@@ -288,29 +204,13 @@ final class Style
             render(sprintf(<<<'HTML'
                 <div class="flex justify-between mx-2">
                     <span class="%s">
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <span class="px-1 bg-%s %s font-bold uppercase">%s</span> <span class="font-bold">%s</span><span class="text-gray mx-1">></span><span>%s</span>
-=======
-                        <span class="px-1 bg-%s font-bold uppercase">%s</span> <span class="font-bold">%s</span><span class="text-gray mx-1">></span><span>%s</span>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        <span class="px-1 bg-%s font-bold uppercase">%s</span> <span class="font-bold">%s</span><span class="text-gray mx-1">></span><span>%s</span>
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     </span>
                     <span class="ml-1">
                         %s
                     </span>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             HTML, $truncateClasses, $testResult->color === 'yellow' ? 'yellow-400' : $testResult->color, $testResult->color === 'yellow' ? 'text-black' : '', $testResult->type, $testCaseName, $description, $throwableClassName));
-=======
-            HTML, $truncateClasses, $testResult->color, $testResult->type, $testCaseName, $description, $throwableClassName));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            HTML, $truncateClasses, $testResult->color, $testResult->type, $testCaseName, $description, $throwableClassName));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $this->writeError($testResult->throwable);
         }, $errors);
@@ -326,8 +226,6 @@ final class Style
             if (($countTests = $state->countTestsInTestSuiteBy($type)) !== 0) {
                 $color = TestResult::makeColor($type);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if ($type === TestResult::WARN && $countTests < 2) {
                     $type = 'warning';
                 }
@@ -336,10 +234,6 @@ final class Style
                     $type = 'notices';
                 }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($type === TestResult::TODO && $countTests > 1) {
                     $type = 'todos';
                 }
@@ -348,15 +242,7 @@ final class Style
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $pending = ResultReflection::numberOfTests($result) - $result->numberOfTestsRun();
-=======
-        $pending = $result->numberOfTests() - $result->numberOfTestsRun();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $pending = $result->numberOfTests() - $result->numberOfTestsRun();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($pending > 0) {
             $tests[] = "\e[2m$pending pending\e[22m";
         }
@@ -397,18 +283,6 @@ final class Style
         foreach ($slowTests as $testResult) {
             $seconds = number_format($testResult->duration / 1000, 2, '.', '');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            // If duration is more than 25% of the total time elapsed, set the color as red
-            // If duration is more than 10% of the total time elapsed, set the color as yellow
-            // Otherwise, set the color as default
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            // If duration is more than 25% of the total time elapsed, set the color as red
-            // If duration is more than 10% of the total time elapsed, set the color as yellow
-            // Otherwise, set the color as default
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $color = ($testResult->duration / 1000) > $timeElapsed * 0.25 ? 'red' : ($testResult->duration > $timeElapsed * 0.1 ? 'yellow' : 'gray');
 
             renderUsing($this->output);
@@ -460,13 +334,7 @@ final class Style
         $writer->showTitle(false);
 
         $writer->ignoreFilesIn([
-<<<<<<< HEAD
-<<<<<<< HEAD
             '/vendor\/nunomaduro\/collision/',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             '/vendor\/bin\/pest/',
             '/bin\/pest/',
             '/vendor\/pestphp\/pest/',
@@ -476,19 +344,9 @@ final class Style
             '/vendor\/phpunit\/phpunit\/src/',
             '/vendor\/mockery\/mockery/',
             '/vendor\/laravel\/dusk/',
-<<<<<<< HEAD
-<<<<<<< HEAD
             '/Illuminate\/Testing/',
             '/Illuminate\/Foundation\/Testing/',
             '/Illuminate\/Foundation\/Bootstrap\/HandleExceptions/',
-=======
-            '/vendor\/laravel\/framework\/src\/Illuminate\/Testing/',
-            '/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Testing/',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            '/vendor\/laravel\/framework\/src\/Illuminate\/Testing/',
-            '/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Testing/',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             '/vendor\/symfony\/framework-bundle\/Test/',
             '/vendor\/symfony\/phpunit-bridge/',
             '/vendor\/symfony\/dom-crawler/',
@@ -504,14 +362,8 @@ final class Style
 
             $this->ignorePestPipes(...),
             $this->ignorePestExtends(...),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->ignorePestInterceptors(...),
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]);
 
         /** @var \Throwable $throwable */
@@ -587,14 +439,6 @@ final class Style
             $seconds = $seconds !== '0.00' ? sprintf('<span class="text-gray mr-2">%ss</span>', $seconds) : '';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        // Pest specific
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        // Pest specific
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (isset($_SERVER['REBUILD_SNAPSHOTS']) || (isset($_SERVER['COLLISION_IGNORE_DURATION']) && $_SERVER['COLLISION_IGNORE_DURATION'] === 'true')) {
             $seconds = '';
         }
@@ -603,16 +447,10 @@ final class Style
 
         if ($warning !== '') {
             $warning = sprintf('<span class="ml-1 text-yellow">%s</span>', $warning);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             if (! empty($result->warningSource)) {
                 $warning .= ' // '.$result->warningSource;
             }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $description = preg_replace('/`([^`]+)`/', '<span class="text-white">$1</span>', $result->description);
@@ -674,8 +512,6 @@ final class Style
     /**
      * @param  Frame  $frame
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function ignorePestInterceptors($frame): bool
     {
         if (class_exists(Expectation::class)) {
@@ -699,10 +535,6 @@ final class Style
     /**
      * @param  Frame  $frame
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function isFrameInClosure($frame, Closure $closure): bool
     {
         $reflection = new ReflectionFunction($closure);

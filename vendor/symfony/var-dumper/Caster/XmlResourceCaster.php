@@ -47,15 +47,9 @@ class XmlResourceCaster
         \XML_ERROR_EXTERNAL_ENTITY_HANDLING => 'XML_ERROR_EXTERNAL_ENTITY_HANDLING',
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castXml($h, array $a, Stub $stub, bool $isNested)
     {
         $a['current_byte_index'] = xml_get_current_byte_index($h);

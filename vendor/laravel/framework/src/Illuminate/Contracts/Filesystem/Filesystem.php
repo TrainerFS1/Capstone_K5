@@ -46,15 +46,7 @@ interface Filesystem
      * Write the contents of a file.
      *
      * @param  string  $path
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Psr\Http\Message\StreamInterface|\Illuminate\Http\File|\Illuminate\Http\UploadedFile|string|resource  $contents
-=======
-     * @param  string|resource  $contents
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string|resource  $contents
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  mixed  $options
      * @return bool
      */

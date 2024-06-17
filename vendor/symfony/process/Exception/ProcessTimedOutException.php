@@ -23,18 +23,8 @@ class ProcessTimedOutException extends RuntimeException
     public const TYPE_GENERAL = 1;
     public const TYPE_IDLE = 2;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private Process $process;
     private int $timeoutType;
-=======
-    private $process;
-    private $timeoutType;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $process;
-    private $timeoutType;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(Process $process, int $timeoutType)
     {
@@ -48,57 +38,31 @@ class ProcessTimedOutException extends RuntimeException
         ));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return Process
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getProcess()
     {
         return $this->process;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return bool
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isGeneralTimeout()
     {
         return self::TYPE_GENERAL === $this->timeoutType;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return bool
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isIdleTimeout()
     {
         return self::TYPE_IDLE === $this->timeoutType;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getExceededTimeout(): ?float
-=======
-    public function getExceededTimeout()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getExceededTimeout()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return match ($this->timeoutType) {
             self::TYPE_GENERAL => $this->process->getTimeout(),

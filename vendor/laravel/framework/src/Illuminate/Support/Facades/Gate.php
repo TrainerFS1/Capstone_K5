@@ -13,18 +13,8 @@ use Illuminate\Contracts\Auth\Access\Gate as GateContract;
  * @method static \Illuminate\Auth\Access\Gate policy(string $class, string $policy)
  * @method static \Illuminate\Auth\Access\Gate before(callable $callback)
  * @method static \Illuminate\Auth\Access\Gate after(callable $callback)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static bool allows(iterable|string $ability, array|mixed $arguments = [])
  * @method static bool denies(iterable|string $ability, array|mixed $arguments = [])
-=======
- * @method static bool allows(string $ability, array|mixed $arguments = [])
- * @method static bool denies(string $ability, array|mixed $arguments = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method static bool allows(string $ability, array|mixed $arguments = [])
- * @method static bool denies(string $ability, array|mixed $arguments = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static bool check(iterable|string $abilities, array|mixed $arguments = [])
  * @method static bool any(iterable|string $abilities, array|mixed $arguments = [])
  * @method static bool none(iterable|string $abilities, array|mixed $arguments = [])
@@ -37,13 +27,7 @@ use Illuminate\Contracts\Auth\Access\Gate as GateContract;
  * @method static \Illuminate\Auth\Access\Gate forUser(\Illuminate\Contracts\Auth\Authenticatable|mixed $user)
  * @method static array abilities()
  * @method static array policies()
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Auth\Access\Gate defaultDenialResponse(\Illuminate\Auth\Access\Response $response)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static \Illuminate\Auth\Access\Gate setContainer(\Illuminate\Contracts\Container\Container $container)
  * @method static \Illuminate\Auth\Access\Response denyWithStatus(int $status, string|null $message = null, int|null $code = null)
  * @method static \Illuminate\Auth\Access\Response denyAsNotFound(string|null $message = null, int|null $code = null)

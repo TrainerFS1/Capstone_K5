@@ -62,15 +62,7 @@ class Connection
         $context = array_filter($context);
         $encodedPayload = base64_encode(serialize([$data, $context]))."\n";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         set_error_handler(static fn () => null);
-=======
-        set_error_handler([self::class, 'nullErrorHandler']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        set_error_handler([self::class, 'nullErrorHandler']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
             if (-1 !== stream_socket_sendto($this->socket, $encodedPayload)) {
                 return true;
@@ -90,8 +82,6 @@ class Connection
         return false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return resource|null
      */
@@ -100,23 +90,6 @@ class Connection
         set_error_handler(static fn () => null);
         try {
             return stream_socket_client($this->host, $errno, $errstr, 3) ?: null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private static function nullErrorHandler(int $t, string $m)
-    {
-        // no-op
-    }
-
-    private function createSocket()
-    {
-        set_error_handler([self::class, 'nullErrorHandler']);
-        try {
-            return stream_socket_client($this->host, $errno, $errstr, 3, \STREAM_CLIENT_CONNECT | \STREAM_CLIENT_ASYNC_CONNECT);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } finally {
             restore_error_handler();
         }

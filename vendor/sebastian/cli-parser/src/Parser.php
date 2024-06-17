@@ -44,15 +44,7 @@ final class Parser
      * @throws RequiredOptionArgumentMissingException
      * @throws UnknownOptionException
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function parse(array $argv, string $shortOptions, ?array $longOptions = null): array
-=======
-    public function parse(array $argv, string $shortOptions, array $longOptions = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function parse(array $argv, string $shortOptions, array $longOptions = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (empty($argv)) {
             return [[], []];
@@ -101,15 +93,7 @@ final class Parser
                     substr($arg, 2),
                     $longOptions,
                     $options,
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $argv,
-=======
-                    $argv
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $argv
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 
                 continue;
@@ -119,15 +103,7 @@ final class Parser
                 substr($arg, 1),
                 $shortOptions,
                 $options,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $argv,
-=======
-                $argv
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $argv
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

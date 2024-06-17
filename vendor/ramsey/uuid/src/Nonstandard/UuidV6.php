@@ -23,15 +23,7 @@ use Ramsey\Uuid\Rfc4122\FieldsInterface as Rfc4122FieldsInterface;
 use Ramsey\Uuid\Rfc4122\TimeTrait;
 use Ramsey\Uuid\Rfc4122\UuidInterface;
 use Ramsey\Uuid\Rfc4122\UuidV1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Ramsey\Uuid\Uuid as BaseUuid;
-=======
-use Ramsey\Uuid\Uuid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Ramsey\Uuid\Uuid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * Reordered time, or version 6, UUIDs include timestamp, clock sequence, and
@@ -44,15 +36,7 @@ use Ramsey\Uuid\Uuid;
  *
  * @psalm-immutable
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 class UuidV6 extends BaseUuid implements UuidInterface
-=======
-class UuidV6 extends Uuid implements UuidInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class UuidV6 extends Uuid implements UuidInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     use TimeTrait;
 

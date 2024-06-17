@@ -70,70 +70,25 @@ final class CharacterSetEci extends AbstractEnum
     protected const EUC_KR = [[30], 'EUC-KR'];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var string[]
      */
     private array $otherEncodingNames;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @var int[]
-     */
-    private $values;
-
-    /**
-     * @var string[]
-     */
-    private $otherEncodingNames;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var array<int, self>|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static ?array $valueToEci;
-=======
-    private static $valueToEci;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private static $valueToEci;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var array<string, self>|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static ?array $nameToEci = null;
-=======
-    private static $nameToEci;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private static $nameToEci;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param int[] $values
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(private readonly array $values, string ...$otherEncodingNames)
     {
-=======
-    public function __construct(array $values, string ...$otherEncodingNames)
-    {
-        $this->values = $values;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(array $values, string ...$otherEncodingNames)
-    {
-        $this->values = $values;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->otherEncodingNames = $otherEncodingNames;
     }
 

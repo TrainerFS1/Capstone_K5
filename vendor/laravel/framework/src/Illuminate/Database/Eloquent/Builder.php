@@ -6,13 +6,7 @@ use BadMethodCallException;
 use Closure;
 use Exception;
 use Illuminate\Contracts\Database\Eloquent\Builder as BuilderContract;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Contracts\Database\Query\Expression;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Concerns\BuildsQueries;
 use Illuminate\Database\Eloquent\Concerns\QueriesRelationships;
@@ -20,13 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\RecordsNotFoundException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -109,8 +97,6 @@ class Builder implements BuilderContract
         'avg',
         'count',
         'dd',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'ddrawsql',
         'doesntexist',
         'doesntexistor',
@@ -136,33 +122,6 @@ class Builder implements BuilderContract
         'sum',
         'tosql',
         'torawsql',
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        'doesntExist',
-        'doesntExistOr',
-        'dump',
-        'exists',
-        'existsOr',
-        'explain',
-        'getBindings',
-        'getConnection',
-        'getGrammar',
-        'implode',
-        'insert',
-        'insertGetId',
-        'insertOrIgnore',
-        'insertUsing',
-        'max',
-        'min',
-        'raw',
-        'rawValue',
-        'sum',
-        'toSql',
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     /**
@@ -598,15 +557,7 @@ class Builder implements BuilderContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the first record matching the attributes. If the record is not found, create it.
-=======
-     * Get the first record matching the attributes or create it.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Get the first record matching the attributes or create it.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  array  $attributes
      * @param  array  $values
@@ -614,8 +565,6 @@ class Builder implements BuilderContract
      */
     public function firstOrCreate(array $attributes = [], array $values = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! is_null($instance = (clone $this)->where($attributes)->first())) {
             return $instance;
         }
@@ -637,20 +586,6 @@ class Builder implements BuilderContract
         } catch (UniqueConstraintViolationException $e) {
             return $this->useWritePdo()->where($attributes)->first() ?? throw $e;
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (! is_null($instance = $this->where($attributes)->first())) {
-            return $instance;
-        }
-
-        return tap($this->newModelInstance(array_merge($attributes, $values)), function ($instance) {
-            $instance->save();
-        });
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -662,20 +597,10 @@ class Builder implements BuilderContract
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values)->save();
             }
-=======
-        return tap($this->firstOrNew($attributes), function ($instance) use ($values) {
-            $instance->fill($values)->save();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return tap($this->firstOrNew($attributes), function ($instance) use ($values) {
-            $instance->fill($values)->save();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
     }
 
@@ -745,14 +670,8 @@ class Builder implements BuilderContract
     public function value($column)
     {
         if ($result = $this->first([$column])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $column = $column instanceof Expression ? $column->getValue($this->getGrammar()) : $column;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $result->{Str::afterLast($column, '.')};
         }
     }
@@ -768,14 +687,8 @@ class Builder implements BuilderContract
      */
     public function soleValue($column)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $column = $column instanceof Expression ? $column->getValue($this->getGrammar()) : $column;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->sole([$column])->{Str::afterLast($column, '.')};
     }
 
@@ -789,14 +702,8 @@ class Builder implements BuilderContract
      */
     public function valueOrFail($column)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $column = $column instanceof Expression ? $column->getValue($this->getGrammar()) : $column;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->firstOrFail([$column])->{Str::afterLast($column, '.')};
     }
 
@@ -981,14 +888,8 @@ class Builder implements BuilderContract
     {
         $results = $this->toBase()->pluck($column, $key);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $column = $column instanceof Expression ? $column->getValue($this->getGrammar()) : $column;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // If the model has a mutator for the requested column, we will spin through
         // the results and mutate the values so that the mutated version of these
         // columns are returned as you would expect from these Eloquent models.
@@ -1010,13 +911,7 @@ class Builder implements BuilderContract
      * @param  array|string  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Closure|int|null  $total
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      *
      * @throws \InvalidArgumentException
@@ -1025,15 +920,7 @@ class Builder implements BuilderContract
     {
         $page = $page ?: Paginator::resolveCurrentPage($pageName);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $total = func_num_args() === 5 ? value(func_get_arg(4)) : $this->toBase()->getCountForPagination();
-=======
-        $total = $this->toBase()->getCountForPagination();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $total = $this->toBase()->getCountForPagination();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $perPage = ($perPage instanceof Closure
             ? $perPage($total)
@@ -1104,8 +991,6 @@ class Builder implements BuilderContract
             $this->enforceOrderBy();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $reverseDirection = function ($order) {
             if (! isset($order['direction'])) {
                 return $order;
@@ -1126,26 +1011,6 @@ class Builder implements BuilderContract
         return collect($orders)
             ->filter(fn ($order) => Arr::has($order, 'direction'))
             ->values();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($shouldReverse) {
-            $this->query->orders = collect($this->query->orders)->map(function ($order) {
-                $order['direction'] = $order['direction'] === 'asc' ? 'desc' : 'asc';
-
-                return $order;
-            })->toArray();
-        }
-
-        if ($this->query->unionOrders) {
-            return collect($this->query->unionOrders);
-        }
-
-        return collect($this->query->orders);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1175,8 +1040,6 @@ class Builder implements BuilderContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Save a new model instance with mass assignment without raising model events.
      *
      * @param  array  $attributes
@@ -1188,10 +1051,6 @@ class Builder implements BuilderContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Update records in the database.
      *
      * @param  array  $values
@@ -1225,15 +1084,7 @@ class Builder implements BuilderContract
         }
 
         return $this->toBase()->upsert(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->addTimestampsToUpsertValues($this->addUniqueIdsToUpsertValues($values)),
-=======
-            $this->addTimestampsToUpsertValues($values),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->addTimestampsToUpsertValues($values),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $uniqueBy,
             $this->addUpdatedAtToUpsertColumns($update)
         );
@@ -1307,8 +1158,6 @@ class Builder implements BuilderContract
 
         $column = $this->model->getUpdatedAtColumn();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! array_key_exists($column, $values)) {
             $timestamp = $this->model->freshTimestampString();
 
@@ -1324,17 +1173,6 @@ class Builder implements BuilderContract
 
             $values = array_merge([$column => $timestamp], $values);
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $values = array_merge(
-            [$column => $this->model->freshTimestampString()],
-            $values
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $segments = preg_split('/\s+as\s+/i', $this->query->from);
 
@@ -1348,8 +1186,6 @@ class Builder implements BuilderContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Add unique IDs to the inserted values.
      *
      * @param  array  $values
@@ -1373,10 +1209,6 @@ class Builder implements BuilderContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add timestamps to the inserted values.
      *
      * @param  array  $values
@@ -1623,21 +1455,9 @@ class Builder implements BuilderContract
         // Here we'll check if the given subset of where clauses contains any "or"
         // booleans and in this case create a nested where expression. That way
         // we don't add any unnecessary nesting thus keeping the query clean.
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($whereBooleans->contains(fn ($logicalOperator) => str_contains($logicalOperator, 'or'))) {
             $query->wheres[] = $this->createNestedWhere(
                 $whereSlice, str_replace(' not', '', $whereBooleans->first())
-=======
-        if ($whereBooleans->contains('or')) {
-            $query->wheres[] = $this->createNestedWhere(
-                $whereSlice, $whereBooleans->first()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($whereBooleans->contains('or')) {
-            $query->wheres[] = $this->createNestedWhere(
-                $whereSlice, $whereBooleans->first()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         } else {
             $query->wheres = array_merge($query->wheres, $whereSlice);
@@ -1894,8 +1714,6 @@ class Builder implements BuilderContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Execute the given Closure within a transaction savepoint if needed.
      *
      * @template TModelValue
@@ -1923,10 +1741,6 @@ class Builder implements BuilderContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the underlying query builder instance.
      *
      * @return \Illuminate\Database\Query\Builder
@@ -2048,14 +1862,8 @@ class Builder implements BuilderContract
      */
     public function qualifyColumn($column)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $column = $column instanceof Expression ? $column->getValue($this->getGrammar()) : $column;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->model->qualifyColumn($column);
     }
 
@@ -2142,15 +1950,7 @@ class Builder implements BuilderContract
      * @param  array  $parameters
      * @return mixed
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __call($method, $parameters)
-=======
-    public function __call($method, array $parameters)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __call($method, array $parameters)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($method === 'macro') {
             $this->localMacros[$parameters[0]] = $parameters[1];
@@ -2178,15 +1978,7 @@ class Builder implements BuilderContract
             return $this->callNamedScope($method, $parameters);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (in_array(strtolower($method), $this->passthru)) {
-=======
-        if (in_array($method, $this->passthru)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (in_array($method, $this->passthru)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->toBase()->{$method}(...$parameters);
         }
 
@@ -2244,16 +2036,6 @@ class Builder implements BuilderContract
 
         foreach ($methods as $method) {
             if ($replace || ! static::hasGlobalMacro($method->name)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                $method->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $method->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 static::macro($method->name, $method->invoke($mixin));
             }
         }

@@ -62,85 +62,14 @@ class ScheduleListCommand extends Command
 
         $expressionSpacing = $this->getCronExpressionSpacing($events);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $repeatExpressionSpacing = $this->getRepeatExpressionSpacing($events);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $timezone = new DateTimeZone($this->option('timezone') ?? config('app.timezone'));
 
         $events = $this->sortEvents($events, $timezone);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $events = $events->map(function ($event) use ($terminalWidth, $expressionSpacing, $repeatExpressionSpacing, $timezone) {
             return $this->listEvent($event, $terminalWidth, $expressionSpacing, $repeatExpressionSpacing, $timezone);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $events = $events->map(function ($event) use ($terminalWidth, $expressionSpacing, $timezone) {
-            $expression = $this->formatCronExpression($event->expression, $expressionSpacing);
-
-            $command = $event->command ?? '';
-
-            $description = $event->description ?? '';
-
-            if (! $this->output->isVerbose()) {
-                $command = str_replace([Application::phpBinary(), Application::artisanBinary()], [
-                    'php',
-                    preg_replace("#['\"]#", '', Application::artisanBinary()),
-                ], $command);
-            }
-
-            if ($event instanceof CallbackEvent) {
-                if (class_exists($description)) {
-                    $command = $description;
-                    $description = '';
-                } else {
-                    $command = 'Closure at: '.$this->getClosureLocation($event);
-                }
-            }
-
-            $command = mb_strlen($command) > 1 ? "{$command} " : '';
-
-            $nextDueDateLabel = 'Next Due:';
-
-            $nextDueDate = $this->getNextDueDateForEvent($event, $timezone);
-
-            $nextDueDate = $this->output->isVerbose()
-                ? $nextDueDate->format('Y-m-d H:i:s P')
-                : $nextDueDate->diffForHumans();
-
-            $hasMutex = $event->mutex->exists($event) ? 'Has Mutex › ' : '';
-
-            $dots = str_repeat('.', max(
-                $terminalWidth - mb_strlen($expression.$command.$nextDueDateLabel.$nextDueDate.$hasMutex) - 8, 0
-            ));
-
-            // Highlight the parameters...
-            $command = preg_replace("#(php artisan [\w\-:]+) (.+)#", '$1 <fg=yellow;options=bold>$2</>', $command);
-
-            return [sprintf(
-                '  <fg=yellow>%s</>  %s<fg=#6C7280>%s %s%s %s</>',
-                $expression,
-                $command,
-                $dots,
-                $hasMutex,
-                $nextDueDateLabel,
-                $nextDueDate
-            ), $this->output->isVerbose() && mb_strlen($description) > 1 ? sprintf(
-                '  <fg=#6C7280>%s%s %s</>',
-                str_repeat(' ', mb_strlen($expression) + 2),
-                '⇁',
-                $description
-            ) : ''];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
 
         $this->line(
@@ -149,15 +78,7 @@ class ScheduleListCommand extends Command
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the spacing to be used on each event row.
-=======
-     * Gets the spacing to be used on each event row.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Gets the spacing to be used on each event row.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  \Illuminate\Support\Collection  $events
      * @return array<int, int>
@@ -170,8 +91,6 @@ class ScheduleListCommand extends Command
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the spacing to be used on each event row.
      *
      * @param  \Illuminate\Support\Collection  $events
@@ -267,12 +186,6 @@ class ScheduleListCommand extends Command
 
     /**
      * Sort the events by due date if option set.
-=======
-     * Sorts the events by due date if option set.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Sorts the events by due date if option set.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  \Illuminate\Support\Collection  $events
      * @param  \DateTimeZone  $timezone
@@ -294,21 +207,11 @@ class ScheduleListCommand extends Command
      */
     private function getNextDueDateForEvent($event, DateTimeZone $timezone)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $nextDueDate = Carbon::instance(
-=======
-        return Carbon::instance(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return Carbon::instance(
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             (new CronExpression($event->expression))
                 ->getNextRunDate(Carbon::now()->setTimezone($event->timezone))
                 ->setTimezone($timezone)
         );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         if (! $event->isRepeatable()) {
             return $nextDueDate;
@@ -333,17 +236,6 @@ class ScheduleListCommand extends Command
 
     /**
      * Format the cron expression based on the spacing provided.
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    }
-
-    /**
-     * Formats the cron expression based on the spacing provided.
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $expression
      * @param  array<int, int>  $spacing
@@ -366,19 +258,7 @@ class ScheduleListCommand extends Command
      */
     private function getClosureLocation(CallbackEvent $event)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $callback = (new ReflectionClass($event))->getProperty('callback')->getValue($event);
-=======
-        $callback = tap((new ReflectionClass($event))->getProperty('callback'))
-                        ->setAccessible(true)
-                        ->getValue($event);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $callback = tap((new ReflectionClass($event))->getProperty('callback'))
-                        ->setAccessible(true)
-                        ->getValue($event);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($callback instanceof Closure) {
             $function = new ReflectionFunction($callback);

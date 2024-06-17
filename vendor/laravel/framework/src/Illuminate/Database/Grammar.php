@@ -11,8 +11,6 @@ abstract class Grammar
     use Macroable;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The connection used for escaping values.
      *
      * @var \Illuminate\Database\Connection
@@ -20,10 +18,6 @@ abstract class Grammar
     protected $connection;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The grammar table prefix.
      *
      * @var string
@@ -210,8 +204,6 @@ abstract class Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Escapes a value for safe SQL embedding.
      *
      * @param  string|float|int|bool|null  $value
@@ -228,10 +220,6 @@ abstract class Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the given value is a raw expression.
      *
      * @param  mixed  $value
@@ -289,8 +277,6 @@ abstract class Grammar
 
         return $this;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Set the grammar's database connection.
@@ -304,8 +290,4 @@ abstract class Grammar
 
         return $this;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

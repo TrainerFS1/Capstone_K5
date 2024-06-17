@@ -35,8 +35,6 @@ class ForeignKeyDefinition extends Fluent
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicate that updates should have "no action".
      *
      * @return $this
@@ -47,10 +45,6 @@ class ForeignKeyDefinition extends Fluent
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Indicate that deletes should cascade.
      *
      * @return $this

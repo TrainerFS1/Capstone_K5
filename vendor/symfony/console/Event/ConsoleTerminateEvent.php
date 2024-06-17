@@ -19,8 +19,6 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Allows to manipulate the exit code of a command after its execution.
  *
  * @author Francesco Levorato <git@flevour.net>
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @author Jules Pietri <jules@heahprod.com>
  */
 final class ConsoleTerminateEvent extends ConsoleEvent
@@ -33,23 +31,6 @@ final class ConsoleTerminateEvent extends ConsoleEvent
         private readonly ?int $interruptingSignal = null,
     ) {
         parent::__construct($command, $input, $output);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- */
-final class ConsoleTerminateEvent extends ConsoleEvent
-{
-    private int $exitCode;
-
-    public function __construct(Command $command, InputInterface $input, OutputInterface $output, int $exitCode)
-    {
-        parent::__construct($command, $input, $output);
-
-        $this->setExitCode($exitCode);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function setExitCode(int $exitCode): void
@@ -61,15 +42,9 @@ final class ConsoleTerminateEvent extends ConsoleEvent
     {
         return $this->exitCode;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     public function getInterruptingSignal(): ?int
     {
         return $this->interruptingSignal;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -68,14 +68,8 @@ class MorphPivot extends Pivot
         $query->where($this->morphType, $this->morphClass);
 
         return tap($query->delete(), function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->exists = false;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->fireModelEvent('deleted', false);
         });
     }

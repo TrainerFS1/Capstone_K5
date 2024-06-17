@@ -2,8 +2,6 @@
 
 namespace PhpParser;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface NodeVisitor {
     /**
      * If NodeVisitor::enterNode() returns DONT_TRAVERSE_CHILDREN, child nodes
@@ -47,14 +45,6 @@ interface NodeVisitor {
      */
     public const REPLACE_WITH_NULL = 5;
 
-=======
-interface NodeVisitor
-{
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-interface NodeVisitor
-{
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Called once before traversal.
      *
@@ -74,8 +64,6 @@ interface NodeVisitor
      * Return value semantics:
      *  * null
      *        => $node stays as-is
-<<<<<<< HEAD
-<<<<<<< HEAD
      *  * array (of Nodes)
      *        => The return value is merged into the parent array (at the position of the $node)
      *  * NodeVisitor::REMOVE_NODE
@@ -88,31 +76,13 @@ interface NodeVisitor
      *        => Further visitors for the current node are skipped, and its children are not
      *           traversed. $node stays as-is.
      *  * NodeVisitor::STOP_TRAVERSAL
-=======
-     *  * NodeTraverser::DONT_TRAVERSE_CHILDREN
-     *        => Children of $node are not traversed. $node stays as-is
-     *  * NodeTraverser::STOP_TRAVERSAL
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     *  * NodeTraverser::DONT_TRAVERSE_CHILDREN
-     *        => Children of $node are not traversed. $node stays as-is
-     *  * NodeTraverser::STOP_TRAVERSAL
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *        => Traversal is aborted. $node stays as-is
      *  * otherwise
      *        => $node is set to the return value
      *
      * @param Node $node Node
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return null|int|Node|Node[] Replacement node (or special return value)
-=======
-     * @return null|int|Node Replacement node (or special return value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return null|int|Node Replacement node (or special return value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function enterNode(Node $node);
 
@@ -122,23 +92,11 @@ interface NodeVisitor
      * Return value semantics:
      *  * null
      *        => $node stays as-is
-<<<<<<< HEAD
-<<<<<<< HEAD
      *  * NodeVisitor::REMOVE_NODE
      *        => $node is removed from the parent array
      *  * NodeVisitor::REPLACE_WITH_NULL
      *        => $node is replaced with null
      *  * NodeVisitor::STOP_TRAVERSAL
-=======
-     *  * NodeTraverser::REMOVE_NODE
-     *        => $node is removed from the parent array
-     *  * NodeTraverser::STOP_TRAVERSAL
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     *  * NodeTraverser::REMOVE_NODE
-     *        => $node is removed from the parent array
-     *  * NodeTraverser::STOP_TRAVERSAL
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *        => Traversal is aborted. $node stays as-is
      *  * array (of Nodes)
      *        => The return value is merged into the parent array (at the position of the $node)

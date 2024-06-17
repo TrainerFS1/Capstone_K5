@@ -109,15 +109,7 @@ if (! function_exists('app')) {
      *
      * @param  string|null  $abstract
      * @param  array  $parameters
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Foundation\Application|mixed
-=======
-     * @return mixed|\Illuminate\Contracts\Foundation\Application
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return mixed|\Illuminate\Contracts\Foundation\Application
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     function app($abstract = null, array $parameters = [])
     {
@@ -234,34 +226,13 @@ if (! function_exists('cache')) {
      *
      * If an array is passed, we'll assume you want to put to the cache.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  mixed  ...$arguments  key|key,default|data,expiration|null
-=======
-     * @param  dynamic  key|key,default|data,expiration|null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  dynamic  key|key,default|data,expiration|null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed|\Illuminate\Cache\CacheManager
      *
      * @throws \InvalidArgumentException
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     function cache(...$arguments)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    function cache()
-    {
-        $arguments = func_get_args();
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (empty($arguments)) {
             return app('cache');
         }
@@ -352,15 +323,7 @@ if (! function_exists('csrf_field')) {
      */
     function csrf_field()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return new HtmlString('<input type="hidden" name="_token" value="'.csrf_token().'" autocomplete="off">');
-=======
-        return new HtmlString('<input type="hidden" name="_token" value="'.csrf_token().'">');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new HtmlString('<input type="hidden" name="_token" value="'.csrf_token().'">');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }
 
@@ -647,15 +610,7 @@ if (! function_exists('precognitive')) {
         });
 
         if (request()->isPrecognitive()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             abort(204, headers: ['Precognition-Success' => 'true']);
-=======
-            abort(204);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            abort(204);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $payload;
@@ -772,8 +727,6 @@ if (! function_exists('rescue')) {
     /**
      * Catch a potential exception and return a default value.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template TRescueValue
      * @template TRescueFallback
      *
@@ -781,17 +734,6 @@ if (! function_exists('rescue')) {
      * @param  (callable(\Throwable): TRescueFallback)|TRescueFallback  $rescue
      * @param  bool|callable  $report
      * @return TRescueValue|TRescueFallback
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  callable  $callback
-     * @param  mixed  $rescue
-     * @param  bool|callable  $report
-     * @return mixed
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     function rescue(callable $callback, $rescue = null, $report = true)
     {
@@ -859,15 +801,7 @@ if (! function_exists('route')) {
     /**
      * Generate the URL to a named route.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string  $name
-=======
-     * @param  array|string  $name
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  array|string  $name
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  mixed  $parameters
      * @param  bool  $absolute
      * @return string
@@ -995,15 +929,7 @@ if (! function_exists('trans_choice')) {
      * Translates the given message based on a count.
      *
      * @param  string  $key
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Countable|int|float|array  $number
-=======
-     * @param  \Countable|int|array  $number
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Countable|int|array  $number
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $replace
      * @param  string|null  $locale
      * @return string

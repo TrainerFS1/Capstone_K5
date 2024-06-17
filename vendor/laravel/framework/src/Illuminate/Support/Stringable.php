@@ -2,13 +2,7 @@
 
 namespace Illuminate\Support;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use ArrayAccess;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Closure;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Traits\Conditionable;
@@ -17,15 +11,7 @@ use Illuminate\Support\Traits\Tappable;
 use JsonSerializable;
 use Symfony\Component\VarDumper\VarDumper;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class Stringable implements JsonSerializable, ArrayAccess
-=======
-class Stringable implements JsonSerializable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class Stringable implements JsonSerializable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     use Conditionable, Macroable, Tappable;
 
@@ -114,8 +100,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the character at the specified index.
      *
      * @param  int  $index
@@ -127,10 +111,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the basename of the class path.
      *
      * @return static
@@ -221,8 +201,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the case of a string.
      *
      * @param  int  $mode
@@ -235,10 +213,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the parent directory's path.
      *
      * @param  int  $levels
@@ -292,15 +266,7 @@ class Stringable implements JsonSerializable
      *
      * @param  string  $delimiter
      * @param  int  $limit
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Support\Collection<int, string>
-=======
-     * @return \Illuminate\Support\Collection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Support\Collection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function explode($delimiter, $limit = PHP_INT_MAX)
     {
@@ -313,15 +279,7 @@ class Stringable implements JsonSerializable
      * @param  string|int  $pattern
      * @param  int  $limit
      * @param  int  $flags
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Support\Collection<int, string>
-=======
-     * @return \Illuminate\Support\Collection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Support\Collection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function split($pattern, $limit = -1, $flags = 0)
     {
@@ -377,8 +335,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determine if a given value is a valid URL.
      *
      * @return bool
@@ -389,10 +345,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if a given string is a valid UUID.
      *
      * @return bool
@@ -523,8 +475,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determine if a given string matches a given pattern.
      *
      * @param  string|iterable<string>  $pattern
@@ -536,10 +486,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the string matching the given pattern.
      *
      * @param  string  $pattern
@@ -558,15 +504,7 @@ class Stringable implements JsonSerializable
      */
     public function test($pattern)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->isMatch($pattern);
-=======
-        return $this->match($pattern)->isNotEmpty();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->match($pattern)->isNotEmpty();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -650,8 +588,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Find the multi-byte safe position of the first occurrence of the given substring.
      *
      * @param  string  $needle
@@ -665,10 +601,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Prepend the given values to the string.
      *
      * @param  string  ...$values
@@ -717,26 +649,12 @@ class Stringable implements JsonSerializable
      *
      * @param  string|iterable<string>  $search
      * @param  string|iterable<string>  $replace
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  bool  $caseSensitive
      * @return static
      */
     public function replace($search, $replace, $caseSensitive = true)
     {
         return new static(Str::replace($search, $replace, $this->value, $caseSensitive));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return static
-     */
-    public function replace($search, $replace)
-    {
-        return new static(Str::replace($search, $replace, $this->value));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -764,8 +682,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Replace the first occurrence of the given value if it appears at the start of the string.
      *
      * @param  string  $search
@@ -778,10 +694,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Replace the last occurrence of a given value in the string.
      *
      * @param  string  $search
@@ -794,8 +706,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Replace the last occurrence of a given value if it appears at the end of the string.
      *
      * @param  string  $search
@@ -811,16 +721,6 @@ class Stringable implements JsonSerializable
      * Replace the patterns matching the given regular expression.
      *
      * @param  array|string  $pattern
-=======
-     * Replace the patterns matching the given regular expression.
-     *
-     * @param  string  $pattern
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Replace the patterns matching the given regular expression.
-     *
-     * @param  string  $pattern
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  \Closure|string  $replace
      * @param  int  $limit
      * @return static
@@ -869,15 +769,7 @@ class Stringable implements JsonSerializable
     /**
      * Strip HTML and PHP tags from the given string.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string[]|string|null  $allowedTags
-=======
-     * @param  string  $allowedTags
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $allowedTags
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return static
      */
     public function stripTags($allowedTags = null)
@@ -896,15 +788,7 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the given string to proper case.
-=======
-     * Convert the given string to title case.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Convert the given string to title case.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return static
      */
@@ -914,15 +798,7 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the given string to proper case for each word.
-=======
-     * Convert the given string to title case for each word.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Convert the given string to title case for each word.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return static
      */
@@ -932,8 +808,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the given string to APA-style title case.
      *
      * @return static
@@ -956,10 +830,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the singular form of an English word.
      *
      * @return static
@@ -1065,8 +935,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Take the first or last {$limit} characters.
      *
      * @param  int  $limit
@@ -1082,10 +950,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Trim the string of the given characters.
      *
      * @param  string  $characters
@@ -1141,15 +1005,7 @@ class Stringable implements JsonSerializable
     /**
      * Split a string by uppercase characters.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Support\Collection<int, string>
-=======
-     * @return \Illuminate\Support\Collection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Support\Collection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function ucsplit()
     {
@@ -1344,8 +1200,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Wrap a string to a given number of characters.
      *
      * @param  int  $characters
@@ -1359,10 +1213,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Wrap the string with the given strings.
      *
      * @param  string  $before
@@ -1375,8 +1225,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Unwrap the string with the given strings.
      *
      * @param  string  $before
@@ -1389,10 +1237,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Convert the string into a `HtmlString` instance.
      *
      * @return \Illuminate\Support\HtmlString
@@ -1403,8 +1247,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the string to Base64 encoding.
      *
      * @return static
@@ -1426,10 +1268,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Dump the string.
      *
      * @return $this
@@ -1476,26 +1314,12 @@ class Stringable implements JsonSerializable
     /**
      * Get the underlying string value as an integer.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int  $base
      * @return int
      */
     public function toInteger($base = 10)
     {
         return intval($this->value, $base);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return int
-     */
-    public function toInteger()
-    {
-        return intval($this->value);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1549,8 +1373,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determine if the given offset exists.
      *
      * @param  mixed  $offset
@@ -1595,10 +1417,6 @@ class Stringable implements JsonSerializable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Proxy dynamic properties onto methods.
      *
      * @param  string  $key

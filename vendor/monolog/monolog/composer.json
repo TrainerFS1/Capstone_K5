@@ -21,15 +21,7 @@
         "aws/aws-sdk-php": "^3.0",
         "doctrine/couchdb": "~1.0@dev",
         "elasticsearch/elasticsearch": "^7 || ^8",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "graylog2/gelf-php": "^1.4.2 || ^2.0",
-=======
-        "graylog2/gelf-php": "^1.4.2 || ^2@dev",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "graylog2/gelf-php": "^1.4.2 || ^2@dev",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "guzzlehttp/guzzle": "^7.4.5",
         "guzzlehttp/psr7": "^2.2",
         "mongodb/mongodb": "^1.8",
@@ -37,15 +29,7 @@
         "phpstan/phpstan": "^1.9",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-strict-rules": "^1.4",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "phpunit/phpunit": "^10.5.17",
-=======
-        "phpunit/phpunit": "^9.5.26",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "phpunit/phpunit": "^9.5.26",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "predis/predis": "^1.1 || ^2",
         "ruflin/elastica": "^7",
         "symfony/mailer": "^5.4 || ^6",

@@ -29,15 +29,7 @@
         "docs": "https://realrashid.github.io/sweet-alert/"
     },
     "require": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "php": "^7.2|^8.0|^8.1|^8.2|^8.3",
-=======
-        "php": "^7.2|^8.0|^8.1",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "php": "^7.2|^8.0|^8.1",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "laravel/framework": "^5.6|^6.0|^7.0|^8.0|^9.0|^9.11|9.14.*|^10.0|^11.0"
     },
     "require-dev": {

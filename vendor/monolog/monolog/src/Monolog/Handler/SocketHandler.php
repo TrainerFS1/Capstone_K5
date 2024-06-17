@@ -110,14 +110,8 @@ class SocketHandler extends AbstractProcessingHandler
 
     /**
      * Set socket connection to be persistent. It only has effect before the connection is initiated.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setPersistent(bool $persistent): self
     {
@@ -130,13 +124,7 @@ class SocketHandler extends AbstractProcessingHandler
      * Set connection timeout.  Only has effect before we connect.
      *
      * @see http://php.net/manual/en/function.fsockopen.php
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setConnectionTimeout(float $seconds): self
     {
@@ -150,13 +138,7 @@ class SocketHandler extends AbstractProcessingHandler
      * Set write timeout. Only has effect before we connect.
      *
      * @see http://php.net/manual/en/function.stream-set-timeout.php
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setTimeout(float $seconds): self
     {
@@ -170,13 +152,7 @@ class SocketHandler extends AbstractProcessingHandler
      * Set writing timeout. Only has effect during connection in the writing cycle.
      *
      * @param float $seconds 0 for no timeout
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setWritingTimeout(float $seconds): self
     {
@@ -188,14 +164,8 @@ class SocketHandler extends AbstractProcessingHandler
 
     /**
      * Set chunk size. Only has effect during connection in the writing cycle.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setChunkSize(int $bytes): self
     {

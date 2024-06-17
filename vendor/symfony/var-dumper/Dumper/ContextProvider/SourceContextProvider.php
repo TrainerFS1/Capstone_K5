@@ -11,16 +11,8 @@
 
 namespace Symfony\Component\VarDumper\Dumper\ContextProvider;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\ErrorHandler\ErrorRenderer\FileLinkFormatter;
 use Symfony\Component\HttpKernel\Debug\FileLinkFormatter as LegacyFileLinkFormatter;
-=======
-use Symfony\Component\HttpKernel\Debug\FileLinkFormatter;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\HttpKernel\Debug\FileLinkFormatter;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 use Symfony\Component\VarDumper\VarDumper;
@@ -37,21 +29,9 @@ final class SourceContextProvider implements ContextProviderInterface
     private int $limit;
     private ?string $charset;
     private ?string $projectDir;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter;
 
     public function __construct(?string $charset = null, ?string $projectDir = null, FileLinkFormatter|LegacyFileLinkFormatter|null $fileLinkFormatter = null, int $limit = 9)
-=======
-    private ?FileLinkFormatter $fileLinkFormatter;
-
-    public function __construct(string $charset = null, string $projectDir = null, FileLinkFormatter $fileLinkFormatter = null, int $limit = 9)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private ?FileLinkFormatter $fileLinkFormatter;
-
-    public function __construct(string $charset = null, string $projectDir = null, FileLinkFormatter $fileLinkFormatter = null, int $limit = 9)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->charset = $charset;
         $this->projectDir = $projectDir;
@@ -65,15 +45,7 @@ final class SourceContextProvider implements ContextProviderInterface
 
         $file = $trace[1]['file'];
         $line = $trace[1]['line'];
-<<<<<<< HEAD
-<<<<<<< HEAD
         $name = '-' === $file || 'Standard input code' === $file ? 'Standard input code' : false;
-=======
-        $name = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $name = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $fileExcerpt = false;
 
         for ($i = 2; $i < $this->limit; ++$i) {

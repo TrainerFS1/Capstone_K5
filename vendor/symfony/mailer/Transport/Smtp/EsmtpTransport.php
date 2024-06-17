@@ -15,13 +15,7 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Mailer\Exception\UnexpectedResponseException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Mailer\Transport\Smtp\Auth\AuthenticatorInterface;
 use Symfony\Component\Mailer\Transport\Smtp\Stream\AbstractStream;
 use Symfony\Component\Mailer\Transport\Smtp\Stream\SocketStream;
@@ -39,8 +33,6 @@ class EsmtpTransport extends SmtpTransport
     private string $password = '';
     private array $capabilities;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $host = 'localhost', int $port = 0, ?bool $tls = null, ?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null, ?AbstractStream $stream = null, ?array $authenticators = null)
     {
         parent::__construct($stream, $dispatcher, $logger);
@@ -56,24 +48,6 @@ class EsmtpTransport extends SmtpTransport
             ];
         }
         $this->setAuthenticators($authenticators);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct(string $host = 'localhost', int $port = 0, bool $tls = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null, AbstractStream $stream = null)
-    {
-        parent::__construct($stream, $dispatcher, $logger);
-
-        // order is important here (roughly most secure and popular first)
-        $this->authenticators = [
-            new Auth\CramMd5Authenticator(),
-            new Auth\LoginAuthenticator(),
-            new Auth\PlainAuthenticator(),
-            new Auth\XOAuth2Authenticator(),
-        ];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         /** @var SocketStream $stream */
         $stream = $this->getStream();
@@ -126,8 +100,6 @@ class EsmtpTransport extends SmtpTransport
         return $this->password;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setAuthenticators(array $authenticators): void
     {
         $this->authenticators = [];
@@ -136,10 +108,6 @@ class EsmtpTransport extends SmtpTransport
         }
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addAuthenticator(AuthenticatorInterface $authenticator): void
     {
         $this->authenticators[] = $authenticator;
@@ -217,13 +185,7 @@ class EsmtpTransport extends SmtpTransport
             return;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $code = null;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $authNames = [];
         $errors = [];
         $modes = array_map('strtolower', $modes);
@@ -238,15 +200,7 @@ class EsmtpTransport extends SmtpTransport
                 $authenticator->authenticate($this);
 
                 return;
-<<<<<<< HEAD
-<<<<<<< HEAD
             } catch (UnexpectedResponseException $e) {
-=======
-            } catch (TransportExceptionInterface $e) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            } catch (TransportExceptionInterface $e) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $code = $e->getCode();
 
                 try {

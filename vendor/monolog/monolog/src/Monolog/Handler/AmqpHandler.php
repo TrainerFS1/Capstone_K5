@@ -11,13 +11,7 @@
 
 namespace Monolog\Handler;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Gelf\Message as GelfMessage;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Monolog\Level;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Formatter\JsonFormatter;
@@ -82,16 +76,10 @@ class AmqpHandler extends AbstractProcessingHandler
         $data = $record->formatted;
         $routingKey = $this->getRoutingKey($record);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if($data instanceof GelfMessage) {
             $data = json_encode($data->toArray());
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($this->exchange instanceof AMQPExchange) {
             $attributes = [
                 'delivery_mode' => 2,
@@ -134,16 +122,10 @@ class AmqpHandler extends AbstractProcessingHandler
             $record = $this->processRecord($record);
             $data = $this->getFormatter()->format($record);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if($data instanceof GelfMessage) {
                 $data = json_encode($data->toArray());
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->exchange->batch_basic_publish(
                 $this->createAmqpMessage($data),
                 $this->exchangeName,

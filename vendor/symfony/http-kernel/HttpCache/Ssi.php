@@ -26,15 +26,9 @@ class Ssi extends AbstractSurrogate
         return 'ssi';
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addSurrogateControl(Response $response)
     {
         if (str_contains($response->getContent(), '<!--#include')) {
@@ -42,15 +36,7 @@ class Ssi extends AbstractSurrogate
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function renderIncludeTag(string $uri, ?string $alt = null, bool $ignoreErrors = true, string $comment = ''): string
-=======
-    public function renderIncludeTag(string $uri, string $alt = null, bool $ignoreErrors = true, string $comment = ''): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function renderIncludeTag(string $uri, string $alt = null, bool $ignoreErrors = true, string $comment = ''): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return sprintf('<!--#include virtual="%s" -->', $uri);
     }
@@ -69,20 +55,8 @@ class Ssi extends AbstractSurrogate
 
         // we don't use a proper XML parser here as we can have SSI tags in a plain text response
         $content = $response->getContent();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $boundary = self::generateBodyEvalBoundary();
         $chunks = preg_split('#<!--\#include\s+(.*?)\s*-->#', $content, -1, \PREG_SPLIT_DELIM_CAPTURE);
-=======
-
-        $chunks = preg_split('#<!--\#include\s+(.*?)\s*-->#', $content, -1, \PREG_SPLIT_DELIM_CAPTURE);
-        $chunks[0] = str_replace($this->phpEscapeMap[0], $this->phpEscapeMap[1], $chunks[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-        $chunks = preg_split('#<!--\#include\s+(.*?)\s*-->#', $content, -1, \PREG_SPLIT_DELIM_CAPTURE);
-        $chunks[0] = str_replace($this->phpEscapeMap[0], $this->phpEscapeMap[1], $chunks[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $i = 1;
         while (isset($chunks[$i])) {
@@ -96,27 +70,10 @@ class Ssi extends AbstractSurrogate
                 throw new \RuntimeException('Unable to process an SSI tag without a "virtual" attribute.');
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $chunks[$i] = $boundary.$options['virtual']."\n\n\n";
             $i += 2;
         }
         $content = $boundary.implode('', $chunks).$boundary;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $chunks[$i] = sprintf('<?php echo $this->surrogate->handle($this, %s, \'\', false) ?>'."\n",
-                var_export($options['virtual'], true)
-            );
-            ++$i;
-            $chunks[$i] = str_replace($this->phpEscapeMap[0], $this->phpEscapeMap[1], $chunks[$i]);
-            ++$i;
-        }
-        $content = implode('', $chunks);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $response->setContent($content);
         $response->headers->set('X-Body-Eval', 'SSI');

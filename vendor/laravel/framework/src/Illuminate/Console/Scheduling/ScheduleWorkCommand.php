@@ -38,15 +38,7 @@ class ScheduleWorkCommand extends Command
             $this->getLaravel()->isLocal() ? OutputInterface::VERBOSITY_NORMAL : OutputInterface::VERBOSITY_VERBOSE
         );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         [$lastExecutionStartedAt, $executions] = [Carbon::now()->subMinutes(10), []];
-=======
-        [$lastExecutionStartedAt, $executions] = [null, []];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        [$lastExecutionStartedAt, $executions] = [null, []];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $command = implode(' ', array_map(fn ($arg) => ProcessUtils::escapeArgument($arg), [
             PHP_BINARY,

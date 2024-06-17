@@ -18,8 +18,6 @@ use Nette;
  * @property   int $page
  * @property-read int $firstPage
  * @property-read int|null $lastPage
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @property-read int<0,max> $firstItemOnPage
  * @property-read int<0,max> $lastItemOnPage
  * @property   int $base
@@ -31,32 +29,12 @@ use Nette;
  * @property-read int<0,max> $offset
  * @property-read int<0,max>|null $countdownOffset
  * @property-read int<0,max> $length
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @property-read int $firstItemOnPage
- * @property-read int $lastItemOnPage
- * @property   int $base
- * @property-read bool $first
- * @property-read bool $last
- * @property-read int|null $pageCount
- * @property   int $itemsPerPage
- * @property   int|null $itemCount
- * @property-read int $offset
- * @property-read int|null $countdownOffset
- * @property-read int $length
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 class Paginator
 {
 	use Nette\SmartObject;
 
 	private int $base = 1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 	/** @var positive-int */
 	private int $itemsPerPage = 1;
@@ -64,14 +42,6 @@ class Paginator
 	private int $page = 1;
 
 	/** @var int<0, max>|null */
-=======
-	private int $itemsPerPage = 1;
-	private int $page = 1;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	private int $itemsPerPage = 1;
-	private int $page = 1;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	private ?int $itemCount = null;
 
 
@@ -116,13 +86,7 @@ class Paginator
 
 	/**
 	 * Returns the sequence number of the first element on the page
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getFirstItemOnPage(): int
 	{
@@ -134,13 +98,7 @@ class Paginator
 
 	/**
 	 * Returns the sequence number of the last element on the page
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getLastItemOnPage(): int
 	{
@@ -169,13 +127,7 @@ class Paginator
 
 	/**
 	 * Returns zero-based page number.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	protected function getPageIndex(): int
 	{
@@ -208,13 +160,7 @@ class Paginator
 
 	/**
 	 * Returns the total number of pages.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>|null
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getPageCount(): ?int
 	{
@@ -236,13 +182,7 @@ class Paginator
 
 	/**
 	 * Returns the number of items to display on a single page.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return positive-int
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getItemsPerPage(): int
 	{
@@ -262,13 +202,7 @@ class Paginator
 
 	/**
 	 * Returns the total number of items.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>|null
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getItemCount(): ?int
 	{
@@ -278,13 +212,7 @@ class Paginator
 
 	/**
 	 * Returns the absolute index of the first item on current page.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getOffset(): int
 	{
@@ -294,13 +222,7 @@ class Paginator
 
 	/**
 	 * Returns the absolute index of the first item on current page in countdown paging.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>|null
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getCountdownOffset(): ?int
 	{
@@ -312,13 +234,7 @@ class Paginator
 
 	/**
 	 * Returns the number of items on current page.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return int<0, max>
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getLength(): int
 	{

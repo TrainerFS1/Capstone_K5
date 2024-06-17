@@ -39,15 +39,7 @@ final class DumpCompletionCommand extends Command
 
     private array $supportedShells;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function configure(): void
-=======
-    protected function configure()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function configure()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $fullCommand = $_SERVER['PHP_SELF'];
         $commandName = basename($fullCommand);
@@ -56,8 +48,6 @@ final class DumpCompletionCommand extends Command
         $shell = $this->guessShell();
         [$rcFile, $completionFile] = match ($shell) {
             'fish' => ['~/.config/fish/config.fish', "/etc/fish/completions/$commandName.fish"],
-<<<<<<< HEAD
-<<<<<<< HEAD
             'zsh' => ['~/.zshrc', '$fpath[1]/_'.$commandName],
             default => ['~/.bashrc', "/etc/bash_completion.d/$commandName"],
         };
@@ -68,21 +58,6 @@ final class DumpCompletionCommand extends Command
             ->setHelp(<<<EOH
 The <info>%command.name%</> command dumps the shell completion script required
 to use shell autocompletion (currently, {$supportedShells} completion are supported).
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            'zsh' => ['~/.zshrc', '$fpath[1]/'.$commandName],
-            default => ['~/.bashrc', "/etc/bash_completion.d/$commandName"],
-        };
-
-        $this
-            ->setHelp(<<<EOH
-The <info>%command.name%</> command dumps the shell completion script required
-to use shell autocompletion (currently, bash and fish completion is supported).
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 <comment>Static installation
 -------------------</>
@@ -121,15 +96,7 @@ EOH
         if ($input->getOption('debug')) {
             $this->tailDebugLog($commandName, $output);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             return 0;
-=======
-            return self::SUCCESS;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return self::SUCCESS;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $shell = $input->getArgument('shell') ?? self::guessShell();
@@ -146,28 +113,12 @@ EOH
                 $output->writeln(sprintf('<error>Shell not detected, Symfony shell completion only supports "%s").</>', implode('", "', $supportedShells)));
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             return 2;
-=======
-            return self::INVALID;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return self::INVALID;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $output->write(str_replace(['{{ COMMAND_NAME }}', '{{ VERSION }}'], [$commandName, CompleteCommand::COMPLETION_API_VERSION], file_get_contents($completionFile)));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return 0;
-=======
-        return self::SUCCESS;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return self::SUCCESS;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     private static function guessShell(): string
@@ -192,8 +143,6 @@ EOH
      */
     private function getSupportedShells(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (isset($this->supportedShells)) {
             return $this->supportedShells;
         }
@@ -208,15 +157,5 @@ EOH
         sort($shells);
 
         return $this->supportedShells = $shells;
-=======
-        return $this->supportedShells ??= array_map(function ($f) {
-            return pathinfo($f, \PATHINFO_EXTENSION);
-        }, glob(__DIR__.'/../Resources/completion.*'));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->supportedShells ??= array_map(function ($f) {
-            return pathinfo($f, \PATHINFO_EXTENSION);
-        }, glob(__DIR__.'/../Resources/completion.*'));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

@@ -7,14 +7,8 @@ use Closure;
 use DateTimeInterface;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Console\Command;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Console\Events\CommandFinished;
 use Illuminate\Console\Events\CommandStarting;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Console\Kernel as KernelContract;
 use Illuminate\Contracts\Debug\ExceptionHandler;
@@ -26,17 +20,11 @@ use Illuminate\Support\Env;
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Support\Str;
 use ReflectionClass;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use SplFileInfo;
 use Symfony\Component\Console\ConsoleEvents;
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\Console\Event\ConsoleTerminateEvent;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Finder\Finder;
 use Throwable;
 
@@ -59,8 +47,6 @@ class Kernel implements KernelContract
     protected $events;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The Symfony event dispatcher implementation.
      *
      * @var \Symfony\Contracts\EventDispatcher\EventDispatcherInterface|null
@@ -68,10 +54,6 @@ class Kernel implements KernelContract
     protected $symfonyDispatcher;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The Artisan application instance.
      *
      * @var \Illuminate\Console\Application|null
@@ -138,23 +120,15 @@ class Kernel implements KernelContract
         $this->events = $events;
 
         $this->app->booted(function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (! $this->app->runningUnitTests()) {
                 $this->rerouteSymfonyCommandEvents();
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->defineConsoleSchedule();
         });
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Re-route the Symfony command events to their Laravel counterparts.
      *
      * @internal
@@ -183,10 +157,6 @@ class Kernel implements KernelContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Define the application's command schedule.
      *
      * @return void
@@ -249,18 +219,12 @@ class Kernel implements KernelContract
     {
         $this->app->terminate();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($this->commandStartedAt === null) {
             return;
         }
 
         $this->commandStartedAt->setTimezone($this->app['config']->get('app.timezone') ?? 'UTC');
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         foreach ($this->commandLifecycleDurationHandlers as ['threshold' => $threshold, 'handler' => $handler]) {
             $end ??= Carbon::now();
 
@@ -376,23 +340,8 @@ class Kernel implements KernelContract
 
         $namespace = $this->app->getNamespace();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach (Finder::create()->in($paths)->files() as $file) {
             $command = $this->commandClassFromFile($file, $namespace);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        foreach ((new Finder)->in($paths)->files() as $command) {
-            $command = $namespace.str_replace(
-                ['/', '.php'],
-                ['\\', ''],
-                Str::after($command->getRealPath(), realpath(app_path()).DIRECTORY_SEPARATOR)
-            );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (is_subclass_of($command, Command::class) &&
                 ! (new ReflectionClass($command))->isAbstract()) {
@@ -404,8 +353,6 @@ class Kernel implements KernelContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Extract the command class name from the given file path.
      *
      * @param  \SplFileInfo  $file
@@ -422,10 +369,6 @@ class Kernel implements KernelContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Register the given command with the console application.
      *
      * @param  \Symfony\Component\Console\Command\Command  $command
@@ -538,17 +481,11 @@ class Kernel implements KernelContract
             $this->artisan = (new Artisan($this->app, $this->events, $this->app->version()))
                                     ->resolveCommands($this->commands)
                                     ->setContainerCommandLoader();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             if ($this->symfonyDispatcher instanceof EventDispatcher) {
                 $this->artisan->setDispatcher($this->symfonyDispatcher);
                 $this->artisan->setSignalsToDispatchEvent();
             }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this->artisan;
@@ -557,15 +494,7 @@ class Kernel implements KernelContract
     /**
      * Set the Artisan application instance.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Console\Application|null  $artisan
-=======
-     * @param  \Illuminate\Console\Application  $artisan
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Console\Application  $artisan
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return void
      */
     public function setArtisan($artisan)

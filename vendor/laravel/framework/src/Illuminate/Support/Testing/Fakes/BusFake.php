@@ -4,32 +4,16 @@ namespace Illuminate\Support\Testing\Fakes;
 
 use Closure;
 use Illuminate\Bus\BatchRepository;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Bus\ChainedBatch;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Bus\PendingBatch;
 use Illuminate\Contracts\Bus\QueueingDispatcher;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use RuntimeException;
 
 class BusFake implements Fake, QueueingDispatcher
-=======
-
-class BusFake implements QueueingDispatcher
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-class BusFake implements QueueingDispatcher
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     use ReflectsClosures;
 
@@ -38,15 +22,7 @@ class BusFake implements QueueingDispatcher
      *
      * @var \Illuminate\Contracts\Bus\QueueingDispatcher
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public $dispatcher;
-=======
-    protected $dispatcher;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $dispatcher;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The job types that should be intercepted instead of dispatched.
@@ -98,8 +74,6 @@ class BusFake implements QueueingDispatcher
     protected $batches = [];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Indicates if commands should be serialized and restored when pushed to the Bus.
      *
      * @var bool
@@ -107,10 +81,6 @@ class BusFake implements QueueingDispatcher
     protected bool $serializeAndRestore = false;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new bus fake instance.
      *
      * @param  \Illuminate\Contracts\Bus\QueueingDispatcher  $dispatcher
@@ -129,15 +99,7 @@ class BusFake implements QueueingDispatcher
      * Specify the jobs that should be dispatched instead of faked.
      *
      * @param  array|string  $jobsToDispatch
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function except($jobsToDispatch)
     {
@@ -373,18 +335,12 @@ class BusFake implements QueueingDispatcher
 
         if ($command instanceof Closure) {
             [$command, $callback] = [$this->firstClosureParameterType($command), $command];
-<<<<<<< HEAD
-<<<<<<< HEAD
         } elseif ($command instanceof ChainedBatchTruthTest) {
             $instance = $command;
 
             $command = ChainedBatch::class;
 
             $callback = fn ($job) => $instance($job->toPendingBatch());
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } elseif (! is_string($command)) {
             $instance = $command;
 
@@ -400,24 +356,7 @@ class BusFake implements QueueingDispatcher
             "The expected [{$command}] job was not dispatched."
         );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->assertDispatchedWithChainOfObjects($command, $expectedChain, $callback);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        PHPUnit::assertTrue(
-            collect($expectedChain)->isNotEmpty(),
-            'The expected chain can not be empty.'
-        );
-
-        $this->isChainOfObjects($expectedChain)
-            ? $this->assertDispatchedWithChainOfObjects($command, $expectedChain, $callback)
-            : $this->assertDispatchedWithChainOfClasses($command, $expectedChain, $callback);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -454,15 +393,7 @@ class BusFake implements QueueingDispatcher
             "The expected [{$command}] job was not dispatched."
         );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->assertDispatchedWithChainOfObjects($command, [], $callback);
-=======
-        $this->assertDispatchedWithChainOfClasses($command, [], $callback);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->assertDispatchedWithChainOfClasses($command, [], $callback);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -475,8 +406,6 @@ class BusFake implements QueueingDispatcher
      */
     protected function assertDispatchedWithChainOfObjects($command, $expectedChain, $callback)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $chain = $expectedChain;
 
         PHPUnit::assertTrue(
@@ -516,26 +445,11 @@ class BusFake implements QueueingDispatcher
 
                 return true;
             })->isNotEmpty(),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $chain = collect($expectedChain)->map(fn ($job) => serialize($job))->all();
-
-        PHPUnit::assertTrue(
-            $this->dispatched($command, $callback)->filter(
-                fn ($job) => $job->chained == $chain
-            )->isNotEmpty(),
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'The expected chain was not dispatched.'
         );
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Create a new assertion about a chained batch.
      *
      * @param  \Closure  $callback
@@ -544,44 +458,6 @@ class BusFake implements QueueingDispatcher
     public function chainedBatch(Closure $callback)
     {
         return new ChainedBatchTruthTest($callback);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Assert if a job was dispatched with chained jobs based on a truth-test callback.
-     *
-     * @param  string  $command
-     * @param  array  $expectedChain
-     * @param  callable|null  $callback
-     * @return void
-     */
-    protected function assertDispatchedWithChainOfClasses($command, $expectedChain, $callback)
-    {
-        $matching = $this->dispatched($command, $callback)->map->chained->map(function ($chain) {
-            return collect($chain)->map(
-                fn ($job) => get_class(unserialize($job))
-            );
-        })->filter(
-            fn ($chain) => $chain->all() === $expectedChain
-        );
-
-        PHPUnit::assertTrue(
-            $matching->isNotEmpty(), 'The expected chain was not dispatched.'
-        );
-    }
-
-    /**
-     * Determine if the given chain is entirely composed of objects.
-     *
-     * @param  array  $chain
-     * @return bool
-     */
-    protected function isChainOfObjects($chain)
-    {
-        return ! collect($chain)->contains(fn ($job) => ! is_object($job));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -732,15 +608,7 @@ class BusFake implements QueueingDispatcher
     public function dispatch($command)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->commands[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $this->dispatcher->dispatch($command);
         }
@@ -758,15 +626,7 @@ class BusFake implements QueueingDispatcher
     public function dispatchSync($command, $handler = null)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->commandsSync[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commandsSync[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->commandsSync[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $this->dispatcher->dispatchSync($command, $handler);
         }
@@ -782,15 +642,7 @@ class BusFake implements QueueingDispatcher
     public function dispatchNow($command, $handler = null)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->commands[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $this->dispatcher->dispatchNow($command, $handler);
         }
@@ -805,15 +657,7 @@ class BusFake implements QueueingDispatcher
     public function dispatchToQueue($command)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->commands[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->commands[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $this->dispatcher->dispatchToQueue($command);
         }
@@ -828,15 +672,7 @@ class BusFake implements QueueingDispatcher
     public function dispatchAfterResponse($command)
     {
         if ($this->shouldFakeJob($command)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->commandsAfterResponse[get_class($command)][] = $this->getCommandRepresentation($command);
-=======
-            $this->commandsAfterResponse[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->commandsAfterResponse[get_class($command)][] = $command;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $this->dispatcher->dispatch($command);
         }
@@ -851,13 +687,7 @@ class BusFake implements QueueingDispatcher
     public function chain($jobs)
     {
         $jobs = Collection::wrap($jobs);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $jobs = ChainedBatch::prepareNestedBatches($jobs);
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return new PendingChainFake($this, $jobs->shift(), $jobs->toArray());
     }
@@ -949,8 +779,6 @@ class BusFake implements QueueingDispatcher
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Specify if commands should be serialized and restored when being batched.
      *
      * @param  bool  $serializeAndRestore
@@ -986,10 +814,6 @@ class BusFake implements QueueingDispatcher
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the pipes commands should be piped through before dispatching.
      *
      * @param  array  $pipes

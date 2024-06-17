@@ -38,8 +38,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     protected $min = 8;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The maximum size of the password.
      *
      * @var int
@@ -47,10 +45,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     protected $max;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * If the password requires at least one uppercase and one lowercase letter.
      *
      * @var bool
@@ -206,15 +200,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the minimum size of the password.
-=======
-     * Sets the minimum size of the password.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Sets the minimum size of the password.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  int  $size
      * @return $this
@@ -225,8 +211,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the maximum size of the password.
      *
      * @param  int  $size
@@ -240,10 +224,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Ensures the password has not been compromised in data leaks.
      *
      * @param  int  $threshold
@@ -309,15 +289,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Specify additional validation rules that should be merged with the default rules during validation.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Closure|string|array  $rules
-=======
-     * @param  string|array  $rules
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string|array  $rules
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function rules($rules)
@@ -340,20 +312,12 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
 
         $validator = Validator::make(
             $this->data,
-<<<<<<< HEAD
-<<<<<<< HEAD
             [$attribute => [
                 'string',
                 'min:'.$this->min,
                 ...($this->max ? ['max:'.$this->max] : []),
                 ...$this->customRules,
             ]],
-=======
-            [$attribute => array_merge(['string', 'min:'.$this->min], $this->customRules)],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            [$attribute => array_merge(['string', 'min:'.$this->min], $this->customRules)],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->validator->customMessages,
             $this->validator->customAttributes
         )->after(function ($validator) use ($attribute, $value) {
@@ -362,8 +326,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
             }
 
             if ($this->mixedCase && ! preg_match('/(\p{Ll}+.*\p{Lu})|(\p{Lu}+.*\p{Ll})/u', $value)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $validator->addFailure($attribute, 'password.mixed');
             }
 
@@ -377,38 +339,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
 
             if ($this->numbers && ! preg_match('/\pN/u', $value)) {
                 $validator->addFailure($attribute, 'password.numbers');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $validator->errors()->add(
-                    $attribute,
-                    $this->getErrorMessage('validation.password.mixed')
-                );
-            }
-
-            if ($this->letters && ! preg_match('/\pL/u', $value)) {
-                $validator->errors()->add(
-                    $attribute,
-                    $this->getErrorMessage('validation.password.letters')
-                );
-            }
-
-            if ($this->symbols && ! preg_match('/\p{Z}|\p{S}|\p{P}/u', $value)) {
-                $validator->errors()->add(
-                    $attribute,
-                    $this->getErrorMessage('validation.password.symbols')
-                );
-            }
-
-            if ($this->numbers && ! preg_match('/\pN/u', $value)) {
-                $validator->errors()->add(
-                    $attribute,
-                    $this->getErrorMessage('validation.password.numbers')
-                );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         });
 
@@ -420,17 +350,9 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
             'value' => $value,
             'threshold' => $this->compromisedThreshold,
         ])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $validator->addFailure($attribute, 'password.uncompromised');
 
             return $this->fail($validator->messages()->all());
-=======
-            return $this->fail($this->getErrorMessage('validation.password.uncompromised'));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return $this->fail($this->getErrorMessage('validation.password.uncompromised'));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return true;
@@ -447,38 +369,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get the translated password error message.
-     *
-     * @param  string  $key
-     * @return string
-     */
-    protected function getErrorMessage($key)
-    {
-        if (($message = $this->validator->getTranslator()->get($key)) !== $key) {
-            return $message;
-        }
-
-        $messages = [
-            'validation.password.mixed' => 'The :attribute must contain at least one uppercase and one lowercase letter.',
-            'validation.password.letters' => 'The :attribute must contain at least one letter.',
-            'validation.password.symbols' => 'The :attribute must contain at least one symbol.',
-            'validation.password.numbers' => 'The :attribute must contain at least one number.',
-            'validation.password.uncompromised' => 'The given :attribute has appeared in a data leak. Please choose a different :attribute.',
-        ];
-
-        return $messages[$key];
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Adds the given failures, and return false.
      *
      * @param  array|string  $messages
@@ -486,21 +376,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
      */
     protected function fail($messages)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->messages = array_merge($this->messages, Arr::wrap($messages));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $messages = collect(Arr::wrap($messages))->map(function ($message) {
-            return $this->validator->getTranslator()->get($message);
-        })->all();
-
-        $this->messages = array_merge($this->messages, $messages);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return false;
     }

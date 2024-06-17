@@ -20,24 +20,11 @@ use function time;
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Runner\TestSuiteSorter;
 use PHPUnit\TextUI\CliArguments\Configuration as CliConfiguration;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\TextUI\CliArguments\Exception;
 use PHPUnit\TextUI\XmlConfiguration\Configuration as XmlConfiguration;
 use PHPUnit\TextUI\XmlConfiguration\LoadedFromFileConfiguration;
 use PHPUnit\TextUI\XmlConfiguration\SchemaDetector;
 use PHPUnit\Util\Filesystem;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use PHPUnit\TextUI\XmlConfiguration\Configuration as XmlConfiguration;
-use PHPUnit\TextUI\XmlConfiguration\LoadedFromFileConfiguration;
-use PHPUnit\Util\Filesystem;
-use PHPUnit\Util\Xml\SchemaDetector;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\CodeCoverage\Report\Html\Colors;
 use SebastianBergmann\CodeCoverage\Report\Thresholds;
 use SebastianBergmann\Environment\Console;
@@ -49,37 +36,12 @@ use SebastianBergmann\Invoker\Invoker;
 final class Merger
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
      * @throws Exception
-=======
-     * @throws \PHPUnit\TextUI\CliArguments\Exception
-     * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \PHPUnit\TextUI\CliArguments\Exception
-     * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws NoCustomCssFileException
      */
     public function merge(CliConfiguration $cliConfiguration, XmlConfiguration $xmlConfiguration): Configuration
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $cliArgument = null;
-
-        if ($cliConfiguration->hasArgument()) {
-            $cliArgument = $cliConfiguration->argument();
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $configurationFile = null;
 
         if ($xmlConfiguration->wasLoadedFromFile()) {
@@ -148,18 +110,12 @@ final class Merger
             $disableCodeCoverageIgnore = $xmlConfiguration->codeCoverage()->disableCodeCoverageIgnore();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($cliConfiguration->hasFailOnDeprecation()) {
             $failOnDeprecation = $cliConfiguration->failOnDeprecation();
         } else {
             $failOnDeprecation = $xmlConfiguration->phpunit()->failOnDeprecation();
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($cliConfiguration->hasFailOnEmptyTestSuite()) {
             $failOnEmptyTestSuite = $cliConfiguration->failOnEmptyTestSuite();
         } else {
@@ -172,18 +128,12 @@ final class Merger
             $failOnIncomplete = $xmlConfiguration->phpunit()->failOnIncomplete();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($cliConfiguration->hasFailOnNotice()) {
             $failOnNotice = $cliConfiguration->failOnNotice();
         } else {
             $failOnNotice = $xmlConfiguration->phpunit()->failOnNotice();
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($cliConfiguration->hasFailOnRisky()) {
             $failOnRisky = $cliConfiguration->failOnRisky();
         } else {
@@ -202,8 +152,6 @@ final class Merger
             $failOnWarning = $xmlConfiguration->phpunit()->failOnWarning();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($cliConfiguration->hasStopOnDefect()) {
             $stopOnDefect = $cliConfiguration->stopOnDefect();
         } else {
@@ -258,26 +206,12 @@ final class Merger
             $stopOnWarning = $xmlConfiguration->phpunit()->stopOnWarning();
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($cliConfiguration->hasStderr() && $cliConfiguration->stderr()) {
             $outputToStandardErrorStream = true;
         } else {
             $outputToStandardErrorStream = $xmlConfiguration->phpunit()->stderr();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        $maxNumberOfColumns = (new Console)->getNumberOfColumns();
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $maxNumberOfColumns = (new Console)->getNumberOfColumns();
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($cliConfiguration->hasColumns()) {
             $columns = $cliConfiguration->columns();
         } else {
@@ -285,42 +219,17 @@ final class Merger
         }
 
         if ($columns === 'max') {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $columns = (new Console)->getNumberOfColumns();
-=======
-            $columns = $maxNumberOfColumns;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $columns = $maxNumberOfColumns;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if ($columns < 16) {
             $columns = 16;
 
             EventFacade::emitter()->testRunnerTriggeredWarning(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'Less than 16 columns requested, number of columns set to 16',
             );
         }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                'Less than 16 columns requested, number of columns set to 16'
-            );
-        }
-
-        if ($columns > $maxNumberOfColumns) {
-            $columns = $maxNumberOfColumns;
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         assert(is_int($columns));
 
         $noExtensions = false;
@@ -472,57 +381,6 @@ final class Merger
             $processIsolation = $xmlConfiguration->phpunit()->processIsolation();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($cliConfiguration->hasStopOnDefect()) {
-            $stopOnDefect = $cliConfiguration->stopOnDefect();
-        } else {
-            $stopOnDefect = $xmlConfiguration->phpunit()->stopOnDefect();
-        }
-
-        if ($cliConfiguration->hasStopOnError()) {
-            $stopOnError = $cliConfiguration->stopOnError();
-        } else {
-            $stopOnError = $xmlConfiguration->phpunit()->stopOnError();
-        }
-
-        if ($cliConfiguration->hasStopOnFailure()) {
-            $stopOnFailure = $cliConfiguration->stopOnFailure();
-        } else {
-            $stopOnFailure = $xmlConfiguration->phpunit()->stopOnFailure();
-        }
-
-        if ($cliConfiguration->hasStopOnWarning()) {
-            $stopOnWarning = $cliConfiguration->stopOnWarning();
-        } else {
-            $stopOnWarning = $xmlConfiguration->phpunit()->stopOnWarning();
-        }
-
-        if ($cliConfiguration->hasStopOnIncomplete()) {
-            $stopOnIncomplete = $cliConfiguration->stopOnIncomplete();
-        } else {
-            $stopOnIncomplete = $xmlConfiguration->phpunit()->stopOnIncomplete();
-        }
-
-        if ($cliConfiguration->hasStopOnRisky()) {
-            $stopOnRisky = $cliConfiguration->stopOnRisky();
-        } else {
-            $stopOnRisky = $xmlConfiguration->phpunit()->stopOnRisky();
-        }
-
-        if ($cliConfiguration->hasStopOnSkipped()) {
-            $stopOnSkipped = $cliConfiguration->stopOnSkipped();
-        } else {
-            $stopOnSkipped = $xmlConfiguration->phpunit()->stopOnSkipped();
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($cliConfiguration->hasEnforceTimeLimit()) {
             $enforceTimeLimit = $cliConfiguration->enforceTimeLimit();
         } else {
@@ -531,15 +389,7 @@ final class Merger
 
         if ($enforceTimeLimit && !(new Invoker)->canInvokeWithTimeout()) {
             EventFacade::emitter()->testRunnerTriggeredWarning(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'The pcntl extension is required for enforcing time limits',
-=======
-                'The pcntl extension is required for enforcing time limits'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'The pcntl extension is required for enforcing time limits'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -767,31 +617,13 @@ final class Merger
 
         if ($xmlConfiguration->wasLoadedFromFile() && $xmlConfiguration->hasValidationErrors()) {
             if ((new SchemaDetector)->detect($xmlConfiguration->filename())->detected()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 EventFacade::emitter()->testRunnerTriggeredDeprecation(
                     'Your XML configuration validates against a deprecated schema. Migrate your XML configuration using "--migrate-configuration"!',
-=======
-                EventFacade::emitter()->testRunnerTriggeredWarning(
-                    'Your XML configuration validates against a deprecated schema. Migrate your XML configuration using "--migrate-configuration"!'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                EventFacade::emitter()->testRunnerTriggeredWarning(
-                    'Your XML configuration validates against a deprecated schema. Migrate your XML configuration using "--migrate-configuration"!'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             } else {
                 EventFacade::emitter()->testRunnerTriggeredWarning(
                     "Test results may not be as expected because the XML configuration file did not pass validation:\n" .
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $xmlConfiguration->validationErrors(),
-=======
-                    $xmlConfiguration->validationErrors()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $xmlConfiguration->validationErrors()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
         }
@@ -842,8 +674,6 @@ final class Merger
             $testSuffixes = $cliConfiguration->testSuffixes();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $sourceIncludeDirectories = [];
 
         if ($cliConfiguration->hasCoverageFilter()) {
@@ -888,34 +718,11 @@ final class Merger
 
         return new Configuration(
             $cliConfiguration->arguments(),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $coverageIncludeDirectories = [];
-
-        if ($cliConfiguration->hasCoverageFilter()) {
-            foreach ($cliConfiguration->coverageFilter() as $directory) {
-                $coverageIncludeDirectories[] = new FilterDirectory($directory, '', '.php');
-            }
-        }
-
-        foreach ($xmlConfiguration->codeCoverage()->directories() as $directory) {
-            $coverageIncludeDirectories[] = $directory;
-        }
-
-        return new Configuration(
-            $cliArgument,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $configurationFile,
             $bootstrap,
             $cacheResult,
             $cacheDirectory,
             $coverageCacheDirectory,
-<<<<<<< HEAD
-<<<<<<< HEAD
             new Source(
                 $useBaseline,
                 $cliConfiguration->ignoreBaseline(),
@@ -934,17 +741,6 @@ final class Merger
                 $xmlConfiguration->source()->ignoreSuppressionOfWarnings(),
                 $xmlConfiguration->source()->ignoreSuppressionOfPhpWarnings(),
             ),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            FilterDirectoryCollection::fromArray($coverageIncludeDirectories),
-            $xmlConfiguration->codeCoverage()->files(),
-            $xmlConfiguration->codeCoverage()->excludeDirectories(),
-            $xmlConfiguration->codeCoverage()->excludeFiles(),
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $testResultCacheFile,
             $coverageClover,
             $coverageCobertura,
@@ -967,8 +763,6 @@ final class Merger
             $pathCoverage,
             $xmlConfiguration->codeCoverage()->ignoreDeprecatedCodeUnits(),
             $disableCodeCoverageIgnore,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $failOnDeprecation,
             $failOnEmptyTestSuite,
             $failOnIncomplete,
@@ -985,18 +779,6 @@ final class Merger
             $stopOnRisky,
             $stopOnSkipped,
             $stopOnWarning,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $failOnEmptyTestSuite,
-            $failOnIncomplete,
-            $failOnRisky,
-            $failOnSkipped,
-            $failOnWarning,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $outputToStandardErrorStream,
             $columns,
             $noExtensions,
@@ -1007,22 +789,6 @@ final class Merger
             $beStrictAboutChangesToGlobalState,
             $colors,
             $processIsolation,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $stopOnDefect,
-            $stopOnError,
-            $stopOnFailure,
-            $stopOnWarning,
-            $stopOnIncomplete,
-            $stopOnRisky,
-            $stopOnSkipped,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $enforceTimeLimit,
             $defaultTimeLimit,
             $timeoutForSmallTests,
@@ -1079,16 +845,10 @@ final class Merger
                 $xmlConfiguration->php()->filesVariables(),
                 $xmlConfiguration->php()->requestVariables(),
             ),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $xmlConfiguration->phpunit()->controlGarbageCollector(),
             $xmlConfiguration->phpunit()->numberOfTestsBeforeGarbageCollection(),
             $generateBaseline,
             $cliConfiguration->debug(),
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

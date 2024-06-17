@@ -21,18 +21,8 @@ final class MethodCannotBeConfiguredException extends \PHPUnit\Framework\Excepti
         parent::__construct(
             sprintf(
                 'Trying to configure method "%s" which cannot be configured because it does not exist, has not been specified, is final, or is static',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $method,
             ),
-=======
-                $method
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $method
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

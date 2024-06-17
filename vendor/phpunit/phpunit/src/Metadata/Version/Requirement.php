@@ -19,15 +19,7 @@ use PHPUnit\Util\VersionComparisonOperator;
 /**
  * @psalm-immutable
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
-=======
- * @internal This class is not covered by the backward compatibility promise for PHPUnit
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @internal This class is not covered by the backward compatibility promise for PHPUnit
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 abstract class Requirement
 {
@@ -42,36 +34,16 @@ abstract class Requirement
         try {
             return new ConstraintRequirement(
                 (new VersionConstraintParser)->parse(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $versionRequirement,
                 ),
-=======
-                    $versionRequirement
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $versionRequirement
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         } catch (UnsupportedVersionConstraintException) {
             if (preg_match(self::VERSION_COMPARISON, $versionRequirement, $matches)) {
                 return new ComparisonRequirement(
                     $matches['version'],
                     new VersionComparisonOperator(
-<<<<<<< HEAD
-<<<<<<< HEAD
                         !empty($matches['operator']) ? $matches['operator'] : '>=',
                     ),
-=======
-                        !empty($matches['operator']) ? $matches['operator'] : '>='
-                    )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        !empty($matches['operator']) ? $matches['operator'] : '>='
-                    )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
         }

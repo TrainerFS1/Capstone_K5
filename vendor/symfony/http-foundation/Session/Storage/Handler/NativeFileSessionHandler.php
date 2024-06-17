@@ -19,36 +19,16 @@ namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 class NativeFileSessionHandler extends \SessionHandler
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param string|null $savePath Path of directory to save session files
      *                              Default null will leave setting as defined by PHP.
      *                              '/path', 'N;/path', or 'N;octal-mode;/path
-=======
-     * @param string $savePath Path of directory to save session files
-     *                         Default null will leave setting as defined by PHP.
-     *                         '/path', 'N;/path', or 'N;octal-mode;/path
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param string $savePath Path of directory to save session files
-     *                         Default null will leave setting as defined by PHP.
-     *                         '/path', 'N;/path', or 'N;octal-mode;/path
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @see https://php.net/session.configuration#ini.session.save-path for further details.
      *
      * @throws \InvalidArgumentException On invalid $savePath
      * @throws \RuntimeException         When failing to create the save directory
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $savePath = null)
-=======
-    public function __construct(string $savePath = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $savePath = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $baseDir = $savePath ??= \ini_get('session.save_path');
 
@@ -65,21 +45,11 @@ class NativeFileSessionHandler extends \SessionHandler
             throw new \RuntimeException(sprintf('Session Storage was not able to create directory "%s".', $baseDir));
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($savePath !== \ini_get('session.save_path')) {
             ini_set('session.save_path', $savePath);
         }
         if ('files' !== \ini_get('session.save_handler')) {
             ini_set('session.save_handler', 'files');
         }
-=======
-        ini_set('session.save_path', $savePath);
-        ini_set('session.save_handler', 'files');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ini_set('session.save_path', $savePath);
-        ini_set('session.save_handler', 'files');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

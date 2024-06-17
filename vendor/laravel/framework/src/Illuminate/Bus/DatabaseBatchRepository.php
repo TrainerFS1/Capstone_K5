@@ -9,13 +9,7 @@ use Illuminate\Database\Connection;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Throwable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class DatabaseBatchRepository implements PrunableBatchRepository
 {
@@ -147,15 +141,7 @@ class DatabaseBatchRepository implements PrunableBatchRepository
             return [
                 'pending_jobs' => $batch->pending_jobs - 1,
                 'failed_jobs' => $batch->failed_jobs,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'failed_job_ids' => json_encode(array_values(array_diff((array) json_decode($batch->failed_job_ids, true), [$jobId]))),
-=======
-                'failed_job_ids' => json_encode(array_values(array_diff(json_decode($batch->failed_job_ids, true), [$jobId]))),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'failed_job_ids' => json_encode(array_values(array_diff(json_decode($batch->failed_job_ids, true), [$jobId]))),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ];
         });
 
@@ -178,15 +164,7 @@ class DatabaseBatchRepository implements PrunableBatchRepository
             return [
                 'pending_jobs' => $batch->pending_jobs,
                 'failed_jobs' => $batch->failed_jobs + 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'failed_job_ids' => json_encode(array_values(array_unique(array_merge((array) json_decode($batch->failed_job_ids, true), [$jobId])))),
-=======
-                'failed_job_ids' => json_encode(array_values(array_unique(array_merge(json_decode($batch->failed_job_ids, true), [$jobId])))),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'failed_job_ids' => json_encode(array_values(array_unique(array_merge(json_decode($batch->failed_job_ids, true), [$jobId])))),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ];
         });
 
@@ -335,8 +313,6 @@ class DatabaseBatchRepository implements PrunableBatchRepository
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Rollback the last database transaction for the connection.
      *
      * @return void
@@ -347,10 +323,6 @@ class DatabaseBatchRepository implements PrunableBatchRepository
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Serialize the given value.
      *
      * @param  mixed  $value
@@ -378,19 +350,11 @@ class DatabaseBatchRepository implements PrunableBatchRepository
             $serialized = base64_decode($serialized);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             return unserialize($serialized);
         } catch (Throwable) {
             return [];
         }
-=======
-        return unserialize($serialized);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return unserialize($serialized);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -408,15 +372,7 @@ class DatabaseBatchRepository implements PrunableBatchRepository
             (int) $batch->total_jobs,
             (int) $batch->pending_jobs,
             (int) $batch->failed_jobs,
-<<<<<<< HEAD
-<<<<<<< HEAD
             (array) json_decode($batch->failed_job_ids, true),
-=======
-            json_decode($batch->failed_job_ids, true),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            json_decode($batch->failed_job_ids, true),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->unserialize($batch->options),
             CarbonImmutable::createFromTimestamp($batch->created_at),
             $batch->cancelled_at ? CarbonImmutable::createFromTimestamp($batch->cancelled_at) : $batch->cancelled_at,

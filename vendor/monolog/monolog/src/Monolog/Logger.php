@@ -188,14 +188,8 @@ class Logger implements LoggerInterface, ResettableInterface
 
     /**
      * Return a new cloned instance with the name changed
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return static
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function withName(string $name): self
     {
@@ -207,14 +201,8 @@ class Logger implements LoggerInterface, ResettableInterface
 
     /**
      * Pushes a handler on to the stack.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function pushHandler(HandlerInterface $handler): self
     {
@@ -243,13 +231,7 @@ class Logger implements LoggerInterface, ResettableInterface
      * If a map is passed, keys will be ignored.
      *
      * @param list<HandlerInterface> $handlers
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setHandlers(array $handlers): self
     {
@@ -273,13 +255,7 @@ class Logger implements LoggerInterface, ResettableInterface
      * Adds a processor on to the stack.
      *
      * @phpstan-param ProcessorInterface|(callable(LogRecord): LogRecord) $callback
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function pushProcessor(ProcessorInterface|callable $callback): self
     {
@@ -322,13 +298,7 @@ class Logger implements LoggerInterface, ResettableInterface
      * to suppress microseconds from the output.
      *
      * @param bool $micro True to use microtime() to create timestamps
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function useMicrosecondTimestamps(bool $micro): self
     {
@@ -337,15 +307,9 @@ class Logger implements LoggerInterface, ResettableInterface
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useLoggingLoopDetection(bool $detectCycles): self
     {
         $this->detectCycles = $detectCycles;
@@ -356,8 +320,6 @@ class Logger implements LoggerInterface, ResettableInterface
     /**
      * Adds a log record.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int                    $level    The logging level (a Monolog or RFC 5424 level)
      * @param  string                 $message  The log message
      * @param  mixed[]                $context  The log context
@@ -367,22 +329,6 @@ class Logger implements LoggerInterface, ResettableInterface
      * @phpstan-param value-of<Level::VALUES>|Level $level
      */
     public function addRecord(int|Level $level, string $message, array $context = [], DateTimeImmutable|null $datetime = null): bool
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  int               $level    The logging level (a Monolog or RFC 5424 level)
-     * @param  string            $message  The log message
-     * @param  mixed[]           $context  The log context
-     * @param  DateTimeImmutable $datetime Optional log date to log into the past or future
-     * @return bool              Whether the record has been processed
-     *
-     * @phpstan-param value-of<Level::VALUES>|Level $level
-     */
-    public function addRecord(int|Level $level, string $message, array $context = [], DateTimeImmutable $datetime = null): bool
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (is_int($level) && isset(self::RFC_5424_LEVELS[$level])) {
             $level = self::RFC_5424_LEVELS[$level];
@@ -409,25 +355,11 @@ class Logger implements LoggerInterface, ResettableInterface
             $recordInitialized = count($this->processors) === 0;
 
             $record = new LogRecord(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 datetime: $datetime ?? new DateTimeImmutable($this->microsecondTimestamps, $this->timezone),
                 channel: $this->name,
                 level: self::toMonologLevel($level),
                 message: $message,
                 context: $context,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                message: $message,
-                context: $context,
-                level: self::toMonologLevel($level),
-                channel: $this->name,
-                datetime: $datetime ?? new DateTimeImmutable($this->microsecondTimestamps, $this->timezone),
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 extra: [],
             );
             $handled = false;
@@ -454,15 +386,7 @@ class Logger implements LoggerInterface, ResettableInterface
                 // once the record is initialized, send it to all handlers as long as the bubbling chain is not interrupted
                 try {
                     $handled = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     if (true === $handler->handle(clone $record)) {
-=======
-                    if (true === $handler->handle($record)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    if (true === $handler->handle($record)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         break;
                     }
                 } catch (Throwable $e) {
@@ -612,14 +536,8 @@ class Logger implements LoggerInterface, ResettableInterface
      * Set a custom exception handler that will be called if adding a new record fails
      *
      * The Closure will receive an exception object and the record that failed to be logged
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setExceptionHandler(Closure|null $callback): self
     {
@@ -767,14 +685,8 @@ class Logger implements LoggerInterface, ResettableInterface
 
     /**
      * Sets the timezone to be used for the timestamp of log records.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setTimezone(DateTimeZone $tz): self
     {

@@ -11,14 +11,6 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Validation\ValidatesWhenResolvedTrait;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Illuminate\Validation\ValidationException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Validation\ValidationException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class FormRequest extends Request implements ValidatesWhenResolved
 {
@@ -103,8 +95,6 @@ class FormRequest extends Request implements ValidatesWhenResolved
             $this->withValidator($validator);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (method_exists($this, 'after')) {
             $validator->after($this->container->call(
                 $this->after(...),
@@ -112,10 +102,6 @@ class FormRequest extends Request implements ValidatesWhenResolved
             ));
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->setValidator($validator);
 
         return $this->validator;
@@ -129,8 +115,6 @@ class FormRequest extends Request implements ValidatesWhenResolved
      */
     protected function createDefaultValidator(ValidationFactory $factory)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $rules = $this->validationRules();
 
         $validator = $factory->make(
@@ -138,18 +122,6 @@ class FormRequest extends Request implements ValidatesWhenResolved
             $rules,
             $this->messages(),
             $this->attributes(),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $rules = $this->container->call([$this, 'rules']);
-
-        $validator = $factory->make(
-            $this->validationData(), $rules,
-            $this->messages(), $this->attributes()
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->stopOnFirstFailure($this->stopOnFirstFailure);
 
         if ($this->isPrecognitive()) {
@@ -172,8 +144,6 @@ class FormRequest extends Request implements ValidatesWhenResolved
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the validation rules for this form request.
      *
      * @return array
@@ -184,10 +154,6 @@ class FormRequest extends Request implements ValidatesWhenResolved
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle a failed validation attempt.
      *
      * @param  \Illuminate\Contracts\Validation\Validator  $validator
@@ -197,17 +163,9 @@ class FormRequest extends Request implements ValidatesWhenResolved
      */
     protected function failedValidation(Validator $validator)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $exception = $validator->getException();
 
         throw (new $exception($validator))
-=======
-        throw (new ValidationException($validator))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        throw (new ValidationException($validator))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ->errorBag($this->errorBag)
                     ->redirectTo($this->getRedirectUrl());
     }

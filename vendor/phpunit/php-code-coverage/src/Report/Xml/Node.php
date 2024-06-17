@@ -38,18 +38,8 @@ abstract class Node
             $totalsContainer = $this->contextNode()->appendChild(
                 $this->dom->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'totals',
                 ),
-=======
-                    'totals'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    'totals'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -60,15 +50,7 @@ abstract class Node
     {
         $dirNode = $this->dom()->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'directory',
-=======
-            'directory'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'directory'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $dirNode->setAttribute('name', $name);
@@ -81,15 +63,7 @@ abstract class Node
     {
         $fileNode = $this->dom()->createElementNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'file',
-=======
-            'file'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'file'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $fileNode->setAttribute('name', $name);

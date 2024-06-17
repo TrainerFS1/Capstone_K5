@@ -27,18 +27,6 @@
     },
     "minimum-stability": "dev",
     "extra": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "branch-alias": {
-            "dev-main": "1.27-dev"
-        },
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "branch-alias": {
-            "dev-main": "1.27-dev"
-        },
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "thanks": {
             "name": "symfony/polyfill",
             "url": "https://github.com/symfony/polyfill"

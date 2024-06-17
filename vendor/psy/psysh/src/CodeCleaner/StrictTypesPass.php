@@ -12,15 +12,7 @@
 namespace Psy\CodeCleaner;
 
 use PhpParser\Node;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Node\DeclareItem;
-=======
-use PhpParser\Node\Identifier;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PhpParser\Node\Identifier;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\Node\Scalar\LNumber;
 use PhpParser\Node\Stmt\Declare_;
 use PhpParser\Node\Stmt\DeclareDeclare;
@@ -43,8 +35,6 @@ class StrictTypesPass extends CodeCleanerPass
     private $strictTypes = false;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param bool $strictTypes enforce strict types by default
      */
     public function __construct(bool $strictTypes = false)
@@ -53,10 +43,6 @@ class StrictTypesPass extends CodeCleanerPass
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * If this is a standalone strict types declaration, remember it for later.
      *
      * Otherwise, apply remembered strict types declaration to to the code until
@@ -75,26 +61,11 @@ class StrictTypesPass extends CodeCleanerPass
         foreach ($nodes as $node) {
             if ($node instanceof Declare_) {
                 foreach ($node->declares as $declare) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     if ($declare->key->toString() === 'strict_types') {
                         $value = $declare->value;
                         // @todo Rename LNumber to Int_ once we drop support for PHP-Parser 4.x
                         if (!$value instanceof LNumber || ($value->value !== 0 && $value->value !== 1)) {
                             throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getStartLine());
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                    // For PHP Parser 4.x
-                    $declareKey = $declare->key instanceof Identifier ? $declare->key->toString() : $declare->key;
-                    if ($declareKey === 'strict_types') {
-                        $value = $declare->value;
-                        if (!$value instanceof LNumber || ($value->value !== 0 && $value->value !== 1)) {
-                            throw new FatalErrorException(self::EXCEPTION_MESSAGE, 0, \E_ERROR, null, $node->getLine());
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         }
 
                         $this->strictTypes = $value->value === 1;
@@ -106,20 +77,12 @@ class StrictTypesPass extends CodeCleanerPass
         if ($prependStrictTypes) {
             $first = \reset($nodes);
             if (!$first instanceof Declare_) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 // @todo Switch to PhpParser\Node\DeclareItem once we drop support for PHP-Parser 4.x
                 // @todo Rename LNumber to Int_ once we drop support for PHP-Parser 4.x
                 $declareItem = \class_exists('PhpParser\Node\DeclareItem') ?
                     new DeclareItem('strict_types', new LNumber(1)) :
                     new DeclareDeclare('strict_types', new LNumber(1));
                 $declare = new Declare_([$declareItem]);
-=======
-                $declare = new Declare_([new DeclareDeclare('strict_types', new LNumber(1))]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $declare = new Declare_([new DeclareDeclare('strict_types', new LNumber(1))]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 \array_unshift($nodes, $declare);
             }
         }

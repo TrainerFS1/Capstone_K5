@@ -2,13 +2,7 @@
 
 namespace Illuminate\Foundation\Console;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Closure;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Console\Command;
 use Illuminate\Support\Composer;
 use Illuminate\Support\Str;
@@ -98,15 +92,7 @@ class AboutCommand extends Command
                 return $index === false ? 99 : $index;
             })
             ->filter(function ($data, $key) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return $this->option('only') ? in_array($this->toSearchKeyword($key), $this->sections()) : true;
-=======
-                return $this->option('only') ? in_array(Str::of($key)->lower()->snake(), $this->sections()) : true;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return $this->option('only') ? in_array(Str::of($key)->lower()->snake(), $this->sections()) : true;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             })
             ->pipe(fn ($data) => $this->display($data));
 
@@ -142,15 +128,7 @@ class AboutCommand extends Command
             $data->pipe(fn ($data) => $section !== 'Environment' ? $data->sort() : $data)->each(function ($detail) {
                 [$label, $value] = $detail;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->components->twoColumnDetail($label, value($value, false));
-=======
-                $this->components->twoColumnDetail($label, value($value));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->components->twoColumnDetail($label, value($value));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             });
         });
     }
@@ -164,19 +142,11 @@ class AboutCommand extends Command
     protected function displayJson($data)
     {
         $output = $data->flatMap(function ($data, $section) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return [
                 (string) Str::of($section)->snake() => $data->mapWithKeys(fn ($item, $key) => [
                     $this->toSearchKeyword($item[0]) => value($item[1], true),
                 ]),
             ];
-=======
-            return [(string) Str::of($section)->snake() => $data->mapWithKeys(fn ($item, $key) => [(string) Str::of($item[0])->lower()->snake() => value($item[1])])];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return [(string) Str::of($section)->snake() => $data->mapWithKeys(fn ($item, $key) => [(string) Str::of($item[0])->lower()->snake() => value($item[1])])];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
 
         $this->output->writeln(strip_tags(json_encode($output)));
@@ -189,25 +159,17 @@ class AboutCommand extends Command
      */
     protected function gatherApplicationInformation()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         self::$data = [];
 
         $formatEnabledStatus = fn ($value) => $value ? '<fg=yellow;options=bold>ENABLED</>' : 'OFF';
         $formatCachedStatus = fn ($value) => $value ? '<fg=green;options=bold>CACHED</>' : '<fg=yellow;options=bold>NOT CACHED</>';
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         static::addToSection('Environment', fn () => [
             'Application Name' => config('app.name'),
             'Laravel Version' => $this->laravel->version(),
             'PHP Version' => phpversion(),
             'Composer Version' => $this->composer->getVersion() ?? '<fg=yellow;options=bold>-</>',
             'Environment' => $this->laravel->environment(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             'Debug Mode' => static::format(config('app.debug'), console: $formatEnabledStatus),
             'URL' => Str::of(config('app.url'))->replace(['http://', 'https://'], ''),
             'Maintenance Mode' => static::format($this->laravel->isDownForMaintenance(), console: $formatEnabledStatus),
@@ -220,42 +182,10 @@ class AboutCommand extends Command
             'Views' => static::format($this->hasPhpFiles($this->laravel->storagePath('framework/views')), console: $formatCachedStatus),
         ]);
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            'Debug Mode' => config('app.debug') ? '<fg=yellow;options=bold>ENABLED</>' : 'OFF',
-            'URL' => Str::of(config('app.url'))->replace(['http://', 'https://'], ''),
-            'Maintenance Mode' => $this->laravel->isDownForMaintenance() ? '<fg=yellow;options=bold>ENABLED</>' : 'OFF',
-        ]);
-
-        static::addToSection('Cache', fn () => [
-            'Config' => $this->laravel->configurationIsCached() ? '<fg=green;options=bold>CACHED</>' : '<fg=yellow;options=bold>NOT CACHED</>',
-            'Events' => $this->laravel->eventsAreCached() ? '<fg=green;options=bold>CACHED</>' : '<fg=yellow;options=bold>NOT CACHED</>',
-            'Routes' => $this->laravel->routesAreCached() ? '<fg=green;options=bold>CACHED</>' : '<fg=yellow;options=bold>NOT CACHED</>',
-            'Views' => $this->hasPhpFiles($this->laravel->storagePath('framework/views')) ? '<fg=green;options=bold>CACHED</>' : '<fg=yellow;options=bold>NOT CACHED</>',
-        ]);
-
-        $logChannel = config('logging.default');
-
-        if (config('logging.channels.'.$logChannel.'.driver') === 'stack') {
-            $secondary = collect(config('logging.channels.'.$logChannel.'.channels'))
-                ->implode(', ');
-
-            $logs = '<fg=yellow;options=bold>'.$logChannel.'</> <fg=gray;options=bold>/</> '.$secondary;
-        } else {
-            $logs = $logChannel;
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         static::addToSection('Drivers', fn () => array_filter([
             'Broadcasting' => config('broadcasting.default'),
             'Cache' => config('cache.default'),
             'Database' => config('database.default'),
-<<<<<<< HEAD
-<<<<<<< HEAD
             'Logs' => function ($json) {
                 $logChannel = config('logging.default');
 
@@ -273,12 +203,6 @@ class AboutCommand extends Command
 
                 return $logs;
             },
-=======
-            'Logs' => $logs,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'Logs' => $logs,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'Mail' => config('mail.default'),
             'Octane' => config('octane.server'),
             'Queue' => config('queue.default'),
@@ -341,8 +265,6 @@ class AboutCommand extends Command
      */
     protected function sections()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return collect(explode(',', $this->option('only') ?? ''))
             ->filter()
             ->map(fn ($only) => $this->toSearchKeyword($only))
@@ -391,11 +313,5 @@ class AboutCommand extends Command
         static::$data = [];
 
         static::$customDataResolvers = [];
-=======
-        return array_filter(explode(',', $this->option('only') ?? ''));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return array_filter(explode(',', $this->option('only') ?? ''));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

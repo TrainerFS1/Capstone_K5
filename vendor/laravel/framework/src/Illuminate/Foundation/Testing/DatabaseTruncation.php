@@ -24,14 +24,8 @@ trait DatabaseTruncation
      */
     protected function truncateDatabaseTables(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->beforeTruncatingDatabase();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Migrate and seed the database on first run...
         if (! RefreshDatabaseState::$migrated) {
             $this->artisan('migrate:fresh', $this->migrateFreshUsing());
@@ -53,14 +47,8 @@ trait DatabaseTruncation
             // Use the default seeder class...
             $this->artisan('db:seed');
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         $this->afterTruncatingDatabase();
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -101,25 +89,13 @@ trait DatabaseTruncation
                 fn ($tables) => $tables->intersect($this->tablesToTruncate),
                 fn ($tables) => $tables->diff($this->exceptTables($name))
             )
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->filter(fn ($table) => $connection->table($this->withoutTablePrefix($connection, $table))->exists())
             ->each(fn ($table) => $connection->table($this->withoutTablePrefix($connection, $table))->truncate());
-=======
-            ->filter(fn ($table) => $connection->table($table)->exists())
-            ->each(fn ($table) => $connection->table($table)->truncate());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            ->filter(fn ($table) => $connection->table($table)->exists())
-            ->each(fn ($table) => $connection->table($table)->truncate());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $connection->setEventDispatcher($dispatcher);
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Remove the table prefix from a table name, if it exists.
      *
      * @param  \Illuminate\Database\ConnectionInterface  $connection
@@ -136,10 +112,6 @@ trait DatabaseTruncation
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The database connections that should have their tables truncated.
      *
      * @return array
@@ -159,8 +131,6 @@ trait DatabaseTruncation
     protected function exceptTables(?string $connectionName): array
     {
         if (property_exists($this, 'exceptTables')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $migrationsTable = $this->app['config']->get('database.migrations');
 
             if (array_is_list($this->exceptTables ?? [])) {
@@ -173,23 +143,11 @@ trait DatabaseTruncation
             return array_merge(
                 $this->exceptTables[$connectionName] ?? [],
                 [$migrationsTable],
-=======
-            return array_merge(
-                $this->exceptTables[$connectionName] ?? [],
-                [$this->app['config']->get('database.migrations')]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return array_merge(
-                $this->exceptTables[$connectionName] ?? [],
-                [$this->app['config']->get('database.migrations')]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
         return [$this->app['config']->get('database.migrations')];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Perform any work that should take place before the database has started truncating.
@@ -210,8 +168,4 @@ trait DatabaseTruncation
     {
         //
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

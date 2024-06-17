@@ -28,15 +28,7 @@ final class UpdateSchemaLocation implements Migration
         $root->setAttributeNS(
             'http://www.w3.org/2001/XMLSchema-instance',
             'xsi:noNamespaceSchemaLocation',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'https://schema.phpunit.de/' . Version::series() . '/phpunit.xsd',
-=======
-            'https://schema.phpunit.de/' . Version::series() . '/phpunit.xsd'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'https://schema.phpunit.de/' . Version::series() . '/phpunit.xsd'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

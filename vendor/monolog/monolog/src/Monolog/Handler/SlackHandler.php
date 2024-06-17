@@ -192,14 +192,8 @@ class SlackHandler extends SocketHandler
 
     /**
      * Channel used by the bot when posting
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setChannel(string $channel): self
     {
@@ -210,14 +204,8 @@ class SlackHandler extends SocketHandler
 
     /**
      * Username used by the bot when posting
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setUsername(string $username): self
     {
@@ -226,15 +214,9 @@ class SlackHandler extends SocketHandler
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useAttachment(bool $useAttachment): self
     {
         $this->slackRecord->useAttachment($useAttachment);
@@ -242,15 +224,9 @@ class SlackHandler extends SocketHandler
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setIconEmoji(string $iconEmoji): self
     {
         $this->slackRecord->setUserIcon($iconEmoji);
@@ -258,15 +234,9 @@ class SlackHandler extends SocketHandler
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function useShortAttachment(bool $useShortAttachment): self
     {
         $this->slackRecord->useShortAttachment($useShortAttachment);
@@ -274,15 +244,9 @@ class SlackHandler extends SocketHandler
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function includeContextAndExtra(bool $includeContextAndExtra): self
     {
         $this->slackRecord->includeContextAndExtra($includeContextAndExtra);
@@ -292,13 +256,7 @@ class SlackHandler extends SocketHandler
 
     /**
      * @param string[] $excludeFields
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function excludeFields(array $excludeFields): self
     {

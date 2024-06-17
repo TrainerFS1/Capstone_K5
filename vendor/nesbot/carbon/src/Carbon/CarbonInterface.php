@@ -703,24 +703,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
     public function __isset($name);
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Returns the values to dump on serialize() called on.
-     *
-     * Only used by PHP >= 7.4.
-     *
-     * @return array
-     */
-    public function __serialize(): array;
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set a part of the Carbon object
      *
      * @param string                  $name
@@ -764,24 +746,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
     public function __toString();
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Set locale if specified on unserialize() called.
-     *
-     * Only used by PHP >= 7.4.
-     *
-     * @return void
-     */
-    public function __unserialize(array $data): void;
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Add given units or interval to the current instance.
      *
      * @example $date->add('hour', 3)
@@ -1077,8 +1041,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      * If $hour is not null then the default values for $minute and $second
      * will be 0.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param DateTimeInterface|int|null $year
      * @param int|null                   $month
      * @param int|null                   $day
@@ -1086,20 +1048,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      * @param int|null                   $minute
      * @param int|null                   $second
      * @param DateTimeZone|string|null   $tz
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param int|null                 $year
-     * @param int|null                 $month
-     * @param int|null                 $day
-     * @param int|null                 $hour
-     * @param int|null                 $minute
-     * @param int|null                 $second
-     * @param DateTimeZone|string|null $tz
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws InvalidFormatException
      *
@@ -2805,8 +2753,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
     public function isLeapYear();
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determines if the instance is a long year (using ISO 8601 year).
      *
      * @example
@@ -2836,19 +2782,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      * ```
      * Carbon::create(2015)->isLongYear(); // true
      * Carbon::create(2016)->isLongYear(); // false
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Determines if the instance is a long year
-     *
-     * @example
-     * ```
-     * Carbon::parse('2015-01-01')->isLongYear(); // true
-     * Carbon::parse('2016-01-01')->isLongYear(); // false
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * ```
      *
      * @see https://en.wikipedia.org/wiki/ISO_8601#Week_dates
@@ -5187,8 +5120,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      *
      * /!\ Use this method for unit tests only.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template T
      *
      * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
@@ -5197,19 +5128,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      * @return T
      */
     public static function withTestNow($testNow, $callback);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
-     * @param Closure|null                                       $callback
-     *
-     * @return mixed
-     */
-    public static function withTestNow($testNow = null, $callback = null);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Create a Carbon instance for yesterday.

@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Collection;
 class HasMany extends HasOneOrMany
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the relationship to a "has one" relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
@@ -24,10 +22,6 @@ class HasMany extends HasOneOrMany
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the results of the relationship.
      *
      * @return mixed

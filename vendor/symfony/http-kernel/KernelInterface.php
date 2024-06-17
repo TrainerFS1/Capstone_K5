@@ -33,27 +33,15 @@ interface KernelInterface extends HttpKernelInterface
 
     /**
      * Loads the container configuration.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function registerContainerConfiguration(LoaderInterface $loader);
 
     /**
      * Boots the current kernel.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function boot();
 
@@ -61,14 +49,8 @@ interface KernelInterface extends HttpKernelInterface
      * Shutdowns the kernel.
      *
      * This method is mainly useful when doing functional testing.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function shutdown();
 

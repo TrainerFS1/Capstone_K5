@@ -3,14 +3,8 @@
 namespace Illuminate\Http\Client;
 
 use Closure;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use GuzzleHttp\Middleware;
 use GuzzleHttp\Promise\Create;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\Psr7\Response as Psr7Response;
 use GuzzleHttp\TransferStats;
@@ -36,8 +30,6 @@ class Factory
     protected $dispatcher;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The middleware to apply to every request.
      *
      * @var array
@@ -52,10 +44,6 @@ class Factory
     protected $globalOptions = [];
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The stub callables that will handle requests.
      *
      * @var \Illuminate\Support\Collection
@@ -104,8 +92,6 @@ class Factory
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Add middleware to apply to every request.
      *
      * @param  callable  $middleware
@@ -158,10 +144,6 @@ class Factory
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new response instance for use during stubbing.
      *
      * @param  array|string|null  $body
@@ -179,19 +161,7 @@ class Factory
 
         $response = new Psr7Response($status, $headers, $body);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return Create::promiseFor($response);
-=======
-        return class_exists(\GuzzleHttp\Promise\Create::class)
-            ? \GuzzleHttp\Promise\Create::promiseFor($response)
-            : \GuzzleHttp\Promise\promise_for($response);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return class_exists(\GuzzleHttp\Promise\Create::class)
-            ? \GuzzleHttp\Promise\Create::promiseFor($response)
-            : \GuzzleHttp\Promise\promise_for($response);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -450,15 +420,7 @@ class Factory
      */
     protected function newPendingRequest()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return (new PendingRequest($this, $this->globalMiddleware))->withOptions($this->globalOptions);
-=======
-        return new PendingRequest($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return new PendingRequest($this);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -472,8 +434,6 @@ class Factory
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the array of global middleware.
      *
      * @return array
@@ -484,10 +444,6 @@ class Factory
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Execute a method against a new pending request instance.
      *
      * @param  string  $method

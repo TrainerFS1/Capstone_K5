@@ -290,28 +290,12 @@ header {
       border-radius: 6px;
       background-color: rgba(255, 255, 255, .05);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     .frame-comment a {
       font-weight: bold;
       text-decoration: underline;
       color: #c6c6c6;
     }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-      .frame-comment a {
-        font-weight: bold;
-        text-decoration: none;
-      }
-        .frame-comment a:hover {
-          color: #4bb1b1;
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     .frame-comment:not(:last-child) {
       border-bottom: 1px dotted rgba(0, 0, 0, .3);

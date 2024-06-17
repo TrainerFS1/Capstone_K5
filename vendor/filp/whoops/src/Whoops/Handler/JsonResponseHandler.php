@@ -60,16 +60,8 @@ class JsonResponseHandler extends Handler
                 'errors' => [
                     Formatter::formatExceptionAsDataArray(
                         $this->getInspector(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $this->addTraceToOutput(),
                         $this->getRun()->getFrameFilters()
-=======
-                        $this->addTraceToOutput()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $this->addTraceToOutput()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ),
                 ]
             ];
@@ -77,16 +69,8 @@ class JsonResponseHandler extends Handler
             $response = [
                 'error' => Formatter::formatExceptionAsDataArray(
                     $this->getInspector(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->addTraceToOutput(),
                     $this->getRun()->getFrameFilters()
-=======
-                    $this->addTraceToOutput()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->addTraceToOutput()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ),
             ];
         }

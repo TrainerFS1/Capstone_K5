@@ -9,13 +9,7 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Foundation\Vite useIntegrityKey(string|false $key)
  * @method static \Illuminate\Foundation\Vite withEntryPoints(array $entryPoints)
  * @method static \Illuminate\Foundation\Vite useManifestFilename(string $filename)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Foundation\Vite createAssetPathsUsing(void $resolver)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static string hotFile()
  * @method static \Illuminate\Foundation\Vite useHotFile(string $path)
  * @method static \Illuminate\Foundation\Vite useBuildDirectory(string $path)
@@ -24,13 +18,7 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Foundation\Vite usePreloadTagAttributes(callable|array|false $attributes)
  * @method static \Illuminate\Support\HtmlString|void reactRefresh()
  * @method static string asset(string $asset, string|null $buildDirectory = null)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static string content(string $asset, string|null $buildDirectory = null)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static string|null manifestHash(string|null $buildDirectory = null)
  * @method static bool isRunningHot()
  * @method static string toHtml()

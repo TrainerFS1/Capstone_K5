@@ -18,8 +18,6 @@ final class Message
     public static function toString(MessageInterface $message): string
     {
         if ($message instanceof RequestInterface) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $msg = trim($message->getMethod().' '
                     .$message->getRequestTarget())
                 .' HTTP/'.$message->getProtocolVersion();
@@ -30,30 +28,11 @@ final class Message
             $msg = 'HTTP/'.$message->getProtocolVersion().' '
                 .$message->getStatusCode().' '
                 .$message->getReasonPhrase();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $msg = trim($message->getMethod() . ' '
-                    . $message->getRequestTarget())
-                . ' HTTP/' . $message->getProtocolVersion();
-            if (!$message->hasHeader('host')) {
-                $msg .= "\r\nHost: " . $message->getUri()->getHost();
-            }
-        } elseif ($message instanceof ResponseInterface) {
-            $msg = 'HTTP/' . $message->getProtocolVersion() . ' '
-                . $message->getStatusCode() . ' '
-                . $message->getReasonPhrase();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             throw new \InvalidArgumentException('Unknown message type');
         }
 
         foreach ($message->getHeaders() as $name => $values) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (is_string($name) && strtolower($name) === 'set-cookie') {
                 foreach ($values as $value) {
                     $msg .= "\r\n{$name}: ".$value;
@@ -64,23 +43,6 @@ final class Message
         }
 
         return "{$msg}\r\n\r\n".$message->getBody();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if (strtolower($name) === 'set-cookie') {
-                foreach ($values as $value) {
-                    $msg .= "\r\n{$name}: " . $value;
-                }
-            } else {
-                $msg .= "\r\n{$name}: " . implode(', ', $values);
-            }
-        }
-
-        return "{$msg}\r\n\r\n" . $message->getBody();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -115,15 +77,7 @@ final class Message
 
         // Matches any printable character, including unicode characters:
         // letters, marks, numbers, punctuation, spacing, and separators.
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (preg_match('/[^\pL\pM\pN\pP\pS\pZ\n\r\t]/u', $summary) !== 0) {
-=======
-        if (preg_match('/[^\pL\pM\pN\pP\pS\pZ\n\r\t]/u', $summary)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (preg_match('/[^\pL\pM\pN\pP\pS\pZ\n\r\t]/u', $summary)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return null;
         }
 
@@ -192,15 +146,7 @@ final class Message
 
         // If these aren't the same, then one line didn't match and there's an invalid header.
         if ($count !== substr_count($rawHeaders, "\n")) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             // Folding is deprecated, see https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.4
-=======
-            // Folding is deprecated, see https://tools.ietf.org/html/rfc7230#section-3.2.4
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            // Folding is deprecated, see https://tools.ietf.org/html/rfc7230#section-3.2.4
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (preg_match(Rfc7230::HEADER_FOLD_REGEX, $rawHeaders)) {
                 throw new \InvalidArgumentException('Invalid header syntax: Obsolete line folding');
             }
@@ -244,15 +190,7 @@ final class Message
         $host = $headers[reset($hostKey)][0];
         $scheme = substr($host, -4) === ':443' ? 'https' : 'http';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $scheme.'://'.$host.'/'.ltrim($path, '/');
-=======
-        return $scheme . '://' . $host . '/' . ltrim($path, '/');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $scheme . '://' . $host . '/' . ltrim($path, '/');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -289,25 +227,11 @@ final class Message
     public static function parseResponse(string $message): ResponseInterface
     {
         $data = self::parseMessage($message);
-<<<<<<< HEAD
-<<<<<<< HEAD
         // According to https://datatracker.ietf.org/doc/html/rfc7230#section-3.1.2
         // the space between status-code and reason-phrase is required. But
         // browsers accept responses without space and reason as well.
         if (!preg_match('/^HTTP\/.* [0-9]{3}( .*|$)/', $data['start-line'])) {
             throw new \InvalidArgumentException('Invalid response string: '.$data['start-line']);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        // According to https://tools.ietf.org/html/rfc7230#section-3.1.2 the space
-        // between status-code and reason-phrase is required. But browsers accept
-        // responses without space and reason as well.
-        if (!preg_match('/^HTTP\/.* [0-9]{3}( .*|$)/', $data['start-line'])) {
-            throw new \InvalidArgumentException('Invalid response string: ' . $data['start-line']);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
         $parts = explode(' ', $data['start-line'], 3);
 

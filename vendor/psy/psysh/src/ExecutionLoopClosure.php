@@ -17,17 +17,7 @@ use Psy\Exception\ThrowUpException;
 /**
  * The Psy Shell's execution loop scope.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @todo Switch ExecutionClosure to a generator and get rid of the duplicate closure implementations?
-=======
- * @todo Once we're on PHP 5.5, we can switch ExecutionClosure to a generator
- * and get rid of the duplicate closure implementations :)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @todo Once we're on PHP 5.5, we can switch ExecutionClosure to a generator
- * and get rid of the duplicate closure implementations :)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 class ExecutionLoopClosure extends ExecutionClosure
 {

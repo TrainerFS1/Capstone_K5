@@ -293,15 +293,7 @@ class Uuid implements UuidInterface
      */
     public function serialize(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->codec->encode($this);
-=======
-        return $this->getFields()->getBytes();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->getFields()->getBytes();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -454,22 +446,12 @@ class Uuid implements UuidInterface
      */
     public static function fromBytes(string $bytes): UuidInterface
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!self::$factoryReplaced && strlen($bytes) === 16) {
-=======
-        if (! self::$factoryReplaced && strlen($bytes) === 16) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (! self::$factoryReplaced && strlen($bytes) === 16) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $base16Uuid = bin2hex($bytes);
 
             // Note: we are calling `fromString` internally because we don't know if the given `$bytes` is a valid UUID
             return self::fromString(
                 substr($base16Uuid, 0, 8)
-<<<<<<< HEAD
-<<<<<<< HEAD
                     . '-'
                     . substr($base16Uuid, 8, 4)
                     . '-'
@@ -478,21 +460,6 @@ class Uuid implements UuidInterface
                     . substr($base16Uuid, 16, 4)
                     . '-'
                     . substr($base16Uuid, 20, 12)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                . '-'
-                . substr($base16Uuid, 8, 4)
-                . '-'
-                . substr($base16Uuid, 12, 4)
-                . '-'
-                . substr($base16Uuid, 16, 4)
-                . '-'
-                . substr($base16Uuid, 20, 12)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -518,15 +485,7 @@ class Uuid implements UuidInterface
     public static function fromString(string $uuid): UuidInterface
     {
         $uuid = strtolower($uuid);
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!self::$factoryReplaced && preg_match(LazyUuidFromString::VALID_REGEX, $uuid) === 1) {
-=======
-        if (! self::$factoryReplaced && preg_match(LazyUuidFromString::VALID_REGEX, $uuid) === 1) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (! self::$factoryReplaced && preg_match(LazyUuidFromString::VALID_REGEX, $uuid) === 1) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             assert($uuid !== '');
 
             return new LazyUuidFromString($uuid);

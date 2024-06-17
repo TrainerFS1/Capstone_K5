@@ -374,8 +374,6 @@ trait CompilesConditionals
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile the else-if push statements into valid PHP.
      *
      * @param  string  $expression
@@ -400,10 +398,6 @@ trait CompilesConditionals
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile the end-push statements into valid PHP.
      *
      * @return string

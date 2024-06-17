@@ -297,15 +297,7 @@ trait MakesHttpRequests
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the referer header and previous URL session value from a given URL in order to simulate a previous request.
-=======
-     * Set the referer header and previous URL session value in order to simulate a previous request.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Set the referer header and previous URL session value in order to simulate a previous request.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $url
      * @return $this
@@ -318,8 +310,6 @@ trait MakesHttpRequests
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the referer header and previous URL session value from a given route in order to simulate a previous request.
      *
      * @param  string  $name
@@ -342,10 +332,6 @@ trait MakesHttpRequests
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Visit the given URI with a GET request.
      *
      * @param  string  $uri
@@ -597,15 +583,7 @@ trait MakesHttpRequests
         );
 
         $response = $kernel->handle(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $request = $this->createTestRequest($symfonyRequest)
-=======
-            $request = Request::createFromBase($symfonyRequest)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $request = Request::createFromBase($symfonyRequest)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $kernel->terminate($request, $response);
@@ -718,15 +696,7 @@ trait MakesHttpRequests
     /**
      * Follow a redirect chain until a non-redirect is received.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Http\Response|\Illuminate\Testing\TestResponse  $response
-=======
-     * @param  \Illuminate\Http\Response  $response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Illuminate\Http\Response  $response
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Illuminate\Http\Response|\Illuminate\Testing\TestResponse
      */
     protected function followRedirects($response)
@@ -741,8 +711,6 @@ trait MakesHttpRequests
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Create the request instance used for testing from the given Symfony request.
      *
      * @param  \Symfony\Component\HttpFoundation\Request  $symfonyRequest
@@ -754,10 +722,6 @@ trait MakesHttpRequests
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create the test response instance from the given response.
      *
      * @param  \Illuminate\Http\Response  $response

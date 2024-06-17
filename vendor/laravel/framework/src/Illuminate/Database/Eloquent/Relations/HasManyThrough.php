@@ -10,13 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
 use Illuminate\Database\Eloquent\SoftDeletes;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class HasManyThrough extends Relation
 {
@@ -89,8 +83,6 @@ class HasManyThrough extends Relation
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Convert the relationship to a "has one through" relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOneThrough
@@ -109,10 +101,6 @@ class HasManyThrough extends Relation
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the base constraints on the relation query.
      *
      * @return void
@@ -264,8 +252,6 @@ class HasManyThrough extends Relation
      * Get the first related model record matching the attributes or instantiate it.
      *
      * @param  array  $attributes
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  array  $values
      * @return \Illuminate\Database\Eloquent\Model
      */
@@ -308,22 +294,6 @@ class HasManyThrough extends Relation
         } catch (UniqueConstraintViolationException $exception) {
             return $this->where($attributes)->first() ?? throw $exception;
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @return \Illuminate\Database\Eloquent\Model
-     */
-    public function firstOrNew(array $attributes)
-    {
-        if (is_null($instance = $this->where($attributes)->first())) {
-            $instance = $this->related->newInstance($attributes);
-        }
-
-        return $instance;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -335,25 +305,11 @@ class HasManyThrough extends Relation
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values)->save();
             }
         });
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $instance = $this->firstOrNew($attributes);
-
-        $instance->fill($values)->save();
-
-        return $instance;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -645,8 +601,6 @@ class HasManyThrough extends Relation
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Chunk the results of a query by comparing IDs in descending order.
      *
      * @param  int  $count
@@ -683,10 +637,6 @@ class HasManyThrough extends Relation
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get a generator for the given query.
      *
      * @return \Illuminate\Support\LazyCollection
@@ -743,8 +693,6 @@ class HasManyThrough extends Relation
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Query lazily, by chunking the results of a query by comparing IDs in descending order.
      *
      * @param  int  $chunkSize
@@ -762,10 +710,6 @@ class HasManyThrough extends Relation
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Prepare the query builder for query execution.
      *
      * @param  array  $columns

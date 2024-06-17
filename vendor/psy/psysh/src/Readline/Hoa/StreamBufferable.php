@@ -49,15 +49,7 @@ interface StreamBufferable extends IStream
      * Start a new buffer.
      * The callable acts like a light filter.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function newBuffer($callable = null, ?int $size = null): int;
-=======
-    public function newBuffer($callable = null, int $size = null): int;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function newBuffer($callable = null, int $size = null): int;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Flush the buffer.

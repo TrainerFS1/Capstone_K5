@@ -77,16 +77,10 @@ class RedisStore extends TaggableStore implements LockProvider
      */
     public function many(array $keys)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (count($keys) === 0) {
             return [];
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $results = [];
 
         $values = $this->connection()->mget(array_map(function ($key) {
@@ -124,36 +118,20 @@ class RedisStore extends TaggableStore implements LockProvider
      */
     public function putMany(array $values, $seconds)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $serializedValues = [];
 
         foreach ($values as $key => $value) {
             $serializedValues[$this->prefix.$key] = $this->serialize($value);
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->connection()->multi();
 
         $manyResult = null;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($serializedValues as $key => $value) {
             $result = (bool) $this->connection()->setex(
                 $key, (int) max(1, $seconds), $value
             );
-=======
-        foreach ($values as $key => $value) {
-            $result = $this->put($key, $value, $seconds);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        foreach ($values as $key => $value) {
-            $result = $this->put($key, $value, $seconds);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $manyResult = is_null($manyResult) ? $result : $result && $manyResult;
         }
@@ -275,15 +253,7 @@ class RedisStore extends TaggableStore implements LockProvider
     /**
      * Remove all expired tag set entries.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
-=======
-     * @return bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function flushStaleTags()
     {
@@ -347,15 +317,7 @@ class RedisStore extends TaggableStore implements LockProvider
                     yield $tag;
                 }
             } while (((string) $cursor) !== $defaultCursorValue);
-<<<<<<< HEAD
-<<<<<<< HEAD
         })->map(fn (string $tagKey) => Str::match('/^'.preg_quote($prefix, '/').'tag:(.*):entries$/', $tagKey));
-=======
-        })->map(fn (string $tagKey) => Str::match('/^'.preg_quote($prefix).'tag:(.*):entries$/', $tagKey));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        })->map(fn (string $tagKey) => Str::match('/^'.preg_quote($prefix).'tag:(.*):entries$/', $tagKey));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

@@ -5,13 +5,7 @@ namespace Illuminate\Database\Schema;
 use BadMethodCallException;
 use Closure;
 use Illuminate\Database\Connection;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Schema\Grammars\Grammar;
 use Illuminate\Database\SQLiteConnection;
@@ -136,16 +130,10 @@ class Blueprint
         $this->ensureCommandsAreValid($connection);
 
         foreach ($this->commands as $command) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($command->shouldBeSkipped) {
                 continue;
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $method = 'compile'.ucfirst($command->name);
 
             if (method_exists($grammar, $method) || $grammar::hasMacro($method)) {
@@ -304,8 +292,6 @@ class Blueprint
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Specify the storage engine that should be used for the table.
      *
      * @param  string  $engine
@@ -350,10 +336,6 @@ class Blueprint
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Indicate that the table needs to be temporary.
      *
      * @return void
@@ -1005,8 +987,6 @@ class Blueprint
             $model = new $model;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $column = $column ?: $model->getForeignKey();
 
         if ($model->getKeyType() === 'int' && $model->getIncrementing()) {
@@ -1020,16 +1000,6 @@ class Blueprint
         }
 
         return $this->foreignUuid($column);
-=======
-        return $model->getKeyType() === 'int' && $model->getIncrementing()
-                    ? $this->foreignId($column ?: $model->getForeignKey())
-                    : $this->foreignUuid($column ?: $model->getForeignKey());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $model->getKeyType() === 'int' && $model->getIncrementing()
-                    ? $this->foreignId($column ?: $model->getForeignKey())
-                    : $this->foreignUuid($column ?: $model->getForeignKey());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1864,8 +1834,6 @@ class Blueprint
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the table prefix.
      *
      * @return string
@@ -1876,10 +1844,6 @@ class Blueprint
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the columns on the blueprint.
      *
      * @return \Illuminate\Database\Schema\ColumnDefinition[]

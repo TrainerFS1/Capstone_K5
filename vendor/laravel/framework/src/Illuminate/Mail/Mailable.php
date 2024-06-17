@@ -2,13 +2,7 @@
 
 namespace Illuminate\Mail;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Config\Repository as ConfigRepository;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Filesystem\Factory as FilesystemFactory;
 use Illuminate\Contracts\Mail\Attachable;
@@ -329,29 +323,11 @@ class Mailable implements MailableContract, Renderable
      */
     protected function buildMarkdownView()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $data = $this->buildViewData();
 
         return [
             'html' => $this->buildMarkdownHtml($data),
             'text' => $this->buildMarkdownText($data),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $markdown = Container::getInstance()->make(Markdown::class);
-
-        $markdown->theme($this->theme ?? 'default');
-
-        $data = $this->buildViewData();
-
-        return [
-            'html' => $markdown->render($this->markdown, $data),
-            'text' => $this->buildMarkdownText($markdown, $data),
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 
@@ -371,15 +347,7 @@ class Mailable implements MailableContract, Renderable
         }
 
         foreach ((new ReflectionClass($this))->getProperties(ReflectionProperty::IS_PUBLIC) as $property) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($property->isInitialized($this) && $property->getDeclaringClass()->getName() !== self::class) {
-=======
-            if ($property->getDeclaringClass()->getName() !== self::class) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($property->getDeclaringClass()->getName() !== self::class) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $data[$property->getName()] = $property->getValue($this);
             }
         }
@@ -388,8 +356,6 @@ class Mailable implements MailableContract, Renderable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Build the HTML view for a Markdown message.
      *
      * @param  array  $viewData
@@ -437,23 +403,6 @@ class Mailable implements MailableContract, Renderable
                 'mail.markdown.theme', 'default')
             );
         });
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Build the text view for a Markdown message.
-     *
-     * @param  \Illuminate\Mail\Markdown  $markdown
-     * @param  array  $data
-     * @return string
-     */
-    protected function buildMarkdownText($markdown, $data)
-    {
-        return $this->textView
-                ?? $markdown->renderText($this->markdown, $data);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1255,14 +1204,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertFrom($address, $name = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1282,27 +1225,13 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertTo($address, $name = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
             $this->hasTo($address, $name),
-<<<<<<< HEAD
-<<<<<<< HEAD
             "Did not see expected recipient [{$recipient}] in email 'to' recipients."
-=======
-            "Did not see expected recipient [{$recipient}] in email recipients."
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "Did not see expected recipient [{$recipient}] in email recipients."
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this;
@@ -1329,27 +1258,13 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasCc($address, $name = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
             $this->hasCc($address, $name),
-<<<<<<< HEAD
-<<<<<<< HEAD
             "Did not see expected recipient [{$recipient}] in email 'cc' recipients."
-=======
-            "Did not see expected recipient [{$recipient}] in email recipients."
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "Did not see expected recipient [{$recipient}] in email recipients."
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this;
@@ -1364,27 +1279,13 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasBcc($address, $name = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $recipient = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
             $this->hasBcc($address, $name),
-<<<<<<< HEAD
-<<<<<<< HEAD
             "Did not see expected recipient [{$recipient}] in email 'bcc' recipients."
-=======
-            "Did not see expected recipient [{$recipient}] in email recipients."
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "Did not see expected recipient [{$recipient}] in email recipients."
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this;
@@ -1399,14 +1300,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasReplyTo($address, $name = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $replyTo = $this->formatAssertionRecipient($address, $name);
 
         PHPUnit::assertTrue(
@@ -1445,14 +1340,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasSubject($subject)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         PHPUnit::assertTrue(
             $this->hasSubject($subject),
             "Did not see expected text [{$subject}] in email subject."
@@ -1514,15 +1403,7 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertSeeInOrderInHtml($strings, $escape = true)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $strings = $escape ? array_map('e', $strings) : $strings;
-=======
-        $strings = $escape ? array_map('e', ($strings)) : $strings;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $strings = $escape ? array_map('e', ($strings)) : $strings;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         [$html, $text] = $this->renderForAssertions();
 
@@ -1672,14 +1553,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasTag($tag)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         PHPUnit::assertTrue(
             $this->hasTag($tag),
             "Did not see expected tag [{$tag}] in email tags."
@@ -1697,14 +1572,8 @@ class Mailable implements MailableContract, Renderable
      */
     public function assertHasMetadata($key, $value)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->renderForAssertions();
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         PHPUnit::assertTrue(
             $this->hasMetadata($key, $value),
             "Did not see expected key [{$key}] and value [{$value}] in email metadata."
@@ -1754,15 +1623,7 @@ class Mailable implements MailableContract, Renderable
      *
      * @return void
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function prepareMailableForDelivery()
-=======
-    private function prepareMailableForDelivery()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function prepareMailableForDelivery()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (method_exists($this, 'build')) {
             Container::getInstance()->call([$this, 'build']);

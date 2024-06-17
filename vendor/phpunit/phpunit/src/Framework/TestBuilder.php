@@ -37,33 +37,17 @@ final class TestBuilder
 
         $data = (new DataProvider)->providedData(
             $className,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $methodName,
         );
 
         if ($data !== null) {
             return $this->buildDataProviderTestSuite(
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $methodName
-        );
-
-        if ($data !== null) {
-            $test = $this->buildDataProviderTestSuite(
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $methodName,
                 $className,
                 $data,
                 $this->shouldTestMethodBeRunInSeparateProcess($className, $methodName),
                 $this->shouldGlobalStateBePreserved($className, $methodName),
                 $this->shouldAllTestMethodsOfTestClassBeRunInSingleSeparateProcess($className),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->backupSettings($className, $methodName),
             );
         }
@@ -79,55 +63,19 @@ final class TestBuilder
             $this->shouldAllTestMethodsOfTestClassBeRunInSingleSeparateProcess($className),
             $this->backupSettings($className, $methodName),
         );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $this->backupSettings($className, $methodName)
-            );
-        } else {
-            $test = new $className($methodName);
-        }
-
-        if ($test instanceof TestCase) {
-            $this->configureTestCase(
-                $test,
-                $this->shouldTestMethodBeRunInSeparateProcess($className, $methodName),
-                $this->shouldGlobalStateBePreserved($className, $methodName),
-                $this->shouldAllTestMethodsOfTestClassBeRunInSingleSeparateProcess($className),
-                $this->backupSettings($className, $methodName)
-            );
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $test;
     }
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-param array{backupGlobals: ?bool, backupGlobalsExcludeList: list<string>, backupStaticProperties: ?bool, backupStaticPropertiesExcludeList: array<string,list<string>>} $backupSettings
      */
     private function buildDataProviderTestSuite(string $methodName, string $className, array $data, bool $runTestInSeparateProcess, ?bool $preserveGlobalState, bool $runClassInSeparateProcess, array $backupSettings): DataProviderTestSuite
     {
         $dataProviderTestSuite = DataProviderTestSuite::empty(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $className . '::' . $methodName,
-=======
-            $className . '::' . $methodName
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $className . '::' . $methodName
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $groups = (new Groups)->groups($className, $methodName);
@@ -144,15 +92,7 @@ final class TestBuilder
                 $runTestInSeparateProcess,
                 $preserveGlobalState,
                 $runClassInSeparateProcess,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $backupSettings,
-=======
-                $backupSettings
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $backupSettings
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             $dataProviderTestSuite->addTest($_test, $groups);
@@ -197,13 +137,7 @@ final class TestBuilder
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @psalm-return array{backupGlobals: ?bool, backupGlobalsExcludeList: list<string>, backupStaticProperties: ?bool, backupStaticPropertiesExcludeList: array<string,list<string>>}
      */
@@ -281,13 +215,7 @@ final class TestBuilder
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function shouldGlobalStateBePreserved(string $className, string $methodName): ?bool
     {
@@ -316,13 +244,7 @@ final class TestBuilder
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function shouldTestMethodBeRunInSeparateProcess(string $className, string $methodName): bool
     {

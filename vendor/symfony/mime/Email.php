@@ -120,16 +120,10 @@ class Email extends Message
      */
     public function from(Address|string ...$addresses): static
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!$addresses) {
             throw new LogicException('"from()" must be called with at least one address.');
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->setListAddressHeaderBody('From', $addresses);
     }
 
@@ -335,15 +329,7 @@ class Email extends Message
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function attach($body, ?string $name = null, ?string $contentType = null): static
-=======
-    public function attach($body, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function attach($body, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->addPart(new DataPart($body, $name, $contentType));
     }
@@ -351,15 +337,7 @@ class Email extends Message
     /**
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function attachFromPath(string $path, ?string $name = null, ?string $contentType = null): static
-=======
-    public function attachFromPath(string $path, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function attachFromPath(string $path, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->addPart(new DataPart(new File($path), $name, $contentType));
     }
@@ -369,15 +347,7 @@ class Email extends Message
      *
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function embed($body, ?string $name = null, ?string $contentType = null): static
-=======
-    public function embed($body, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function embed($body, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->addPart((new DataPart($body, $name, $contentType))->asInline());
     }
@@ -385,15 +355,7 @@ class Email extends Message
     /**
      * @return $this
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function embedFromPath(string $path, ?string $name = null, ?string $contentType = null): static
-=======
-    public function embedFromPath(string $path, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function embedFromPath(string $path, string $name = null, string $contentType = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->addPart((new DataPart(new File($path), $name, $contentType))->asInline());
     }
@@ -438,15 +400,9 @@ class Email extends Message
         return $this->generateBody();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function ensureValidity()
     {
         $this->ensureBodyValid();
@@ -543,32 +499,16 @@ class Email extends Message
         $otherParts = $relatedParts = [];
         foreach ($this->attachments as $part) {
             foreach ($names as $name) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if ($name !== $part->getName() && (!$part->hasContentId() || $name !== $part->getContentId())) {
-=======
-                if ($name !== $part->getName()) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                if ($name !== $part->getName()) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     continue;
                 }
                 if (isset($relatedParts[$name])) {
                     continue 2;
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if ($name !== $part->getContentId()) {
                     $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html, $count);
                 }
-=======
-                $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html, $count);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html, $count);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $relatedParts[$name] = $part;
                 $part->setName($part->getContentId())->asInline();
 
@@ -594,18 +534,10 @@ class Email extends Message
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
     private function addListAddressHeaderBody(string $name, array $addresses): static
-=======
-    private function addListAddressHeaderBody(string $name, array $addresses)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function addListAddressHeaderBody(string $name, array $addresses)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$header = $this->getHeaders()->get($name)) {
             return $this->setListAddressHeaderBody($name, $addresses);

@@ -70,8 +70,6 @@ class Tokenizer {
             $line   = $tok[2];
             $values = \preg_split('/\R+/Uu', $tok[1]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (!$values) {
                 $result->addToken(
                     new Token(
@@ -84,10 +82,6 @@ class Tokenizer {
                 continue;
             }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ($values as $v) {
                 $token = new Token(
                     $line,
@@ -118,22 +112,6 @@ class Tokenizer {
         $final = new TokenCollection();
 
         foreach ($tokens as $token) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if ($prev === null) {
-                $final->addToken($token);
-                $prev = $token;
-
-                continue;
-            }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $gap = $token->getLine() - $prev->getLine();
 
             while ($gap > 1) {

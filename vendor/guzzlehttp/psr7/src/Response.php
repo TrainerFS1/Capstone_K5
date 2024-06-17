@@ -86,15 +86,7 @@ class Response implements ResponseInterface
 
     /**
      * @param int                                  $status  Status code
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param (string|string[])[]                  $headers Response headers
-=======
-     * @param array<string, string|string[]>       $headers Response headers
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param array<string, string|string[]>       $headers Response headers
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param string|resource|StreamInterface|null $body    Response body
      * @param string                               $version Protocol version
      * @param string|null                          $reason  Reason phrase (when empty a default will be used based on the status code)
@@ -146,13 +138,7 @@ class Response implements ResponseInterface
             $reasonPhrase = self::PHRASES[$new->statusCode];
         }
         $new->reasonPhrase = (string) $reasonPhrase;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $new;
     }
 

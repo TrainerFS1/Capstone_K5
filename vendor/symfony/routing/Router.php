@@ -91,15 +91,7 @@ class Router implements RouterInterface, RequestMatcherInterface
 
     private static ?array $cache = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(LoaderInterface $loader, mixed $resource, array $options = [], ?RequestContext $context = null, ?LoggerInterface $logger = null, ?string $defaultLocale = null)
-=======
-    public function __construct(LoaderInterface $loader, mixed $resource, array $options = [], RequestContext $context = null, LoggerInterface $logger = null, string $defaultLocale = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(LoaderInterface $loader, mixed $resource, array $options = [], RequestContext $context = null, LoggerInterface $logger = null, string $defaultLocale = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->loader = $loader;
         $this->resource = $resource;
@@ -124,14 +116,8 @@ class Router implements RouterInterface, RequestMatcherInterface
      *   * strict_requirements:    Configure strict requirement checking for generators
      *                             implementing ConfigurableRequirementsInterface (default is true)
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException When unsupported option is provided
      */
     public function setOptions(array $options)
@@ -165,14 +151,8 @@ class Router implements RouterInterface, RequestMatcherInterface
     /**
      * Sets an option.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException
      */
     public function setOption(string $key, mixed $value)
@@ -198,50 +178,25 @@ class Router implements RouterInterface, RequestMatcherInterface
         return $this->options[$key];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return RouteCollection
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getRouteCollection()
     {
         return $this->collection ??= $this->loader->load($this->resource, $this->options['resource_type']);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setContext(RequestContext $context)
     {
         $this->context = $context;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (isset($this->matcher)) {
             $this->getMatcher()->setContext($context);
         }
         if (isset($this->generator)) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (null !== $this->matcher) {
-            $this->getMatcher()->setContext($context);
-        }
-        if (null !== $this->generator) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->getGenerator()->setContext($context);
         }
     }
@@ -253,14 +208,8 @@ class Router implements RouterInterface, RequestMatcherInterface
 
     /**
      * Sets the ConfigCache factory to use.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setConfigCacheFactory(ConfigCacheFactoryInterface $configCacheFactory)
     {
@@ -293,15 +242,7 @@ class Router implements RouterInterface, RequestMatcherInterface
      */
     public function getMatcher(): UrlMatcherInterface|RequestMatcherInterface
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (isset($this->matcher)) {
-=======
-        if (null !== $this->matcher) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (null !== $this->matcher) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->matcher;
         }
 
@@ -342,15 +283,7 @@ class Router implements RouterInterface, RequestMatcherInterface
      */
     public function getGenerator(): UrlGeneratorInterface
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (isset($this->generator)) {
-=======
-        if (null !== $this->generator) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (null !== $this->generator) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->generator;
         }
 
@@ -381,15 +314,9 @@ class Router implements RouterInterface, RequestMatcherInterface
         return $this->generator;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addExpressionLanguageProvider(ExpressionFunctionProviderInterface $provider)
     {
         $this->expressionLanguageProviders[] = $provider;
@@ -416,15 +343,7 @@ class Router implements RouterInterface, RequestMatcherInterface
 
     private static function getCompiledRoutes(string $path): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ([] === self::$cache && \function_exists('opcache_invalidate') && filter_var(\ini_get('opcache.enable'), \FILTER_VALIDATE_BOOL) && (!\in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) || filter_var(\ini_get('opcache.enable_cli'), \FILTER_VALIDATE_BOOL))) {
-=======
-        if ([] === self::$cache && \function_exists('opcache_invalidate') && filter_var(\ini_get('opcache.enable'), \FILTER_VALIDATE_BOOL) && (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true) || filter_var(\ini_get('opcache.enable_cli'), \FILTER_VALIDATE_BOOL))) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ([] === self::$cache && \function_exists('opcache_invalidate') && filter_var(\ini_get('opcache.enable'), \FILTER_VALIDATE_BOOL) && (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true) || filter_var(\ini_get('opcache.enable_cli'), \FILTER_VALIDATE_BOOL))) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             self::$cache = null;
         }
 

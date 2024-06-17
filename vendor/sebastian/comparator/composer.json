@@ -22,16 +22,10 @@
             "email": "bschussek@2bepublished.at"
         }
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     "support": {
         "issues": "https://github.com/sebastianbergmann/comparator/issues",
         "security": "https://github.com/sebastianbergmann/comparator/security/policy"
     },
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
@@ -41,15 +35,7 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "phpunit/phpunit": "^10.3"
-=======
-        "phpunit/phpunit": "^10.0"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        "phpunit/phpunit": "^10.0"
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "config": {
         "platform": {

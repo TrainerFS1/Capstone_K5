@@ -18,13 +18,7 @@ use PHPUnit\TextUI\Configuration\FilterDirectoryCollection as CodeCoverageFilter
 use PHPUnit\TextUI\Configuration\GroupCollection;
 use PHPUnit\TextUI\Configuration\IniSettingCollection;
 use PHPUnit\TextUI\Configuration\Php;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\TextUI\Configuration\Source;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\Configuration\TestSuiteCollection;
 use PHPUnit\TextUI\Configuration\VariableCollection;
 use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\CodeCoverage;
@@ -41,8 +35,6 @@ final class DefaultConfiguration extends Configuration
     {
         return new self(
             ExtensionBootstrapCollection::fromArray([]),
-<<<<<<< HEAD
-<<<<<<< HEAD
             new Source(
                 null,
                 false,
@@ -61,10 +53,6 @@ final class DefaultConfiguration extends Configuration
                 false,
                 false,
             ),
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             new CodeCoverage(
                 null,
                 CodeCoverageFilterDirectoryCollection::fromArray([]),
@@ -81,39 +69,17 @@ final class DefaultConfiguration extends Configuration
                 null,
                 null,
                 null,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 null,
             ),
             new Groups(
                 GroupCollection::fromArray([]),
                 GroupCollection::fromArray([]),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                null
-            ),
-            new Groups(
-                GroupCollection::fromArray([]),
-                GroupCollection::fromArray([])
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ),
             new Logging(
                 null,
                 null,
                 null,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 null,
-=======
-                null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ),
             new Php(
                 DirectoryCollection::fromArray([]),
@@ -126,15 +92,7 @@ final class DefaultConfiguration extends Configuration
                 VariableCollection::fromArray([]),
                 VariableCollection::fromArray([]),
                 VariableCollection::fromArray([]),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 VariableCollection::fromArray([]),
-=======
-                VariableCollection::fromArray([])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                VariableCollection::fromArray([])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ),
             new PHPUnit(
                 null,
@@ -165,16 +123,10 @@ final class DefaultConfiguration extends Configuration
                 false,
                 false,
                 false,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 false,
                 false,
                 false,
                 false,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 null,
                 false,
                 false,
@@ -192,23 +144,11 @@ final class DefaultConfiguration extends Configuration
                 false,
                 false,
                 false,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 false,
                 false,
                 100,
             ),
             TestSuiteCollection::fromArray([]),
-=======
-                false
-            ),
-            TestSuiteCollection::fromArray([])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                false
-            ),
-            TestSuiteCollection::fromArray([])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

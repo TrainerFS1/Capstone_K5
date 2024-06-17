@@ -13,21 +13,8 @@ use function assert;
 use function file_get_contents;
 use function substr_count;
 use PhpParser\Error;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PhpParser\Node;
 use PhpParser\NodeTraverser;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use PhpParser\Lexer;
-use PhpParser\Node;
-use PhpParser\NodeTraverser;
-use PhpParser\Parser;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PhpParser\ParserFactory;
 
 final class Counter
@@ -51,20 +38,10 @@ final class Counter
             $linesOfCode = 1;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         assert($linesOfCode >= 0);
 
         try {
             $nodes = (new ParserFactory)->createForHostVersion()->parse($source);
-=======
-        try {
-            $nodes = $this->parser()->parse($source);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        try {
-            $nodes = $this->parser()->parse($source);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             assert($nodes !== null);
 
@@ -75,29 +52,15 @@ final class Counter
             throw new RuntimeException(
                 $error->getMessage(),
                 $error->getCode(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $error,
-=======
-                $error
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $error
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
         // @codeCoverageIgnoreEnd
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-negative-int $linesOfCode
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param Node[] $nodes
      *
      * @throws RuntimeException
@@ -117,33 +80,11 @@ final class Counter
             throw new RuntimeException(
                 $error->getMessage(),
                 $error->getCode(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $error,
-=======
-                $error
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $error
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
         // @codeCoverageIgnoreEnd
 
         return $visitor->result();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    private function parser(): Parser
-    {
-        return (new ParserFactory)->create(ParserFactory::PREFER_PHP7, new Lexer);
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

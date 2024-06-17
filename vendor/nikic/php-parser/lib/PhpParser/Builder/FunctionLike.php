@@ -5,8 +5,6 @@ namespace PhpParser\Builder;
 use PhpParser\BuilderHelpers;
 use PhpParser\Node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 abstract class FunctionLike extends Declaration {
     protected bool $returnByRef = false;
     /** @var Node\Param[] */
@@ -14,20 +12,6 @@ abstract class FunctionLike extends Declaration {
 
     /** @var Node\Identifier|Node\Name|Node\ComplexType|null */
     protected ?Node $returnType = null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-abstract class FunctionLike extends Declaration
-{
-    protected $returnByRef = false;
-    protected $params = [];
-
-    /** @var string|Node\Name|Node\NullableType|null */
-    protected $returnType = null;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Make the function return by reference.
@@ -62,15 +46,7 @@ abstract class FunctionLike extends Declaration
     /**
      * Adds multiple parameters.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param (Node\Param|Param)[] $params The parameters to add
-=======
-     * @param array $params The parameters to add
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param array $params The parameters to add
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return $this The builder instance (for fluid interface)
      */

@@ -54,16 +54,10 @@ For Laravel apps, head over to [laravel-ignition](https://github.com/spatie/lara
 
 For Symfony apps, go to [symfony-ignition-bundle](https://github.com/spatie/symfony-ignition-bundle).
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 For Drupal 10+ websites, use the [Ignition module](https://www.drupal.org/project/ignition).
 
 For OpenMage websites, use the [Ignition module](https://github.com/empiricompany/openmage_ignition).
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 For all other PHP projects, install the package via composer:
 
 ```bash
@@ -116,17 +110,7 @@ To avoid rendering Ignition, you can call `shouldDisplayException` and pass it a
 
 In addition to displaying an exception, Ignition can display a solution as well.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Out of the box, Ignition will display solutions for common errors such as bad methods calls, or using undefined properties.
-=======
-Out of the box, Ignition will display solutions for common errors such as bad methods calls, or using undefined
-properties.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-Out of the box, Ignition will display solutions for common errors such as bad methods calls, or using undefined
-properties.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 #### Adding a solution directly to an exception
 
@@ -217,8 +201,6 @@ To register a solution provider to Ignition you must call the `addSolutionProvid
     ->register();
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### AI powered solutions
 
 Ignition can send your exception to Open AI that will attempt to automatically suggest a solution. In many cases, the suggested solutions is quite useful, but keep in mind that the solution may not be 100% correct for your context.
@@ -275,10 +257,6 @@ To send the application type call `applicationType` on the solution provider.
 $aiSolutionProvider->applicationType('WordPress 6.2')
 ```
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ### Sending exceptions to Flare
 
 Ignition comes with the ability to send exceptions to [Flare](https://flareapp.io), an exception monitoring service. Flare
@@ -440,13 +418,7 @@ Here are the steps you'll need to perform if you want to work on the UI of Ignit
     - run `composer update`
     - run `cp .env.example .env`
     - run `php artisan key:generate`
-<<<<<<< HEAD
-<<<<<<< HEAD
 - run `yarn dev` in both the `ignition` and `ignition-ui` project
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 - http://ignition-test.test/ should now work (= show the new UI). If you use valet, you might want to run `valet park` inside the `~/code/flare` directory.
     - http://ignition-test.test/ has a bit of everything
     - http://ignition-test.test/sql-error has a solution and SQL exception

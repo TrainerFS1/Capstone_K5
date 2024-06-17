@@ -16,8 +16,6 @@ use SebastianBergmann\Type\Type;
  */
 final class ConfigurableMethod
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-var non-empty-string
      */
@@ -50,29 +48,11 @@ final class ConfigurableMethod
     /**
      * @psalm-return non-empty-string
      */
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private readonly string $name;
-    private readonly Type $returnType;
-
-    public function __construct(string $name, Type $returnType)
-    {
-        $this->name       = $name;
-        $this->returnType = $returnType;
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function name(): string
     {
         return $this->name;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-return array<int, mixed>
      */
@@ -91,19 +71,6 @@ final class ConfigurableMethod
 
     public function mayReturn(mixed $value): bool
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function mayReturn(mixed $value): bool
-    {
-        if ($value === null && $this->returnType->allowsNull()) {
-            return true;
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->returnType->isAssignable(Type::fromValue($value, false));
     }
 

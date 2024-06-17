@@ -89,15 +89,7 @@ class NativeSessionStorage implements SessionStorageInterface
      * trans_sid_hosts, $_SERVER['HTTP_HOST']
      * trans_sid_tags, "a=href,area=href,frame=src,form="
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(array $options = [], AbstractProxy|\SessionHandlerInterface|null $handler = null, ?MetadataBag $metaBag = null)
-=======
-    public function __construct(array $options = [], AbstractProxy|\SessionHandlerInterface $handler = null, MetadataBag $metaBag = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(array $options = [], AbstractProxy|\SessionHandlerInterface $handler = null, MetadataBag $metaBag = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!\extension_loaded('session')) {
             throw new \LogicException('PHP extension "session" is required.');
@@ -191,15 +183,9 @@ class NativeSessionStorage implements SessionStorageInterface
         return $this->saveHandler->getId();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setId(string $id)
     {
         $this->saveHandler->setId($id);
@@ -210,29 +196,15 @@ class NativeSessionStorage implements SessionStorageInterface
         return $this->saveHandler->getName();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
     {
         $this->saveHandler->setName($name);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function regenerate(bool $destroy = false, ?int $lifetime = null): bool
-=======
-    public function regenerate(bool $destroy = false, int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function regenerate(bool $destroy = false, int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // Cannot regenerate the session ID for non-active sessions.
         if (\PHP_SESSION_ACTIVE !== session_status()) {
@@ -256,15 +228,9 @@ class NativeSessionStorage implements SessionStorageInterface
         return session_regenerate_id($destroy);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function save()
     {
         // Store a copy so we can restore the bags in case the session was not left empty
@@ -304,15 +270,9 @@ class NativeSessionStorage implements SessionStorageInterface
         $this->started = false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function clear()
     {
         // clear out the bags
@@ -327,15 +287,9 @@ class NativeSessionStorage implements SessionStorageInterface
         $this->loadSession();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerBag(SessionBagInterface $bag)
     {
         if ($this->started) {
@@ -360,31 +314,15 @@ class NativeSessionStorage implements SessionStorageInterface
         return $this->bags[$name];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
     public function setMetadataBag(?MetadataBag $metaBag = null)
-=======
-    public function setMetadataBag(MetadataBag $metaBag = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setMetadataBag(MetadataBag $metaBag = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
         }
         $this->metadataBag = $metaBag ?? new MetadataBag();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -409,14 +347,8 @@ class NativeSessionStorage implements SessionStorageInterface
      * @param array $options Session ini directives [key => value]
      *
      * @see https://php.net/session.configuration
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setOptions(array $options)
     {
@@ -460,23 +392,11 @@ class NativeSessionStorage implements SessionStorageInterface
      * @see https://php.net/sessionhandlerinterface
      * @see https://php.net/sessionhandler
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
      * @throws \InvalidArgumentException
      */
     public function setSaveHandler(AbstractProxy|\SessionHandlerInterface|null $saveHandler = null)
-=======
-     * @throws \InvalidArgumentException
-     */
-    public function setSaveHandler(AbstractProxy|\SessionHandlerInterface $saveHandler = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \InvalidArgumentException
-     */
-    public function setSaveHandler(AbstractProxy|\SessionHandlerInterface $saveHandler = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -506,20 +426,10 @@ class NativeSessionStorage implements SessionStorageInterface
      * are set to (either PHP's internal, or a custom save handler set with session_set_save_handler()).
      * PHP takes the return value from the read() handler, unserializes it
      * and populates $_SESSION with the result automatically.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
      */
     protected function loadSession(?array &$session = null)
-=======
-     */
-    protected function loadSession(array &$session = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     */
-    protected function loadSession(array &$session = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $session) {
             $session = &$_SESSION;

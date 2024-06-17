@@ -6,13 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\UniqueConstraintViolationException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 abstract class HasOneOrMany extends Relation
 {
@@ -233,15 +227,7 @@ abstract class HasOneOrMany extends Relation
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the first record matching the attributes. If the record is not found, create it.
-=======
-     * Get the first related record matching the attributes or create it.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Get the first related record matching the attributes or create it.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  array  $attributes
      * @param  array  $values
@@ -249,26 +235,14 @@ abstract class HasOneOrMany extends Relation
      */
     public function firstOrCreate(array $attributes = [], array $values = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (is_null($instance = (clone $this)->where($attributes)->first())) {
             $instance = $this->createOrFirst($attributes, $values);
-=======
-        if (is_null($instance = $this->where($attributes)->first())) {
-            $instance = $this->create(array_merge($attributes, $values));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (is_null($instance = $this->where($attributes)->first())) {
-            $instance = $this->create(array_merge($attributes, $values));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $instance;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Attempt to create the record. If a unique constraint violation occurs, attempt to find the matching record.
      *
      * @param  array  $attributes
@@ -285,10 +259,6 @@ abstract class HasOneOrMany extends Relation
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create or update a related record matching the attributes, and fill it with values.
      *
      * @param  array  $attributes
@@ -297,23 +267,10 @@ abstract class HasOneOrMany extends Relation
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return tap($this->firstOrCreate($attributes, $values), function ($instance) use ($values) {
             if (! $instance->wasRecentlyCreated) {
                 $instance->fill($values)->save();
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        return tap($this->firstOrNew($attributes), function ($instance) use ($values) {
-            $instance->fill($values);
-
-            $instance->save();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
     }
 
@@ -411,8 +368,6 @@ abstract class HasOneOrMany extends Relation
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Create a new instance of the related model with mass assignment without raising model events.
      *
      * @param  array  $attributes
@@ -424,10 +379,6 @@ abstract class HasOneOrMany extends Relation
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a Collection of new instances of the related model.
      *
      * @param  iterable  $records

@@ -7,15 +7,7 @@ class UnusualElements implements Reason
     /**
      * @var string $element
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private $element;
-=======
-    private $element = '';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $element = '';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(string $element)
     {

@@ -78,15 +78,9 @@ class NormalizerFormatter implements FormatterInterface
         return $this->dateFormat;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setDateFormat(string $dateFormat): self
     {
         $this->dateFormat = $dateFormat;
@@ -102,15 +96,9 @@ class NormalizerFormatter implements FormatterInterface
         return $this->maxNormalizeDepth;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMaxNormalizeDepth(int $maxNormalizeDepth): self
     {
         $this->maxNormalizeDepth = $maxNormalizeDepth;
@@ -126,15 +114,9 @@ class NormalizerFormatter implements FormatterInterface
         return $this->maxNormalizeItemCount;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setMaxNormalizeItemCount(int $maxNormalizeItemCount): self
     {
         $this->maxNormalizeItemCount = $maxNormalizeItemCount;
@@ -144,14 +126,8 @@ class NormalizerFormatter implements FormatterInterface
 
     /**
      * Enables `json_encode` pretty print.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setJsonPrettyPrint(bool $enable): self
     {
@@ -230,8 +206,6 @@ class NormalizerFormatter implements FormatterInterface
             if ($data instanceof \JsonSerializable) {
                 /** @var null|scalar|array<mixed[]|scalar|null> $value */
                 $value = $data->jsonSerialize();
-<<<<<<< HEAD
-<<<<<<< HEAD
             } elseif (\get_class($data) === '__PHP_Incomplete_Class') {
                 $accessor = new \ArrayObject($data);
                 $value = (string) $accessor['__PHP_Incomplete_Class_Name'];
@@ -244,16 +218,6 @@ class NormalizerFormatter implements FormatterInterface
                     /** @var null|scalar|array<mixed[]|scalar|null> $value */
                     $value = json_decode($this->toJson($data, true), true);
                 }
-=======
-            } elseif (method_exists($data, '__toString')) {
-                /** @var string $value */
-                $value = $data->__toString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            } elseif (method_exists($data, '__toString')) {
-                /** @var string $value */
-                $value = $data->__toString();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } else {
                 // the rest is normalized by json encoding and decoding it
                 /** @var null|scalar|array<mixed[]|scalar|null> $value */
@@ -345,15 +309,9 @@ class NormalizerFormatter implements FormatterInterface
         return $date->format($this->dateFormat);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addJsonEncodeOption(int $option): self
     {
         $this->jsonEncodeOptions |= $option;
@@ -361,15 +319,9 @@ class NormalizerFormatter implements FormatterInterface
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function removeJsonEncodeOption(int $option): self
     {
         $this->jsonEncodeOptions &= ~$option;

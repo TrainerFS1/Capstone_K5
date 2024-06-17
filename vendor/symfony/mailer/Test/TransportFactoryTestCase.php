@@ -37,38 +37,16 @@ abstract class TransportFactoryTestCase extends TestCase
 
     abstract public function getFactory(): TransportFactoryInterface;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     abstract public static function supportsProvider(): iterable;
 
     abstract public static function createProvider(): iterable;
 
     public static function unsupportedSchemeProvider(): iterable
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    abstract public function supportsProvider(): iterable;
-
-    abstract public function createProvider(): iterable;
-
-    public function unsupportedSchemeProvider(): iterable
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return [];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function incompleteDsnProvider(): iterable
-=======
-    public function incompleteDsnProvider(): iterable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function incompleteDsnProvider(): iterable
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return [];
     }
@@ -99,15 +77,7 @@ abstract class TransportFactoryTestCase extends TestCase
     /**
      * @dataProvider unsupportedSchemeProvider
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function testUnsupportedSchemeException(Dsn $dsn, ?string $message = null)
-=======
-    public function testUnsupportedSchemeException(Dsn $dsn, string $message = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function testUnsupportedSchemeException(Dsn $dsn, string $message = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $factory = $this->getFactory();
 

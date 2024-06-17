@@ -16,13 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\VarDumper\Caster\ClassStub;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\VarDumper\Cloner\Data;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @author Fabien Potencier <fabien@symfony.com>
@@ -36,15 +30,7 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
     /**
      * Sets the Kernel associated with this Request.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setKernel(?KernelInterface $kernel = null): void
-=======
-    public function setKernel(KernelInterface $kernel = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setKernel(KernelInterface $kernel = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-kernel', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -53,15 +39,7 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
         $this->kernel = $kernel;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
-=======
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $eom = \DateTimeImmutable::createFromFormat('d/m/Y', '01/'.Kernel::END_OF_MAINTENANCE);
         $eol = \DateTimeImmutable::createFromFormat('d/m/Y', '01/'.Kernel::END_OF_LIFE);
@@ -99,22 +77,7 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function lateCollect(): void
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function reset()
-    {
-        $this->data = [];
-    }
-
-    public function lateCollect()
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->data = $this->cloneVar($this->data);
     }
@@ -257,15 +220,7 @@ class ConfigDataCollector extends DataCollector implements LateDataCollectorInte
         return $this->data['zend_opcache_enabled'];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getBundles(): array|Data
-=======
-    public function getBundles()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getBundles()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->data['bundles'];
     }

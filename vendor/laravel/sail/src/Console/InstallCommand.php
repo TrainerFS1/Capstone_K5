@@ -4,20 +4,10 @@ namespace Laravel\Sail\Console;
 
 use Illuminate\Console\Command;
 use RuntimeException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Process\Process;
 
 #[AsCommand(name: 'sail:install')]
-=======
-use Symfony\Component\Process\Process;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Process\Process;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class InstallCommand extends Command
 {
     use Concerns\InteractsWithDockerComposeServices;
@@ -50,25 +40,11 @@ class InstallCommand extends Command
         } elseif ($this->option('no-interaction')) {
             $services = $this->defaultServices;
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $services = $this->gatherServicesInteractively();
         }
 
         if ($invalidServices = array_diff($services, $this->services)) {
             $this->components->error('Invalid services ['.implode(',', $invalidServices).'].');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $services = $this->gatherServicesWithSymfonyMenu();
-        }
-
-        if ($invalidServices = array_diff($services, $this->services)) {
-            $this->error('Invalid services ['.implode(',', $invalidServices).'].');
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return 1;
         }
@@ -81,8 +57,6 @@ class InstallCommand extends Command
             $this->installDevContainer();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->prepareInstallation($services);
 
         $this->output->writeln('');
@@ -99,15 +73,5 @@ class InstallCommand extends Command
         }
 
         $this->output->writeln('');
-=======
-        $this->info('Sail scaffolding installed successfully.');
-
-        $this->prepareInstallation($services);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->info('Sail scaffolding installed successfully.');
-
-        $this->prepareInstallation($services);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

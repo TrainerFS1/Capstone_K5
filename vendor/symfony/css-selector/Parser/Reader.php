@@ -23,28 +23,12 @@ namespace Symfony\Component\CssSelector\Parser;
  */
 class Reader
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private int $length;
     private int $position = 0;
 
     public function __construct(
         private string $source,
     ) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private string $source;
-    private int $length;
-    private int $position = 0;
-
-    public function __construct(string $source)
-    {
-        $this->source = $source;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->length = \strlen($source);
     }
 
@@ -68,15 +52,7 @@ class Reader
         return substr($this->source, $this->position + $offset, $length);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getOffset(string $string): int|false
-=======
-    public function getOffset(string $string)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getOffset(string $string)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $position = strpos($this->source, $string, $this->position);
 
@@ -94,28 +70,12 @@ class Reader
         return false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function moveForward(int $length): void
-=======
-    public function moveForward(int $length)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function moveForward(int $length)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->position += $length;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function moveToEnd(): void
-=======
-    public function moveToEnd()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function moveToEnd()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->position = $this->length;
     }

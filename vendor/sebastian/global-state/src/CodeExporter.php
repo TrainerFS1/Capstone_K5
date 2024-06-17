@@ -27,15 +27,7 @@ final class CodeExporter
                 'if (!defined(\'%s\')) define(\'%s\', %s);' . "\n",
                 $name,
                 $name,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->exportVariable($value),
-=======
-                $this->exportVariable($value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->exportVariable($value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -61,15 +53,7 @@ EOT;
             $result .= sprintf(
                 '$GLOBALS[%s] = %s;' . PHP_EOL,
                 $this->exportVariable($name),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->exportVariable($value),
-=======
-                $this->exportVariable($value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->exportVariable($value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -84,15 +68,7 @@ EOT;
             $result .= sprintf(
                 '@ini_set(%s, %s);' . "\n",
                 $this->exportVariable($key),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $this->exportVariable($value),
-=======
-                $this->exportVariable($value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->exportVariable($value)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

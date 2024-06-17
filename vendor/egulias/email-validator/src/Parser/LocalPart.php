@@ -118,15 +118,7 @@ class LocalPart extends PartParser
         $foldingWS = new FoldingWhiteSpace($this->lexer);
         $resultFWS = $foldingWS->parse();
         if ($resultFWS->isValid()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->warnings = [...$this->warnings, ...$foldingWS->getWarnings()];
-=======
-            $this->warnings = array_merge($this->warnings, $foldingWS->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->warnings = array_merge($this->warnings, $foldingWS->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
         return $resultFWS;
     }
@@ -140,15 +132,7 @@ class LocalPart extends PartParser
     {
         $dquoteParser = new DoubleQuote($this->lexer);
         $parseAgain = $dquoteParser->parse();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->warnings = [...$this->warnings, ...$dquoteParser->getWarnings()];
-=======
-        $this->warnings = array_merge($this->warnings, $dquoteParser->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->warnings = array_merge($this->warnings, $dquoteParser->getWarnings());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $parseAgain;
     }
@@ -157,21 +141,8 @@ class LocalPart extends PartParser
     {
         $commentParser = new Comment($this->lexer, new LocalComment());
         $result = $commentParser->parse();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->warnings = [...$this->warnings, ...$commentParser->getWarnings()];
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->warnings = array_merge($this->warnings, $commentParser->getWarnings());
-        if ($result->isInvalid()) {
-            return $result;
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $result;
     }
 
@@ -186,19 +157,6 @@ class LocalPart extends PartParser
             return new InvalidEmail(new ExpectingATEXT('Found ATOM after escaping'), $this->lexer->current->value);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (!$this->lexer->isNextTokenAny(array(EmailLexer::S_SP, EmailLexer::S_HTAB, EmailLexer::C_DEL))) {
-            return new ValidEmail();
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new ValidEmail();
     }
 }

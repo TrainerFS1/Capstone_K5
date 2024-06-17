@@ -80,15 +80,7 @@ class StartSession
 
         $lockFor = $request->route() && $request->route()->locksFor()
                         ? $request->route()->locksFor()
-<<<<<<< HEAD
-<<<<<<< HEAD
                         : $this->manager->defaultRouteBlockLockSeconds();
-=======
-                        : 10;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        : 10;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $lock = $this->cache($this->manager->blockDriver())
                     ->lock('session:'.$session->getId(), $lockFor)
@@ -98,15 +90,7 @@ class StartSession
             $lock->block(
                 ! is_null($request->route()->waitsFor())
                         ? $request->route()->waitsFor()
-<<<<<<< HEAD
-<<<<<<< HEAD
                         : $this->manager->defaultRouteBlockWaitSeconds()
-=======
-                        : 10
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        : 10
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             return $this->handleStatefulRequest($request, $session, $next);
@@ -235,8 +219,6 @@ class StartSession
     {
         if ($this->sessionIsPersistent($config = $this->manager->getSessionConfig())) {
             $response->headers->setCookie(new Cookie(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $session->getName(),
                 $session->getId(),
                 $this->getCookieExpirationDate(),
@@ -247,16 +229,6 @@ class StartSession
                 false,
                 $config['same_site'] ?? null,
                 $config['partitioned'] ?? false
-=======
-                $session->getName(), $session->getId(), $this->getCookieExpirationDate(),
-                $config['path'], $config['domain'], $config['secure'] ?? false,
-                $config['http_only'] ?? true, false, $config['same_site'] ?? null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $session->getName(), $session->getId(), $this->getCookieExpirationDate(),
-                $config['path'], $config['domain'], $config['secure'] ?? false,
-                $config['http_only'] ?? true, false, $config['same_site'] ?? null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ));
         }
     }

@@ -15,13 +15,7 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Extension\Table;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use League\CommonMark\Extension\Attributes\Util\AttributesHelper;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Node\Node;
 use League\CommonMark\Renderer\ChildNodeRendererInterface;
 use League\CommonMark\Renderer\NodeRendererInterface;
@@ -30,8 +24,6 @@ use League\CommonMark\Xml\XmlNodeRendererInterface;
 
 final class TableCellRenderer implements NodeRendererInterface, XmlNodeRendererInterface
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private const DEFAULT_ATTRIBUTES = [
         TableCell::ALIGN_LEFT   => ['align' => 'left'],
         TableCell::ALIGN_CENTER => ['align' => 'center'],
@@ -49,10 +41,6 @@ final class TableCellRenderer implements NodeRendererInterface, XmlNodeRendererI
         $this->alignmentAttributes = $alignmentAttributes;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @param TableCell $node
      *
@@ -65,20 +53,8 @@ final class TableCellRenderer implements NodeRendererInterface, XmlNodeRendererI
         TableCell::assertInstanceOf($node);
 
         $attrs = $node->data->get('attributes');
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (($alignment = $node->getAlign()) !== null) {
             $attrs = AttributesHelper::mergeAttributes($attrs, $this->alignmentAttributes[$alignment]);
-=======
-
-        if ($node->getAlign() !== null) {
-            $attrs['align'] = $node->getAlign();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-        if ($node->getAlign() !== null) {
-            $attrs['align'] = $node->getAlign();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $tag = $node->getType() === TableCell::TYPE_HEADER ? 'th' : 'td';

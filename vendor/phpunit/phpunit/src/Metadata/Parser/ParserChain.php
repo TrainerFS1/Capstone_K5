@@ -41,13 +41,7 @@ final class ParserChain implements Parser
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function forMethod(string $className, string $methodName): MetadataCollection
     {
@@ -62,26 +56,12 @@ final class ParserChain implements Parser
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function forClassAndMethod(string $className, string $methodName): MetadataCollection
     {
         return $this->forClass($className)->mergeWith(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->forMethod($className, $methodName),
-=======
-            $this->forMethod($className, $methodName)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->forMethod($className, $methodName)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

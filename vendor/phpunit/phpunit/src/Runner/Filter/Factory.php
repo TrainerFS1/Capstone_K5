@@ -25,8 +25,6 @@ final class Factory
      */
     private array $filters = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param list<non-empty-string> $testIds
      */
@@ -40,10 +38,6 @@ final class Factory
     /**
      * @psalm-param list<non-empty-string> $groups
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addExcludeGroupFilter(array $groups): void
     {
         $this->filters[] = [
@@ -51,15 +45,9 @@ final class Factory
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param list<non-empty-string> $groups
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addIncludeGroupFilter(array $groups): void
     {
         $this->filters[] = [
@@ -67,15 +55,9 @@ final class Factory
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $name
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function addNameFilter(string $name): void
     {
         $this->filters[] = [

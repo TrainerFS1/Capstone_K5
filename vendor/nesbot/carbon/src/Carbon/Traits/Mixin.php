@@ -11,15 +11,9 @@
 
 namespace Carbon\Traits;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Carbon\CarbonInterface;
 use Carbon\CarbonInterval;
 use Carbon\CarbonPeriod;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Closure;
 use Generator;
 use ReflectionClass;
@@ -108,29 +102,13 @@ trait Mixin
     {
         $context = eval(self::getAnonymousClassCodeForTrait($trait));
         $className = \get_class($context);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $baseClass = static::class;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach (self::getMixableMethods($context) as $name) {
             $closureBase = Closure::fromCallable([$context, $name]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             static::macro($name, function (...$parameters) use ($closureBase, $className, $baseClass) {
                 $downContext = isset($this) ? ($this) : new $baseClass();
-=======
-            static::macro($name, function () use ($closureBase, $className) {
-                /** @phpstan-ignore-next-line */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            static::macro($name, function () use ($closureBase, $className) {
-                /** @phpstan-ignore-next-line */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $context = isset($this) ? $this->cast($className) : new $className();
 
                 try {
@@ -143,8 +121,6 @@ trait Mixin
                 // in case of errors not converted into exceptions
                 $closure = $closure ?: $closureBase;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $result = $closure(...$parameters);
 
                 if (!($result instanceof $className)) {
@@ -187,12 +163,6 @@ trait Mixin
                 }
 
                 return $result;
-=======
-                return $closure(...\func_get_args());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return $closure(...\func_get_args());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             });
         }
     }

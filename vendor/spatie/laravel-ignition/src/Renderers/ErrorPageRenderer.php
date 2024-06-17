@@ -2,21 +2,9 @@
 
 namespace Spatie\LaravelIgnition\Renderers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\SolutionProviderRepository;
 use Spatie\FlareClient\Flare;
 use Spatie\Ignition\Config\IgnitionConfig;
-=======
-use Spatie\FlareClient\Flare;
-use Spatie\Ignition\Config\IgnitionConfig;
-use Spatie\Ignition\Contracts\SolutionProviderRepository;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Spatie\FlareClient\Flare;
-use Spatie\Ignition\Config\IgnitionConfig;
-use Spatie\Ignition\Contracts\SolutionProviderRepository;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\Ignition\Ignition;
 use Spatie\LaravelIgnition\ContextProviders\LaravelContextProviderDetector;
 use Spatie\LaravelIgnition\Solutions\SolutionTransformers\LaravelSolutionTransformer;

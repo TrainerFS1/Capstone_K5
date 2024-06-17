@@ -11,8 +11,6 @@ class SetCookie
      * @var array
      */
     private static $defaults = [
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Name' => null,
         'Value' => null,
         'Domain' => null,
@@ -22,22 +20,6 @@ class SetCookie
         'Secure' => false,
         'Discard' => false,
         'HttpOnly' => false,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        'Name'     => null,
-        'Value'    => null,
-        'Domain'   => null,
-        'Path'     => '/',
-        'Max-Age'  => null,
-        'Expires'  => null,
-        'Secure'   => false,
-        'Discard'  => false,
-        'HttpOnly' => false
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     /**
@@ -76,8 +58,6 @@ class SetCookie
             } else {
                 foreach (\array_keys(self::$defaults) as $search) {
                     if (!\strcasecmp($search, $key)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         if ($search === 'Max-Age') {
                             if (is_numeric($value)) {
                                 $data[$search] = (int) $value;
@@ -85,12 +65,6 @@ class SetCookie
                         } else {
                             $data[$search] = $value;
                         }
-=======
-                        $data[$search] = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $data[$search] = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         continue 2;
                     }
                 }
@@ -106,8 +80,6 @@ class SetCookie
      */
     public function __construct(array $data = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->data = self::$defaults;
 
         if (isset($data['Name'])) {
@@ -151,20 +123,6 @@ class SetCookie
             $this->data[$key] = $data[$key];
         }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        /** @var array|null $replaced will be null in case of replace error */
-        $replaced = \array_replace(self::$defaults, $data);
-        if ($replaced === null) {
-            throw new \InvalidArgumentException('Unable to replace the default values for the Cookie.');
-        }
-
-        $this->data = $replaced;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         // Extract the Expires value and turn it into a UNIX timestamp if needed
         if (!$this->getExpires() && $this->getMaxAge()) {
             // Calculate the Expires date
@@ -176,8 +134,6 @@ class SetCookie
 
     public function __toString()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $str = $this->data['Name'].'='.($this->data['Value'] ?? '').'; ';
         foreach ($this->data as $k => $v) {
             if ($k !== 'Name' && $k !== 'Value' && $v !== null && $v !== false) {
@@ -185,20 +141,6 @@ class SetCookie
                     $str .= 'Expires='.\gmdate('D, d M Y H:i:s \G\M\T', $v).'; ';
                 } else {
                     $str .= ($v === true ? $k : "{$k}={$v}").'; ';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $str = $this->data['Name'] . '=' . ($this->data['Value'] ?? '') . '; ';
-        foreach ($this->data as $k => $v) {
-            if ($k !== 'Name' && $k !== 'Value' && $v !== null && $v !== false) {
-                if ($k === 'Expires') {
-                    $str .= 'Expires=' . \gmdate('D, d M Y H:i:s \G\M\T', $v) . '; ';
-                } else {
-                    $str .= ($v === true ? $k : "{$k}={$v}") . '; ';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 }
             }
         }
@@ -478,15 +420,7 @@ class SetCookie
         }
 
         // Remove the leading '.' as per spec in RFC 6265.
-<<<<<<< HEAD
-<<<<<<< HEAD
         // https://datatracker.ietf.org/doc/html/rfc6265#section-5.2.3
-=======
-        // https://tools.ietf.org/html/rfc6265#section-5.2.3
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        // https://tools.ietf.org/html/rfc6265#section-5.2.3
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $cookieDomain = \ltrim(\strtolower($cookieDomain), '.');
 
         $domain = \strtolower($domain);
@@ -497,28 +431,12 @@ class SetCookie
         }
 
         // Matching the subdomain according to RFC 6265.
-<<<<<<< HEAD
-<<<<<<< HEAD
         // https://datatracker.ietf.org/doc/html/rfc6265#section-5.1.3
-=======
-        // https://tools.ietf.org/html/rfc6265#section-5.1.3
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        // https://tools.ietf.org/html/rfc6265#section-5.1.3
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (\filter_var($domain, \FILTER_VALIDATE_IP)) {
             return false;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return (bool) \preg_match('/\.'.\preg_quote($cookieDomain, '/').'$/', $domain);
-=======
-        return (bool) \preg_match('/\.' . \preg_quote($cookieDomain, '/') . '$/', $domain);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return (bool) \preg_match('/\.' . \preg_quote($cookieDomain, '/') . '$/', $domain);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -547,18 +465,8 @@ class SetCookie
             $name
         )) {
             return 'Cookie name must not contain invalid characters: ASCII '
-<<<<<<< HEAD
-<<<<<<< HEAD
                 .'Control characters (0-31;127), space, tab and the '
                 .'following characters: ()<>@,;:\"/?={}';
-=======
-                . 'Control characters (0-31;127), space, tab and the '
-                . 'following characters: ()<>@,;:\"/?={}';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                . 'Control characters (0-31;127), space, tab and the '
-                . 'following characters: ()<>@,;:\"/?={}';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         // Value must not be null. 0 and empty string are valid. Empty strings

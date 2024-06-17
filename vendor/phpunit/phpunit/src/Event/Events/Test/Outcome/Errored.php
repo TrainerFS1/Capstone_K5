@@ -11,13 +11,7 @@ namespace PHPUnit\Event\Test;
 
 use const PHP_EOL;
 use function sprintf;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function trim;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Code;
 use PHPUnit\Event\Code\Throwable;
 use PHPUnit\Event\Event;
@@ -58,15 +52,7 @@ final class Errored implements Event
 
     public function asString(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $message = trim($this->throwable->message());
-=======
-        $message = $this->throwable->message();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $message = $this->throwable->message();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (!empty($message)) {
             $message = PHP_EOL . $message;
@@ -75,15 +61,7 @@ final class Errored implements Event
         return sprintf(
             'Test Errored (%s)%s',
             $this->test->id(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $message,
-=======
-            $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

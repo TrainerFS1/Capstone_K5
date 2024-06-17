@@ -4,13 +4,7 @@ namespace Illuminate\Routing\Middleware;
 
 use Closure;
 use Illuminate\Routing\Exceptions\InvalidSignatureException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Arr;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class ValidateSignature
 {
@@ -24,8 +18,6 @@ class ValidateSignature
     ];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Specify that the URL signature is for a relative URL.
      *
      * @param  array|string  $ignore
@@ -54,53 +46,25 @@ class ValidateSignature
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  array|null  $args
-=======
-     * @param  string|null  $relative
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string|null  $relative
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return \Illuminate\Http\Response
      *
      * @throws \Illuminate\Routing\Exceptions\InvalidSignatureException
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function handle($request, Closure $next, ...$args)
     {
         [$relative, $ignore] = $this->parseArguments($args);
 
         if ($request->hasValidSignatureWhileIgnoring($ignore, ! $relative)) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function handle($request, Closure $next, $relative = null)
-    {
-        $ignore = property_exists($this, 'except') ? $this->except : $this->ignore;
-
-        if ($request->hasValidSignatureWhileIgnoring($ignore, $relative !== 'relative')) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $next($request);
         }
 
         throw new InvalidSignatureException;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Parse the additional arguments given to the middleware.
@@ -123,8 +87,4 @@ class ValidateSignature
 
         return [$relative, $ignore];
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

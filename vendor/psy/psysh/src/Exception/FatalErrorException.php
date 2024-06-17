@@ -28,15 +28,7 @@ class FatalErrorException extends \ErrorException implements Exception
      * @param int|null        $lineno   (default: null)
      * @param \Throwable|null $previous (default: null)
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, ?\Throwable $previous = null)
-=======
-    public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, \Throwable $previous = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, \Throwable $previous = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // Since these are basically always PHP Parser Node line numbers, treat -1 as null.
         if ($lineno === -1) {

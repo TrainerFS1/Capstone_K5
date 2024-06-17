@@ -2,18 +2,12 @@
 
 namespace Spatie\Backtrace;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\Backtrace\CodeSnippets\CodeSnippet;
 use Spatie\Backtrace\CodeSnippets\FileSnippetProvider;
 use Spatie\Backtrace\CodeSnippets\LaravelSerializableClosureSnippetProvider;
 use Spatie\Backtrace\CodeSnippets\NullSnippetProvider;
 use Spatie\Backtrace\CodeSnippets\SnippetProvider;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 class Frame
 {
     /** @var string */
@@ -34,31 +28,17 @@ class Frame
     /** @var string|null */
     public $class;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @var string|null */
     protected $textSnippet;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __construct(
         string $file,
         int $lineNumber,
         ?array $arguments,
         string $method = null,
         string $class = null,
-<<<<<<< HEAD
-<<<<<<< HEAD
         bool $isApplicationFrame = false,
         ?string $textSnippet = null
-=======
-        bool $isApplicationFrame = false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        bool $isApplicationFrame = false
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         $this->file = $file;
 
@@ -71,14 +51,8 @@ class Frame
         $this->class = $class;
 
         $this->applicationFrame = $isApplicationFrame;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         $this->textSnippet = $textSnippet;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getSnippet(int $lineCount): array
@@ -86,8 +60,6 @@ class Frame
         return (new CodeSnippet())
             ->surroundingLine($this->lineNumber)
             ->snippetLineCount($lineCount)
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->get($this->getCodeSnippetProvider());
     }
 
@@ -97,12 +69,6 @@ class Frame
             ->surroundingLine($this->lineNumber)
             ->snippetLineCount($lineCount)
             ->getAsString($this->getCodeSnippetProvider());
-=======
-            ->get($this->file);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            ->get($this->file);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getSnippetProperties(int $lineCount): array
@@ -116,8 +82,6 @@ class Frame
             ];
         }, array_keys($snippet));
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     protected function getCodeSnippetProvider(): SnippetProvider
     {
@@ -131,8 +95,4 @@ class Frame
 
         return new NullSnippetProvider();
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

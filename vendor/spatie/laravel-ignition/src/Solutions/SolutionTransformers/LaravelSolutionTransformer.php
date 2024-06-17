@@ -2,18 +2,8 @@
 
 namespace Spatie\LaravelIgnition\Solutions\SolutionTransformers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\ErrorSolutions\Contracts\RunnableSolution;
 use Spatie\ErrorSolutions\Solutions\SolutionTransformer;
-=======
-use Spatie\Ignition\Contracts\RunnableSolution;
-use Spatie\Ignition\Solutions\SolutionTransformer;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Spatie\Ignition\Contracts\RunnableSolution;
-use Spatie\Ignition\Solutions\SolutionTransformer;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\LaravelIgnition\Http\Controllers\ExecuteSolutionController;
 use Throwable;
 

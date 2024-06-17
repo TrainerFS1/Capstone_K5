@@ -19,8 +19,6 @@ final class Snapshot
     private readonly HRTime $time;
     private readonly MemoryUsage $memoryUsage;
     private readonly MemoryUsage $peakMemoryUsage;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private readonly GarbageCollectorStatus $garbageCollectorStatus;
 
     public function __construct(HRTime $time, MemoryUsage $memoryUsage, MemoryUsage $peakMemoryUsage, GarbageCollectorStatus $garbageCollectorStatus)
@@ -29,19 +27,6 @@ final class Snapshot
         $this->memoryUsage            = $memoryUsage;
         $this->peakMemoryUsage        = $peakMemoryUsage;
         $this->garbageCollectorStatus = $garbageCollectorStatus;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    public function __construct(HRTime $time, MemoryUsage $memoryUsage, MemoryUsage $peakMemoryUsage)
-    {
-        $this->time            = $time;
-        $this->memoryUsage     = $memoryUsage;
-        $this->peakMemoryUsage = $peakMemoryUsage;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function time(): HRTime
@@ -58,15 +43,9 @@ final class Snapshot
     {
         return $this->peakMemoryUsage;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     public function garbageCollectorStatus(): GarbageCollectorStatus
     {
         return $this->garbageCollectorStatus;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

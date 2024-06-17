@@ -40,15 +40,7 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
     private int $usageIndex = 0;
     private ?\Closure $usageReporter;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?SessionStorageInterface $storage = null, ?AttributeBagInterface $attributes = null, ?FlashBagInterface $flashes = null, ?callable $usageReporter = null)
-=======
-    public function __construct(SessionStorageInterface $storage = null, AttributeBagInterface $attributes = null, FlashBagInterface $flashes = null, callable $usageReporter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(SessionStorageInterface $storage = null, AttributeBagInterface $attributes = null, FlashBagInterface $flashes = null, callable $usageReporter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->storage = $storage ?? new NativeSessionStorage();
         $this->usageReporter = null === $usageReporter ? null : $usageReporter(...);
@@ -77,15 +69,9 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return $this->getAttributeBag()->get($name, $default);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $name, mixed $value)
     {
         $this->getAttributeBag()->set($name, $value);
@@ -96,15 +82,9 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return $this->getAttributeBag()->all();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $attributes)
     {
         $this->getAttributeBag()->replace($attributes);
@@ -115,15 +95,9 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return $this->getAttributeBag()->remove($name);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function clear()
     {
         $this->getAttributeBag()->clear();
@@ -177,43 +151,21 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function invalidate(?int $lifetime = null): bool
-=======
-    public function invalidate(int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function invalidate(int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->storage->clear();
 
         return $this->migrate(true, $lifetime);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function migrate(bool $destroy = false, ?int $lifetime = null): bool
-=======
-    public function migrate(bool $destroy = false, int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function migrate(bool $destroy = false, int $lifetime = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->storage->regenerate($destroy, $lifetime);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function save()
     {
         $this->storage->save();
@@ -224,15 +176,9 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return $this->storage->getId();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setId(string $id)
     {
         if ($this->storage->getId() !== $id) {
@@ -245,15 +191,9 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return $this->storage->getName();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
     {
         $this->storage->setName($name);
@@ -269,15 +209,9 @@ class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Cou
         return $this->storage->getMetadataBag();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerBag(SessionBagInterface $bag)
     {
         $this->storage->registerBag(new SessionBagProxy($bag, $this->data, $this->usageIndex, $this->usageReporter));

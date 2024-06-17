@@ -61,14 +61,8 @@ interface InputInterface
     /**
      * Binds the current Input instance with the given arguments and options.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws RuntimeException
      */
     public function bind(InputDefinition $definition);
@@ -76,14 +70,8 @@ interface InputInterface
     /**
      * Validates the input.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws RuntimeException When not enough arguments are given
      */
     public function validate();
@@ -107,14 +95,8 @@ interface InputInterface
     /**
      * Sets an argument value by name.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException When argument given doesn't exist
      */
     public function setArgument(string $name, mixed $value);
@@ -143,14 +125,8 @@ interface InputInterface
     /**
      * Sets an option value by name.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws InvalidArgumentException When option given doesn't exist
      */
     public function setOption(string $name, mixed $value);
@@ -167,14 +143,8 @@ interface InputInterface
 
     /**
      * Sets the input interactivity.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setInteractive(bool $interactive);
 }

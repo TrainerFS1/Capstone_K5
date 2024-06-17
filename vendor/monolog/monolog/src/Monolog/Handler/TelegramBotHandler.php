@@ -17,8 +17,6 @@ use Monolog\Utils;
 use Monolog\LogRecord;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Handler sends logs to Telegram using Telegram Bot API.
  *
  * How to use:
@@ -31,21 +29,6 @@ use Monolog\LogRecord;
  *  2. The channel name with the `@` prefix if you created a public channel (e.g. `@my_public_channel`),
  *     or the channel ID with the `-100` prefix if you created a private channel (e.g. `-1001234567890`),
  *     or the group ID from step 2 (e.g. `-1234567890`).
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * Handler send logs to Telegram using Telegram Bot API.
- *
- * How to use:
- *  1) Create telegram bot with https://telegram.me/BotFather
- *  2) Create a telegram channel where logs will be recorded.
- *  3) Add created bot from step 1 to the created channel from step 2.
- *
- * Use telegram bot API key from step 1 and channel name with '@' prefix from step 2 to create instance of TelegramBotHandler
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @link https://core.telegram.org/bots/api
  *
@@ -110,29 +93,17 @@ class TelegramBotHandler extends AbstractProcessingHandler
     private bool $delayBetweenMessages;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Telegram message thread id, unique identifier for the target message thread (topic) of the forum; for forum supergroups only
      * See how to get the `message_thread_id` https://stackoverflow.com/a/75178418
      */
     private int|null $topic;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string                    $apiKey               Telegram bot access token provided by BotFather
      * @param  string                    $channel              Telegram channel name
      * @param  bool                      $splitLongMessages    Split a message longer than MAX_MESSAGE_LENGTH into parts and send in multiple messages
      * @param  bool                      $delayBetweenMessages Adds delay between sending a split message according to Telegram API
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int                       $topic                Telegram message thread id, unique identifier for the target message thread (topic) of the forum
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws MissingExtensionException If the curl extension is missing
      */
     public function __construct(
@@ -140,26 +111,12 @@ class TelegramBotHandler extends AbstractProcessingHandler
         string $channel,
         $level = Level::Debug,
         bool   $bubble = true,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?string $parseMode = null,
         ?bool   $disableWebPagePreview = null,
         ?bool   $disableNotification = null,
         bool   $splitLongMessages = false,
         bool   $delayBetweenMessages = false,
         int    $topic = null
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        string $parseMode = null,
-        bool   $disableWebPagePreview = null,
-        bool   $disableNotification = null,
-        bool   $splitLongMessages = false,
-        bool   $delayBetweenMessages = false
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
         if (!extension_loaded('curl')) {
             throw new MissingExtensionException('The curl extension is needed to use the TelegramBotHandler');
@@ -174,8 +131,6 @@ class TelegramBotHandler extends AbstractProcessingHandler
         $this->disableNotification($disableNotification);
         $this->splitLongMessages($splitLongMessages);
         $this->delayBetweenMessages($delayBetweenMessages);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->setTopic($topic);
     }
 
@@ -183,16 +138,6 @@ class TelegramBotHandler extends AbstractProcessingHandler
      * @return $this
      */
     public function setParseMode(string|null $parseMode = null): self
-=======
-    }
-
-    public function setParseMode(string $parseMode = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    }
-
-    public function setParseMode(string $parseMode = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($parseMode !== null && !in_array($parseMode, self::AVAILABLE_PARSE_MODES, true)) {
             throw new \InvalidArgumentException('Unknown parseMode, use one of these: ' . implode(', ', self::AVAILABLE_PARSE_MODES) . '.');
@@ -203,36 +148,20 @@ class TelegramBotHandler extends AbstractProcessingHandler
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
     public function disableWebPagePreview(bool|null $disableWebPagePreview = null): self
-=======
-    public function disableWebPagePreview(bool $disableWebPagePreview = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function disableWebPagePreview(bool $disableWebPagePreview = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->disableWebPagePreview = $disableWebPagePreview;
 
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return $this
      */
     public function disableNotification(bool|null $disableNotification = null): self
-=======
-    public function disableNotification(bool $disableNotification = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function disableNotification(bool $disableNotification = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->disableNotification = $disableNotification;
 
@@ -242,13 +171,7 @@ class TelegramBotHandler extends AbstractProcessingHandler
     /**
      * True - split a message longer than MAX_MESSAGE_LENGTH into parts and send in multiple messages.
      * False - truncates a message that is too long.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function splitLongMessages(bool $splitLongMessages = false): self
@@ -260,13 +183,7 @@ class TelegramBotHandler extends AbstractProcessingHandler
 
     /**
      * Adds 1-second delay between sending a split message (according to Telegram API to avoid 429 Too Many Requests).
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return $this
      */
     public function delayBetweenMessages(bool $delayBetweenMessages = false): self
@@ -277,8 +194,6 @@ class TelegramBotHandler extends AbstractProcessingHandler
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
      */
     public function setTopic(int $topic = null): self
@@ -289,10 +204,6 @@ class TelegramBotHandler extends AbstractProcessingHandler
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @inheritDoc
      */
     public function handleBatch(array $records): void
@@ -347,33 +258,17 @@ class TelegramBotHandler extends AbstractProcessingHandler
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $params = [
-=======
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'text' => $message,
             'chat_id' => $this->channel,
             'parse_mode' => $this->parseMode,
             'disable_web_page_preview' => $this->disableWebPagePreview,
             'disable_notification' => $this->disableNotification,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ];
         if ($this->topic !== null) {
             $params['message_thread_id'] = $this->topic;
         }
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
-=======
-        ]));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ]));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $result = Curl\Util::execute($ch);
         if (!is_string($result)) {

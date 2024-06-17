@@ -63,8 +63,6 @@ class PasswordBroker implements PasswordBrokerContract
         $token = $this->tokens->create($user);
 
         if ($callback) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return $callback($user, $token) ?? static::RESET_LINK_SENT;
         }
 
@@ -73,21 +71,6 @@ class PasswordBroker implements PasswordBrokerContract
         // the current URI having nothing set in the session to indicate errors.
         $user->sendPasswordResetNotification($token);
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $callback($user, $token);
-        } else {
-            // Once we have the reset token, we are ready to send the message out to this
-            // user with a link to reset their password. We will then redirect back to
-            // the current URI having nothing set in the session to indicate errors.
-            $user->sendPasswordResetNotification($token);
-        }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return static::RESET_LINK_SENT;
     }
 

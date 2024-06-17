@@ -53,17 +53,7 @@ final class Restorer
         foreach ($snapshot->staticProperties() as $className => $staticProperties) {
             foreach ($staticProperties as $name => $value) {
                 $reflector = new ReflectionProperty($className, $name);
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $reflector->setValue(null, $value);
-=======
-                $reflector->setAccessible(true);
-                $reflector->setValue($value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $reflector->setAccessible(true);
-                $reflector->setValue($value);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -86,17 +76,7 @@ final class Restorer
                     continue;
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $property->setValue(null, $defaults[$name]);
-=======
-                $property->setAccessible(true);
-                $property->setValue($defaults[$name]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $property->setAccessible(true);
-                $property->setValue($defaults[$name]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
     }
@@ -110,18 +90,8 @@ final class Restorer
             $keys = array_keys(
                 array_merge(
                     $GLOBALS[$superGlobalArray],
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $superGlobalVariables[$superGlobalArray],
                 ),
-=======
-                    $superGlobalVariables[$superGlobalArray]
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $superGlobalVariables[$superGlobalArray]
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             foreach ($keys as $key) {

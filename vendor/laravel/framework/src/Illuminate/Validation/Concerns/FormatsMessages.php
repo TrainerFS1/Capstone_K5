@@ -5,13 +5,7 @@ namespace Illuminate\Validation\Concerns;
 use Closure;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\File\File;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 trait FormatsMessages
@@ -45,21 +39,9 @@ trait FormatsMessages
         $customKey = "validation.custom.{$attribute}.{$lowerRule}";
 
         $customMessage = $this->getCustomMessageFromTranslator(
-<<<<<<< HEAD
-<<<<<<< HEAD
             in_array($rule, $this->sizeRules)
                 ? [$customKey.".{$this->getAttributeType($attribute)}", $customKey]
                 : $customKey
-=======
-                in_array($rule, $this->sizeRules)
-                    ? [$customKey.".{$this->getAttributeType($attribute)}", $customKey]
-                    : $customKey
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                in_array($rule, $this->sizeRules)
-                    ? [$customKey.".{$this->getAttributeType($attribute)}", $customKey]
-                    : $customKey
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         // First we check for a custom defined validation message for the attribute
@@ -237,8 +219,6 @@ trait FormatsMessages
         // We assume that the attributes present in the file array are files so that
         // means that if the attribute does not have a numeric rule and the files
         // list doesn't have it we'll just consider it a string by elimination.
-<<<<<<< HEAD
-<<<<<<< HEAD
         return match (true) {
             $this->hasRule($attribute, $this->numericRules) => 'numeric',
             $this->hasRule($attribute, ['Array']) => 'array',
@@ -246,22 +226,6 @@ trait FormatsMessages
             $this->getValue($attribute) instanceof File => 'file',
             default => 'string',
         };
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($this->hasRule($attribute, $this->numericRules)) {
-            return 'numeric';
-        } elseif ($this->hasRule($attribute, ['Array'])) {
-            return 'array';
-        } elseif ($this->getValue($attribute) instanceof UploadedFile) {
-            return 'file';
-        }
-
-        return 'string';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -477,16 +441,10 @@ trait FormatsMessages
             return $this->customValues[$attribute][$value];
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (is_array($value)) {
             return 'array';
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $key = "validation.values.{$attribute}.{$value}";
 
         if (($line = $this->translator->get($key)) !== $key) {

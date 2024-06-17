@@ -148,8 +148,6 @@ class Reflector
      */
     public static function isParameterBackedEnumWithStringBackingType($parameter)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! $parameter->getType() instanceof ReflectionNamedType) {
             return false;
         }
@@ -161,16 +159,6 @@ class Reflector
         }
 
         if (enum_exists($backedEnumClass)) {
-=======
-        $backedEnumClass = (string) $parameter->getType();
-
-        if (function_exists('enum_exists') && enum_exists($backedEnumClass)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $backedEnumClass = (string) $parameter->getType();
-
-        if (function_exists('enum_exists') && enum_exists($backedEnumClass)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $reflectionBackedEnum = new ReflectionEnum($backedEnumClass);
 
             return $reflectionBackedEnum->isBacked()

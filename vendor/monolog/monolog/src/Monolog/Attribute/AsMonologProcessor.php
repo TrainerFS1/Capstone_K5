@@ -23,36 +23,16 @@ namespace Monolog\Attribute;
 class AsMonologProcessor
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param string|null $channel  The logging channel the processor should be pushed to.
      * @param string|null $handler  The handler the processor should be pushed to.
      * @param string|null $method   The method that processes the records (if the attribute is used at the class level).
      * @param int|null    $priority The priority of the processor so the order can be determined.
-=======
-     * @param string|null $channel The logging channel the processor should be pushed to.
-     * @param string|null $handler The handler the processor should be pushed to.
-     * @param string|null $method  The method that processes the records (if the attribute is used at the class level).
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param string|null $channel The logging channel the processor should be pushed to.
-     * @param string|null $handler The handler the processor should be pushed to.
-     * @param string|null $method  The method that processes the records (if the attribute is used at the class level).
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __construct(
         public readonly ?string $channel = null,
         public readonly ?string $handler = null,
-<<<<<<< HEAD
-<<<<<<< HEAD
         public readonly ?string $method = null,
         public readonly ?int $priority = null
-=======
-        public readonly ?string $method = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        public readonly ?string $method = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ) {
     }
 }

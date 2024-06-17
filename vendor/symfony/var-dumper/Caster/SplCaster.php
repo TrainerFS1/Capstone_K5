@@ -29,43 +29,25 @@ class SplCaster
         \SplFileObject::READ_CSV => 'READ_CSV',
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castArrayObject(\ArrayObject $c, array $a, Stub $stub, bool $isNested)
     {
         return self::castSplArray($c, $a, $stub, $isNested);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castArrayIterator(\ArrayIterator $c, array $a, Stub $stub, bool $isNested)
     {
         return self::castSplArray($c, $a, $stub, $isNested);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castHeap(\Iterator $c, array $a, Stub $stub, bool $isNested)
     {
         $a += [
@@ -75,15 +57,9 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castDoublyLinkedList(\SplDoublyLinkedList $c, array $a, Stub $stub, bool $isNested)
     {
         $prefix = Caster::PREFIX_VIRTUAL;
@@ -99,15 +75,9 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castFileInfo(\SplFileInfo $c, array $a, Stub $stub, bool $isNested)
     {
         static $map = [
@@ -184,15 +154,9 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castFileObject(\SplFileObject $c, array $a, Stub $stub, bool $isNested)
     {
         static $map = [
@@ -230,15 +194,9 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castObjectStorage(\SplObjectStorage $c, array $a, Stub $stub, bool $isNested)
     {
         $storage = [];
@@ -247,23 +205,10 @@ class SplCaster
 
         $clone = clone $c;
         foreach ($clone as $obj) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $storage[] = new EnumStub([
                 'object' => $obj,
                 'info' => $clone->getInfo(),
              ]);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $storage[] = [
-                'object' => $obj,
-                'info' => $clone->getInfo(),
-             ];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $a += [
@@ -273,15 +218,9 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castOuterIterator(\OuterIterator $c, array $a, Stub $stub, bool $isNested)
     {
         $a[Caster::PREFIX_VIRTUAL.'innerIterator'] = $c->getInnerIterator();
@@ -289,15 +228,9 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castWeakReference(\WeakReference $c, array $a, Stub $stub, bool $isNested)
     {
         $a[Caster::PREFIX_VIRTUAL.'object'] = $c->get();
@@ -305,8 +238,6 @@ class SplCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
@@ -328,10 +259,6 @@ class SplCaster
         return $a;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static function castSplArray(\ArrayObject|\ArrayIterator $c, array $a, Stub $stub, bool $isNested): array
     {
         $prefix = Caster::PREFIX_VIRTUAL;
@@ -342,19 +269,11 @@ class SplCaster
             $a = Caster::castObject($c, $c::class, method_exists($c, '__debugInfo'), $stub->class);
             $c->setFlags($flags);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         unset($a["\0ArrayObject\0storage"], $a["\0ArrayIterator\0storage"]);
 
         $a += [
             $prefix.'storage' => $c->getArrayCopy(),
-=======
-        $a += [
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $a += [
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $prefix.'flag::STD_PROP_LIST' => (bool) ($flags & \ArrayObject::STD_PROP_LIST),
             $prefix.'flag::ARRAY_AS_PROPS' => (bool) ($flags & \ArrayObject::ARRAY_AS_PROPS),
         ];

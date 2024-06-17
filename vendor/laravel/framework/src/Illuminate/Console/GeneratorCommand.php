@@ -84,13 +84,7 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
         'namespace',
         'new',
         'or',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'parent',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'print',
         'private',
         'protected',
@@ -194,16 +188,10 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (windows_os()) {
             $path = str_replace('/', '\\', $path);
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->components->info(sprintf('%s [%s] created successfully.', $info, $path));
     }
 
@@ -262,19 +250,9 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
     {
         $modelPath = is_dir(app_path('Models')) ? app_path('Models') : app_path();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return collect(Finder::create()->files()->depth(0)->in($modelPath))
             ->map(fn ($file) => $file->getBasename('.php'))
             ->sort()
-=======
-        return collect((new Finder)->files()->depth(0)->in($modelPath))
-            ->map(fn ($file) => $file->getBasename('.php'))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return collect((new Finder)->files()->depth(0)->in($modelPath))
-            ->map(fn ($file) => $file->getBasename('.php'))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->values()
             ->all();
     }
@@ -292,19 +270,9 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
             return [];
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return collect(Finder::create()->files()->depth(0)->in($eventPath))
             ->map(fn ($file) => $file->getBasename('.php'))
             ->sort()
-=======
-        return collect((new Finder)->files()->depth(0)->in($eventPath))
-            ->map(fn ($file) => $file->getBasename('.php'))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return collect((new Finder)->files()->depth(0)->in($eventPath))
-            ->map(fn ($file) => $file->getBasename('.php'))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->values()
             ->all();
     }
@@ -486,24 +454,12 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
      */
     protected function isReservedName($name)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return in_array(
             strtolower($name),
             collect($this->reservedNames)
                 ->transform(fn ($name) => strtolower($name))
                 ->all()
         );
-=======
-        $name = strtolower($name);
-
-        return in_array($name, $this->reservedNames);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $name = strtolower($name);
-
-        return in_array($name, $this->reservedNames);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -539,8 +495,6 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
     protected function promptForMissingArgumentsUsing()
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
             'name' => [
                 'What should the '.strtolower($this->type).' be named?',
                 match ($this->type) {
@@ -570,12 +524,6 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
                     default => '',
                 },
             ],
-=======
-            'name' => 'What should the '.strtolower($this->type).' be named?',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'name' => 'What should the '.strtolower($this->type).' be named?',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 }

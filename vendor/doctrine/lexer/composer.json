@@ -29,25 +29,11 @@
         "php": "^8.1"
     },
     "require-dev": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "doctrine/coding-standard": "^12",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.5",
         "psalm/plugin-phpunit": "^0.18.3",
         "vimeo/psalm": "^5.21"
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        "doctrine/coding-standard": "^10",
-        "phpstan/phpstan": "^1.9",
-        "phpunit/phpunit": "^9.5",
-        "psalm/plugin-phpunit": "^0.18.3",
-        "vimeo/psalm": "^5.0"
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {
         "psr-4": {

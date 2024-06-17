@@ -32,15 +32,7 @@ final class UnableToCopyFile extends RuntimeException implements FilesystemOpera
     public static function fromLocationTo(
         string $sourcePath,
         string $destinationPath,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?Throwable $previous = null
-=======
-        Throwable $previous = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        Throwable $previous = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ): UnableToCopyFile {
         $e = new static("Unable to copy file from $sourcePath to $destinationPath", 0 , $previous);
         $e->source = $sourcePath;
@@ -49,8 +41,6 @@ final class UnableToCopyFile extends RuntimeException implements FilesystemOpera
         return $e;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function sourceAndDestinationAreTheSame(string $source, string $destination): UnableToCopyFile
     {
         return UnableToCopyFile::because('Source and destination are the same', $source, $destination);
@@ -65,10 +55,6 @@ final class UnableToCopyFile extends RuntimeException implements FilesystemOpera
         return $e;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function operation(): string
     {
         return FilesystemOperationFailed::OPERATION_COPY;

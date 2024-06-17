@@ -11,15 +11,7 @@ use Psr\Http\Message\UriInterface;
  *
  * @author Tobias Schultze
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @see https://datatracker.ietf.org/doc/html/rfc3986#section-6
-=======
- * @link https://tools.ietf.org/html/rfc3986#section-6
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @link https://tools.ietf.org/html/rfc3986#section-6
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class UriNormalizer
 {
@@ -127,15 +119,7 @@ final class UriNormalizer
      * @param UriInterface $uri   The URI to normalize
      * @param int          $flags A bitmask of normalizations to apply, see constants
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-6.2
-=======
-     * @link https://tools.ietf.org/html/rfc3986#section-6.2
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @link https://tools.ietf.org/html/rfc3986#section-6.2
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function normalize(UriInterface $uri, int $flags = self::PRESERVING_NORMALIZATIONS): UriInterface
     {
@@ -147,18 +131,8 @@ final class UriNormalizer
             $uri = self::decodeUnreservedCharacters($uri);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === ''
             && ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
-=======
-        if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === '' &&
-            ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === '' &&
-            ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ) {
             $uri = $uri->withPath('/');
         }
@@ -200,15 +174,7 @@ final class UriNormalizer
      * @param UriInterface $uri2           An URI to compare
      * @param int          $normalizations A bitmask of normalizations to apply, see constants
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @see https://datatracker.ietf.org/doc/html/rfc3986#section-6.1
-=======
-     * @link https://tools.ietf.org/html/rfc3986#section-6.1
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @link https://tools.ietf.org/html/rfc3986#section-6.1
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function isEquivalent(UriInterface $uri1, UriInterface $uri2, int $normalizations = self::PRESERVING_NORMALIZATIONS): bool
     {
@@ -219,15 +185,7 @@ final class UriNormalizer
     {
         $regex = '/(?:%[A-Fa-f0-9]{2})++/';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $callback = function (array $match): string {
-=======
-        $callback = function (array $match) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $callback = function (array $match) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return strtoupper($match[0]);
         };
 
@@ -243,15 +201,7 @@ final class UriNormalizer
     {
         $regex = '/%(?:2D|2E|5F|7E|3[0-9]|[46][1-9A-F]|[57][0-9A])/i';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $callback = function (array $match): string {
-=======
-        $callback = function (array $match) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $callback = function (array $match) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return rawurldecode($match[0]);
         };
 

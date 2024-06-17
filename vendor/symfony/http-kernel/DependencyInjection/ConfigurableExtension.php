@@ -27,29 +27,15 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
  */
 abstract class ConfigurableExtension extends Extension
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     final public function load(array $configs, ContainerBuilder $container): void
-=======
-    final public function load(array $configs, ContainerBuilder $container)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    final public function load(array $configs, ContainerBuilder $container)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->loadInternal($this->processConfiguration($this->getConfiguration($configs, $container), $configs), $container);
     }
 
     /**
      * Configures the passed container according to the merged configuration.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract protected function loadInternal(array $mergedConfig, ContainerBuilder $container);
 }

@@ -104,15 +104,7 @@ abstract class Factory
      *
      * @var string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static $namespace = 'Database\\Factories\\';
-=======
-    protected static $namespace = 'Database\\Factories\\';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected static $namespace = 'Database\\Factories\\';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The default model name resolver.
@@ -193,15 +185,7 @@ abstract class Factory
     /**
      * Configure the factory.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return static
-=======
-     * @return $this
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return $this
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function configure()
     {
@@ -251,8 +235,6 @@ abstract class Factory
     /**
      * Create a collection of models and persist them to the database.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int|null|iterable<int, array<string, mixed>>  $records
      * @return \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Database\Eloquent\Model|TModel>
      */
@@ -266,18 +248,6 @@ abstract class Factory
             $records = array_fill(0, $records, []);
         }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  iterable<int, array<string, mixed>>  $records
-     * @return \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Database\Eloquent\Model|TModel>
-     */
-    public function createMany(iterable $records)
-    {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return new EloquentCollection(
             collect($records)->map(function ($record) {
                 return $this->state($record)->create();
@@ -288,23 +258,10 @@ abstract class Factory
     /**
      * Create a collection of models and persist them to the database without dispatching any model events.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  int|null|iterable<int, array<string, mixed>>  $records
      * @return \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Database\Eloquent\Model|TModel>
      */
     public function createManyQuietly(int|iterable|null $records = null)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  iterable<int, array<string, mixed>>  $records
-     * @return \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Database\Eloquent\Model|TModel>
-     */
-    public function createManyQuietly(iterable $records)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return Model::withoutEvents(function () use ($records) {
             return $this->createMany($records);
@@ -522,15 +479,7 @@ abstract class Factory
         return collect($definition)
             ->map($evaluateRelations = function ($attribute) {
                 if ($attribute instanceof self) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $attribute = $this->getRandomRecycledModel($attribute->modelName())?->getKey()
-=======
-                    $attribute = $this->getRandomRecycledModel($attribute->modelName())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $attribute = $this->getRandomRecycledModel($attribute->modelName())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         ?? $attribute->recycle($this->recycle)->create()->getKey();
                 } elseif ($attribute instanceof Model) {
                     $attribute = $attribute->getKey();

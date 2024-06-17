@@ -27,15 +27,9 @@ class ResourceCaster
         return curl_getinfo($h);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castDba($dba, array $a, Stub $stub, bool $isNested)
     {
         $list = dba_list();
@@ -44,29 +38,15 @@ class ResourceCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castProcess($process, array $a, Stub $stub, bool $isNested)
     {
         return proc_get_status($process);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function castStream($stream, array $a, Stub $stub, bool $isNested): array
-=======
-    public static function castStream($stream, array $a, Stub $stub, bool $isNested)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function castStream($stream, array $a, Stub $stub, bool $isNested)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $a = stream_get_meta_data($stream) + static::castStreamContext($stream, $a, $stub, $isNested);
         if ($a['uri'] ?? false) {
@@ -76,29 +56,17 @@ class ResourceCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castStreamContext($stream, array $a, Stub $stub, bool $isNested)
     {
         return @stream_context_get_params($stream) ?: $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castGd($gd, array $a, Stub $stub, bool $isNested)
     {
         $a['size'] = imagesx($gd).'x'.imagesy($gd);
@@ -107,15 +75,9 @@ class ResourceCaster
         return $a;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function castOpensslX509($h, array $a, Stub $stub, bool $isNested)
     {
         $stub->cut = -1;

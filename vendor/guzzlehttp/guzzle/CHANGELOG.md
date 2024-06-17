@@ -2,8 +2,6 @@
 
 Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ## 7.8.1 - 2023-12-03
 
@@ -73,10 +71,6 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 - Adjusted `guzzlehttp/psr7` version constraint to `^1.9.1 || ^2.4.5`
 
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.5.0 - 2022-08-28
 
 ### Added
@@ -84,8 +78,6 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 - Support PHP 8.2
 - Add request to delay closure params
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ## 7.4.5 - 2022-06-20
 
@@ -110,27 +102,6 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 * Fix cross-domain cookie leakage
 
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-## 7.4.5 - 2022-06-20
-
-* Fix change in port should be considered a change in origin
-* Fix `CURLOPT_HTTPAUTH` option not cleared on change of origin
-
-## 7.4.4 - 2022-06-09
-
-* Fix failure to strip Authorization header on HTTP downgrade
-* Fix failure to strip the Cookie header on change in host or HTTP downgrade
-
-## 7.4.3 - 2022-05-25
-
-* Fix cross-domain cookie leakage
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.4.2 - 2022-03-20
 
 ### Fixed
@@ -139,13 +110,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 - Reject non-HTTP schemes in StreamHandler
 - Set a default ssl.peer_name context in StreamHandler to allow `force_ip_resolve`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.4.1 - 2021-12-06
 
 ### Changed
@@ -157,13 +122,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 - Only close curl handle if it's done [#2950](https://github.com/guzzle/guzzle/pull/2950)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.4.0 - 2021-10-18
 
 ### Added
@@ -181,13 +140,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 - Be more strict with types [#2914](https://github.com/guzzle/guzzle/pull/2914), [#2917](https://github.com/guzzle/guzzle/pull/2917), [#2919](https://github.com/guzzle/guzzle/pull/2919), [#2945](https://github.com/guzzle/guzzle/pull/2945)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.3.0 - 2021-03-23
 
 ### Added
@@ -200,13 +153,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 - Handle exceptions on invalid header consistently between PHP versions and handlers [#2872](https://github.com/guzzle/guzzle/pull/2872)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.2.0 - 2020-10-10
 
 ### Added
@@ -229,13 +176,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 - Using environment variable GUZZLE_CURL_SELECT_TIMEOUT [#2786](https://github.com/guzzle/guzzle/pull/2786)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.1.1 - 2020-09-30
 
 ### Fixed
@@ -247,13 +188,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 - We dont connect curl `sink` on HEAD requests.
 - Removed some PHP 5 workarounds
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.1.0 - 2020-09-22
 
 ### Added
@@ -276,35 +211,17 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 - `Utils::defaultCaBundle()`
 - `CurlFactory::LOW_CURL_VERSION_NUMBER`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.0.1 - 2020-06-27
 
 * Fix multiply defined functions fatal error [#2699](https://github.com/guzzle/guzzle/pull/2699)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.0.0 - 2020-06-27
 
 No changes since 7.0.0-rc1.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.0.0-rc1 - 2020-06-15
 
 ### Changed
@@ -312,13 +229,7 @@ No changes since 7.0.0-rc1.
 * Use error level for logging errors in Middleware [#2629](https://github.com/guzzle/guzzle/pull/2629)
 * Disabled IDN support by default and require ext-intl to use it [#2675](https://github.com/guzzle/guzzle/pull/2675)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.0.0-beta2 - 2020-05-25
 
 ### Added
@@ -344,13 +255,7 @@ No changes since 7.0.0-rc1.
 
 * Pool option `pool_size` [#2528](https://github.com/guzzle/guzzle/pull/2528)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 7.0.0-beta1 - 2019-12-30
 
 The diff might look very big but 95% of Guzzle users will be able to upgrade without modification.
@@ -384,36 +289,18 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * `uri_template()` and `UriTemplate` [#2440](https://github.com/guzzle/guzzle/pull/2440)
 * Request options `save_to` and `exceptions` [#2464](https://github.com/guzzle/guzzle/pull/2464)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.5.2 - 2019-12-23
 
 * idn_to_ascii() fix for old PHP versions [#2489](https://github.com/guzzle/guzzle/pull/2489)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.5.1 - 2019-12-21
 
 * Better defaults for PHP installations with old ICU lib [#2454](https://github.com/guzzle/guzzle/pull/2454)
 * IDN support for redirects [#2424](https://github.com/guzzle/guzzle/pull/2424)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.5.0 - 2019-12-07
 
 * Improvement: Added support for reset internal queue in MockHandler. [#2143](https://github.com/guzzle/guzzle/pull/2143)
@@ -423,25 +310,13 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Fix: Prevent undefined offset when using array for ssl_key options. [#2348](https://github.com/guzzle/guzzle/pull/2348)
 * Deprecated `ClientInterface::VERSION`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.4.1 - 2019-10-23
 
 * No `guzzle.phar` was created in 6.4.0 due expired API token. This release will fix that
 * Added `parent::__construct()` to `FileCookieJar` and `SessionCookieJar`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.4.0 - 2019-10-23
 
 * Improvement: Improved error messages when using curl < 7.21.2 [#2108](https://github.com/guzzle/guzzle/pull/2108)
@@ -454,13 +329,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Fix: Prevent concurrent writes to file when saving `CookieJar` [#2335](https://github.com/guzzle/guzzle/pull/2335)
 * Improvement: Update `MockHandler` so we can test transfer time [#2362](https://github.com/guzzle/guzzle/pull/2362)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.3.3 - 2018-04-22
 
 * Fix: Default headers when decode_content is specified
@@ -502,30 +371,14 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Bug fix: Fill `CURLOPT_CAPATH` and `CURLOPT_CAINFO` properly [#1684](https://github.com/guzzle/guzzle/pull/1684)
 * Improvement:  	Use `\GuzzleHttp\Promise\rejection_for` function instead of object init [#1827](https://github.com/guzzle/guzzle/pull/1827)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 + Minor code cleanups, documentation fixes and clarifications.
 
-=======
-
-+ Minor code cleanups, documentation fixes and clarifications.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-+ Minor code cleanups, documentation fixes and clarifications.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 ## 6.2.3 - 2017-02-28
 
 * Fix deprecations with guzzle/psr7 version 1.4
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.2.2 - 2016-10-08
 
 * Allow to pass nullable Response to delay callable
@@ -533,13 +386,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Fix drain case where content-length is the literal string zero
 * Obfuscate in-URL credentials in exceptions
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.2.1 - 2016-07-18
 
 * Address HTTP_PROXY security vulnerability, CVE-2016-5385:
@@ -550,13 +397,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
   a server does not honor `Connection: close`.
 * Ignore URI fragment when sending requests.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.2.0 - 2016-03-21
 
 * Feature: added `GuzzleHttp\json_encode` and `GuzzleHttp\json_decode`.
@@ -576,13 +417,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Bug fix: provide an empty string to `http_build_query` for HHVM workaround.
   https://github.com/guzzle/guzzle/pull/1367
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.1.1 - 2015-11-22
 
 * Bug fix: Proxy::wrapSync() now correctly proxies to the appropriate handler
@@ -598,13 +433,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Bug fix: fixed regression where MockHandler was not using `sink`.
   https://github.com/guzzle/guzzle/pull/1292
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.1.0 - 2015-09-08
 
 * Feature: Added the `on_stats` request option to provide access to transfer
@@ -639,13 +468,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Bug fix: Adding a Content-Length to PHP stream wrapper requests if not set.
   https://github.com/guzzle/guzzle/pull/1189
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.0.2 - 2015-07-04
 
 * Fixed a memory leak in the curl handlers in which references to callbacks
@@ -663,13 +486,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Functions are now conditionally required using an additional level of
   indirection to help with global Composer installations.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.0.1 - 2015-05-27
 
 * Fixed a bug with serializing the `query` request option where the `&`
@@ -678,13 +495,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
   use `form_params` or `multipart` instead.
 * Various doc fixes.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.0.0 - 2015-05-26
 
 * See the UPGRADING.md document for more information.
@@ -709,13 +520,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * `$maxHandles` has been removed from CurlMultiHandler.
 * `MultipartPostBody` is now part of the `guzzlehttp/psr7` package.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 5.3.0 - 2015-05-19
 
 * Mock now supports `save_to`
@@ -726,13 +531,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Marked `GuzzleHttp\Client::getDefaultUserAgent` as deprecated.
 * URL scheme is now always lowercased.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 6.0.0-beta.1
 
 * Requires PHP >= 5.5
@@ -785,13 +584,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * `GuzzleHttp\QueryParser` has been replaced with the
   `GuzzleHttp\Psr7\parse_query`.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 5.2.0 - 2015-01-27
 
 * Added `AppliesHeadersInterface` to make applying headers to a request based
@@ -802,13 +595,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
   RingBridge.
 * Added a guard in the Pool class to not use recursion for request retries.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 5.1.0 - 2014-12-19
 
 * Pool class no longer uses recursion when a request is intercepted.
@@ -829,13 +616,7 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Exceptions thrown in the `end` event are now correctly wrapped with Guzzle
   specific exceptions if necessary.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 5.0.3 - 2014-11-03
 
 This change updates query strings so that they are treated as un-encoded values
@@ -850,13 +631,7 @@ string that should not be parsed or encoded (unless a call to getQuery() is
 subsequently made, forcing the query-string to be converted into a Query
 object).
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 5.0.2 - 2014-10-30
 
 * Added a trailing `\r\n` to multipart/form-data payloads. See
@@ -876,17 +651,9 @@ object).
   * Note: This has been changed in 5.0.3 to now encode query string values by
     default unless the `rawString` argument is provided when setting the query
     string on a URL: Now allowing many more characters to be present in the
-<<<<<<< HEAD
-<<<<<<< HEAD
     query string without being percent encoded. See
     https://datatracker.ietf.org/doc/html/rfc3986#appendix-A
 
-=======
-    query string without being percent encoded. See https://tools.ietf.org/html/rfc3986#appendix-A
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    query string without being percent encoded. See https://tools.ietf.org/html/rfc3986#appendix-A
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 ## 5.0.1 - 2014-10-16
 
@@ -899,13 +666,7 @@ Bugfix release.
 * Fixed an issue where transfer statistics were not being populated in the
   RingBridge. https://github.com/guzzle/guzzle/issues/866
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 5.0.0 - 2014-10-12
 
 Adding support for non-blocking responses and some minor API cleanup.
@@ -987,13 +748,7 @@ interfaces.
       argument. They now accept an associative array of options, including the
       "size" key and "metadata" key which can be used to provide custom metadata.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## 4.2.2 - 2014-09-08
 
 * Fixed a memory leak in the CurlAdapter when reusing cURL handles.
@@ -1436,15 +1191,7 @@ interfaces.
 
 ## 3.4.0 - 2013-04-11
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 * Bug fix: URLs are now resolved correctly based on https://datatracker.ietf.org/doc/html/rfc3986#section-5.2. #289
-=======
-* Bug fix: URLs are now resolved correctly based on https://tools.ietf.org/html/rfc3986#section-5.2. #289
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-* Bug fix: URLs are now resolved correctly based on https://tools.ietf.org/html/rfc3986#section-5.2. #289
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 * Bug fix: Absolute URLs with a path in a service description will now properly override the base URL. #289
 * Bug fix: Parsing a query string with a single PHP array value will now result in an array. #263
 * Bug fix: Better normalization of the User-Agent header to prevent duplicate headers. #264.

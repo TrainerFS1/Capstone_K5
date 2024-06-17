@@ -18,20 +18,10 @@ use function floor;
 use function json_encode;
 use function sprintf;
 use function str_replace;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use SebastianBergmann\CodeCoverage\FileCouldNotBeWrittenException;
 use SebastianBergmann\CodeCoverage\Node\AbstractNode;
 use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
 use SebastianBergmann\Template\Exception;
-=======
-use SebastianBergmann\CodeCoverage\Node\AbstractNode;
-use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use SebastianBergmann\CodeCoverage\Node\AbstractNode;
-use SebastianBergmann\CodeCoverage\Node\Directory as DirectoryNode;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use SebastianBergmann\Template\Template;
 
 /**
@@ -46,15 +36,7 @@ final class Dashboard extends Renderer
         $template     = new Template(
             $templateName,
             '{{',
-<<<<<<< HEAD
-<<<<<<< HEAD
             '}}',
-=======
-            '}}'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            '}}'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $this->setCommonTemplateVariables($template, $node);
@@ -75,8 +57,6 @@ final class Dashboard extends Renderer
                 'complexity_method'             => $complexity['method'],
                 'class_coverage_distribution'   => $coverageDistribution['class'],
                 'method_coverage_distribution'  => $coverageDistribution['method'],
-<<<<<<< HEAD
-<<<<<<< HEAD
             ],
         );
 
@@ -89,17 +69,6 @@ final class Dashboard extends Renderer
                 $e,
             );
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            ]
-        );
-
-        $template->renderTo($file);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     protected function activeBreadcrumb(AbstractNode $node): string
@@ -107,15 +76,7 @@ final class Dashboard extends Renderer
         return sprintf(
             '         <li class="breadcrumb-item"><a href="index.html">%s</a></li>' . "\n" .
             '         <li class="breadcrumb-item active">(Dashboard)</li>' . "\n",
-<<<<<<< HEAD
-<<<<<<< HEAD
             $node->name(),
-=======
-            $node->name()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $node->name()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -138,15 +99,7 @@ final class Dashboard extends Renderer
                     sprintf(
                         '<a href="%s">%s</a>',
                         str_replace($baseLink, '', $method['link']),
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $methodName,
-=======
-                        $methodName
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $methodName
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     ),
                 ];
             }
@@ -157,15 +110,7 @@ final class Dashboard extends Renderer
                 sprintf(
                     '<a href="%s">%s</a>',
                     str_replace($baseLink, '', $class['link']),
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $className,
-=======
-                    $className
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $className
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ),
             ];
         }
@@ -277,15 +222,7 @@ final class Dashboard extends Renderer
                 '       <tr><td><a href="%s">%s</a></td><td class="text-right">%d%%</td></tr>' . "\n",
                 str_replace($baseLink, '', $classes[$className]['link']),
                 $className,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $coverage,
-=======
-                $coverage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $coverage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -297,15 +234,7 @@ final class Dashboard extends Renderer
                 str_replace($baseLink, '', $classes[$class]['methods'][$method]['link']),
                 $methodName,
                 $method,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $coverage,
-=======
-                $coverage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $coverage
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -348,15 +277,7 @@ final class Dashboard extends Renderer
                 '       <tr><td><a href="%s">%s</a></td><td class="text-right">%d</td></tr>' . "\n",
                 str_replace($baseLink, '', $classes[$className]['link']),
                 $className,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $crap,
-=======
-                $crap
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $crap
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -368,15 +289,7 @@ final class Dashboard extends Renderer
                 str_replace($baseLink, '', $classes[$class]['methods'][$method]['link']),
                 $methodName,
                 $method,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $crap,
-=======
-                $crap
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $crap
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

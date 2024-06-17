@@ -8,8 +8,6 @@ use Illuminate\Support\Str;
 trait HasUlids
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Initialize the trait.
      *
      * @return void
@@ -27,26 +25,6 @@ trait HasUlids
     public function uniqueIds()
     {
         return [$this->getKeyName()];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Boot the trait.
-     *
-     * @return void
-     */
-    public static function bootHasUlids()
-    {
-        static::creating(function (self $model) {
-            foreach ($model->uniqueIds() as $column) {
-                if (empty($model->{$column})) {
-                    $model->{$column} = $model->newUniqueId();
-                }
-            }
-        });
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -83,25 +61,6 @@ trait HasUlids
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get the columns that should receive a unique identifier.
-     *
-     * @return array
-     */
-    public function uniqueIds()
-    {
-        return [$this->getKeyName()];
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the auto-incrementing key type.
      *
      * @return string

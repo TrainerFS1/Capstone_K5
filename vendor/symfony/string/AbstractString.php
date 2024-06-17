@@ -39,18 +39,8 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
     public const PREG_SPLIT_DELIM_CAPTURE = \PREG_SPLIT_DELIM_CAPTURE;
     public const PREG_SPLIT_OFFSET_CAPTURE = \PREG_SPLIT_OFFSET_CAPTURE;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected string $string = '';
     protected ?bool $ignoreCase = false;
-=======
-    protected $string = '';
-    protected $ignoreCase = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $string = '';
-    protected $ignoreCase = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     abstract public function __construct(string $string = '');
 
@@ -393,15 +383,7 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
         return '' === $this->string;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     abstract public function join(array $strings, ?string $lastGlue = null): static;
-=======
-    abstract public function join(array $strings, string $lastGlue = null): static;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    abstract public function join(array $strings, string $lastGlue = null): static;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function jsonSerialize(): string
     {
@@ -447,38 +429,16 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
 
     abstract public function reverse(): static;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     abstract public function slice(int $start = 0, ?int $length = null): static;
 
     abstract public function snake(): static;
 
     abstract public function splice(string $replacement, int $start = 0, ?int $length = null): static;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    abstract public function slice(int $start = 0, int $length = null): static;
-
-    abstract public function snake(): static;
-
-    abstract public function splice(string $replacement, int $start = 0, int $length = null): static;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @return static[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function split(string $delimiter, ?int $limit = null, ?int $flags = null): array
-=======
-    public function split(string $delimiter, int $limit = null, int $flags = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function split(string $delimiter, int $limit = null, int $flags = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $flags) {
             throw new \TypeError('Split behavior when $flags is null must be implemented by child classes.');
@@ -488,15 +448,7 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
             $delimiter .= 'i';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         try {
             if (false === $chunks = preg_split($delimiter, $this->string, $limit, $flags)) {
@@ -543,15 +495,7 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
 
     abstract public function title(bool $allWords = false): static;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function toByteString(?string $toEncoding = null): ByteString
-=======
-    public function toByteString(string $toEncoding = null): ByteString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function toByteString(string $toEncoding = null): ByteString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $b = new ByteString();
 
@@ -563,8 +507,6 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
             return $b;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
         } catch (\ValueError $e) {
@@ -573,27 +515,6 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
             }
 
             $b->string = iconv('UTF-8', $toEncoding, $this->string);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
-
-        try {
-            try {
-                $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
-            } catch (InvalidArgumentException $e) {
-                if (!\function_exists('iconv')) {
-                    throw $e;
-                }
-
-                $b->string = iconv('UTF-8', $toEncoding, $this->string);
-            }
-        } finally {
-            restore_error_handler();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $b;

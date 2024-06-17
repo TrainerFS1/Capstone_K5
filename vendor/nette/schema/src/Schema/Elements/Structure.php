@@ -18,8 +18,6 @@ use Nette\Schema\Schema;
 final class Structure implements Schema
 {
 	use Base;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 	/** @var Schema[] */
 	private array $items;
@@ -30,26 +28,6 @@ final class Structure implements Schema
 	/** @var array{?int, ?int} */
 	private array $range = [null, null];
 	private bool $skipDefaults = false;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	use Nette\SmartObject;
-
-	/** @var Schema[] */
-	private $items;
-
-	/** @var Schema|null  for array|list */
-	private $otherItems;
-
-	/** @var array{?int, ?int} */
-	private $range = [null, null];
-
-	/** @var bool */
-	private $skipDefaults = false;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
 	/**
@@ -59,28 +37,12 @@ final class Structure implements Schema
 	{
 		(function (Schema ...$items) {})(...array_values($items));
 		$this->items = $items;
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$this->castTo('object');
-=======
-		$this->castTo = 'object';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		$this->castTo = 'object';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		$this->required = true;
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function default(mixed $value): self
-=======
-	public function default($value): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public function default($value): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		throw new Nette\InvalidStateException('Structure cannot have default value.');
 	}
@@ -100,20 +62,7 @@ final class Structure implements Schema
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function otherItems(string|Schema $type = 'mixed'): self
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	/**
-	 * @param  string|Schema  $type
-	 */
-	public function otherItems($type = 'mixed'): self
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->otherItems = $type instanceof Schema ? $type : new Type($type);
 		return $this;
@@ -130,23 +79,10 @@ final class Structure implements Schema
 	/********************* processing ****************d*g**/
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function normalize(mixed $value, Context $context): mixed
 	{
 		if ($prevent = (is_array($value) && isset($value[Helpers::PreventMerging]))) {
 			unset($value[Helpers::PreventMerging]);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	public function normalize($value, Context $context)
-	{
-		if ($prevent = (is_array($value) && isset($value[Helpers::PREVENT_MERGING]))) {
-			unset($value[Helpers::PREVENT_MERGING]);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
 		$value = $this->doNormalize($value, $context);
@@ -165,15 +101,7 @@ final class Structure implements Schema
 			}
 
 			if ($prevent) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 				$value[Helpers::PreventMerging] = true;
-=======
-				$value[Helpers::PREVENT_MERGING] = true;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-				$value[Helpers::PREVENT_MERGING] = true;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			}
 		}
 
@@ -181,23 +109,10 @@ final class Structure implements Schema
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function merge(mixed $value, mixed $base): mixed
 	{
 		if (is_array($value) && isset($value[Helpers::PreventMerging])) {
 			unset($value[Helpers::PreventMerging]);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	public function merge($value, $base)
-	{
-		if (is_array($value) && isset($value[Helpers::PREVENT_MERGING])) {
-			unset($value[Helpers::PREVENT_MERGING]);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			$base = null;
 		}
 
@@ -224,15 +139,7 @@ final class Structure implements Schema
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function complete(mixed $value, Context $context): mixed
-=======
-	public function complete($value, Context $context)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public function complete($value, Context $context)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		if ($value === null) {
 			$value = []; // is unable to distinguish null from array in NEON
@@ -240,8 +147,6 @@ final class Structure implements Schema
 
 		$this->doDeprecation($context);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$isOk = $context->createChecker();
 		Helpers::validateType($value, 'array', $context);
 		$isOk() && Helpers::validateRange($value, $this->range, $context);
@@ -253,20 +158,6 @@ final class Structure implements Schema
 
 	private function validateItems(array &$value, Context $context): void
 	{
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-		if (!$this->doValidate($value, 'array', $context)
-			|| !$this->doValidateRange($value, $this->range, $context)
-		) {
-			return;
-		}
-
-		$errCount = count($context->errors);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		$items = $this->items;
 		if ($extraKeys = array_keys(array_diff_key($value, $items))) {
 			if ($this->otherItems) {
@@ -274,25 +165,11 @@ final class Structure implements Schema
 			} else {
 				$keys = array_map('strval', array_keys($items));
 				foreach ($extraKeys as $key) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 					$hint = Nette\Utils\Helpers::getSuggestion($keys, (string) $key);
 					$context->addError(
 						'Unexpected item %path%' . ($hint ? ", did you mean '%hint%'?" : '.'),
 						Nette\Schema\Message::UnexpectedItem,
 						['hint' => $hint],
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-					$hint = Nette\Utils\ObjectHelpers::getSuggestion($keys, (string) $key);
-					$context->addError(
-						'Unexpected item %path%' . ($hint ? ", did you mean '%hint%'?" : '.'),
-						Nette\Schema\Message::UNEXPECTED_ITEM,
-						['hint' => $hint]
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 					)->path[] = $key;
 				}
 			}
@@ -311,29 +188,10 @@ final class Structure implements Schema
 
 			array_pop($context->path);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
 	}
 
 
 	public function completeDefault(Context $context): mixed
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-		if (count($context->errors) > $errCount) {
-			return;
-		}
-
-		return $this->doFinalize($value, $context);
-	}
-
-
-	public function completeDefault(Context $context)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return $this->required
 			? $this->complete([], $context)

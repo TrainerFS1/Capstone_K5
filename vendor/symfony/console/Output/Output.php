@@ -37,30 +37,16 @@ abstract class Output implements OutputInterface
      * @param bool                          $decorated Whether to decorate messages
      * @param OutputFormatterInterface|null $formatter Output formatter instance (null to use default OutputFormatter)
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?int $verbosity = self::VERBOSITY_NORMAL, bool $decorated = false, ?OutputFormatterInterface $formatter = null)
-=======
-    public function __construct(?int $verbosity = self::VERBOSITY_NORMAL, bool $decorated = false, OutputFormatterInterface $formatter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(?int $verbosity = self::VERBOSITY_NORMAL, bool $decorated = false, OutputFormatterInterface $formatter = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->verbosity = $verbosity ?? self::VERBOSITY_NORMAL;
         $this->formatter = $formatter ?? new OutputFormatter();
         $this->formatter->setDecorated($decorated);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setFormatter(OutputFormatterInterface $formatter)
     {
         $this->formatter = $formatter;
@@ -71,15 +57,9 @@ abstract class Output implements OutputInterface
         return $this->formatter;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setDecorated(bool $decorated)
     {
         $this->formatter->setDecorated($decorated);
@@ -90,15 +70,9 @@ abstract class Output implements OutputInterface
         return $this->formatter->isDecorated();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setVerbosity(int $level)
     {
         $this->verbosity = $level;
@@ -129,29 +103,17 @@ abstract class Output implements OutputInterface
         return self::VERBOSITY_DEBUG <= $this->verbosity;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function writeln(string|iterable $messages, int $options = self::OUTPUT_NORMAL)
     {
         $this->write($messages, true, $options);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function write(string|iterable $messages, bool $newline = false, int $options = self::OUTPUT_NORMAL)
     {
         if (!is_iterable($messages)) {
@@ -186,14 +148,8 @@ abstract class Output implements OutputInterface
 
     /**
      * Writes a message to the output.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     abstract protected function doWrite(string $message, bool $newline);
 }

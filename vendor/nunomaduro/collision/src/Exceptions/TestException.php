@@ -25,17 +25,11 @@ final class TestException
         //
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getThrowable(): Throwable
     {
         return $this->throwable;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @return class-string
      */
@@ -52,8 +46,6 @@ final class TestException
             $message = $this->throwable->message();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $regexes = [
             'To contain' => '/Failed asserting that \'(.*)\' contains "(.*)"\./s',
             'Not to contain' => '/Failed asserting that \'(.*)\' does not contain "(.*)"\./s',
@@ -67,57 +59,6 @@ final class TestException
 
                 break;
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        // Contains...
-        $re = '/Failed asserting that \'(.*)\' contains "(.*)"\./s';
-
-        preg_match($re, $message, $matches, PREG_OFFSET_CAPTURE, 0);
-
-        if (count($matches) === 3) {
-            $actual = $matches[1][0];
-            $expected = $matches[2][0];
-
-            $actualExploded = explode(PHP_EOL, $actual);
-            $expectedExploded = explode(PHP_EOL, $expected);
-
-            if (($countActual = count($actualExploded)) > 4 && ! $this->isVerbose) {
-                $actualExploded = array_slice($actualExploded, 0, 3);
-            }
-
-            if (($countExpected = count($expectedExploded)) > 4 && ! $this->isVerbose) {
-                $expectedExploded = array_slice($expectedExploded, 0, 3);
-            }
-
-            $actualAsString = '';
-            $expectedAsString = '';
-            foreach ($actualExploded as $line) {
-                $actualAsString .= PHP_EOL.$this->colorizeLine($line, 'red');
-            }
-
-            foreach ($expectedExploded as $line) {
-                $expectedAsString .= PHP_EOL.$this->colorizeLine($line, 'green');
-            }
-
-            if ($countActual > 4 && ! $this->isVerbose) {
-                $actualAsString .= PHP_EOL.$this->colorizeLine(sprintf('... (%s more lines)', $countActual), 'gray');
-            }
-
-            if ($countExpected > 4 && ! $this->isVerbose) {
-                $expectedAsString .= PHP_EOL.$this->colorizeLine(sprintf('... (%s more lines)', $countExpected), 'gray');
-            }
-
-            $message = implode(PHP_EOL, [
-                'Expected: '.ltrim($actualAsString, PHP_EOL.'  '),
-                '',
-                '  To contain: '.ltrim($expectedAsString, PHP_EOL.'  '),
-                '',
-            ]);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         // Diffs...
@@ -136,8 +77,6 @@ final class TestException
         return $message;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function shortenMessage(array $matches, string $key): string
     {
         $actual = $matches[1][0];
@@ -180,10 +119,6 @@ final class TestException
         ]);
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function getCode(): int
     {
         return 0;

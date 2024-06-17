@@ -86,15 +86,7 @@ class FilesystemManager implements FactoryContract
     /**
      * Get a default cloud filesystem instance.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Contracts\Filesystem\Cloud
-=======
-     * @return \Illuminate\Contracts\Filesystem\Filesystem
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Contracts\Filesystem\Filesystem
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function cloud()
     {
@@ -271,19 +263,11 @@ class FilesystemManager implements FactoryContract
         $config += ['version' => 'latest'];
 
         if (! empty($config['key']) && ! empty($config['secret'])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $config['credentials'] = Arr::only($config, ['key', 'secret']);
         }
 
         if (! empty($config['token'])) {
             $config['credentials']['token'] = $config['token'];
-=======
-            $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return Arr::except($config, ['token']);
@@ -304,8 +288,6 @@ class FilesystemManager implements FactoryContract
         }
 
         return $this->build(tap(
-<<<<<<< HEAD
-<<<<<<< HEAD
             is_string($config['disk']) ? $this->getConfig($config['disk']) : $config['disk'],
             function (&$parent) use ($config) {
                 $parent['prefix'] = $config['prefix'];
@@ -314,14 +296,6 @@ class FilesystemManager implements FactoryContract
                     $parent['visibility'] = $config['visibility'];
                 }
             }
-=======
-            $this->getConfig($config['disk']),
-            fn (&$parent) => $parent['prefix'] = $config['prefix']
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->getConfig($config['disk']),
-            fn (&$parent) => $parent['prefix'] = $config['prefix']
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ));
     }
 
@@ -345,13 +319,7 @@ class FilesystemManager implements FactoryContract
         return new Flysystem($adapter, Arr::only($config, [
             'directory_visibility',
             'disable_asserts',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'retain_visibility',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'temporary_url',
             'url',
             'visibility',

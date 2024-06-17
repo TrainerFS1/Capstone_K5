@@ -32,26 +32,14 @@ final class PHPUnit
     private readonly bool $requireCoverageMetadata;
     private readonly ?string $bootstrap;
     private readonly bool $processIsolation;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private readonly bool $failOnDeprecation;
     private readonly bool $failOnEmptyTestSuite;
     private readonly bool $failOnIncomplete;
     private readonly bool $failOnNotice;
-=======
-    private readonly bool $failOnEmptyTestSuite;
-    private readonly bool $failOnIncomplete;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private readonly bool $failOnEmptyTestSuite;
-    private readonly bool $failOnIncomplete;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly bool $failOnRisky;
     private readonly bool $failOnSkipped;
     private readonly bool $failOnWarning;
     private readonly bool $stopOnDefect;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private readonly bool $stopOnDeprecation;
     private readonly bool $stopOnError;
     private readonly bool $stopOnFailure;
@@ -64,19 +52,6 @@ final class PHPUnit
     /**
      * @psalm-var ?non-empty-string
      */
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private readonly bool $stopOnError;
-    private readonly bool $stopOnFailure;
-    private readonly bool $stopOnWarning;
-    private readonly bool $stopOnIncomplete;
-    private readonly bool $stopOnRisky;
-    private readonly bool $stopOnSkipped;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly ?string $extensionsDirectory;
     private readonly bool $beStrictAboutChangesToGlobalState;
     private readonly bool $beStrictAboutOutputDuringTests;
@@ -95,8 +70,6 @@ final class PHPUnit
     private readonly bool $backupStaticProperties;
     private readonly bool $registerMockObjectsFromTestArgumentsRecursively;
     private readonly bool $testdoxPrinter;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private readonly bool $controlGarbageCollector;
     private readonly int $numberOfTestsBeforeGarbageCollection;
 
@@ -104,14 +77,6 @@ final class PHPUnit
      * @psalm-param ?non-empty-string $extensionsDirectory
      */
     public function __construct(?string $cacheDirectory, bool $cacheResult, ?string $cacheResultFile, int|string $columns, string $colors, bool $stderr, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $reverseDefectList, bool $requireCoverageMetadata, ?string $bootstrap, bool $processIsolation, bool $failOnDeprecation, bool $failOnEmptyTestSuite, bool $failOnIncomplete, bool $failOnNotice, bool $failOnRisky, bool $failOnSkipped, bool $failOnWarning, bool $stopOnDefect, bool $stopOnDeprecation, bool $stopOnError, bool $stopOnFailure, bool $stopOnIncomplete, bool $stopOnNotice, bool $stopOnRisky, bool $stopOnSkipped, bool $stopOnWarning, ?string $extensionsDirectory, bool $beStrictAboutChangesToGlobalState, bool $beStrictAboutOutputDuringTests, bool $beStrictAboutTestsThatDoNotTestAnything, bool $beStrictAboutCoverageMetadata, bool $enforceTimeLimit, int $defaultTimeLimit, int $timeoutForSmallTests, int $timeoutForMediumTests, int $timeoutForLargeTests, ?string $defaultTestSuite, int $executionOrder, bool $resolveDependencies, bool $defectsFirst, bool $backupGlobals, bool $backupStaticProperties, bool $registerMockObjectsFromTestArgumentsRecursively, bool $testdoxPrinter, bool $controlGarbageCollector, int $numberOfTestsBeforeGarbageCollection)
-=======
-
-    public function __construct(?string $cacheDirectory, bool $cacheResult, ?string $cacheResultFile, int|string $columns, string $colors, bool $stderr, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $reverseDefectList, bool $requireCoverageMetadata, ?string $bootstrap, bool $processIsolation, bool $failOnEmptyTestSuite, bool $failOnIncomplete, bool $failOnRisky, bool $failOnSkipped, bool $failOnWarning, bool $stopOnDefect, bool $stopOnError, bool $stopOnFailure, bool $stopOnWarning, bool $stopOnIncomplete, bool $stopOnRisky, bool $stopOnSkipped, ?string $extensionsDirectory, bool $beStrictAboutChangesToGlobalState, bool $beStrictAboutOutputDuringTests, bool $beStrictAboutTestsThatDoNotTestAnything, bool $beStrictAboutCoverageMetadata, bool $enforceTimeLimit, int $defaultTimeLimit, int $timeoutForSmallTests, int $timeoutForMediumTests, int $timeoutForLargeTests, ?string $defaultTestSuite, int $executionOrder, bool $resolveDependencies, bool $defectsFirst, bool $backupGlobals, bool $backupStaticProperties, bool $registerMockObjectsFromTestArgumentsRecursively, bool $testdoxPrinter)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-    public function __construct(?string $cacheDirectory, bool $cacheResult, ?string $cacheResultFile, int|string $columns, string $colors, bool $stderr, bool $displayDetailsOnIncompleteTests, bool $displayDetailsOnSkippedTests, bool $displayDetailsOnTestsThatTriggerDeprecations, bool $displayDetailsOnTestsThatTriggerErrors, bool $displayDetailsOnTestsThatTriggerNotices, bool $displayDetailsOnTestsThatTriggerWarnings, bool $reverseDefectList, bool $requireCoverageMetadata, ?string $bootstrap, bool $processIsolation, bool $failOnEmptyTestSuite, bool $failOnIncomplete, bool $failOnRisky, bool $failOnSkipped, bool $failOnWarning, bool $stopOnDefect, bool $stopOnError, bool $stopOnFailure, bool $stopOnWarning, bool $stopOnIncomplete, bool $stopOnRisky, bool $stopOnSkipped, ?string $extensionsDirectory, bool $beStrictAboutChangesToGlobalState, bool $beStrictAboutOutputDuringTests, bool $beStrictAboutTestsThatDoNotTestAnything, bool $beStrictAboutCoverageMetadata, bool $enforceTimeLimit, int $defaultTimeLimit, int $timeoutForSmallTests, int $timeoutForMediumTests, int $timeoutForLargeTests, ?string $defaultTestSuite, int $executionOrder, bool $resolveDependencies, bool $defectsFirst, bool $backupGlobals, bool $backupStaticProperties, bool $registerMockObjectsFromTestArgumentsRecursively, bool $testdoxPrinter)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->cacheDirectory                                  = $cacheDirectory;
         $this->cacheResult                                     = $cacheResult;
@@ -129,26 +94,14 @@ final class PHPUnit
         $this->requireCoverageMetadata                         = $requireCoverageMetadata;
         $this->bootstrap                                       = $bootstrap;
         $this->processIsolation                                = $processIsolation;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->failOnDeprecation                               = $failOnDeprecation;
         $this->failOnEmptyTestSuite                            = $failOnEmptyTestSuite;
         $this->failOnIncomplete                                = $failOnIncomplete;
         $this->failOnNotice                                    = $failOnNotice;
-=======
-        $this->failOnEmptyTestSuite                            = $failOnEmptyTestSuite;
-        $this->failOnIncomplete                                = $failOnIncomplete;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->failOnEmptyTestSuite                            = $failOnEmptyTestSuite;
-        $this->failOnIncomplete                                = $failOnIncomplete;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->failOnRisky                                     = $failOnRisky;
         $this->failOnSkipped                                   = $failOnSkipped;
         $this->failOnWarning                                   = $failOnWarning;
         $this->stopOnDefect                                    = $stopOnDefect;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->stopOnDeprecation                               = $stopOnDeprecation;
         $this->stopOnError                                     = $stopOnError;
         $this->stopOnFailure                                   = $stopOnFailure;
@@ -157,19 +110,6 @@ final class PHPUnit
         $this->stopOnRisky                                     = $stopOnRisky;
         $this->stopOnSkipped                                   = $stopOnSkipped;
         $this->stopOnWarning                                   = $stopOnWarning;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->stopOnError                                     = $stopOnError;
-        $this->stopOnFailure                                   = $stopOnFailure;
-        $this->stopOnWarning                                   = $stopOnWarning;
-        $this->stopOnIncomplete                                = $stopOnIncomplete;
-        $this->stopOnRisky                                     = $stopOnRisky;
-        $this->stopOnSkipped                                   = $stopOnSkipped;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->extensionsDirectory                             = $extensionsDirectory;
         $this->beStrictAboutChangesToGlobalState               = $beStrictAboutChangesToGlobalState;
         $this->beStrictAboutOutputDuringTests                  = $beStrictAboutOutputDuringTests;
@@ -188,14 +128,8 @@ final class PHPUnit
         $this->backupStaticProperties                          = $backupStaticProperties;
         $this->registerMockObjectsFromTestArgumentsRecursively = $registerMockObjectsFromTestArgumentsRecursively;
         $this->testdoxPrinter                                  = $testdoxPrinter;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->controlGarbageCollector                         = $controlGarbageCollector;
         $this->numberOfTestsBeforeGarbageCollection            = $numberOfTestsBeforeGarbageCollection;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -327,17 +261,11 @@ final class PHPUnit
         return $this->processIsolation;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function failOnDeprecation(): bool
     {
         return $this->failOnDeprecation;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function failOnEmptyTestSuite(): bool
     {
         return $this->failOnEmptyTestSuite;
@@ -348,17 +276,11 @@ final class PHPUnit
         return $this->failOnIncomplete;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function failOnNotice(): bool
     {
         return $this->failOnNotice;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function failOnRisky(): bool
     {
         return $this->failOnRisky;
@@ -379,17 +301,11 @@ final class PHPUnit
         return $this->stopOnDefect;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function stopOnDeprecation(): bool
     {
         return $this->stopOnDeprecation;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function stopOnError(): bool
     {
         return $this->stopOnError;
@@ -400,36 +316,16 @@ final class PHPUnit
         return $this->stopOnFailure;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function stopOnWarning(): bool
-    {
-        return $this->stopOnWarning;
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function stopOnIncomplete(): bool
     {
         return $this->stopOnIncomplete;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function stopOnNotice(): bool
     {
         return $this->stopOnNotice;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function stopOnRisky(): bool
     {
         return $this->stopOnRisky;
@@ -440,17 +336,11 @@ final class PHPUnit
         return $this->stopOnSkipped;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function stopOnWarning(): bool
     {
         return $this->stopOnWarning;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @psalm-assert-if-true !null $this->extensionsDirectory
      */
@@ -460,14 +350,8 @@ final class PHPUnit
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-return non-empty-string
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws Exception
      */
     public function extensionsDirectory(): string
@@ -569,15 +453,9 @@ final class PHPUnit
         return $this->backupStaticProperties;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @deprecated
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerMockObjectsFromTestArgumentsRecursively(): bool
     {
         return $this->registerMockObjectsFromTestArgumentsRecursively;
@@ -587,8 +465,6 @@ final class PHPUnit
     {
         return $this->testdoxPrinter;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     public function controlGarbageCollector(): bool
     {
@@ -599,8 +475,4 @@ final class PHPUnit
     {
         return $this->numberOfTestsBeforeGarbageCollection;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

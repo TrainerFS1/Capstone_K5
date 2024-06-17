@@ -287,13 +287,7 @@ class PrettyPageHandler extends Handler
         $vars["tables"] = array_merge($extraTables, $vars["tables"]);
 
         $plainTextHandler = new PlainTextHandler();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $plainTextHandler->setRun($this->getRun());
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $plainTextHandler->setException($this->getException());
         $plainTextHandler->setInspector($this->getInspector());
         $vars["preface"] = "<!--\n\n\n" .  $this->templateHelper->escape($plainTextHandler->generateResponse()) . "\n\n\n\n\n\n\n\n\n\n\n-->";
@@ -311,15 +305,7 @@ class PrettyPageHandler extends Handler
      */
     protected function getExceptionFrames()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $frames = $this->getInspector()->getFrames($this->getRun()->getFrameFilters());
-=======
-        $frames = $this->getInspector()->getFrames();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $frames = $this->getInspector()->getFrames();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($this->getApplicationPaths()) {
             foreach ($frames as $frame) {
@@ -368,14 +354,6 @@ class PrettyPageHandler extends Handler
      * will be flattened with `print_r`.
      *
      * @param string $label
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @param array  $data
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param array  $data
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return static
      */
@@ -405,15 +383,7 @@ class PrettyPageHandler extends Handler
             throw new InvalidArgumentException('Expecting callback argument to be callable');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->extraTables[$label] = function (\Whoops\Inspector\InspectorInterface $inspector = null) use ($callback) {
-=======
-        $this->extraTables[$label] = function (\Whoops\Exception\Inspector $inspector = null) use ($callback) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->extraTables[$label] = function (\Whoops\Exception\Inspector $inspector = null) use ($callback) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             try {
                 $result = call_user_func($callback, $inspector);
 
@@ -785,23 +755,9 @@ class PrettyPageHandler extends Handler
     /**
      * Set the application paths.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      */
     public function setApplicationPaths(array $applicationPaths)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param array $applicationPaths
-     *
-     * @return void
-     */
-    public function setApplicationPaths($applicationPaths)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->applicationPaths = $applicationPaths;
     }

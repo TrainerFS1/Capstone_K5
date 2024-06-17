@@ -4,25 +4,12 @@ namespace Illuminate\Validation;
 
 use Illuminate\Contracts\Validation\Rule as RuleContract;
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Translation\CreatesPotentiallyTranslatedStrings;
 
 class ClosureValidationRule implements RuleContract, ValidatorAwareRule
 {
     use CreatesPotentiallyTranslatedStrings;
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use Illuminate\Translation\PotentiallyTranslatedString;
-
-class ClosureValidationRule implements RuleContract, ValidatorAwareRule
-{
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The callback that validates the attribute.
      *
@@ -77,15 +64,7 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
             $this->failed = true;
 
             return $this->pendingPotentiallyTranslatedString($attribute, $message);
-<<<<<<< HEAD
-<<<<<<< HEAD
         }, $this->validator);
-=======
-        });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return ! $this->failed;
     }
@@ -112,61 +91,4 @@ class ClosureValidationRule implements RuleContract, ValidatorAwareRule
 
         return $this;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Create a pending potentially translated string.
-     *
-     * @param  string  $attribute
-     * @param  ?string  $message
-     * @return \Illuminate\Translation\PotentiallyTranslatedString
-     */
-    protected function pendingPotentiallyTranslatedString($attribute, $message)
-    {
-        $destructor = $message === null
-            ? fn ($message) => $this->messages[] = $message
-            : fn ($message) => $this->messages[$attribute] = $message;
-
-        return new class($message ?? $attribute, $this->validator->getTranslator(), $destructor) extends PotentiallyTranslatedString
-        {
-            /**
-             * The callback to call when the object destructs.
-             *
-             * @var \Closure
-             */
-            protected $destructor;
-
-            /**
-             * Create a new pending potentially translated string.
-             *
-             * @param  string  $message
-             * @param  \Illuminate\Contracts\Translation\Translator  $translator
-             * @param  \Closure  $destructor
-             */
-            public function __construct($message, $translator, $destructor)
-            {
-                parent::__construct($message, $translator);
-
-                $this->destructor = $destructor;
-            }
-
-            /**
-             * Handle the object's destruction.
-             *
-             * @return void
-             */
-            public function __destruct()
-            {
-                ($this->destructor)($this->toString());
-            }
-        };
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

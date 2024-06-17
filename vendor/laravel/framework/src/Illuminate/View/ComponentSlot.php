@@ -3,13 +3,7 @@
 namespace Illuminate\View;
 
 use Illuminate\Contracts\Support\Htmlable;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use InvalidArgumentException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class ComponentSlot implements Htmlable
 {
@@ -85,8 +79,6 @@ class ComponentSlot implements Htmlable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Determine if the slot has non-comment content.
      *
      * @param  callable|string|null  $callable
@@ -106,10 +98,6 @@ class ComponentSlot implements Htmlable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the slot's HTML string.
      *
      * @return string

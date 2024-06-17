@@ -9,13 +9,7 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function Termwind\terminal;
 
 #[AsCommand(name: 'serve')]
@@ -63,16 +57,10 @@ class ServeCommand extends Command
      */
     public static $passthroughVariables = [
         'APP_ENV',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'HERD_PHP_81_INI_SCAN_DIR',
         'HERD_PHP_82_INI_SCAN_DIR',
         'HERD_PHP_83_INI_SCAN_DIR',
         'IGNITION_LOCAL_SITES_PATH',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'LARAVEL_SAIL',
         'PATH',
         'PHP_CLI_SERVER_WORKERS',
@@ -155,8 +143,6 @@ class ServeCommand extends Command
             return in_array($key, static::$passthroughVariables) ? [$key => $value] : [$key => false];
         })->all());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->trap(fn () => [SIGTERM, SIGINT, SIGHUP, SIGUSR1, SIGUSR2, SIGQUIT], function ($signal) use ($process) {
             if ($process->isRunning()) {
                 $process->stop(10, $signal);
@@ -165,10 +151,6 @@ class ServeCommand extends Command
             exit;
         });
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $process->start($this->handleProcessOutput());
 
         return $process;
@@ -230,8 +212,6 @@ class ServeCommand extends Command
      */
     protected function getHostAndPort()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (preg_match('/(\[.*\]):?([0-9]+)?/', $this->input->getOption('host'), $matches) !== false) {
             return [
                 $matches[1] ?? $this->input->getOption('host'),
@@ -239,10 +219,6 @@ class ServeCommand extends Command
             ];
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $hostParts = explode(':', $this->input->getOption('host'));
 
         return [
@@ -294,24 +270,12 @@ class ServeCommand extends Command
                 $this->requestsPool[$requestPort][1] = trim(explode('[200]: GET', $line)[1]);
             } elseif (str($line)->contains(' Closing')) {
                 $requestPort = $this->getRequestPortFromLine($line);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 if (empty($this->requestsPool[$requestPort])) {
                     return;
                 }
 
                 [$startDate, $file] = $this->requestsPool[$requestPort];
-=======
-                $request = $this->requestsPool[$requestPort];
-
-                [$startDate, $file] = $request;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $request = $this->requestsPool[$requestPort];
-
-                [$startDate, $file] = $request;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 $formattedStartedAt = $startDate->format('Y-m-d H:i:s');
 
@@ -334,8 +298,6 @@ class ServeCommand extends Command
             } elseif (str($line)->contains(['Closed without sending a request'])) {
                 // ...
             } elseif (! empty($line)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $position = strpos($line, '] ');
 
                 if ($position !== false) {
@@ -343,14 +305,6 @@ class ServeCommand extends Command
                 }
 
                 $this->components->warn($line);
-=======
-                $warning = explode('] ', $line);
-                $this->components->warn(count($warning) > 1 ? $warning[1] : $warning[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $warning = explode('] ', $line);
-                $this->components->warn(count($warning) > 1 ? $warning[1] : $warning[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         });
     }
@@ -367,14 +321,8 @@ class ServeCommand extends Command
             ? '/^\[\d+]\s\[([a-zA-Z0-9: ]+)\]/'
             : '/^\[([^\]]+)\]/';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $line = str_replace('  ', ' ', $line);
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         preg_match($regex, $line, $matches);
 
         return Carbon::createFromFormat('D M d H:i:s Y', $matches[1]);

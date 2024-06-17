@@ -3,13 +3,7 @@
 namespace Illuminate\Database\Query\Grammars;
 
 use Illuminate\Database\Query\Builder;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Query\JoinLateralClause;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
@@ -331,8 +325,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile an insert ignore statement using a subquery into SQL.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -346,10 +338,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Compile an insert and get ID statement into SQL.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -423,8 +411,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Compile a "lateral join" clause.
      *
      * @param  \Illuminate\Database\Query\JoinLateralClause  $join
@@ -437,10 +423,6 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Prepares a JSON column being updated using the JSONB_SET function.
      *
      * @param  string  $key
@@ -742,8 +724,6 @@ class PostgresGrammar extends Grammar
 
         return [$attribute];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Substitute the given bindings into the given raw SQL query.
@@ -766,8 +746,4 @@ class PostgresGrammar extends Grammar
 
         return $query;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

@@ -36,15 +36,7 @@ final class Psr4DirectoryLoader extends Loader implements DirectoryAwareLoaderIn
     /**
      * @param array{path: string, namespace: string} $resource
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function load(mixed $resource, ?string $type = null): ?RouteCollection
-=======
-    public function load(mixed $resource, string $type = null): ?RouteCollection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function load(mixed $resource, string $type = null): ?RouteCollection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $path = $this->locator->locate($resource['path'], $this->currentDirectory);
         if (!is_dir($path)) {
@@ -54,15 +46,7 @@ final class Psr4DirectoryLoader extends Loader implements DirectoryAwareLoaderIn
         return $this->loadFromDirectory($path, trim($resource['namespace'], '\\'));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function supports(mixed $resource, ?string $type = null): bool
-=======
-    public function supports(mixed $resource, string $type = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function supports(mixed $resource, string $type = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return ('attribute' === $type || 'annotation' === $type) && \is_array($resource) && isset($resource['path'], $resource['namespace']);
     }
@@ -82,29 +66,11 @@ final class Psr4DirectoryLoader extends Loader implements DirectoryAwareLoaderIn
         $files = iterator_to_array(new \RecursiveIteratorIterator(
             new \RecursiveCallbackFilterIterator(
                 new \RecursiveDirectoryIterator($directory, \FilesystemIterator::SKIP_DOTS | \FilesystemIterator::FOLLOW_SYMLINKS),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 fn (\SplFileInfo $current) => !str_starts_with($current->getBasename(), '.')
             ),
             \RecursiveIteratorIterator::SELF_FIRST
         ));
         usort($files, fn (\SplFileInfo $a, \SplFileInfo $b) => (string) $a > (string) $b ? 1 : -1);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                function (\SplFileInfo $current) {
-                    return !str_starts_with($current->getBasename(), '.');
-                }
-            ),
-            \RecursiveIteratorIterator::SELF_FIRST
-        ));
-        usort($files, function (\SplFileInfo $a, \SplFileInfo $b) {
-            return (string) $a > (string) $b ? 1 : -1;
-        });
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         /** @var \SplFileInfo $file */
         foreach ($files as $file) {

@@ -16,8 +16,6 @@ final class ReedSolomonCodec
 {
     /**
      * Symbol size in bits.
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
     private int $symbolSize;
 
@@ -50,104 +48,27 @@ final class ReedSolomonCodec
      * Padding bytes at front of shortened block.
      */
     private int $padding;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     *
-     * @var int
-     */
-    private $symbolSize;
-
-    /**
-     * Block size in symbols.
-     *
-     * @var int
-     */
-    private $blockSize;
-
-    /**
-     * First root of RS code generator polynomial, index form.
-     *
-     * @var int
-     */
-    private $firstRoot;
-
-    /**
-     * Primitive element to generate polynomial roots, index form.
-     *
-     * @var int
-     */
-    private $primitive;
-
-    /**
-     * Prim-th root of 1, index form.
-     *
-     * @var int
-     */
-    private $iPrimitive;
-
-    /**
-     * RS code generator polynomial degree (number of roots).
-     *
-     * @var int
-     */
-    private $numRoots;
-
-    /**
-     * Padding bytes at front of shortened block.
-     *
-     * @var int
-     */
-    private $padding;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Log lookup table.
      *
      * @var SplFixedArray
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private SplFixedArray $alphaTo;
-=======
-    private $alphaTo;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $alphaTo;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Anti-Log lookup table.
      *
      * @var SplFixedArray
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private SplFixedArray $indexOf;
-=======
-    private $indexOf;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $indexOf;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Generator polynomial.
      *
      * @var SplFixedArray
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private SplFixedArray $generatorPoly;
-=======
-    private $generatorPoly;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $generatorPoly;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @throws InvalidArgumentException if symbol size ist not between 0 and 8
@@ -287,15 +208,7 @@ final class ReedSolomonCodec
     /**
      * Decodes received data.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function decode(SplFixedArray $data, ?SplFixedArray $erasures = null) : ?int
-=======
-    public function decode(SplFixedArray $data, SplFixedArray $erasures = null) : ?int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function decode(SplFixedArray $data, SplFixedArray $erasures = null) : ?int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         // This speeds up the initialization a bit.
         $numRootsPlusOne = SplFixedArray::fromArray(array_fill(0, $this->numRoots + 1, 0), false);

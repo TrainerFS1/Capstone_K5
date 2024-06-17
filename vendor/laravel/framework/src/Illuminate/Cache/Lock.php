@@ -5,13 +5,7 @@ namespace Illuminate\Cache;
 use Illuminate\Contracts\Cache\Lock as LockContract;
 use Illuminate\Contracts\Cache\LockTimeoutException;
 use Illuminate\Support\InteractsWithTime;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Sleep;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Str;
 
 abstract class Lock implements LockContract
@@ -121,15 +115,7 @@ abstract class Lock implements LockContract
         $starting = $this->currentTime();
 
         while (! $this->acquire()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             Sleep::usleep($this->sleepMilliseconds * 1000);
-=======
-            usleep($this->sleepMilliseconds * 1000);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            usleep($this->sleepMilliseconds * 1000);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if ($this->currentTime() - $seconds >= $starting) {
                 throw new LockTimeoutException;
@@ -162,15 +148,7 @@ abstract class Lock implements LockContract
      *
      * @return bool
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function isOwnedByCurrentProcess()
-=======
-    protected function isOwnedByCurrentProcess()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function isOwnedByCurrentProcess()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->getCurrentOwner() === $this->owner;
     }

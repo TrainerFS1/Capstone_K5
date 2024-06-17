@@ -30,25 +30,11 @@ class AsEnumArrayObject implements Castable
 
             public function get($model, $key, $value, $attributes)
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if (! isset($attributes[$key])) {
                     return;
                 }
 
                 $data = Json::decode($attributes[$key]);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                if (! isset($attributes[$key]) || is_null($attributes[$key])) {
-                    return;
-                }
-
-                $data = json_decode($attributes[$key], true);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 if (! is_array($data)) {
                     return;
@@ -75,15 +61,7 @@ class AsEnumArrayObject implements Castable
                     $storable[] = $this->getStorableEnumValue($enum);
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return [$key => Json::encode($storable)];
-=======
-                return [$key => json_encode($storable)];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return [$key => json_encode($storable)];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             public function serialize($model, string $key, $value, array $attributes)

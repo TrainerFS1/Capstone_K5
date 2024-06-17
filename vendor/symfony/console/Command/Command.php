@@ -111,15 +111,7 @@ class Command
      *
      * @throws LogicException When the command name is empty
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?string $name = null)
-=======
-    public function __construct(string $name = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $name = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->definition = new InputDefinition();
 
@@ -149,32 +141,18 @@ class Command
      * Ignores validation errors.
      *
      * This is mainly useful for the help command.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function ignoreValidationErrors()
     {
         $this->ignoreValidationErrors = true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
     public function setApplication(?Application $application = null)
-=======
-    public function setApplication(Application $application = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setApplication(Application $application = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -189,15 +167,9 @@ class Command
         $this->fullDefinition = null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setHelperSet(HelperSet $helperSet)
     {
         $this->helperSet = $helperSet;
@@ -234,14 +206,8 @@ class Command
 
     /**
      * Configures the current command.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function configure()
     {
@@ -272,14 +238,8 @@ class Command
      * This method is executed before the InputDefinition is validated.
      * This means that this is the only place where the command can
      * interactively ask for values of missing required arguments.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function interact(InputInterface $input, OutputInterface $output)
     {
@@ -294,14 +254,8 @@ class Command
      *
      * @see InputInterface::bind()
      * @see InputInterface::validate()
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function initialize(InputInterface $input, OutputInterface $output)
     {
@@ -438,15 +392,7 @@ class Command
      *
      * @internal
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function mergeApplicationDefinition(bool $mergeArgs = true): void
-=======
-    public function mergeApplicationDefinition(bool $mergeArgs = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function mergeApplicationDefinition(bool $mergeArgs = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $this->application) {
             return;
@@ -514,15 +460,7 @@ class Command
      *
      * @throws InvalidArgumentException When argument mode is not valid
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function addArgument(string $name, ?int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
-=======
-    public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $suggestedValues = 5 <= \func_num_args() ? func_get_arg(4) : [];
         if (!\is_array($suggestedValues) && !$suggestedValues instanceof \Closure) {
@@ -546,15 +484,7 @@ class Command
      *
      * @throws InvalidArgumentException If option mode is invalid or incompatible
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function addOption(string $name, string|array|null $shortcut = null, ?int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
-=======
-    public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $suggestedValues = 6 <= \func_num_args() ? func_get_arg(5) : [];
         if (!\is_array($suggestedValues) && !$suggestedValues instanceof \Closure) {
@@ -786,15 +716,7 @@ class Command
      *
      * @throws InvalidArgumentException When the name is invalid
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function validateName(string $name): void
-=======
-    private function validateName(string $name)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function validateName(string $name)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!preg_match('/^[^\:]++(\:[^\:]++)*$/', $name)) {
             throw new InvalidArgumentException(sprintf('Command name "%s" is invalid.', $name));

@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 6.4
 ---
 
@@ -19,10 +17,6 @@ CHANGELOG
  * Add `ProgressBar::setPlaceholderFormatter` to set a placeholder attached to a instance, instead of being global.
  * Add `ReStructuredTextDescriptor`
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 6.2
 ---
 

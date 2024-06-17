@@ -125,15 +125,7 @@ class Connection implements ServerInfoAwareConnection
     /**
      * Begin a new database transaction.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return bool
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function beginTransaction()
     {
@@ -143,15 +135,7 @@ class Connection implements ServerInfoAwareConnection
     /**
      * Commit a database transaction.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return bool
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function commit()
     {
@@ -161,15 +145,7 @@ class Connection implements ServerInfoAwareConnection
     /**
      * Rollback a database transaction.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return bool
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function rollBack()
     {

@@ -28,13 +28,7 @@ abstract class AbstractCloner implements ClonerInterface
         'Symfony\Component\VarDumper\Caster\CutArrayStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castCutArray'],
         'Symfony\Component\VarDumper\Caster\ConstStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castStub'],
         'Symfony\Component\VarDumper\Caster\EnumStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castEnum'],
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Symfony\Component\VarDumper\Caster\ScalarStub' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'castScalar'],
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         'Fiber' => ['Symfony\Component\VarDumper\Caster\FiberCaster', 'castFiber'],
 
@@ -101,13 +95,7 @@ abstract class AbstractCloner implements ClonerInterface
         'Symfony\Component\VarDumper\Caster\TraceStub' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castTraceStub'],
         'Symfony\Component\VarDumper\Caster\FrameStub' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castFrameStub'],
         'Symfony\Component\VarDumper\Cloner\AbstractCloner' => ['Symfony\Component\VarDumper\Caster\StubCaster', 'cutInternals'],
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Symfony\Component\ErrorHandler\Exception\FlattenException' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castFlattenException'],
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'Symfony\Component\ErrorHandler\Exception\SilencedErrorContext' => ['Symfony\Component\VarDumper\Caster\ExceptionCaster', 'castSilencedErrorContext'],
 
         'Imagine\Image\ImageInterface' => ['Symfony\Component\VarDumper\Caster\ImagineCaster', 'castImage'],
@@ -139,23 +127,11 @@ abstract class AbstractCloner implements ClonerInterface
         'SplObjectStorage' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castObjectStorage'],
         'SplPriorityQueue' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castHeap'],
         'OuterIterator' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castOuterIterator'],
-<<<<<<< HEAD
-<<<<<<< HEAD
         'WeakMap' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakMap'],
         'WeakReference' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakReference'],
 
         'Redis' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
         'Relay\Relay' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
-=======
-        'WeakReference' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakReference'],
-
-        'Redis' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        'WeakReference' => ['Symfony\Component\VarDumper\Caster\SplCaster', 'castWeakReference'],
-
-        'Redis' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedis'],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'RedisArray' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedisArray'],
         'RedisCluster' => ['Symfony\Component\VarDumper\Caster\RedisCaster', 'castRedisCluster'],
 
@@ -243,15 +219,7 @@ abstract class AbstractCloner implements ClonerInterface
      *
      * @see addCasters
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?array $casters = null)
-=======
-    public function __construct(array $casters = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(array $casters = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->addCasters($casters ?? static::$defaultCasters);
     }
@@ -265,14 +233,8 @@ abstract class AbstractCloner implements ClonerInterface
      * see e.g. static::$defaultCasters.
      *
      * @param callable[] $casters A map of casters
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addCasters(array $casters)
     {
@@ -283,14 +245,8 @@ abstract class AbstractCloner implements ClonerInterface
 
     /**
      * Sets the maximum number of items to clone past the minimum depth in nested structures.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setMaxItems(int $maxItems)
     {
@@ -299,14 +255,8 @@ abstract class AbstractCloner implements ClonerInterface
 
     /**
      * Sets the maximum cloned length for strings.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setMaxString(int $maxString)
     {
@@ -316,14 +266,8 @@ abstract class AbstractCloner implements ClonerInterface
     /**
      * Sets the minimum tree depth where we are guaranteed to clone all the items.  After this
      * depth is reached, only setMaxItems items will be cloned.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setMinDepth(int $minDepth)
     {

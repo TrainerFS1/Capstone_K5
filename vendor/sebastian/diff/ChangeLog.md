@@ -2,8 +2,6 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## [5.1.1] - 2024-03-02
 
 ### Changed
@@ -49,12 +47,6 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 * [#115](https://github.com/sebastianbergmann/diff/pull/115): `Parser::parseFileDiff()` does not handle diffs correctly that only add lines or only remove lines
 
 ## [5.0.0] - 2023-02-03
-=======
-## [5.0.0] - 2022-02-03
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-## [5.0.0] - 2022-02-03
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 ### Changed
 
@@ -138,17 +130,11 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * This component is no longer supported on PHP 5.6
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [5.1.1]: https://github.com/sebastianbergmann/diff/compare/5.1.0...5.1.1
 [5.1.0]: https://github.com/sebastianbergmann/diff/compare/5.0.3...5.1.0
 [5.0.3]: https://github.com/sebastianbergmann/diff/compare/5.0.2...5.0.3
 [5.0.2]: https://github.com/sebastianbergmann/diff/compare/5.0.1...5.0.2
 [5.0.1]: https://github.com/sebastianbergmann/diff/compare/5.0.0...5.0.1
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 [5.0.0]: https://github.com/sebastianbergmann/diff/compare/4.0.4...5.0.0
 [4.0.4]: https://github.com/sebastianbergmann/diff/compare/4.0.3...4.0.4
 [4.0.3]: https://github.com/sebastianbergmann/diff/compare/4.0.2...4.0.3

@@ -72,15 +72,7 @@ class RedisHandler extends AbstractProcessingHandler
             $mode = defined('Redis::MULTI') ? Redis::MULTI : 1;
             $this->redisClient->multi($mode)
                 ->rPush($this->redisKey, $record->formatted)
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ->lTrim($this->redisKey, -$this->capSize, -1)
-=======
-                ->ltrim($this->redisKey, -$this->capSize, -1)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ->ltrim($this->redisKey, -$this->capSize, -1)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 ->exec();
         } else {
             $redisKey = $this->redisKey;

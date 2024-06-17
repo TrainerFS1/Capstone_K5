@@ -214,21 +214,8 @@ class Docblock
      *
      * @return array|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function tag(string $tag): ?array
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function tag(string $tag)
-    {
-        // TODO: Add proper null-type return values once the lowest PHP version supported is 7.1
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return $this->hasTag($tag) ? $this->tags[$tag] : null;
     }
 

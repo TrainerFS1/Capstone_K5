@@ -3,15 +3,7 @@
 namespace Illuminate\Database\Eloquent\Relations\Concerns;
 
 use BackedEnum;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use InvalidArgumentException;
-=======
-use Doctrine\Instantiator\Exception\InvalidArgumentException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Doctrine\Instantiator\Exception\InvalidArgumentException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use UnitEnum;
 
 trait InteractsWithDictionary
@@ -22,15 +14,7 @@ trait InteractsWithDictionary
      * @param  mixed  $attribute
      * @return mixed
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @throws \InvalidArgumentException
-=======
-     * @throws \Doctrine\Instantiator\Exception\InvalidArgumentException
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \Doctrine\Instantiator\Exception\InvalidArgumentException
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function getDictionaryKey($attribute)
     {
@@ -39,17 +23,7 @@ trait InteractsWithDictionary
                 return $attribute->__toString();
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($attribute instanceof UnitEnum) {
-=======
-            if (function_exists('enum_exists') &&
-                $attribute instanceof UnitEnum) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if (function_exists('enum_exists') &&
-                $attribute instanceof UnitEnum) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $attribute instanceof BackedEnum ? $attribute->value : $attribute->name;
             }
 

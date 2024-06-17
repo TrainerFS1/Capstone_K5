@@ -4,24 +4,11 @@ namespace Illuminate\Queue\Console;
 
 use Illuminate\Bus\BatchRepository;
 use Illuminate\Console\Command;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Contracts\Console\Isolatable;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'queue:retry-batch')]
 class RetryBatchCommand extends Command implements Isolatable
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use Symfony\Component\Console\Attribute\AsCommand;
-
-#[AsCommand(name: 'queue:retry-batch')]
-class RetryBatchCommand extends Command
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * The console command signature.
@@ -64,8 +51,6 @@ class RetryBatchCommand extends Command
 
         $this->newLine();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Get the custom mutex name for an isolated command.
@@ -76,8 +61,4 @@ class RetryBatchCommand extends Command
     {
         return $this->argument('id');
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

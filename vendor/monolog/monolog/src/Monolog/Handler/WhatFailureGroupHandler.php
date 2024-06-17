@@ -33,15 +33,7 @@ class WhatFailureGroupHandler extends GroupHandler
 
         foreach ($this->handlers as $handler) {
             try {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $handler->handle(clone $record);
-=======
-                $handler->handle($record);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $handler->handle($record);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } catch (Throwable) {
                 // What failure?
             }
@@ -65,15 +57,7 @@ class WhatFailureGroupHandler extends GroupHandler
 
         foreach ($this->handlers as $handler) {
             try {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $handler->handleBatch(array_map(fn ($record) => clone $record, $records));
-=======
-                $handler->handleBatch($records);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $handler->handleBatch($records);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } catch (Throwable) {
                 // What failure?
             }

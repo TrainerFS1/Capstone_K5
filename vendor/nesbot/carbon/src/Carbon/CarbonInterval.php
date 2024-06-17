@@ -15,13 +15,7 @@ use Carbon\Exceptions\BadFluentConstructorException;
 use Carbon\Exceptions\BadFluentSetterException;
 use Carbon\Exceptions\InvalidCastException;
 use Carbon\Exceptions\InvalidIntervalException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Carbon\Exceptions\OutOfRangeException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Carbon\Exceptions\ParseErrorException;
 use Carbon\Exceptions\UnitNotConfiguredException;
 use Carbon\Exceptions\UnknownGetterException;
@@ -35,8 +29,6 @@ use Carbon\Traits\Options;
 use Carbon\Traits\ToStringFormat;
 use Closure;
 use DateInterval;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use DateMalformedIntervalStringException;
 use DateTimeInterface;
 use DateTimeZone;
@@ -45,18 +37,6 @@ use InvalidArgumentException;
 use ReflectionException;
 use ReturnTypeWillChange;
 use RuntimeException;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use DateTimeInterface;
-use DateTimeZone;
-use Exception;
-use ReflectionException;
-use ReturnTypeWillChange;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
 
 /**
@@ -270,17 +250,11 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
     private static $flipCascadeFactors;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @var bool
      */
     private static $floatSettersEnabled = false;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The registered macros.
      *
      * @var array
@@ -381,8 +355,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         static::$cascadeFactors = $cascadeFactors;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * This option allow you to opt-in for the Carbon 3 behavior where float
      * values will no longer be cast to integer (so truncated).
@@ -396,10 +368,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         self::$floatSettersEnabled = $floatSettersEnabled;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ///////////////////////////////////////////////////////////////////
     //////////////////////////// CONSTRUCTORS /////////////////////////
     ///////////////////////////////////////////////////////////////////
@@ -408,8 +376,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      * Create a new CarbonInterval instance.
      *
      * @param Closure|DateInterval|string|int|null $years
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param int|float|null                       $months
      * @param int|float|null                       $weeks
      * @param int|float|null                       $days
@@ -417,20 +383,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      * @param int|float|null                       $minutes
      * @param int|float|null                       $seconds
      * @param int|float|null                       $microseconds
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param int|null                             $months
-     * @param int|null                             $weeks
-     * @param int|null                             $days
-     * @param int|null                             $hours
-     * @param int|null                             $minutes
-     * @param int|null                             $seconds
-     * @param int|null                             $microseconds
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws Exception when the interval_spec (passed as $years) cannot be parsed as an interval.
      */
@@ -450,19 +402,9 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         }
 
         $spec = $years;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $isStringSpec = (\is_string($spec) && !preg_match('/^[\d.]/', $spec));
 
         if (!$isStringSpec || (float) $years) {
-=======
-
-        if (!\is_string($spec) || (float) $years || preg_match('/^[\d.]/', $years)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-
-        if (!\is_string($spec) || (float) $years || preg_match('/^[\d.]/', $years)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $spec = static::PERIOD_PREFIX;
 
             $spec .= $years > 0 ? $years.static::PERIOD_YEARS : '';
@@ -487,8 +429,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             parent::__construct($spec);
         } catch (Throwable $exception) {
@@ -557,12 +497,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
                 throw $secondException instanceof OutOfRangeException ? $secondException : $exception;
             }
         }
-=======
-        parent::__construct($spec);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        parent::__construct($spec);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($microseconds !== null) {
             $this->f = $microseconds / Carbon::MICROSECONDS_PER_SECOND;
@@ -839,8 +773,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Evaluate the PHP generated by var_export() and recreate the exported CarbonInterval instance.
      *
      * @param array $dump data as exported by var_export()
@@ -858,10 +790,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Return the current context from inside a macro callee or a new one if static.
      *
      * @return static
@@ -1131,8 +1059,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      * set the $days field.
      *
      * @param DateInterval $interval
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param bool         $skipCopy set to true to return the passed object
      *                               (without copying it) if it's already of the
      *                               current class
@@ -1145,18 +1071,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             return $interval;
         }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     *
-     * @return static
-     */
-    public static function instance(DateInterval $interval, array $skip = [])
-    {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return self::castIntervalToClass($interval, static::class, $skip);
     }
 
@@ -1168,8 +1082,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      *
      * @param mixed|int|DateInterval|string|Closure|null $interval interval or number of the given $unit
      * @param string|null                                $unit     if specified, $interval must be an integer
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param bool                                       $skipCopy set to true to return the passed object
      *                                                             (without copying it) if it's already of the
      *                                                             current class
@@ -1177,32 +1089,13 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      * @return static|null
      */
     public static function make($interval, $unit = null, bool $skipCopy = false)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     *
-     * @return static|null
-     */
-    public static function make($interval, $unit = null)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($unit) {
             $interval = "$interval ".Carbon::pluralUnit($unit);
         }
 
         if ($interval instanceof DateInterval) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return static::instance($interval, [], $skipCopy);
-=======
-            return static::instance($interval);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return static::instance($interval);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if ($interval instanceof Closure) {
@@ -1228,8 +1121,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             return static::fromString($interval);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         // @codeCoverageIgnoreStart
         try {
             /** @var static $interval */
@@ -1238,14 +1129,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             return null;
         }
         // @codeCoverageIgnoreEnd
-=======
-        /** @var static $interval */
-        $interval = static::createFromDateString($interval);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        /** @var static $interval */
-        $interval = static::createFromDateString($interval);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return !$interval || $interval->isEmpty() ? null : $interval;
     }
@@ -1378,127 +1261,63 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         foreach ($properties as $key => $value) {
             switch (Carbon::singularUnit(rtrim($key, 'z'))) {
                 case 'year':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $this->y = $value;
                     $this->handleDecimalPart('year', $value, $this->y);
-=======
-                    $this->y = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->y = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'month':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $this->m = $value;
                     $this->handleDecimalPart('month', $value, $this->m);
-=======
-                    $this->m = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->m = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'week':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $days = $value * (int) static::getDaysPerWeek();
                     $this->assertSafeForInteger('days total (including weeks)', $days);
                     $this->d = $days;
                     $this->handleDecimalPart('day', $days, $this->d);
-=======
-                    $this->d = $value * (int) static::getDaysPerWeek();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->d = $value * (int) static::getDaysPerWeek();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'day':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $this->d = $value;
                     $this->handleDecimalPart('day', $value, $this->d);
-=======
-                    $this->d = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->d = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'daysexcludeweek':
                 case 'dayzexcludeweek':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $days = $this->weeks * (int) static::getDaysPerWeek() + $value;
                     $this->assertSafeForInteger('days total (including weeks)', $days);
                     $this->d = $days;
                     $this->handleDecimalPart('day', $days, $this->d);
-=======
-                    $this->d = $this->weeks * (int) static::getDaysPerWeek() + $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->d = $this->weeks * (int) static::getDaysPerWeek() + $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'hour':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $this->h = $value;
                     $this->handleDecimalPart('hour', $value, $this->h);
-=======
-                    $this->h = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->h = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'minute':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $this->i = $value;
                     $this->handleDecimalPart('minute', $value, $this->i);
-=======
-                    $this->i = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->i = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
                 case 'second':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $this->checkIntegerValue($key, $value);
                     $this->s = $value;
                     $this->handleDecimalPart('second', $value, $this->s);
-=======
-                    $this->s = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $this->s = $value;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
@@ -3158,8 +2977,6 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
                 return true;
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     private function checkIntegerValue(string $name, $value)
     {
@@ -3234,8 +3051,4 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             $this->add($unit, $floatValue - $base);
         }
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

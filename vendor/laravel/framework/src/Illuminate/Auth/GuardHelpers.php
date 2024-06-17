@@ -33,21 +33,7 @@ trait GuardHelpers
      */
     public function authenticate()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->user() ?? throw new AuthenticationException;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (! is_null($user = $this->user())) {
-            return $user;
-        }
-
-        throw new AuthenticationException;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -96,15 +82,7 @@ trait GuardHelpers
      * Set the current user.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setUser(AuthenticatableContract $user)
     {

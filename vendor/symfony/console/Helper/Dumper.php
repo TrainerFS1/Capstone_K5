@@ -26,15 +26,7 @@ final class Dumper
     private ?ClonerInterface $cloner;
     private \Closure $handler;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(OutputInterface $output, ?CliDumper $dumper = null, ?ClonerInterface $cloner = null)
-=======
-    public function __construct(OutputInterface $output, CliDumper $dumper = null, ClonerInterface $cloner = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(OutputInterface $output, CliDumper $dumper = null, ClonerInterface $cloner = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->output = $output;
         $this->dumper = $dumper;
@@ -48,29 +40,12 @@ final class Dumper
                 return rtrim($dumper->dump(($this->cloner ??= new VarCloner())->cloneVar($var)->withRefHandles(false), true));
             };
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->handler = fn ($var): string => match (true) {
                 null === $var => 'null',
                 true === $var => 'true',
                 false === $var => 'false',
                 \is_string($var) => '"'.$var.'"',
                 default => rtrim(print_r($var, true)),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $this->handler = function ($var): string {
-                return match (true) {
-                    null === $var => 'null',
-                    true === $var => 'true',
-                    false === $var => 'false',
-                    \is_string($var) => '"'.$var.'"',
-                    default => rtrim(print_r($var, true)),
-                };
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             };
         }
     }

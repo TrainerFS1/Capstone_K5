@@ -11,14 +11,8 @@
 
 namespace Symfony\Component\HttpKernel\DependencyInjection;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use ProxyManager\Proxy\LazyLoadingInterface;
 use Symfony\Component\VarExporter\LazyObjectInterface;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Contracts\Service\ResetInterface;
 
 /**
@@ -44,8 +38,6 @@ class ServicesResetter implements ResetInterface
         $this->resetMethods = $resetMethods;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function reset(): void
     {
         foreach ($this->resettableServices as $id => $service) {
@@ -57,16 +49,6 @@ class ServicesResetter implements ResetInterface
                 continue;
             }
 
-=======
-    public function reset()
-    {
-        foreach ($this->resettableServices as $id => $service) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function reset()
-    {
-        foreach ($this->resettableServices as $id => $service) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             foreach ((array) $this->resetMethods[$id] as $resetMethod) {
                 if ('?' === $resetMethod[0] && !method_exists($service, $resetMethod = substr($resetMethod, 1))) {
                     continue;

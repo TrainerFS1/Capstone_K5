@@ -31,15 +31,7 @@ final class Thresholds
     {
         if ($lowUpperBound > $highLowerBound) {
             throw new InvalidArgumentException(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 '$lowUpperBound must not be larger than $highLowerBound',
-=======
-                '$lowUpperBound must not be larger than $highLowerBound'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                '$lowUpperBound must not be larger than $highLowerBound'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 

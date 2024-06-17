@@ -6,13 +6,7 @@ use Closure;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Contracts\Auth\Factory as AuthFactory;
 use Illuminate\Contracts\Session\Middleware\AuthenticatesSessions;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Http\Request;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 class AuthenticateSession implements AuthenticatesSessions
 {
@@ -101,17 +95,9 @@ class AuthenticateSession implements AuthenticatesSessions
 
         $request->session()->flush();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         throw new AuthenticationException(
             'Unauthenticated.', [$this->auth->getDefaultDriver()], $this->redirectTo($request)
         );
-=======
-        throw new AuthenticationException('Unauthenticated.', [$this->auth->getDefaultDriver()]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        throw new AuthenticationException('Unauthenticated.', [$this->auth->getDefaultDriver()]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -123,8 +109,6 @@ class AuthenticateSession implements AuthenticatesSessions
     {
         return $this->auth;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Get the path the user should be redirected to when their session is not authenticated.
@@ -136,8 +120,4 @@ class AuthenticateSession implements AuthenticatesSessions
     {
         //
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

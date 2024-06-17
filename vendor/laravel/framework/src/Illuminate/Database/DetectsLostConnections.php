@@ -19,13 +19,7 @@ trait DetectsLostConnections
 
         return Str::contains($message, [
             'server has gone away',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'Server has gone away',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'no connection to the server',
             'Lost connection',
             'is dead or not enabled',
@@ -68,8 +62,6 @@ trait DetectsLostConnections
             'SQLSTATE[HY000] [2002] No such file or directory',
             'SSL: Operation timed out',
             'Reason: Server is in script upgrade mode. Only administrator can connect at this time.',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'Unknown $curl_error_code: 77',
             'SSL: Handshake timed out',
             'SQLSTATE[08006] [7] SSL error: sslv3 alert unexpected message',
@@ -81,10 +73,6 @@ trait DetectsLostConnections
             'SQLSTATE[HY000] [2002] A socket operation was attempted to an unreachable network',
             'SQLSTATE[HY000]: General error: 3989',
             'went away',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ]);
     }
 }

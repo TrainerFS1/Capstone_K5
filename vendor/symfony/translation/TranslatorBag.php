@@ -35,15 +35,7 @@ final class TranslatorBag implements TranslatorBagInterface
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getCatalogue(?string $locale = null): MessageCatalogueInterface
-=======
-    public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $locale || !isset($this->catalogues[$locale])) {
             $this->catalogues[$locale] = new MessageCatalogue($locale);
@@ -72,15 +64,7 @@ final class TranslatorBag implements TranslatorBagInterface
             $operation->moveMessagesToIntlDomainsIfPossible(AbstractOperation::NEW_BATCH);
             $newCatalogue = new MessageCatalogue($locale);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             foreach ($catalogue->getDomains() as $domain) {
-=======
-            foreach ($operation->getDomains() as $domain) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            foreach ($operation->getDomains() as $domain) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $newCatalogue->add($operation->getNewMessages($domain), $domain);
             }
 

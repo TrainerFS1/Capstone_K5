@@ -3,17 +3,9 @@
 namespace Illuminate\Support\Testing\Fakes;
 
 use Closure;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Events\ShouldDispatchAfterCommit;
-=======
-use Illuminate\Contracts\Events\Dispatcher;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Illuminate\Contracts\Events\Dispatcher;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
@@ -21,15 +13,7 @@ use Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 use ReflectionFunction;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class EventFake implements Dispatcher, Fake
-=======
-class EventFake implements Dispatcher
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class EventFake implements Dispatcher
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     use ForwardsCalls, ReflectsClosures;
 
@@ -38,15 +22,7 @@ class EventFake implements Dispatcher
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public $dispatcher;
-=======
-    protected $dispatcher;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $dispatcher;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The event types that should be intercepted instead of dispatched.
@@ -121,18 +97,10 @@ class EventFake implements Dispatcher
                     if (Str::contains($expectedListener, '@')) {
                         $normalizedListener = Str::parseCallback($expectedListener);
                     } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $normalizedListener = [
                             $expectedListener,
                             method_exists($expectedListener, 'handle') ? 'handle' : '__invoke',
                         ];
-=======
-                        $normalizedListener = [$expectedListener, 'handle'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $normalizedListener = [$expectedListener, 'handle'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     }
                 }
             }
@@ -331,15 +299,7 @@ class EventFake implements Dispatcher
         $name = is_object($event) ? get_class($event) : (string) $event;
 
         if ($this->shouldFakeEvent($name, $payload)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->fakeEvent($event, $name, func_get_args());
-=======
-            $this->events[$name][] = func_get_args();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->events[$name][] = func_get_args();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } else {
             return $this->dispatcher->dispatch($event, $payload, $halt);
         }
@@ -372,8 +332,6 @@ class EventFake implements Dispatcher
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Push the event onto the fake events array immediately or after the next database transaction.
      *
      * @param  string|object  $event
@@ -392,10 +350,6 @@ class EventFake implements Dispatcher
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine whether an event should be dispatched or not.
      *
      * @param  string  $eventName
@@ -443,15 +397,7 @@ class EventFake implements Dispatcher
      *
      * @param  string|object  $event
      * @param  mixed  $payload
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return mixed
-=======
-     * @return array|null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return array|null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function until($event, $payload = [])
     {

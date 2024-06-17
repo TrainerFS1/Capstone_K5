@@ -18,46 +18,17 @@ use Symfony\Component\Finder\Gitignore;
  */
 final class VcsIgnoredFilterIterator extends \FilterIterator
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private string $baseDir;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * @var string
-     */
-    private $baseDir;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var array<string, array{0: string, 1: string}|null>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private array $gitignoreFilesCache = [];
-=======
-    private $gitignoreFilesCache = [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $gitignoreFilesCache = [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @var array<string, bool>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private array $ignoredPathsCache = [];
-=======
-    private $ignoredPathsCache = [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $ignoredPathsCache = [];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param \Iterator<string, \SplFileInfo> $iterator
@@ -66,21 +37,9 @@ final class VcsIgnoredFilterIterator extends \FilterIterator
     {
         $this->baseDir = $this->normalizePath($baseDir);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ([$this->baseDir, ...$this->parentDirectoriesUpwards($this->baseDir)] as $directory) {
             if (@is_dir("{$directory}/.git")) {
                 $this->baseDir = $directory;
-=======
-        foreach ($this->parentDirectoriesUpwards($this->baseDir) as $parentDirectory) {
-            if (@is_dir("{$parentDirectory}/.git")) {
-                $this->baseDir = $parentDirectory;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        foreach ($this->parentDirectoriesUpwards($this->baseDir) as $parentDirectory) {
-            if (@is_dir("{$parentDirectory}/.git")) {
-                $this->baseDir = $parentDirectory;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 break;
             }
         }
@@ -164,19 +123,7 @@ final class VcsIgnoredFilterIterator extends \FilterIterator
     {
         return array_filter(
             $this->parentDirectoriesUpwards($from),
-<<<<<<< HEAD
-<<<<<<< HEAD
             static fn (string $directory): bool => str_starts_with($directory, $upTo)
-=======
-            static function (string $directory) use ($upTo): bool {
-                return str_starts_with($directory, $upTo);
-            }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            static function (string $directory) use ($upTo): bool {
-                return str_starts_with($directory, $upTo);
-            }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

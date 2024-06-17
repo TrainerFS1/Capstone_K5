@@ -15,15 +15,7 @@ use Iterator;
 /**
  * @template-implements Iterator<int, Metadata>
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
-=======
- * @internal This class is not covered by the backward compatibility promise for PHPUnit
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @internal This class is not covered by the backward compatibility promise for PHPUnit
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 final class MetadataCollectionIterator implements Iterator
 {

@@ -43,8 +43,6 @@ trait WithFaker
      */
     protected function makeFaker($locale = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (isset($this->app)) {
             $locale ??= $this->app->make('config')->get('app.faker_locale', Factory::DEFAULT_LOCALE);
 
@@ -54,19 +52,5 @@ trait WithFaker
         }
 
         return Factory::create($locale ?? Factory::DEFAULT_LOCALE);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $locale ??= config('app.faker_locale', Factory::DEFAULT_LOCALE);
-
-        if (isset($this->app) && $this->app->bound(Generator::class)) {
-            return $this->app->make(Generator::class, ['locale' => $locale]);
-        }
-
-        return Factory::create($locale);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

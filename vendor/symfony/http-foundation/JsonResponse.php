@@ -75,15 +75,7 @@ class JsonResponse extends Response
      *
      * @throws \InvalidArgumentException When the callback name is not valid
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setCallback(?string $callback = null): static
-=======
-    public function setCallback(string $callback = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setCallback(string $callback = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);

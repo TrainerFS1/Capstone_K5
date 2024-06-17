@@ -24,36 +24,13 @@ final class Registry
         return self::$instance ?? self::$instance = self::build();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private function __construct()
-    {
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static function build(): Parser
     {
         return new CachingParser(
             new ParserChain(
                 new AttributeParser,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 new AnnotationParser,
             ),
-=======
-                new AnnotationParser
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                new AnnotationParser
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 }

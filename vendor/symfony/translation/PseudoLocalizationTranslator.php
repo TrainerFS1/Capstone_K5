@@ -83,15 +83,7 @@ final class PseudoLocalizationTranslator implements TranslatorInterface
         $this->localizableHTMLAttributes = $options['localizable_html_attributes'] ?? [];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function trans(string $id, array $parameters = [], ?string $domain = null, ?string $locale = null): string
-=======
-    public function trans(string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function trans(string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $trans = '';
         $visibleText = '';
@@ -128,15 +120,7 @@ final class PseudoLocalizationTranslator implements TranslatorInterface
             return [[true, true, $originalTrans]];
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $html = mb_encode_numericentity($originalTrans, [0x80, 0x10FFFF, 0, 0x1FFFFF], mb_detect_encoding($originalTrans, null, true) ?: 'UTF-8');
-=======
-        $html = mb_encode_numericentity($originalTrans, [0x80, 0xFFFF, 0, 0xFFFF], mb_detect_encoding($originalTrans, null, true) ?: 'UTF-8');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $html = mb_encode_numericentity($originalTrans, [0x80, 0xFFFF, 0, 0xFFFF], mb_detect_encoding($originalTrans, null, true) ?: 'UTF-8');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $useInternalErrors = libxml_use_internal_errors(true);
 

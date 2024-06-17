@@ -37,8 +37,6 @@ class Processor
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Process the results of a tables query.
      *
      * @param  array  $results
@@ -128,14 +126,6 @@ class Processor
      *
      * @deprecated Will be removed in a future Laravel version.
      *
-=======
-     * Process the results of a column listing query.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Process the results of a column listing query.
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  array  $results
      * @return array
      */

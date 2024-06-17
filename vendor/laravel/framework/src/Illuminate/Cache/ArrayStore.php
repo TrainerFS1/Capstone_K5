@@ -3,13 +3,7 @@
 namespace Illuminate\Cache;
 
 use Illuminate\Contracts\Cache\LockProvider;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Carbon;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\InteractsWithTime;
 
 class ArrayStore extends TaggableStore implements LockProvider
@@ -64,15 +58,7 @@ class ArrayStore extends TaggableStore implements LockProvider
 
         $expiresAt = $item['expiresAt'] ?? 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($expiresAt !== 0 && (Carbon::now()->getPreciseTimestamp(3) / 1000) >= $expiresAt) {
-=======
-        if ($expiresAt !== 0 && $this->currentTime() > $expiresAt) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($expiresAt !== 0 && $this->currentTime() > $expiresAt) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->forget($key);
 
             return;
@@ -188,15 +174,7 @@ class ArrayStore extends TaggableStore implements LockProvider
      * Get the expiration time of the key.
      *
      * @param  int  $seconds
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return float
-=======
-     * @return int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return int
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function calculateExpiration($seconds)
     {
@@ -204,8 +182,6 @@ class ArrayStore extends TaggableStore implements LockProvider
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the UNIX timestamp, with milliseconds, for the given number of seconds in the future.
      *
      * @param  int  $seconds
@@ -214,21 +190,6 @@ class ArrayStore extends TaggableStore implements LockProvider
     protected function toTimestamp($seconds)
     {
         return $seconds > 0 ? (Carbon::now()->getPreciseTimestamp(3) / 1000) + $seconds : 0;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get the UNIX timestamp for the given number of seconds.
-     *
-     * @param  int  $seconds
-     * @return int
-     */
-    protected function toTimestamp($seconds)
-    {
-        return $seconds > 0 ? $this->availableAt($seconds) : 0;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

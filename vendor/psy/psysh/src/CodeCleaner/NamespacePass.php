@@ -86,8 +86,6 @@ class NamespacePass extends CodeCleanerPass
     private function setNamespace($namespace)
     {
         $this->namespace = $namespace;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->cleaner->setNamespace($namespace === null ? null : $this->getParts($namespace));
     }
 
@@ -99,11 +97,5 @@ class NamespacePass extends CodeCleanerPass
     protected function getParts(Name $name): array
     {
         return \method_exists($name, 'getParts') ? $name->getParts() : $name->parts;
-=======
-        $this->cleaner->setNamespace($namespace === null ? null : $namespace->parts);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->cleaner->setNamespace($namespace === null ? null : $namespace->parts);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

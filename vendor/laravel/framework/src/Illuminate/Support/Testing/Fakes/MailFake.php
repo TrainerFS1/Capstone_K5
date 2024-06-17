@@ -13,15 +13,7 @@ use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class MailFake implements Factory, Fake, Mailer, MailQueue
-=======
-class MailFake implements Factory, Mailer, MailQueue
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class MailFake implements Factory, Mailer, MailQueue
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     use ForwardsCalls, ReflectsClosures;
 
@@ -30,15 +22,7 @@ class MailFake implements Factory, Mailer, MailQueue
      *
      * @var MailManager
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public $manager;
-=======
-    protected $manager;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $manager;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The mailer currently being used to send a message.
@@ -241,8 +225,6 @@ class MailFake implements Factory, Mailer, MailQueue
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Assert the total number of mailables that were sent.
      *
      * @param  int  $count
@@ -293,10 +275,6 @@ class MailFake implements Factory, Mailer, MailQueue
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get all of the mailables matching a truth-test callback.
      *
      * @param  string|\Closure  $mailable

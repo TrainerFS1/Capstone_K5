@@ -16,13 +16,7 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Util;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use League\CommonMark\Exception\InvalidArgumentException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use League\CommonMark\Extension\CommonMark\Node\Block\HtmlBlock;
 
 /**
@@ -61,15 +55,7 @@ final class RegexHelper
     public const PARTIAL_CLOSEBLOCKTAG         = '<\/' . self::PARTIAL_BLOCKTAGNAME . '\s*[>]';
     public const PARTIAL_HTMLCOMMENT           = '<!---->|<!--(?:-?[^>-])(?:-?[^-])*-->';
     public const PARTIAL_PROCESSINGINSTRUCTION = '[<][?][\s\S]*?[?][>]';
-<<<<<<< HEAD
-<<<<<<< HEAD
     public const PARTIAL_DECLARATION           = '<![A-Z]+' . '[^>]*>';
-=======
-    public const PARTIAL_DECLARATION           = '<![A-Z]+' . '\s+[^>]*>';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public const PARTIAL_DECLARATION           = '<![A-Z]+' . '\s+[^>]*>';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public const PARTIAL_CDATA                 = '<!\[CDATA\[[\s\S]*?]\]>';
     public const PARTIAL_HTMLTAG               = '(?:' . self::PARTIAL_OPENTAG . '|' . self::PARTIAL_CLOSETAG . '|' . self::PARTIAL_HTMLCOMMENT . '|' .
         self::PARTIAL_PROCESSINGINSTRUCTION . '|' . self::PARTIAL_DECLARATION . '|' . self::PARTIAL_CDATA . ')';
@@ -112,14 +98,8 @@ final class RegexHelper
     /**
      * Attempt to match a regex in string s at offset offset
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $regex
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return int|null Index of match, or null
      *
      * @psalm-pure
@@ -141,14 +121,8 @@ final class RegexHelper
     /**
      * Functional wrapper around preg_match_all which only returns the first set of matches
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $pattern
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return string[]|null
      *
      * @psalm-pure
@@ -192,17 +166,9 @@ final class RegexHelper
      *
      * @phpstan-param HtmlBlock::TYPE_* $type
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-return non-empty-string
      *
      * @throws InvalidArgumentException if an invalid type is given
-=======
-     * @throws \InvalidArgumentException if an invalid type is given
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \InvalidArgumentException if an invalid type is given
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @psalm-pure
      */
@@ -224,15 +190,7 @@ final class RegexHelper
             case HtmlBlock::TYPE_7_MISC_ELEMENT:
                 return '/^(?:' . self::PARTIAL_OPENTAG . '|' . self::PARTIAL_CLOSETAG . ')\\s*$/i';
             default:
-<<<<<<< HEAD
-<<<<<<< HEAD
                 throw new InvalidArgumentException('Invalid HTML block type');
-=======
-                throw new \InvalidArgumentException('Invalid HTML block type');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                throw new \InvalidArgumentException('Invalid HTML block type');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 
@@ -245,17 +203,9 @@ final class RegexHelper
      *
      * @phpstan-param HtmlBlock::TYPE_* $type
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-return non-empty-string
      *
      * @throws InvalidArgumentException if an invalid type is given
-=======
-     * @throws \InvalidArgumentException if an invalid type is given
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \InvalidArgumentException if an invalid type is given
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @psalm-pure
      */
@@ -273,15 +223,7 @@ final class RegexHelper
             case HtmlBlock::TYPE_5_CDATA:
                 return '/\]\]>/';
             default:
-<<<<<<< HEAD
-<<<<<<< HEAD
                 throw new InvalidArgumentException('Invalid HTML block type');
-=======
-                throw new \InvalidArgumentException('Invalid HTML block type');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                throw new \InvalidArgumentException('Invalid HTML block type');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
     }
 

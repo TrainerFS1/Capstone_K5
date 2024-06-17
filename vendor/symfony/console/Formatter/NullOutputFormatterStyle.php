@@ -21,15 +21,7 @@ final class NullOutputFormatterStyle implements OutputFormatterStyleInterface
         return $text;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setBackground(?string $color = null): void
-=======
-    public function setBackground(string $color = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setBackground(string $color = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
@@ -37,15 +29,7 @@ final class NullOutputFormatterStyle implements OutputFormatterStyleInterface
         // do nothing
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setForeground(?string $color = null): void
-=======
-    public function setForeground(string $color = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setForeground(string $color = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);

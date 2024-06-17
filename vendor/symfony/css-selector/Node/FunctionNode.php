@@ -25,43 +25,17 @@ use Symfony\Component\CssSelector\Parser\Token;
  */
 class FunctionNode extends AbstractNode
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private string $name;
-=======
-    private NodeInterface $selector;
-    private string $name;
-    private array $arguments;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private NodeInterface $selector;
-    private string $name;
-    private array $arguments;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param Token[] $arguments
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(
         private NodeInterface $selector,
         string $name,
         private array $arguments = [],
     ) {
         $this->name = strtolower($name);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct(NodeInterface $selector, string $name, array $arguments = [])
-    {
-        $this->selector = $selector;
-        $this->name = strtolower($name);
-        $this->arguments = $arguments;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getSelector(): NodeInterface
@@ -89,19 +63,7 @@ class FunctionNode extends AbstractNode
 
     public function __toString(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $arguments = implode(', ', array_map(fn (Token $token) => "'".$token->getValue()."'", $this->arguments));
-=======
-        $arguments = implode(', ', array_map(function (Token $token) {
-            return "'".$token->getValue()."'";
-        }, $this->arguments));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $arguments = implode(', ', array_map(function (Token $token) {
-            return "'".$token->getValue()."'";
-        }, $this->arguments));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return sprintf('%s[%s:%s(%s)]', $this->getNodeName(), $this->selector, $this->name, $arguments ? '['.$arguments.']' : '');
     }

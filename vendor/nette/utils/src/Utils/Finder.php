@@ -51,15 +51,7 @@ class Finder implements \IteratorAggregate
 	/**
 	 * Begins search for files and directories matching mask.
 	 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public static function find(string|array $masks = ['*']): static
-=======
-	public static function find(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public static function find(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$masks = is_array($masks) ? $masks : func_get_args(); // compatibility with variadic
 		return (new static)->addMask($masks, 'dir')->addMask($masks, 'file');
@@ -69,15 +61,7 @@ class Finder implements \IteratorAggregate
 	/**
 	 * Begins search for files matching mask.
 	 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public static function findFiles(string|array $masks = ['*']): static
-=======
-	public static function findFiles(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public static function findFiles(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$masks = is_array($masks) ? $masks : func_get_args(); // compatibility with variadic
 		return (new static)->addMask($masks, 'file');
@@ -87,15 +71,7 @@ class Finder implements \IteratorAggregate
 	/**
 	 * Begins search for directories matching mask.
 	 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public static function findDirectories(string|array $masks = ['*']): static
-=======
-	public static function findDirectories(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public static function findDirectories(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$masks = is_array($masks) ? $masks : func_get_args(); // compatibility with variadic
 		return (new static)->addMask($masks, 'dir');
@@ -105,15 +81,7 @@ class Finder implements \IteratorAggregate
 	/**
 	 * Finds files matching the specified masks.
 	 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function files(string|array $masks = ['*']): static
-=======
-	public function files(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public function files(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return $this->addMask((array) $masks, 'file');
 	}
@@ -122,15 +90,7 @@ class Finder implements \IteratorAggregate
 	/**
 	 * Finds directories matching the specified masks.
 	 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function directories(string|array $masks = ['*']): static
-=======
-	public function directories(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public function directories(string|array $masks): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return $this->addMask((array) $masks, 'dir');
 	}
@@ -349,24 +309,11 @@ class Finder implements \IteratorAggregate
 
 	/**
 	 * Returns an array with all found files and directories.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return list<FileInfo>
 	 */
 	public function collect(): array
 	{
 		return iterator_to_array($this->getIterator(), preserve_keys: false);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	 */
-	public function collect(): array
-	{
-		return iterator_to_array($this->getIterator());
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
@@ -390,15 +337,7 @@ class Finder implements \IteratorAggregate
 
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  array<object{pattern: string, mode: string, recursive: bool}>  $searches
-=======
-	 * @param  array<\stdClass{pattern: string, mode: string, recursive: bool}>  $searches
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * @param  array<\stdClass{pattern: string, mode: string, recursive: bool}>  $searches
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @param  string[]  $subdirs
 	 * @return \Generator<string, FileInfo>
 	 */
@@ -407,15 +346,7 @@ class Finder implements \IteratorAggregate
 		if ($this->maxDepth >= 0 && count($subdirs) > $this->maxDepth) {
 			return;
 		} elseif (!is_dir($dir)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 			throw new Nette\InvalidStateException(sprintf("Directory '%s' does not exist.", rtrim($dir, '/\\')));
-=======
-			throw new Nette\InvalidStateException("Directory '$dir' not found.");
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			throw new Nette\InvalidStateException("Directory '$dir' not found.");
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		}
 
 		try {
@@ -454,15 +385,7 @@ class Finder implements \IteratorAggregate
 			$relativePathname = FileSystem::unixSlashes($file->getRelativePathname());
 			foreach ($searches as $search) {
 				if (
-<<<<<<< HEAD
-<<<<<<< HEAD
 					$file->{'is' . $search->mode}()
-=======
-					$file->getType() === $search->mode
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-					$file->getType() === $search->mode
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 					&& preg_match($search->pattern, $relativePathname)
 					&& $this->proveFilters($this->filters, $file, $cache)
 				) {
@@ -504,15 +427,7 @@ class Finder implements \IteratorAggregate
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	/** @return array<string, array<object{pattern: string, mode: string, recursive: bool}>> */
-=======
-	/** @return array<string, array<\stdClass{pattern: string, mode: string, recursive: bool}>> */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	/** @return array<string, array<\stdClass{pattern: string, mode: string, recursive: bool}>> */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	private function buildPlan(): array
 	{
 		$plan = $dirCache = [];
@@ -536,16 +451,10 @@ class Finder implements \IteratorAggregate
 					? glob($base, GLOB_NOSORT | GLOB_ONLYDIR | GLOB_NOESCAPE)
 					: [strtr($base, ['[[]' => '[', '[]]' => ']'])]; // unescape [ and ]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 				if (!$dirs) {
 					throw new Nette\InvalidStateException(sprintf("Directory '%s' does not exist.", rtrim($base, '/\\')));
 				}
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$search = (object) ['pattern' => $this->buildPattern($rest), 'mode' => $mode, 'recursive' => $recursive];
 				foreach ($dirs as $dir) {
 					$plan[$dir][] = $search;

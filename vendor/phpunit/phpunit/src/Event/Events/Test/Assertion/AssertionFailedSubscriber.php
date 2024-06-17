@@ -13,14 +13,8 @@ use PHPUnit\Event\Subscriber;
 
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
  * @deprecated
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  */
 interface AssertionFailedSubscriber extends Subscriber
 {

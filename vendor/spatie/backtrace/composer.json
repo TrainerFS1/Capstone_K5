@@ -21,14 +21,8 @@
     "require-dev": {
         "ext-json": "*",
         "phpunit/phpunit": "^9.3",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "laravel/serializable-closure": "^1.3",
         "spatie/phpunit-snapshot-assertions": "^4.2",
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {

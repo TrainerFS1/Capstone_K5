@@ -41,15 +41,7 @@ class YamlFileLoader extends FileLoader
     /**
      * @throws \InvalidArgumentException When a route can't be parsed because YAML is invalid
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function load(mixed $file, ?string $type = null): RouteCollection
-=======
-    public function load(mixed $file, string $type = null): RouteCollection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function load(mixed $file, string $type = null): RouteCollection
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $path = $this->locator->locate($file);
 
@@ -113,29 +105,15 @@ class YamlFileLoader extends FileLoader
         return $collection;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function supports(mixed $resource, ?string $type = null): bool
-=======
-    public function supports(mixed $resource, string $type = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function supports(mixed $resource, string $type = null): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return \is_string($resource) && \in_array(pathinfo($resource, \PATHINFO_EXTENSION), ['yml', 'yaml'], true) && (!$type || 'yaml' === $type);
     }
 
     /**
      * Parses a route and adds it to the RouteCollection.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function parseRoute(RouteCollection $collection, string $name, array $config, string $path)
     {
@@ -194,14 +172,8 @@ class YamlFileLoader extends FileLoader
 
     /**
      * Parses an import and adds the routes in the resource to the RouteCollection.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function parseImport(RouteCollection $collection, array $config, string $path, string $file)
     {
@@ -270,14 +242,8 @@ class YamlFileLoader extends FileLoader
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return void
      *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws \InvalidArgumentException If one of the provided config keys is not supported,
      *                                   something is missing or the combination is nonsense
      */

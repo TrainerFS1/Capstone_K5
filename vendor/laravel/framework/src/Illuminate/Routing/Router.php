@@ -15,14 +15,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Routing\Events\PreparingResponse;
 use Illuminate\Routing\Events\ResponsePrepared;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Routing\Events\Routing;
 use Illuminate\Support\Arr;
@@ -126,8 +120,6 @@ class Router implements BindingRegistrar, RegistrarContract
     protected $groupStack = [];
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The registered custom implicit binding callback.
      *
      * @var array
@@ -135,10 +127,6 @@ class Router implements BindingRegistrar, RegistrarContract
     protected $implicitBindingCallback;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * All of the verbs supported by the router.
      *
      * @var string[]
@@ -244,15 +232,7 @@ class Router implements BindingRegistrar, RegistrarContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Register a new fallback route with the router.
-=======
-     * Register a new Fallback route with the router.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Register a new Fallback route with the router.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  array|string|callable|null  $action
      * @return \Illuminate\Routing\Route
@@ -456,15 +436,7 @@ class Router implements BindingRegistrar, RegistrarContract
      */
     public function apiSingleton($name, $controller, array $options = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $only = ['store', 'show', 'update', 'destroy'];
-=======
-        $only = ['show', 'update', 'destroy'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $only = ['show', 'update', 'destroy'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (isset($options['except'])) {
             $only = array_diff($only, (array) $options['except']);
@@ -472,14 +444,6 @@ class Router implements BindingRegistrar, RegistrarContract
 
         return $this->singleton($name, $controller, array_merge([
             'only' => $only,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            'apiSingleton' => true,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'apiSingleton' => true,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ], $options));
     }
 
@@ -916,19 +880,11 @@ class Router implements BindingRegistrar, RegistrarContract
      */
     public function prepareResponse($request, $response)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->events->dispatch(new PreparingResponse($request, $response));
 
         return tap(static::toResponse($request, $response), function ($response) use ($request) {
             $this->events->dispatch(new ResponsePrepared($request, $response));
         });
-=======
-        return static::toResponse($request, $response);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return static::toResponse($request, $response);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -1000,8 +956,6 @@ class Router implements BindingRegistrar, RegistrarContract
      */
     public function substituteImplicitBindings($route)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $default = fn () => ImplicitRouteBinding::resolveForRoute($this->container, $route);
 
         return call_user_func(
@@ -1020,12 +974,6 @@ class Router implements BindingRegistrar, RegistrarContract
         $this->implicitBindingCallback = $callback;
 
         return $this;
-=======
-        ImplicitRouteBinding::resolveForRoute($this->container, $route);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ImplicitRouteBinding::resolveForRoute($this->container, $route);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

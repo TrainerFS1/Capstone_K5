@@ -7,13 +7,7 @@ use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Events\MaintenanceModeEnabled;
 use Illuminate\Foundation\Exceptions\RegisterErrorViewPaths;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Str;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Attribute\AsCommand;
 use Throwable;
 
@@ -30,13 +24,7 @@ class DownCommand extends Command
                                  {--retry= : The number of seconds after which the request may be retried}
                                  {--refresh= : The number of seconds after which the browser may refresh}
                                  {--secret= : The secret phrase that may be used to bypass maintenance mode}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                  {--with-secret : Generate a random secret phrase that may be used to bypass maintenance mode}
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                  {--status=503 : The status code that should be used when returning the maintenance mode response}';
 
     /**
@@ -60,17 +48,9 @@ class DownCommand extends Command
                 return 0;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $downFilePayload = $this->getDownFilePayload();
 
             $this->laravel->maintenanceMode()->activate($downFilePayload);
-=======
-            $this->laravel->maintenanceMode()->activate($this->getDownFilePayload());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->laravel->maintenanceMode()->activate($this->getDownFilePayload());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             file_put_contents(
                 storage_path('framework/maintenance.php'),
@@ -80,16 +60,10 @@ class DownCommand extends Command
             $this->laravel->get('events')->dispatch(new MaintenanceModeEnabled());
 
             $this->components->info('Application is now in maintenance mode.');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             if ($downFilePayload['secret'] !== null) {
                 $this->components->info('You may bypass maintenance mode via ['.config('app.url')."/{$downFilePayload['secret']}].");
             }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         } catch (Exception $e) {
             $this->components->error(sprintf(
                 'Failed to enter maintenance mode: %s.',
@@ -112,15 +86,7 @@ class DownCommand extends Command
             'redirect' => $this->redirectPath(),
             'retry' => $this->getRetryTime(),
             'refresh' => $this->option('refresh'),
-<<<<<<< HEAD
-<<<<<<< HEAD
             'secret' => $this->getSecret(),
-=======
-            'secret' => $this->option('secret'),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'secret' => $this->option('secret'),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'status' => (int) $this->option('status', 503),
             'template' => $this->option('render') ? $this->prerenderView() : null,
         ];
@@ -179,8 +145,6 @@ class DownCommand extends Command
 
         return is_numeric($retry) && $retry > 0 ? (int) $retry : null;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Get the secret phrase that may be used to bypass maintenance mode.
@@ -195,8 +159,4 @@ class DownCommand extends Command
             default => null,
         };
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

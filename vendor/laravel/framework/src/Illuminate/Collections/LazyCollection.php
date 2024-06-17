@@ -16,16 +16,8 @@ use Traversable;
 
 /**
  * @template TKey of array-key
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
  * @template-covariant TValue
-=======
- * @template TValue
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @template TValue
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @implements \Illuminate\Support\Enumerable<TKey, TValue>
  */
@@ -962,8 +954,6 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Select specific values from the items within the collection.
      *
      * @param  \Illuminate\Support\Enumerable<array-key, TKey>|array<array-key, TKey>|string  $keys
@@ -1006,17 +996,6 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      *
      * @param  iterable<TConcatKey, TConcatValue>  $source
      * @return static<TKey|TConcatKey, TValue|TConcatValue>
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Push all of the given items onto the collection.
-     *
-     * @param  iterable<array-key, TValue>  $source
-     * @return static
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function concat($source)
     {
@@ -1094,15 +1073,7 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      *
      * @param  TValue|(callable(TValue,TKey): bool)  $value
      * @param  bool  $strict
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return TKey|false
-=======
-     * @return TKey|bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return TKey|bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function search($value, $strict = false)
     {
@@ -1488,8 +1459,6 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
     public function take($limit)
     {
         if ($limit < 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return new static(function () use ($limit) {
                 $limit = abs($limit);
                 $ringBuffer = [];
@@ -1505,12 +1474,6 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
                     yield $ringBuffer[$pointer][0] => $ringBuffer[$pointer][1];
                 }
             });
-=======
-            return $this->passthru('take', func_get_args());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return $this->passthru('take', func_get_args());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return new static(function () use ($limit) {
@@ -1609,8 +1572,6 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Flatten a multi-dimensional associative array with dots.
      *
      * @return static
@@ -1621,10 +1582,6 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Convert a flatten "dot" notation array into an expanded array.
      *
      * @return static
@@ -1821,16 +1778,8 @@ class LazyCollection implements CanBeEscapedWhenCastToString, Enumerable
      */
     protected function now()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return class_exists(Carbon::class)
             ? Carbon::now()->timestamp
             : time();
-=======
-        return time();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return time();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

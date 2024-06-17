@@ -2,41 +2,21 @@
 
 namespace Spatie\FlareClient;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use ErrorException;
 use Spatie\Backtrace\Arguments\ArgumentReducers;
 use Spatie\Backtrace\Arguments\Reducers\ArgumentReducer;
 use Spatie\Backtrace\Backtrace;
 use Spatie\Backtrace\Frame as SpatieFrame;
 use Spatie\ErrorSolutions\Contracts\Solution;
-=======
-use Spatie\Backtrace\Backtrace;
-use Spatie\Backtrace\Frame as SpatieFrame;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Spatie\Backtrace\Backtrace;
-use Spatie\Backtrace\Frame as SpatieFrame;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Spatie\FlareClient\Concerns\HasContext;
 use Spatie\FlareClient\Concerns\UsesTime;
 use Spatie\FlareClient\Context\ContextProvider;
 use Spatie\FlareClient\Contracts\ProvidesFlareContext;
 use Spatie\FlareClient\Glows\Glow;
 use Spatie\FlareClient\Solutions\ReportSolution;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Spatie\Ignition\Contracts\Solution as IgnitionSolution;
 use Spatie\LaravelFlare\Exceptions\ViewException;
 use Spatie\LaravelIgnition\Exceptions\ViewException as IgnitionViewException;
-=======
-use Spatie\Ignition\Contracts\Solution;
-use Spatie\LaravelIgnition\Exceptions\ViewException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Spatie\Ignition\Contracts\Solution;
-use Spatie\LaravelIgnition\Exceptions\ViewException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Throwable;
 
 class Report
@@ -87,21 +67,13 @@ class Report
 
     public static ?string $fakeTrackingUuid = null;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected ?bool $handled = null;
 
     /** @param array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null $argumentReducers */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function createForThrowable(
         Throwable $throwable,
         ContextProvider $context,
         ?string $applicationPath = null,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?string $version = null,
         null|array|ArgumentReducers $argumentReducers = null,
         bool $withStackTraceArguments = true,
@@ -111,29 +83,13 @@ class Report
             ->reduceArguments($argumentReducers)
             ->applicationPath($applicationPath ?? '');
 
-=======
-        ?string $version = null
-    ): self {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ?string $version = null
-    ): self {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return (new self())
             ->setApplicationPath($applicationPath)
             ->throwable($throwable)
             ->useContext($context)
             ->exceptionClass(self::getClassForThrowable($throwable))
             ->message($throwable->getMessage())
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->stackTrace($stacktrace)
-=======
-            ->stackTrace(Backtrace::createForThrowable($throwable)->applicationPath($applicationPath ?? ''))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            ->stackTrace(Backtrace::createForThrowable($throwable)->applicationPath($applicationPath ?? ''))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->exceptionContext($throwable)
             ->setApplicationVersion($version);
     }
@@ -141,15 +97,7 @@ class Report
     protected static function getClassForThrowable(Throwable $throwable): string
     {
         /** @phpstan-ignore-next-line */
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($throwable::class === IgnitionViewException::class || $throwable::class === ViewException::class) {
-=======
-        if ($throwable::class === ViewException::class) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($throwable::class === ViewException::class) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             /** @phpstan-ignore-next-line */
             if ($previous = $throwable->getPrevious()) {
                 return get_class($previous);
@@ -159,19 +107,11 @@ class Report
         return get_class($throwable);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @param array<class-string<ArgumentReducer>|ArgumentReducer>|ArgumentReducers|null $argumentReducers */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function createForMessage(
         string $message,
         string $logLevel,
         ContextProvider $context,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?string $applicationPath = null,
         null|array|ArgumentReducers $argumentReducers = null,
         bool $withStackTraceArguments = true,
@@ -180,16 +120,6 @@ class Report
             ->withArguments($withStackTraceArguments)
             ->reduceArguments($argumentReducers)
             ->applicationPath($applicationPath ?? '');
-=======
-        ?string $applicationPath = null
-    ): self {
-        $stacktrace = Backtrace::create()->applicationPath($applicationPath ?? '');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        ?string $applicationPath = null
-    ): self {
-        $stacktrace = Backtrace::create()->applicationPath($applicationPath ?? '');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return (new self())
             ->setApplicationPath($applicationPath)
@@ -331,15 +261,7 @@ class Report
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function addSolution(Solution|IgnitionSolution $solution): self
-=======
-    public function addSolution(Solution $solution): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function addSolution(Solution $solution): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->solutions[] = ReportSolution::fromSolution($solution)->toArray();
 
@@ -372,15 +294,7 @@ class Report
 
     /**
      * @return array<int|string, mixed>
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
-=======
-    */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function allContext(): array
     {
         $context = $this->context->toArray();
@@ -390,8 +304,6 @@ class Report
         return array_merge_recursive_distinct($context, $this->userProvidedContext);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function handled(?bool $handled = true): self
     {
         $this->handled = $handled;
@@ -399,10 +311,6 @@ class Report
         return $this;
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function exceptionContext(Throwable $throwable): self
     {
         if ($throwable instanceof ProvidesFlareContext) {
@@ -419,21 +327,11 @@ class Report
     {
         return array_map(
             fn (SpatieFrame $frame) => Frame::fromSpatieFrame($frame)->toArray(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->cleanupStackTraceForError($this->stacktrace->frames()),
-=======
-            $this->stacktrace->frames(),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->stacktrace->frames(),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param array<SpatieFrame> $frames
      *
      * @return array<SpatieFrame>
@@ -466,10 +364,6 @@ class Report
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return array<string, mixed>
      */
     public function toArray(): array
@@ -493,13 +387,7 @@ class Report
             'application_path' => $this->applicationPath,
             'application_version' => $this->applicationVersion,
             'tracking_uuid' => $this->trackingUuid,
-<<<<<<< HEAD
-<<<<<<< HEAD
             'handled' => $this->handled,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ];
     }
 

@@ -6,15 +6,7 @@ namespace League\MimeTypeDetection;
 
 use const PATHINFO_EXTENSION;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ExtensionMimeTypeDetector implements MimeTypeDetector, ExtensionLookup
-=======
-class ExtensionMimeTypeDetector implements MimeTypeDetector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class ExtensionMimeTypeDetector implements MimeTypeDetector
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 {
     /**
      * @var ExtensionToMimeTypeMap
@@ -47,8 +39,6 @@ class ExtensionMimeTypeDetector implements MimeTypeDetector
     {
         return null;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     public function lookupExtension(string $mimetype): ?string
     {
@@ -63,8 +53,4 @@ class ExtensionMimeTypeDetector implements MimeTypeDetector
             ? $this->extensions->lookupAllExtensions($mimetype)
             : [];
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

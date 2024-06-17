@@ -52,19 +52,5 @@
             "composer/package-versions-deprecated": true
         },
         "sort-packages": true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-main": "v1.21-dev"
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

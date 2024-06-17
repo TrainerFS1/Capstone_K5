@@ -13,18 +13,8 @@ namespace Symfony\Component\HttpKernel\Fragment;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\UriSigner;
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
-=======
-use Symfony\Component\HttpKernel\Controller\ControllerReference;
-use Symfony\Component\HttpKernel\UriSigner;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\HttpKernel\Controller\ControllerReference;
-use Symfony\Component\HttpKernel\UriSigner;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * Generates a fragment URI.
@@ -38,30 +28,14 @@ final class FragmentUriGenerator implements FragmentUriGeneratorInterface
     private ?UriSigner $signer;
     private ?RequestStack $requestStack;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $fragmentPath, ?UriSigner $signer = null, ?RequestStack $requestStack = null)
-=======
-    public function __construct(string $fragmentPath, UriSigner $signer = null, RequestStack $requestStack = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $fragmentPath, UriSigner $signer = null, RequestStack $requestStack = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->fragmentPath = $fragmentPath;
         $this->signer = $signer;
         $this->requestStack = $requestStack;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function generate(ControllerReference $controller, ?Request $request = null, bool $absolute = false, bool $strict = true, bool $sign = true): string
-=======
-    public function generate(ControllerReference $controller, Request $request = null, bool $absolute = false, bool $strict = true, bool $sign = true): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function generate(ControllerReference $controller, Request $request = null, bool $absolute = false, bool $strict = true, bool $sign = true): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $request && (null === $this->requestStack || null === $request = $this->requestStack->getCurrentRequest())) {
             throw new \LogicException('Generating a fragment URL can only be done when handling a Request.');

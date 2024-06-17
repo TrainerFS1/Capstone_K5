@@ -34,18 +34,8 @@ class File
             $totalsContainer = $this->contextNode->appendChild(
                 $this->dom->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'totals',
                 ),
-=======
-                    'totals'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    'totals'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -56,51 +46,23 @@ class File
     {
         $coverage = $this->contextNode->getElementsByTagNameNS(
             'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'coverage',
-=======
-            'coverage'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'coverage'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         )->item(0);
 
         if (!$coverage) {
             $coverage = $this->contextNode->appendChild(
                 $this->dom->createElementNS(
                     'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     'coverage',
                 ),
-=======
-                    'coverage'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    'coverage'
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
         $lineNode = $coverage->appendChild(
             $this->dom->createElementNS(
                 'https://schema.phpunit.de/coverage/1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'line',
             ),
-=======
-                'line'
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'line'
-            )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return new Coverage($lineNode, $line);

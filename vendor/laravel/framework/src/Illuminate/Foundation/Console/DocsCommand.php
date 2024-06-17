@@ -16,14 +16,8 @@ use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
 use Throwable;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function Laravel\Prompts\suggest;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 #[AsCommand(name: 'docs')]
 class DocsCommand extends Command
 {
@@ -46,15 +40,7 @@ class DocsCommand extends Command
      *
      * @var string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected $help = 'If you would like to perform a content search against the documentation, you may call: <fg=green>php artisan docs -- </><fg=green;options=bold;>search query here</>';
-=======
-    protected $help = 'If you would like to perform a content search against the documention, you may call: <fg=green>php artisan docs -- </><fg=green;options=bold;>search query here</>';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $help = 'If you would like to perform a content search against the documention, you may call: <fg=green>php artisan docs -- </><fg=green;options=bold;>search query here</>';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * The HTTP client instance.
@@ -195,15 +181,7 @@ class DocsCommand extends Command
 
         return $this->didNotRequestPage()
             ? $this->askForPage()
-<<<<<<< HEAD
-<<<<<<< HEAD
             : $this->guessPage($this->argument('page'));
-=======
-            : $this->guessPage();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            : $this->guessPage();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -253,8 +231,6 @@ class DocsCommand extends Command
      */
     protected function askForPageViaAutocomplete()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $choice = suggest(
             label: 'Which page would you like to open?',
             options: fn ($value) => $this->pages()
@@ -264,33 +240,11 @@ class DocsCommand extends Command
                 ->filter(fn ($title) => str_contains(Str::lower($title), Str::lower($value)))
                 ->all(),
             placeholder: 'E.g. Collections'
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $choice = $this->components->choice(
-            'Which page would you like to open?',
-            $this->pages()->mapWithKeys(fn ($option) => [
-                Str::lower($option['title']) => $option['title'],
-            ])->all(),
-            'installation',
-            3
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this->pages()->filter(
             fn ($page) => $page['title'] === $choice || Str::lower($page['title']) === $choice
-<<<<<<< HEAD
-<<<<<<< HEAD
         )->keys()->first() ?: $this->guessPage($choice);
-=======
-        )->keys()->first() ?: null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        )->keys()->first() ?: null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -298,53 +252,22 @@ class DocsCommand extends Command
      *
      * @return string|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function guessPage($search)
-=======
-    protected function guessPage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function guessPage()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->pages()
             ->filter(fn ($page) => str_starts_with(
                 Str::slug($page['title'], ' '),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Str::slug($search, ' ')
             ))->keys()->first() ?? $this->pages()->map(fn ($page) => similar_text(
                 Str::slug($page['title'], ' '),
                 Str::slug($search, ' '),
             ))
             ->filter(fn ($score) => $score >= min(3, Str::length($search)))
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                Str::slug($this->argument('page'), ' ')
-            ))->keys()->first() ?? $this->pages()->map(fn ($page) => similar_text(
-                Str::slug($page['title'], ' '),
-                Str::slug($this->argument('page'), ' '),
-            ))
-            ->filter(fn ($score) => $score >= min(3, Str::length($this->argument('page'))))
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->sortDesc()
             ->keys()
             ->sortByDesc(fn ($slug) => Str::contains(
                 Str::slug($this->pages()[$slug]['title'], ' '),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Str::slug($search, ' ')
-=======
-                Str::slug($this->argument('page'), ' ')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                Str::slug($this->argument('page'), ' ')
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ) ? 1 : 0)
             ->first();
     }
@@ -542,15 +465,7 @@ class DocsCommand extends Command
      */
     protected function version()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return Str::before($this->version ?? $this->laravel->version(), '.').'.x';
-=======
-        return Str::before(($this->version ?? $this->laravel->version()), '.').'.x';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return Str::before(($this->version ?? $this->laravel->version()), '.').'.x';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

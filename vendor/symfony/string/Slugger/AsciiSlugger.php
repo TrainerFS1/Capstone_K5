@@ -11,15 +11,7 @@
 
 namespace Symfony\Component\String\Slugger;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Emoji\EmojiTransliterator;
-=======
-use Symfony\Component\Intl\Transliterator\EmojiTransliterator;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Intl\Transliterator\EmojiTransliterator;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\String\AbstractUnicodeString;
 use Symfony\Component\String\UnicodeString;
 use Symfony\Contracts\Translation\LocaleAwareInterface;
@@ -63,14 +55,6 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         'zh' => 'Han-Latin',
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    private ?string $defaultLocale;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private ?string $defaultLocale;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private \Closure|array $symbolsMap = [
         'en' => ['@' => 'at', '&' => 'and'],
     ];
@@ -83,8 +67,6 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
      */
     private array $transliterators = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(
         private ?string $defaultLocale = null,
         array|\Closure|null $symbolsMap = null,
@@ -93,20 +75,6 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     }
 
     public function setLocale(string $locale): void
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct(string $defaultLocale = null, array|\Closure $symbolsMap = null)
-    {
-        $this->defaultLocale = $defaultLocale;
-        $this->symbolsMap = $symbolsMap ?? $this->symbolsMap;
-    }
-
-    public function setLocale(string $locale)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->defaultLocale = $locale;
     }
@@ -124,15 +92,7 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     public function withEmoji(bool|string $emoji = true): static
     {
         if (false !== $emoji && !class_exists(EmojiTransliterator::class)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/emoji" package is not installed. Try running "composer require symfony/emoji".', __METHOD__));
-=======
-            throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/intl" package is not installed. Try running "composer require symfony/intl".', __METHOD__));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/intl" package is not installed. Try running "composer require symfony/intl".', __METHOD__));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $new = clone $this;
@@ -141,15 +101,7 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         return $new;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function slug(string $string, string $separator = '-', ?string $locale = null): AbstractUnicodeString
-=======
-    public function slug(string $string, string $separator = '-', string $locale = null): AbstractUnicodeString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function slug(string $string, string $separator = '-', string $locale = null): AbstractUnicodeString
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $locale ??= $this->defaultLocale;
 
@@ -169,19 +121,7 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
             // If the symbols map is passed as a closure, there is no need to fallback to the parent locale
             // as the closure can just provide substitutions for all locales of interest.
             $symbolsMap = $this->symbolsMap;
-<<<<<<< HEAD
-<<<<<<< HEAD
             array_unshift($transliterator, static fn ($s) => $symbolsMap($s, $locale));
-=======
-            array_unshift($transliterator, static function ($s) use ($symbolsMap, $locale) {
-                return $symbolsMap($s, $locale);
-            });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            array_unshift($transliterator, static function ($s) use ($symbolsMap, $locale) {
-                return $symbolsMap($s, $locale);
-            });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         $unicodeString = (new UnicodeString($string))->ascii($transliterator);

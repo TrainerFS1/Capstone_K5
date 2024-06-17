@@ -2,15 +2,7 @@
     "name": "symfony/routing",
     "type": "library",
     "description": "Maps an HTTP request to a set of configuration variables",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "keywords": ["routing", "router", "url", "uri"],
-=======
-    "keywords": ["routing", "router", "URL", "URI"],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    "keywords": ["routing", "router", "URL", "URI"],
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "homepage": "https://symfony.com",
     "license": "MIT",
     "authors": [
@@ -24,8 +16,6 @@
         }
     ],
     "require": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "php": ">=8.1",
         "symfony/deprecation-contracts": "^2.5|^3"
     },
@@ -35,21 +25,6 @@
         "symfony/yaml": "^5.4|^6.0|^7.0",
         "symfony/expression-language": "^5.4|^6.0|^7.0",
         "symfony/dependency-injection": "^5.4|^6.0|^7.0",
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        "php": ">=8.1"
-    },
-    "require-dev": {
-        "symfony/config": "^6.2",
-        "symfony/http-foundation": "^5.4|^6.0",
-        "symfony/yaml": "^5.4|^6.0",
-        "symfony/expression-language": "^5.4|^6.0",
-        "symfony/dependency-injection": "^5.4|^6.0",
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         "doctrine/annotations": "^1.12|^2",
         "psr/log": "^1|^2|^3"
     },
@@ -59,21 +34,6 @@
         "symfony/dependency-injection": "<5.4",
         "symfony/yaml": "<5.4"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    "suggest": {
-        "symfony/http-foundation": "For using a Symfony Request object",
-        "symfony/config": "For using the all-in-one router or any loader",
-        "symfony/yaml": "For using the YAML loader",
-        "symfony/expression-language": "For using expression matching"
-    },
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     "autoload": {
         "psr-4": { "Symfony\\Component\\Routing\\": "" },
         "exclude-from-classmap": [

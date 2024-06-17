@@ -40,15 +40,7 @@ class InvokableComponentVariable implements DeferringDisplayableValue, IteratorA
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get an iterator instance for the variable.
-=======
-     * Get an interator instance for the variable.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Get an interator instance for the variable.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @return \ArrayIterator
      */

@@ -89,13 +89,7 @@ class LogglyHandler extends AbstractProcessingHandler
 
     /**
      * @param string[]|string $tag
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function setTag(string|array $tag): self
     {
@@ -110,13 +104,7 @@ class LogglyHandler extends AbstractProcessingHandler
 
     /**
      * @param string[]|string $tag
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return $this
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function addTag(string|array $tag): self
     {
@@ -138,15 +126,7 @@ class LogglyHandler extends AbstractProcessingHandler
         $level = $this->level;
 
         $records = array_filter($records, function ($record) use ($level) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return ($record->level->value >= $level->value);
-=======
-            return ($record->level >= $level);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return ($record->level >= $level);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         });
 
         if (\count($records) > 0) {

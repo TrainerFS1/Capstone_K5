@@ -2,31 +2,13 @@
 
 namespace PhpParser\Node\Name;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class FullyQualified extends \PhpParser\Node\Name {
-=======
-class FullyQualified extends \PhpParser\Node\Name
-{
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-class FullyQualified extends \PhpParser\Node\Name
-{
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Checks whether the name is unqualified. (E.g. Name)
      *
      * @return bool Whether the name is unqualified
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function isUnqualified(): bool {
-=======
-    public function isUnqualified() : bool {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function isUnqualified() : bool {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return false;
     }
 
@@ -35,15 +17,7 @@ class FullyQualified extends \PhpParser\Node\Name
      *
      * @return bool Whether the name is qualified
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function isQualified(): bool {
-=======
-    public function isQualified() : bool {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function isQualified() : bool {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return false;
     }
 
@@ -52,15 +26,7 @@ class FullyQualified extends \PhpParser\Node\Name
      *
      * @return bool Whether the name is fully qualified
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function isFullyQualified(): bool {
-=======
-    public function isFullyQualified() : bool {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function isFullyQualified() : bool {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return true;
     }
 
@@ -69,8 +35,6 @@ class FullyQualified extends \PhpParser\Node\Name
      *
      * @return bool Whether the name is relative
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function isRelative(): bool {
         return false;
     }
@@ -80,22 +44,6 @@ class FullyQualified extends \PhpParser\Node\Name
     }
 
     public function getType(): string {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function isRelative() : bool {
-        return false;
-    }
-
-    public function toCodeString() : string {
-        return '\\' . $this->toString();
-    }
-    
-    public function getType() : string {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return 'Name_FullyQualified';
     }
 }

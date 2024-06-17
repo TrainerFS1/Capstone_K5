@@ -16,21 +16,9 @@ trait DatabaseMigrations
      */
     public function runDatabaseMigrations()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->beforeRefreshingDatabase();
         $this->refreshTestDatabase();
         $this->afterRefreshingDatabase();
-=======
-        $this->artisan('migrate:fresh', $this->migrateFreshUsing());
-
-        $this->app[Kernel::class]->setArtisan(null);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->artisan('migrate:fresh', $this->migrateFreshUsing());
-
-        $this->app[Kernel::class]->setArtisan(null);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->beforeApplicationDestroyed(function () {
             $this->artisan('migrate:rollback');
@@ -38,8 +26,6 @@ trait DatabaseMigrations
             RefreshDatabaseState::$migrated = false;
         });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Refresh a conventional test database.
@@ -72,8 +58,4 @@ trait DatabaseMigrations
     {
         // ...
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

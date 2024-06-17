@@ -41,14 +41,8 @@ trait ManagesTransactions
                 continue;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $levelBeingCommitted = $this->transactions;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             try {
                 if ($this->transactions == 1) {
                     $this->fireConnectionEvent('committing');
@@ -56,19 +50,6 @@ trait ManagesTransactions
                 }
 
                 $this->transactions = max(0, $this->transactions - 1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-                if ($this->afterCommitCallbacksShouldBeExecuted()) {
-                    $this->transactionsManager?->commit($this->getName());
-                }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             } catch (Throwable $e) {
                 $this->handleCommitTransactionException(
                     $e, $currentAttempt, $attempts
@@ -77,18 +58,12 @@ trait ManagesTransactions
                 continue;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->transactionsManager?->commit(
                 $this->getName(),
                 $levelBeingCommitted,
                 $this->transactions
             );
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->fireConnectionEvent('committed');
 
             return $callbackResult;
@@ -143,16 +118,10 @@ trait ManagesTransactions
      */
     public function beginTransaction()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         foreach ($this->beforeStartingTransaction as $callback) {
             $callback($this);
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->createTransaction();
 
         $this->transactions++;
@@ -233,8 +202,6 @@ trait ManagesTransactions
             $this->getPdo()->commit();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         [$levelBeingCommitted, $this->transactions] = [
             $this->transactions,
             max(0, $this->transactions - 1),
@@ -243,44 +210,11 @@ trait ManagesTransactions
         $this->transactionsManager?->commit(
             $this->getName(), $levelBeingCommitted, $this->transactions
         );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $this->transactions = max(0, $this->transactions - 1);
-
-        if ($this->afterCommitCallbacksShouldBeExecuted()) {
-            $this->transactionsManager?->commit($this->getName());
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $this->fireConnectionEvent('committed');
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Determine if after commit callbacks should be executed.
-     *
-     * @return bool
-     */
-    protected function afterCommitCallbacksShouldBeExecuted()
-    {
-        return $this->transactions == 0 ||
-            ($this->transactionsManager &&
-             $this->transactionsManager->callbackApplicableTransactions()->count() === 1);
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Handle an exception encountered when committing a transaction.
      *
      * @param  \Throwable  $e

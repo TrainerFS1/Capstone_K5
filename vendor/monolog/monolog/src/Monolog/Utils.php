@@ -199,15 +199,7 @@ final class Utils
         if (is_string($data) && preg_match('//u', $data) !== 1) {
             $data = preg_replace_callback(
                 '/[\x80-\xFF]+/',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 function (array $m): string {
-=======
-                function ($m) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                function ($m) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     return function_exists('mb_convert_encoding') ? mb_convert_encoding($m[0], 'UTF-8', 'ISO-8859-1') : utf8_encode($m[0]);
                 },
                 $data

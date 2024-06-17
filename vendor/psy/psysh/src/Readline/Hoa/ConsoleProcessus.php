@@ -245,23 +245,10 @@ class ConsoleProcessus extends Stream implements StreamIn, StreamOut, StreamPath
      */
     public function __construct(
         string $command,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?array $options = null,
         ?array $descriptors = null,
         ?string $cwd = null,
         ?array $environment = null,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        array $options = null,
-        array $descriptors = null,
-        string $cwd = null,
-        array $environment = null,
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         int $timeout = 30
     ) {
         $this->setCommand($command);
@@ -298,15 +285,7 @@ class ConsoleProcessus extends Stream implements StreamIn, StreamOut, StreamPath
     /**
      * Open the stream and return the associated resource.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function &_open(string $streamName, ?StreamContext $context = null)
-=======
-    protected function &_open(string $streamName, StreamContext $context = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function &_open(string $streamName, StreamContext $context = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $out = @\proc_open(
             $streamName,
@@ -548,15 +527,7 @@ class ConsoleProcessus extends Stream implements StreamIn, StreamOut, StreamPath
      * Read an array.
      * Alias of the $this->scanf() method.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function readArray(?string $format = null, int $pipe = 1)
-=======
-    public function readArray(string $format = null, int $pipe = 1)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function readArray(string $format = null, int $pipe = 1)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->scanf($format, $pipe);
     }

@@ -22,17 +22,7 @@ use Illuminate\Support\Traits\Macroable;
  */
 class Repository implements ArrayAccess, CacheContract
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use InteractsWithTime, Macroable {
-=======
-    use InteractsWithTime;
-    use Macroable {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    use InteractsWithTime;
-    use Macroable {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         __call as macroCall;
     }
 
@@ -172,15 +162,7 @@ class Repository implements ArrayAccess, CacheContract
         if (is_null($value)) {
             $this->event(new CacheMissed($key));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             return (isset($keys[$key]) && ! array_is_list($keys)) ? value($keys[$key]) : null;
-=======
-            return isset($keys[$key]) ? value($keys[$key]) : null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return isset($keys[$key]) ? value($keys[$key]) : null;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         // If we found a valid value we will fire the "hit" event and return the value

@@ -7,14 +7,8 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Prunable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Events\ModelPruningFinished;
 use Illuminate\Database\Events\ModelPruningStarting;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Database\Events\ModelsPruned;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
@@ -30,13 +24,7 @@ class PruneCommand extends Command
     protected $signature = 'model:prune
                                 {--model=* : Class names of the models to be pruned}
                                 {--except=* : Class names of the models to be excluded from pruning}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 {--path=* : Absolute path(s) to directories where models are located}
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 {--chunk=1000 : The number of models to retrieve per chunk of models to be deleted}
                                 {--pretend : Display the number of prunable records found instead of deleting them}';
 
@@ -85,26 +73,14 @@ class PruneCommand extends Command
             $this->components->twoColumnDetail($event->model, "{$event->count} records");
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $events->dispatch(new ModelPruningStarting($models->all()));
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $models->each(function ($model) {
             $this->pruneModel($model);
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $events->dispatch(new ModelPruningFinished($models->all()));
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $events->forget(ModelsPruned::class);
     }
 
@@ -150,15 +126,7 @@ class PruneCommand extends Command
             throw new InvalidArgumentException('The --models and --except options cannot be combined.');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return collect(Finder::create()->in($this->getPath())->files()->name('*.php'))
-=======
-        return collect((new Finder)->in($this->getDefaultPath())->files()->name('*.php'))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return collect((new Finder)->in($this->getDefaultPath())->files()->name('*.php'))
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ->map(function ($model) {
                 $namespace = $this->laravel->getNamespace();
 
@@ -172,27 +140,13 @@ class PruneCommand extends Command
                     return in_array($model, $except);
                 });
             })->filter(function ($model) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return class_exists($model);
             })->filter(function ($model) {
                 return $this->isPrunable($model);
-=======
-                return $this->isPrunable($model);
-            })->filter(function ($model) {
-                return class_exists($model);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return $this->isPrunable($model);
-            })->filter(function ($model) {
-                return class_exists($model);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             })->values();
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the path where models are located.
      *
      * @return string[]|string
@@ -205,19 +159,6 @@ class PruneCommand extends Command
             })->all();
         }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Get the default path where models are located.
-     *
-     * @return string|string[]
-     */
-    protected function getDefaultPath()
-    {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return app_path('Models');
     }
 

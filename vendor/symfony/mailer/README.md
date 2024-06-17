@@ -57,15 +57,7 @@ $email = (new TemplatedEmail())
     // ...
     ->htmlTemplate('emails/signup.html.twig')
     ->context([
-<<<<<<< HEAD
-<<<<<<< HEAD
         'expiration_date' => new \DateTimeImmutable('+7 days'),
-=======
-        'expiration_date' => new \DateTime('+7 days'),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        'expiration_date' => new \DateTime('+7 days'),
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'username' => 'foo',
     ])
 ;

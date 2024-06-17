@@ -24,8 +24,6 @@ use Symfony\Component\Mime\Header\Headers;
 class TextPart extends AbstractPart
 {
     /** @internal */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected Headers $_headers;
 
     private static array $encoders = [];
@@ -38,46 +36,12 @@ class TextPart extends AbstractPart
     private ?string $name = null;
     private string $encoding;
     private ?bool $seekable = null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    protected $_headers;
-
-    private static $encoders = [];
-
-    private $body;
-    private $charset;
-    private $subtype;
-    /**
-     * @var ?string
-     */
-    private $disposition;
-    private $name;
-    private $encoding;
-    private $seekable;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param resource|string|File $body Use a File instance to defer loading the file until rendering
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct($body, ?string $charset = 'utf-8', string $subtype = 'plain', ?string $encoding = null)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct($body, ?string $charset = 'utf-8', string $subtype = 'plain', string $encoding = null)
-    {
-        unset($this->_headers);
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         parent::__construct();
 
         if (!\is_string($body) && !\is_resource($body) && !$body instanceof File) {
@@ -129,8 +93,6 @@ class TextPart extends AbstractPart
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return ?string null or one of attachment, inline, or form-data
      */
     public function getDisposition(): ?string
@@ -139,10 +101,6 @@ class TextPart extends AbstractPart
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Sets the name of the file (used by FormDataPart).
      *
      * @return $this
@@ -165,19 +123,11 @@ class TextPart extends AbstractPart
     public function getBody(): string
     {
         if ($this->body instanceof File) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (false === $ret = @file_get_contents($this->body->getPath())) {
                 throw new InvalidArgumentException(error_get_last()['message']);
             }
 
             return $ret;
-=======
-            return file_get_contents($this->body->getPath());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return file_get_contents($this->body->getPath());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (null === $this->seekable) {
@@ -276,15 +226,7 @@ class TextPart extends AbstractPart
     public function __sleep(): array
     {
         // convert resources to strings for serialization
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (null !== $this->seekable) {
-=======
-        if (null !== $this->seekable || $this->body instanceof File) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (null !== $this->seekable || $this->body instanceof File) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->body = $this->getBody();
             $this->seekable = null;
         }
@@ -294,15 +236,9 @@ class TextPart extends AbstractPart
         return ['_headers', 'body', 'charset', 'subtype', 'disposition', 'name', 'encoding'];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __wakeup()
     {
         $r = new \ReflectionProperty(AbstractPart::class, 'headers');

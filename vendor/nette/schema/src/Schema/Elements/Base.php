@@ -11,13 +11,7 @@ namespace Nette\Schema\Elements;
 
 use Nette;
 use Nette\Schema\Context;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Nette\Schema\Helpers;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
 /**
@@ -25,8 +19,6 @@ use Nette\Schema\Helpers;
  */
 trait Base
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	private bool $required = false;
 	private mixed $default = null;
 
@@ -39,33 +31,6 @@ trait Base
 
 
 	public function default(mixed $value): self
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	/** @var bool */
-	private $required = false;
-
-	/** @var mixed */
-	private $default;
-
-	/** @var callable|null */
-	private $before;
-
-	/** @var array[] */
-	private $asserts = [];
-
-	/** @var string|null */
-	private $castTo;
-
-	/** @var string|null */
-	private $deprecated;
-
-
-	public function default($value): self
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		$this->default = $value;
 		return $this;
@@ -88,8 +53,6 @@ trait Base
 
 	public function castTo(string $type): self
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
 		return $this->transform(Helpers::getCastStrategy($type));
 	}
 
@@ -97,20 +60,12 @@ trait Base
 	public function transform(callable $handler): self
 	{
 		$this->transforms[] = $handler;
-=======
-		$this->castTo = $type;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		$this->castTo = $type;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		return $this;
 	}
 
 
 	public function assert(callable $handler, ?string $description = null): self
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$expected = $description ?: (is_string($handler) ? "$handler()" : '#' . count($this->transforms));
 		return $this->transform(function ($value, Context $context) use ($handler, $description, $expected) {
 			if ($handler($value)) {
@@ -122,14 +77,6 @@ trait Base
 				['value' => $value, 'assertion' => $expected],
 			);
 		});
-=======
-		$this->asserts[] = [$handler, $description];
-		return $this;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		$this->asserts[] = [$handler, $description];
-		return $this;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
@@ -141,28 +88,12 @@ trait Base
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function completeDefault(Context $context): mixed
-=======
-	public function completeDefault(Context $context)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public function completeDefault(Context $context)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		if ($this->required) {
 			$context->addError(
 				'The mandatory item %path% is missing.',
-<<<<<<< HEAD
-<<<<<<< HEAD
 				Nette\Schema\Message::MissingItem,
-=======
-				Nette\Schema\Message::MISSING_ITEM
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-				Nette\Schema\Message::MISSING_ITEM
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			);
 			return null;
 		}
@@ -171,15 +102,7 @@ trait Base
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public function doNormalize(mixed $value, Context $context): mixed
-=======
-	public function doNormalize($value, Context $context)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	public function doNormalize($value, Context $context)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		if ($this->before) {
 			$value = ($this->before)($value);
@@ -194,22 +117,12 @@ trait Base
 		if ($this->deprecated !== null) {
 			$context->addWarning(
 				$this->deprecated,
-<<<<<<< HEAD
-<<<<<<< HEAD
 				Nette\Schema\Message::Deprecated,
-=======
-				Nette\Schema\Message::DEPRECATED
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-				Nette\Schema\Message::DEPRECATED
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			);
 		}
 	}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	private function doTransform(mixed $value, Context $context): mixed
 	{
 		$isOk = $context->createChecker();
@@ -246,93 +159,4 @@ trait Base
 	{
 		return $this->doTransform($value, $context);
 	}
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	private function doValidate($value, string $expected, Context $context): bool
-	{
-		if (!Nette\Utils\Validators::is($value, $expected)) {
-			$expected = str_replace(['|', ':'], [' or ', ' in range '], $expected);
-			$context->addError(
-				'The %label% %path% expects to be %expected%, %value% given.',
-				Nette\Schema\Message::TYPE_MISMATCH,
-				['value' => $value, 'expected' => $expected]
-			);
-			return false;
-		}
-
-		return true;
-	}
-
-
-	private function doValidateRange($value, array $range, Context $context, string $types = ''): bool
-	{
-		if (is_array($value) || is_string($value)) {
-			[$length, $label] = is_array($value)
-				? [count($value), 'items']
-				: (in_array('unicode', explode('|', $types), true)
-					? [Nette\Utils\Strings::length($value), 'characters']
-					: [strlen($value), 'bytes']);
-
-			if (!self::isInRange($length, $range)) {
-				$context->addError(
-					"The length of %label% %path% expects to be in range %expected%, %length% $label given.",
-					Nette\Schema\Message::LENGTH_OUT_OF_RANGE,
-					['value' => $value, 'length' => $length, 'expected' => implode('..', $range)]
-				);
-				return false;
-			}
-		} elseif ((is_int($value) || is_float($value)) && !self::isInRange($value, $range)) {
-			$context->addError(
-				'The %label% %path% expects to be in range %expected%, %value% given.',
-				Nette\Schema\Message::VALUE_OUT_OF_RANGE,
-				['value' => $value, 'expected' => implode('..', $range)]
-			);
-			return false;
-		}
-
-		return true;
-	}
-
-
-	private function isInRange($value, array $range): bool
-	{
-		return ($range[0] === null || $value >= $range[0])
-			&& ($range[1] === null || $value <= $range[1]);
-	}
-
-
-	private function doFinalize($value, Context $context)
-	{
-		if ($this->castTo) {
-			if (Nette\Utils\Reflection::isBuiltinType($this->castTo)) {
-				settype($value, $this->castTo);
-			} else {
-				$object = new $this->castTo;
-				foreach ($value as $k => $v) {
-					$object->$k = $v;
-				}
-
-				$value = $object;
-			}
-		}
-
-		foreach ($this->asserts as $i => [$handler, $description]) {
-			if (!$handler($value)) {
-				$expected = $description ?: (is_string($handler) ? "$handler()" : "#$i");
-				$context->addError(
-					'Failed assertion ' . ($description ? "'%assertion%'" : '%assertion%') . ' for %label% %path% with value %value%.',
-					Nette\Schema\Message::FAILED_ASSERTION,
-					['value' => $value, 'assertion' => $expected]
-				);
-				return;
-			}
-		}
-
-		return $value;
-	}
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

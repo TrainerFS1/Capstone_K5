@@ -51,15 +51,7 @@ class Snapshot
     private array $classes              = [];
     private array $traits               = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?ExcludeList $excludeList = null, bool $includeGlobalVariables = true, bool $includeStaticProperties = true, bool $includeConstants = true, bool $includeFunctions = true, bool $includeClasses = true, bool $includeInterfaces = true, bool $includeTraits = true, bool $includeIniSettings = true, bool $includeIncludedFiles = true)
-=======
-    public function __construct(ExcludeList $excludeList = null, bool $includeGlobalVariables = true, bool $includeStaticProperties = true, bool $includeConstants = true, bool $includeFunctions = true, bool $includeClasses = true, bool $includeInterfaces = true, bool $includeTraits = true, bool $includeIniSettings = true, bool $includeIncludedFiles = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(ExcludeList $excludeList = null, bool $includeGlobalVariables = true, bool $includeStaticProperties = true, bool $includeConstants = true, bool $includeFunctions = true, bool $includeClasses = true, bool $includeInterfaces = true, bool $includeTraits = true, bool $includeIniSettings = true, bool $includeIncludedFiles = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->excludeList = $excludeList ?: new ExcludeList;
 
@@ -252,16 +244,6 @@ class Snapshot
                         continue;
                     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $property->setAccessible(true);
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     if (!$property->isInitialized()) {
                         continue;
                     }
@@ -358,15 +340,7 @@ class Snapshot
                     /** @noinspection SlowArrayOperationsInLoopInspection */
                     $result = array_merge(
                         $result,
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $this->enumerateObjectsAndResources($element, $processed),
-=======
-                        $this->enumerateObjectsAndResources($element, $processed)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $this->enumerateObjectsAndResources($element, $processed)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 } else {
                     $result[] = $element;
@@ -384,15 +358,7 @@ class Snapshot
                     /** @noinspection SlowArrayOperationsInLoopInspection */
                     $result = array_merge(
                         $result,
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $this->enumerateObjectsAndResources($value, $processed),
-=======
-                        $this->enumerateObjectsAndResources($value, $processed)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $this->enumerateObjectsAndResources($value, $processed)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 } else {
                     $result[] = $value;

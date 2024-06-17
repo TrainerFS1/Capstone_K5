@@ -13,13 +13,7 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Cache\CacheManager forgetDriver(array|string|null $name = null)
  * @method static void purge(string|null $name = null)
  * @method static \Illuminate\Cache\CacheManager extend(string $driver, \Closure $callback)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method static \Illuminate\Cache\CacheManager setApplication(\Illuminate\Contracts\Foundation\Application $app)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method static bool has(array|string $key)
  * @method static bool missing(string $key)
  * @method static mixed get(array|string $key, mixed|\Closure $default = null)
@@ -60,13 +54,7 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Contracts\Cache\Lock restoreLock(string $name, string $owner)
  *
  * @see \Illuminate\Cache\CacheManager
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @mixin \Illuminate\Cache\Repository
  */
 class Cache extends Facade

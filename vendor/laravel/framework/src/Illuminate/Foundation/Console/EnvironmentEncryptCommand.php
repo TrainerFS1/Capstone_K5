@@ -100,15 +100,7 @@ class EnvironmentEncryptCommand extends Command
 
         $this->components->info('Environment successfully encrypted.');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->components->twoColumnDetail('Key', $keyPassed ? $key : 'base64:'.base64_encode($key));
-=======
-        $this->components->twoColumnDetail('Key', ($keyPassed ? $key : 'base64:'.base64_encode($key)));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $this->components->twoColumnDetail('Key', ($keyPassed ? $key : 'base64:'.base64_encode($key)));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->components->twoColumnDetail('Cipher', $cipher);
         $this->components->twoColumnDetail('Encrypted file', $encryptedFile);
 

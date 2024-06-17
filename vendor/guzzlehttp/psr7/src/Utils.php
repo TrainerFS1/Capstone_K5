@@ -14,40 +14,18 @@ final class Utils
     /**
      * Remove the items given by the keys, case insensitively from the data.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param (string|int)[] $keys
-=======
-     * @param string[] $keys
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param string[] $keys
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function caselessRemove(array $keys, array $data): array
     {
         $result = [];
 
         foreach ($keys as &$key) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $key = strtolower((string) $key);
         }
 
         foreach ($data as $k => $v) {
             if (!in_array(strtolower((string) $k), $keys)) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $key = strtolower($key);
-        }
-
-        foreach ($data as $k => $v) {
-            if (!is_string($k) || !in_array(strtolower($k), $keys)) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $result[$k] = $v;
             }
         }
@@ -112,13 +90,7 @@ final class Utils
                 }
                 $buffer .= $buf;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $buffer;
         }
 
@@ -203,15 +175,7 @@ final class Utils
                     $standardPorts = ['http' => 80, 'https' => 443];
                     $scheme = $changes['uri']->getScheme();
                     if (isset($standardPorts[$scheme]) && $port != $standardPorts[$scheme]) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $changes['set_headers']['Host'] .= ':'.$port;
-=======
-                        $changes['set_headers']['Host'] .= ':' . $port;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        $changes['set_headers']['Host'] .= ':' . $port;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     }
                 }
             }
@@ -267,15 +231,7 @@ final class Utils
      * @param StreamInterface $stream    Stream to read from
      * @param int|null        $maxLength Maximum buffer length
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function readLine(StreamInterface $stream, int $maxLength = null): string
-=======
-    public static function readLine(StreamInterface $stream, ?int $maxLength = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function readLine(StreamInterface $stream, ?int $maxLength = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $buffer = '';
         $size = 0;
@@ -336,13 +292,7 @@ final class Utils
                 fwrite($stream, (string) $resource);
                 fseek($stream, 0);
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return new Stream($stream, $options);
         }
 
@@ -360,13 +310,7 @@ final class Utils
                     fseek($stream, 0);
                     $resource = $stream;
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return new Stream($resource, $options);
             case 'object':
                 /** @var object $resource */
@@ -379,13 +323,7 @@ final class Utils
                         }
                         $result = $resource->current();
                         $resource->next();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         return $result;
                     }, $options);
                 } elseif (method_exists($resource, '__toString')) {
@@ -400,15 +338,7 @@ final class Utils
             return new PumpStream($resource, $options);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         throw new \InvalidArgumentException('Invalid resource type: '.gettype($resource));
-=======
-        throw new \InvalidArgumentException('Invalid resource type: ' . gettype($resource));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        throw new \InvalidArgumentException('Invalid resource type: ' . gettype($resource));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

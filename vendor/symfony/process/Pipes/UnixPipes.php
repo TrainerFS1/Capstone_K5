@@ -22,21 +22,9 @@ use Symfony\Component\Process\Process;
  */
 class UnixPipes extends AbstractPipes
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private ?bool $ttyMode;
     private bool $ptyMode;
     private bool $haveReadSupport;
-=======
-    private $ttyMode;
-    private $ptyMode;
-    private $haveReadSupport;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private $ttyMode;
-    private $ptyMode;
-    private $haveReadSupport;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     public function __construct(?bool $ttyMode, bool $ptyMode, mixed $input, bool $haveReadSupport)
     {
@@ -52,15 +40,7 @@ class UnixPipes extends AbstractPipes
         throw new \BadMethodCallException('Cannot serialize '.__CLASS__);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __wakeup(): void
-=======
-    public function __wakeup()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __wakeup()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);
     }

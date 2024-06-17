@@ -12,8 +12,6 @@ namespace PHPUnit\Metadata;
 use PHPUnit\Metadata\Version\Requirement;
 
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @psalm-immutable
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -26,22 +24,6 @@ abstract class Metadata
     /**
      * @psalm-var 0|1
      */
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @internal This class is not covered by the backward compatibility promise for PHPUnit
- *
- * @psalm-immutable
- */
-abstract class Metadata
-{
-    private const CLASS_LEVEL = 0;
-
-    private const METHOD_LEVEL = 1;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private readonly int $level;
 
     public static function after(): After
@@ -84,25 +66,6 @@ abstract class Metadata
         return new BeforeClass(self::METHOD_LEVEL);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public static function codeCoverageIgnoreOnClass(): CodeCoverageIgnore
-    {
-        return new CodeCoverageIgnore(self::CLASS_LEVEL);
-    }
-
-    public static function codeCoverageIgnoreOnMethod(): CodeCoverageIgnore
-    {
-        return new CodeCoverageIgnore(self::METHOD_LEVEL);
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * @psalm-param class-string $className
      */
@@ -111,43 +74,25 @@ abstract class Metadata
         return new CoversClass(self::CLASS_LEVEL, $className);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $functionName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function coversFunction(string $functionName): CoversFunction
     {
         return new CoversFunction(self::CLASS_LEVEL, $functionName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $target
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function coversOnClass(string $target): Covers
     {
         return new Covers(self::CLASS_LEVEL, $target);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $target
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function coversOnMethod(string $target): Covers
     {
         return new Covers(self::METHOD_LEVEL, $target);
@@ -173,43 +118,25 @@ abstract class Metadata
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function dataProvider(string $className, string $methodName): DataProvider
     {
         return new DataProvider(self::METHOD_LEVEL, $className, $methodName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param class-string $className
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function dependsOnClass(string $className, bool $deepClone, bool $shallowClone): DependsOnClass
     {
         return new DependsOnClass(self::METHOD_LEVEL, $className, $deepClone, $shallowClone);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param class-string $className
      * @psalm-param non-empty-string $methodName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function dependsOnMethod(string $className, string $methodName, bool $deepClone, bool $shallowClone): DependsOnMethod
     {
         return new DependsOnMethod(self::METHOD_LEVEL, $className, $methodName, $deepClone, $shallowClone);
@@ -225,29 +152,17 @@ abstract class Metadata
         return new DoesNotPerformAssertions(self::METHOD_LEVEL);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $globalVariableName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function excludeGlobalVariableFromBackupOnClass(string $globalVariableName): ExcludeGlobalVariableFromBackup
     {
         return new ExcludeGlobalVariableFromBackup(self::CLASS_LEVEL, $globalVariableName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $globalVariableName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function excludeGlobalVariableFromBackupOnMethod(string $globalVariableName): ExcludeGlobalVariableFromBackup
     {
         return new ExcludeGlobalVariableFromBackup(self::METHOD_LEVEL, $globalVariableName);
@@ -255,13 +170,7 @@ abstract class Metadata
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $propertyName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function excludeStaticPropertyFromBackupOnClass(string $className, string $propertyName): ExcludeStaticPropertyFromBackup
     {
@@ -270,49 +179,29 @@ abstract class Metadata
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $propertyName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function excludeStaticPropertyFromBackupOnMethod(string $className, string $propertyName): ExcludeStaticPropertyFromBackup
     {
         return new ExcludeStaticPropertyFromBackup(self::METHOD_LEVEL, $className, $propertyName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $groupName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function groupOnClass(string $groupName): Group
     {
         return new Group(self::CLASS_LEVEL, $groupName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $groupName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function groupOnMethod(string $groupName): Group
     {
         return new Group(self::METHOD_LEVEL, $groupName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function ignoreDeprecationsOnClass(): IgnoreDeprecations
     {
         return new IgnoreDeprecations(self::CLASS_LEVEL);
@@ -348,10 +237,6 @@ abstract class Metadata
         return new IgnoreFunctionForCodeCoverage(self::CLASS_LEVEL, $functionName);
     }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function postCondition(): PostCondition
     {
         return new PostCondition(self::METHOD_LEVEL);
@@ -372,29 +257,17 @@ abstract class Metadata
         return new PreserveGlobalState(self::METHOD_LEVEL, $enabled);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $functionName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresFunctionOnClass(string $functionName): RequiresFunction
     {
         return new RequiresFunction(self::CLASS_LEVEL, $functionName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $functionName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresFunctionOnMethod(string $functionName): RequiresFunction
     {
         return new RequiresFunction(self::METHOD_LEVEL, $functionName);
@@ -402,13 +275,7 @@ abstract class Metadata
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function requiresMethodOnClass(string $className, string $methodName): RequiresMethod
     {
@@ -417,70 +284,40 @@ abstract class Metadata
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function requiresMethodOnMethod(string $className, string $methodName): RequiresMethod
     {
         return new RequiresMethod(self::METHOD_LEVEL, $className, $methodName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $operatingSystem
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresOperatingSystemOnClass(string $operatingSystem): RequiresOperatingSystem
     {
         return new RequiresOperatingSystem(self::CLASS_LEVEL, $operatingSystem);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $operatingSystem
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresOperatingSystemOnMethod(string $operatingSystem): RequiresOperatingSystem
     {
         return new RequiresOperatingSystem(self::METHOD_LEVEL, $operatingSystem);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $operatingSystemFamily
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresOperatingSystemFamilyOnClass(string $operatingSystemFamily): RequiresOperatingSystemFamily
     {
         return new RequiresOperatingSystemFamily(self::CLASS_LEVEL, $operatingSystemFamily);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $operatingSystemFamily
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresOperatingSystemFamilyOnMethod(string $operatingSystemFamily): RequiresOperatingSystemFamily
     {
         return new RequiresOperatingSystemFamily(self::METHOD_LEVEL, $operatingSystemFamily);
@@ -496,29 +333,17 @@ abstract class Metadata
         return new RequiresPhp(self::METHOD_LEVEL, $versionRequirement);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $extension
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresPhpExtensionOnClass(string $extension, ?Requirement $versionRequirement): RequiresPhpExtension
     {
         return new RequiresPhpExtension(self::CLASS_LEVEL, $extension, $versionRequirement);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $extension
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresPhpExtensionOnMethod(string $extension, ?Requirement $versionRequirement): RequiresPhpExtension
     {
         return new RequiresPhpExtension(self::METHOD_LEVEL, $extension, $versionRequirement);
@@ -534,31 +359,19 @@ abstract class Metadata
         return new RequiresPhpunit(self::METHOD_LEVEL, $versionRequirement);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $setting
      * @psalm-param non-empty-string $value
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresSettingOnClass(string $setting, string $value): RequiresSetting
     {
         return new RequiresSetting(self::CLASS_LEVEL, $setting, $value);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $setting
      * @psalm-param non-empty-string $value
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function requiresSettingOnMethod(string $setting, string $value): RequiresSetting
     {
         return new RequiresSetting(self::METHOD_LEVEL, $setting, $value);
@@ -584,29 +397,17 @@ abstract class Metadata
         return new Test(self::METHOD_LEVEL);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $text
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function testDoxOnClass(string $text): TestDox
     {
         return new TestDox(self::CLASS_LEVEL, $text);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $text
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function testDoxOnMethod(string $text): TestDox
     {
         return new TestDox(self::METHOD_LEVEL, $text);
@@ -625,43 +426,25 @@ abstract class Metadata
         return new UsesClass(self::CLASS_LEVEL, $className);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $functionName
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function usesFunction(string $functionName): UsesFunction
     {
         return new UsesFunction(self::CLASS_LEVEL, $functionName);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $target
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function usesOnClass(string $target): Uses
     {
         return new Uses(self::CLASS_LEVEL, $target);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-param non-empty-string $target
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public static function usesOnMethod(string $target): Uses
     {
         return new Uses(self::METHOD_LEVEL, $target);
@@ -675,8 +458,6 @@ abstract class Metadata
         return new UsesDefaultClass(self::CLASS_LEVEL, $className);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function withoutErrorHandler(): WithoutErrorHandler
     {
         return new WithoutErrorHandler(self::METHOD_LEVEL);
@@ -685,10 +466,6 @@ abstract class Metadata
     /**
      * @psalm-param 0|1 $level
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected function __construct(int $level)
     {
         $this->level = $level;
@@ -753,23 +530,6 @@ abstract class Metadata
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @psalm-assert-if-true CodeCoverageIgnore $this
-     */
-    public function isCodeCoverageIgnore(): bool
-    {
-        return false;
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-assert-if-true Covers $this
      */
     public function isCovers(): bool
@@ -841,29 +601,17 @@ abstract class Metadata
         return false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-assert-if-true ExcludeGlobalVariableFromBackup $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isExcludeGlobalVariableFromBackup(): bool
     {
         return false;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @psalm-assert-if-true ExcludeStaticPropertyFromBackup $this
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function isExcludeStaticPropertyFromBackup(): bool
     {
         return false;
@@ -878,8 +626,6 @@ abstract class Metadata
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-assert-if-true IgnoreDeprecations $this
      */
     public function isIgnoreDeprecations(): bool
@@ -912,10 +658,6 @@ abstract class Metadata
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @psalm-assert-if-true RunClassInSeparateProcess $this
      */
     public function isRunClassInSeparateProcess(): bool
@@ -1082,8 +824,6 @@ abstract class Metadata
     {
         return false;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @psalm-assert-if-true WithoutErrorHandler $this
@@ -1092,8 +832,4 @@ abstract class Metadata
     {
         return false;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

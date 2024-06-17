@@ -28,15 +28,7 @@ use Symfony\Component\Console\Input\InputOption;
  */
 class TextDescriptor extends Descriptor
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeInputArgument(InputArgument $argument, array $options = []): void
-=======
-    protected function describeInputArgument(InputArgument $argument, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeInputArgument(InputArgument $argument, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $argument->getDefault() && (!\is_array($argument->getDefault()) || \count($argument->getDefault()))) {
             $default = sprintf('<comment> [default: %s]</comment>', $this->formatDefaultValue($argument->getDefault()));
@@ -56,15 +48,7 @@ class TextDescriptor extends Descriptor
         ), $options);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeInputOption(InputOption $option, array $options = []): void
-=======
-    protected function describeInputOption(InputOption $option, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeInputOption(InputOption $option, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($option->acceptValue() && null !== $option->getDefault() && (!\is_array($option->getDefault()) || \count($option->getDefault()))) {
             $default = sprintf('<comment> [default: %s]</comment>', $this->formatDefaultValue($option->getDefault()));
@@ -99,15 +83,7 @@ class TextDescriptor extends Descriptor
         ), $options);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeInputDefinition(InputDefinition $definition, array $options = []): void
-=======
-    protected function describeInputDefinition(InputDefinition $definition, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeInputDefinition(InputDefinition $definition, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $totalWidth = $this->calculateTotalWidthForOptions($definition->getOptions());
         foreach ($definition->getArguments() as $argument) {
@@ -146,15 +122,7 @@ class TextDescriptor extends Descriptor
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeCommand(Command $command, array $options = []): void
-=======
-    protected function describeCommand(Command $command, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeCommand(Command $command, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $command->mergeApplicationDefinition(false);
 
@@ -189,15 +157,7 @@ class TextDescriptor extends Descriptor
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function describeApplication(Application $application, array $options = []): void
-=======
-    protected function describeApplication(Application $application, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function describeApplication(Application $application, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $describedNamespace = $options['namespace'] ?? null;
         $description = new ApplicationDescription($application, $describedNamespace);
@@ -233,19 +193,7 @@ class TextDescriptor extends Descriptor
             }
 
             // calculate max. width based on available commands per namespace
-<<<<<<< HEAD
-<<<<<<< HEAD
             $width = $this->getColumnWidth(array_merge(...array_values(array_map(fn ($namespace) => array_intersect($namespace['commands'], array_keys($commands)), array_values($namespaces)))));
-=======
-            $width = $this->getColumnWidth(array_merge(...array_values(array_map(function ($namespace) use ($commands) {
-                return array_intersect($namespace['commands'], array_keys($commands));
-            }, array_values($namespaces)))));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $width = $this->getColumnWidth(array_merge(...array_values(array_map(function ($namespace) use ($commands) {
-                return array_intersect($namespace['commands'], array_keys($commands));
-            }, array_values($namespaces)))));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if ($describedNamespace) {
                 $this->writeText(sprintf('<comment>Available commands for the "%s" namespace:</comment>', $describedNamespace), $options);
@@ -254,19 +202,7 @@ class TextDescriptor extends Descriptor
             }
 
             foreach ($namespaces as $namespace) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $namespace['commands'] = array_filter($namespace['commands'], fn ($name) => isset($commands[$name]));
-=======
-                $namespace['commands'] = array_filter($namespace['commands'], function ($name) use ($commands) {
-                    return isset($commands[$name]);
-                });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $namespace['commands'] = array_filter($namespace['commands'], function ($name) use ($commands) {
-                    return isset($commands[$name]);
-                });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 if (!$namespace['commands']) {
                     continue;
@@ -290,15 +226,7 @@ class TextDescriptor extends Descriptor
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function writeText(string $content, array $options = []): void
-=======
-    private function writeText(string $content, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function writeText(string $content, array $options = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->write(
             isset($options['raw_text']) && $options['raw_text'] ? strip_tags($content) : $content,

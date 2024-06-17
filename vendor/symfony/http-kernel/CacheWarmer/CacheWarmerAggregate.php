@@ -11,14 +11,8 @@
 
 namespace Symfony\Component\HttpKernel\CacheWarmer;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Aggregates several cache warmers into a single one.
  *
@@ -37,49 +31,23 @@ class CacheWarmerAggregate implements CacheWarmerInterface
     /**
      * @param iterable<mixed, CacheWarmerInterface> $warmers
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(iterable $warmers = [], bool $debug = false, ?string $deprecationLogsFilepath = null)
-=======
-    public function __construct(iterable $warmers = [], bool $debug = false, string $deprecationLogsFilepath = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(iterable $warmers = [], bool $debug = false, string $deprecationLogsFilepath = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->warmers = $warmers;
         $this->debug = $debug;
         $this->deprecationLogsFilepath = $deprecationLogsFilepath;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function enableOptionalWarmers(): void
-=======
-    public function enableOptionalWarmers()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function enableOptionalWarmers()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->optionalsEnabled = true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function enableOnlyOptionalWarmers(): void
-=======
-    public function enableOnlyOptionalWarmers()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function enableOnlyOptionalWarmers()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->onlyOptionalsEnabled = $this->optionalsEnabled = true;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @param string|null $buildDir
      */
@@ -91,14 +59,6 @@ class CacheWarmerAggregate implements CacheWarmerInterface
             $buildDir = null;
         }
 
-=======
-    public function warmUp(string $cacheDir): array
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function warmUp(string $cacheDir): array
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($collectDeprecations = $this->debug && !\defined('PHPUNIT_COMPOSER_INSTALL')) {
             $collectedLogs = [];
             $previousHandler = set_error_handler(function ($type, $message, $file, $line) use (&$collectedLogs, &$previousHandler) {
@@ -144,8 +104,6 @@ class CacheWarmerAggregate implements CacheWarmerInterface
                     continue;
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $start = microtime(true);
                 foreach ((array) $warmer->warmUp($cacheDir, $buildDir) as $item) {
                     if (is_dir($item) || (str_starts_with($item, \dirname($cacheDir)) && !is_file($item)) || ($buildDir && str_starts_with($item, \dirname($buildDir)) && !is_file($item))) {
@@ -157,12 +115,6 @@ class CacheWarmerAggregate implements CacheWarmerInterface
                 if ($io?->isDebug()) {
                     $io->info(sprintf('"%s" completed in %0.2fms.', $warmer::class, 1000 * (microtime(true) - $start)));
                 }
-=======
-                $preload[] = array_values((array) $warmer->warmUp($cacheDir));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $preload[] = array_values((array) $warmer->warmUp($cacheDir));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         } finally {
             if ($collectDeprecations) {
@@ -179,15 +131,7 @@ class CacheWarmerAggregate implements CacheWarmerInterface
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return array_values(array_unique($preload));
-=======
-        return array_values(array_unique(array_merge([], ...$preload)));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return array_values(array_unique(array_merge([], ...$preload)));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function isOptional(): bool

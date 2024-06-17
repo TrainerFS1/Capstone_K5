@@ -13,44 +13,14 @@ namespace BaconQrCode\Common;
 final class EcBlocks
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Number of EC codewords per block.
-     *
-     * @var int
-     */
-    private $ecCodewordsPerBlock;
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * List of EC blocks.
      *
      * @var EcBlock[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private array $ecBlocks;
 
     public function __construct(private readonly int $ecCodewordsPerBlock, EcBlock ...$ecBlocks)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private $ecBlocks;
-
-    public function __construct(int $ecCodewordsPerBlock, EcBlock ...$ecBlocks)
-    {
-        $this->ecCodewordsPerBlock = $ecCodewordsPerBlock;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $this->ecBlocks = $ecBlocks;
     }
 

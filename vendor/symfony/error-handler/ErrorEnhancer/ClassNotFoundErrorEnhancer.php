@@ -107,16 +107,8 @@ class ClassNotFoundErrorEnhancer implements ErrorEnhancerInterface
 
     private function findClassInPath(string $path, string $class, string $prefix): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $path = realpath($path.'/'.strtr($prefix, '\\_', '//')) ?: realpath($path.'/'.\dirname(strtr($prefix, '\\_', '//'))) ?: realpath($path);
         if (!$path || !is_dir($path)) {
-=======
-        if (!$path = realpath($path.'/'.strtr($prefix, '\\_', '//')) ?: realpath($path.'/'.\dirname(strtr($prefix, '\\_', '//'))) ?: realpath($path)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (!$path = realpath($path.'/'.strtr($prefix, '\\_', '//')) ?: realpath($path.'/'.\dirname(strtr($prefix, '\\_', '//'))) ?: realpath($path)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return [];
         }
 
@@ -149,15 +141,7 @@ class ClassNotFoundErrorEnhancer implements ErrorEnhancerInterface
         ];
 
         if ($prefix) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $candidates = array_filter($candidates, fn ($candidate) => str_starts_with($candidate, $prefix));
-=======
-            $candidates = array_filter($candidates, function ($candidate) use ($prefix) { return str_starts_with($candidate, $prefix); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $candidates = array_filter($candidates, function ($candidate) use ($prefix) { return str_starts_with($candidate, $prefix); });
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         // We cannot use the autoloader here as most of them use require; but if the class
@@ -169,8 +153,6 @@ class ClassNotFoundErrorEnhancer implements ErrorEnhancerInterface
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         // Symfony may ship some polyfills, like "Normalizer". But if the Intl
         // extension is already installed, the next require_once will fail with
         // a compile error because the class is already defined. And this one
@@ -179,10 +161,6 @@ class ClassNotFoundErrorEnhancer implements ErrorEnhancerInterface
             return null;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         try {
             require_once $file;
         } catch (\Throwable) {

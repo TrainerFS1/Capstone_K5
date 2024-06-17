@@ -9,26 +9,16 @@
  */
 namespace PHPUnit\Event;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function gc_status;
 use PHPUnit\Event\Telemetry\HRTime;
 use PHPUnit\Event\Telemetry\Php81GarbageCollectorStatusProvider;
 use PHPUnit\Event\Telemetry\Php83GarbageCollectorStatusProvider;
-=======
-use PHPUnit\Event\Telemetry\HRTime;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PHPUnit\Event\Telemetry\HRTime;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 final class Facade
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static ?self $instance = null;
     private Emitter $emitter;
     private ?TypeMap $typeMap                         = null;
@@ -42,59 +32,10 @@ final class Facade
         }
 
         return self::$instance;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private static ?TypeMap $typeMap                         = null;
-    private static ?Emitter $emitter                         = null;
-    private static ?Emitter $suspended                       = null;
-    private static ?DeferringDispatcher $deferringDispatcher = null;
-    private static bool $sealed                              = false;
-
-    /**
-     * @throws EventFacadeIsSealedException
-     * @throws UnknownSubscriberTypeException
-     */
-    public static function registerSubscribers(Subscriber ...$subscribers): void
-    {
-        foreach ($subscribers as $subscriber) {
-            self::registerSubscriber($subscriber);
-        }
-    }
-
-    /**
-     * @throws EventFacadeIsSealedException
-     * @throws UnknownSubscriberTypeException
-     */
-    public static function registerSubscriber(Subscriber $subscriber): void
-    {
-        if (self::$sealed) {
-            throw new EventFacadeIsSealedException;
-        }
-
-        self::deferredDispatcher()->registerSubscriber($subscriber);
-    }
-
-    /**
-     * @throws EventFacadeIsSealedException
-     */
-    public static function registerTracer(Tracer\Tracer $tracer): void
-    {
-        if (self::$sealed) {
-            throw new EventFacadeIsSealedException;
-        }
-
-        self::deferredDispatcher()->registerTracer($tracer);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public static function emitter(): Emitter
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return self::instance()->emitter;
     }
 
@@ -162,65 +103,19 @@ final class Facade
         }
 
         $this->sealed = true;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if (self::$emitter === null) {
-            self::$emitter = self::createDispatchingEmitter();
-        }
-
-        return self::$emitter;
-    }
-
-    /** @noinspection PhpUnused */
-    public static function initForIsolation(HRTime $offset): CollectingDispatcher
-    {
-        $dispatcher = new CollectingDispatcher;
-
-        self::$emitter = new DispatchingEmitter(
-            $dispatcher,
-            new Telemetry\System(
-                new Telemetry\SystemStopWatchWithOffset($offset),
-                new Telemetry\SystemMemoryMeter
-            )
-        );
-
-        self::$sealed = true;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return $dispatcher;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function forward(EventCollection $events): void
     {
         $dispatcher = $this->deferredDispatcher();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public static function forward(EventCollection $events): void
-    {
-        if (self::$suspended !== null) {
-            return;
-        }
-
-        $dispatcher = self::deferredDispatcher();
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         foreach ($events as $event) {
             $dispatcher->dispatch($event);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function seal(): void
     {
         $this->deferredDispatcher()->flush();
@@ -272,76 +167,13 @@ final class Facade
     }
 
     private function registerDefaultTypes(TypeMap $typeMap): void
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public static function seal(): void
-    {
-        self::$deferringDispatcher->flush();
-
-        self::$sealed = true;
-
-        self::emitter()->testRunnerEventFacadeSealed();
-    }
-
-    private static function createDispatchingEmitter(): DispatchingEmitter
-    {
-        return new DispatchingEmitter(
-            self::deferredDispatcher(),
-            self::createTelemetrySystem()
-        );
-    }
-
-    private static function createTelemetrySystem(): Telemetry\System
-    {
-        return new Telemetry\System(
-            new Telemetry\SystemStopWatch,
-            new Telemetry\SystemMemoryMeter
-        );
-    }
-
-    private static function deferredDispatcher(): DeferringDispatcher
-    {
-        if (self::$deferringDispatcher === null) {
-            self::$deferringDispatcher = new DeferringDispatcher(
-                new DirectDispatcher(self::typeMap())
-            );
-        }
-
-        return self::$deferringDispatcher;
-    }
-
-    private static function typeMap(): TypeMap
-    {
-        if (self::$typeMap === null) {
-            $typeMap = new TypeMap;
-
-            self::registerDefaultTypes($typeMap);
-
-            self::$typeMap = $typeMap;
-        }
-
-        return self::$typeMap;
-    }
-
-    private static function registerDefaultTypes(TypeMap $typeMap): void
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $defaultEvents = [
             Application\Started::class,
             Application\Finished::class,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             Test\DataProviderMethodCalled::class,
             Test\DataProviderMethodFinished::class,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Test\MarkedIncomplete::class,
             Test\AfterLastTestMethodCalled::class,
             Test\AfterLastTestMethodFinished::class,
@@ -375,14 +207,8 @@ final class Facade
             Test\PreConditionFinished::class,
             Test\PreparationStarted::class,
             Test\Prepared::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
             Test\PreparationFailed::class,
             Test\PrintedUnexpectedOutput::class,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             Test\Skipped::class,
             Test\WarningTriggered::class,
 
@@ -399,13 +225,7 @@ final class Facade
             TestRunner\BootstrapFinished::class,
             TestRunner\Configured::class,
             TestRunner\EventFacadeSealed::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
             TestRunner\ExecutionAborted::class,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             TestRunner\ExecutionFinished::class,
             TestRunner\ExecutionStarted::class,
             TestRunner\ExtensionLoadedFromPhar::class,
@@ -414,15 +234,9 @@ final class Facade
             TestRunner\Started::class,
             TestRunner\DeprecationTriggered::class,
             TestRunner\WarningTriggered::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
             TestRunner\GarbageCollectionDisabled::class,
             TestRunner\GarbageCollectionTriggered::class,
             TestRunner\GarbageCollectionEnabled::class,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             TestSuite\Filtered::class,
             TestSuite\Finished::class,
@@ -435,8 +249,6 @@ final class Facade
         foreach ($defaultEvents as $eventClass) {
             $typeMap->addMapping(
                 $eventClass . 'Subscriber',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $eventClass,
             );
         }
@@ -452,15 +264,4 @@ final class Facade
 
         return new Php83GarbageCollectorStatusProvider;
     }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $eventClass
-            );
-        }
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

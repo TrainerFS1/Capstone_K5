@@ -128,15 +128,7 @@ if (!\function_exists('Psy\\info')) {
      *
      * @return array|null
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     function info(?Configuration $config = null)
-=======
-    function info(Configuration $config = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    function info(Configuration $config = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         static $lastConfig;
         if ($config !== null) {
@@ -163,15 +155,9 @@ if (!\function_exists('Psy\\info')) {
 
         $config = $lastConfig ?: new Configuration();
         $configEnv = (isset($_SERVER['PSYSH_CONFIG']) && $_SERVER['PSYSH_CONFIG']) ? $_SERVER['PSYSH_CONFIG'] : false;
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($configEnv === false && \PHP_SAPI === 'cli-server') {
             $configEnv = \getenv('PSYSH_CONFIG');
         }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         $shellInfo = [
             'PsySH version' => Shell::VERSION,
@@ -182,13 +168,7 @@ if (!\function_exists('Psy\\info')) {
             'OS'                  => \PHP_OS,
             'default includes'    => $config->getDefaultIncludes(),
             'require semicolons'  => $config->requireSemicolons(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             'strict types'        => $config->strictTypes(),
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             'error logging level' => $config->errorLoggingLevel(),
             'config file'         => [
                 'default config file' => $prettyPath($config->getConfigFile()),
@@ -252,8 +232,6 @@ if (!\function_exists('Psy\\info')) {
             'output pager'     => $config->getPager(),
         ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $theme = $config->theme();
         // @todo show styles (but only if they're different than default?)
         $output['theme'] = [
@@ -264,10 +242,6 @@ if (!\function_exists('Psy\\info')) {
             'returnValue'  => $theme->returnValue(),
         ];
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $pcntl = [
             'pcntl available' => ProcessForker::isPcntlSupported(),
             'posix available' => ProcessForker::isPosixSupported(),
@@ -377,18 +351,8 @@ if (!\function_exists('Psy\\bin')) {
                     exit(1);
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 if (\PHP_VERSION_ID < 70400) {
                     \fwrite(\STDERR, 'PHP 7.4.0 or higher is required. You can set the environment variable PSYSH_IGNORE_ENV=1 to override this restriction and proceed anyway.'.\PHP_EOL);
-=======
-                if (\PHP_VERSION_ID < 70000) {
-                    \fwrite(\STDERR, 'PHP 7.0.0 or higher is required. You can set the environment variable PSYSH_IGNORE_ENV=1 to override this restriction and proceed anyway.'.\PHP_EOL);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                if (\PHP_VERSION_ID < 70000) {
-                    \fwrite(\STDERR, 'PHP 7.0.0 or higher is required. You can set the environment variable PSYSH_IGNORE_ENV=1 to override this restriction and proceed anyway.'.\PHP_EOL);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     exit(1);
                 }
 
@@ -431,15 +395,7 @@ if (!\function_exists('Psy\\bin')) {
             }
 
             // Handle --help
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (!isset($config) || $usageException !== null || $input->getOption('help')) {
-=======
-            if ($usageException !== null || $input->getOption('help')) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($usageException !== null || $input->getOption('help')) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($usageException !== null) {
                     echo $usageException->getMessage().\PHP_EOL.\PHP_EOL;
                 }

@@ -22,43 +22,15 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class ExceptionDataCollector extends DataCollector
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
     {
         if (null !== $exception) {
             $this->data = [
                 'exception' => FlattenException::createWithDataRepresentation($exception),
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
-    {
-        if (null !== $exception) {
-            $this->data = [
-                'exception' => FlattenException::createFromThrowable($exception),
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             ];
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function reset()
-    {
-        $this->data = [];
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function hasException(): bool
     {
         return isset($this->data['exception']);

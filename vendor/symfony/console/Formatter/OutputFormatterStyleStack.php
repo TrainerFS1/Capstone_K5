@@ -26,15 +26,7 @@ class OutputFormatterStyleStack implements ResetInterface
 
     private OutputFormatterStyleInterface $emptyStyle;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?OutputFormatterStyleInterface $emptyStyle = null)
-=======
-    public function __construct(OutputFormatterStyleInterface $emptyStyle = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(OutputFormatterStyleInterface $emptyStyle = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->emptyStyle = $emptyStyle ?? new OutputFormatterStyle();
         $this->reset();
@@ -42,14 +34,8 @@ class OutputFormatterStyleStack implements ResetInterface
 
     /**
      * Resets stack (ie. empty internal arrays).
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function reset()
     {
@@ -58,14 +44,8 @@ class OutputFormatterStyleStack implements ResetInterface
 
     /**
      * Pushes a style in the stack.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function push(OutputFormatterStyleInterface $style)
     {
@@ -77,15 +57,7 @@ class OutputFormatterStyleStack implements ResetInterface
      *
      * @throws InvalidArgumentException When style tags incorrectly nested
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function pop(?OutputFormatterStyleInterface $style = null): OutputFormatterStyleInterface
-=======
-    public function pop(OutputFormatterStyleInterface $style = null): OutputFormatterStyleInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function pop(OutputFormatterStyleInterface $style = null): OutputFormatterStyleInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$this->styles) {
             return $this->emptyStyle;

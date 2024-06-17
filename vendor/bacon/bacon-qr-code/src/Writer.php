@@ -15,31 +15,10 @@ use BaconQrCode\Renderer\RendererInterface;
 final class Writer
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Creates a new writer with a specific renderer.
      */
     public function __construct(private readonly RendererInterface $renderer)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Renderer instance.
-     *
-     * @var RendererInterface
-     */
-    private $renderer;
-
-    /**
-     * Creates a new writer with a specific renderer.
-     */
-    public function __construct(RendererInterface $renderer)
-    {
-        $this->renderer = $renderer;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -52,15 +31,7 @@ final class Writer
      */
     public function writeString(
         string $content,
-<<<<<<< HEAD
-<<<<<<< HEAD
         string $encoding = Encoder::DEFAULT_BYTE_MODE_ENCODING,
-=======
-        string $encoding = Encoder::DEFAULT_BYTE_MODE_ECODING,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        string $encoding = Encoder::DEFAULT_BYTE_MODE_ECODING,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ?ErrorCorrectionLevel $ecLevel = null,
         ?Version $forcedVersion = null
     ) : string {
@@ -83,15 +54,7 @@ final class Writer
     public function writeFile(
         string $content,
         string $filename,
-<<<<<<< HEAD
-<<<<<<< HEAD
         string $encoding = Encoder::DEFAULT_BYTE_MODE_ENCODING,
-=======
-        string $encoding = Encoder::DEFAULT_BYTE_MODE_ECODING,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        string $encoding = Encoder::DEFAULT_BYTE_MODE_ECODING,
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         ?ErrorCorrectionLevel $ecLevel = null,
         ?Version $forcedVersion = null
     ) : void {

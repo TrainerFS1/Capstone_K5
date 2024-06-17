@@ -5,13 +5,7 @@ namespace Illuminate\Process;
 use Closure;
 use Illuminate\Process\Exceptions\ProcessTimedOutException;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Traits\Conditionable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use LogicException;
 use RuntimeException;
 use Symfony\Component\Process\Exception\ProcessTimedOutException as SymfonyTimeoutException;
@@ -19,14 +13,8 @@ use Symfony\Component\Process\Process;
 
 class PendingProcess
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     use Conditionable;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The process factory instance.
      *
@@ -180,15 +168,7 @@ class PendingProcess
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Set the additional environment variables for the process.
-=======
-     * Set the additional environent variables for the process.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Set the additional environent variables for the process.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  array  $environment
      * @return $this
@@ -257,15 +237,9 @@ class PendingProcess
      * @param  array<array-key, string>|string|null  $command
      * @param  callable|null  $output
      * @return \Illuminate\Contracts\Process\ProcessResult
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throws \Illuminate\Process\Exceptions\ProcessTimedOutException
      * @throws \RuntimeException
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function run(array|string $command = null, callable $output = null)
     {
@@ -292,20 +266,10 @@ class PendingProcess
      * Start the process in the background.
      *
      * @param  array<array-key, string>|string|null  $command
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  callable|null  $output
      * @return \Illuminate\Process\InvokedProcess
      *
      * @throws \RuntimeException
-=======
-     * @param  callable  $output
-     * @return \Illuminate\Process\InvokedProcess
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  callable  $output
-     * @return \Illuminate\Process\InvokedProcess
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function start(array|string $command = null, callable $output = null)
     {
@@ -386,15 +350,7 @@ class PendingProcess
     protected function fakeFor(string $command)
     {
         return collect($this->fakeHandlers)
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ->first(fn ($handler, $pattern) => $pattern === '*' || Str::is($pattern, $command));
-=======
-                ->first(fn ($handler, $pattern) => Str::is($pattern, $command));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ->first(fn ($handler, $pattern) => Str::is($pattern, $command));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -410,8 +366,6 @@ class PendingProcess
 
         if (is_string($result) || is_array($result)) {
             return (new FakeProcessResult(output: $result))->withCommand($command);
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
 
         return match (true) {
@@ -421,24 +375,6 @@ class PendingProcess
             $result instanceof FakeProcessSequence => $this->resolveSynchronousFake($command, fn () => $result()),
             default => throw new LogicException('Unsupported synchronous process fake result provided.'),
         };
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        } elseif ($result instanceof ProcessResult) {
-            return $result;
-        } elseif ($result instanceof FakeProcessResult) {
-            return $result->withCommand($command);
-        } elseif ($result instanceof FakeProcessDescription) {
-            return $result->toProcessResult($command);
-        } elseif ($result instanceof FakeProcessSequence) {
-            return $this->resolveSynchronousFake($command, fn () => $result());
-        }
-
-        throw new LogicException('Unsupported synchronous process fake result provided.');
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -448,14 +384,8 @@ class PendingProcess
      * @param  callable|null  $output
      * @param  \Closure  $fake
      * @return \Illuminate\Process\FakeInvokedProcess
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @throw \LogicException
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     protected function resolveAsynchronousFake(string $command, ?callable $output, Closure $fake)
     {

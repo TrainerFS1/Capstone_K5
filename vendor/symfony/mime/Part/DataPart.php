@@ -20,44 +20,17 @@ use Symfony\Component\Mime\Header\Headers;
 class DataPart extends TextPart
 {
     /** @internal */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected array $_parent;
 
     private ?string $filename = null;
     private string $mediaType;
     private ?string $cid = null;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    protected $_parent;
-
-    private $filename;
-    private $mediaType;
-    private $cid;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * @param resource|string|File $body Use a File instance to defer loading the file until rendering
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct($body, ?string $filename = null, ?string $contentType = null, ?string $encoding = null)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function __construct($body, string $filename = null, string $contentType = null, string $encoding = null)
-    {
-        unset($this->_parent);
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if ($body instanceof File && !$filename) {
             $filename = $body->getFilename();
         }
@@ -74,15 +47,7 @@ class DataPart extends TextPart
         $this->setDisposition('attachment');
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function fromPath(string $path, ?string $name = null, ?string $contentType = null): self
-=======
-    public static function fromPath(string $path, string $name = null, string $contentType = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function fromPath(string $path, string $name = null, string $contentType = null): self
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return new self(new File($path), $name, $contentType);
     }
@@ -179,15 +144,9 @@ class DataPart extends TextPart
         return ['_headers', '_parent', 'filename', 'mediaType'];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function __wakeup()
     {
         $r = new \ReflectionProperty(AbstractPart::class, 'headers');
@@ -198,15 +157,7 @@ class DataPart extends TextPart
             throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);
         }
         foreach (['body', 'charset', 'subtype', 'disposition', 'name', 'encoding'] as $name) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (null !== $this->_parent[$name] && !\is_string($this->_parent[$name]) && !$this->_parent[$name] instanceof File) {
-=======
-            if (null !== $this->_parent[$name] && !\is_string($this->_parent[$name])) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if (null !== $this->_parent[$name] && !\is_string($this->_parent[$name])) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);
             }
             $r = new \ReflectionProperty(TextPart::class, $name);

@@ -36,29 +36,17 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         return $this->name;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setName(string $name)
     {
         $this->name = $name;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function initialize(array &$attributes)
     {
         $this->attributes = &$attributes;
@@ -79,15 +67,9 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         return \array_key_exists($name, $this->attributes) ? $this->attributes[$name] : $default;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $name, mixed $value)
     {
         $this->attributes[$name] = $value;
@@ -98,15 +80,9 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         return $this->attributes;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $attributes)
     {
         $this->attributes = [];

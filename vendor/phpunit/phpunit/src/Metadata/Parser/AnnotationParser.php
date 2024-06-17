@@ -10,44 +10,22 @@
 namespace PHPUnit\Metadata\Parser;
 
 use function array_merge;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function assert;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function count;
 use function explode;
 use function method_exists;
 use function preg_replace;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function rtrim;
 use function sprintf;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function str_contains;
 use function str_starts_with;
 use function strlen;
 use function substr;
 use function trim;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Metadata\Annotation\Parser\Registry as AnnotationRegistry;
 use PHPUnit\Metadata\AnnotationsAreNotSupportedForInternalClassesException;
 use PHPUnit\Metadata\InvalidVersionRequirementException;
-=======
-use PHPUnit\Metadata\Annotation\Parser\Registry as AnnotationRegistry;
-use PHPUnit\Metadata\AnnotationsAreNotSupportedForInternalClassesException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use PHPUnit\Metadata\Annotation\Parser\Registry as AnnotationRegistry;
-use PHPUnit\Metadata\AnnotationsAreNotSupportedForInternalClassesException;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Metadata\Metadata;
 use PHPUnit\Metadata\MetadataCollection;
 use PHPUnit\Metadata\ReflectionException;
@@ -85,20 +63,6 @@ final class AnnotationParser implements Parser
 
                     break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                case 'codeCoverageIgnore':
-                    $result[] = Metadata::codeCoverageIgnoreOnClass();
-
-                    break;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 case 'covers':
                     foreach ($values as $value) {
                         $value = $this->cleanUpCoversOrUsesTarget($value);
@@ -109,17 +73,9 @@ final class AnnotationParser implements Parser
                     break;
 
                 case 'coversDefaultClass':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     foreach ($values as $value) {
                         $result[] = Metadata::coversDefaultClass($value);
                     }
-=======
-                    $result[] = Metadata::coversDefaultClass($values[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $result[] = Metadata::coversDefaultClass($values[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
 
@@ -186,24 +142,14 @@ final class AnnotationParser implements Parser
                     break;
 
                 case 'usesDefaultClass':
-<<<<<<< HEAD
-<<<<<<< HEAD
                     foreach ($values as $value) {
                         $result[] = Metadata::usesDefaultClass($value);
                     }
-=======
-                    $result[] = Metadata::usesDefaultClass($values[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $result[] = Metadata::usesDefaultClass($values[0]);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     break;
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {
             $result = array_merge(
                 $result,
@@ -221,33 +167,13 @@ final class AnnotationParser implements Parser
                 ),
             );
         }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $result = array_merge(
-            $result,
-            $this->parseRequirements(
-                AnnotationRegistry::getInstance()->forClassName($className)->requirements(),
-                'class'
-            )
-        );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         return MetadataCollection::fromArray($result);
     }
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws AnnotationsAreNotSupportedForInternalClassesException
      * @throws InvalidVersionOperatorException
@@ -290,20 +216,6 @@ final class AnnotationParser implements Parser
 
                     break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                case 'codeCoverageIgnore':
-                    $result[] = Metadata::codeCoverageIgnoreOnMethod();
-
-                    break;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 case 'covers':
                     foreach ($values as $value) {
                         $value = $this->cleanUpCoversOrUsesTarget($value);
@@ -320,14 +232,8 @@ final class AnnotationParser implements Parser
 
                 case 'dataProvider':
                     foreach ($values as $value) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         $value = rtrim($value, " ()\n\r\t\v\x00");
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         if (str_contains($value, '::')) {
                             $result[] = Metadata::dataProvider(...explode('::', $value));
 
@@ -357,8 +263,6 @@ final class AnnotationParser implements Parser
                         }
 
                         if (str_contains($value, '::')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                             [$_className, $_methodName] = explode('::', $value);
 
                             assert($_className !== '');
@@ -366,30 +270,11 @@ final class AnnotationParser implements Parser
 
                             if ($_methodName === 'class') {
                                 $result[] = Metadata::dependsOnClass($_className, $deepClone, $shallowClone);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                            [$className, $methodName] = explode('::', $value);
-
-                            if ($methodName === 'class') {
-                                $result[] = Metadata::dependsOnClass($className, $deepClone, $shallowClone);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                                 continue;
                             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                             $result[] = Metadata::dependsOnMethod($_className, $_methodName, $deepClone, $shallowClone);
-=======
-                            $result[] = Metadata::dependsOnMethod($className, $methodName, $deepClone, $shallowClone);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                            $result[] = Metadata::dependsOnMethod($className, $methodName, $deepClone, $shallowClone);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                             continue;
                         }
@@ -421,15 +306,7 @@ final class AnnotationParser implements Parser
 
                         $result[] = Metadata::excludeStaticPropertyFromBackupOnMethod(
                             trim($tmp[0]),
-<<<<<<< HEAD
-<<<<<<< HEAD
                             trim($tmp[1]),
-=======
-                            trim($tmp[1])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                            trim($tmp[1])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         );
                     }
 
@@ -500,8 +377,6 @@ final class AnnotationParser implements Parser
         }
 
         if (method_exists($className, $methodName)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             try {
                 $result = array_merge(
                     $result,
@@ -520,20 +395,6 @@ final class AnnotationParser implements Parser
                     ),
                 );
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            $result = array_merge(
-                $result,
-                $this->parseRequirements(
-                    AnnotationRegistry::getInstance()->forMethod($className, $methodName)->requirements(),
-                    'method'
-                )
-            );
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return MetadataCollection::fromArray($result);
@@ -541,13 +402,7 @@ final class AnnotationParser implements Parser
 
     /**
      * @psalm-param class-string $className
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $methodName
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @throws AnnotationsAreNotSupportedForInternalClassesException
      * @throws InvalidVersionOperatorException
@@ -556,15 +411,7 @@ final class AnnotationParser implements Parser
     public function forClassAndMethod(string $className, string $methodName): MetadataCollection
     {
         return $this->forClass($className)->mergeWith(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->forMethod($className, $methodName),
-=======
-            $this->forMethod($className, $methodName)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->forMethod($className, $methodName)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -596,15 +443,7 @@ final class AnnotationParser implements Parser
         if (!empty($requirements['PHP'])) {
             $versionRequirement = new ComparisonRequirement(
                 $requirements['PHP']['version'],
-<<<<<<< HEAD
-<<<<<<< HEAD
                 new VersionComparisonOperator(empty($requirements['PHP']['operator']) ? '>=' : $requirements['PHP']['operator']),
-=======
-                new VersionComparisonOperator(empty($requirements['PHP']['operator']) ? '>=' : $requirements['PHP']['operator'])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                new VersionComparisonOperator(empty($requirements['PHP']['operator']) ? '>=' : $requirements['PHP']['operator'])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             if ($level === 'class') {
@@ -640,15 +479,7 @@ final class AnnotationParser implements Parser
             foreach ($requirements['extension_versions'] as $extension => $version) {
                 $versionRequirement = new ComparisonRequirement(
                     $version['version'],
-<<<<<<< HEAD
-<<<<<<< HEAD
                     new VersionComparisonOperator(empty($version['operator']) ? '>=' : $version['operator']),
-=======
-                    new VersionComparisonOperator(empty($version['operator']) ? '>=' : $version['operator'])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    new VersionComparisonOperator(empty($version['operator']) ? '>=' : $version['operator'])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
 
                 if ($level === 'class') {
@@ -662,15 +493,7 @@ final class AnnotationParser implements Parser
         if (!empty($requirements['PHPUnit'])) {
             $versionRequirement = new ComparisonRequirement(
                 $requirements['PHPUnit']['version'],
-<<<<<<< HEAD
-<<<<<<< HEAD
                 new VersionComparisonOperator(empty($requirements['PHPUnit']['operator']) ? '>=' : $requirements['PHPUnit']['operator']),
-=======
-                new VersionComparisonOperator(empty($requirements['PHPUnit']['operator']) ? '>=' : $requirements['PHPUnit']['operator'])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                new VersionComparisonOperator(empty($requirements['PHPUnit']['operator']) ? '>=' : $requirements['PHPUnit']['operator'])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             if ($level === 'class') {

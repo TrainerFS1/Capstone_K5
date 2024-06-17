@@ -6,8 +6,6 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 
 ## [Unreleased][unreleased]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## [2.4.2] - 2024-02-02
 
 ### Fixed
@@ -57,10 +55,6 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 - Fixed inaccurate `@throws` docblocks throughout the codebase, including `ConverterInterface`, `MarkdownConverter`, and `MarkdownConverterInterface`.
     - These previously suggested that only `\RuntimeException`s were thrown, which was inaccurate as `\LogicException`s were also possible.
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## [2.3.9] - 2023-02-15
 
 ### Fixed
@@ -573,18 +567,10 @@ No changes were introduced since the previous release.
     - Alternative 1: Use `CommonMarkConverter` or `GithubFlavoredMarkdownConverter` if you don't need to customize the environment
     - Alternative 2: Instantiate a new `Environment` and add the necessary extensions yourself
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [unreleased]: https://github.com/thephpleague/commonmark/compare/2.4.2...main
 [2.4.2]: https://github.com/thephpleague/commonmark/compare/2.4.1...2.4.2
 [2.4.1]: https://github.com/thephpleague/commonmark/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/thephpleague/commonmark/compare/2.3.9...2.4.0
-=======
-[unreleased]: https://github.com/thephpleague/commonmark/compare/2.3.9...main
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-[unreleased]: https://github.com/thephpleague/commonmark/compare/2.3.9...main
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 [2.3.9]: https://github.com/thephpleague/commonmark/compare/2.3.8...2.3.9
 [2.3.8]: https://github.com/thephpleague/commonmark/compare/2.3.7...2.3.8
 [2.3.7]: https://github.com/thephpleague/commonmark/compare/2.3.6...2.3.7

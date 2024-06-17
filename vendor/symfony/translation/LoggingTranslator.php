@@ -37,15 +37,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
         $this->logger = $logger;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function trans(?string $id, array $parameters = [], ?string $domain = null, ?string $locale = null): string
-=======
-    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $trans = $this->translator->trans($id = (string) $id, $parameters, $domain, $locale);
         $this->log($id, $domain, $locale);
@@ -53,15 +45,9 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
         return $trans;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function setLocale(string $locale)
     {
         $prev = $this->translator->getLocale();
@@ -78,15 +64,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
         return $this->translator->getLocale();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getCatalogue(?string $locale = null): MessageCatalogueInterface
-=======
-    public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return $this->translator->getCatalogue($locale);
     }
@@ -109,15 +87,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return mixed
-=======
-     * Passes through all unknown calls onto the translator object.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Passes through all unknown calls onto the translator object.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function __call(string $method, array $args)
     {
@@ -127,15 +97,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     /**
      * Logs for missing translations.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function log(string $id, ?string $domain, ?string $locale): void
-=======
-    private function log(string $id, ?string $domain, ?string $locale)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function log(string $id, ?string $domain, ?string $locale)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $domain ??= 'messages';
 

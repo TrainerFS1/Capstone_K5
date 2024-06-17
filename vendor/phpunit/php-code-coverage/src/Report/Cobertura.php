@@ -15,13 +15,7 @@ use function dirname;
 use function file_put_contents;
 use function preg_match;
 use function range;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function str_contains;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function str_replace;
 use function time;
 use DOMImplementation;
@@ -46,15 +40,7 @@ final class Cobertura
         $documentType = $implementation->createDocumentType(
             'coverage',
             '',
-<<<<<<< HEAD
-<<<<<<< HEAD
             'http://cobertura.sourceforge.net/xml/coverage-04.dtd',
-=======
-            'http://cobertura.sourceforge.net/xml/coverage-04.dtd'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            'http://cobertura.sourceforge.net/xml/coverage-04.dtd'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         $document               = $implementation->createDocument('', '', $documentType);
@@ -128,15 +114,7 @@ final class Cobertura
             $coverageData = $item->lineCoverageData();
 
             foreach ($classes as $className => $class) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $complexity        += $class['ccn'];
-=======
-                $complexity += $class['ccn'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $complexity += $class['ccn'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $packageComplexity += $class['ccn'];
 
                 if (!empty($class['package']['namespace'])) {
@@ -197,15 +175,7 @@ final class Cobertura
                     $methodElement->appendChild($methodLinesElement);
 
                     foreach (range($method['startLine'], $method['endLine']) as $line) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         if (!isset($coverageData[$line])) {
-=======
-                        if (!isset($coverageData[$line]) || $coverageData[$line] === null) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        if (!isset($coverageData[$line]) || $coverageData[$line] === null) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                             continue;
                         }
                         $methodLineElement = $document->createElement('line');
@@ -224,15 +194,7 @@ final class Cobertura
                 }
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($item->numberOfFunctions() === 0) {
-=======
-            if ($report->numberOfFunctions() === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($report->numberOfFunctions() === 0) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $packageElement->setAttribute('complexity', (string) $packageComplexity);
 
                 continue;
@@ -256,63 +218,29 @@ final class Cobertura
 
             $classElement->appendChild($classLinesElement);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $functions = $item->functions();
-=======
-            $functions = $report->functions();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $functions = $report->functions();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             foreach ($functions as $functionName => $function) {
                 if ($function['executableLines'] === 0) {
                     continue;
                 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $complexity          += $function['ccn'];
                 $packageComplexity   += $function['ccn'];
-=======
-                $complexity += $function['ccn'];
-                $packageComplexity += $function['ccn'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $complexity += $function['ccn'];
-                $packageComplexity += $function['ccn'];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $functionsComplexity += $function['ccn'];
 
                 $linesValid   = $function['executableLines'];
                 $linesCovered = $function['executedLines'];
                 $lineRate     = $linesValid === 0 ? 0 : ($linesCovered / $linesValid);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $functionsLinesValid   += $linesValid;
-=======
-                $functionsLinesValid += $linesValid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $functionsLinesValid += $linesValid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $functionsLinesCovered += $linesCovered;
 
                 $branchesValid   = $function['executableBranches'];
                 $branchesCovered = $function['executedBranches'];
                 $branchRate      = $branchesValid === 0 ? 0 : ($branchesCovered / $branchesValid);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $functionsBranchesValid   += $branchesValid;
-=======
-                $functionsBranchesValid += $branchesValid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $functionsBranchesValid += $branchesValid;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $functionsBranchesCovered += $branchesValid;
 
                 $methodElement = $document->createElement('method');
@@ -328,15 +256,7 @@ final class Cobertura
                 $methodElement->appendChild($methodLinesElement);
 
                 foreach (range($function['startLine'], $function['endLine']) as $line) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     if (!isset($coverageData[$line])) {
-=======
-                    if (!isset($coverageData[$line]) || $coverageData[$line] === null) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    if (!isset($coverageData[$line]) || $coverageData[$line] === null) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         continue;
                     }
                     $methodLineElement = $document->createElement('line');
@@ -375,17 +295,9 @@ final class Cobertura
         $buffer = $document->saveXML();
 
         if ($target !== null) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (!str_contains($target, '://')) {
                 Filesystem::createDirectory(dirname($target));
             }
-=======
-            Filesystem::createDirectory(dirname($target));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            Filesystem::createDirectory(dirname($target));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if (@file_put_contents($target, $buffer) === false) {
                 throw new WriteOperationFailedException($target);

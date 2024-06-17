@@ -110,15 +110,7 @@ abstract class Stream implements IStream, EventListenable
      * If not exists in the register, try to call the
      * `$this->_open()` method. Please, see the `self::_getStream()` method.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(string $streamName, ?string $context = null, bool $wait = false)
-=======
-    public function __construct(string $streamName, string $context = null, bool $wait = false)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(string $streamName, string $context = null, bool $wait = false)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->_streamName = $streamName;
         $this->_context = $context;
@@ -158,15 +150,7 @@ abstract class Stream implements IStream, EventListenable
     private static function &_getStream(
         string $streamName,
         self $handler,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ?string $context = null
-=======
-        string $context = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        string $context = null
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ): array {
         $name = \md5($streamName);
 
@@ -211,15 +195,7 @@ abstract class Stream implements IStream, EventListenable
      * Note: This method is protected, but do not forget that it could be
      * overloaded into a public context.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     abstract protected function &_open(string $streamName, ?StreamContext $context = null);
-=======
-    abstract protected function &_open(string $streamName, StreamContext $context = null);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    abstract protected function &_open(string $streamName, StreamContext $context = null);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Close the current stream.

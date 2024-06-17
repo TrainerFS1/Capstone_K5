@@ -51,15 +51,7 @@ final class MultipartStream implements StreamInterface
     /**
      * Get the headers needed before transferring the content of a POST file
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param string[] $headers
-=======
-     * @param array<string, string> $headers
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param array<string, string> $headers
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     private function getHeaders(array $headers): string
     {
@@ -68,15 +60,7 @@ final class MultipartStream implements StreamInterface
             $str .= "{$key}: {$value}\r\n";
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return "--{$this->boundary}\r\n".trim($str)."\r\n\r\n";
-=======
-        return "--{$this->boundary}\r\n" . trim($str) . "\r\n\r\n";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return "--{$this->boundary}\r\n" . trim($str) . "\r\n\r\n";
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -88,15 +72,7 @@ final class MultipartStream implements StreamInterface
 
         foreach ($elements as $element) {
             if (!is_array($element)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 throw new \UnexpectedValueException('An array is expected');
-=======
-                throw new \UnexpectedValueException("An array is expected");
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                throw new \UnexpectedValueException("An array is expected");
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
             $this->addElement($stream, $element);
         }
@@ -136,8 +112,6 @@ final class MultipartStream implements StreamInterface
         $stream->addStream(Utils::streamFor("\r\n"));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @param string[] $headers
      *
@@ -147,17 +121,6 @@ final class MultipartStream implements StreamInterface
     {
         // Set a default content-disposition header if one was no provided
         $disposition = self::getHeader($headers, 'content-disposition');
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private function createElement(string $name, StreamInterface $stream, ?string $filename, array $headers): array
-    {
-        // Set a default content-disposition header if one was no provided
-        $disposition = $this->getHeader($headers, 'content-disposition');
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$disposition) {
             $headers['Content-Disposition'] = ($filename === '0' || $filename)
                 ? sprintf(
@@ -169,15 +132,7 @@ final class MultipartStream implements StreamInterface
         }
 
         // Set a default content-length header if one was no provided
-<<<<<<< HEAD
-<<<<<<< HEAD
         $length = self::getHeader($headers, 'content-length');
-=======
-        $length = $this->getHeader($headers, 'content-length');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $length = $this->getHeader($headers, 'content-length');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!$length) {
             if ($length = $stream->getSize()) {
                 $headers['Content-Length'] = (string) $length;
@@ -185,30 +140,14 @@ final class MultipartStream implements StreamInterface
         }
 
         // Set a default Content-Type if one was not supplied
-<<<<<<< HEAD
-<<<<<<< HEAD
         $type = self::getHeader($headers, 'content-type');
         if (!$type && ($filename === '0' || $filename)) {
             $headers['Content-Type'] = MimeType::fromFilename($filename) ?? 'application/octet-stream';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $type = $this->getHeader($headers, 'content-type');
-        if (!$type && ($filename === '0' || $filename)) {
-            if ($type = MimeType::fromFilename($filename)) {
-                $headers['Content-Type'] = $type;
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return [$stream, $headers];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @param string[] $headers
      */
@@ -217,18 +156,6 @@ final class MultipartStream implements StreamInterface
         $lowercaseHeader = strtolower($key);
         foreach ($headers as $k => $v) {
             if (strtolower((string) $k) === $lowercaseHeader) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    private function getHeader(array $headers, string $key)
-    {
-        $lowercaseHeader = strtolower($key);
-        foreach ($headers as $k => $v) {
-            if (strtolower($k) === $lowercaseHeader) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 return $v;
             }
         }

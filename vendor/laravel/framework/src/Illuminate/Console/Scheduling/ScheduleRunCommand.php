@@ -8,24 +8,12 @@ use Illuminate\Console\Events\ScheduledTaskFailed;
 use Illuminate\Console\Events\ScheduledTaskFinished;
 use Illuminate\Console\Events\ScheduledTaskSkipped;
 use Illuminate\Console\Events\ScheduledTaskStarting;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Contracts\Cache\Repository as Cache;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Date;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Sleep;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Attribute\AsCommand;
 use Throwable;
 
@@ -82,8 +70,6 @@ class ScheduleRunCommand extends Command
     protected $handler;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The cache store implementation.
      *
      * @var \Illuminate\Contracts\Cache\Repository
@@ -91,10 +77,6 @@ class ScheduleRunCommand extends Command
     protected $cache;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * The PHP binary used by the command.
      *
      * @var string
@@ -118,8 +100,6 @@ class ScheduleRunCommand extends Command
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @param  \Illuminate\Contracts\Events\Dispatcher  $dispatcher
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Illuminate\Contracts\Cache\Repository  $cache
      * @param  \Illuminate\Contracts\Debug\ExceptionHandler  $handler
      * @return void
@@ -139,26 +119,6 @@ class ScheduleRunCommand extends Command
         $events = $this->schedule->dueEvents($this->laravel);
 
         foreach ($events as $event) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * @param  \Illuminate\Contracts\Debug\ExceptionHandler  $handler
-     * @return void
-     */
-    public function handle(Schedule $schedule, Dispatcher $dispatcher, ExceptionHandler $handler)
-    {
-        $this->schedule = $schedule;
-        $this->dispatcher = $dispatcher;
-        $this->handler = $handler;
-        $this->phpBinary = Application::phpBinary();
-
-        $this->newLine();
-
-        foreach ($this->schedule->dueEvents($this->laravel) as $event) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (! $event->filtersPass($this->laravel)) {
                 $this->dispatcher->dispatch(new ScheduledTaskSkipped($event));
 
@@ -174,16 +134,10 @@ class ScheduleRunCommand extends Command
             $this->eventsRan = true;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($events->contains->isRepeatable()) {
             $this->repeatEvents($events->filter->isRepeatable());
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (! $this->eventsRan) {
             $this->components->info('No scheduled commands are ready to run.');
         } else {
@@ -258,8 +212,6 @@ class ScheduleRunCommand extends Command
             ]);
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Run the given repeating events.
@@ -325,8 +277,4 @@ class ScheduleRunCommand extends Command
     {
         $this->cache->forget('illuminate:schedule:interrupt');
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

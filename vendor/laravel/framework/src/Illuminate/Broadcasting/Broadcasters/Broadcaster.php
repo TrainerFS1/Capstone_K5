@@ -373,8 +373,6 @@ abstract class Broadcaster implements BroadcasterContract
     {
         return preg_match('/^'.preg_replace('/\{(.*?)\}/', '([^\.]+)', $pattern).'$/', $channel);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Get all of the registered channels.
@@ -385,8 +383,4 @@ abstract class Broadcaster implements BroadcasterContract
     {
         return collect($this->channels);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

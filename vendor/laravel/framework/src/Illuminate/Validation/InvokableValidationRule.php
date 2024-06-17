@@ -8,25 +8,12 @@ use Illuminate\Contracts\Validation\InvokableRule;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Translation\CreatesPotentiallyTranslatedStrings;
 
 class InvokableValidationRule implements Rule, ValidatorAwareRule
 {
     use CreatesPotentiallyTranslatedStrings;
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use Illuminate\Translation\PotentiallyTranslatedString;
-
-class InvokableValidationRule implements Rule, ValidatorAwareRule
-{
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * The invokable that validates the attribute.
      *
@@ -77,32 +64,12 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
      * Create a new implicit or explicit Invokable validation rule.
      *
      * @param  \Illuminate\Contracts\Validation\ValidationRule|\Illuminate\Contracts\Validation\InvokableRule  $invokable
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Illuminate\Contracts\Validation\Rule|\Illuminate\Validation\InvokableValidationRule
-=======
-     * @return \Illuminate\Contracts\Validation\Rule
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Illuminate\Contracts\Validation\Rule
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function make($invokable)
     {
         if ($invokable->implicit ?? false) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return new class($invokable) extends InvokableValidationRule implements ImplicitRule {
-=======
-            return new class($invokable) extends InvokableValidationRule implements ImplicitRule
-            {
-                //
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return new class($invokable) extends InvokableValidationRule implements ImplicitRule
-            {
-                //
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             };
         }
 
@@ -186,61 +153,4 @@ class InvokableValidationRule implements Rule, ValidatorAwareRule
 
         return $this;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-    /**
-     * Create a pending potentially translated string.
-     *
-     * @param  string  $attribute
-     * @param  string|null  $message
-     * @return \Illuminate\Translation\PotentiallyTranslatedString
-     */
-    protected function pendingPotentiallyTranslatedString($attribute, $message)
-    {
-        $destructor = $message === null
-            ? fn ($message) => $this->messages[] = $message
-            : fn ($message) => $this->messages[$attribute] = $message;
-
-        return new class($message ?? $attribute, $this->validator->getTranslator(), $destructor) extends PotentiallyTranslatedString
-        {
-            /**
-             * The callback to call when the object destructs.
-             *
-             * @var \Closure
-             */
-            protected $destructor;
-
-            /**
-             * Create a new pending potentially translated string.
-             *
-             * @param  string  $message
-             * @param  \Illuminate\Contracts\Translation\Translator  $translator
-             * @param  \Closure  $destructor
-             */
-            public function __construct($message, $translator, $destructor)
-            {
-                parent::__construct($message, $translator);
-
-                $this->destructor = $destructor;
-            }
-
-            /**
-             * Handle the object's destruction.
-             *
-             * @return void
-             */
-            public function __destruct()
-            {
-                ($this->destructor)($this->toString());
-            }
-        };
-    }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

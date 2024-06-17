@@ -42,20 +42,10 @@ abstract class Hex implements EncoderInterface
      * @return string
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function encode(
         #[\SensitiveParameter]
         string $binString
     ): string {
-=======
-    public static function encode(string $binString): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function encode(string $binString): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $hex = '';
         $len = Binary::safeStrlen($binString);
         for ($i = 0; $i < $len; ++$i) {
@@ -81,20 +71,10 @@ abstract class Hex implements EncoderInterface
      * @return string
      * @throws TypeError
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function encodeUpper(
         #[\SensitiveParameter]
         string $binString
     ): string {
-=======
-    public static function encodeUpper(string $binString): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function encodeUpper(string $binString): string
-    {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $hex = '';
         $len = Binary::safeStrlen($binString);
 
@@ -123,13 +103,7 @@ abstract class Hex implements EncoderInterface
      * @throws RangeException
      */
     public static function decode(
-<<<<<<< HEAD
-<<<<<<< HEAD
         #[\SensitiveParameter]
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         string $encodedString,
         bool $strictPadding = false
     ): string {

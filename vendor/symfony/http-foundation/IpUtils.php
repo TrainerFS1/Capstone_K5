@@ -18,8 +18,6 @@ namespace Symfony\Component\HttpFoundation;
  */
 class IpUtils
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public const PRIVATE_SUBNETS = [
         '127.0.0.0/8',    // RFC1700 (Loopback)
         '10.0.0.0/8',     // RFC1918
@@ -35,10 +33,6 @@ class IpUtils
         '::/128',         // Unspecified address
     ];
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private static array $checkedIps = [];
 
     /**
@@ -80,8 +74,6 @@ class IpUtils
      */
     public static function checkIp4(string $requestIp, string $ip): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $cacheKey = $requestIp.'-'.$ip.'-v4';
         if (null !== $cacheValue = self::getCacheResult($cacheKey)) {
             return $cacheValue;
@@ -89,45 +81,17 @@ class IpUtils
 
         if (!filter_var($requestIp, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4)) {
             return self::setCacheResult($cacheKey, false);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        $cacheKey = $requestIp.'-'.$ip;
-        if (isset(self::$checkedIps[$cacheKey])) {
-            return self::$checkedIps[$cacheKey];
-        }
-
-        if (!filter_var($requestIp, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4)) {
-            return self::$checkedIps[$cacheKey] = false;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (str_contains($ip, '/')) {
             [$address, $netmask] = explode('/', $ip, 2);
 
             if ('0' === $netmask) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return self::setCacheResult($cacheKey, false !== filter_var($address, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4));
             }
 
             if ($netmask < 0 || $netmask > 32) {
                 return self::setCacheResult($cacheKey, false);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                return self::$checkedIps[$cacheKey] = false !== filter_var($address, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4);
-            }
-
-            if ($netmask < 0 || $netmask > 32) {
-                return self::$checkedIps[$cacheKey] = false;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         } else {
             $address = $ip;
@@ -135,23 +99,10 @@ class IpUtils
         }
 
         if (false === ip2long($address)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return self::setCacheResult($cacheKey, false);
         }
 
         return self::setCacheResult($cacheKey, 0 === substr_compare(sprintf('%032b', ip2long($requestIp)), sprintf('%032b', ip2long($address)), 0, $netmask));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            return self::$checkedIps[$cacheKey] = false;
-        }
-
-        return self::$checkedIps[$cacheKey] = 0 === substr_compare(sprintf('%032b', ip2long($requestIp)), sprintf('%032b', ip2long($address)), 0, $netmask);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -168,21 +119,9 @@ class IpUtils
      */
     public static function checkIp6(string $requestIp, string $ip): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $cacheKey = $requestIp.'-'.$ip.'-v6';
         if (null !== $cacheValue = self::getCacheResult($cacheKey)) {
             return $cacheValue;
-=======
-        $cacheKey = $requestIp.'-'.$ip;
-        if (isset(self::$checkedIps[$cacheKey])) {
-            return self::$checkedIps[$cacheKey];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $cacheKey = $requestIp.'-'.$ip;
-        if (isset(self::$checkedIps[$cacheKey])) {
-            return self::$checkedIps[$cacheKey];
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (!((\extension_loaded('sockets') && \defined('AF_INET6')) || @inet_pton('::1'))) {
@@ -191,30 +130,14 @@ class IpUtils
 
         // Check to see if we were given a IP4 $requestIp or $ip by mistake
         if (!filter_var($requestIp, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return self::setCacheResult($cacheKey, false);
-=======
-            return self::$checkedIps[$cacheKey] = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return self::$checkedIps[$cacheKey] = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if (str_contains($ip, '/')) {
             [$address, $netmask] = explode('/', $ip, 2);
 
             if (!filter_var($address, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return self::setCacheResult($cacheKey, false);
-=======
-                return self::$checkedIps[$cacheKey] = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                return self::$checkedIps[$cacheKey] = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             if ('0' === $netmask) {
@@ -222,25 +145,11 @@ class IpUtils
             }
 
             if ($netmask < 1 || $netmask > 128) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return self::setCacheResult($cacheKey, false);
             }
         } else {
             if (!filter_var($ip, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
                 return self::setCacheResult($cacheKey, false);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                return self::$checkedIps[$cacheKey] = false;
-            }
-        } else {
-            if (!filter_var($ip, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
-                return self::$checkedIps[$cacheKey] = false;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             $address = $ip;
@@ -251,15 +160,7 @@ class IpUtils
         $bytesTest = unpack('n*', @inet_pton($requestIp));
 
         if (!$bytesAddr || !$bytesTest) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return self::setCacheResult($cacheKey, false);
-=======
-            return self::$checkedIps[$cacheKey] = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            return self::$checkedIps[$cacheKey] = false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         for ($i = 1, $ceil = ceil($netmask / 16); $i <= $ceil; ++$i) {
@@ -267,25 +168,11 @@ class IpUtils
             $left = ($left <= 16) ? $left : 16;
             $mask = ~(0xFFFF >> $left) & 0xFFFF;
             if (($bytesAddr[$i] & $mask) != ($bytesTest[$i] & $mask)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 return self::setCacheResult($cacheKey, false);
             }
         }
 
         return self::setCacheResult($cacheKey, true);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                return self::$checkedIps[$cacheKey] = false;
-            }
-        }
-
-        return self::$checkedIps[$cacheKey] = true;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -319,8 +206,6 @@ class IpUtils
 
         return $ip;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * Checks if an IPv4 or IPv6 address is contained in the list of private IP subnets.
@@ -353,8 +238,4 @@ class IpUtils
 
         return self::$checkedIps[$cacheKey] = $result;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

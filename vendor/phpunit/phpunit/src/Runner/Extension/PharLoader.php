@@ -9,8 +9,6 @@
  */
 namespace PHPUnit\Runner\Extension;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function count;
 use function explode;
 use function extension_loaded;
@@ -18,14 +16,6 @@ use function implode;
 use function is_file;
 use function sprintf;
 use function str_contains;
-=======
-use function extension_loaded;
-use function is_file;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use function extension_loaded;
-use function is_file;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PharIo\Manifest\ApplicationName;
 use PharIo\Manifest\Exception as ManifestException;
 use PharIo\Manifest\ManifestLoader;
@@ -33,13 +23,7 @@ use PharIo\Version\Version as PharIoVersion;
 use PHPUnit\Event;
 use PHPUnit\Runner\Version;
 use SebastianBergmann\FileIterator\Facade as FileIteratorFacade;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Throwable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
@@ -47,23 +31,13 @@ use Throwable;
 final class PharLoader
 {
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @psalm-param non-empty-string $directory
      *
      * @psalm-return list<string>
-=======
-     * @psalm-return array{loadedExtensions: list<string>, notLoadedExtensions: list<string>}
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @psalm-return array{loadedExtensions: list<string>, notLoadedExtensions: list<string>}
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function loadPharExtensionsInDirectory(string $directory): array
     {
         $pharExtensionLoaded = extension_loaded('phar');
-<<<<<<< HEAD
-<<<<<<< HEAD
         $loadedExtensions    = [];
 
         foreach ((new FileIteratorFacade)->getFilesAsArray($directory, '.phar') as $file) {
@@ -74,53 +48,23 @@ final class PharLoader
                         $file,
                     ),
                 );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-        if (!$pharExtensionLoaded) {
-            Event\Facade::emitter()->testRunnerTriggeredWarning(
-                'Loading PHPUnit extension(s) from PHP archive(s) failed, PHAR extension not loaded'
-            );
-        }
-
-        $loadedExtensions    = [];
-        $notLoadedExtensions = [];
-
-        foreach ((new FileIteratorFacade)->getFilesAsArray($directory, '.phar') as $file) {
-            if (!$pharExtensionLoaded) {
-                $notLoadedExtensions[] = $file . ' cannot be loaded';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 continue;
             }
 
             if (!is_file('phar://' . $file . '/manifest.xml')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Event\Facade::emitter()->testRunnerTriggeredWarning(
                     sprintf(
                         '%s is not an extension for PHPUnit',
                         $file,
                     ),
                 );
-=======
-                $notLoadedExtensions[] = $file . ' is not an extension for PHPUnit';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $notLoadedExtensions[] = $file . ' is not an extension for PHPUnit';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 continue;
             }
 
             try {
                 $applicationName = new ApplicationName('phpunit/phpunit');
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $version         = new PharIoVersion($this->phpunitVersion());
                 $manifest        = ManifestLoader::fromFile('phar://' . $file . '/manifest.xml');
 
@@ -131,25 +75,11 @@ final class PharLoader
                             $file,
                         ),
                     );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $version         = new PharIoVersion(Version::series());
-                $manifest        = ManifestLoader::fromFile('phar://' . $file . '/manifest.xml');
-
-                if (!$manifest->isExtensionFor($applicationName)) {
-                    $notLoadedExtensions[] = $file . ' is not an extension for PHPUnit';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     continue;
                 }
 
                 if (!$manifest->isExtensionFor($applicationName, $version)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     Event\Facade::emitter()->testRunnerTriggeredWarning(
                         sprintf(
                             '%s is not compatible with PHPUnit %s',
@@ -157,18 +87,10 @@ final class PharLoader
                             Version::series(),
                         ),
                     );
-=======
-                    $notLoadedExtensions[] = $file . ' is not compatible with this version of PHPUnit';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $notLoadedExtensions[] = $file . ' is not compatible with this version of PHPUnit';
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                     continue;
                 }
             } catch (ManifestException $e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Event\Facade::emitter()->testRunnerTriggeredWarning(
                     sprintf(
                         'Cannot load extension from %s: %s',
@@ -176,18 +98,10 @@ final class PharLoader
                         $e->getMessage(),
                     ),
                 );
-=======
-                $notLoadedExtensions[] = $file . ': ' . $e->getMessage();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $notLoadedExtensions[] = $file . ': ' . $e->getMessage();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
                 continue;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             try {
                 /** @psalm-suppress UnresolvableInclude */
                 @require $file;
@@ -202,25 +116,12 @@ final class PharLoader
 
                 continue;
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            /**
-             * @psalm-suppress UnresolvableInclude
-             */
-            require $file;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $loadedExtensions[] = $manifest->getName()->asString() . ' ' . $manifest->getVersion()->getVersionString();
 
             Event\Facade::emitter()->testRunnerLoadedExtensionFromPhar(
                 $file,
                 $manifest->getName()->asString(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $manifest->getVersion()->getVersionString(),
             );
         }
@@ -243,20 +144,5 @@ final class PharLoader
         }
 
         return implode('.', $parts);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $manifest->getVersion()->getVersionString()
-            );
-        }
-
-        return [
-            'loadedExtensions'    => $loadedExtensions,
-            'notLoadedExtensions' => $notLoadedExtensions,
-        ];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 }

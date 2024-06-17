@@ -102,15 +102,7 @@ class Validators
 			$translate = ['boolean' => 'bool', 'integer' => 'int', 'double' => 'float', 'NULL' => 'null'];
 			$type = $translate[gettype($value)] ?? gettype($value);
 			if (is_int($value) || is_float($value) || (is_string($value) && strlen($value) < 40)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 				$type .= ' ' . var_export($value, return: true);
-=======
-				$type .= ' ' . var_export($value, true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-				$type .= ' ' . var_export($value, true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			} elseif (is_object($value)) {
 				$type .= ' ' . $value::class;
 			}
@@ -220,13 +212,7 @@ class Validators
 
 	/**
 	 * Checks if the value is an integer or a float.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ($value is int|float ? true : false)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function isNumber(mixed $value): bool
 	{
@@ -236,13 +222,7 @@ class Validators
 
 	/**
 	 * Checks if the value is an integer or a integer written in a string.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ($value is non-empty-string ? bool : ($value is int ? true : false))
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function isNumericInt(mixed $value): bool
 	{
@@ -252,13 +232,7 @@ class Validators
 
 	/**
 	 * Checks if the value is a number or a number written in a string.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ($value is non-empty-string ? bool : ($value is int|float ? true : false))
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function isNumeric(mixed $value): bool
 	{
@@ -271,15 +245,7 @@ class Validators
 	 */
 	public static function isCallable(mixed $value): bool
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
 		return $value && is_callable($value, syntax_only: true);
-=======
-		return $value && is_callable($value, true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		return $value && is_callable($value, true);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
@@ -294,13 +260,7 @@ class Validators
 
 	/**
 	 * Checks if the value is 0, '', false or null.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ($value is 0|''|false|null ? true : false)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function isNone(mixed $value): bool
 	{
@@ -318,13 +278,7 @@ class Validators
 	/**
 	 * Checks if a variable is a zero-based integer indexed array.
 	 * @deprecated  use Nette\Utils\Arrays::isList
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ($value is list ? true : false)
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function isList(mixed $value): bool
 	{

@@ -5,13 +5,7 @@ declare(strict_types=1);
 namespace NunoMaduro\Collision;
 
 use Closure;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use NunoMaduro\Collision\Contracts\RenderableOnCollisionEditor;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use NunoMaduro\Collision\Contracts\RenderlessEditor;
 use NunoMaduro\Collision\Contracts\RenderlessTrace;
 use NunoMaduro\Collision\Contracts\SolutionsRepository;
@@ -99,8 +93,6 @@ final class Writer
 
         $frames = $this->getFrames($inspector);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $exception = $inspector->getException();
 
         if ($exception instanceof RenderableOnCollisionEditor) {
@@ -108,16 +100,6 @@ final class Writer
         } else {
             $editorFrame = array_shift($frames);
         }
-=======
-        $editorFrame = array_shift($frames);
-
-        $exception = $inspector->getException();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $editorFrame = array_shift($frames);
-
-        $exception = $inspector->getException();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if ($this->showEditor
             && $editorFrame !== null

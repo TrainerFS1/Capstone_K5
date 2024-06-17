@@ -15,15 +15,7 @@ use Illuminate\Support\Fluent;
  * @method $this default(mixed $value) Specify a "default" value for the column
  * @method $this first() Place the column "first" in the table (MySQL)
  * @method $this from(int $startingValue) Set the starting value of an auto-incrementing field (MySQL / PostgreSQL)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method $this generatedAs(string|\Illuminate\Database\Query\Expression $expression = null) Create a SQL compliant identity column (PostgreSQL)
-=======
- * @method $this generatedAs(string|Expression $expression = null) Create a SQL compliant identity column (PostgreSQL)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @method $this generatedAs(string|Expression $expression = null) Create a SQL compliant identity column (PostgreSQL)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method $this index(string $indexName = null) Add an index
  * @method $this invisible() Specify that the column should be invisible to "SELECT *" (MySQL)
  * @method $this nullable(bool $value = true) Allow NULL values to be inserted into the column

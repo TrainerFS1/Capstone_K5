@@ -5,13 +5,7 @@ namespace Illuminate\Foundation\Testing\Concerns;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Events\QueryExecuted;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Testing\Constraints\CountInDatabase;
@@ -112,20 +106,12 @@ trait InteractsWithDatabase
         }
 
         $this->assertThat(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->getTable($table),
             new SoftDeletedInDatabase(
                 $this->getConnection($connection, $table),
                 $data,
                 $this->getDeletedAtColumn($table, $deletedAtColumn)
             )
-=======
-            $this->getTable($table), new SoftDeletedInDatabase($this->getConnection($connection, $table), $data, $deletedAtColumn)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->getTable($table), new SoftDeletedInDatabase($this->getConnection($connection, $table), $data, $deletedAtColumn)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this;
@@ -152,20 +138,12 @@ trait InteractsWithDatabase
         }
 
         $this->assertThat(
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->getTable($table),
             new NotSoftDeletedInDatabase(
                 $this->getConnection($connection, $table),
                 $data,
                 $this->getDeletedAtColumn($table, $deletedAtColumn)
             )
-=======
-            $this->getTable($table), new NotSoftDeletedInDatabase($this->getConnection($connection, $table), $data, $deletedAtColumn)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->getTable($table), new NotSoftDeletedInDatabase($this->getConnection($connection, $table), $data, $deletedAtColumn)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return $this;
@@ -210,8 +188,6 @@ trait InteractsWithDatabase
      */
     public function expectsDatabaseQueryCount($expected, $connection = null)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         with($this->getConnection($connection), function ($connectionInstance) use ($expected, $connection) {
             $actual = 0;
 
@@ -227,22 +203,6 @@ trait InteractsWithDatabase
                     $expected,
                     "Expected {$expected} database queries on the [{$connectionInstance->getName()}] connection. {$actual} occurred."
                 );
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        with($this->getConnection($connection), function ($connection) use ($expected) {
-            $actual = 0;
-
-            $connection->listen(function () use (&$actual) {
-                $actual++;
-            });
-
-            $this->beforeApplicationDestroyed(function () use (&$actual, $expected, $connection) {
-                $this->assertSame($actual, $expected, "Expected {$expected} database queries on the [{$connection->getName()}] connection. {$actual} occurred.");
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             });
         });
 
@@ -321,8 +281,6 @@ trait InteractsWithDatabase
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Get the table column name used for soft deletes.
      *
      * @param  string  $table
@@ -335,10 +293,6 @@ trait InteractsWithDatabase
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the model entity from the given model or string.
      *
      * @param  \Illuminate\Database\Eloquent\Model|string  $table

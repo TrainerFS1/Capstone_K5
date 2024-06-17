@@ -53,15 +53,7 @@ class RateLimiter
      * Get the given named rate limiter.
      *
      * @param  string  $name
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return \Closure|null
-=======
-     * @return \Closure
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return \Closure
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function limiter(string $name)
     {
@@ -113,15 +105,7 @@ class RateLimiter
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Increment (by 1) the counter for a given key for a given decay time.
-=======
-     * Increment the counter for a given key for a given decay time.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * Increment the counter for a given key for a given decay time.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      *
      * @param  string  $key
      * @param  int  $decaySeconds
@@ -129,8 +113,6 @@ class RateLimiter
      */
     public function hit($key, $decaySeconds = 60)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->increment($key, $decaySeconds);
     }
 
@@ -144,10 +126,6 @@ class RateLimiter
      */
     public function increment($key, $decaySeconds = 60, $amount = 1)
     {
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $key = $this->cleanRateLimiterKey($key);
 
         $this->cache->add(
@@ -156,15 +134,7 @@ class RateLimiter
 
         $added = $this->cache->add($key, 0, $decaySeconds);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $hits = (int) $this->cache->increment($key, $amount);
-=======
-        $hits = (int) $this->cache->increment($key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $hits = (int) $this->cache->increment($key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (! $added && $hits == 1) {
             $this->cache->put($key, 1, $decaySeconds);

@@ -35,15 +35,7 @@ class LocaleListener implements EventSubscriberInterface
     private bool $useAcceptLanguageHeader;
     private array $enabledLocales;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(RequestStack $requestStack, string $defaultLocale = 'en', ?RequestContextAwareInterface $router = null, bool $useAcceptLanguageHeader = false, array $enabledLocales = [])
-=======
-    public function __construct(RequestStack $requestStack, string $defaultLocale = 'en', RequestContextAwareInterface $router = null, bool $useAcceptLanguageHeader = false, array $enabledLocales = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(RequestStack $requestStack, string $defaultLocale = 'en', RequestContextAwareInterface $router = null, bool $useAcceptLanguageHeader = false, array $enabledLocales = [])
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->defaultLocale = $defaultLocale;
         $this->requestStack = $requestStack;
@@ -52,28 +44,12 @@ class LocaleListener implements EventSubscriberInterface
         $this->enabledLocales = $enabledLocales;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function setDefaultLocale(KernelEvent $event): void
-=======
-    public function setDefaultLocale(KernelEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function setDefaultLocale(KernelEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $event->getRequest()->setDefaultLocale($this->defaultLocale);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelRequest(RequestEvent $event): void
-=======
-    public function onKernelRequest(RequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelRequest(RequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $request = $event->getRequest();
 
@@ -81,58 +57,26 @@ class LocaleListener implements EventSubscriberInterface
         $this->setRouterContext($request);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelFinishRequest(FinishRequestEvent $event): void
-=======
-    public function onKernelFinishRequest(FinishRequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelFinishRequest(FinishRequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $parentRequest = $this->requestStack->getParentRequest()) {
             $this->setRouterContext($parentRequest);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function setLocale(Request $request): void
-=======
-    private function setLocale(Request $request)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function setLocale(Request $request)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($locale = $request->attributes->get('_locale')) {
             $request->setLocale($locale);
         } elseif ($this->useAcceptLanguageHeader) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if ($request->getLanguages() && $preferredLanguage = $request->getPreferredLanguage($this->enabledLocales)) {
-=======
-            if ($preferredLanguage = $request->getPreferredLanguage($this->enabledLocales)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            if ($preferredLanguage = $request->getPreferredLanguage($this->enabledLocales)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $request->setLocale($preferredLanguage);
             }
             $request->attributes->set('_vary_by_language', true);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function setRouterContext(Request $request): void
-=======
-    private function setRouterContext(Request $request)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function setRouterContext(Request $request)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->router?->getContext()->setParameter('_locale', $request->getLocale());
     }

@@ -13,18 +13,8 @@ namespace Symfony\Component\HttpKernel\Bundle;
 
 use Symfony\Component\Console\Application;
 use Symfony\Component\DependencyInjection\Container;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-=======
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 
 /**
@@ -34,23 +24,11 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
  */
 abstract class Bundle implements BundleInterface
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    use ContainerAwareTrait;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    use ContainerAwareTrait;
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected $name;
     protected $extension;
     protected $path;
     private string $namespace;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @var ContainerInterface|null
      */
@@ -59,23 +37,13 @@ abstract class Bundle implements BundleInterface
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function boot()
     {
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function shutdown()
     {
     }
@@ -83,14 +51,8 @@ abstract class Bundle implements BundleInterface
     /**
      * This method can be overridden to register compilation passes,
      * other extensions, ...
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return void
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function build(ContainerBuilder $container)
     {
@@ -103,15 +65,7 @@ abstract class Bundle implements BundleInterface
      */
     public function getContainerExtension(): ?ExtensionInterface
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!isset($this->extension)) {
-=======
-        if (null === $this->extension) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (null === $this->extension) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $extension = $this->createContainerExtension();
 
             if (null !== $extension) {
@@ -147,15 +101,7 @@ abstract class Bundle implements BundleInterface
 
     public function getPath(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!isset($this->path)) {
-=======
-        if (null === $this->path) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (null === $this->path) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $reflected = new \ReflectionObject($this);
             $this->path = \dirname($reflected->getFileName());
         }
@@ -168,30 +114,16 @@ abstract class Bundle implements BundleInterface
      */
     final public function getName(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (!isset($this->name)) {
-=======
-        if (null === $this->name) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (null === $this->name) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $this->parseClassName();
         }
 
         return $this->name;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function registerCommands(Application $application)
     {
     }
@@ -214,29 +146,15 @@ abstract class Bundle implements BundleInterface
         return class_exists($class = $this->getContainerExtensionClass()) ? new $class() : null;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function parseClassName(): void
-=======
-    private function parseClassName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function parseClassName()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $pos = strrpos(static::class, '\\');
         $this->namespace = false === $pos ? '' : substr(static::class, 0, $pos);
         $this->name ??= false === $pos ? static::class : substr(static::class, $pos + 1);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     public function setContainer(?ContainerInterface $container): void
     {
         $this->container = $container;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

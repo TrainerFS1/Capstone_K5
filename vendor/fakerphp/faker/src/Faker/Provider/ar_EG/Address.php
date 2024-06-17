@@ -84,8 +84,6 @@ class Address extends \Faker\Provider\Address
 
     /**
      * @see https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A7%D8%AA_%D9%85%D8%B5%D8%B1
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @see https://ar.wikipedia.org/wiki/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9_%D8%A7%D9%84%D8%B1%D9%82%D9%85_%D8%A7%D9%84%D9%82%D9%88%D9%85%D9%8A_%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9
      */
     protected static $governorates = [
@@ -115,42 +113,6 @@ class Address extends \Faker\Provider\Address
         'المنوفية' => '17',
         'المنيا' => '24',
         'الوادي الجديد' => '32',
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     */
-    protected static $governorates = [
-        'الإسكندرية',
-        'الإسماعيلية',
-        'أسوان',
-        'أسيوط',
-        'الأقصر',
-        'البحر الأحمر',
-        'البحيرة',
-        'بني سويف',
-        'بورسعيد',
-        'جنوب سيناء',
-        'الجيزة',
-        'الدقهلية',
-        'دمياط',
-        'سوهاج',
-        'السويس',
-        'الشرقية',
-        'شمال سيناء',
-        'الغربية',
-        'الفيوم',
-        'القاهرة',
-        'القليوبية',
-        'قنا',
-        'كفر الشيخ',
-        'مطروح',
-        'المنوفية',
-        'المنيا',
-        'الوادي الجديد',
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     ];
 
     protected static $buildingNumber = ['%####', '%###', '%#'];
@@ -240,8 +202,6 @@ class Address extends \Faker\Provider\Address
      */
     public static function governorate()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return static::randomKey(static::$governorates);
     }
 
@@ -252,10 +212,6 @@ class Address extends \Faker\Provider\Address
      */
     public static function governorateId()
     {
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         return static::randomElement(static::$governorates);
     }
 }

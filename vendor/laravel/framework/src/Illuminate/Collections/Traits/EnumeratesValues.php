@@ -11,37 +11,18 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use Illuminate\Support\HigherOrderCollectionProxy;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use InvalidArgumentException;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use JsonSerializable;
 use Symfony\Component\VarDumper\VarDumper;
 use Traversable;
 use UnexpectedValueException;
 use UnitEnum;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use WeakMap;
 
 /**
  * @template TKey of array-key
  *
  * @template-covariant TValue
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-
-/**
- * @template TKey of array-key
- * @template TValue
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @property-read HigherOrderCollectionProxy $average
  * @property-read HigherOrderCollectionProxy $avg
@@ -58,13 +39,7 @@ use WeakMap;
  * @property-read HigherOrderCollectionProxy $max
  * @property-read HigherOrderCollectionProxy $min
  * @property-read HigherOrderCollectionProxy $partition
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @property-read HigherOrderCollectionProxy $percentage
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @property-read HigherOrderCollectionProxy $reject
  * @property-read HigherOrderCollectionProxy $skipUntil
  * @property-read HigherOrderCollectionProxy $skipWhile
@@ -111,13 +86,7 @@ trait EnumeratesValues
         'max',
         'min',
         'partition',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'percentage',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         'reject',
         'skipUntil',
         'skipWhile',
@@ -332,23 +301,11 @@ trait EnumeratesValues
     /**
      * Get a single key's value from the first matching item in the collection.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template TValueDefault
      *
      * @param  string  $key
      * @param  TValueDefault|(\Closure(): TValueDefault)  $default
      * @return TValue|TValueDefault
-=======
-     * @param  string  $key
-     * @param  mixed  $default
-     * @return mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $key
-     * @param  mixed  $default
-     * @return mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function value($key, $default = null)
     {
@@ -360,8 +317,6 @@ trait EnumeratesValues
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Ensure that every item in the collection is of the expected type.
      *
      * @template TEnsureOfType
@@ -391,10 +346,6 @@ trait EnumeratesValues
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Determine if the collection is not empty.
      *
      * @return bool
@@ -409,15 +360,7 @@ trait EnumeratesValues
      *
      * @template TMapSpreadValue
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  callable(mixed...): TMapSpreadValue  $callback
-=======
-     * @param  callable(mixed): TMapSpreadValue  $callback
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  callable(mixed): TMapSpreadValue  $callback
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return static<TKey, TMapSpreadValue>
      */
     public function mapSpread(callable $callback)
@@ -549,8 +492,6 @@ trait EnumeratesValues
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Calculate the percentage of items that pass a given truth test.
      *
      * @param  (callable(TValue, TKey): bool)  $callback
@@ -570,10 +511,6 @@ trait EnumeratesValues
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Get the sum of the given values.
      *
      * @param  (callable(TValue): mixed)|string|null  $callback
@@ -812,20 +749,10 @@ trait EnumeratesValues
     /**
      * Pass the collection into a new class.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template TPipeIntoValue
      *
      * @param  class-string<TPipeIntoValue>  $class
      * @return TPipeIntoValue
-=======
-     * @param  class-string  $class
-     * @return mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  class-string  $class
-     * @return mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function pipeInto($class)
     {
@@ -1097,8 +1024,6 @@ trait EnumeratesValues
     {
         if (is_array($items)) {
             return $items;
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
 
         return match (true) {
@@ -1111,28 +1036,6 @@ trait EnumeratesValues
             $items instanceof UnitEnum => [$items],
             default => (array) $items,
         };
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        } elseif ($items instanceof Enumerable) {
-            return $items->all();
-        } elseif ($items instanceof Arrayable) {
-            return $items->toArray();
-        } elseif ($items instanceof Traversable) {
-            return iterator_to_array($items);
-        } elseif ($items instanceof Jsonable) {
-            return json_decode($items->toJson(), true);
-        } elseif ($items instanceof JsonSerializable) {
-            return (array) $items->jsonSerialize();
-        } elseif ($items instanceof UnitEnum) {
-            return [$items];
-        }
-
-        return (array) $items;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

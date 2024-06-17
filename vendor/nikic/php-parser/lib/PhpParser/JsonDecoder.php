@@ -2,25 +2,11 @@
 
 namespace PhpParser;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class JsonDecoder {
     /** @var \ReflectionClass<Node>[] Node type to reflection class map */
     private array $reflectionClassCache;
 
     /** @return mixed */
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-class JsonDecoder
-{
-    /** @var \ReflectionClass[] Node type to reflection class map */
-    private $reflectionClassCache;
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function decode(string $json) {
         $value = json_decode($json, true);
         if (json_last_error()) {
@@ -30,16 +16,10 @@ class JsonDecoder
         return $this->decodeRecursive($value);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @param mixed $value
      * @return mixed
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     private function decodeRecursive($value) {
         if (\is_array($value)) {
             if (isset($value['nodeType'])) {
@@ -53,15 +33,7 @@ class JsonDecoder
         return $value;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function decodeArray(array $array): array {
-=======
-    private function decodeArray(array $array) : array {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function decodeArray(array $array) : array {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $decodedArray = [];
         foreach ($array as $key => $value) {
             $decodedArray[$key] = $this->decodeRecursive($value);
@@ -69,29 +41,13 @@ class JsonDecoder
         return $decodedArray;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function decodeNode(array $value): Node {
-=======
-    private function decodeNode(array $value) : Node {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function decodeNode(array $value) : Node {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $nodeType = $value['nodeType'];
         if (!\is_string($nodeType)) {
             throw new \RuntimeException('Node type must be a string');
         }
 
         $reflectionClass = $this->reflectionClassFromNodeType($nodeType);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        /** @var Node $node */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        /** @var Node $node */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $node = $reflectionClass->newInstanceWithoutConstructor();
 
         if (isset($value['attributes'])) {
@@ -113,15 +69,7 @@ class JsonDecoder
         return $node;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function decodeComment(array $value): Comment {
-=======
-    private function decodeComment(array $value) : Comment {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function decodeComment(array $value) : Comment {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $className = $value['nodeType'] === 'Comment' ? Comment::class : Comment\Doc::class;
         if (!isset($value['text'])) {
             throw new \RuntimeException('Comment must have text');
@@ -134,16 +82,8 @@ class JsonDecoder
         );
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @return \ReflectionClass<Node> */
     private function reflectionClassFromNodeType(string $nodeType): \ReflectionClass {
-=======
-    private function reflectionClassFromNodeType(string $nodeType) : \ReflectionClass {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function reflectionClassFromNodeType(string $nodeType) : \ReflectionClass {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         if (!isset($this->reflectionClassCache[$nodeType])) {
             $className = $this->classNameFromNodeType($nodeType);
             $this->reflectionClassCache[$nodeType] = new \ReflectionClass($className);
@@ -151,16 +91,8 @@ class JsonDecoder
         return $this->reflectionClassCache[$nodeType];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @return class-string<Node> */
     private function classNameFromNodeType(string $nodeType): string {
-=======
-    private function classNameFromNodeType(string $nodeType) : string {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function classNameFromNodeType(string $nodeType) : string {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $className = 'PhpParser\\Node\\' . strtr($nodeType, '_', '\\');
         if (class_exists($className)) {
             return $className;

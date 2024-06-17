@@ -508,23 +508,9 @@ class ReflectionClosure extends ReflectionFunction
                     break;
                 case 'id_name':
                     switch ($token[0]) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         case $token[0] === ':' && $context !== 'instanceof':
                             if ($lastState === 'closure' && $context === 'root') {
                                 $state = 'closure';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                        // named arguments...
-                        case ':':
-                            if ($lastState === 'closure' && $context === 'root') {
-                                $state = 'ignore_next';
-                                $lastState = 'closure';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                                 $code .= $id_start.$token;
                             }
 
@@ -655,17 +641,11 @@ class ReflectionClosure extends ReflectionFunction
                     break;
                 case 'anonymous':
                     switch ($token[0]) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         case T_NAME_QUALIFIED:
                             [$id_start, $id_start_ci, $id_name] = $this->parseNameQualified($token[1]);
                             $state = 'id_name';
                             $lastState = 'anonymous';
                             break 2;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         case T_NS_SEPARATOR:
                         case T_STRING:
                             $id_start = $token[1];
@@ -674,15 +654,7 @@ class ReflectionClosure extends ReflectionFunction
                             $state = 'id_name';
                             $context = 'extends';
                             $lastState = 'anonymous';
-<<<<<<< HEAD
-<<<<<<< HEAD
                             break;
-=======
-                        break;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                        break;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                         case '{':
                             $state = 'closure';
                             if (! $inside_structure) {

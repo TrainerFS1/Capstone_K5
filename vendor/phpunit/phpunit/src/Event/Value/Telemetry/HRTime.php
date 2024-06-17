@@ -29,15 +29,7 @@ final class HRTime
     {
         return new self(
             $seconds,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $nanoseconds,
-=======
-            $nanoseconds
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $nanoseconds
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -64,18 +56,6 @@ final class HRTime
         return $this->nanoseconds;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    /**
-     * @throws InvalidArgumentException
-     */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    /**
-     * @throws InvalidArgumentException
-     */
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function duration(self $start): Duration
     {
         $seconds     = $this->seconds - $start->seconds();
@@ -88,28 +68,12 @@ final class HRTime
         }
 
         if ($seconds < 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             return Duration::fromSecondsAndNanoseconds(0, 0);
-=======
-            throw new InvalidArgumentException('Start needs to be smaller.');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            throw new InvalidArgumentException('Start needs to be smaller.');
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return Duration::fromSecondsAndNanoseconds(
             $seconds,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $nanoseconds,
-=======
-            $nanoseconds
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $nanoseconds
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -122,18 +86,8 @@ final class HRTime
             throw new InvalidArgumentException(
                 sprintf(
                     'Value for %s must not be negative.',
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $type,
                 ),
-=======
-                    $type
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $type
-                )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
     }
@@ -145,15 +99,7 @@ final class HRTime
     {
         if ($nanoseconds > 999999999) {
             throw new InvalidArgumentException(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'Value for nanoseconds must not be greater than 999999999.',
-=======
-                'Value for nanoseconds must not be greater than 999999999.'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                'Value for nanoseconds must not be greater than 999999999.'
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
     }

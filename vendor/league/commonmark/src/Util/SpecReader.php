@@ -13,14 +13,8 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Util;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use League\CommonMark\Exception\IOException;
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 /**
  * Reads in a CommonMark spec document and extracts the input/output examples for testing against them
  */
@@ -64,28 +58,12 @@ final class SpecReader
     /**
      * @return iterable<string, array{input: string, output: string, type: string, section: string, number: int}>
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @throws IOException if the file cannot be loaded
-=======
-     * @throws \RuntimeException if the file cannot be loaded
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \RuntimeException if the file cannot be loaded
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function readFile(string $filename): iterable
     {
         if (($data = \file_get_contents($filename)) === false) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             throw new IOException(\sprintf('Failed to load spec from %s', $filename));
-=======
-            throw new \RuntimeException(\sprintf('Failed to load spec from %s', $filename));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            throw new \RuntimeException(\sprintf('Failed to load spec from %s', $filename));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return self::read($data);

@@ -113,15 +113,7 @@ class UploadedFile implements UploadedFileInterface
         $this->error = $error;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private static function isStringNotEmpty($param): bool
-=======
-    private function isStringNotEmpty($param): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function isStringNotEmpty($param): bool
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         return is_string($param) && false === empty($param);
     }
@@ -171,15 +163,7 @@ class UploadedFile implements UploadedFileInterface
     {
         $this->validateActive();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (false === self::isStringNotEmpty($targetPath)) {
-=======
-        if (false === $this->isStringNotEmpty($targetPath)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if (false === $this->isStringNotEmpty($targetPath)) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new InvalidArgumentException(
                 'Invalid path provided for move operation; must be a non-empty string'
             );

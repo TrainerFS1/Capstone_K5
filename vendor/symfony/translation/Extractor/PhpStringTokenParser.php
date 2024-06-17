@@ -94,15 +94,7 @@ class PhpStringTokenParser
      * @param string      $str   String without quotes
      * @param string|null $quote Quote type
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public static function parseEscapeSequences(string $str, ?string $quote = null): string
-=======
-    public static function parseEscapeSequences(string $str, string $quote = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public static function parseEscapeSequences(string $str, string $quote = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $quote) {
             $str = str_replace('\\'.$quote, $quote, $str);

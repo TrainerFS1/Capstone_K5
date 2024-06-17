@@ -5,13 +5,7 @@ namespace Illuminate\Testing\Fluent;
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Traits\Conditionable;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
 use Illuminate\Testing\AssertableJsonString;
@@ -23,13 +17,7 @@ class AssertableJson implements Arrayable
         Concerns\Matching,
         Concerns\Debugging,
         Concerns\Interaction,
-<<<<<<< HEAD
-<<<<<<< HEAD
         Conditionable,
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         Macroable,
         Tappable;
 

@@ -9,13 +9,7 @@
  */
 namespace PHPUnit\TextUI\Configuration;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function array_keys;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use function assert;
 use SebastianBergmann\CodeCoverage\Filter;
 
@@ -40,15 +34,9 @@ final class CodeCoverageFilterRegistry
         return self::$instance;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @codeCoverageIgnore
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function get(): Filter
     {
         assert($this->filter !== null);
@@ -56,8 +44,6 @@ final class CodeCoverageFilterRegistry
         return $this->filter;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @codeCoverageIgnore
      */
@@ -68,74 +54,21 @@ final class CodeCoverageFilterRegistry
         }
 
         if ($this->configured && !$force) {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function init(Configuration $configuration): void
-    {
-        if (!$configuration->hasCoverageReport()) {
-            return;
-        }
-
-        if ($this->configured) {
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return;
         }
 
         $this->filter = new Filter;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($configuration->source()->notEmpty()) {
             $this->filter->includeFiles(array_keys((new SourceMapper)->map($configuration->source())));
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        if ($configuration->hasNonEmptyListOfFilesToBeIncludedInCodeCoverageReport()) {
-            foreach ($configuration->coverageIncludeDirectories() as $directory) {
-                $this->filter->includeDirectory(
-                    $directory->path(),
-                    $directory->suffix(),
-                    $directory->prefix()
-                );
-            }
-
-            foreach ($configuration->coverageIncludeFiles() as $file) {
-                $this->filter->includeFile($file->path());
-            }
-
-            foreach ($configuration->coverageExcludeDirectories() as $directory) {
-                $this->filter->excludeDirectory(
-                    $directory->path(),
-                    $directory->suffix(),
-                    $directory->prefix()
-                );
-            }
-
-            foreach ($configuration->coverageExcludeFiles() as $file) {
-                $this->filter->excludeFile($file->path());
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             $this->configured = true;
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @codeCoverageIgnore
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function configured(): bool
     {
         return $this->configured;

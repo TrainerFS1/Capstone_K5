@@ -16,13 +16,7 @@ use function serialize;
 use function unserialize;
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\TextUI\CliArguments\Configuration as CliConfiguration;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PHPUnit\TextUI\CliArguments\Exception;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\TextUI\XmlConfiguration\Configuration as XmlConfiguration;
 use PHPUnit\Util\VersionComparisonOperator;
 
@@ -40,46 +34,24 @@ final class Registry
     {
         $result = file_put_contents(
             $path,
-<<<<<<< HEAD
-<<<<<<< HEAD
             serialize(self::get()),
-=======
-            serialize(self::get())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            serialize(self::get())
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         if ($result) {
             return true;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         // @codeCoverageIgnoreStart
         return false;
         // @codeCoverageIgnoreEnd
-=======
-        return false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return false;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
      * This method is used by the "run test(s) in separate process" templates.
      *
      * @noinspection PhpUnused
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @codeCoverageIgnore
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function loadFrom(string $path): void
     {
@@ -108,19 +80,9 @@ final class Registry
                     TestSuiteCollection::class,
                     TestSuite::class,
                     VersionComparisonOperator::class,
-<<<<<<< HEAD
-<<<<<<< HEAD
                     Source::class,
                 ],
             ],
-=======
-                ],
-            ]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                ],
-            ]
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -132,18 +94,8 @@ final class Registry
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
      * @throws Exception
-=======
-     * @throws \PHPUnit\TextUI\CliArguments\Exception
-     * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @throws \PHPUnit\TextUI\CliArguments\Exception
-     * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @throws NoCustomCssFileException
      */
     public static function init(CliConfiguration $cliConfiguration, XmlConfiguration $xmlConfiguration): Configuration

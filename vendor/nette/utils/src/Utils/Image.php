@@ -22,8 +22,6 @@ use Nette;
  * $image->send();
  * </code>
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method Image affine(array $affine, ?array $clip = null)
  * @method void alphaBlending(bool $enable)
  * @method void antialias(bool $enable)
@@ -76,75 +74,10 @@ use Nette;
  * @method mixed resolution(?int $resolutionX = null, ?int $resolutionY = null)
  * @method Image rotate(float $angle, ImageColor $backgroundColor)
  * @method void saveAlpha(bool $enable)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @method Image affine(array $affine, array $clip = null)
- * @method array affineMatrixConcat(array $m1, array $m2)
- * @method array affineMatrixGet(int $type, mixed $options = null)
- * @method void alphaBlending(bool $on)
- * @method void antialias(bool $on)
- * @method void arc($x, $y, $w, $h, $start, $end, $color)
- * @method void char(int $font, $x, $y, string $char, $color)
- * @method void charUp(int $font, $x, $y, string $char, $color)
- * @method int colorAllocate($red, $green, $blue)
- * @method int colorAllocateAlpha($red, $green, $blue, $alpha)
- * @method int colorAt($x, $y)
- * @method int colorClosest($red, $green, $blue)
- * @method int colorClosestAlpha($red, $green, $blue, $alpha)
- * @method int colorClosestHWB($red, $green, $blue)
- * @method void colorDeallocate($color)
- * @method int colorExact($red, $green, $blue)
- * @method int colorExactAlpha($red, $green, $blue, $alpha)
- * @method void colorMatch(Image $image2)
- * @method int colorResolve($red, $green, $blue)
- * @method int colorResolveAlpha($red, $green, $blue, $alpha)
- * @method void colorSet($index, $red, $green, $blue)
- * @method array colorsForIndex($index)
- * @method int colorsTotal()
- * @method int colorTransparent($color = null)
- * @method void convolution(array $matrix, float $div, float $offset)
- * @method void copy(Image $src, $dstX, $dstY, $srcX, $srcY, $srcW, $srcH)
- * @method void copyMerge(Image $src, $dstX, $dstY, $srcX, $srcY, $srcW, $srcH, $opacity)
- * @method void copyMergeGray(Image $src, $dstX, $dstY, $srcX, $srcY, $srcW, $srcH, $opacity)
- * @method void copyResampled(Image $src, $dstX, $dstY, $srcX, $srcY, $dstW, $dstH, $srcW, $srcH)
- * @method void copyResized(Image $src, $dstX, $dstY, $srcX, $srcY, $dstW, $dstH, $srcW, $srcH)
- * @method Image cropAuto(int $mode = -1, float $threshold = .5, int $color = -1)
- * @method void ellipse($cx, $cy, $w, $h, $color)
- * @method void fill($x, $y, $color)
- * @method void filledArc($cx, $cy, $w, $h, $s, $e, $color, $style)
- * @method void filledEllipse($cx, $cy, $w, $h, $color)
- * @method void filledPolygon(array $points, $numPoints, $color)
- * @method void filledRectangle($x1, $y1, $x2, $y2, $color)
- * @method void fillToBorder($x, $y, $border, $color)
- * @method void filter($filtertype)
- * @method void flip(int $mode)
- * @method array ftText($size, $angle, $x, $y, $col, string $fontFile, string $text, array $extrainfo = null)
- * @method void gammaCorrect(float $inputgamma, float $outputgamma)
- * @method array getClip()
- * @method int interlace($interlace = null)
- * @method bool isTrueColor()
- * @method void layerEffect($effect)
- * @method void line($x1, $y1, $x2, $y2, $color)
- * @method void openPolygon(array $points, int $num_points, int $color)
- * @method void paletteCopy(Image $source)
- * @method void paletteToTrueColor()
- * @method void polygon(array $points, $numPoints, $color)
- * @method array psText(string $text, $font, $size, $color, $backgroundColor, $x, $y, $space = null, $tightness = null, float $angle = null, $antialiasSteps = null)
- * @method void rectangle($x1, $y1, $x2, $y2, $col)
- * @method mixed resolution(int $res_x = null, int $res_y = null)
- * @method Image rotate(float $angle, $backgroundColor)
- * @method void saveAlpha(bool $saveflag)
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @method Image scale(int $newWidth, int $newHeight = -1, int $mode = IMG_BILINEAR_FIXED)
  * @method void setBrush(Image $brush)
  * @method void setClip(int $x1, int $y1, int $x2, int $y2)
  * @method void setInterpolation(int $method = IMG_BILINEAR_FIXED)
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @method void setPixel(int $x, int $y, ImageColor $color)
  * @method void setStyle(array $style)
  * @method void setThickness(int $thickness)
@@ -153,23 +86,6 @@ use Nette;
  * @method array ttfText(float $size, float $angle, int $x, int $y, ImageColor $color, string $fontfile, string $text, array $options = [])
  * @property-read positive-int $width
  * @property-read positive-int $height
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
- * @method void setPixel($x, $y, $color)
- * @method void setStyle(array $style)
- * @method void setThickness($thickness)
- * @method void setTile(Image $tile)
- * @method void string($font, $x, $y, string $s, $col)
- * @method void stringUp($font, $x, $y, string $s, $col)
- * @method void trueColorToPalette(bool $dither, $ncolors)
- * @method array ttfText($size, $angle, $x, $y, $color, string $fontfile, string $text)
- * @property-read int $width
- * @property-read int $height
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * @property-read \GdImage $imageResource
  */
 class Image
@@ -211,8 +127,6 @@ class Image
 
 	/** image types */
 	public const
-<<<<<<< HEAD
-<<<<<<< HEAD
 		JPEG = ImageType::JPEG,
 		PNG = ImageType::PNG,
 		GIF = ImageType::GIF,
@@ -223,36 +137,13 @@ class Image
 	public const EmptyGIF = "GIF89a\x01\x00\x01\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;";
 
 	private const Formats = [ImageType::JPEG => 'jpeg', ImageType::PNG => 'png', ImageType::GIF => 'gif', ImageType::WEBP => 'webp', ImageType::AVIF => 'avif', ImageType::BMP => 'bmp'];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-		JPEG = IMAGETYPE_JPEG,
-		PNG = IMAGETYPE_PNG,
-		GIF = IMAGETYPE_GIF,
-		WEBP = IMAGETYPE_WEBP,
-		AVIF = 19, // IMAGETYPE_AVIF,
-		BMP = IMAGETYPE_BMP;
-
-	public const EmptyGIF = "GIF89a\x01\x00\x01\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;";
-
-	private const Formats = [self::JPEG => 'jpeg', self::PNG => 'png', self::GIF => 'gif', self::WEBP => 'webp', self::AVIF => 'avif', self::BMP => 'bmp'];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 	private \GdImage $image;
 
 
 	/**
 	 * Returns RGB color (0..255) and transparency (0..127).
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @deprecated use ImageColor::rgb()
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function rgb(int $red, int $green, int $blue, int $transparency = 0): array
 	{
@@ -324,23 +215,11 @@ class Image
 
 	/**
 	 * Creates a new true color image of the given dimensions. The default color is black.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  positive-int  $width
 	 * @param  positive-int  $height
 	 * @throws Nette\NotSupportedException if gd extension is not loaded
 	 */
 	public static function fromBlank(int $width, int $height, ImageColor|array|null $color = null): static
-=======
-	 * @throws Nette\NotSupportedException if gd extension is not loaded
-	 */
-	public static function fromBlank(int $width, int $height, ?array $color = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * @throws Nette\NotSupportedException if gd extension is not loaded
-	 */
-	public static function fromBlank(int $width, int $height, ?array $color = null): static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		if (!extension_loaded('gd')) {
 			throw new Nette\NotSupportedException('PHP extension GD is not loaded.');
@@ -350,8 +229,6 @@ class Image
 			throw new Nette\InvalidArgumentException('Image width and height must be greater than zero.');
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 		$image = new static(imagecreatetruecolor($width, $height));
 		if ($color) {
 			$image->alphablending(false);
@@ -360,35 +237,12 @@ class Image
 		}
 
 		return $image;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-		$image = imagecreatetruecolor($width, $height);
-		if ($color) {
-			$color += ['alpha' => 0];
-			$color = imagecolorresolvealpha($image, $color['red'], $color['green'], $color['blue'], $color['alpha']);
-			imagealphablending($image, false);
-			imagefilledrectangle($image, 0, 0, $width - 1, $height - 1, $color);
-			imagealphablending($image, true);
-		}
-
-		return new static($image);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 
 
 	/**
 	 * Returns the type of image from file.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ImageType::*|null
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function detectTypeFromFile(string $file, &$width = null, &$height = null): ?int
 	{
@@ -399,13 +253,7 @@ class Image
 
 	/**
 	 * Returns the type of image from string.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return ImageType::*|null
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function detectTypeFromString(string $s, &$width = null, &$height = null): ?int
 	{
@@ -415,17 +263,9 @@ class Image
 
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * Returns the file extension for the given image type.
 	 * @param  ImageType::*  $type
 	 * @return value-of<self::Formats>
-=======
-	 * Returns the file extension for the given `Image::XXX` constant.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * Returns the file extension for the given `Image::XXX` constant.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function typeToExtension(int $type): string
 	{
@@ -438,26 +278,12 @@ class Image
 
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * Returns the image type for given file extension.
 	 * @return ImageType::*
 	 */
 	public static function extensionToType(string $extension): int
 	{
 		$extensions = array_flip(self::Formats) + ['jpg' => ImageType::JPEG];
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	 * Returns the `Image::XXX` constant for given file extension.
-	 */
-	public static function extensionToType(string $extension): int
-	{
-		$extensions = array_flip(self::Formats) + ['jpg' => self::JPEG];
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		$extension = strtolower($extension);
 		if (!isset($extensions[$extension])) {
 			throw new Nette\InvalidArgumentException("Unsupported file extension '$extension'.");
@@ -468,16 +294,8 @@ class Image
 
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * Returns the mime type for the given image type.
 	 * @param  ImageType::*  $type
-=======
-	 * Returns the mime type for the given `Image::XXX` constant.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * Returns the mime type for the given `Image::XXX` constant.
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function typeToMimeType(int $type): string
 	{
@@ -486,8 +304,6 @@ class Image
 
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  ImageType::*  $type
 	 */
 	public static function isTypeSupported(int $type): bool
@@ -520,10 +336,6 @@ class Image
 
 
 	/**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * Wraps GD image.
 	 */
 	public function __construct(\GdImage $image)
@@ -535,13 +347,7 @@ class Image
 
 	/**
 	 * Returns image width.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return positive-int
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getWidth(): int
 	{
@@ -551,13 +357,7 @@ class Image
 
 	/**
 	 * Returns image height.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @return positive-int
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function getHeight(): int
 	{
@@ -586,15 +386,7 @@ class Image
 
 	/**
 	 * Scales an image. Width and height accept pixels or percent.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  int-mask-of<self::OrSmaller|self::OrBigger|self::Stretch|self::Cover|self::ShrinkOnly>  $mode
-=======
-	 * @param  self::OrSmaller|self::OrBigger|self::Stretch|self::Cover|self::ShrinkOnly  $mode
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * @param  self::OrSmaller|self::OrBigger|self::Stretch|self::Cover|self::ShrinkOnly  $mode
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function resize(int|string|null $width, int|string|null $height, int $mode = self::OrSmaller): static
 	{
@@ -605,15 +397,7 @@ class Image
 		[$newWidth, $newHeight] = static::calculateSize($this->getWidth(), $this->getHeight(), $width, $height, $mode);
 
 		if ($newWidth !== $this->getWidth() || $newHeight !== $this->getHeight()) { // resize
-<<<<<<< HEAD
-<<<<<<< HEAD
 			$newImage = static::fromBlank($newWidth, $newHeight, ImageColor::rgb(0, 0, 0, 0))->getImageResource();
-=======
-			$newImage = static::fromBlank($newWidth, $newHeight, self::rgb(0, 0, 0, 127))->getImageResource();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			$newImage = static::fromBlank($newWidth, $newHeight, self::rgb(0, 0, 0, 127))->getImageResource();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			imagecopyresampled(
 				$newImage,
 				$this->image,
@@ -639,15 +423,7 @@ class Image
 
 	/**
 	 * Calculates dimensions of resized image. Width and height accept pixels or percent.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  int-mask-of<self::OrSmaller|self::OrBigger|self::Stretch|self::Cover|self::ShrinkOnly>  $mode
-=======
-	 * @param  self::OrSmaller|self::OrBigger|self::Stretch|self::Cover|self::ShrinkOnly  $mode
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * @param  self::OrSmaller|self::OrBigger|self::Stretch|self::Cover|self::ShrinkOnly  $mode
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public static function calculateSize(
 		int $srcWidth,
@@ -724,15 +500,7 @@ class Image
 			$this->image = imagecrop($this->image, $r);
 			imagesavealpha($this->image, true);
 		} else {
-<<<<<<< HEAD
-<<<<<<< HEAD
 			$newImage = static::fromBlank($r['width'], $r['height'], ImageColor::rgb(0, 0, 0, 0))->getImageResource();
-=======
-			$newImage = static::fromBlank($r['width'], $r['height'], self::RGB(0, 0, 0, 127))->getImageResource();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			$newImage = static::fromBlank($r['width'], $r['height'], self::RGB(0, 0, 0, 127))->getImageResource();
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			imagecopy($newImage, $this->image, 0, 0, $r['x'], $r['y'], $r['width'], $r['height']);
 			$this->image = $newImage;
 		}
@@ -801,15 +569,7 @@ class Image
 
 	/**
 	 * Puts another image into this image. Left and top accepts pixels or percent.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  int<0, 100>  $opacity 0..100
-=======
-	 * @param  int  $opacity 0..100
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * @param  int  $opacity 0..100
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 */
 	public function place(self $image, int|string $left = 0, int|string $top = 0, int $opacity = 100): static
 	{
@@ -870,8 +630,6 @@ class Image
 
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * Calculates the bounding box for a TrueType text. Returns keys left, top, width and height.
 	 */
 	public static function calculateTextBox(
@@ -917,12 +675,6 @@ class Image
 	/**
 	 * Saves image to the file. Quality is in the range 0..100 for JPEG (default 85), WEBP (default 80) and AVIF (default 30) and 0..9 for PNG (default 9).
 	 * @param  ImageType::*|null  $type
-=======
-	 * Saves image to the file. Quality is in the range 0..100 for JPEG (default 85), WEBP (default 80) and AVIF (default 30) and 0..9 for PNG (default 9).
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * Saves image to the file. Quality is in the range 0..100 for JPEG (default 85), WEBP (default 80) and AVIF (default 30) and 0..9 for PNG (default 9).
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @throws ImageException
 	 */
 	public function save(string $file, ?int $quality = null, ?int $type = null): void
@@ -934,19 +686,9 @@ class Image
 
 	/**
 	 * Outputs image to string. Quality is in the range 0..100 for JPEG (default 85), WEBP (default 80) and AVIF (default 30) and 0..9 for PNG (default 9).
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  ImageType::*  $type
 	 */
 	public function toString(int $type = ImageType::JPEG, ?int $quality = null): string
-=======
-	 */
-	public function toString(int $type = self::JPEG, ?int $quality = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 */
-	public function toString(int $type = self::JPEG, ?int $quality = null): string
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		return Helpers::capture(function () use ($type, $quality): void {
 			$this->output($type, $quality);
@@ -965,22 +707,10 @@ class Image
 
 	/**
 	 * Outputs image to browser. Quality is in the range 0..100 for JPEG (default 85), WEBP (default 80) and AVIF (default 30) and 0..9 for PNG (default 9).
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  ImageType::*  $type
 	 * @throws ImageException
 	 */
 	public function send(int $type = ImageType::JPEG, ?int $quality = null): void
-=======
-	 * @throws ImageException
-	 */
-	public function send(int $type = self::JPEG, ?int $quality = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-	 * @throws ImageException
-	 */
-	public function send(int $type = self::JPEG, ?int $quality = null): void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	{
 		header('Content-Type: ' . self::typeToMimeType($type));
 		$this->output($type, $quality);
@@ -989,89 +719,37 @@ class Image
 
 	/**
 	 * Outputs image to browser or file.
-<<<<<<< HEAD
-<<<<<<< HEAD
 	 * @param  ImageType::*  $type
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	 * @throws ImageException
 	 */
 	private function output(int $type, ?int $quality, ?string $file = null): void
 	{
 		switch ($type) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 			case ImageType::JPEG:
-=======
-			case self::JPEG:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			case self::JPEG:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$quality = $quality === null ? 85 : max(0, min(100, $quality));
 				$success = @imagejpeg($this->image, $file, $quality); // @ is escalated to exception
 				break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			case ImageType::PNG:
-=======
-			case self::PNG:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			case self::PNG:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$quality = $quality === null ? 9 : max(0, min(9, $quality));
 				$success = @imagepng($this->image, $file, $quality); // @ is escalated to exception
 				break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			case ImageType::GIF:
 				$success = @imagegif($this->image, $file); // @ is escalated to exception
 				break;
 
 			case ImageType::WEBP:
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-			case self::GIF:
-				$success = @imagegif($this->image, $file); // @ is escalated to exception
-				break;
-
-			case self::WEBP:
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$quality = $quality === null ? 80 : max(0, min(100, $quality));
 				$success = @imagewebp($this->image, $file, $quality); // @ is escalated to exception
 				break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			case ImageType::AVIF:
-=======
-			case self::AVIF:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			case self::AVIF:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$quality = $quality === null ? 30 : max(0, min(100, $quality));
 				$success = @imageavif($this->image, $file, $quality); // @ is escalated to exception
 				break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			case ImageType::BMP:
-=======
-			case self::BMP:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-			case self::BMP:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 				$success = @imagebmp($this->image, $file); // @ is escalated to exception
 				break;
 
@@ -1100,31 +778,8 @@ class Image
 			if ($value instanceof self) {
 				$args[$key] = $value->getImageResource();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			} elseif ($value instanceof ImageColor || (is_array($value) && isset($value['red']))) {
 				$args[$key] = $this->resolveColor($value);
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-			} elseif (is_array($value) && isset($value['red'])) { // rgb
-				$args[$key] = imagecolorallocatealpha(
-					$this->image,
-					$value['red'],
-					$value['green'],
-					$value['blue'],
-					$value['alpha'],
-				) ?: imagecolorresolvealpha(
-					$this->image,
-					$value['red'],
-					$value['green'],
-					$value['blue'],
-					$value['alpha'],
-				);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 			}
 		}
 
@@ -1164,8 +819,6 @@ class Image
 	{
 		throw new Nette\NotSupportedException('You cannot serialize or unserialize ' . self::class . ' instances.');
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 	public function resolveColor(ImageColor|array $color): int
@@ -1173,8 +826,4 @@ class Image
 		$color = $color instanceof ImageColor ? $color->toRGBA() : array_values($color);
 		return imagecolorallocatealpha($this->image, ...$color) ?: imagecolorresolvealpha($this->image, ...$color);
 	}
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

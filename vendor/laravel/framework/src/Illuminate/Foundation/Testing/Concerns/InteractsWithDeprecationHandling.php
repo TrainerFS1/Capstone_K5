@@ -21,19 +21,7 @@ trait InteractsWithDeprecationHandling
     protected function withDeprecationHandling()
     {
         if ($this->originalDeprecationHandler) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             set_error_handler(tap($this->originalDeprecationHandler, fn () => $this->originalDeprecationHandler = null));
-=======
-            set_error_handler(tap($this->originalDeprecationHandler, function () {
-                $this->originalDeprecationHandler = null;
-            }));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            set_error_handler(tap($this->originalDeprecationHandler, function () {
-                $this->originalDeprecationHandler = null;
-            }));
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $this;

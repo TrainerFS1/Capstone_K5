@@ -12,15 +12,7 @@ class BcryptHasher extends AbstractHasher implements HasherContract
      *
      * @var int
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected $rounds = 12;
-=======
-    protected $rounds = 10;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected $rounds = 10;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Indicates whether to perform an algorithm check.
@@ -75,15 +67,7 @@ class BcryptHasher extends AbstractHasher implements HasherContract
      */
     public function check($value, $hashedValue, array $options = [])
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($this->verifyAlgorithm && ! $this->isUsingCorrectAlgorithm($hashedValue)) {
-=======
-        if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'bcrypt') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'bcrypt') {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             throw new RuntimeException('This password does not use the Bcrypt algorithm.');
         }
 
@@ -105,8 +89,6 @@ class BcryptHasher extends AbstractHasher implements HasherContract
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Verifies that the configuration is less than or equal to what is configured.
      *
      * @internal
@@ -149,10 +131,6 @@ class BcryptHasher extends AbstractHasher implements HasherContract
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Set the default password work factor.
      *
      * @param  int  $rounds

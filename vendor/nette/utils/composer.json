@@ -15,23 +15,10 @@
 		}
 	],
 	"require": {
-<<<<<<< HEAD
-<<<<<<< HEAD
 		"php": ">=8.0 <8.4"
 	},
 	"require-dev": {
 		"nette/tester": "^2.5",
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-		"php": ">=8.0 <8.3"
-	},
-	"require-dev": {
-		"nette/tester": "^2.4",
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		"tracy/tracy": "^2.9",
 		"phpstan/phpstan": "^1.0",
 		"jetbrains/phpstorm-attributes": "dev-master"
@@ -45,14 +32,6 @@
 		"ext-json": "to use Nette\\Utils\\Json",
 		"ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
 		"ext-mbstring": "to use Strings::lower() etc...",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		"ext-xml": "to use Strings::length() etc. when mbstring is not available",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		"ext-xml": "to use Strings::length() etc. when mbstring is not available",
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 		"ext-gd": "to use Image",
 		"ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()"
 	},

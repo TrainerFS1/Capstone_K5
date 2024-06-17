@@ -40,26 +40,14 @@ final class AppendStream implements StreamInterface
     {
         try {
             $this->rewind();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return $this->getContents();
         } catch (\Throwable $e) {
             if (\PHP_VERSION_ID >= 70400) {
                 throw $e;
             }
             trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             return '';
         }
     }
@@ -152,21 +140,9 @@ final class AppendStream implements StreamInterface
 
     public function eof(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return !$this->streams
             || ($this->current >= count($this->streams) - 1
              && $this->streams[$this->current]->eof());
-=======
-        return !$this->streams ||
-            ($this->current >= count($this->streams) - 1 &&
-             $this->streams[$this->current]->eof());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return !$this->streams ||
-            ($this->current >= count($this->streams) - 1 &&
-             $this->streams[$this->current]->eof());
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function rewind(): void
@@ -193,15 +169,7 @@ final class AppendStream implements StreamInterface
                 $stream->rewind();
             } catch (\Exception $e) {
                 throw new \RuntimeException('Unable to seek stream '
-<<<<<<< HEAD
-<<<<<<< HEAD
                     .$i.' of the AppendStream', 0, $e);
-=======
-                    . $i . ' of the AppendStream', 0, $e);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    . $i . ' of the AppendStream', 0, $e);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
@@ -231,15 +199,7 @@ final class AppendStream implements StreamInterface
                 if ($this->current === $total) {
                     break;
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ++$this->current;
-=======
-                $this->current++;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $this->current++;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
 
             $result = $this->streams[$this->current]->read($remaining);
@@ -279,16 +239,6 @@ final class AppendStream implements StreamInterface
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * {@inheritdoc}
-     *
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @return mixed
      */
     public function getMetadata($key = null)

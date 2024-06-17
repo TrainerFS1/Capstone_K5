@@ -4,13 +4,7 @@ namespace Illuminate\View\Compilers\Concerns;
 
 use Illuminate\Contracts\Support\CanBeEscapedWhenCastToString;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\View\AnonymousComponent;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\View\ComponentAttributeBag;
 
 trait CompilesComponents
@@ -36,17 +30,9 @@ trait CompilesComponents
 
         $component = trim($component, '\'"');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $hash = static::newComponentHash(
             $component === AnonymousComponent::class ? $component.':'.trim($alias, '\'"') : $component
         );
-=======
-        $hash = static::newComponentHash($component);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        $hash = static::newComponentHash($component);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
         if (Str::contains($component, ['::class', '\\'])) {
             return static::compileClassComponentOpening($component, $alias, $data, $hash);
@@ -81,13 +67,7 @@ trait CompilesComponents
     {
         return implode("\n", [
             '<?php if (isset($component)) { $__componentOriginal'.$hash.' = $component; } ?>',
-<<<<<<< HEAD
-<<<<<<< HEAD
             '<?php if (isset($attributes)) { $__attributesOriginal'.$hash.' = $attributes; } ?>',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             '<?php $component = '.$component.'::resolve('.($data ?: '[]').' + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>',
             '<?php $component->withName('.$alias.'); ?>',
             '<?php if ($component->shouldRender()): ?>',
@@ -116,16 +96,10 @@ trait CompilesComponents
 
         return $this->compileEndComponent()."\n".implode("\n", [
             '<?php endif; ?>',
-<<<<<<< HEAD
-<<<<<<< HEAD
             '<?php if (isset($__attributesOriginal'.$hash.')): ?>',
             '<?php $attributes = $__attributesOriginal'.$hash.'; ?>',
             '<?php unset($__attributesOriginal'.$hash.'); ?>',
             '<?php endif; ?>',
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             '<?php if (isset($__componentOriginal'.$hash.')): ?>',
             '<?php $component = $__componentOriginal'.$hash.'; ?>',
             '<?php unset($__componentOriginal'.$hash.'); ?>',

@@ -9,21 +9,11 @@
  */
 namespace PHPUnit\Util\PHP;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use const PHP_BINARY;
-=======
-use const DIRECTORY_SEPARATOR;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use const DIRECTORY_SEPARATOR;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use const PHP_SAPI;
 use function array_keys;
 use function array_merge;
 use function assert;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use function explode;
 use function file_exists;
 use function file_get_contents;
@@ -36,25 +26,6 @@ use function unserialize;
 use ErrorException;
 use PHPUnit\Event\Code\TestMethodBuilder;
 use PHPUnit\Event\Code\ThrowableBuilder;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-use function escapeshellarg;
-use function ini_get_all;
-use function restore_error_handler;
-use function set_error_handler;
-use function str_replace;
-use function str_starts_with;
-use function substr;
-use function trim;
-use function unserialize;
-use ErrorException;
-use PHPUnit\Event\Code\TestMethod;
-use PHPUnit\Event\Code\Throwable;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use PHPUnit\Event\Facade;
 use PHPUnit\Event\NoPreviousThrowableException;
 use PHPUnit\Event\TestData\MoreThanOneDataSetFromDataProviderException;
@@ -71,14 +42,6 @@ use SebastianBergmann\Environment\Runtime;
  */
 abstract class AbstractPhpProcess
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    protected Runtime $runtime;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected Runtime $runtime;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     protected bool $stderrRedirection = false;
     protected string $stdin           = '';
     protected string $arguments       = '';
@@ -86,8 +49,6 @@ abstract class AbstractPhpProcess
     /**
      * @psalm-var array<string, string>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected array $env = [];
 
     public static function factory(): self
@@ -95,30 +56,6 @@ abstract class AbstractPhpProcess
         return new DefaultPhpProcess;
     }
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    protected array $env   = [];
-    protected int $timeout = 0;
-
-    public static function factory(): self
-    {
-        if (DIRECTORY_SEPARATOR === '\\') {
-            return new WindowsPhpProcess;
-        }
-
-        return new DefaultPhpProcess;
-    }
-
-    public function __construct()
-    {
-        $this->runtime = new Runtime;
-    }
-
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     /**
      * Defines if should use STDERR redirection or not.
      *
@@ -188,31 +125,6 @@ abstract class AbstractPhpProcess
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     * Sets the amount of seconds to wait before timing out.
-     */
-    public function setTimeout(int $timeout): void
-    {
-        $this->timeout = $timeout;
-    }
-
-    /**
-     * Returns the amount of seconds to wait before timing out.
-     */
-    public function getTimeout(): int
-    {
-        return $this->timeout;
-    }
-
-    /**
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Runs a single test in a separate PHP process.
      *
      * @throws \PHPUnit\Runner\Exception
@@ -220,8 +132,6 @@ abstract class AbstractPhpProcess
      * @throws MoreThanOneDataSetFromDataProviderException
      * @throws NoPreviousThrowableException
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function runTestJob(string $job, Test $test, string $processResultFile): void
     {
         $_result = $this->runJob($job);
@@ -238,28 +148,11 @@ abstract class AbstractPhpProcess
             $test,
             $processResult,
             $_result['stderr'],
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    public function runTestJob(string $job, Test $test): void
-    {
-        $_result = $this->runJob($job);
-
-        $this->processChildResult(
-            $test,
-            $_result['stdout'],
-            $_result['stderr']
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
     /**
      * Returns the command based into the configurations.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
      * @return string[]
      */
@@ -293,81 +186,22 @@ abstract class AbstractPhpProcess
 
             if (!$file) {
                 $command[] = 's=';
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-     */
-    public function getCommand(array $settings, string $file = null): string
-    {
-        $command = $this->runtime->getBinary();
-
-        if ($this->runtime->hasPCOV()) {
-            $settings = array_merge(
-                $settings,
-                $this->runtime->getCurrentSettings(
-                    array_keys(ini_get_all('pcov'))
-                )
-            );
-        } elseif ($this->runtime->hasXdebug()) {
-            $settings = array_merge(
-                $settings,
-                $this->runtime->getCurrentSettings(
-                    array_keys(ini_get_all('xdebug'))
-                )
-            );
-        }
-
-        $command .= $this->settingsToParameters($settings);
-
-        if (PHP_SAPI === 'phpdbg') {
-            $command .= ' -qrr';
-
-            if (!$file) {
-                $command .= 's=';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             }
         }
 
         if ($file) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $command[] = '-f';
             $command[] = $file;
-=======
-            $command .= ' ' . escapeshellarg($file);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $command .= ' ' . escapeshellarg($file);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         if ($this->arguments) {
             if (!$file) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $command[] = '--';
             }
 
             foreach (explode(' ', $this->arguments) as $arg) {
                 $command[] = trim($arg);
             }
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                $command .= ' --';
-            }
-            $command .= ' ' . $this->arguments;
-        }
-
-        if ($this->stderrRedirection) {
-            $command .= ' 2>&1';
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $command;
@@ -378,8 +212,6 @@ abstract class AbstractPhpProcess
      */
     abstract public function runJob(string $job, array $settings = []): array;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return list<string>
      */
@@ -390,19 +222,6 @@ abstract class AbstractPhpProcess
         foreach ($settings as $setting) {
             $buffer[] = '-d';
             $buffer[] = $setting;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    protected function settingsToParameters(array $settings): string
-    {
-        $buffer = '';
-
-        foreach ($settings as $setting) {
-            $buffer .= ' -d ' . escapeshellarg($setting);
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         }
 
         return $buffer;
@@ -422,18 +241,8 @@ abstract class AbstractPhpProcess
             assert($test instanceof TestCase);
 
             Facade::emitter()->testErrored(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 TestMethodBuilder::fromTestCase($test),
                 ThrowableBuilder::from($exception),
-=======
-                TestMethod::fromTestCase($test),
-                Throwable::from($exception)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                TestMethod::fromTestCase($test),
-                Throwable::from($exception)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
 
             return;
@@ -446,30 +255,12 @@ abstract class AbstractPhpProcess
             static function (int $errno, string $errstr, string $errfile, int $errline): never
             {
                 throw new ErrorException($errstr, $errno, $errno, $errfile, $errline);
-<<<<<<< HEAD
-<<<<<<< HEAD
             },
         );
 
         try {
             $childResult = unserialize($stdout);
 
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            }
-        );
-
-        try {
-            if (str_starts_with($stdout, "#!/usr/bin/env php\n")) {
-                $stdout = substr($stdout, 19);
-            }
-
-            $childResult = unserialize(str_replace("#!/usr/bin/env php\n", '', $stdout));
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             restore_error_handler();
 
             if ($childResult === false) {
@@ -478,8 +269,6 @@ abstract class AbstractPhpProcess
                 assert($test instanceof TestCase);
 
                 Facade::emitter()->testErrored(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     TestMethodBuilder::fromTestCase($test),
                     ThrowableBuilder::from($exception),
                 );
@@ -487,31 +276,11 @@ abstract class AbstractPhpProcess
                 Facade::emitter()->testFinished(
                     TestMethodBuilder::fromTestCase($test),
                     0,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                    TestMethod::fromTestCase($test),
-                    Throwable::from($exception)
-                );
-
-                Facade::emitter()->testFinished(
-                    TestMethod::fromTestCase($test),
-                    0
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
         } catch (ErrorException $e) {
             restore_error_handler();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             $childResult = false;
 
             $exception = new Exception(trim($stdout), 0, $e);
@@ -519,18 +288,8 @@ abstract class AbstractPhpProcess
             assert($test instanceof TestCase);
 
             Facade::emitter()->testErrored(
-<<<<<<< HEAD
-<<<<<<< HEAD
                 TestMethodBuilder::fromTestCase($test),
                 ThrowableBuilder::from($exception),
-=======
-                TestMethod::fromTestCase($test),
-                Throwable::from($exception)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                TestMethod::fromTestCase($test),
-                Throwable::from($exception)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             );
         }
 
@@ -539,15 +298,7 @@ abstract class AbstractPhpProcess
                 $output = $childResult['output'];
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             Facade::instance()->forward($childResult['events']);
-=======
-            Facade::forward($childResult['events']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            Facade::forward($childResult['events']);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             PassedTests::instance()->import($childResult['passedTests']);
 
             assert($test instanceof TestCase);
@@ -557,15 +308,7 @@ abstract class AbstractPhpProcess
 
             if (CodeCoverage::instance()->isActive() && $childResult['codeCoverage'] instanceof \SebastianBergmann\CodeCoverage\CodeCoverage) {
                 CodeCoverage::instance()->codeCoverage()->merge(
-<<<<<<< HEAD
-<<<<<<< HEAD
                     $childResult['codeCoverage'],
-=======
-                    $childResult['codeCoverage']
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                    $childResult['codeCoverage']
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
         }

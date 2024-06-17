@@ -3,26 +3,12 @@
 namespace Illuminate\Cache;
 
 use Closure;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Exception;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Exception;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Contracts\Cache\LockProvider;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\QueryException;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\SqlServerConnection;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Support\Str;
 
@@ -73,8 +59,6 @@ class DatabaseStore implements LockProvider, Store
     protected $lockLottery;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * The default number of seconds that a lock should be held.
      *
      * @var int
@@ -82,10 +66,6 @@ class DatabaseStore implements LockProvider, Store
     protected $defaultLockTimeoutInSeconds;
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Create a new database store.
      *
      * @param  \Illuminate\Database\ConnectionInterface  $connection
@@ -96,37 +76,18 @@ class DatabaseStore implements LockProvider, Store
      * @return void
      */
     public function __construct(ConnectionInterface $connection,
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                     $table,
                                                     $prefix = '',
                                                     $lockTable = 'cache_locks',
                                                     $lockLottery = [2, 100],
                                                     $defaultLockTimeoutInSeconds = 86400)
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-                                $table,
-                                $prefix = '',
-                                $lockTable = 'cache_locks',
-                                $lockLottery = [2, 100])
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->table = $table;
         $this->prefix = $prefix;
         $this->connection = $connection;
         $this->lockTable = $lockTable;
         $this->lockLottery = $lockLottery;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->defaultLockTimeoutInSeconds = $defaultLockTimeoutInSeconds;
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -154,15 +115,7 @@ class DatabaseStore implements LockProvider, Store
         // item from the cache. Then we will return a null value since the cache is
         // expired. We will use "Carbon" to make this comparison with the column.
         if ($this->currentTime() >= $cache->expiration) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->forgetIfExpired($key);
-=======
-            $this->forget($key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->forget($key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             return;
         }
@@ -184,23 +137,7 @@ class DatabaseStore implements LockProvider, Store
         $value = $this->serialize($value);
         $expiration = $this->getTime() + $seconds;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return $this->table()->upsert(compact('key', 'value', 'expiration'), 'key') > 0;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        try {
-            return $this->table()->insert(compact('key', 'value', 'expiration'));
-        } catch (Exception) {
-            $result = $this->table()->where('key', $key)->update(compact('value', 'expiration'));
-
-            return $result > 0;
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -213,22 +150,14 @@ class DatabaseStore implements LockProvider, Store
      */
     public function add($key, $value, $seconds)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! is_null($this->get($key))) {
             return false;
         }
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         $key = $this->prefix.$key;
         $value = $this->serialize($value);
         $expiration = $this->getTime() + $seconds;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! $this->getConnection() instanceof SqlServerConnection) {
             return $this->table()->insertOrIgnore(compact('key', 'value', 'expiration')) > 0;
         }
@@ -240,24 +169,6 @@ class DatabaseStore implements LockProvider, Store
         }
 
         return false;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        try {
-            return $this->table()->insert(compact('key', 'value', 'expiration'));
-        } catch (QueryException) {
-            return $this->table()
-                ->where('key', $key)
-                ->where('expiration', '<=', $this->getTime())
-                ->update([
-                    'value' => $value,
-                    'expiration' => $expiration,
-                ]) >= 1;
-        }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**
@@ -373,16 +284,8 @@ class DatabaseStore implements LockProvider, Store
             $this->prefix.$name,
             $seconds,
             $owner,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->lockLottery,
             $this->defaultLockTimeoutInSeconds
-=======
-            $this->lockLottery
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->lockLottery
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 
@@ -412,8 +315,6 @@ class DatabaseStore implements LockProvider, Store
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * Remove an item from the cache if it is expired.
      *
      * @param  string  $key
@@ -430,10 +331,6 @@ class DatabaseStore implements LockProvider, Store
     }
 
     /**
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * Remove all items from the cache.
      *
      * @return bool

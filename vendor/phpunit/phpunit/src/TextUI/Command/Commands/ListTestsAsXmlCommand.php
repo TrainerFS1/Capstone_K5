@@ -60,8 +60,6 @@ final class ListTestsAsXmlCommand implements Command
                 }
 
                 $writer->startElement('testCaseMethod');
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $writer->writeAttribute('id', $test->valueObjectForEvents()->id());
                 $writer->writeAttribute('name', $test->name());
                 $writer->writeAttribute('groups', implode(',', $test->groups()));
@@ -69,51 +67,23 @@ final class ListTestsAsXmlCommand implements Command
                 /**
                  * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5481
                  */
-=======
-                $writer->writeAttribute('name', $test->name());
-                $writer->writeAttribute('groups', implode(',', $test->groups()));
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                $writer->writeAttribute('name', $test->name());
-                $writer->writeAttribute('groups', implode(',', $test->groups()));
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if (!empty($test->dataSetAsString())) {
                     $writer->writeAttribute(
                         'dataSet',
                         str_replace(
                             ' with data set ',
                             '',
-<<<<<<< HEAD
-<<<<<<< HEAD
                             $test->dataSetAsString(),
                         ),
-=======
-                            $test->dataSetAsString()
-                        )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-                            $test->dataSetAsString()
-                        )
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                     );
                 }
 
                 $writer->endElement();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 continue;
             }
 
             if ($test instanceof PhptTestCase) {
-=======
-            } elseif ($test instanceof PhptTestCase) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            } elseif ($test instanceof PhptTestCase) {
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 if ($currentTestCase !== null) {
                     $writer->endElement();
 
@@ -136,15 +106,7 @@ final class ListTestsAsXmlCommand implements Command
 
         $buffer .= sprintf(
             'Wrote list of tests that would have been run to %s' . PHP_EOL,
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->filename,
-=======
-            $this->filename
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->filename
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
 
         return Result::from($buffer);

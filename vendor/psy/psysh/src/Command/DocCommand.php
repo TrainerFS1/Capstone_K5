@@ -15,17 +15,7 @@ use Psy\Formatter\DocblockFormatter;
 use Psy\Formatter\SignatureFormatter;
 use Psy\Input\CodeArgument;
 use Psy\Output\ShellOutput;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Psy\Reflection\ReflectionConstant;
-=======
-use Psy\Reflection\ReflectionClassConstant;
-use Psy\Reflection\ReflectionConstant_;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Psy\Reflection\ReflectionClassConstant;
-use Psy\Reflection\ReflectionConstant_;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Psy\Reflection\ReflectionLanguageConstruct;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -72,15 +62,7 @@ HELP
      *
      * @return int 0 if everything went fine, or an exit code
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $value = $input->getArgument('target');
         if (ReflectionLanguageConstruct::isLanguageConstruct($value)) {
@@ -163,29 +145,13 @@ HELP
                 break;
 
             case \ReflectionClassConstant::class:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            case ReflectionClassConstant::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            case ReflectionClassConstant::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 // @todo this is going to collide with ReflectionMethod ids
                 // someday... start running the query by id + type if the DB
                 // supports it.
                 $id = $reflector->class.'::'.$reflector->name;
                 break;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             case ReflectionConstant::class:
-=======
-            case ReflectionConstant_::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            case ReflectionConstant_::class:
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 $id = $reflector->name;
                 break;
 

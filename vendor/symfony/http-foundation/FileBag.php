@@ -31,30 +31,18 @@ class FileBag extends ParameterBag
         $this->replace($parameters);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function replace(array $files = [])
     {
         $this->parameters = [];
         $this->add($files);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function set(string $key, mixed $value)
     {
         if (!\is_array($value) && !$value instanceof UploadedFile) {
@@ -64,15 +52,9 @@ class FileBag extends ParameterBag
         parent::set($key, $this->convertFileInformation($value));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function add(array $files = [])
     {
         foreach ($files as $key => $file) {
@@ -102,15 +84,7 @@ class FileBag extends ParameterBag
                 $file = new UploadedFile($file['tmp_name'], $file['name'], $file['type'], $file['error'], false);
             }
         } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $file = array_map(fn ($v) => $v instanceof UploadedFile || \is_array($v) ? $this->convertFileInformation($v) : $v, $file);
-=======
-            $file = array_map(function ($v) { return $v instanceof UploadedFile || \is_array($v) ? $this->convertFileInformation($v) : $v; }, $file);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $file = array_map(function ($v) { return $v instanceof UploadedFile || \is_array($v) ? $this->convertFileInformation($v) : $v; }, $file);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
             if (array_keys($keys) === $keys) {
                 $file = array_filter($file);
             }

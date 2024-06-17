@@ -38,15 +38,7 @@ class Response implements Arrayable
      * Create a new response.
      *
      * @param  bool  $allowed
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string|null  $message
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $message
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  mixed  $code
      * @return void
      */

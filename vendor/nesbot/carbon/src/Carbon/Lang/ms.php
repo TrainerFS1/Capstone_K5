@@ -48,15 +48,7 @@ return [
     'ago' => ':time yang lepas',
     'from_now' => ':time dari sekarang',
     'after' => ':time kemudian',
-<<<<<<< HEAD
-<<<<<<< HEAD
     'before' => ':time sebelum',
-=======
-    'before' => ':time lepas',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    'before' => ':time lepas',
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     'diff_now' => 'sekarang',
     'diff_today' => 'Hari',
     'diff_today_regexp' => 'Hari(?:\\s+ini)?(?:\\s+pukul)?',

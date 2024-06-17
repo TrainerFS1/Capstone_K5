@@ -54,15 +54,7 @@ abstract class Enumerator
      *
      * @return array
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function enumerate(InputInterface $input, ?\Reflector $reflector = null, $target = null): array
-=======
-    public function enumerate(InputInterface $input, \Reflector $reflector = null, $target = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function enumerate(InputInterface $input, \Reflector $reflector = null, $target = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->filter->bind($input);
 
@@ -90,15 +82,7 @@ abstract class Enumerator
      *
      * @return array
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     abstract protected function listItems(InputInterface $input, ?\Reflector $reflector = null, $target = null): array;
-=======
-    abstract protected function listItems(InputInterface $input, \Reflector $reflector = null, $target = null): array;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    abstract protected function listItems(InputInterface $input, \Reflector $reflector = null, $target = null): array;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     protected function showItem($name)
     {

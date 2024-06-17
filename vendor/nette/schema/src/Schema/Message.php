@@ -14,8 +14,6 @@ use Nette;
 
 final class Message
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	/** variables: {value: mixed, expected: string} */
 	public const TypeMismatch = 'schema.typeMismatch';
 
@@ -72,50 +70,6 @@ final class Message
 
 	/** @var string[] */
 	public array $variables;
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-	use Nette\SmartObject;
-
-	/** variables: {value: mixed, expected: string} */
-	public const TYPE_MISMATCH = 'schema.typeMismatch';
-
-	/** variables: {value: mixed, expected: string} */
-	public const VALUE_OUT_OF_RANGE = 'schema.valueOutOfRange';
-
-	/** variables: {value: mixed, length: int, expected: string} */
-	public const LENGTH_OUT_OF_RANGE = 'schema.lengthOutOfRange';
-
-	/** variables: {value: string, pattern: string} */
-	public const PATTERN_MISMATCH = 'schema.patternMismatch';
-
-	/** variables: {value: mixed, assertion: string} */
-	public const FAILED_ASSERTION = 'schema.failedAssertion';
-
-	/** no variables */
-	public const MISSING_ITEM = 'schema.missingItem';
-
-	/** variables: {hint: string} */
-	public const UNEXPECTED_ITEM = 'schema.unexpectedItem';
-
-	/** no variables */
-	public const DEPRECATED = 'schema.deprecated';
-
-	/** @var string */
-	public $message;
-
-	/** @var string */
-	public $code;
-
-	/** @var string[] */
-	public $path;
-
-	/** @var string[] */
-	public $variables;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
 
 	public function __construct(string $message, string $code, array $path, array $variables = [])
@@ -139,14 +93,6 @@ final class Message
 		return preg_replace_callback('~( ?)%(\w+)%~', function ($m) use ($vars) {
 			[, $space, $key] = $m;
 			return $vars[$key] === null ? '' : $space . $vars[$key];
-<<<<<<< HEAD
-<<<<<<< HEAD
 		}, $this->message) ?? throw new Nette\InvalidStateException(preg_last_error_msg());
-=======
-		}, $this->message);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-		}, $this->message);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 	}
 }

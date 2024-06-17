@@ -82,15 +82,7 @@ class JoinClause extends Builder
      *
      * on `contacts`.`user_id` = `users`.`id` and `contacts`.`info_id` = `info`.`id`
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Closure|\Illuminate\Contracts\Database\Query\Expression|string  $first
-=======
-     * @param  \Closure|string  $first
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Closure|string  $first
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string|null  $operator
      * @param  \Illuminate\Contracts\Database\Query\Expression|string|null  $second
      * @param  string  $boolean
@@ -110,15 +102,7 @@ class JoinClause extends Builder
     /**
      * Add an "or on" clause to the join.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  \Closure|\Illuminate\Contracts\Database\Query\Expression|string  $first
-=======
-     * @param  \Closure|string  $first
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  \Closure|string  $first
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string|null  $operator
      * @param  \Illuminate\Contracts\Database\Query\Expression|string|null  $second
      * @return \Illuminate\Database\Query\JoinClause

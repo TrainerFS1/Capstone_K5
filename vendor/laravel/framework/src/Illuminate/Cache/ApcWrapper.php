@@ -29,17 +29,9 @@ class ApcWrapper
      */
     public function get($key)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $fetchedValue = $this->apcu ? apcu_fetch($key, $success) : apc_fetch($key, $success);
 
         return $success ? $fetchedValue : null;
-=======
-        return $this->apcu ? apcu_fetch($key) : apc_fetch($key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-        return $this->apcu ? apcu_fetch($key) : apc_fetch($key);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

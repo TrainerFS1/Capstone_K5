@@ -70,15 +70,7 @@ interface Readline
      *
      * @return false|string
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function readline(?string $prompt = null);
-=======
-    public function readline(string $prompt = null);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function readline(string $prompt = null);
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
     /**
      * Redraw readline to redraw the display.

@@ -26,25 +26,11 @@ final class PlainTextRenderer
         foreach ($tests as $prettifiedClassName => $_tests) {
             $buffer .= $prettifiedClassName . "\n";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             foreach ($this->reduce($_tests) as $prettifiedMethodName => $outcome) {
                 $buffer .= sprintf(
                     ' [%s] %s' . "\n",
                     $outcome,
                     $prettifiedMethodName,
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            foreach ($_tests as $test) {
-                $buffer .= sprintf(
-                    ' [%s] %s' . "\n",
-                    $test->status()->isSuccess() ? 'x' : ' ',
-                    $test->test()->testDox()->prettifiedMethodName()
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
                 );
             }
 
@@ -53,8 +39,6 @@ final class PlainTextRenderer
 
         return $buffer;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @psalm-return array<string, 'x'|' '>
@@ -90,8 +74,4 @@ final class PlainTextRenderer
 
         return $result;
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

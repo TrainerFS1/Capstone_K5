@@ -26,28 +26,14 @@ class ErrorListener implements EventSubscriberInterface
 {
     private ?LoggerInterface $logger;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(?LoggerInterface $logger = null)
-=======
-    public function __construct(LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(LoggerInterface $logger = null)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->logger = $logger;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function onConsoleError(ConsoleErrorEvent $event)
     {
         if (null === $this->logger) {
@@ -65,15 +51,9 @@ class ErrorListener implements EventSubscriberInterface
         $this->logger->critical('Error thrown while running command "{command}". Message: "{message}"', ['exception' => $error, 'command' => $inputString, 'message' => $error->getMessage()]);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return void
      */
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     public function onConsoleTerminate(ConsoleTerminateEvent $event)
     {
         if (null === $this->logger) {

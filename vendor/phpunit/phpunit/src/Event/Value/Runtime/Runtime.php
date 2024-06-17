@@ -38,15 +38,7 @@ final class Runtime
             $this->phpunit()->versionId(),
             $php->version(),
             $php->sapi(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             $this->operatingSystem()->operatingSystem(),
-=======
-            $this->operatingSystem()->operatingSystem()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            $this->operatingSystem()->operatingSystem()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
         );
     }
 

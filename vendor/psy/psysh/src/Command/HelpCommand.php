@@ -12,14 +12,6 @@
 namespace Psy\Command;
 
 use Psy\Output\ShellOutput;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Symfony\Component\Console\Helper\TableHelper;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\Console\Helper\TableHelper;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -63,15 +55,7 @@ class HelpCommand extends Command
      *
      * @return int 0 if everything went fine, or an exit code
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     protected function execute(InputInterface $input, OutputInterface $output): int
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    protected function execute(InputInterface $input, OutputInterface $output)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if ($this->command !== null) {
             // help for an individual command
@@ -108,21 +92,7 @@ class HelpCommand extends Command
                 $output->startPaging();
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             $table->render();
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-            if ($table instanceof TableHelper) {
-                $table->render($output);
-            } else {
-                $table->render();
-            }
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 
             if ($output instanceof ShellOutput) {
                 $output->stopPaging();

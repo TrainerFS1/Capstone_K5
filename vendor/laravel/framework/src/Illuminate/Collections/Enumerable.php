@@ -12,16 +12,8 @@ use Traversable;
 
 /**
  * @template TKey of array-key
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
  * @template-covariant TValue
-=======
- * @template TValue
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
- * @template TValue
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  *
  * @extends \Illuminate\Contracts\Support\Arrayable<TKey, TValue>
  * @extends \IteratorAggregate<TKey, TValue>
@@ -558,15 +550,7 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
     /**
      * Concatenate values of a given key as a string.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  callable|string  $value
-=======
-     * @param  string  $value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  string  $value
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      * @param  string|null  $glue
      * @return string
      */
@@ -805,21 +789,11 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
     /**
      * Push all of the given items onto the collection.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template TConcatKey of array-key
      * @template TConcatValue
      *
      * @param  iterable<TConcatKey, TConcatValue>  $source
      * @return static<TKey|TConcatKey, TValue|TConcatValue>
-=======
-     * @param  iterable<array-key, TValue>  $source
-     * @return static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  iterable<array-key, TValue>  $source
-     * @return static
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function concat($source);
 
@@ -1108,20 +1082,10 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
     /**
      * Pass the collection into a new class.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @template TPipeIntoValue
      *
      * @param  class-string<TPipeIntoValue>  $class
      * @return TPipeIntoValue
-=======
-     * @param  class-string  $class
-     * @return mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @param  class-string  $class
-     * @return mixed
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public function pipeInto($class);
 

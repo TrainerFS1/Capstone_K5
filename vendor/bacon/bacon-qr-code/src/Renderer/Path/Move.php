@@ -5,31 +5,8 @@ namespace BaconQrCode\Renderer\Path;
 
 final class Move implements OperationInterface
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(private readonly float $x, private readonly float $y)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * @var float
-     */
-    private $x;
-
-    /**
-     * @var float
-     */
-    private $y;
-
-    public function __construct(float $x, float $y)
-    {
-        $this->x = $x;
-        $this->y = $y;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     public function getX() : float
@@ -49,8 +26,6 @@ final class Move implements OperationInterface
     {
         return new self($this->x + $x, $this->y + $y);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     /**
      * @return self
@@ -64,8 +39,4 @@ final class Move implements OperationInterface
         $yr = $this->x * $sin + $this->y * $cos;
         return new self($xr, $yr);
     }
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

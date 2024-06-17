@@ -7,15 +7,7 @@ trait Dispatchable
     /**
      * Dispatch the event with the given arguments.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return mixed
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function dispatch()
     {
@@ -27,15 +19,7 @@ trait Dispatchable
      *
      * @param  bool  $boolean
      * @param  mixed  ...$arguments
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return mixed
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function dispatchIf($boolean, ...$arguments)
     {
@@ -49,15 +33,7 @@ trait Dispatchable
      *
      * @param  bool  $boolean
      * @param  mixed  ...$arguments
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return mixed
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-     * @return void
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
      */
     public static function dispatchUnless($boolean, ...$arguments)
     {

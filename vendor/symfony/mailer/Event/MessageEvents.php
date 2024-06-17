@@ -42,15 +42,7 @@ class MessageEvents
     /**
      * @return MessageEvent[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getEvents(?string $name = null): array
-=======
-    public function getEvents(string $name = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getEvents(string $name = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $name) {
             return $this->events;
@@ -69,15 +61,7 @@ class MessageEvents
     /**
      * @return RawMessage[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getMessages(?string $name = null): array
-=======
-    public function getMessages(string $name = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function getMessages(string $name = null): array
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $events = $this->getEvents($name);
         $messages = [];

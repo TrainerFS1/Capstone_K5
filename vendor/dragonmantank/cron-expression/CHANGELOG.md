@@ -1,7 +1,5 @@
 # Change Log
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## [3.3.3] - 2024-08-10
 
 ### Added
@@ -14,10 +12,6 @@
 - Added fixes for making sure `?` is not passed for both DOM and DOW (#148, thank you https://github.com/LeoVie)
 - Fixed bug in Next Execution Time by sorting minutes properly (#160, thank you https://github.com/imyip)
 
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 ## [3.3.2] - 2022-09-19
 
 ### Added

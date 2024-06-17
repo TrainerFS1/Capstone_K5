@@ -17,14 +17,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Symfony\Component\HttpKernel\Event\FinishRequestEvent;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-use Symfony\Component\HttpKernel\Event\FinishRequestEvent;
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
@@ -61,15 +53,7 @@ class RouterListener implements EventSubscriberInterface
      *
      * @throws \InvalidArgumentException
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(UrlMatcherInterface|RequestMatcherInterface $matcher, RequestStack $requestStack, ?RequestContext $context = null, ?LoggerInterface $logger = null, ?string $projectDir = null, bool $debug = true)
-=======
-    public function __construct(UrlMatcherInterface|RequestMatcherInterface $matcher, RequestStack $requestStack, RequestContext $context = null, LoggerInterface $logger = null, string $projectDir = null, bool $debug = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function __construct(UrlMatcherInterface|RequestMatcherInterface $matcher, RequestStack $requestStack, RequestContext $context = null, LoggerInterface $logger = null, string $projectDir = null, bool $debug = true)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null === $context && !$matcher instanceof RequestContextAwareInterface) {
             throw new \InvalidArgumentException('You must either pass a RequestContext or the matcher must implement RequestContextAwareInterface.');
@@ -83,15 +67,7 @@ class RouterListener implements EventSubscriberInterface
         $this->debug = $debug;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private function setCurrentRequest(?Request $request): void
-=======
-    private function setCurrentRequest(?Request $request)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    private function setCurrentRequest(?Request $request)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (null !== $request) {
             try {
@@ -106,28 +82,12 @@ class RouterListener implements EventSubscriberInterface
      * After a sub-request is done, we need to reset the routing context to the parent request so that the URL generator
      * operates on the correct context again.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelFinishRequest(): void
-=======
-    public function onKernelFinishRequest()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelFinishRequest()
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $this->setCurrentRequest($this->requestStack->getParentRequest());
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelRequest(RequestEvent $event): void
-=======
-    public function onKernelRequest(RequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelRequest(RequestEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         $request = $event->getRequest();
 
@@ -172,15 +132,7 @@ class RouterListener implements EventSubscriberInterface
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function onKernelException(ExceptionEvent $event): void
-=======
-    public function onKernelException(ExceptionEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    public function onKernelException(ExceptionEvent $event)
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     {
         if (!$this->debug || !($e = $event->getThrowable()) instanceof NotFoundHttpException) {
             return;

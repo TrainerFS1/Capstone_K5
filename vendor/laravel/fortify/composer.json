@@ -14,8 +14,6 @@
         }
     ],
     "require": {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "php": "^8.1",
         "ext-json": "*",
         "bacon/bacon-qr-code": "^3.0",
@@ -28,23 +26,6 @@
         "orchestra/testbench": "^8.16|^9.0",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.4"
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-        "php": "^7.3|^8.0",
-        "ext-json": "*",
-        "bacon/bacon-qr-code": "^2.0",
-        "illuminate/support": "^8.82|^9.0|^10.0",
-        "pragmarx/google2fa": "^7.0|^8.0"
-    },
-    "require-dev": {
-        "mockery/mockery": "^1.0",
-        "orchestra/testbench": "^6.0|^7.0|^8.0",
-        "phpunit/phpunit": "^9.3"
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "autoload": {
         "psr-4": {
@@ -53,23 +34,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-<<<<<<< HEAD
-<<<<<<< HEAD
             "Laravel\\Fortify\\Tests\\": "tests/",
             "App\\": "workbench/app/",
             "Database\\Factories\\": "workbench/database/factories/"
         },
         "classmap": ["stubs/"]
-=======
-            "App\\Models\\": "tests/Fixtures/Models",
-            "Laravel\\Fortify\\Tests\\": "tests/"
-        }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-            "App\\Models\\": "tests/Fixtures/Models",
-            "Laravel\\Fortify\\Tests\\": "tests/"
-        }
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     },
     "extra": {
         "branch-alias": {
@@ -85,8 +54,6 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": "@prepare",
@@ -94,10 +61,4 @@
         "lint": "@php vendor/bin/phpstan analyse",
         "test": "@php vendor/bin/phpunit"
     }
-=======
-    "prefer-stable": true
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-    "prefer-stable": true
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
 }

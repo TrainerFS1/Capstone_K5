@@ -11,35 +11,8 @@ namespace BaconQrCode\Common;
  */
 final class EcBlock
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function __construct(private readonly int $count, private readonly int $dataCodewords)
     {
-=======
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-    /**
-     * How many times the block is used.
-     *
-     * @var int
-     */
-    private $count;
-
-    /**
-     * Number of data codewords.
-     *
-     * @var int
-     */
-    private $dataCodewords;
-
-    public function __construct(int $count, int $dataCodewords)
-    {
-        $this->count = $count;
-        $this->dataCodewords = $dataCodewords;
-<<<<<<< HEAD
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
     }
 
     /**

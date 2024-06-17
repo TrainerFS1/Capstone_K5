@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 6.4
 ---
 
@@ -31,16 +29,6 @@ CHANGELOG
 ---
 
  * Add `StreamedJsonResponse` class for efficient JSON streaming
-=======
-6.2
----
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
-=======
-6.2
----
-
->>>>>>> c5264d886d63b2f4ebe67c9bf0ffa41218a9c485
  * The HTTP cache store uses the `xxh128` algorithm
  * Deprecate calling `JsonResponse::setCallback()`, `Response::setExpires/setLastModified/setEtag()`, `MockArraySessionStorage/NativeSessionStorage::setMetadataBag()`, `NativeSessionStorage::setSaveHandler()` without arguments
  * Add request matchers under the `Symfony\Component\HttpFoundation\RequestMatcher` namespace
